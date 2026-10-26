@@ -1,0 +1,952 @@
+[
+  {
+    "id": "01_categories_permis-01",
+    "t": "01_categories_permis",
+    "q": "Quel est l'âge minimum pour obtenir le permis B ?",
+    "qa": "ما هو السن الأدنى للحصول على رخصة السياقة من صنف B ؟",
+    "o": ["16 ans", "17 ans", "18 ans", "21 ans"],
+    "a": [2],
+    "e": "Le permis B (voiture) s'obtient à 18 ans, comme le permis A (motocyclettes). 16 ans correspond à A1 et 21 ans au permis C.",
+    "r": "Permis B = 18 ans."
+  },
+  {
+    "id": "01_categories_permis-02",
+    "t": "01_categories_permis",
+    "q": "À partir de quel âge peut-on obtenir le permis A1 (motocyclettes légères) ?",
+    "qa": "ابتداء من أي سن يمكن الحصول على رخصة الصنف A1 (الدراجات النارية الخفيفة) ؟",
+    "o": ["14 ans", "16 ans", "18 ans", "21 ans"],
+    "a": [1],
+    "e": "A1 (الدراجات النارية الخفيفة) = 16 ans. Ne pas confondre avec AM (cyclomoteur, 14 ans) ni avec A (motocyclettes, 18 ans).",
+    "r": "AM 14 · A1 16 · A et B 18 · C 21."
+  },
+  {
+    "id": "01_categories_permis-03",
+    "t": "01_categories_permis",
+    "q": "La catégorie AM (cyclomoteur et quadricycle léger) est accessible dès :",
+    "qa": "صنف AM (دراجة بمحرك ورباعية العجلات خفيفة) يمكن الحصول عليه ابتداء من سن :",
+    "o": ["14 ans", "16 ans", "17 ans", "18 ans"],
+    "a": [0],
+    "e": "AM est la première catégorie accessible : 14 ans. Viennent ensuite A1 à 16 ans, puis A et B à 18 ans.",
+    "r": "AM = 14 ans."
+  },
+  {
+    "id": "01_categories_permis-04",
+    "t": "01_categories_permis",
+    "q": "Quel âge minimum faut-il pour obtenir le permis C (marchandises de plus de 3 500 kg) ?",
+    "qa": "ما هو السن الأدنى للحصول على رخصة الصنف C (بضائع يتجاوز وزنها 3500 كلغ) ؟",
+    "o": ["18 ans", "20 ans", "23 ans", "21 ans"],
+    "a": [3],
+    "e": "Le permis C s'obtient à 21 ans. 18 ans suffit pour le permis B, mais pas pour les poids lourds de marchandises.",
+    "r": "Permis C = 21 ans."
+  },
+  {
+    "id": "01_categories_permis-05",
+    "t": "01_categories_permis",
+    "q": "Quelles catégories de permis sont accessibles dès 18 ans ?",
+    "qa": "ما هي أصناف رخصة السياقة التي يمكن الحصول عليها ابتداء من 18 سنة ؟",
+    "o": ["A (motocyclettes)", "B (voitures)", "C (marchandises > 3 500 kg)", "EB (B + remorque de plus de 750 kg)"],
+    "a": [0, 1, 3],
+    "e": "D'après le tableau récapitulatif des catégories, A, B et EB s'obtiennent à 18 ans. C, D, EC et ED demandent 21 ans.",
+    "r": "18 ans : A, B, EB · 21 ans : C, D, EC, ED."
+  },
+  {
+    "id": "01_categories_permis-06",
+    "t": "01_categories_permis",
+    "q": "Ce pictogramme correspond à quelle catégorie de permis ?",
+    "qa": "هذا الرمز يوافق أي صنف من أصناف رخصة السياقة ؟",
+    "o": ["B", "C", "D", "ED"],
+    "a": [2],
+    "e": "L'autocar représente la catégorie D : transport de personnes avec plus de 8 places en plus du conducteur, à partir de 21 ans. ED serait un autocar avec une remorque de plus de 750 kg.",
+    "r": "Autocar = permis D.",
+    "img": "1697193970815.png"
+  },
+  {
+    "id": "01_categories_permis-07",
+    "t": "01_categories_permis",
+    "q": "Avec le permis B, combien de places assises au maximum le véhicule peut-il compter en plus du siège du conducteur ?",
+    "qa": "برخصة الصنف B، كم هو العدد الأقصى للمقاعد في المركبة زيادة على مقعد السائق ؟",
+    "o": ["9", "8", "7", "6"],
+    "a": [1],
+    "e": "Le permis B couvre les véhicules de 8 places au maximum en plus du conducteur, soit 9 sièges au total. Au-delà, il faut le permis D.",
+    "r": "Permis B = 8 passagers + le conducteur."
+  },
+  {
+    "id": "01_categories_permis-08",
+    "t": "01_categories_permis",
+    "q": "Un minibus compte 10 sièges, conducteur compris. Quel permis faut-il pour le conduire ?",
+    "qa": "حافلة صغيرة بها 10 مقاعد بما فيها مقعد السائق. ما هي الرخصة المطلوبة لسياقتها ؟",
+    "o": ["Le permis D", "Le permis B", "Le permis C", "Le permis EB"],
+    "a": [0],
+    "e": "10 sièges = 9 passagers + le conducteur : on dépasse les 8 places du permis B, il faut donc le permis D. Avec 9 sièges au total (8 + conducteur), le permis B suffit encore.",
+    "r": "9 sièges = B · 10 sièges = D."
+  },
+  {
+    "id": "01_categories_permis-09",
+    "t": "01_categories_permis",
+    "q": "Avec le permis B, le poids total autorisé d'un véhicule de marchandises ne doit pas dépasser :",
+    "qa": "برخصة الصنف B، لا يجب أن يتجاوز الوزن الإجمالي المأذون به لمركبة نقل البضائع :",
+    "o": ["3 000 kg", "3 500 kg", "750 kg", "5 000 kg"],
+    "a": [1],
+    "e": "Le permis B couvre les marchandises jusqu'à 3 500 kg (3,5 t). Au-delà, c'est le permis C. 750 kg est la limite de la remorque légère, pas du véhicule.",
+    "r": "B ≤ 3 500 kg · C > 3 500 kg."
+  },
+  {
+    "id": "01_categories_permis-10",
+    "t": "01_categories_permis",
+    "q": "Pour conduire un camion de marchandises de 7 tonnes, il faut le permis :",
+    "qa": "لسياقة شاحنة لنقل البضائع وزنها 7 أطنان، يجب التوفر على رخصة الصنف :",
+    "o": ["D", "EB", "B", "C"],
+    "a": [3],
+    "e": "Marchandises de plus de 3 500 kg = catégorie C. Le D concerne le transport de personnes et le B s'arrête à 3 500 kg.",
+    "r": "Marchandises > 3,5 t = permis C."
+  },
+  {
+    "id": "01_categories_permis-11",
+    "t": "01_categories_permis",
+    "q": "Le permis B permet aussi de conduire :",
+    "qa": "تسمح رخصة الصنف B أيضا بسياقة :",
+    "o": ["un autocar de 20 places", "un tricycle à moteur (ثلاثية العجلات بمحرك)", "un quadricycle lourd (رباعية العجلات ثقيلة)", "un véhicule agricole de 3 500 kg au plus"],
+    "a": [1, 2, 3],
+    "e": "La catégorie B inclut les véhicules agricoles ≤ 3 500 kg, les tricycles à moteur et les quadricycles lourds. Un autocar de 20 places relève du permis D.",
+    "r": "B inclut : agricole ≤ 3,5 t, tricycle, quadricycle lourd."
+  },
+  {
+    "id": "01_categories_permis-12",
+    "t": "01_categories_permis",
+    "q": "Vous tractez une remorque de 600 kg derrière votre voiture. Quel permis faut-il ?",
+    "qa": "تجر مقطورة وزنها 600 كلغ خلف سيارتك. ما هي الرخصة المطلوبة ؟",
+    "o": ["Le permis EB", "Le permis C", "Le permis B suffit", "Le permis EC"],
+    "a": [2],
+    "e": "Une remorque légère (≤ 750 kg) se tracte avec le simple permis B. Le permis EB n'est exigé que pour une remorque de plus de 750 kg, sous conditions.",
+    "r": "Remorque ≤ 750 kg = permis B suffit."
+  },
+  {
+    "id": "01_categories_permis-13",
+    "t": "01_categories_permis",
+    "q": "Votre remorque pèse plus de 750 kg. Dans quels cas le permis EB est-il exigé ?",
+    "qa": "مقطورتك يتجاوز وزنها 750 كلغ. في أي حالات تكون رخصة الصنف EB مطلوبة ؟",
+    "o": ["Si la remorque pèse plus que le véhicule tracteur à vide", "Si la remorque circule hors agglomération", "Si l'ensemble (voiture + remorque) dépasse 3 500 kg", "Si le conducteur a plus de 65 ans"],
+    "a": [0, 2],
+    "e": "EB = permis B + remorque de plus de 750 kg, lorsque la remorque dépasse le poids à vide du véhicule tracteur ou que l'ensemble dépasse 3 500 kg. Le lieu de circulation et l'âge n'y changent rien.",
+    "r": "Remorque > 750 kg et (> tracteur à vide ou total > 3,5 t) = EB."
+  },
+  {
+    "id": "01_categories_permis-14",
+    "t": "01_categories_permis",
+    "q": "Ce pictogramme (voiture + caravane) désigne la catégorie :",
+    "qa": "هذا الرمز (سيارة + مقطورة) يشير إلى الصنف :",
+    "o": ["B", "EB", "EC", "ED"],
+    "a": [1],
+    "e": "Une voiture qui tracte une remorque lourde (plus de 750 kg) relève de la catégorie EB. EC = camion + remorque, ED = autocar + remorque.",
+    "r": "Voiture + remorque lourde = EB.",
+    "img": "1682673996224.png"
+  },
+  {
+    "id": "01_categories_permis-15",
+    "t": "01_categories_permis",
+    "q": "Un camion de catégorie C tracte une remorque de plus de 750 kg. Quel permis faut-il ?",
+    "qa": "شاحنة من صنف C تجر مقطورة يتجاوز وزنها 750 كلغ. ما هي الرخصة المطلوبة ؟",
+    "o": ["Le permis EC", "Le permis C seul", "Le permis EB", "Le permis ED"],
+    "a": [0],
+    "e": "La lettre E s'ajoute à la catégorie du véhicule tracteur dès que la remorque dépasse 750 kg : EB (voiture), EC (camion), ED (autocar).",
+    "r": "Remorque > 750 kg : EB, EC ou ED selon le tracteur."
+  },
+  {
+    "id": "01_categories_permis-16",
+    "t": "01_categories_permis",
+    "q": "Combien de temps dure la période probatoire après l'obtention du permis ?",
+    "qa": "كم تدوم الفترة الاختبارية بعد الحصول على رخصة السياقة ؟",
+    "o": ["1 an", "2 ans", "3 ans", "5 ans"],
+    "a": [1],
+    "e": "La période probatoire commence après la réussite aux examens théorique et pratique et dure 2 ans (سنتان).",
+    "r": "Période probatoire = 2 ans."
+  },
+  {
+    "id": "01_categories_permis-17",
+    "t": "01_categories_permis",
+    "q": "Pendant la période probatoire, le capital de points du permis est de :",
+    "qa": "خلال الفترة الاختبارية، يبلغ رصيد النقط في رخصة السياقة :",
+    "o": ["30 points", "24 points", "20 points", "12 points"],
+    "a": [2],
+    "e": "Le conducteur débutant commence avec 20 points au lieu de 30. Le capital passe à 30 points à l'issue de la période probatoire (sous conditions).",
+    "r": "Débutant : 20 points · ensuite : 30.",
+    "s": "points"
+  },
+  {
+    "id": "01_categories_permis-18",
+    "t": "01_categories_permis",
+    "q": "Vous avez obtenu votre permis il y a un an et roulez sur autoroute. Votre vitesse maximale est :",
+    "qa": "حصلت على رخصة السياقة منذ سنة وتسير في الطريق السيار. سرعتك القصوى هي :",
+    "o": ["120 km/h", "100 km/h", "80 km/h", "90 km/h"],
+    "a": [3],
+    "e": "En période probatoire (2 ans), la vitesse est limitée à 90 km/h partout, même sur autoroute où les autres conducteurs peuvent rouler à 120 km/h.",
+    "r": "Probatoire : 90 km/h maximum, même sur autoroute.",
+    "s": "vitesses"
+  },
+  {
+    "id": "01_categories_permis-19",
+    "t": "01_categories_permis",
+    "q": "Pour un conducteur non professionnel de moins de 65 ans, la visite médicale se renouvelle tous les :",
+    "qa": "بالنسبة لسائق غير مهني يقل عمره عن 65 سنة، يجدد الفحص الطبي كل :",
+    "o": ["10 ans", "2 ans", "5 ans", "15 ans"],
+    "a": [0],
+    "e": "Règle générale : visite médicale tous les 10 ans pour tous les conducteurs. Seuls les conducteurs professionnels et ceux de plus de 65 ans passent à tous les 2 ans.",
+    "r": "Visite médicale : tous les 10 ans (règle générale)."
+  },
+  {
+    "id": "01_categories_permis-20",
+    "t": "01_categories_permis",
+    "q": "Quels conducteurs doivent renouveler leur visite médicale tous les 2 ans ?",
+    "qa": "ما هم السائقون الذين يجب عليهم تجديد الفحص الطبي كل سنتين ؟",
+    "o": ["Les conducteurs en période probatoire", "Les conducteurs professionnels", "Les conducteurs de plus de 65 ans", "Tous les conducteurs"],
+    "a": [1, 2],
+    "e": "Tous les 2 ans : conducteurs professionnels et conducteurs de plus de 65 ans. Pour les autres, y compris les débutants, c'est tous les 10 ans.",
+    "r": "Tous les 2 ans : professionnels et plus de 65 ans."
+  },
+  {
+    "id": "01_categories_permis-21",
+    "t": "01_categories_permis",
+    "q": "Un permis de conduire étranger en cours de validité permet de conduire au Maroc pendant au maximum :",
+    "qa": "تسمح رخصة سياقة أجنبية سارية الصلاحية بالسياقة في المغرب لمدة أقصاها :",
+    "o": ["6 mois", "1 an", "2 ans", "Sans limite de durée"],
+    "a": [1],
+    "e": "Les Marocains résidant à l'étranger et les étrangers peuvent conduire avec un permis étranger valide pendant 1 an au maximum.",
+    "r": "Permis étranger : 1 an maximum."
+  },
+  {
+    "id": "01_categories_permis-22",
+    "t": "01_categories_permis",
+    "q": "Selon le cours, quelles affections sont incompatibles avec la conduite ?",
+    "qa": "حسب الدرس، ما هي الأمراض المانعة للسياقة ؟",
+    "o": ["La surdité profonde (الصمم الحاد)", "La maladie de Parkinson (شلل الرعاش)", "Le fait de porter des lunettes", "Une grave déficience de la vue (الضعف الحاد في البصر)"],
+    "a": [0, 1, 3],
+    "e": "Retard mental, surdité profonde, maladie de Parkinson et grave déficience visuelle sont incompatibles avec la conduite. Les lunettes n'empêchent pas de conduire : c'est une restriction inscrite sur le permis.",
+    "r": "Lunettes = restriction, pas interdiction."
+  },
+  {
+    "id": "01_categories_permis-23",
+    "t": "01_categories_permis",
+    "q": "Un candidat a une infirmité physique compatible avec la conduite. Que prévoit la règle ?",
+    "qa": "مترشح لديه عجز بدني لا يتنافى مع السياقة. ماذا تنص عليه القاعدة ؟",
+    "o": ["Il ne peut pas obtenir le permis", "Il doit toujours conduire accompagné", "Véhicule aménagé ou appareil médical, avec un code de restriction sur le permis"],
+    "a": [2],
+    "e": "Une infirmité compatible avec la conduite est compensée par l'aménagement du véhicule ou un appareil médical (lunettes…). Ces restrictions sont inscrites sur le permis sous forme de codes.",
+    "r": "Infirmité compatible = véhicule aménagé + code sur le permis."
+  },
+  {
+    "id": "01_categories_permis-24",
+    "t": "01_categories_permis",
+    "q": "Sur un permis de conduire, le code de restriction 01-01 signifie :",
+    "qa": "على رخصة السياقة، يعني رمز التقييد 01-01 :",
+    "o": ["conduite de jour uniquement", "interdiction de rouler sur autoroute", "boîte de vitesses automatique", "port de lunettes obligatoire"],
+    "a": [3],
+    "e": "Dans la liste des codes de restriction : 01-01 = lunettes, 05-01 = conduite de jour uniquement, 05-05 = pas d'autoroute, 10-02 = boîte de vitesses automatique.",
+    "r": "Code 01-01 = lunettes obligatoires."
+  },
+  {
+    "id": "01_categories_permis-25",
+    "t": "01_categories_permis",
+    "q": "Ne pas se soumettre à la visite médicale obligatoire est sanctionné comme :",
+    "qa": "عدم الخضوع للفحص الطبي الإجباري يعاقب عليه باعتباره :",
+    "o": ["un délit avec retrait de 6 points", "une contravention de 1re classe, sans retrait de points", "une contravention de 3e classe avec retrait de 2 points", "une simple remarque, sans amende"],
+    "a": [1],
+    "e": "C'est une contravention de 1re classe (amende de 700 à 1 400 DH) qui n'entraîne aucun retrait de points.",
+    "r": "Pas de visite médicale = 1re classe, 0 point.",
+    "s": "sanctions"
+  },
+
+  {
+    "id": "02_alcool_medicaments-01",
+    "t": "02_alcool_medicaments",
+    "q": "Il est interdit de conduire lorsque le taux d'alcool dans le sang atteint ou dépasse :",
+    "qa": "تمنع السياقة إذا بلغت نسبة الكحول في الدم أو تجاوزت :",
+    "o": ["0,10 g/l", "0,20 g/l", "0,50 g/l", "0,80 g/l"],
+    "a": [1],
+    "e": "Le seuil légal est de 0,20 g par litre de sang : dès 0,20 g/l, la conduite est interdite. La valeur 0,10 concerne l'air expiré (en mg/l), pas le sang.",
+    "r": "Sang : interdit dès 0,20 g/l.",
+    "s": "alcool"
+  },
+  {
+    "id": "02_alcool_medicaments-02",
+    "t": "02_alcool_medicaments",
+    "q": "Mesuré dans l'air expiré, le taux d'alcool interdit de conduire à partir de :",
+    "qa": "عند القياس في الهواء المنبعث من الفم، تمنع السياقة ابتداء من نسبة :",
+    "o": ["0,20 mg/l", "0,05 mg/l", "0,10 mg/l", "0,25 mg/l"],
+    "a": [2],
+    "e": "Le seuil dans l'air expiré est de 0,10 mg/l, l'équivalent de 0,20 g/l dans le sang : la valeur dans l'air est la moitié de celle du sang.",
+    "r": "Air expiré : interdit dès 0,10 mg/l.",
+    "s": "alcool"
+  },
+  {
+    "id": "02_alcool_medicaments-03",
+    "t": "02_alcool_medicaments",
+    "q": "Un contrôle indique exactement 0,20 g/l d'alcool dans le sang. Avez-vous le droit de conduire ?",
+    "qa": "أظهرت المراقبة نسبة 0.20 غ/ل بالضبط من الكحول في الدم. هل يحق لك السياقة ؟",
+    "o": ["Oui, la limite n'est pas dépassée", "Non, la conduite est interdite dès 0,20 g/l"],
+    "a": [1],
+    "e": "La règle dit « égal ou supérieur à 0,20 g/l ». À 0,20 g/l pile, on est déjà en infraction.",
+    "r": "0,20 g/l pile = interdit (égal ou plus).",
+    "s": "alcool"
+  },
+  {
+    "id": "02_alcool_medicaments-04",
+    "t": "02_alcool_medicaments",
+    "q": "Quelles associations « mesure → unité » sont justes ?",
+    "qa": "ما هي العلاقات الصحيحة بين طريقة القياس ووحدة القياس ؟",
+    "o": ["Sang → grammes par litre (g/l)", "Sang → milligrammes par litre (mg/l)", "Air expiré → milligrammes par litre (mg/l)", "Air expiré → grammes par litre (g/l)"],
+    "a": [0, 2],
+    "e": "Dans le sang, on mesure en grammes par litre de sang (غ/ل) ; dans l'air expiré, en milligrammes par litre d'air (ملغ/ل).",
+    "r": "Sang en g/l · air expiré en mg/l.",
+    "s": "alcool"
+  },
+  {
+    "id": "02_alcool_medicaments-05",
+    "t": "02_alcool_medicaments",
+    "q": "Un contrôle de l'air expiré indique 0,30 mg/l. Cela correspond dans le sang à environ :",
+    "qa": "أظهرت مراقبة الهواء المنبعث من الفم نسبة 0.30 ملغ/ل. ما يعادل ذلك في الدم تقريبا ؟",
+    "o": ["0,60 g/l", "0,15 g/l", "0,30 g/l", "1,20 g/l"],
+    "a": [0],
+    "e": "L'air vaut la moitié du sang (0,1 mg/l d'air = 0,2 g/l de sang). Donc 0,30 mg/l d'air ≈ 0,60 g/l de sang, bien au-dessus du seuil.",
+    "r": "Taux sang = taux air × 2.",
+    "s": "alcool"
+  },
+  {
+    "id": "02_alcool_medicaments-06",
+    "t": "02_alcool_medicaments",
+    "q": "Un conducteur sous l'emprise de l'alcool est exposé à un accident mortel environ :",
+    "qa": "السائق تحت تأثير الكحول أكثر عرضة لحادثة مميتة بحوالي :",
+    "o": ["5 fois plus", "17 fois plus", "2 fois plus", "10 fois plus"],
+    "a": [1],
+    "e": "Selon le cours, le conducteur sous l'emprise de l'alcool est 17 fois plus exposé à un accident mortel. L'alcool est un facteur majeur des accidents dans le monde.",
+    "r": "Alcool = risque d'accident mortel × 17."
+  },
+  {
+    "id": "02_alcool_medicaments-07",
+    "t": "02_alcool_medicaments",
+    "q": "Quels sont les effets de l'alcool sur le conducteur ?",
+    "qa": "ما هي آثار الكحول على السائق ؟",
+    "o": ["Mauvaise évaluation des risques", "Temps de réaction plus long", "Champ visuel élargi", "Excès de confiance en soi"],
+    "a": [0, 1, 3],
+    "e": "L'alcool agit sur le cerveau : mauvaise appréciation des risques, réactions plus lentes, excès de confiance. Il rétrécit le champ visuel, il ne l'élargit pas.",
+    "r": "Alcool : réaction lente, vision rétrécie, risques sous-estimés."
+  },
+  {
+    "id": "02_alcool_medicaments-08",
+    "t": "02_alcool_medicaments",
+    "q": "Vous avez bu de l'alcool. Qu'est-ce qui fait réellement baisser votre taux d'alcool ?",
+    "qa": "شربت الكحول. ما الذي يخفض فعلا نسبة الكحول لديك ؟",
+    "o": ["Boire un café fort", "Se passer de l'eau froide sur le visage", "Uniquement le temps qui passe", "Boire beaucoup d'eau"],
+    "a": [2],
+    "e": "Ni le café ni l'eau froide ne font baisser le taux d'alcool : seul le temps l'élimine. La seule vraie solution : ne pas boire si l'on doit conduire.",
+    "r": "Seul le temps fait baisser le taux d'alcool."
+  },
+  {
+    "id": "02_alcool_medicaments-09",
+    "t": "02_alcool_medicaments",
+    "q": "Un seul verre d'alcool peut-il suffire à atteindre le seuil de 0,20 g/l ?",
+    "qa": "هل يمكن لكأس واحد من الكحول أن يكفي لبلوغ نسبة 0.20 غ/ل ؟",
+    "o": ["Oui", "Non, il en faut au moins trois"],
+    "a": [0],
+    "e": "En pratique, un seul verre peut suffire à dépasser 0,20 g/l. D'où la règle : aucun alcool avant de conduire.",
+    "r": "Avant de conduire : zéro alcool.",
+    "s": "alcool"
+  },
+  {
+    "id": "02_alcool_medicaments-10",
+    "t": "02_alcool_medicaments",
+    "q": "Conduire avec un taux d'alcool égal ou supérieur au seuil légal constitue :",
+    "qa": "السياقة بنسبة كحول تساوي أو تفوق الحد القانوني تعتبر :",
+    "o": ["un délit", "une contravention de 1re classe", "une contravention de 2e classe", "un simple avertissement"],
+    "a": [0],
+    "e": "La conduite sous l'emprise de l'alcool est un délit (جنحة) jugé par le tribunal, et non une contravention réglée par une amende transactionnelle.",
+    "r": "Alcool au volant = délit, pas contravention.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_alcool_medicaments-11",
+    "t": "02_alcool_medicaments",
+    "q": "Combien de points sont retirés pour conduite sous l'emprise de l'alcool ou de stupéfiants ?",
+    "qa": "كم عدد النقط المخصومة بسبب السياقة تحت تأثير الكحول أو المواد المخدرة ؟",
+    "o": ["4 points", "6 points", "2 points", "10 points"],
+    "a": [1],
+    "e": "Alcool ou drogue : délit avec retrait de 6 points et immobilisation du véhicule. Les 2 points concernent les médicaments qui interdisent la conduite.",
+    "r": "Alcool ou drogue : −6 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_alcool_medicaments-12",
+    "t": "02_alcool_medicaments",
+    "q": "Un conducteur refuse de souffler dans l'appareil de dépistage de l'alcool. Combien de points perd-il ?",
+    "qa": "رفض سائق الخضوع لرائز النفس للكشف عن الكحول. كم نقطة تخصم منه ؟",
+    "o": ["Aucun, le refus est un droit", "2 points", "4 points", "6 points, comme pour l'alcool"],
+    "a": [3],
+    "e": "Le refus du dépistage (رائز النفس) est un délit puni comme la conduite sous alcool : 6 points, amende de 5 000 à 10 000 DH et immobilisation du véhicule.",
+    "r": "Refus de souffler = même sanction que l'alcool.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_alcool_medicaments-13",
+    "t": "02_alcool_medicaments",
+    "q": "L'amende prévue pour la conduite sous l'emprise de l'alcool est de :",
+    "qa": "الغرامة المقررة للسياقة تحت تأثير الكحول هي :",
+    "o": ["300 à 600 DH", "700 à 1 400 DH", "2 000 à 5 000 DH", "5 000 à 10 000 DH"],
+    "a": [3],
+    "e": "Délit : amende de 5 000 à 10 000 DH, avec emprisonnement possible de 6 mois à 1 an et retrait de 6 points. 700 à 1 400 DH correspond aux contraventions de 1re classe.",
+    "r": "Alcool : 5 000 à 10 000 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_alcool_medicaments-14",
+    "t": "02_alcool_medicaments",
+    "q": "En cas de conduite sous l'emprise de l'alcool, la suspension du permis prévue est de :",
+    "qa": "في حالة السياقة تحت تأثير الكحول، مدة سحب رخصة السياقة المقررة هي :",
+    "o": ["6 mois à 1 an", "1 à 3 mois", "15 jours", "Aucune suspension"],
+    "a": [0],
+    "e": "Le tableau des infractions prévoit une suspension (سحب) du permis de 6 mois à 1 an, en plus de l'amende, de l'emprisonnement possible et du retrait de 6 points.",
+    "r": "Alcool : suspension du permis de 6 mois à 1 an.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_alcool_medicaments-15",
+    "t": "02_alcool_medicaments",
+    "q": "Un conducteur est contrôlé sous l'emprise de l'alcool. Que devient son véhicule ?",
+    "qa": "تمت مراقبة سائق تحت تأثير الكحول. ماذا يحدث لمركبته ؟",
+    "o": ["Il peut repartir après avoir payé l'amende", "Il est immobilisé jusqu'à la fin de l'infraction ou l'arrivée d'un autre conducteur qualifié", "Il est confisqué définitivement"],
+    "a": [1],
+    "e": "Le véhicule est immobilisé (توقيف المركبة) jusqu'à ce que l'infraction cesse ou qu'un autre conducteur titulaire d'un permis de la même catégorie prenne le volant.",
+    "r": "Alcool : véhicule immobilisé jusqu'à un conducteur apte."
+  },
+  {
+    "id": "02_alcool_medicaments-16",
+    "t": "02_alcool_medicaments",
+    "q": "Sur une boîte de médicament, le triangle rouge (niveau 3) signifie :",
+    "qa": "على علبة الدواء، يعني المثلث الأحمر (المستوى 3) :",
+    "o": ["Soyez prudent : lisez la notice", "Ne conduisez pas sans l'avis d'un médecin ou d'un pharmacien", "Danger : ne conduisez pas"],
+    "a": [2],
+    "e": "Niveau 3 (rouge) = conduite interdite ; pour reprendre le volant, il faut l'avis du médecin. Le jaune (niveau 1) demande de lire la notice, l'orange (niveau 2) l'avis d'un médecin ou pharmacien.",
+    "r": "Triangle rouge (niveau 3) = pas de conduite."
+  },
+  {
+    "id": "02_alcool_medicaments-17",
+    "t": "02_alcool_medicaments",
+    "q": "Votre médicament porte un triangle orange (niveau 2). Que devez-vous faire ?",
+    "qa": "يحمل دواؤك مثلثا برتقاليا (المستوى 2). ماذا يجب عليك أن تفعل ؟",
+    "o": ["Ne pas conduire sans avoir consulté un médecin ou un pharmacien", "Conduire normalement, il n'y a aucun risque", "Ne jamais conduire, quel que soit l'avis médical"],
+    "a": [0],
+    "e": "Niveau 2 (orange) = « soyez très prudent » : pas de conduite sans l'avis d'un médecin ou d'un pharmacien. L'interdiction de conduire correspond au niveau 3 (rouge).",
+    "r": "Triangle orange (niveau 2) = avis médical avant de conduire."
+  },
+  {
+    "id": "02_alcool_medicaments-18",
+    "t": "02_alcool_medicaments",
+    "q": "Médicament avec un triangle jaune (niveau 1) : quelles propositions sont justes ?",
+    "qa": "دواء يحمل مثلثا أصفر (المستوى 1) : ما هي الاقتراحات الصحيحة ؟",
+    "o": ["La conduite n'est pas interdite", "Il faut lire la notice avant de conduire", "La conduite est interdite", "Ce médicament n'a aucun effet possible sur la conduite"],
+    "a": [0, 1],
+    "e": "Niveau 1 (jaune) = « soyez prudent » : la conduite reste possible, mais après avoir lu la notice. Cela ne signifie pas « aucun risque ».",
+    "r": "Triangle jaune (niveau 1) = prudence, lire la notice."
+  },
+  {
+    "id": "02_alcool_medicaments-19",
+    "t": "02_alcool_medicaments",
+    "q": "Vrai ou faux : un médicament prescrit par votre médecin ne présente jamais de danger pour la conduite.",
+    "qa": "صحيح أم خطأ : الدواء الذي وصفه لك الطبيب لا يشكل أبدا خطرا على السياقة.",
+    "o": ["Vrai", "Faux"],
+    "a": [1],
+    "e": "Faux : un médicament autorisé médicalement peut provoquer somnolence ou troubles de la vue. Vérifiez le pictogramme et lisez toujours les effets secondaires dans la notice.",
+    "r": "Médicament prescrit ≠ sans danger au volant."
+  },
+  {
+    "id": "02_alcool_medicaments-20",
+    "t": "02_alcool_medicaments",
+    "q": "Que se passe-t-il quand on associe alcool et médicaments ?",
+    "qa": "ماذا يحدث عند الجمع بين الكحول والأدوية ؟",
+    "o": ["Les effets se multiplient", "Les effets s'annulent", "Le médicament fait baisser le taux d'alcool"],
+    "a": [0],
+    "e": "Alcool + médicaments : les effets se multiplient (تتضاعف). Le danger est bien plus grand que pour chacun pris séparément.",
+    "r": "Alcool + médicament = danger multiplié."
+  },
+  {
+    "id": "02_alcool_medicaments-21",
+    "t": "02_alcool_medicaments",
+    "q": "Conduire après avoir pris un médicament qui interdit la conduite entraîne un retrait de :",
+    "qa": "السياقة بعد تناول دواء يحظر السياقة يترتب عنها خصم :",
+    "o": ["6 points", "4 points", "2 points", "1 point"],
+    "a": [2],
+    "e": "C'est un délit : retrait de 2 points, amende de 5 000 à 10 000 DH et immobilisation du véhicule. L'alcool et les drogues coûtent 6 points.",
+    "r": "Médicament interdisant la conduite : −2 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_alcool_medicaments-22",
+    "t": "02_alcool_medicaments",
+    "q": "Quels effets les stupéfiants (drogues) ont-ils sur la conduite ?",
+    "qa": "ما هي آثار المواد المخدرة على السياقة ؟",
+    "o": ["Une perception plus faible", "Une meilleure estimation des distances", "Un temps de réaction plus long", "Un champ visuel plus étroit"],
+    "a": [0, 2, 3],
+    "e": "Les drogues affaiblissent la perception, allongent le temps de réaction, rétrécissent le champ visuel et faussent l'estimation de la vitesse et des distances.",
+    "r": "Drogue : perception, réaction, vision et distances faussées."
+  },
+  {
+    "id": "02_alcool_medicaments-23",
+    "t": "02_alcool_medicaments",
+    "q": "Consommer une substance qui agit sur le comportement alors qu'on va conduire correspond à quel niveau de consommation ?",
+    "qa": "استهلاك مادة تؤثر على السلوك مع السياقة يوافق أي مستوى من مستويات الاستهلاك ؟",
+    "o": ["Usage simple (بسيط)", "Usage à risque (محفوف بالخطر)", "Usage excessif (مفرط)", "Dépendance (الإدمان)"],
+    "a": [1],
+    "e": "Le cours distingue 4 niveaux : simple (sans complications), à risque (par exemple avec la conduite), excessif (dommages physiques, psychiques ou sociaux) et dépendance (impossible de s'en passer).",
+    "r": "Substance + conduite = usage à risque."
+  },
+
+  {
+    "id": "03_vigilance-01",
+    "t": "03_vigilance",
+    "q": "Un piéton âgé commence à traverser devant vous, hors passage piéton. Que faites-vous ?",
+    "qa": "راجل مسن يبدأ في عبور الطريق أمامك خارج ممر الراجلين. ماذا تفعل ؟",
+    "o": ["Je klaxonne pour qu'il se dépêche", "Je ralentis et je suis prêt à m'arrêter", "Je garde ma vitesse : il m'a forcément vu"],
+    "a": [1],
+    "e": "Les personnes âgées ou à mobilité réduite peuvent ne pas entendre ni voir le véhicule. Il faut ralentir et ne pas compter sur l'avertisseur sonore.",
+    "r": "Piéton âgé : ralentir, ne pas compter sur le klaxon."
+  },
+  {
+    "id": "03_vigilance-02",
+    "t": "03_vigilance",
+    "q": "Un ballon roule sur la chaussée devant vous. Que faites-vous ?",
+    "qa": "كرة تتدحرج على القارعة أمامك. ماذا تفعل ؟",
+    "o": ["Je continue : un ballon n'est pas dangereux", "Je donne un coup de klaxon et je passe", "Je ralentis fortement, prêt à m'arrêter : un enfant peut le suivre"],
+    "a": [2],
+    "e": "Un ballon près de la route annonce souvent un enfant qui va traverser brusquement pour le récupérer. Il faut anticiper cette traversée.",
+    "r": "Ballon sur la route = enfant probable : ralentir."
+  },
+  {
+    "id": "03_vigilance-03",
+    "t": "03_vigilance",
+    "q": "Pourquoi les enfants sont-ils des usagers particulièrement imprévisibles ?",
+    "qa": "لماذا يصعب التنبؤ بتصرفات الأطفال في الطريق ؟",
+    "o": ["Ils prennent des décisions soudaines, par exemple traverser pour rejoindre un parent", "Ils traversent toujours sur les passages piétons", "Ils évaluent parfaitement la vitesse des véhicules"],
+    "a": [0],
+    "e": "L'enfant peut décider brusquement de traverser, par exemple pour rejoindre l'un de ses parents. Le conducteur doit s'y attendre et ralentir.",
+    "r": "Enfant = décision soudaine : anticiper."
+  },
+  {
+    "id": "03_vigilance-04",
+    "t": "03_vigilance",
+    "q": "Pourquoi faut-il être particulièrement vigilant avec les cyclistes ?",
+    "qa": "لماذا يجب الانتباه بشكل خاص لراكبي الدراجات العادية ؟",
+    "o": ["Le vélo est instable et peut dévier brusquement", "Le cycliste n'a pas de rétroviseurs et ne voit pas derrière lui", "Le cycliste roule toujours aussi vite qu'une voiture", "L'écart de vitesse est dangereux hors agglomération, surtout la nuit"],
+    "a": [0, 1, 3],
+    "e": "Le vélo est instable (risque de chute), sans rétroviseurs et lent : hors agglomération, surtout la nuit, la différence de vitesse avec les voitures rend le cycliste très vulnérable.",
+    "r": "Vélo : instable, sans rétroviseur, lent."
+  },
+  {
+    "id": "03_vigilance-05",
+    "t": "03_vigilance",
+    "q": "Les cyclomotoristes, souvent des adolescents, peuvent notamment :",
+    "qa": "سائقو الدراجات بمحرك، وغالبا ما يكونون مراهقين، قد :",
+    "o": ["toujours rouler au centre de la chaussée", "dépasser dangereusement, surtout par la droite", "céder systématiquement le passage"],
+    "a": [1],
+    "e": "Comportements à risque et manque d'expérience : les cyclomotoristes peuvent dépasser de façon dangereuse, en particulier par la droite. Surveillez vos rétroviseurs.",
+    "r": "Cyclomoteur : attention aux dépassements par la droite."
+  },
+  {
+    "id": "03_vigilance-06",
+    "t": "03_vigilance",
+    "q": "Selon le cours, quelle catégorie d'usagers est la plus impliquée dans les accidents ?",
+    "qa": "حسب الدرس، ما هي فئة مستعملي الطريق الأكثر تورطا في الحوادث ؟",
+    "o": ["Les poids lourds", "Les autobus", "Les motocyclettes", "Les cyclistes"],
+    "a": [2],
+    "e": "Les motos sont rapides, petites (donc difficiles à voir) et accélèrent fortement : c'est la catégorie la plus impliquée dans les accidents.",
+    "r": "Motos : rapides et petites → les plus impliquées."
+  },
+  {
+    "id": "03_vigilance-07",
+    "t": "03_vigilance",
+    "q": "Au moment de changer de voie, pourquoi faut-il penser particulièrement aux motos ?",
+    "qa": "عند تغيير المسلك، لماذا يجب الانتباه بشكل خاص للدراجات النارية ؟",
+    "o": ["Elles ont toujours la priorité", "Elles ne dépassent jamais", "Petites et rapides, elles peuvent se trouver dans l'angle mort"],
+    "a": [2],
+    "e": "Petite et rapide, une moto peut se cacher dans l'angle mort au moment où vous changez de voie. Contrôlez les rétroviseurs puis l'angle mort.",
+    "r": "Changement de voie : penser à la moto dans l'angle mort."
+  },
+  {
+    "id": "03_vigilance-08",
+    "t": "03_vigilance",
+    "q": "Un autobus ou un tramway est arrêté à sa station. Quel danger devez-vous anticiper ?",
+    "qa": "حافلة أو ترامواي متوقف في محطته. ما الخطر الذي يجب توقعه ؟",
+    "o": ["Aucun, puisqu'il est à l'arrêt", "Des piétons cachés qui traversent devant ou derrière lui", "Qu'il recule brusquement"],
+    "a": [1],
+    "e": "Quand un bus ou un tram s'arrête, des piétons peuvent traverser par la droite ou par la gauche, souvent masqués par le véhicule. Ralentissez.",
+    "r": "Bus à l'arrêt = piétons cachés : ralentir."
+  },
+  {
+    "id": "03_vigilance-09",
+    "t": "03_vigilance",
+    "q": "Vous suivez un poids lourd et vous ne voyez pas ses rétroviseurs. Que devez-vous en conclure ?",
+    "qa": "تسير خلف مركبة الوزن الثقيل ولا ترى مرآتها. ماذا تستنتج ؟",
+    "o": ["Je suis bien placé pour le dépasser", "Son chauffeur me voit dans son rétroviseur intérieur", "Son chauffeur ne me voit pas"],
+    "a": [2],
+    "e": "Règle : si vous ne voyez pas les rétroviseurs du poids lourd, son chauffeur ne vous voit pas. Il n'a pas de rétroviseur intérieur et son angle mort arrière est très grand.",
+    "r": "Je ne vois pas son rétroviseur = il ne me voit pas."
+  },
+  {
+    "id": "03_vigilance-10",
+    "t": "03_vigilance",
+    "q": "Quelles propositions sont justes concernant les poids lourds ?",
+    "qa": "ما هي الاقتراحات الصحيحة بخصوص مركبات الوزن الثقيل ؟",
+    "o": ["Ils masquent la visibilité des autres usagers", "Ils ont un grand angle mort à l'arrière", "Leur chauffeur dispose d'un rétroviseur intérieur", "Ils ne gênent jamais la visibilité"],
+    "a": [0, 1],
+    "e": "Le poids lourd masque la vue et possède un grand angle mort arrière, car il n'a pas de rétroviseur intérieur.",
+    "r": "Poids lourd : vue masquée + grand angle mort arrière."
+  },
+  {
+    "id": "03_vigilance-11",
+    "t": "03_vigilance",
+    "q": "Avant de dépasser un poids lourd, vous devez :",
+    "qa": "قبل تجاوز مركبة الوزن الثقيل، يجب عليك :",
+    "o": ["annoncer votre intention", "vous coller à son arrière pour mieux voir", "vous assurer que son chauffeur vous voit", "rester à sa hauteur le plus longtemps possible"],
+    "a": [0, 2],
+    "e": "On ne dépasse un poids lourd qu'après avoir annoncé la manœuvre et s'être assuré que son chauffeur nous voit. Il ne faut pas rester longtemps à côté de lui (angle mort).",
+    "r": "Dépasser un camion : annoncer, être vu, ne pas s'attarder."
+  },
+  {
+    "id": "03_vigilance-12",
+    "t": "03_vigilance",
+    "q": "Selon le cours, quels véhicules sont des véhicules prioritaires ?",
+    "qa": "حسب الدرس، ما هي المركبات ذات الأولوية ؟",
+    "o": ["Les véhicules de la sûreté (الأمن)", "Les véhicules de la protection civile", "Les taxis", "Les ambulances"],
+    "a": [0, 1, 3],
+    "e": "Sûreté, protection civile et ambulances sont prioritaires : soyez attentif à leurs signaux et laissez-leur le passage. Un taxi n'est pas un véhicule prioritaire.",
+    "r": "Prioritaires : sûreté, protection civile, ambulance."
+  },
+  {
+    "id": "03_vigilance-13",
+    "t": "03_vigilance",
+    "q": "« Prévoir les erreurs des autres usagers » est le principe de :",
+    "qa": "«توقّع خطأ الآخرين» هو مبدأ :",
+    "o": ["la conduite sportive", "la conduite défensive", "la conduite économique"],
+    "a": [1],
+    "e": "La conduite défensive (السياقة الدفاعية) consiste à anticiper les fautes des autres pour avoir le temps de réagir.",
+    "r": "Conduite défensive = prévoir les erreurs des autres."
+  },
+  {
+    "id": "03_vigilance-14",
+    "t": "03_vigilance",
+    "q": "Les règles de circulation servent à :",
+    "qa": "تهدف قواعد السير إلى :",
+    "o": ["définir les droits et devoirs de chaque usager", "protéger les conducteurs, les passagers et les personnes", "protéger l'environnement, les biens et la route", "protéger uniquement les automobilistes"],
+    "a": [0, 1, 2],
+    "e": "Les règles définissent les droits et devoirs de chaque usager de l'espace routier. Elles protègent l'ordre public, les conducteurs, les passagers, les personnes, l'environnement, les biens et la route, pas seulement les automobilistes.",
+    "r": "Les règles protègent tous les usagers et l'espace routier."
+  },
+  {
+    "id": "03_vigilance-15",
+    "t": "03_vigilance",
+    "q": "Pourquoi un accident impliquant un piéton peut-il facilement être mortel ?",
+    "qa": "لماذا قد تكون الحادثة مع راجل قاتلة بسهولة ؟",
+    "o": ["Le piéton n'a aucune protection", "Le piéton est toujours en faute", "Le piéton se déplace trop vite"],
+    "a": [0],
+    "e": "Le piéton n'a aucune protection : un choc peut être mortel. Il faut donc ralentir près des piétons, surtout des enfants et des personnes âgées.",
+    "r": "Piéton = aucune protection."
+  },
+  {
+    "id": "03_vigilance-16",
+    "t": "03_vigilance",
+    "q": "Changer de file ou de direction sans prendre les précautions nécessaires est sanctionné comme :",
+    "qa": "تغيير الصف أو الاتجاه دون اتخاذ الاحتياطات اللازمة يعاقب عليه باعتباره :",
+    "o": ["contravention de 1re classe, 4 points", "contravention de 2e classe, 2 points", "contravention de 3e classe, sans retrait de points", "délit, 6 points"],
+    "a": [2],
+    "e": "D'après le tableau des infractions : contravention de 3e classe (300 à 600 DH), sans retrait de points. À ne pas confondre avec le dépassement défectueux (1re classe, 4 points).",
+    "r": "Changement de file sans précaution : 3e classe, 0 point.",
+    "s": "sanctions"
+  },
+  {
+    "id": "03_vigilance-17",
+    "t": "03_vigilance",
+    "q": "Quels sont des signes de fatigue au volant ?",
+    "qa": "ما هي علامات التعب أثناء السياقة ؟",
+    "o": ["Des bâillements répétés", "Des paupières lourdes", "Une concentration accrue", "Ne plus se souvenir des derniers kilomètres"],
+    "a": [0, 1, 3],
+    "e": "Bâillements, paupières lourdes, nuque raide, oubli des derniers kilomètres parcourus : ce sont des signaux d'alerte. Il faut s'arrêter.",
+    "r": "Bâillements, paupières lourdes = s'arrêter."
+  },
+  {
+    "id": "03_vigilance-18",
+    "t": "03_vigilance",
+    "q": "Vous sentez la somnolence vous gagner au volant. Que faites-vous ?",
+    "qa": "تشعر بالنعاس أثناء السياقة. ماذا تفعل ؟",
+    "o": ["Je m'arrête dans un endroit sûr et je fais une sieste de 15 à 20 minutes", "J'ouvre la fenêtre et je monte le son de la musique", "Je bois un café et je continue"],
+    "a": [0],
+    "e": "La seule solution contre la somnolence est de s'arrêter et de se reposer. La fenêtre ouverte, la musique ou le café ne remplacent pas le sommeil.",
+    "r": "Somnolence : seul remède = s'arrêter et se reposer."
+  },
+  {
+    "id": "03_vigilance-19",
+    "t": "03_vigilance",
+    "q": "Lors d'un long trajet, il est conseillé de faire une pause environ toutes les :",
+    "qa": "خلال رحلة طويلة، ينصح بأخذ استراحة تقريبا كل :",
+    "o": ["30 minutes", "2 heures", "4 heures", "6 heures"],
+    "a": [1],
+    "e": "Une pause d'environ 15 minutes toutes les 2 heures aide à lutter contre la fatigue sur les longs trajets.",
+    "r": "Long trajet : pause toutes les 2 heures."
+  },
+  {
+    "id": "03_vigilance-20",
+    "t": "03_vigilance",
+    "q": "Rester 17 heures sans dormir produit sur le conducteur un effet comparable à celui :",
+    "qa": "البقاء 17 ساعة بدون نوم يحدث لدى السائق أثرا يشبه أثر :",
+    "o": ["d'un café", "de l'alcool", "d'une courte sieste"],
+    "a": [1],
+    "e": "« Fatigue = alcool » : après 17 heures sans sommeil, les réflexes sont dégradés comme sous l'effet de l'alcool. Le temps de réaction et la distance d'arrêt s'allongent.",
+    "r": "17 h sans sommeil ≈ effet de l'alcool."
+  },
+  {
+    "id": "03_vigilance-21",
+    "t": "03_vigilance",
+    "q": "Avant un long voyage, quelles précautions sont recommandées ?",
+    "qa": "قبل سفر طويل، ما هي الاحتياطات الموصى بها ؟",
+    "o": ["Dormir suffisamment", "Prendre un somnifère pour être détendu", "Prendre un repas léger", "Prendre un repas copieux"],
+    "a": [0, 2],
+    "e": "Avant de partir : sommeil suffisant, repas léger et aucun médicament qui fait dormir (أدوية منومة).",
+    "r": "Avant de partir : bien dormir, manger léger, pas de somnifère."
+  },
+  {
+    "id": "03_vigilance-22",
+    "t": "03_vigilance",
+    "q": "Quelles situations détournent l'attention du conducteur ?",
+    "qa": "ما هي الحالات التي تشتت انتباه السائق ؟",
+    "o": ["Utiliser le téléphone", "Écouter de la musique très fort", "Contrôler régulièrement ses rétroviseurs"],
+    "a": [0, 1],
+    "e": "Le téléphone et la musique trop forte détournent l'attention et empêchent d'entendre avertisseurs et sirènes. Contrôler ses rétroviseurs fait au contraire partie de la vigilance.",
+    "r": "Téléphone, musique forte = distraction."
+  },
+
+  {
+    "id": "04_perception_reaction-01",
+    "t": "04_perception_reaction",
+    "q": "Véhicule à l'arrêt, le champ de vision directe d'un conducteur couvre horizontalement environ :",
+    "qa": "عندما تكون المركبة متوقفة، يغطي مجال الرؤية المباشر للسائق أفقيا حوالي :",
+    "o": ["90°", "120°", "180°", "360°"],
+    "a": [2],
+    "e": "Le champ visuel direct est d'environ 180° à l'horizontale et 120° à la verticale. Il se rétrécit quand la vitesse augmente.",
+    "r": "Vision directe : 180° à l'horizontale."
+  },
+  {
+    "id": "04_perception_reaction-02",
+    "t": "04_perception_reaction",
+    "q": "Verticalement, le champ de vision directe est d'environ :",
+    "qa": "عموديا، يبلغ مجال الرؤية المباشر حوالي :",
+    "o": ["180°", "120°", "90°", "60°"],
+    "a": [1],
+    "e": "120° à la verticale, 180° à l'horizontale : ne pas inverser les deux valeurs.",
+    "r": "Vision directe : 120° à la verticale."
+  },
+  {
+    "id": "04_perception_reaction-03",
+    "t": "04_perception_reaction",
+    "q": "Le champ de vision directe correspond à :",
+    "qa": "مجال الرؤية المباشر هو :",
+    "o": ["l'espace vu par les yeux sans les bouger", "ce que montrent les rétroviseurs", "tout ce que l'on voit en tournant la tête"],
+    "a": [0],
+    "e": "La vision directe est l'espace visible avec les yeux sans les bouger. Ce que reflètent les rétroviseurs est la vision indirecte.",
+    "r": "Vision directe = sans bouger les yeux."
+  },
+  {
+    "id": "04_perception_reaction-04",
+    "t": "04_perception_reaction",
+    "q": "Dans le champ de vision, où la vision est-elle précise ?",
+    "qa": "في مجال الرؤية، أين تكون الرؤية دقيقة ؟",
+    "o": ["Partout de la même façon", "Sur les côtés seulement", "Au centre seulement ; la périphérie est floue"],
+    "a": [2],
+    "e": "La précision n'existe qu'au centre du regard ; les bords du champ visuel sont flous, et d'autant plus que la vitesse est élevée.",
+    "r": "Vision nette au centre, floue en périphérie."
+  },
+  {
+    "id": "04_perception_reaction-05",
+    "t": "04_perception_reaction",
+    "q": "Quand la vitesse augmente, le champ de vision du conducteur :",
+    "qa": "عندما تزداد السرعة، فإن مجال رؤية السائق :",
+    "o": ["se rétrécit (vision en tunnel)", "s'élargit", "reste identique"],
+    "a": [0],
+    "e": "Plus on roule vite, plus le champ visuel se rétrécit : c'est la vision en tunnel (رؤية النفق). On perçoit moins ce qui arrive sur les côtés.",
+    "r": "Vitesse en hausse = champ visuel rétréci."
+  },
+  {
+    "id": "04_perception_reaction-06",
+    "t": "04_perception_reaction",
+    "q": "Quels facteurs rétrécissent le champ visuel du conducteur ?",
+    "qa": "ما هي العوامل التي تضيّق مجال رؤية السائق ؟",
+    "o": ["Une vitesse élevée", "La fatigue", "Un rétroviseur bien réglé", "La drogue"],
+    "a": [0, 1, 3],
+    "e": "La vitesse, la fatigue, l'alcool et les drogues rétrécissent le champ visuel. Un rétroviseur bien réglé aide à voir, il ne réduit pas le champ.",
+    "r": "Vitesse, fatigue, alcool, drogue = vision rétrécie."
+  },
+  {
+    "id": "04_perception_reaction-07",
+    "t": "04_perception_reaction",
+    "q": "La vision indirecte du conducteur, c'est :",
+    "qa": "الرؤية غير المباشرة للسائق هي :",
+    "o": ["ce qu'il voit du coin de l'œil", "ce que reflètent les rétroviseurs", "ce qu'il voit à travers la vitre arrière en se retournant"],
+    "a": [1],
+    "e": "La vision indirecte est l'image donnée par les rétroviseurs. Elle est moins précise que la vision directe.",
+    "r": "Vision indirecte = rétroviseurs."
+  },
+  {
+    "id": "04_perception_reaction-08",
+    "t": "04_perception_reaction",
+    "q": "Par rapport à la vision directe, l'image des rétroviseurs est :",
+    "qa": "مقارنة مع الرؤية المباشرة، تكون الصورة في المرايا :",
+    "o": ["moins précise : le cerveau met plus de temps à évaluer les distances", "plus précise", "identique dans tous les rétroviseurs"],
+    "a": [0],
+    "e": "La vision dans les rétroviseurs est moins précise : le cerveau a besoin de plus de temps pour estimer les distances, et la perception diffère entre rétroviseur intérieur et extérieur.",
+    "r": "Rétroviseur = moins précis, distances plus dures à juger."
+  },
+  {
+    "id": "04_perception_reaction-09",
+    "t": "04_perception_reaction",
+    "q": "La zone que le conducteur ne voit ni directement ni dans ses rétroviseurs s'appelle :",
+    "qa": "المنطقة التي لا يراها السائق مباشرة ولا في المرايا تسمى :",
+    "o": ["le champ visuel", "la vision indirecte", "l'angle mort (الزاوية الخفية)"],
+    "a": [2],
+    "e": "Tout ce qui n'est pas visible constitue un angle mort. Il existe des angles morts avant, latéraux et arrière.",
+    "r": "Zone non visible = angle mort."
+  },
+  {
+    "id": "04_perception_reaction-10",
+    "t": "04_perception_reaction",
+    "q": "Les montants du pare-brise peuvent cacher un véhicule situé à une distance d'environ :",
+    "qa": "يمكن لقوائم الزجاج الأمامي أن تحجب مركبة توجد على بعد حوالي :",
+    "o": ["500 m", "150 m", "5 m", "50 m"],
+    "a": [3],
+    "e": "L'angle mort avant créé par les montants du pare-brise peut masquer un véhicule à 50 m, ou un piéton ou un cycliste dans une intersection.",
+    "r": "Montant de pare-brise : peut cacher un véhicule à 50 m."
+  },
+  {
+    "id": "04_perception_reaction-11",
+    "t": "04_perception_reaction",
+    "q": "Selon le cours, quel angle mort est le plus important ?",
+    "qa": "حسب الدرس، ما هي الزاوية الخفية الأكثر أهمية ؟",
+    "o": ["L'angle mort arrière", "L'angle mort avant (montants du pare-brise)", "L'angle mort latéral"],
+    "a": [0],
+    "e": "L'angle mort arrière, loin derrière la vitre arrière, est le plus important. Les angles morts avant (montants du pare-brise) et latéraux existent aussi.",
+    "r": "Angle mort le plus important : l'arrière."
+  },
+  {
+    "id": "04_perception_reaction-12",
+    "t": "04_perception_reaction",
+    "q": "Pour changer de voie, regarder dans les rétroviseurs suffit-il ?",
+    "qa": "لتغيير المسلك، هل يكفي النظر في المرايا ؟",
+    "o": ["Oui, s'ils sont bien réglés", "Non, il faut aussi tourner la tête pour contrôler l'angle mort"],
+    "a": [1],
+    "e": "L'angle mort n'apparaît pas dans les rétroviseurs : il faut toujours tourner la tête avant de changer de voie.",
+    "r": "Changer de voie : rétroviseurs + tourner la tête."
+  },
+  {
+    "id": "04_perception_reaction-13",
+    "t": "04_perception_reaction",
+    "q": "Le temps de réaction est le temps qui s'écoule entre :",
+    "qa": "زمن رد الفعل هو الوقت الذي يمر بين :",
+    "o": ["la perception du signal et l'appui sur la pédale de frein", "l'appui sur le frein et l'arrêt complet", "la perception du signal et l'arrêt complet du véhicule"],
+    "a": [0],
+    "e": "Le temps de réaction va de la perception du signal jusqu'à l'appui sur la pédale de frein. Vient ensuite le freinage ; l'ensemble donne la distance d'arrêt.",
+    "r": "Réaction = de « je vois » à « j'appuie sur le frein ».",
+    "s": "distance"
+  },
+  {
+    "id": "04_perception_reaction-14",
+    "t": "04_perception_reaction",
+    "q": "Le temps de réaction moyen d'un conducteur en état normal est d'environ :",
+    "qa": "يبلغ متوسط زمن رد الفعل لدى سائق في حالة عادية حوالي :",
+    "o": ["0,1 seconde", "3 secondes", "1 seconde", "5 secondes"],
+    "a": [2],
+    "e": "En moyenne 1 seconde pour un conducteur en état normal. La fatigue, l'alcool, les médicaments ou le téléphone l'allongent.",
+    "r": "Temps de réaction moyen ≈ 1 seconde.",
+    "s": "distance"
+  },
+  {
+    "id": "04_perception_reaction-15",
+    "t": "04_perception_reaction",
+    "q": "Dans quel ordre se déroulent les étapes du temps de réaction ?",
+    "qa": "ما هو ترتيب مراحل زمن رد الفعل ؟",
+    "o": ["Voir le signal → appuyer sur le frein → analyser le signal", "Voir le signal → analyser le signal → appuyer sur la pédale de frein", "Analyser le signal → voir le signal → appuyer sur le frein"],
+    "a": [1],
+    "e": "1. Voir le signal, 2. l'analyser (et décider), 3. appuyer sur la pédale de frein. Chaque étape prend du temps.",
+    "r": "Voir → analyser → décider → freiner."
+  },
+  {
+    "id": "04_perception_reaction-16",
+    "t": "04_perception_reaction",
+    "q": "Cette illustration représente quelle étape du temps de réaction ?",
+    "qa": "تمثل هذه الصورة أي مرحلة من مراحل زمن رد الفعل ؟",
+    "o": ["Voir le signal", "Analyser le signal", "Appuyer sur la pédale de frein"],
+    "a": [1],
+    "e": "Le cerveau illustre la 2e étape : l'analyse du signal, entre sa perception par les yeux et l'appui sur la pédale de frein.",
+    "r": "Étape 2 = analyse du signal par le cerveau.",
+    "img": "1683123052630.png"
+  },
+  {
+    "id": "04_perception_reaction-17",
+    "t": "04_perception_reaction",
+    "q": "Quels facteurs allongent le temps de réaction ?",
+    "qa": "ما هي العوامل التي تطيل زمن رد الفعل ؟",
+    "o": ["La fatigue", "L'utilisation du téléphone", "Des pneus neufs", "L'alcool"],
+    "a": [0, 1, 3],
+    "e": "La fatigue, l'alcool, les médicaments, le téléphone et l'état psychologique allongent le temps de réaction. Il dépend de l'état du conducteur, pas de celui du véhicule ou de la route.",
+    "r": "Fatigue, alcool, médicaments, téléphone = réaction plus lente.",
+    "s": "distance"
+  },
+  {
+    "id": "04_perception_reaction-18",
+    "t": "04_perception_reaction",
+    "q": "Sur une route mouillée, qu'est-ce qui augmente ?",
+    "qa": "على طريق مبللة، ما الذي يزداد ؟",
+    "o": ["Le temps de réaction", "Le temps de réaction et la distance de freinage", "La distance de freinage"],
+    "a": [2],
+    "e": "Le temps de réaction change avec l'état du conducteur, pas avec l'état de la route. Sur chaussée mouillée, c'est la distance de freinage qui augmente (environ doublée).",
+    "r": "Route mouillée : freinage plus long, réaction inchangée.",
+    "s": "distance"
+  },
+  {
+    "id": "04_perception_reaction-19",
+    "t": "04_perception_reaction",
+    "q": "En conduite anticipée (pied déjà placé au-dessus du frein), le temps de réaction :",
+    "qa": "في السياقة الاستباقية (القدم قبالة الفرامل)، يصبح زمن رد الفعل :",
+    "o": ["passe sous 1 seconde", "reste d'au moins 2 secondes", "n'est pas modifié"],
+    "a": [0],
+    "e": "En anticipant, le pied prêt au-dessus de la pédale de frein, on gagne du temps : le temps de réaction descend sous la seconde.",
+    "r": "Anticiper = réaction en moins d'1 seconde.",
+    "s": "distance"
+  },
+  {
+    "id": "04_perception_reaction-20",
+    "t": "04_perception_reaction",
+    "q": "À 90 km/h, quelle distance parcourez-vous pendant votre temps de réaction (environ 1 seconde) ?",
+    "qa": "بسرعة 90 كلم/س، ما هي المسافة التي تقطعها خلال زمن رد الفعل (حوالي ثانية واحدة) ؟",
+    "o": ["81 m", "54 m", "27 m", "9 m"],
+    "a": [2],
+    "e": "Distance de réaction = (vitesse ÷ 10) × 3, soit 9 × 3 = 27 m parcourus sans aucun freinage. 81 m est la distance d'arrêt totale à 90 km/h.",
+    "r": "Réaction : (V ÷ 10) × 3 → 27 m à 90 km/h.",
+    "s": "distance"
+  },
+  {
+    "id": "04_perception_reaction-21",
+    "t": "04_perception_reaction",
+    "q": "Pendant le temps de réaction, votre véhicule :",
+    "qa": "خلال زمن رد الفعل، فإن مركبتك :",
+    "o": ["commence déjà à ralentir", "continue à rouler à la même vitesse, sans freiner", "est déjà à l'arrêt"],
+    "a": [1],
+    "e": "Tant que le pied n'a pas appuyé sur le frein, la voiture roule à vitesse constante : c'est la distance de réaction, parcourue sans aucun freinage.",
+    "r": "Temps de réaction = distance parcourue sans freiner.",
+    "s": "distance"
+  },
+  {
+    "id": "04_perception_reaction-22",
+    "t": "04_perception_reaction",
+    "q": "Téléphoner en tenant le téléphone en main pendant la conduite est une contravention de 2e classe qui entraîne un retrait de :",
+    "qa": "استعمال الهاتف ممسوكا باليد أثناء السياقة مخالفة من الدرجة الثانية يترتب عنها خصم :",
+    "o": ["2 points", "0 point", "4 points", "1 point"],
+    "a": [3],
+    "e": "Téléphone tenu en main : contravention de 2e classe (500 à 1 000 DH) et retrait de 1 point, même à l'arrêt dans un embouteillage. Le téléphone distrait et allonge le temps de réaction.",
+    "r": "Téléphone en main : 2e classe, −1 point.",
+    "s": "sanctions"
+  }
+]

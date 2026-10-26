@@ -1,0 +1,2859 @@
+[
+  {
+    "id": "01_montee_descente-01",
+    "t": "01_montee_descente",
+    "q": "Quels documents font partie des documents obligatoires que le conducteur doit avoir avec lui ?",
+    "qa": "ما هي الوثائق الإجبارية التي يجب أن تكون بحوزة السائق؟",
+    "o": [
+      "Le permis de conduire (رخصة السياقة)",
+      "La facture d'achat du véhicule",
+      "La carte grise (البطاقة الرمادية)",
+      "L'attestation d'assurance (شهادة التأمين)"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Les 5 documents obligatoires sont : permis de conduire, carte grise, attestation d'assurance, procès-verbal de contrôle technique et attestation de paiement de la taxe annuelle. La facture d'achat n'en fait pas partie.",
+    "r": "5 documents : permis, carte grise, assurance, visite technique, taxe."
+  },
+  {
+    "id": "01_montee_descente-02",
+    "t": "01_montee_descente",
+    "q": "Lequel de ces documents ne fait PAS partie des documents obligatoires ?",
+    "qa": "أي وثيقة من هذه الوثائق ليست من الوثائق الإجبارية؟",
+    "o": [
+      "Le procès-verbal de contrôle technique (محضر المراقبة التقنية)",
+      "L'attestation de paiement de la taxe annuelle (الضريبة السنوية)",
+      "Le certificat d'immatriculation (البطاقة الرمادية)",
+      "Le carnet d'entretien du véhicule"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le carnet d'entretien est utile mais ne figure pas parmi les 5 documents obligatoires (permis, carte grise, assurance, contrôle technique, taxe annuelle).",
+    "r": "Le carnet d'entretien n'est pas un document obligatoire."
+  },
+  {
+    "id": "01_montee_descente-03",
+    "t": "01_montee_descente",
+    "q": "Le siège est bien réglé par rapport aux pédales lorsque :",
+    "qa": "تكون المسافة بين المقعد والدواسات مضبوطة عندما :",
+    "o": [
+      "le pied droit se trouve devant l'embrayage",
+      "le pied droit est entre l'accélérateur et le frein, et le pied gauche devant l'embrayage",
+      "les jambes sont complètement tendues"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Bon réglage : pied droit entre l'accélérateur et le frein, pied gauche devant l'embrayage, pour atteindre immédiatement toutes les commandes. Des jambes complètement tendues indiquent un siège trop reculé.",
+    "r": "Pied droit : accélérateur/frein. Pied gauche : embrayage."
+  },
+  {
+    "id": "01_montee_descente-04",
+    "t": "01_montee_descente",
+    "q": "En ville et sur routes sinueuses, quelle position des mains sur le volant est recommandée ?",
+    "qa": "في المدينة والطرق الملتوية، ما هي وضعية اليدين الموصى بها على المقود؟",
+    "o": [
+      "9h15",
+      "10h10",
+      "12h00",
+      "Une seule main en haut du volant"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La position 10h10 permet des mouvements rapides et précis (ville, virages). La position 9h15 convient aux longues distances en ligne droite.",
+    "r": "10h10 : ville et virages. 9h15 : longues lignes droites."
+  },
+  {
+    "id": "01_montee_descente-05",
+    "t": "01_montee_descente",
+    "q": "Sur autoroute ou sur une longue route nationale rectiligne, la position des mains conseillée est :",
+    "qa": "في المسافات الطويلة المستقيمة (طريق وطنية، طريق سيار)، وضعية اليدين المنصوح بها هي :",
+    "o": [
+      "10h10",
+      "9h15",
+      "8h20",
+      "Les deux mains en bas du volant"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sur longues distances en ligne droite, on tient le volant à 9h15. Le 10h10 est réservé à la ville et aux routes sinueuses, où il faut tourner vite et précisément.",
+    "r": "9h15 = longues distances en ligne droite."
+  },
+  {
+    "id": "01_montee_descente-06",
+    "t": "01_montee_descente",
+    "q": "Lorsque vous tenez le volant, vos bras doivent être :",
+    "qa": "عند الإمساك بالمقود، يجب أن يكون الذراعان :",
+    "o": [
+      "complètement tendus",
+      "fléchis, sans crispation",
+      "très pliés, le buste collé au volant"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Bras fléchis et détendus : c'est la position de référence. Bras tendus ou buste collé au volant sont de mauvaises positions de conduite.",
+    "r": "Bras fléchis, sans crispation."
+  },
+  {
+    "id": "01_montee_descente-07",
+    "t": "01_montee_descente",
+    "q": "Le rétroviseur intérieur est bien réglé lorsqu'il permet de voir :",
+    "qa": "تكون المرآة الداخلية مضبوطة عندما ترى فيها :",
+    "o": [
+      "la moitié de la vitre arrière",
+      "toute la vitre arrière (lunette)",
+      "le visage du conducteur",
+      "la banquette arrière"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le rétroviseur intérieur doit cadrer toute la lunette arrière. Les rétroviseurs extérieurs, eux, montrent la portière arrière dans leur angle intérieur.",
+    "r": "Rétroviseur intérieur : toute la vitre arrière."
+  },
+  {
+    "id": "01_montee_descente-08",
+    "t": "01_montee_descente",
+    "q": "Un rétroviseur extérieur est bien réglé lorsqu'on y voit :",
+    "qa": "تكون المرآة الخارجية مضبوطة عندما نرى فيها :",
+    "o": [
+      "uniquement la route, sans aucune partie du véhicule",
+      "la portière arrière dans son angle intérieur",
+      "la roue avant",
+      "la carrosserie sur la moitié du miroir"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Repère de réglage : la portière arrière doit apparaître dans l'angle intérieur du rétroviseur extérieur, le reste du miroir montrant la route.",
+    "r": "Rétro extérieur : portière arrière dans l'angle intérieur."
+  },
+  {
+    "id": "01_montee_descente-09",
+    "t": "01_montee_descente",
+    "q": "La ceinture de sécurité doit être placée :",
+    "qa": "يجب أن يوضع حزام السلامة :",
+    "o": [
+      "sur le ventre et contre le cou",
+      "sous le bras pour plus de confort",
+      "un peu lâche pour pouvoir bouger",
+      "sur la poitrine et les os du bassin, à plat et tendue"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La ceinture passe sur la poitrine et sur les os du bassin, bien à plat et tendue. Mal placée ou lâche, elle protège mal.",
+    "r": "Ceinture : poitrine + bassin, à plat et tendue."
+  },
+  {
+    "id": "01_montee_descente-10",
+    "t": "01_montee_descente",
+    "q": "Quelles propositions sont justes concernant le réglage du siège ?",
+    "qa": "ما هي الاقتراحات الصحيحة بخصوص ضبط المقعد؟",
+    "o": [
+      "Le dossier doit être très incliné vers l'arrière",
+      "Le dossier doit être droit",
+      "L'appuie-tête se règle au niveau de la tête",
+      "L'appuie-tête se règle au niveau du cou"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Bonne position : dossier droit et appuie-tête au niveau de la tête. Un dossier très incliné ou un appuie-tête au niveau du cou sont des réglages incorrects.",
+    "r": "Dossier droit, appuie-tête au niveau de la tête."
+  },
+  {
+    "id": "01_montee_descente-11",
+    "t": "01_montee_descente",
+    "q": "Dans quel ordre effectuer les réglages avant de démarrer ?",
+    "qa": "ما هو الترتيب الصحيح لعمليات الضبط قبل الانطلاق؟",
+    "o": [
+      "Moteur → ceinture → rétroviseurs → siège",
+      "Siège → appuie-tête → volant → rétroviseurs → ceinture → moteur",
+      "Rétroviseurs → siège → moteur → ceinture",
+      "Ceinture → moteur → siège → rétroviseurs"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On règle d'abord le siège, dont dépendent les autres réglages, puis l'appuie-tête, le volant et les rétroviseurs ; on boucle la ceinture et on démarre le moteur en dernier.",
+    "r": "Siège → appuie-tête → volant → rétros → ceinture → moteur."
+  },
+  {
+    "id": "01_montee_descente-12",
+    "t": "01_montee_descente",
+    "q": "Vrai ou faux : on peut régler ses rétroviseurs en roulant, dans les premiers mètres.",
+    "qa": "صحيح أم خطأ : يمكن ضبط المرايا أثناء السير، في الأمتار الأولى.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : les rétroviseurs se règlent avant le départ, jamais pendant la marche. C'est un piège classique d'examen.",
+    "r": "Rétroviseurs : réglés avant le départ, jamais en roulant."
+  },
+  {
+    "id": "01_montee_descente-13",
+    "t": "01_montee_descente",
+    "q": "Après la mise en marche du moteur, un voyant du tableau de bord reste allumé alors que les autres se sont éteints. Cela signifie :",
+    "qa": "بعد تشغيل المحرك، يبقى أحد مؤشرات لوحة القيادة مشتعلا بينما انطفأت المؤشرات الأخرى. هذا يعني :",
+    "o": [
+      "que c'est normal, il s'éteindra en roulant",
+      "une anomalie : il faut agir selon le voyant concerné",
+      "que la batterie est neuve"
+    ],
+    "a": [
+      1
+    ],
+    "e": "À la mise en marche, tous les voyants s'allument puis s'éteignent. Un voyant qui reste allumé signale une panne : on agit selon sa signification.",
+    "r": "Voyant qui reste allumé = anomalie : agir selon le voyant."
+  },
+  {
+    "id": "01_montee_descente-14",
+    "t": "01_montee_descente",
+    "q": "Avant de descendre du véhicule, que devez-vous faire ?",
+    "qa": "قبل النزول من المركبة، ماذا يجب عليك أن تفعل؟",
+    "o": [
+      "Arrêter le moteur",
+      "Laisser le moteur tourner si l'arrêt est court",
+      "Mettre le levier au point mort",
+      "Serrer le frein à main"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Pour descendre : s'arrêter dans un endroit autorisé et adapté, couper le moteur, mettre le point mort et serrer le frein à main.",
+    "r": "Descente : moteur coupé, point mort, frein à main."
+  },
+  {
+    "id": "01_montee_descente-15",
+    "t": "01_montee_descente",
+    "q": "Avant d'ouvrir votre portière, vous devez :",
+    "qa": "قبل فتح باب المركبة، يجب عليك :",
+    "o": [
+      "klaxonner pour prévenir les autres",
+      "ouvrir vite pour gêner le moins longtemps possible",
+      "regarder dans le rétroviseur puis tourner la tête vers l'angle mort"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Rétroviseur puis regard dans l'angle mort avant d'ouvrir. Ouvrir sans regarder met en danger les cyclistes et constitue une infraction.",
+    "r": "Portière : rétroviseur + angle mort avant d'ouvrir."
+  },
+  {
+    "id": "01_montee_descente-16",
+    "t": "01_montee_descente",
+    "q": "La « méthode hollandaise » consiste, pour le conducteur, à ouvrir sa portière :",
+    "qa": "«الطريقة الهولندية» تعني أن يفتح السائق باب المركبة :",
+    "o": [
+      "avec la main gauche, d'un geste rapide",
+      "après avoir allumé les feux de détresse",
+      "en entrouvrant d'abord la vitre",
+      "avec la main droite, ce qui le fait se retourner naturellement"
+    ],
+    "a": [
+      3
+    ],
+    "e": "En ouvrant avec la main droite, le conducteur pivote et regarde automatiquement vers l'arrière et l'angle mort, ce qui protège notamment les cyclistes.",
+    "r": "Méthode hollandaise : ouvrir la portière de la main droite."
+  },
+  {
+    "id": "01_montee_descente-17",
+    "t": "01_montee_descente",
+    "q": "De quel côté les passagers, et surtout les enfants, doivent-ils descendre du véhicule ?",
+    "qa": "من أي جهة يجب أن ينزل الركاب، وخاصة الأطفال، من المركبة؟",
+    "o": [
+      "Du côté du trottoir",
+      "Du côté de la chaussée",
+      "Peu importe si le moteur est arrêté",
+      "Du côté du conducteur"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Les passagers et les enfants descendent toujours du côté du trottoir, jamais du côté de la circulation.",
+    "r": "Enfants et passagers : toujours côté trottoir."
+  },
+  {
+    "id": "01_montee_descente-18",
+    "t": "01_montee_descente",
+    "q": "Par temps de neige, avant de partir, vous devez :",
+    "qa": "في حالة الثلج، قبل الانطلاق، يجب عليك :",
+    "o": [
+      "dégager seulement une partie du pare-brise",
+      "rouler doucement pour que la neige tombe toute seule",
+      "dégager toutes les vitres et enlever la neige du toit"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Il faut nettoyer toutes les vitres et ôter la neige du toit avant de partir. Une vision partielle est dangereuse.",
+    "r": "Neige : toutes les vitres et le toit dégagés avant de partir."
+  },
+  {
+    "id": "01_montee_descente-19",
+    "t": "01_montee_descente",
+    "q": "Le coup d'œil autour du véhicule, avant de monter, permet de repérer :",
+    "qa": "النظرة السريعة حول المركبة قبل الركوب تمكن من ملاحظة :",
+    "o": [
+      "l'état des pneus",
+      "une éventuelle fuite",
+      "la présence d'obstacles",
+      "le kilométrage parcouru"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Avant de monter, on fait le tour du véhicule : pneus, fuites éventuelles, obstacles. Le kilométrage se lit au tableau de bord, il n'a rien à voir avec ce contrôle.",
+    "r": "Tour du véhicule : pneus, fuites, obstacles."
+  },
+  {
+    "id": "02_demarrage-01",
+    "t": "02_demarrage",
+    "q": "Avec une boîte de vitesses manuelle, quel est l'ordre correct pour démarrer ?",
+    "qa": "بعلبة سرعة يدوية، ما هو الترتيب الصحيح للإقلاع؟",
+    "o": [
+      "Démarrer le moteur → débrayer et engager la 1re → desserrer le frein à main → relâcher progressivement l'embrayage",
+      "Desserrer le frein à main → démarrer le moteur → engager la 1re → accélérer",
+      "Engager la 1re → démarrer le moteur → desserrer le frein à main → relâcher l'embrayage",
+      "Démarrer le moteur → engager la 2e → relâcher l'embrayage d'un coup"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Ordre : mise en marche du moteur, embrayage enfoncé + 1re, frein à main desserré, embrayage relâché progressivement jusqu'au point de patinage, puis accélération.",
+    "r": "Moteur → embrayage + 1re → frein à main → patinage → gaz."
+  },
+  {
+    "id": "02_demarrage-02",
+    "t": "02_demarrage",
+    "q": "Le « point de patinage » (نقطة الالتقاء) correspond au moment où :",
+    "qa": "«نقطة الالتقاء» تقابل اللحظة التي :",
+    "o": [
+      "on enfonce complètement la pédale d'embrayage",
+      "on passe la 2e vitesse",
+      "le moteur s'arrête",
+      "en relâchant progressivement l'embrayage, le véhicule commence à avancer lentement"
+    ],
+    "a": [
+      3
+    ],
+    "e": "On relâche l'embrayage progressivement jusqu'à ce que la voiture avance lentement : c'est le point de patinage. Il précède l'accélération.",
+    "r": "Patinage : embrayage relâché doucement, la voiture avance."
+  },
+  {
+    "id": "02_demarrage-03",
+    "t": "02_demarrage",
+    "q": "Après le démarrage en 1re, vers quel régime moteur passe-t-on la 2e vitesse ?",
+    "qa": "بعد الإقلاع بالسرعة الأولى، عند أي عدد من الدورات في الدقيقة نمر إلى السرعة الثانية؟",
+    "o": [
+      "1 500 à 2 500 tr/min",
+      "800 à 1 000 tr/min",
+      "3 500 à 4 500 tr/min",
+      "Plus de 5 000 tr/min"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On accélère jusqu'à 1 500 – 2 500 tr/min, puis on passe la 2e. Les autres plages sont trop basses ou inutilement élevées.",
+    "r": "Passage en 2e : vers 1 500 – 2 500 tr/min."
+  },
+  {
+    "id": "02_demarrage-04",
+    "t": "02_demarrage",
+    "q": "Avec une boîte automatique, quelle est la première action pour démarrer ?",
+    "qa": "بعلبة سرعة أوتوماتيكية، ما هو أول إجراء للإقلاع؟",
+    "o": [
+      "Appuyer sur l'accélérateur",
+      "Placer le levier sur D",
+      "Desserrer le frein à main",
+      "Appuyer sur la pédale de frein"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Boîte automatique : 1) pied sur le frein, 2) démarrer le moteur, 3) levier sur D, 4) desserrer le frein à main et relâcher progressivement le frein, 5) accélérer.",
+    "r": "Boîte auto : pied sur le frein en premier."
+  },
+  {
+    "id": "02_demarrage-05",
+    "t": "02_demarrage",
+    "q": "Avec une boîte automatique, pour avancer, le levier doit être placé sur la position :",
+    "qa": "بعلبة سرعة أوتوماتيكية، للتقدم إلى الأمام توضع العتلة على الموضع :",
+    "o": [
+      "P",
+      "R",
+      "N",
+      "D"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La position D (Drive) sert à avancer. R correspond à la marche arrière, N au point mort et P au stationnement.",
+    "r": "Boîte auto : levier sur D pour avancer."
+  },
+  {
+    "id": "02_demarrage-06",
+    "t": "02_demarrage",
+    "q": "Boîte automatique : quelle action vient en dernier au démarrage ?",
+    "qa": "علبة سرعة أوتوماتيكية : ما هو آخر إجراء عند الإقلاع؟",
+    "o": [
+      "Appuyer sur l'accélérateur",
+      "Démarrer le moteur",
+      "Appuyer sur le frein",
+      "Mettre le levier sur D"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On n'accélère qu'en dernier, après avoir freiné, démarré, mis le levier sur D, desserré le frein à main et relâché progressivement le frein.",
+    "r": "Boîte auto : l'accélérateur vient en dernier."
+  },
+  {
+    "id": "02_demarrage-07",
+    "t": "02_demarrage",
+    "q": "Vous êtes sur cette voie d'insertion. Comment devez-vous rouler ?",
+    "qa": "أنت في مسلك الاندماج هذا. كيف يجب أن تسير؟",
+    "o": [
+      "Rouler lentement jusqu'au bout, puis vous arrêter",
+      "Vous insérer dès le début de la voie, même sans créneau",
+      "Accélérer pour atteindre la vitesse de la route et rejoindre un créneau libre"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La voie d'insertion sert à prendre de la vitesse pour s'insérer dans un créneau. On ne s'y arrête qu'en cas de nécessité, et l'on s'insère seulement quand un créneau le permet.",
+    "r": "Voie d'insertion : accélérer jusqu'à la vitesse de la route.",
+    "img": "1682508910288.png"
+  },
+  {
+    "id": "02_demarrage-08",
+    "t": "02_demarrage",
+    "q": "Quelle est la « règle d'or » de l'insertion ?",
+    "qa": "ما هي «القاعدة الذهبية» للاندماج؟",
+    "o": [
+      "Rétroviseur → insertion → clignotant",
+      "Angle mort → insertion → clignotant",
+      "Clignotant → rétroviseur → angle mort → insertion",
+      "Insertion → clignotant → rétroviseur"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On signale d'abord son intention (clignotant), on contrôle (rétroviseur puis angle mort) et on s'insère seulement ensuite.",
+    "r": "Insertion : clignotant → rétro → angle mort → insertion."
+  },
+  {
+    "id": "02_demarrage-09",
+    "t": "02_demarrage",
+    "q": "Lors d'une insertion depuis une voie d'insertion, quelles actions sont correctes ?",
+    "qa": "عند الاندماج انطلاقا من مسلك الاندماج، ما هي الإجراءات الصحيحة؟",
+    "o": [
+      "Respecter la distance de sécurité",
+      "Allumer les feux de détresse",
+      "Faire un dernier contrôle de l'angle mort",
+      "Mettre le clignotant"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Étapes : clignotant, rétroviseur gauche + angle mort, vitesse adaptée pour viser un créneau, distance de sécurité, dernier coup d'œil à l'angle mort. Les feux de détresse n'ont rien à faire ici.",
+    "r": "Insertion : distance de sécurité + dernier contrôle angle mort."
+  },
+  {
+    "id": "02_demarrage-10",
+    "t": "02_demarrage",
+    "q": "Vous arrivez au bout de la voie d'insertion et aucun créneau ne se présente. Que faites-vous ?",
+    "qa": "وصلت إلى آخر مسلك الاندماج ولا يوجد أي فراغ. ماذا تفعل؟",
+    "o": [
+      "Je force le passage : mon clignotant est allumé",
+      "Je recule pour reprendre de l'élan",
+      "Je m'arrête, en dernier recours, et j'attends un créneau"
+    ],
+    "a": [
+      2
+    ],
+    "e": "S'arrêter au bout de la voie d'insertion est dangereux : on ne le fait que s'il n'y a vraiment aucun créneau. Forcer le passage ou reculer serait bien plus dangereux.",
+    "r": "Arrêt en bout de voie d'insertion : seulement sans créneau."
+  },
+  {
+    "id": "02_demarrage-11",
+    "t": "02_demarrage",
+    "q": "Vous devez vous insérer dans la circulation sans voie d'insertion. Quelles propositions sont justes ?",
+    "qa": "يجب عليك الاندماج في حركة السير بدون مسلك الاندماج. ما هي الاقتراحات الصحيحة؟",
+    "o": [
+      "Vous partez à vitesse réduite par rapport aux véhicules qui circulent",
+      "Vous observez et évaluez les vitesses et les distances",
+      "Vous vous insérez d'office : le clignotant suffit",
+      "Vous accélérez ensuite jusqu'à une vitesse adaptée, en gardant la distance de sécurité"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Sans voie d'insertion : vitesse réduite, observation des vitesses et distances, insertion selon la circulation, puis accélération. Le clignotant n'est qu'une information.",
+    "r": "Sans voie d'insertion : observer, puis s'insérer selon le trafic."
+  },
+  {
+    "id": "02_demarrage-12",
+    "t": "02_demarrage",
+    "q": "Lors d'une insertion dans la circulation, qui a la priorité ?",
+    "qa": "عند الاندماج في حركة السير، من له الأسبقية؟",
+    "o": [
+      "Le véhicule qui s'insère",
+      "Le véhicule le plus lourd",
+      "Les véhicules qui circulent déjà sur la route"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Celui qui s'insère doit céder le passage aux véhicules déjà présents sur la route.",
+    "r": "Celui qui s'insère cède le passage."
+  },
+  {
+    "id": "02_demarrage-13",
+    "t": "02_demarrage",
+    "q": "Vrai ou faux : dès que votre clignotant est allumé, les autres usagers doivent vous laisser vous insérer.",
+    "qa": "صحيح أم خطأ : بمجرد تشغيل مؤشر تغيير الاتجاه، يجب على المستعملين الآخرين أن يسمحوا لك بالاندماج.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : le clignotant informe les autres de votre intention, il ne vous donne aucune priorité.",
+    "r": "Le clignotant informe, il ne donne pas la priorité."
+  },
+  {
+    "id": "02_demarrage-14",
+    "t": "02_demarrage",
+    "q": "Avant de vous insérer depuis une voie d'insertion, que contrôlez-vous ?",
+    "qa": "قبل الاندماج انطلاقا من مسلك الاندماج، ماذا تراقب؟",
+    "o": [
+      "Le rétroviseur gauche, puis l'angle mort",
+      "Le rétroviseur droit seulement",
+      "Le rétroviseur gauche seulement, s'il est bien réglé"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On regarde le rétroviseur gauche puis l'angle mort. Le rétroviseur seul ne suffit pas : le contrôle de l'angle mort est obligatoire.",
+    "r": "Rétroviseur gauche + angle mort : obligatoire."
+  },
+  {
+    "id": "02_demarrage-15",
+    "t": "02_demarrage",
+    "q": "Pendant l'insertion, à quoi sert l'adaptation de votre vitesse ?",
+    "qa": "أثناء الاندماج، ما الهدف من ملاءمة السرعة؟",
+    "o": [
+      "À atteindre un créneau libre dans la circulation",
+      "À obtenir la priorité sur les véhicules de la route",
+      "À ne pas gêner les autres usagers"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "On adapte sa vitesse pour viser un créneau, puis pour ne pas gêner les autres. La vitesse ne donne jamais la priorité : celui qui s'insère cède le passage.",
+    "r": "Adapter sa vitesse : viser un créneau, ne gêner personne."
+  },
+  {
+    "id": "03_vitesse-01",
+    "t": "03_vitesse",
+    "q": "En agglomération, hors période probatoire, une voiture de tourisme (3,5 t au plus) est limitée à :",
+    "qa": "داخل التجمعات العمرانية، خارج الفترة الاختبارية، السرعة القصوى لسيارة (≤ 3.5 طن) هي :",
+    "o": [
+      "40 km/h",
+      "60 km/h",
+      "50 km/h",
+      "80 km/h"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Voiture de 3,5 t au plus et motocyclette : 60 km/h en agglomération, 100 hors agglomération, 120 sur autoroute.",
+    "r": "Voiture : 60 / 100 / 120.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-02",
+    "t": "03_vitesse",
+    "q": "Hors agglomération, sur une route ordinaire, une voiture de moins de 3,5 t peut rouler au maximum à :",
+    "qa": "خارج التجمعات العمرانية، على طريق عادية، السرعة القصوى لسيارة أقل من 3.5 طن هي :",
+    "o": [
+      "80 km/h",
+      "100 km/h",
+      "90 km/h",
+      "120 km/h"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Hors agglomération, la limite est de 100 km/h pour une voiture (3,5 t au plus) ou une moto. 90 km/h est la limite des taxis et des conducteurs en période probatoire.",
+    "r": "Voiture hors agglomération : 100 km/h.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-03",
+    "t": "03_vitesse",
+    "q": "Sur autoroute, hors période probatoire, une motocyclette est limitée à :",
+    "qa": "في الطريق السيار، خارج الفترة الاختبارية، السرعة القصوى للدراجة النارية هي :",
+    "o": [
+      "100 km/h",
+      "130 km/h",
+      "120 km/h",
+      "90 km/h"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La motocyclette suit les mêmes limites que la voiture de 3,5 t au plus : 60 / 100 / 120. Rouler à 130 km/h dépasse la limite autorisée.",
+    "r": "Moto = voiture : 60 / 100 / 120.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-04",
+    "t": "03_vitesse",
+    "q": "Sur une route nationale, hors agglomération, un taxi ne doit pas dépasser :",
+    "qa": "في طريق وطنية، خارج التجمعات العمرانية، يجب ألا تتجاوز سرعة سيارة الأجرة :",
+    "o": [
+      "100 km/h",
+      "90 km/h",
+      "80 km/h",
+      "120 km/h"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Piège classique : le taxi est limité à 90 km/h hors agglomération, et non à 100 comme une voiture particulière.",
+    "r": "Taxi hors agglomération : 90 et non 100.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-05",
+    "t": "03_vitesse",
+    "q": "Quelles limitations de vitesse s'appliquent à un taxi ?",
+    "qa": "ما هي حدود السرعة المطبقة على سيارة الأجرة؟",
+    "o": [
+      "60 km/h en agglomération",
+      "100 km/h sur autoroute",
+      "120 km/h sur autoroute",
+      "50 km/h en agglomération"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Taxi : 60 km/h en agglomération, 90 hors agglomération et 120 sur autoroute.",
+    "r": "Taxi : 60 / 90 / 120.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-06",
+    "t": "03_vitesse",
+    "q": "Pour un véhicule de transport public de personnes de 3,5 à 10 t, quelles limitations sont justes ?",
+    "qa": "بالنسبة لمركبة النقل العمومي للأشخاص من 3.5 إلى 10 طن، ما هي حدود السرعة الصحيحة؟",
+    "o": [
+      "90 km/h hors agglomération",
+      "120 km/h sur autoroute",
+      "100 km/h sur autoroute",
+      "60 km/h en agglomération"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Transport public de personnes (3,5 à 10 t) : 60 en agglomération, 90 hors agglomération et 100 sur autoroute (et non 120).",
+    "r": "Transport public de personnes 3,5–10 t : 60 / 90 / 100.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-07",
+    "t": "03_vitesse",
+    "q": "Un camion de transport de marchandises de 8 t circule hors agglomération. Sa vitesse maximale est :",
+    "qa": "شاحنة لنقل البضائع وزنها 8 طن تسير خارج التجمعات العمرانية. سرعتها القصوى هي :",
+    "o": [
+      "70 km/h",
+      "80 km/h",
+      "90 km/h",
+      "100 km/h"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Marchandises de 3,5 à 12 t : 60 / 90 / 100. Hors agglomération, c'est donc 90 km/h.",
+    "r": "Marchandises 3,5–12 t : 60 / 90 / 100.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-08",
+    "t": "03_vitesse",
+    "q": "Un camion de transport de marchandises de 15 t circule hors agglomération. Sa vitesse maximale est :",
+    "qa": "شاحنة لنقل البضائع وزنها 15 طن تسير خارج التجمعات العمرانية. سرعتها القصوى هي :",
+    "o": [
+      "90 km/h",
+      "70 km/h",
+      "80 km/h",
+      "100 km/h"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Marchandises de 12 à 19 t : 60 en agglomération, 80 hors agglomération, 90 sur autoroute.",
+    "r": "Marchandises 12–19 t : 60 / 80 / 90.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-09",
+    "t": "03_vitesse",
+    "q": "Pour un camion de transport de marchandises de plus de 19 t, quelles limitations sont justes ?",
+    "qa": "بالنسبة لشاحنة نقل البضائع التي يفوق وزنها 19 طن، ما هي حدود السرعة الصحيحة؟",
+    "o": [
+      "60 km/h en agglomération",
+      "70 km/h hors agglomération",
+      "90 km/h sur autoroute",
+      "80 km/h sur autoroute"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Marchandises de plus de 19 t : 60 / 70 / 80. En agglomération, toutes les catégories restent à 60 km/h.",
+    "r": "Marchandises > 19 t : 60 / 70 / 80.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-10",
+    "t": "03_vitesse",
+    "q": "Quelles propositions sont justes pour un cyclomoteur (دراجة بمحرك) ?",
+    "qa": "ما هي الاقتراحات الصحيحة بالنسبة للدراجة بمحرك؟",
+    "o": [
+      "40 km/h maximum en agglomération",
+      "60 km/h maximum hors agglomération",
+      "80 km/h maximum sur autoroute",
+      "Interdit sur autoroute"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Le cyclomoteur est limité à 40 km/h en agglomération et à 60 km/h hors agglomération ; il est interdit sur autoroute.",
+    "r": "Cyclomoteur : 40 / 60 / interdit sur autoroute.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-11",
+    "t": "03_vitesse",
+    "q": "Vous êtes en période probatoire (permis récent). Sur autoroute, votre vitesse maximale est :",
+    "qa": "أنت في الفترة الاختبارية. في الطريق السيار، سرعتك القصوى هي :",
+    "o": [
+      "90 km/h",
+      "120 km/h",
+      "100 km/h",
+      "80 km/h"
+    ],
+    "a": [
+      0
+    ],
+    "e": "En période probatoire, on ne dépasse jamais 90 km/h, dans tous les cas, même sur autoroute.",
+    "r": "Période probatoire : 90 km/h maximum partout.",
+    "s": "vitesses"
+  },
+  {
+    "id": "03_vitesse-12",
+    "t": "03_vitesse",
+    "q": "Qui doit apposer un disque de limitation de vitesse sur son véhicule ?",
+    "qa": "من يجب عليه لصق علامة السرعة على مركبته؟",
+    "o": [
+      "Les véhicules dont le poids total autorisé dépasse 3 500 kg",
+      "Toutes les voitures de tourisme",
+      "Les véhicules de transport collectif de personnes de plus de 10 000 kg",
+      "Les conducteurs en période probatoire (disque 90)"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Le disque est obligatoire pour les véhicules de plus de 3 500 kg, le transport collectif de personnes de plus de 10 000 kg et les conducteurs en période probatoire (disque 90). Pas pour toutes les voitures.",
+    "r": "Disque : > 3 500 kg, transport collectif > 10 t, probatoire."
+  },
+  {
+    "id": "03_vitesse-14",
+    "t": "03_vitesse",
+    "q": "Cette ambulance circule sans sirène ni gyrophare. Est-elle soumise aux limitations de vitesse ?",
+    "qa": "سيارة الإسعاف هذه تسير بدون منبه ولا ضوء دوار. هل تخضع لتحديد السرعة؟",
+    "o": [
+      "Oui : sans ses avertisseurs spéciaux, elle respecte les limitations",
+      "Non, une ambulance n'est jamais limitée",
+      "Seulement en agglomération"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Les véhicules prioritaires ne sont dispensés des limitations qu'en intervention urgente, signalée par leurs avertisseurs. Sans sirène ni gyrophare, l'ambulance respecte les limitations.",
+    "r": "Véhicule prioritaire sans avertisseurs = limitations normales.",
+    "img": "1692095135049.png"
+  },
+  {
+    "id": "03_vitesse-15",
+    "t": "03_vitesse",
+    "q": "Vous croisez ou dépassez un groupe de piétons en marche. Votre vitesse ne doit pas dépasser :",
+    "qa": "عند مقابلة أو تجاوز جماعة من الراجلين في حالة سير، يجب ألا تتجاوز سرعتك :",
+    "o": [
+      "20 km/h",
+      "30 km/h",
+      "40 km/h",
+      "50 km/h"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Pour croiser ou dépasser un groupe de piétons en marche, la vitesse est limitée à 30 km/h.",
+    "r": "Groupe de piétons en marche : 30 km/h."
+  },
+  {
+    "id": "03_vitesse-16",
+    "t": "03_vitesse",
+    "q": "Quelle est la vitesse maximale des véhicules agricoles, forestiers et des engins de travaux ?",
+    "qa": "ما هي السرعة القصوى للمركبات الفلاحية والغابوية وآليات الأشغال؟",
+    "o": [
+      "40 km/h",
+      "60 km/h",
+      "25 km/h",
+      "30 km/h"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Les véhicules agricoles et forestiers ainsi que les engins de travaux sont limités à 30 km/h.",
+    "r": "Agricoles, forestiers, engins de travaux : 30 km/h."
+  },
+  {
+    "id": "03_vitesse-17",
+    "t": "03_vitesse",
+    "q": "Un véhicule dont la largeur (ou celle de son chargement) dépasse 2,60 m est limité à :",
+    "qa": "مركبة يفوق عرضها أو عرض حمولتها 2.60 م، سرعتها محددة في :",
+    "o": [
+      "60 km/h",
+      "30 km/h",
+      "80 km/h",
+      "90 km/h"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Au-delà de 2,60 m de largeur (véhicule ou chargement), la vitesse est limitée à 60 km/h.",
+    "r": "Largeur > 2,60 m : 60 km/h."
+  },
+  {
+    "id": "03_vitesse-18",
+    "t": "03_vitesse",
+    "q": "Vous êtes obligé de rouler anormalement lentement. Que devez-vous faire ?",
+    "qa": "أنت مضطر للسير بسرعة منخفضة بشكل غير عادي. ماذا يجب عليك أن تفعل؟",
+    "o": [
+      "Allumer les feux de détresse (warning)",
+      "Allumer les feux de route",
+      "Rouler sur la voie de gauche",
+      "Rien : rouler lentement n'est jamais interdit"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Il est interdit de gêner la circulation par une lenteur anormale sans raison. Si vous êtes contraint de rouler lentement, allumez les feux de détresse.",
+    "r": "Lenteur forcée : feux de détresse (warning)."
+  },
+  {
+    "id": "03_vitesse-19",
+    "t": "03_vitesse",
+    "q": "Plusieurs véhicules lents roulent en file continue. L'obligation d'allumer les feux de détresse concerne :",
+    "qa": "عدة مركبات بطيئة تسير في صف متواصل. إجبارية تشغيل أضواء الإغاثة تخص :",
+    "o": [
+      "seulement le dernier véhicule de la file",
+      "tous les véhicules de la file",
+      "seulement le premier véhicule"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Dans une file continue, seul le dernier véhicule doit allumer ses feux de détresse : c'est lui que voient les usagers qui arrivent derrière.",
+    "r": "File de véhicules lents : warning pour le dernier seulement."
+  },
+  {
+    "id": "03_vitesse-20",
+    "t": "03_vitesse",
+    "q": "Que signifie ce panneau ?",
+    "qa": "ماذا تعني هذه العلامة؟",
+    "o": [
+      "Vitesse conseillée de 30 km/h",
+      "Limitation à 30 km/h jusqu'à la prochaine intersection seulement",
+      "Entrée d'une zone où la vitesse est limitée à 30 km/h dans toute la zone",
+      "Fin de la zone 30"
+    ],
+    "a": [
+      2
+    ],
+    "e": "C'est l'entrée d'une « zone 30 » : la limite de 30 km/h s'applique dans toute la zone, jusqu'au panneau de fin de zone.",
+    "r": "Zone 30 : 30 km/h dans toute la zone jusqu'à sa fin.",
+    "s": "vitesses",
+    "img": "1687269778819.png"
+  },
+  {
+    "id": "03_vitesse-21",
+    "t": "03_vitesse",
+    "q": "Après ce panneau, à quelle vitesse pouvez-vous rouler ?",
+    "qa": "بعد هذه العلامة، بأي سرعة يمكنك أن تسير؟",
+    "o": [
+      "À la vitesse maximale générale prévue pour cette route",
+      "Sans aucune limitation de vitesse",
+      "À 100 km/h au minimum"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Ce panneau met fin à la limitation annoncée (ici 100) : on revient à la vitesse générale de la route, et non à une vitesse « sans limite ».",
+    "r": "Fin de limitation = retour à la limite générale de la route.",
+    "img": "1705675590917.png"
+  },
+  {
+    "id": "03_vitesse-22",
+    "t": "03_vitesse",
+    "q": "Que signifie ce panneau ?",
+    "qa": "ماذا تعني هذه العلامة؟",
+    "o": [
+      "Fin de route prioritaire",
+      "Fin d'agglomération",
+      "Fin de toutes les interdictions imposées aux véhicules en mouvement",
+      "Circulation interdite à tous les véhicules"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le disque blanc barré de noir, sans chiffre, annonce la fin de toutes les interdictions précédemment imposées aux véhicules en mouvement.",
+    "r": "Disque barré sans chiffre : fin de toutes les interdictions.",
+    "img": "1704711486272.png"
+  },
+  {
+    "id": "03_vitesse-23",
+    "t": "03_vitesse",
+    "q": "Dans quelles situations devez-vous réduire votre vitesse ?",
+    "qa": "في أي الحالات يجب عليك تخفيض السرعة؟",
+    "o": [
+      "À proximité d'une école",
+      "Sur une ligne droite dégagée, par beau temps",
+      "Près d'un autobus de transport public arrêté pour la montée ou la descente des voyageurs",
+      "Au sommet d'une côte"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Il faut ralentir près d'une école, d'un autobus arrêté pour les voyageurs, au sommet d'une côte, dans les virages, par brouillard, au lever ou au coucher du soleil, etc. Une ligne droite dégagée par beau temps n'impose pas de ralentir.",
+    "r": "Ralentir : école, bus à l'arrêt, sommet de côte, virage, brouillard."
+  },
+  {
+    "id": "03_vitesse-24",
+    "t": "03_vitesse",
+    "q": "Sur 200 km d'autoroute, rouler à 130 km/h au lieu de 120 km/h fait gagner environ :",
+    "qa": "على مسافة 200 كلم في الطريق السيار، السير بسرعة 130 كلم/س بدل 120 كلم/س يربح حوالي :",
+    "o": [
+      "20 minutes",
+      "7 minutes",
+      "30 minutes",
+      "1 heure"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le gain n'est que d'environ 7 minutes sur 200 km (et moins de 2 minutes sur 10 km en ville à 60 au lieu de 50), pour un risque bien plus grand.",
+    "r": "Rouler plus vite fait gagner très peu de temps."
+  },
+  {
+    "id": "03_vitesse-25",
+    "t": "03_vitesse",
+    "q": "La vitesse est le facteur principal des accidents. Sur quoi a-t-elle une influence directe ?",
+    "qa": "السرعة هي العامل الأساسي في حوادث السير. على ماذا تؤثر بشكل مباشر؟",
+    "o": [
+      "La vision",
+      "La distance d'arrêt",
+      "Les chances de survie en cas de choc",
+      "Les règles de priorité aux intersections"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "La vitesse réduit la vision, allonge la distance d'arrêt et diminue les chances de survie. Elle ne change rien aux règles de priorité.",
+    "r": "Vitesse : moins de vision, arrêt plus long, survie réduite."
+  },
+  {
+    "id": "04_position_sur_route-01",
+    "t": "04_position_sur_route",
+    "q": "En circulation normale, où devez-vous rouler ?",
+    "qa": "في حالة السير العادي، أين يجب عليك أن تسير؟",
+    "o": [
+      "Au milieu de la chaussée",
+      "Sur la voie de gauche si elle est libre",
+      "Le plus à droite possible, en respectant les voies réservées",
+      "Là où le revêtement est le meilleur"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On serre le plus à droite possible, tout en respectant les voies réservées (vélos, bus, véhicules lents).",
+    "r": "Serrer à droite, en respectant les voies réservées."
+  },
+  {
+    "id": "04_position_sur_route-02",
+    "t": "04_position_sur_route",
+    "q": "D'après la règle « toujours à droite », dans quels cas pouvez-vous quitter la droite de la chaussée ?",
+    "qa": "حسب قاعدة «يمين دائما»، في أي الحالات يمكنك مغادرة الجانب الأيمن من الطريق؟",
+    "o": [
+      "Pour dépasser",
+      "Pour rouler plus vite sur une voie libre",
+      "Pour tourner à gauche"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "La règle : « à droite toujours, sauf pour dépasser ou tourner à gauche ». Rouler à gauche simplement parce que la voie est libre est une infraction.",
+    "r": "À droite toujours, sauf pour dépasser ou tourner à gauche."
+  },
+  {
+    "id": "04_position_sur_route-03",
+    "t": "04_position_sur_route",
+    "q": "Vous voulez tourner à gauche à la prochaine intersection. Quelle voie devez-vous prendre ?",
+    "qa": "تريد الانعطاف يسارا في الملتقى المقبل. أي مسلك يجب أن تأخذ؟",
+    "o": [
+      "La voie 1",
+      "La voie 2",
+      "La voie 3"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Pour tourner à gauche, on se place dans la voie de gauche (ici la voie 3) le plus tôt possible. Pour aller tout droit ou à droite, on prend la voie de droite.",
+    "r": "Tourner à gauche : voie de gauche, le plus tôt possible.",
+    "img": "1681999860520.jpeg"
+  },
+  {
+    "id": "04_position_sur_route-04",
+    "t": "04_position_sur_route",
+    "q": "À une intersection, pour aller tout droit ou tourner à droite, vous vous placez :",
+    "qa": "عند الملتقى، للسير إلى الأمام أو الانعطاف يمينا، تتموضع :",
+    "o": [
+      "dans la voie de gauche",
+      "dans la voie de droite",
+      "à cheval sur deux voies"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Tout droit ou à droite : voie de droite. La voie de gauche sert à ceux qui tournent à gauche.",
+    "r": "Tout droit ou à droite : voie de droite."
+  },
+  {
+    "id": "04_position_sur_route-05",
+    "t": "04_position_sur_route",
+    "q": "Pourquoi faut-il se placer tôt dans la bonne voie avant une intersection ?",
+    "qa": "لماذا يجب التموضع مبكرا في المسلك المناسب قبل الملتقى؟",
+    "o": [
+      "Parce qu'on peut ainsi changer de voie à l'intérieur de l'intersection",
+      "Parce que plus on s'approche de l'intersection, plus il est difficile de changer de voie",
+      "Parce que cela donne la priorité sur les autres"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Plus on approche, plus changer de voie devient difficile et dangereux. On ne change jamais de voie à l'intérieur de l'intersection, et le placement ne donne aucune priorité.",
+    "r": "Se placer tôt : changer de voie au dernier moment est dangereux."
+  },
+  {
+    "id": "04_position_sur_route-06",
+    "t": "04_position_sur_route",
+    "q": "Vrai ou faux : si vous vous êtes trompé de voie, vous pouvez en changer à l'intérieur de l'intersection.",
+    "qa": "صحيح أم خطأ : إذا أخطأت المسلك، يمكنك تغييره داخل الملتقى.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : on ne change pas de voie dans une intersection. On suit la direction de la voie dans laquelle on se trouve.",
+    "r": "Jamais de changement de voie dans l'intersection."
+  },
+  {
+    "id": "04_position_sur_route-07",
+    "t": "04_position_sur_route",
+    "q": "Rouler sur la voie de gauche sans raison (ni dépassement, ni changement de direction à gauche) est :",
+    "qa": "السير في المسلك الأيسر دون سبب (لا تجاوز ولا انعطاف يسارا) هو :",
+    "o": [
+      "autorisé si la voie est libre",
+      "conseillé pour fluidifier la circulation",
+      "une infraction"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Occuper la voie de gauche sans raison est une infraction : on serre à droite, sauf pour dépasser ou tourner à gauche.",
+    "r": "Voie de gauche sans raison = infraction."
+  },
+  {
+    "id": "04_position_sur_route-08",
+    "t": "04_position_sur_route",
+    "q": "Le couloir réservé aux autobus est vide. Pouvez-vous l'emprunter pour avancer plus vite ?",
+    "qa": "الممر المخصص للحافلات فارغ. هل يمكنك استعماله للتقدم بسرعة أكبر؟",
+    "o": [
+      "Oui, puisqu'il est vide",
+      "Non : c'est une infraction, même s'il est vide",
+      "Oui, en dehors des heures de pointe"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Circuler dans un couloir réservé (bus...) est une infraction même s'il est vide : contravention de 3e classe (300 à 600 DH). Les pistes cyclables sont, elles aussi, interdites même vides.",
+    "r": "Couloir de bus ou piste cyclable : interdit, même vide."
+  },
+  {
+    "id": "04_position_sur_route-09",
+    "t": "04_position_sur_route",
+    "q": "Sur une route à double sens, pour tourner à gauche, vous vous placez :",
+    "qa": "في طريق ذات اتجاهين، للانعطاف يسارا، تتموضع :",
+    "o": [
+      "près de l'axe (milieu) de la chaussée",
+      "près du bord droit de la chaussée",
+      "sur la partie gauche de la chaussée, dans le sens inverse"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Pour tourner à gauche sur une route à double sens, on se rapproche de l'axe, sans empiéter sur la partie réservée au sens inverse.",
+    "r": "Tourner à gauche (double sens) : se rapprocher de l'axe."
+  },
+  {
+    "id": "04_position_sur_route-10",
+    "t": "04_position_sur_route",
+    "q": "La distance de sécurité à respecter dépend :",
+    "qa": "مسافة الأمان الواجب احترامها تتعلق بـ :",
+    "o": [
+      "de la vitesse",
+      "des conditions (météo, visibilité, circulation)",
+      "de l'état de la route",
+      "de la couleur du véhicule qui précède"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "La distance de sécurité s'adapte à la vitesse, aux conditions et à l'état de la route. La couleur du véhicule n'a aucune importance.",
+    "r": "Distance de sécurité : selon vitesse, conditions, état de la route.",
+    "s": "distance"
+  },
+  {
+    "id": "04_position_sur_route-11",
+    "t": "04_position_sur_route",
+    "q": "Avant toute manœuvre (tourner à droite ou à gauche, changer de voie...), vous devez :",
+    "qa": "قبل أي مناورة (انعطاف يمينا أو يسارا، تغيير المسلك...)، يجب عليك :",
+    "o": [
+      "avertir les autres usagers avec le clignotant",
+      "klaxonner systématiquement",
+      "allumer les feux de détresse"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On donne un signal d'avertissement (clignotant) avant toute manœuvre. Le klaxon et les feux de détresse ne servent pas à cela.",
+    "r": "Avant toute manœuvre : avertir (clignotant)."
+  },
+  {
+    "id": "04_position_sur_route-12",
+    "t": "04_position_sur_route",
+    "q": "Pourquoi est-il important de bien se positionner sur la chaussée ?",
+    "qa": "لماذا يعتبر التموضع الصحيح على الطريق مهما؟",
+    "o": [
+      "Pour éviter les situations dangereuses",
+      "Pour obtenir la priorité aux intersections",
+      "Pour éviter les encombrements",
+      "Pour une circulation plus fluide"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Un bon positionnement évite les situations dangereuses et les encombrements et rend la circulation plus fluide. Il ne donne aucune priorité.",
+    "r": "Bonne position : sécurité + fluidité."
+  },
+  {
+    "id": "04_position_sur_route-13",
+    "t": "04_position_sur_route",
+    "q": "La voie que vous devez suivre peut être imposée par :",
+    "qa": "المسلك الذي يجب أن تتبعه يمكن أن يحدده :",
+    "o": [
+      "la signalisation horizontale (marquage au sol)",
+      "la signalisation verticale (panneaux)",
+      "les habitudes des autres conducteurs"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "On respecte la voie indiquée par le marquage au sol et par les panneaux. Les habitudes des autres conducteurs ne font pas la règle.",
+    "r": "Respecter la voie fixée par marquage et panneaux.",
+    "s": "marquage"
+  },
+  {
+    "id": "04_position_sur_route-14",
+    "t": "04_position_sur_route",
+    "q": "Gêner la circulation en ne serrant pas à droite (en circulation normale) est puni d'une contravention de :",
+    "qa": "مضايقة السير بسبب عدم التزام أقصى اليمين (في حالة السير العادي) يعاقب عليها بمخالفة من :",
+    "o": [
+      "3e classe (300 à 600 DH)",
+      "1re classe (700 à 1 400 DH)",
+      "2e classe (500 à 1 000 DH)",
+      "4e classe (20 à 50 DH)"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Ne pas serrer à droite (ou gêner la circulation par une manœuvre ou une marche arrière excessive) est une contravention de 3e classe : 300 à 600 DH, sans retrait de points.",
+    "r": "Ne pas serrer à droite : 3e classe (300 à 600 DH).",
+    "s": "sanctions"
+  },
+  {
+    "id": "04_position_sur_route-15",
+    "t": "04_position_sur_route",
+    "q": "Le franchissement d'une ligne continue est sanctionné par :",
+    "qa": "قطع خط متصل يعاقب عليه بـ :",
+    "o": [
+      "une contravention de 1re classe (700 à 1 400 DH), sans retrait de points",
+      "une contravention de 3e classe (300 à 600 DH)",
+      "une contravention de 1re classe avec retrait de 4 points",
+      "un délit"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Franchir une ligne continue est une contravention de 1re classe (700 à 1 400 DH), mais sans retrait de points. Les 4 points concernent par exemple le sens interdit ou le dépassement défectueux.",
+    "r": "Ligne continue : 1re classe, 0 point.",
+    "s": "sanctions"
+  },
+  {
+    "id": "04_position_sur_route-16",
+    "t": "04_position_sur_route",
+    "q": "Combien de points sont retirés pour une circulation en sens interdit ?",
+    "qa": "كم نقطة تخصم بسبب السير في اتجاه ممنوع؟",
+    "o": [
+      "0 point",
+      "2 points",
+      "4 points",
+      "3 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le sens interdit est une contravention de 1re classe (700 à 1 400 DH) avec retrait de 4 points.",
+    "r": "Sens interdit : 1re classe + 4 points.",
+    "s": "points"
+  },
+  {
+    "id": "04_position_sur_route-17",
+    "t": "04_position_sur_route",
+    "q": "Faire marche arrière ou demi-tour sur autoroute ou voie express (en franchissant le terre-plein central) est :",
+    "qa": "الرجوع إلى الخلف أو القيام بنصف دورة في الطريق السيار أو الطريق السريع (مع عبور الشريط المركزي) هو :",
+    "o": [
+      "une contravention de 3e classe",
+      "un délit puni de 4 000 à 8 000 DH et d'un retrait de 3 points",
+      "une contravention de 1re classe sans retrait de points"
+    ],
+    "a": [
+      1
+    ],
+    "e": "C'est un délit : amende de 4 000 à 8 000 DH et retrait de 3 points.",
+    "r": "Marche arrière / demi-tour sur autoroute : délit, 3 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "05_croisement_depassement-01",
+    "t": "05_croisement_depassement",
+    "q": "On parle de dépassement lorsque :",
+    "qa": "نتحدث عن التجاوز عندما :",
+    "o": [
+      "deux véhicules circulant en sens inverse se rencontrent",
+      "je change de voie sans autre véhicule autour",
+      "un véhicule qui était devant moi se retrouve derrière moi"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Dépasser, c'est passer devant un véhicule qui était devant soi. Deux véhicules en sens inverse qui se rencontrent, c'est un croisement.",
+    "r": "Dépassement : le véhicule de devant passe derrière moi.",
+    "s": "depassement"
+  },
+  {
+    "id": "05_croisement_depassement-02",
+    "t": "05_croisement_depassement",
+    "q": "Quelle est la règle de base du croisement et du dépassement ?",
+    "qa": "ما هي القاعدة الأساسية للتقابل والتجاوز؟",
+    "o": [
+      "On croise par la gauche et on dépasse par la droite",
+      "On croise et on dépasse par la gauche",
+      "On croise par la droite et on dépasse par la gauche",
+      "On croise et on dépasse par la droite"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On croise par la droite (chacun serre à droite) et on dépasse par la gauche.",
+    "r": "Croiser à droite, dépasser à gauche.",
+    "s": "depassement"
+  },
+  {
+    "id": "05_croisement_depassement-03",
+    "t": "05_croisement_depassement",
+    "q": "Que vous impose ce panneau ?",
+    "qa": "ماذا تفرض عليك هذه العلامة؟",
+    "o": [
+      "Vous avez la priorité sur les véhicules venant en sens inverse",
+      "Interdiction de dépasser",
+      "Fin de la circulation à double sens",
+      "Céder le passage aux véhicules venant en sens inverse"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Panneau rond à bord rouge (flèche rouge dans votre sens) : vous devez laisser passer ceux qui viennent en face. Le panneau carré bleu, lui, vous donne la priorité.",
+    "r": "Rond à flèches : céder le passage au sens inverse.",
+    "img": "1689238288796.png"
+  },
+  {
+    "id": "05_croisement_depassement-04",
+    "t": "05_croisement_depassement",
+    "q": "Que signifie ce panneau carré bleu ?",
+    "qa": "ماذا تعني هذه العلامة المربعة الزرقاء؟",
+    "o": [
+      "Céder le passage à la circulation venant en sens inverse",
+      "Vous avez la priorité par rapport aux véhicules venant en sens inverse",
+      "Sens unique",
+      "Fin de route prioritaire"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Ce panneau d'indication vous donne la priorité sur les véhicules venant en sens inverse (flèche blanche = votre sens). C'est l'inverse du panneau rond à bord rouge.",
+    "r": "Carré bleu à flèches : priorité sur le sens inverse.",
+    "img": "1689066140834.png"
+  },
+  {
+    "id": "05_croisement_depassement-05",
+    "t": "05_croisement_depassement",
+    "q": "Pour croiser un autre véhicule, vous devez :",
+    "qa": "لمقابلة مركبة أخرى، يجب عليك :",
+    "o": [
+      "ralentir et serrer à droite en temps utile",
+      "accélérer pour croiser plus vite",
+      "rouler au milieu pour être bien vu"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Au croisement, on ralentit et on serre à droite à temps pour laisser assez d'espace aux deux véhicules.",
+    "r": "Croisement : ralentir et serrer à droite à temps."
+  },
+  {
+    "id": "05_croisement_depassement-06",
+    "t": "05_croisement_depassement",
+    "q": "En montagne, le croisement est difficile. Lequel des deux véhicules doit s'arrêter en premier ?",
+    "qa": "في الجبل، التقابل صعب. أي المركبتين يجب أن تتوقف أولا؟",
+    "o": [
+      "Celui qui descend, pour laisser passer celui qui monte",
+      "Celui qui monte",
+      "Le plus lourd"
+    ],
+    "a": [
+      0
+    ],
+    "e": "En montagne, c'est le véhicule qui descend qui s'arrête le premier pour laisser passer celui qui monte.",
+    "r": "Croisement difficile en montagne : le descendant s'arrête."
+  },
+  {
+    "id": "05_croisement_depassement-07",
+    "t": "05_croisement_depassement",
+    "q": "Sur une route étroite en pente, le croisement de deux voitures est impossible. En principe, qui fait marche arrière ?",
+    "qa": "في طريق ضيقة منحدرة، يستحيل التقابل بين سيارتين. من حيث المبدأ، من يرجع إلى الخلف؟",
+    "o": [
+      "Celle qui monte",
+      "Celle qui est arrivée la dernière",
+      "Celle qui descend"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Entre deux véhicules de même catégorie, c'est le descendant qui recule, sauf s'il est plus facile pour le montant de le faire parce qu'il est près d'une place d'évitement.",
+    "r": "Même catégorie : le descendant recule."
+  },
+  {
+    "id": "05_croisement_depassement-08",
+    "t": "05_croisement_depassement",
+    "q": "Entre deux véhicules de même catégorie, dans quel cas est-ce le véhicule qui monte qui doit reculer ?",
+    "qa": "بين مركبتين من نفس الصنف، في أي حالة يرجع الصاعد إلى الخلف؟",
+    "o": [
+      "Quand il est plus rapide",
+      "Quand il est près d'une place d'évitement et que la manœuvre est plus facile pour lui",
+      "Jamais"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La règle « le descendant recule » a une exception : si le montant se trouve près d'une place d'évitement et peut reculer plus facilement.",
+    "r": "Exception : le montant recule s'il est près d'un évitement."
+  },
+  {
+    "id": "05_croisement_depassement-09",
+    "t": "05_croisement_depassement",
+    "q": "Le croisement est impossible entre un véhicule isolé et un ensemble de véhicules. Qui recule ?",
+    "qa": "يستحيل التقابل بين مركبة منفردة ومجموعة مركبات. من يرجع إلى الخلف؟",
+    "o": [
+      "L'ensemble de véhicules",
+      "Le premier véhicule de l'ensemble seulement",
+      "Le véhicule isolé"
+    ],
+    "a": [
+      2
+    ],
+    "e": "C'est le véhicule isolé qui recule : il est plus simple de faire reculer un seul véhicule qu'un groupe entier.",
+    "r": "Isolé contre groupe : l'isolé recule."
+  },
+  {
+    "id": "05_croisement_depassement-10",
+    "t": "05_croisement_depassement",
+    "q": "Croisement impossible entre une voiture légère et un véhicule lourd. Qui recule ?",
+    "qa": "يستحيل التقابل بين مركبة خفيفة ومركبة ثقيلة. من يرجع إلى الخلف؟",
+    "o": [
+      "Le véhicule lourd",
+      "La voiture légère",
+      "Celui qui monte"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le véhicule léger, plus maniable, recule devant le véhicule lourd.",
+    "r": "Léger contre lourd : le léger recule."
+  },
+  {
+    "id": "05_croisement_depassement-11",
+    "t": "05_croisement_depassement",
+    "q": "Croisement impossible entre ce camion et cet autocar. Qui doit faire marche arrière ?",
+    "qa": "يستحيل التقابل بين هذه الشاحنة وهذه الحافلة. من يجب أن يرجع إلى الخلف؟",
+    "o": [
+      "L'autocar, parce qu'il descend",
+      "Le camion",
+      "Le plus lent des deux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Entre un camion et un autocar, c'est le camion qui recule, même lorsque c'est lui qui monte.",
+    "r": "Camion contre autocar : le camion recule.",
+    "img": "1684853686811.png"
+  },
+  {
+    "id": "05_croisement_depassement-12",
+    "t": "05_croisement_depassement",
+    "q": "À qui ce panneau interdit-il de dépasser ?",
+    "qa": "على من تمنع هذه العلامة التجاوز؟",
+    "o": [
+      "Aux véhicules de transport de marchandises de plus de 3,5 t",
+      "À tous les véhicules à moteur",
+      "Aux voitures, qui ne peuvent pas dépasser les camions"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Camion rouge à côté d'une voiture noire : dépassement interdit aux véhicules de marchandises de plus de 3,5 t. Les voitures, elles, peuvent dépasser.",
+    "r": "Camion rouge dans le rond : dépassement interdit aux > 3,5 t.",
+    "s": "depassement",
+    "img": "1689254998447.png"
+  },
+  {
+    "id": "05_croisement_depassement-13",
+    "t": "05_croisement_depassement",
+    "q": "Lors d'un dépassement sur route à double sens, vous ne pouvez occuper la moitié gauche de la chaussée que :",
+    "qa": "عند التجاوز في طريق ذات اتجاهين، لا يمكنك احتلال النصف الأيسر من القارعة إلا :",
+    "o": [
+      "si vous ne gênez pas les usagers venant en sens inverse",
+      "si vous avez klaxonné avant",
+      "si votre vitesse est supérieure à 80 km/h"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On n'occupe la moitié gauche de la chaussée que si l'on ne gêne pas ceux qui arrivent en sens inverse.",
+    "r": "Moitié gauche : seulement sans gêner le sens inverse.",
+    "s": "depassement"
+  },
+  {
+    "id": "05_croisement_depassement-14",
+    "t": "05_croisement_depassement",
+    "q": "Sur une route à double sens comportant 3 voies, quelle voie utilisez-vous pour dépasser ?",
+    "qa": "في طريق ذات اتجاهين بثلاثة مسالك، أي مسلك تستعمل للتجاوز؟",
+    "o": [
+      "La voie de gauche",
+      "La voie de droite",
+      "La voie centrale"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Sur une route à double sens de plus de deux voies, on n'utilise jamais la voie la plus à gauche. Sur 3 voies, on dépasse par la voie centrale.",
+    "r": "3 voies à double sens : dépasser au centre, gauche interdite.",
+    "s": "depassement"
+  },
+  {
+    "id": "05_croisement_depassement-15",
+    "t": "05_croisement_depassement",
+    "q": "Un autobus est arrêté et des voyageurs en descendent. Vous voulez le dépasser. Que faites-vous ?",
+    "qa": "حافلة متوقفة ينزل منها ركاب. تريد تجاوزها. ماذا تفعل؟",
+    "o": [
+      "Je klaxonne et je dépasse rapidement",
+      "Je le dépasse par la droite",
+      "Je ralentis et ne dépasse qu'après m'être assuré qu'aucun piéton ne traverse"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Un véhicule arrêté, surtout un autobus, peut masquer des piétons qui traversent : on ralentit et on ne dépasse qu'une fois sûr qu'aucun piéton ne passe.",
+    "r": "Bus arrêté : ralentir, attention aux piétons."
+  },
+  {
+    "id": "05_croisement_depassement-16",
+    "t": "05_croisement_depassement",
+    "q": "Avant de dépasser, quelles conditions doivent être réunies ?",
+    "qa": "قبل التجاوز، ما هي الشروط الواجب توفرها؟",
+    "o": [
+      "Aucun panneau ni ligne n'interdit le dépassement",
+      "Le véhicule à dépasser roule à moins de 60 km/h",
+      "Vous pouvez reprendre votre place sans gêner",
+      "La visibilité est suffisante"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Les 5 conditions : pas d'interdiction (panneau ou ligne), retour possible sans gêner, écart de vitesse suffisant pour un dépassement court, personne n'a commencé à vous dépasser, visibilité suffisante. Il n'existe pas de seuil de vitesse du véhicule dépassé.",
+    "r": "Dépasser : pas d'interdiction, visibilité, retour possible.",
+    "s": "depassement"
+  },
+  {
+    "id": "05_croisement_depassement-17",
+    "t": "05_croisement_depassement",
+    "q": "Vous vous apprêtez à dépasser, mais le conducteur qui vous suit a déjà commencé à vous dépasser. Que faites-vous ?",
+    "qa": "تستعد للتجاوز، لكن السائق الذي خلفك شرع في تجاوزك. ماذا تفعل؟",
+    "o": [
+      "J'attends : personne ne doit avoir commencé à me dépasser",
+      "Je dépasse quand même : j'étais devant",
+      "J'accélère pour l'empêcher de passer"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Avant de dépasser, il faut vérifier que personne n'a commencé à vous dépasser. Et quand on est dépassé, on n'accélère jamais.",
+    "r": "Ne pas dépasser si l'on est soi-même en train d'être dépassé."
+  },
+  {
+    "id": "05_croisement_depassement-18",
+    "t": "05_croisement_depassement",
+    "q": "Pour dépasser sans danger, la différence de vitesse avec le véhicule dépassé doit :",
+    "qa": "للتجاوز دون خطر، يجب أن يكون فارق السرعة مع المركبة المتجاوَزة :",
+    "o": [
+      "permettre un dépassement court, sans danger avec celui qui arrive en face",
+      "être nulle, pour rouler côte à côte",
+      "être d'au moins 50 km/h"
+    ],
+    "a": [
+      0
+    ],
+    "e": "L'écart de vitesse doit permettre un dépassement bref, sans risque avec un véhicule venant en sens inverse. Rouler côte à côte prolonge le danger.",
+    "r": "Écart de vitesse suffisant pour un dépassement court."
+  },
+  {
+    "id": "05_croisement_depassement-19",
+    "t": "05_croisement_depassement",
+    "q": "Vous êtes en train d'être dépassé. Quelles attitudes sont correctes ?",
+    "qa": "يتم تجاوزك الآن. ما هي التصرفات الصحيحة؟",
+    "o": [
+      "Serrer à droite",
+      "Accélérer pour raccourcir le dépassement",
+      "Ne pas augmenter votre vitesse",
+      "Ralentir si nécessaire"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Le conducteur dépassé serre à droite, n'accélère pas et ralentit si besoin pour faciliter le rabattement. Accélérer est interdit et dangereux.",
+    "r": "Être dépassé : serrer à droite, ne jamais accélérer.",
+    "s": "depassement"
+  },
+  {
+    "id": "05_croisement_depassement-20",
+    "t": "05_croisement_depassement",
+    "q": "Après avoir dépassé un véhicule, comment vous rabattez-vous ?",
+    "qa": "بعد تجاوز مركبة، كيف ترجع إلى اليمين؟",
+    "o": [
+      "Immédiatement, même juste devant le véhicule dépassé",
+      "Le plus tard possible, en restant à gauche",
+      "À droite, sans gêner le véhicule que vous venez de dépasser"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le conducteur qui dépasse revient à droite sans gêner le véhicule dépassé : ni rabattement trop court, ni maintien prolongé à gauche.",
+    "r": "Se rabattre à droite sans gêner le véhicule dépassé."
+  },
+  {
+    "id": "05_croisement_depassement-21",
+    "t": "05_croisement_depassement",
+    "q": "Le véhicule rouge peut-il dépasser le véhicule bleu par la droite ?",
+    "qa": "هل يمكن للمركبة الحمراء تجاوز المركبة الزرقاء من اليمين؟",
+    "o": [
+      "Non, le dépassement par la droite est toujours interdit",
+      "Oui, car le véhicule bleu a signalé qu'il tourne à gauche",
+      "Oui, dès que la voie de droite est libre"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le dépassement par la droite est interdit, sauf si le conducteur de devant a indiqué qu'il va tourner à gauche : c'est le cas ici.",
+    "r": "Dépasser par la droite : seulement si l'autre tourne à gauche.",
+    "s": "depassement",
+    "img": "1684923231253.png"
+  },
+  {
+    "id": "05_croisement_depassement-22",
+    "t": "05_croisement_depassement",
+    "q": "Quel est l'ordre correct des actions pour dépasser ?",
+    "qa": "ما هو الترتيب الصحيح لخطوات التجاوز؟",
+    "o": [
+      "Rétroviseur → angle mort → clignotant gauche → dépassement → clignotant droit → rabattement",
+      "Clignotant gauche → dépassement → rétroviseur → rabattement",
+      "Angle mort → dépassement → clignotant droit → rétroviseur",
+      "Dépassement → clignotant gauche → rabattement"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On contrôle (rétroviseur + angle mort), on signale (clignotant gauche), on dépasse, puis on signale le retour (clignotant droit) et on se rabat.",
+    "r": "Rétro → angle mort → clignotant G → dépasser → clignotant D."
+  },
+  {
+    "id": "05_croisement_depassement-23",
+    "t": "05_croisement_depassement",
+    "q": "Dans quelles situations le dépassement est-il interdit ?",
+    "qa": "في أي الحالات يكون التجاوز ممنوعا؟",
+    "o": [
+      "Au sommet d'une côte sans visibilité suffisante",
+      "Sur une ligne droite dégagée, sans signalisation d'interdiction",
+      "Dans un virage sans visibilité suffisante",
+      "Lorsqu'un panneau d'interdiction de dépasser est en place"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Il est interdit de dépasser au sommet d'une côte ou dans un virage sans visibilité suffisante, et là où un panneau ou une ligne l'interdit. En ligne droite dégagée et sans interdiction, c'est possible si les conditions sont réunies.",
+    "r": "Pas de dépassement : sommet de côte, virage sans visibilité.",
+    "s": "depassement"
+  },
+  {
+    "id": "05_croisement_depassement-24",
+    "t": "05_croisement_depassement",
+    "q": "Le dépassement défectueux (التجاوز المعيب) est sanctionné par :",
+    "qa": "التجاوز المعيب يعاقب عليه بـ :",
+    "o": [
+      "une contravention de 3e classe, sans retrait de points",
+      "une contravention de 2e classe et 2 points",
+      "un délit et 6 points",
+      "une contravention de 1re classe (700 à 1 400 DH) et 4 points"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le dépassement défectueux est une contravention de 1re classe (700 à 1 400 DH) avec retrait de 4 points, comme le STOP non respecté ou le sens interdit.",
+    "r": "Dépassement défectueux : 1re classe + 4 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "05_croisement_depassement-25",
+    "t": "05_croisement_depassement",
+    "q": "Le non-respect des règles de croisement est :",
+    "qa": "عدم احترام قواعد التقابل هو :",
+    "o": [
+      "une contravention de 1re classe avec retrait de 4 points",
+      "un délit",
+      "une contravention de 3e classe (300 à 600 DH), sans retrait de points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Ne pas respecter les règles de croisement est une contravention de 3e classe (300 à 600 DH), sans retrait de points. Ne pas confondre avec le dépassement défectueux (1re classe, 4 points).",
+    "r": "Règles de croisement : 3e classe, 0 point.",
+    "s": "sanctions"
+  },
+  {
+    "id": "06_arret_stationnement-01",
+    "t": "06_arret_stationnement",
+    "q": "L'arrêt (الوقوف) correspond à :",
+    "qa": "الوقوف (Arrêt) هو :",
+    "o": [
+      "une immobilisation momentanée pour faire monter ou descendre des personnes ou charger/décharger, le conducteur restant dans le véhicule ou à proximité",
+      "l'immobilisation du véhicule moteur arrêté, le conducteur le quittant",
+      "toute immobilisation de plus de 10 minutes"
+    ],
+    "a": [
+      0
+    ],
+    "e": "L'arrêt est bref (montée/descente de personnes, chargement/déchargement) et le conducteur reste au volant ou à proximité. Moteur arrêté et conducteur parti, c'est un stationnement.",
+    "r": "Arrêt (الوقوف) : bref, conducteur présent.",
+    "s": "stationnement"
+  },
+  {
+    "id": "06_arret_stationnement-02",
+    "t": "06_arret_stationnement",
+    "q": "Le stationnement (التوقف) correspond à :",
+    "qa": "التوقف (Stationnement) هو :",
+    "o": [
+      "un arrêt de quelques secondes pour déposer un passager",
+      "l'immobilisation du véhicule (moteur arrêté) que le conducteur quitte",
+      "un fort ralentissement dans un embouteillage"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Stationner, c'est immobiliser le véhicule moteur arrêté et le quitter. Déposer un passager en restant au volant est un arrêt.",
+    "r": "Stationnement (التوقف) : moteur coupé, conducteur absent.",
+    "s": "stationnement"
+  },
+  {
+    "id": "06_arret_stationnement-03",
+    "t": "06_arret_stationnement",
+    "q": "Vous déposez votre enfant devant l'école sans quitter le volant. Il s'agit :",
+    "qa": "تُنزل طفلك أمام المدرسة دون أن تغادر المقود. يتعلق الأمر بـ :",
+    "o": [
+      "d'un arrêt (الوقوف)",
+      "d'un stationnement (التوقف)"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Immobilisation brève pour faire descendre une personne, conducteur à bord : c'est un arrêt (الوقوف).",
+    "r": "Déposer quelqu'un, conducteur à bord = arrêt."
+  },
+  {
+    "id": "06_arret_stationnement-04",
+    "t": "06_arret_stationnement",
+    "q": "Des véhicules garés parallèlement au trottoir, l'un derrière l'autre, sont en stationnement :",
+    "qa": "مركبات بموازاة الرصيف، واحدة خلف الأخرى. ما نوع هذا الوقوف؟",
+    "o": [
+      "perpendiculaire (en bataille)",
+      "longitudinal (parallèle, en créneau)",
+      "en épi (en angle)"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Stationnement longitudinal (parallèle) : véhicules alignés le long du trottoir. En bataille, ils sont perpendiculaires ; en épi, en biais.",
+    "r": "Parallèle au trottoir = longitudinal (créneau)."
+  },
+  {
+    "id": "06_arret_stationnement-05",
+    "t": "06_arret_stationnement",
+    "q": "Pour un stationnement perpendiculaire (en bataille), il est conseillé :",
+    "qa": "في الوقوف العمودي، يُنصح بـ :",
+    "o": [
+      "d'entrer en marche avant, pour ressortir en marche arrière",
+      "de laisser tourner le moteur",
+      "d'entrer en marche arrière, pour mieux voir en sortant"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On conseille d'entrer en marche arrière dans une place en bataille : la sortie se fait alors en marche avant, avec une meilleure visibilité.",
+    "r": "En bataille : entrer en marche arrière."
+  },
+  {
+    "id": "06_arret_stationnement-06",
+    "t": "06_arret_stationnement",
+    "q": "Que signifie ce panneau ?",
+    "qa": "ماذا تعني هذه العلامة؟",
+    "o": [
+      "Stationnement interdit, jusqu'à la prochaine intersection ou un panneau semblable",
+      "Arrêt et stationnement interdits",
+      "Stationnement interdit du 1er au 15 du mois",
+      "Fin d'interdiction de stationner"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Une seule barre oblique = stationnement (التوقف) interdit ; l'arrêt reste permis. Deux barres en X = arrêt et stationnement interdits.",
+    "r": "Une barre (/) = stationnement interdit.",
+    "s": "stationnement",
+    "img": "1682003767962.png"
+  },
+  {
+    "id": "06_arret_stationnement-07",
+    "t": "06_arret_stationnement",
+    "q": "Que signifie ce panneau ?",
+    "qa": "ماذا تعني هذه العلامة؟",
+    "o": [
+      "Stationnement interdit seulement",
+      "Arrêt et stationnement interdits",
+      "Stationnement payant",
+      "Fin de zone de stationnement"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Deux barres en X = arrêt (الوقوف) ET stationnement (التوقف) interdits, jusqu'à la prochaine intersection ou un panneau semblable. Une seule barre n'interdit que le stationnement.",
+    "r": "Croix (X) = arrêt et stationnement interdits.",
+    "s": "stationnement",
+    "img": "1682003767977.png"
+  },
+  {
+    "id": "06_arret_stationnement-08",
+    "t": "06_arret_stationnement",
+    "q": "Ce panneau interdit le stationnement :",
+    "qa": "هذه العلامة تمنع التوقف :",
+    "o": [
+      "pendant 15 minutes au maximum",
+      "du 16 à la fin du mois",
+      "les 15 premiers jours de l'année",
+      "du 1er au 15 du mois"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Stationnement interdit pendant la première quinzaine du mois (du 1er au 15). Le panneau de la seconde quinzaine l'interdit du 16 à la fin du mois.",
+    "r": "1re quinzaine (I) = 1–15 ; 2e quinzaine (II) = 16–fin.",
+    "img": "1682003767993.png"
+  },
+  {
+    "id": "06_arret_stationnement-09",
+    "t": "06_arret_stationnement",
+    "q": "Ce panneau annonce l'entrée d'une zone :",
+    "qa": "هذه العلامة تعلن عن دخول منطقة :",
+    "o": [
+      "à stationnement payant",
+      "où le stationnement est interdit",
+      "à stationnement à durée limitée, contrôlé par disque",
+      "réservée aux taxis"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Ce panneau carré annonce une zone où le stationnement est limité dans le temps et contrôlé au moyen d'un disque.",
+    "r": "Zone avec petit disque : stationnement limité contrôlé par disque.",
+    "img": "1682003768061.png"
+  },
+  {
+    "id": "06_arret_stationnement-10",
+    "t": "06_arret_stationnement",
+    "q": "Que signifie cet ensemble panneau + panonceau ?",
+    "qa": "ماذا تعني هذه العلامة مع اللويحة؟",
+    "o": [
+      "Stationnement réservé aux camions",
+      "Stationnement interdit aux véhicules de transport de marchandises",
+      "Stationnement interdit sauf pour les livraisons"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le panonceau limite l'interdiction de stationner aux véhicules de transport de marchandises.",
+    "r": "Panonceau camion : interdiction pour les marchandises.",
+    "img": "1682003768224.png"
+  },
+  {
+    "id": "06_arret_stationnement-11",
+    "t": "06_arret_stationnement",
+    "q": "Sans panonceau, jusqu'où s'applique un panneau d'interdiction de stationner ?",
+    "qa": "بدون لويحة، إلى أين يمتد مفعول علامة منع التوقف؟",
+    "o": [
+      "Sur 50 mètres",
+      "Jusqu'à la prochaine intersection ou un panneau semblable",
+      "Jusqu'à la fin de l'agglomération"
+    ],
+    "a": [
+      1
+    ],
+    "e": "L'interdiction reste valable jusqu'à la prochaine intersection (ou jusqu'à un panneau semblable).",
+    "r": "Interdiction de stationner : jusqu'à la prochaine intersection."
+  },
+  {
+    "id": "06_arret_stationnement-12",
+    "t": "06_arret_stationnement",
+    "q": "L'arrêt ou le stationnement sur le côté gauche de la chaussée est autorisé :",
+    "qa": "الوقوف أو التوقف على الجهة اليسرى من القارعة مسموح :",
+    "o": [
+      "uniquement sur une route à sens unique en agglomération",
+      "partout en agglomération",
+      "hors agglomération seulement",
+      "jamais"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le côté gauche est un emplacement gênant, sauf sur une route à sens unique en agglomération.",
+    "r": "Côté gauche : seulement en sens unique, en agglomération.",
+    "s": "stationnement"
+  },
+  {
+    "id": "06_arret_stationnement-13",
+    "t": "06_arret_stationnement",
+    "q": "Vous vous arrêtez en double file « juste une minute » pour acheter du pain. C'est :",
+    "qa": "تقف في الصف المزدوج «لدقيقة واحدة فقط» لشراء الخبز. هذا :",
+    "o": [
+      "interdit : c'est un arrêt gênant, même pour une minute",
+      "autorisé si vous allumez les feux de détresse",
+      "autorisé si vous restez à proximité"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La double file est interdite, même pour une minute : c'est un arrêt gênant.",
+    "r": "Double file : interdite, même une minute.",
+    "s": "stationnement"
+  },
+  {
+    "id": "06_arret_stationnement-14",
+    "t": "06_arret_stationnement",
+    "q": "Quels véhicules peuvent s'arrêter ou stationner en double file ?",
+    "qa": "ما هي المركبات التي يمكنها الوقوف أو التوقف في الصف المزدوج؟",
+    "o": [
+      "Les bicyclettes",
+      "Les taxis",
+      "Les motocyclettes sans side-car",
+      "Les voitures avec feux de détresse"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "La seule exception concerne les deux-roues : bicyclettes et motocyclettes sans side-car. Taxis et voitures n'y ont pas droit.",
+    "r": "Double file : seulement vélos et motos sans side-car."
+  },
+  {
+    "id": "06_arret_stationnement-15",
+    "t": "06_arret_stationnement",
+    "q": "Quels arrêts ou stationnements sont considérés comme gênants ?",
+    "qa": "ما هي حالات الوقوف أو التوقف التي تعتبر مضايقة؟",
+    "o": [
+      "Sur un trottoir",
+      "Sur une piste cyclable",
+      "Devant une bouche d'incendie",
+      "Sur une place payante, après avoir payé"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Trottoirs, passages piétons, pistes cyclables, bouches d'incendie, entrées d'immeubles, aires de livraison... sont des emplacements gênants. Une place payante réglée est autorisée.",
+    "r": "Gênant : trottoir, piste cyclable, bouche d'incendie...",
+    "s": "stationnement"
+  },
+  {
+    "id": "06_arret_stationnement-16",
+    "t": "06_arret_stationnement",
+    "q": "Stationner entre le bord de la chaussée et une ligne continue est gênant lorsque :",
+    "qa": "التوقف بين حافة القارعة وخط متصل يعتبر مضايقا عندما :",
+    "o": [
+      "il fait nuit",
+      "toujours, quelle que soit la largeur restante",
+      "il ne reste pas une largeur suffisante pour circuler"
+    ],
+    "a": [
+      2
+    ],
+    "e": "C'est gênant si la largeur restante ne suffit plus pour passer : les autres usagers seraient obligés de franchir la ligne continue.",
+    "r": "Près d'une ligne continue : gênant si la largeur ne suffit plus."
+  },
+  {
+    "id": "06_arret_stationnement-17",
+    "t": "06_arret_stationnement",
+    "q": "Vous vous arrêtez sur un emplacement réservé aux autobus, juste pour déposer un passager. C'est :",
+    "qa": "تقف في مكان مخصص للحافلات فقط لإنزال راكب. هذا :",
+    "o": [
+      "autorisé, car c'est un simple arrêt",
+      "autorisé si aucun bus n'est en vue",
+      "gênant, donc interdit"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les emplacements réservés aux autobus, taxis et véhicules de service public sont interdits à l'arrêt comme au stationnement : c'est gênant.",
+    "r": "Places bus / taxis : même l'arrêt est interdit."
+  },
+  {
+    "id": "06_arret_stationnement-18",
+    "t": "06_arret_stationnement",
+    "q": "Quand la visibilité est insuffisante, l'arrêt et le stationnement sont dangereux à proximité :",
+    "qa": "عندما تكون الرؤية غير كافية، يكون الوقوف والتوقف خطيرين قرب :",
+    "o": [
+      "d'une intersection",
+      "d'un virage",
+      "d'un sommet de côte",
+      "d'un parking aménagé"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Intersections, virages, sommets de côte et passages à niveau rendent l'arrêt et le stationnement dangereux quand la visibilité est insuffisante.",
+    "r": "Dangereux : intersection, virage, sommet de côte sans visibilité.",
+    "s": "stationnement"
+  },
+  {
+    "id": "06_arret_stationnement-19",
+    "t": "06_arret_stationnement",
+    "q": "Lequel de ces emplacements est classé « dangereux » (et pas seulement gênant) ?",
+    "qa": "أي من هذه الأماكن يصنف «خطيرا» (وليس مضايقا فقط)؟",
+    "o": [
+      "Une aire de livraison",
+      "Devant l'entrée d'un immeuble",
+      "Un passage à niveau (intersection avec une voie ferrée)",
+      "Un emplacement de taxis"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le passage à niveau figure parmi les lieux dangereux. Les aires de livraison, entrées d'immeubles et places de taxis sont des emplacements gênants.",
+    "r": "Passage à niveau = arrêt/stationnement dangereux."
+  },
+  {
+    "id": "06_arret_stationnement-20",
+    "t": "06_arret_stationnement",
+    "q": "Il est dangereux de s'arrêter ou de stationner :",
+    "qa": "يكون الوقوف أو التوقف خطيرا :",
+    "o": [
+      "sur la voie centrale d'une route à 3 voies à double sens",
+      "sur les voies et plateformes du tramway",
+      "sur un pont, dans un passage souterrain ou dans un tunnel",
+      "sur un emplacement matérialisé le long du trottoir"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "La voie centrale d'une route à 3 voies, les voies du tramway, les ouvrages d'art (ponts), passages souterrains et tunnels sont des lieux dangereux. Un emplacement matérialisé est fait pour stationner.",
+    "r": "Dangereux : voie centrale, tramway, pont, tunnel."
+  },
+  {
+    "id": "06_arret_stationnement-21",
+    "t": "06_arret_stationnement",
+    "q": "Hors agglomération, quelle distance minimale devez-vous laisser entre votre véhicule à l'arrêt et une intersection ou un passage à niveau ?",
+    "qa": "خارج المدينة، ما هي المسافة الدنيا بين مركبتك الواقفة وملتقى طرق أو تقاطع مع سكة حديدية؟",
+    "o": [
+      "5 m",
+      "20 m",
+      "50 m",
+      "12 m"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Hors agglomération : au moins 12 m d'une intersection ou d'un croisement avec une voie ferrée.",
+    "r": "Hors agglomération : 12 m d'une intersection ou voie ferrée.",
+    "s": "stationnement"
+  },
+  {
+    "id": "06_arret_stationnement-22",
+    "t": "06_arret_stationnement",
+    "q": "En agglomération, quelle distance minimale devez-vous laisser entre votre véhicule à l'arrêt et une intersection signalisée, une voie ferrée ou une voie de tramway ?",
+    "qa": "داخل المدينة، ما هي المسافة الدنيا بين مركبتك الواقفة وملتقى مشور أو سكة حديدية أو سكة ترامواي؟",
+    "o": [
+      "5 m",
+      "8 m",
+      "25 m",
+      "12 m"
+    ],
+    "a": [
+      3
+    ],
+    "e": "En agglomération : 12 m d'une intersection signalisée, d'une voie ferrée ou du tramway ; 5 m seulement d'une intersection sans aucune signalisation.",
+    "r": "En ville : 12 m (intersection signalisée, rail, tramway).",
+    "s": "stationnement"
+  },
+  {
+    "id": "06_arret_stationnement-23",
+    "t": "06_arret_stationnement",
+    "q": "En agglomération, près d'une intersection sans aucune signalisation, la distance minimale à respecter pour s'arrêter ou stationner est de :",
+    "qa": "داخل المدينة، قرب ملتقى بدون أي علامة، المسافة الدنيا الواجب احترامها للوقوف أو التوقف هي :",
+    "o": [
+      "3 m",
+      "12 m",
+      "5 m",
+      "15 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Intersection sans signalisation en agglomération : 5 m. Si elle est signalisée (ou s'il s'agit d'une voie ferrée ou du tramway) : 12 m.",
+    "r": "En ville, intersection non signalisée : 5 m.",
+    "s": "stationnement"
+  },
+  {
+    "id": "06_arret_stationnement-24",
+    "t": "06_arret_stationnement",
+    "q": "S'arrêter sur un passage pour piétons, même brièvement, est :",
+    "qa": "الوقوف فوق ممر الراجلين، ولو لمدة قصيرة، هو :",
+    "o": [
+      "autorisé si le conducteur reste au volant",
+      "interdit : c'est à la fois gênant et dangereux",
+      "autorisé la nuit"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le passage pour piétons est interdit à l'arrêt comme au stationnement : c'est gênant et dangereux.",
+    "r": "Passage piéton : arrêt interdit (gênant + dangereux)."
+  },
+  {
+    "id": "06_arret_stationnement-25",
+    "t": "06_arret_stationnement",
+    "q": "S'arrêter ou stationner sur un trottoir ou un passage pour piétons est une contravention de :",
+    "qa": "الوقوف أو التوقف على الأرصفة وممرات الراجلين مخالفة من :",
+    "o": [
+      "1re classe (700 à 1 400 DH)",
+      "3e classe (300 à 600 DH)",
+      "2e classe (500 à 1 000 DH)",
+      "4e classe (20 à 50 DH)"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'arrêt ou le stationnement sur les trottoirs et passages piétons est une contravention de 2e classe : 500 à 1 000 DH.",
+    "r": "Trottoir / passage piéton : 2e classe (500 à 1 000 DH).",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_regles_priorite-01",
+    "t": "07_regles_priorite",
+    "q": "Une intersection (ملتقى الطرق) est :",
+    "qa": "ملتقى الطرق هو :",
+    "o": [
+      "uniquement le croisement de deux routes à angle droit",
+      "le lieu de jonction, de croisement ou de bifurcation de deux routes ou plus, quels que soient les angles",
+      "uniquement un carrefour équipé de feux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Toute jonction, croisement ou bifurcation d'au moins deux routes est une intersection, quel que soit l'angle formé.",
+    "r": "Intersection : jonction, croisement ou bifurcation, tout angle."
+  },
+  {
+    "id": "07_regles_priorite-02",
+    "t": "07_regles_priorite",
+    "q": "En abordant une intersection, que devez-vous faire ?",
+    "qa": "عند الاقتراب من ملتقى الطرق، ماذا يجب عليك أن تفعل؟",
+    "o": [
+      "Vous assurer que la voie est libre",
+      "Accélérer pour la franchir rapidement",
+      "Rouler à une vitesse modérée",
+      "Avertir si nécessaire (signal lumineux ou sonore)"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "À l'approche d'une intersection : s'assurer que la voie est libre, rouler à vitesse modérée et avertir si besoin. Accélérer augmente le danger.",
+    "r": "Intersection : voie libre, vitesse modérée, avertir si besoin."
+  },
+  {
+    "id": "07_regles_priorite-03",
+    "t": "07_regles_priorite",
+    "q": "À une intersection sans aucune signalisation, qui a la priorité ?",
+    "qa": "في ملتقى طرق بدون أي تشوير، من له الأسبقية؟",
+    "o": [
+      "Le véhicule venant de gauche",
+      "Le véhicule circulant sur la route la plus large",
+      "Le véhicule venant de droite",
+      "Le premier arrivé"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Sans signalisation, la règle générale s'applique : priorité au véhicule venant de droite. Quand il y a une signalisation, c'est elle qui décide.",
+    "r": "Sans signalisation : priorité à droite.",
+    "s": "priorite"
+  },
+  {
+    "id": "07_regles_priorite-04",
+    "t": "07_regles_priorite",
+    "q": "Vous circulez sur une large route sans signalisation. Un véhicule arrive d'un petit chemin à votre droite, sans panneau. Qui passe en premier ?",
+    "qa": "تسير في طريق واسعة بدون تشوير. مركبة قادمة من طريق صغيرة على يمينك، بدون علامة. من يمر أولا؟",
+    "o": [
+      "Moi, ma route est plus importante",
+      "Celui qui roule le plus vite",
+      "Le véhicule venant du petit chemin à droite"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Piège : la priorité à droite s'applique même si l'autre route est petite, dès lors qu'aucun panneau ne dit le contraire.",
+    "r": "Priorité à droite, même venant d'une petite route.",
+    "s": "priorite"
+  },
+  {
+    "id": "07_regles_priorite-05",
+    "t": "07_regles_priorite",
+    "q": "Devant ce panneau, vous devez :",
+    "qa": "أمام هذه العلامة، يجب عليك :",
+    "o": [
+      "vous arrêter seulement si un véhicule arrive",
+      "marquer l'arrêt à la limite de la chaussée, puis céder le passage à droite et à gauche",
+      "céder le passage sans obligation de vous arrêter",
+      "céder le passage uniquement aux véhicules venant de droite"
+    ],
+    "a": [
+      1
+    ],
+    "e": "STOP (قف) : arrêt obligatoire à la limite de la chaussée, puis on laisse passer les véhicules venant de droite et de gauche.",
+    "r": "STOP : arrêt obligatoire, puis céder à droite et à gauche.",
+    "s": "priorite",
+    "img": "1690284384557.png"
+  },
+  {
+    "id": "07_regles_priorite-06",
+    "t": "07_regles_priorite",
+    "q": "Au STOP, la route est entièrement dégagée et la visibilité parfaite. Que faites-vous ?",
+    "qa": "عند علامة «قف»، الطريق خالية تماما والرؤية جيدة. ماذا تفعل؟",
+    "o": [
+      "Je passe sans m'arrêter",
+      "Je m'arrête complètement quand même",
+      "Je ralentis fortement sans m'arrêter"
+    ],
+    "a": [
+      1
+    ],
+    "e": "L'arrêt au STOP est obligatoire même sans aucun véhicule en vue. Un simple ralentissement est une infraction.",
+    "r": "STOP : arrêt complet, même si la route est vide."
+  },
+  {
+    "id": "07_regles_priorite-07",
+    "t": "07_regles_priorite",
+    "q": "Une ligne blanche continue tracée en travers de la chaussée, à l'entrée d'une intersection, a le même rôle que :",
+    "qa": "الخط الأبيض المتصل العرضي عند مدخل الملتقى له نفس دور :",
+    "o": [
+      "le panneau STOP",
+      "le panneau « Cédez le passage »",
+      "un passage pour piétons"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La ligne blanche transversale continue joue le rôle du STOP (arrêt obligatoire). La ligne transversale discontinue correspond au « Cédez le passage ».",
+    "r": "Ligne transversale continue = STOP.",
+    "s": "marquage"
+  },
+  {
+    "id": "07_regles_priorite-08",
+    "t": "07_regles_priorite",
+    "q": "Le panneau triangulaire pointe en bas (« Cédez le passage ») vous oblige à :",
+    "qa": "علامة المثلث المقلوب («أترك حق الأسبقية») تلزمك بـ :",
+    "o": [
+      "céder le passage à droite et à gauche, sans obligation de vous arrêter",
+      "vous arrêter obligatoirement",
+      "céder le passage uniquement aux véhicules venant de droite"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Cédez le passage : on laisse passer les véhicules venant de droite et de gauche, sans arrêt obligatoire si la voie est libre. Le STOP, lui, impose toujours l'arrêt.",
+    "r": "Cédez le passage : céder à droite et à gauche, arrêt non imposé.",
+    "s": "priorite"
+  },
+  {
+    "id": "07_regles_priorite-09",
+    "t": "07_regles_priorite",
+    "q": "Une ligne blanche discontinue tracée en travers de la chaussée, à une intersection, équivaut à :",
+    "qa": "الخط الأبيض المتقطع العرضي عند ملتقى الطرق يعادل :",
+    "o": [
+      "un « Cédez le passage »",
+      "un STOP",
+      "une ligne de dissuasion"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La ligne transversale discontinue a le même rôle que le « Cédez le passage » ; la ligne continue, celui du STOP.",
+    "r": "Ligne transversale discontinue = Cédez le passage.",
+    "s": "marquage"
+  },
+  {
+    "id": "07_regles_priorite-10",
+    "t": "07_regles_priorite",
+    "q": "Que vous annonce ce panneau ?",
+    "qa": "بماذا تعلن هذه العلامة؟",
+    "o": [
+      "Une intersection à 150 m où vous devrez céder le passage avec arrêt obligatoire (STOP)",
+      "Un « Cédez le passage » sans arrêt obligatoire, à 150 m",
+      "Un carrefour à sens giratoire à 150 m"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le triangle pointe en bas avec le panonceau « قف 150 م » annonce un STOP à 150 m : il faudra s'arrêter et céder le passage.",
+    "r": "Triangle + panonceau « قف 150 م » : STOP à 150 m.",
+    "img": "1690280598427.png"
+  },
+  {
+    "id": "07_regles_priorite-11",
+    "t": "07_regles_priorite",
+    "q": "Ce panneau annonce :",
+    "qa": "هذه العلامة تعلن عن :",
+    "o": [
+      "une intersection où vous êtes prioritaire",
+      "une intersection où s'applique la priorité à droite",
+      "un passage à niveau sans barrières",
+      "une interdiction de tourner"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La croix noire dans le triangle annonce une intersection où s'applique la règle générale : priorité au véhicule venant de droite.",
+    "r": "Croix noire dans un triangle : priorité à droite.",
+    "s": "priorite",
+    "img": "1682004492200.png"
+  },
+  {
+    "id": "07_regles_priorite-12",
+    "t": "07_regles_priorite",
+    "q": "À une intersection où s'applique la priorité à droite, sur quelles routes le panneau qui l'annonce est-il placé ?",
+    "qa": "في ملتقى تطبق فيه الأسبقية لليمين، على أي الطرق توضع العلامة التي تعلن عنه؟",
+    "o": [
+      "Uniquement sur la route principale",
+      "Sur toutes les routes qui mènent à l'intersection",
+      "Uniquement sur la route secondaire"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le même panneau est placé sur tous les axes menant à l'intersection : personne n'y est prioritaire, chacun cède à sa droite.",
+    "r": "Priorité à droite : même panneau sur toutes les branches."
+  },
+  {
+    "id": "07_regles_priorite-13",
+    "t": "07_regles_priorite",
+    "q": "Ce panneau vous indique que vous êtes prioritaire :",
+    "qa": "هذه العلامة تشير إلى أنك ذو أولوية :",
+    "o": [
+      "à la prochaine intersection seulement",
+      "à toutes les intersections jusqu'au panneau de fin",
+      "sur les véhicules prioritaires en intervention"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Ce panneau (intersection avec une route moins importante) donne la priorité à la prochaine intersection seulement. Le losange jaune, lui, la donne jusqu'au panneau de fin.",
+    "r": "Triangle à large flèche : priorité au prochain carrefour seulement.",
+    "s": "priorite",
+    "img": "1682004492217.png"
+  },
+  {
+    "id": "07_regles_priorite-14",
+    "t": "07_regles_priorite",
+    "q": "Le panneau en losange jaune bordé de blanc (route à caractère prioritaire) vous donne la priorité :",
+    "qa": "علامة المعين الأصفر (الطابع الأولوي لطريق) تعطيك الأولوية :",
+    "o": [
+      "à toutes les intersections, jusqu'au panneau de fin de caractère prioritaire",
+      "à la prochaine intersection seulement",
+      "uniquement de jour"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Sur une route à caractère prioritaire, vous êtes prioritaire à toutes les intersections jusqu'au losange barré qui en marque la fin.",
+    "r": "Losange jaune : prioritaire jusqu'au panneau de fin.",
+    "s": "priorite"
+  },
+  {
+    "id": "07_regles_priorite-15",
+    "t": "07_regles_priorite",
+    "q": "Après ce panneau, quelle règle s'applique aux intersections suivantes non signalées ?",
+    "qa": "بعد هذه العلامة، ما هي القاعدة المطبقة في الملتقيات الموالية غير المشورة؟",
+    "o": [
+      "Vous restez prioritaire jusqu'à la sortie de l'agglomération",
+      "Vous devez marquer l'arrêt à chaque intersection",
+      "La priorité à droite"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Losange jaune barré = fin du caractère prioritaire : la règle de la priorité à droite s'applique de nouveau. Attention aux véhicules venant de droite.",
+    "r": "Losange barré : fin de priorité, retour à la priorité à droite.",
+    "s": "priorite",
+    "img": "1682004492266.png"
+  },
+  {
+    "id": "07_regles_priorite-16",
+    "t": "07_regles_priorite",
+    "q": "Vous roulez sur une route à caractère prioritaire (losange jaune). Un véhicule arrive d'une route secondaire à votre droite. Qui passe en premier ?",
+    "qa": "تسير في طريق ذات طابع أولوي (معين أصفر). مركبة قادمة من طريق ثانوية على يمينك. من يمر أولا؟",
+    "o": [
+      "Le véhicule venant de droite",
+      "Le premier arrivé",
+      "Moi"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La signalisation prime sur la règle générale : sur une route à caractère prioritaire, vous passez avant les véhicules des routes secondaires, même venant de droite.",
+    "r": "La signalisation l'emporte sur la priorité à droite.",
+    "s": "priorite"
+  },
+  {
+    "id": "07_regles_priorite-17",
+    "t": "07_regles_priorite",
+    "q": "À l'entrée d'un carrefour giratoire se trouve un panneau « Cédez le passage ». Qui a la priorité ?",
+    "qa": "عند مدخل ملتقى طرق دوراني توجد علامة «أترك حق الأسبقية». من له الأسبقية؟",
+    "o": [
+      "Les véhicules qui circulent déjà dans l'anneau",
+      "Les véhicules qui entrent dans le giratoire",
+      "Le véhicule le plus rapide"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Avec un « Cédez le passage » à l'entrée, on laisse passer les véhicules déjà engagés dans l'anneau.",
+    "r": "Giratoire avec « Cédez » : priorité à ceux dans l'anneau.",
+    "s": "giratoire"
+  },
+  {
+    "id": "07_regles_priorite-18",
+    "t": "07_regles_priorite",
+    "q": "Un carrefour giratoire ne comporte aucun panneau à son entrée. Quelle règle s'applique ?",
+    "qa": "ملتقى طرق دوراني لا توجد أي علامة عند مدخله. ما هي القاعدة المطبقة؟",
+    "o": [
+      "La règle générale de la priorité à droite",
+      "La priorité aux véhicules déjà dans l'anneau",
+      "La priorité au véhicule le plus gros"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Au giratoire, on applique la signalisation placée à l'entrée. Sans panneau, c'est la règle générale : priorité à droite.",
+    "r": "Giratoire sans panneau : priorité à droite.",
+    "s": "giratoire"
+  },
+  {
+    "id": "07_regles_priorite-19",
+    "t": "07_regles_priorite",
+    "q": "À quels véhicules devez-vous toujours laisser le passage lorsqu'ils s'annoncent par leurs avertisseurs spéciaux (sonores ou lumineux) ?",
+    "qa": "لأي المركبات يجب عليك دائما فسح الطريق عندما تعلن عن نفسها بمنبه صوتي أو ضوئي خاص؟",
+    "o": [
+      "Ambulance",
+      "Véhicule de la protection civile",
+      "Taxi transportant un client pressé",
+      "Véhicule de la gendarmerie royale ou de la sûreté nationale"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Véhicules prioritaires : intervention rapide, protection civile, ambulance, gendarmerie royale, sûreté nationale (police), forces auxiliaires. Un taxi n'en fait pas partie.",
+    "r": "Avertisseurs spéciaux en marche = toujours céder le passage.",
+    "s": "priorite"
+  },
+  {
+    "id": "07_regles_priorite-20",
+    "t": "07_regles_priorite",
+    "q": "À une intersection sans signalisation, une ambulance arrive de votre gauche, sans sirène ni gyrophare. Qui passe en premier ?",
+    "qa": "في ملتقى طرق بدون تشوير، سيارة إسعاف قادمة من يسارك بدون منبه ولا ضوء دوار. من يمر أولا؟",
+    "o": [
+      "L'ambulance, dans tous les cas",
+      "Moi, car elle vient de ma gauche et n'utilise pas ses avertisseurs",
+      "Celui qui klaxonne le premier"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sans avertisseurs spéciaux, une ambulance n'a aucune priorité particulière : la priorité à droite s'applique, et c'est vous qui êtes à sa droite.",
+    "r": "Ambulance sans avertisseurs : pas de priorité particulière.",
+    "s": "priorite"
+  },
+  {
+    "id": "07_regles_priorite-21",
+    "t": "07_regles_priorite",
+    "q": "Quelles associations entre forme du panneau et signification sont justes ?",
+    "qa": "ما هي الارتباطات الصحيحة بين شكل العلامة ومعناها؟",
+    "o": [
+      "Triangle pointe en bas = céder le passage",
+      "Octogone = STOP",
+      "Losange jaune = vous êtes prioritaire",
+      "Losange jaune barré = arrêt obligatoire"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Triangle inversé = céder le passage, octogone = STOP, losange jaune = route prioritaire. Le losange barré marque la fin de la priorité, pas un arrêt obligatoire.",
+    "r": "Triangle inversé = céder, octogone = STOP, losange = prioritaire.",
+    "s": "formes"
+  },
+  {
+    "id": "07_regles_priorite-22",
+    "t": "07_regles_priorite",
+    "q": "À une intersection équipée d'un STOP, un agent de la circulation vous fait signe de passer sans vous arrêter. Que faites-vous ?",
+    "qa": "في ملتقى به علامة «قف»، يشير إليك عون المرور بالمرور دون الوقوف. ماذا تفعل؟",
+    "o": [
+      "Je marque quand même l'arrêt au STOP",
+      "Je klaxonne pour demander confirmation",
+      "J'obéis à l'agent : ses gestes priment sur les panneaux"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Ordre de priorité : agent > feux > panneaux > règles de circulation. Les gestes de l'agent l'emportent sur le panneau STOP.",
+    "r": "Agent > feux > panneaux > règles.",
+    "s": "hierarchie"
+  },
+  {
+    "id": "07_regles_priorite-23",
+    "t": "07_regles_priorite",
+    "q": "Les feux d'une intersection sont en panne et un panneau « Cédez le passage » est placé sur votre route. Que devez-vous appliquer ?",
+    "qa": "الأضواء في ملتقى الطرق معطلة، وتوجد علامة «أترك حق الأسبقية» في طريقك. ماذا يجب أن تطبق؟",
+    "o": [
+      "La priorité à droite, sans tenir compte du panneau",
+      "Le panneau « Cédez le passage »",
+      "La priorité au plus rapide"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Feux en panne (ou orange clignotant) : on applique les panneaux, puis, à défaut, les règles de priorité.",
+    "r": "Feux en panne : panneaux d'abord, puis règles de priorité.",
+    "s": "hierarchie"
+  },
+  {
+    "id": "07_regles_priorite-24",
+    "t": "07_regles_priorite",
+    "q": "Le non-respect de la priorité (عدم احترام حق الأسبقية) entraîne :",
+    "qa": "عدم احترام حق الأسبقية يترتب عنه :",
+    "o": [
+      "une contravention de 1re classe et le retrait de 4 points",
+      "une contravention de 2e classe (500 à 1 000 DH) et le retrait de 2 points",
+      "une contravention de 3e classe sans retrait de points"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Non-respect de la priorité : 2e classe (500 à 1 000 DH) et 2 points retirés. Piège : ce n'est pas 4 points comme pour le STOP non respecté.",
+    "r": "Priorité non respectée : 2e classe + 2 points.",
+    "s": "points"
+  },
+  {
+    "id": "07_regles_priorite-25",
+    "t": "07_regles_priorite",
+    "q": "Ne pas marquer l'arrêt au STOP entraîne le retrait de :",
+    "qa": "عدم الوقوف عند علامة «قف» يترتب عنه خصم :",
+    "o": [
+      "4 points",
+      "1 point",
+      "2 points",
+      "3 points"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le non-respect du STOP (comme celui du feu rouge) coûte 4 points. Le non-respect de la priorité, lui, coûte 2 points.",
+    "r": "STOP non respecté : 4 points.",
+    "s": "points"
+  },
+  {
+    "id": "08_changement_direction-01",
+    "t": "08_changement_direction",
+    "q": "Pour tourner à droite, vous vous placez :",
+    "qa": "للانعطاف إلى اليمين، تتموضع :",
+    "o": [
+      "le plus à droite possible de la chaussée",
+      "près de l'axe de la chaussée",
+      "au milieu de la chaussée",
+      "à gauche pour prendre de l'élan"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Pour tourner à droite, on serre le bord droit de la chaussée (« collé au bord »).",
+    "r": "Tourner à droite : collé au bord droit."
+  },
+  {
+    "id": "08_changement_direction-02",
+    "t": "08_changement_direction",
+    "q": "Vous voulez tourner à droite, mais le virage est trop serré pour les dimensions de votre véhicule. Vous pouvez :",
+    "qa": "تريد الانعطاف يمينا، لكن المنعرج ضيق جدا بالنسبة لأبعاد مركبتك. يمكنك :",
+    "o": [
+      "utiliser le côté gauche de la chaussée, en ralentissant et en vous assurant qu'il n'y a aucun danger",
+      "monter sur le trottoir",
+      "renoncer : c'est toujours interdit"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Exception : si la configuration du virage ou les dimensions du véhicule l'exigent, on peut utiliser le côté gauche, à vitesse réduite et après s'être assuré de l'absence de danger.",
+    "r": "Gros véhicule : côté gauche permis, lentement et sans danger."
+  },
+  {
+    "id": "08_changement_direction-03",
+    "t": "08_changement_direction",
+    "q": "Sur cette chaussée à sens unique, vous voulez tourner à gauche. Où vous placez-vous ?",
+    "qa": "في هذه القارعة ذات الاتجاه الواحد، تريد الانعطاف يسارا. أين تتموضع؟",
+    "o": [
+      "Au milieu de la chaussée",
+      "À droite, puis vous traversez toute la chaussée",
+      "Le plus à gauche possible, clignotant gauche allumé"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Sur une chaussée à sens unique, pour tourner à gauche, on serre complètement à gauche et on met le clignotant.",
+    "r": "Sens unique : tourner à gauche en serrant à gauche.",
+    "img": "1691662034647.png"
+  },
+  {
+    "id": "08_changement_direction-04",
+    "t": "08_changement_direction",
+    "q": "Sur une chaussée à double sens, pour tourner à gauche, que ne devez-vous PAS faire ?",
+    "qa": "في قارعة ذات اتجاهين، للانعطاف يسارا، ما الذي يجب عليك ألا تفعله؟",
+    "o": [
+      "Mettre votre clignotant gauche",
+      "Dépasser l'axe (le milieu) de la chaussée",
+      "Ralentir avant de tourner"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On se rapproche de l'axe sans le franchir : franchir l'axe avant l'intersection expose à une collision frontale.",
+    "r": "Double sens : près de l'axe, sans le franchir."
+  },
+  {
+    "id": "08_changement_direction-05",
+    "t": "08_changement_direction",
+    "q": "Sur une chaussée à double sens comportant un nombre impair de voies (3 voies), pour tourner à gauche, vous pouvez :",
+    "qa": "في قارعة ذات اتجاهين بعدد فردي من المسالك (3 مسالك)، للانعطاف يسارا يمكنك :",
+    "o": [
+      "utiliser la voie de gauche",
+      "rester obligatoirement sur la voie de droite",
+      "utiliser la voie du milieu, sauf signalisation contraire"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Avec un nombre impair de voies, on peut se placer sur la voie centrale pour tourner à gauche, sauf si une signalisation l'interdit.",
+    "r": "Nombre impair de voies : voie centrale pour tourner à gauche."
+  },
+  {
+    "id": "08_changement_direction-06",
+    "t": "08_changement_direction",
+    "q": "Le véhicule bleu tourne à gauche pour entrer dans une route à double sens. Quelle trajectoire est correcte ?",
+    "qa": "المركبة الزرقاء تنعطف يسارا للدخول إلى طريق ذات اتجاهين. ما هو المسار الصحيح؟",
+    "o": [
+      "La trajectoire rouge, plus courte",
+      "La trajectoire bleue, qui arrive sur le côté droit de la nouvelle route",
+      "Les deux sont correctes"
+    ],
+    "a": [
+      1
+    ],
+    "e": "En entrant dans une route à double sens, on prend le côté droit de la nouvelle route. La trajectoire rouge coupe le virage et aboutit du mauvais côté.",
+    "r": "Après le virage : côté droit de la nouvelle route.",
+    "img": "1686235591818.png"
+  },
+  {
+    "id": "08_changement_direction-07",
+    "t": "08_changement_direction",
+    "q": "Avant de tourner à gauche, à qui devez-vous céder le passage ?",
+    "qa": "قبل الانعطاف يسارا، لمن يجب عليك ترك الأسبقية؟",
+    "o": [
+      "Aux véhicules venant en sens inverse",
+      "Aux piétons engagés sur le passage pour piétons",
+      "À personne si votre clignotant est allumé",
+      "Aux cyclistes et cyclomoteurs circulant sur leur voie réservée"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "En tournant à gauche, on cède le passage aux véhicules venant d'en face, aux piétons sur le passage et aux cycles sur leur voie. Le clignotant ne donne aucune priorité.",
+    "r": "Tourner à gauche : céder au sens inverse, piétons, cycles.",
+    "s": "priorite"
+  },
+  {
+    "id": "08_changement_direction-08",
+    "t": "08_changement_direction",
+    "q": "Vous êtes le véhicule rouge (2) et vous tournez à gauche. Le véhicule bleu (1) arrive en face et va tout droit. Qui passe en premier ?",
+    "qa": "أنت المركبة الحمراء (2) وتنعطف يسارا. المركبة الزرقاء (1) قادمة من الاتجاه المعاكس وتسير إلى الأمام. من يمر أولا؟",
+    "o": [
+      "Le véhicule bleu (1)",
+      "Moi (2), car j'ai mis mon clignotant",
+      "Celui qui arrive le premier au centre de l'intersection"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Celui qui tourne à gauche cède le passage aux véhicules venant en sens inverse : le véhicule bleu passe d'abord.",
+    "r": "Tourner à gauche : le véhicule d'en face passe d'abord.",
+    "s": "priorite",
+    "img": "1684842456649.png"
+  },
+  {
+    "id": "08_changement_direction-09",
+    "t": "08_changement_direction",
+    "q": "Vous tournez à gauche. Le véhicule venant en face s'apprête à tourner à droite. Qui passe en premier ?",
+    "qa": "تنعطف يسارا. المركبة القادمة من الاتجاه المعاكس ستنعطف يمينا. من يمر أولا؟",
+    "o": [
+      "Moi, puisqu'il tourne lui aussi",
+      "Le véhicule venant en face",
+      "Le premier qui s'engage"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le véhicule venant en face garde la priorité, même s'il va tourner à droite.",
+    "r": "Véhicule d'en face prioritaire, même s'il tourne à droite."
+  },
+  {
+    "id": "08_changement_direction-10",
+    "t": "08_changement_direction",
+    "q": "Quel est l'ordre correct des actions pour changer de direction ?",
+    "qa": "ما هو الترتيب الصحيح للإجراءات عند تغيير الاتجاه؟",
+    "o": [
+      "Clignotant → virage → rétroviseur → ralentissement",
+      "Ralentissement → virage → clignotant",
+      "Placement → virage → rétroviseur → clignotant",
+      "Rétroviseur → clignotant → placement → ralentissement → virage"
+    ],
+    "a": [
+      3
+    ],
+    "e": "On contrôle d'abord (rétroviseur), on signale (clignotant), on se place, on ralentit, puis on tourne.",
+    "r": "Rétro → clignotant → placement → ralentir → tourner."
+  },
+  {
+    "id": "08_changement_direction-11",
+    "t": "08_changement_direction",
+    "q": "Vous tournez à droite. Quel danger devez-vous particulièrement surveiller ?",
+    "qa": "تنعطف يمينا. ما هو الخطر الذي يجب أن تنتبه إليه بشكل خاص؟",
+    "o": [
+      "Un véhicule loin derrière vous",
+      "Les voitures garées de l'autre côté de la rue",
+      "Un cycliste circulant à votre droite, dans l'angle mort"
+    ],
+    "a": [
+      2
+    ],
+    "e": "En tournant à droite, un cycliste peut se trouver à votre droite dans l'angle mort : contrôlez rétroviseur et angle mort.",
+    "r": "Tourner à droite : attention au cycliste dans l'angle mort."
+  },
+  {
+    "id": "08_changement_direction-12",
+    "t": "08_changement_direction",
+    "q": "Vous tournez dans une rue ; un piéton est en train de traverser cette rue. Qui a la priorité ?",
+    "qa": "تنعطف إلى شارع، وراجل يعبر هذا الشارع. من له الأسبقية؟",
+    "o": [
+      "Moi, car j'ai mis mon clignotant",
+      "Le piéton seulement s'il court",
+      "Le piéton"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le piéton qui traverse la route dans laquelle vous vous engagez a la priorité.",
+    "r": "Piéton traversant la rue où l'on entre : prioritaire."
+  },
+  {
+    "id": "08_changement_direction-13",
+    "t": "08_changement_direction",
+    "q": "Couper le virage à gauche en franchissant l'axe avant l'intersection expose surtout à :",
+    "qa": "تجاوز محور القارعة قبل الملتقى عند الانعطاف يسارا يعرضك بالخصوص لـ :",
+    "o": [
+      "une collision par l'arrière uniquement",
+      "une collision frontale avec un véhicule venant en sens inverse",
+      "une panne mécanique"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Franchir l'axe trop tôt place votre véhicule face à ceux qui arrivent en sens inverse : risque de choc frontal.",
+    "r": "Franchir l'axe trop tôt = risque de choc frontal."
+  },
+  {
+    "id": "08_changement_direction-14",
+    "t": "08_changement_direction",
+    "q": "Changer de direction sans prendre les précautions nécessaires est puni :",
+    "qa": "تغيير الاتجاه دون اتخاذ الاحتياطات اللازمة يعاقب عليه بـ :",
+    "o": [
+      "d'une contravention de 3e classe (300 à 600 DH), sans retrait de points",
+      "d'une contravention de 1re classe et de 4 points",
+      "d'un délit"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Changer de direction (ou de file) sans précautions est une contravention de 3e classe : 300 à 600 DH, sans retrait de points.",
+    "r": "Changement de direction sans précautions : 3e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "08_changement_direction-15",
+    "t": "08_changement_direction",
+    "q": "Quel moyen mnémotechnique résume le placement pour tourner ?",
+    "qa": "ما هي القاعدة المختصرة للتموضع عند الانعطاف؟",
+    "o": [
+      "Droite : collé à l'axe ; gauche : collé au bord",
+      "Droite et gauche : au milieu de la voie",
+      "Droite : collé au bord ; gauche : collé à l'axe"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Pour tourner à droite, on longe le bord droit ; pour tourner à gauche sur une chaussée à double sens, on se rapproche de l'axe sans le franchir.",
+    "r": "Droite : collé au bord. Gauche : collé à l'axe."
+  }
+]

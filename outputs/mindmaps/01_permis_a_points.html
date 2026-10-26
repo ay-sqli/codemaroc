@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Permis à Points</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/01_permis_a_points" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🔢 رخصة السياقة بالنقط (Permis à Points)\n\n## 📌 1. المبدأ (Principe)\n- رصيد نقط لكل رخصة ← يُخصم عند المخالفات\n- نظام وقائي ومرن لاسترجاع النقط + دورات التربية على السلامة الطرقية\n\n## 🎯 2. الرصيد (Capital de points)\n- <img src=\"../../inputs/05_infractions_sanctions/01_permis_a_points/images/1702306196273.png\"> **الفترة الاختبارية (A1 و A و B): سنتان + 20 نقطة**\n- <img src=\"../../inputs/05_infractions_sanctions/01_permis_a_points/images/1702306227339.png\"> **بعد الفترة الاختبارية: 30 نقطة (إذا لم يقل الرصيد عن 7 نقط)**\n\n## ➖ 3. خصم النقط (Retrait de points)\n- يثبت بأداء الغرامة التصالحية أو بحكم قضائي نهائي\n- أداء الغرامة = اعتراف بالمخالفة ← خصم النقط بقوة القانون\n- الخصم يشمل كل أصناف الرخصة في آن واحد\n- عدد النقط حسب جسامة المخالفة\n- الحد الأقصى عند تعدد المخالفات في آن واحد\n  - عدة مخالفات ← 8 نقط على الأكثر\n  - مخالفات + جنحة واحدة ← 14 نقطة على الأكثر\n  - عدة جنح ← 10 نقط على الأكثر\n  - جنح من بينها قتل أو جروح غير عمدية مع ظروف التشديد ← 16 نقطة على الأكثر\n\n## 🚔 4. أمثلة الجنح ونقطها (Délits)\n- <img src=\"../../inputs/05_infractions_sanctions/01_permis_a_points/images/1702386460025.jpeg\" class=\"xl\"> الجنح التي تستوجب خصم النقط\n- القتل غير العمدي مع ظروف التشديد ← 14 نقطة\n- الجروح المؤدية إلى عاهة دائمة مع ظروف التشديد ← 10 نقط\n- الجروح غير العمدية مع ظروف التشديد ← 6 نقط\n- الفرار بعد حادثة (التملص من المسؤولية) ← 6 نقط\n- عدم إيداع رخصة تقرر توقيفها ← 4 نقط\n\n## 🚦 5. أمثلة المخالفات ونقطها (Contraventions)\n- <img src=\"../../inputs/05_infractions_sanctions/01_permis_a_points/images/1702382428326.jpeg\" class=\"xl\"> المخالفات التي تستوجب خصم النقط\n- عدم الوقوف عند «قف» أو الضوء الأحمر ← 4 نقط\n- السير في الاتجاه الممنوع ← 4 نقط\n- السياقة بدون شهادة المراقبة التقنية ← 3 نقط\n- عدم استعمال حزام السلامة ← 1 نقطة\n- إركاب طفل أقل من 10 سنوات في المقعد الأمامي ← 1 نقطة\n\n## 📬 6. الإشعار برسالة مضمونة (Lettre recommandée)\n- عند الخصم الأول\n- عند فقدان نصف الرصيد أو أكثر\n- عند فقدان أكثر من ثلثي النقط خلال الفترة الاختبارية\n  - ← دورة تربية إجبارية للحصول على 30 نقطة بعد الفترة الاختبارية\n\n## ➕ 7. استرجاع النقط (Récupération)\n- اختياريا عبر دورة التربية على السلامة الطرقية ← +4 نقط\n  - خلال الفترة الاختبارية ← مرة واحدة فقط\n  - بعد الفترة الاختبارية ← مرة كل 3 سنوات\n- تلقائيا\n  - سنة بدون مخالفة ← +4 نقط\n  - سنتان بدون مخالفة ورصيد أقل من 8 ← يرفع إلى 12 نقطة\n  - 3 سنوات بدون مخالفة ← الرصيد الكامل 30 نقطة\n- <img src=\"../../inputs/05_infractions_sanctions/01_permis_a_points/images/1684746641550.png\" class=\"big\"> استرجاع النقط\n\n## ❌ 8. فقدان كل النقط (Invalidation)\n- أداء فوري أدى إلى الصفر ← العون يحتفظ بالرخصة + وصل مؤقت 120 ساعة\n- الرخصة تُرسل إلى الإدارة خلال 48 ساعة\n- رسالة مضمونة ← تسليم الرخصة خلال شهر\n- امتحان جديد بعد 6 أشهر على الأقل + دورة تربية\n- فقدان جديد خلال 5 سنوات ← الانتظار سنتان على الأقل\n- الرخصة الجديدة ← 20 نقطة + فترة اختبارية جديدة (سنتان)\n- استثناء: صنف C أو D منذ 4 سنوات ← 30 نقطة بدون فترة اختبارية\n\n## 🎓 9. دورات التربية على السلامة الطرقية (Stages)\n- بمقابل مالي، في مؤسسات مرخص لها، مدتها 3 أيام\n- المواضيع: رخصة النقط، الأنظمة، السلامة الطرقية، السلوكات، التنقلات، علم الحوادث\n- إجبارية في 5 حالات\n  - فقدان أكثر من ثلثي النقط في الفترة الاختبارية\n  - إلغاء الرخصة بعد فقدان كل النقط\n  - استرجاع رخصة مسحوبة بعد حادثة مع ظروف التشديد (عجز مؤقت)\n  - حادثة مع ظروف التشديد تسببت في عاهة مستديمة\n  - القتل غير العمدي\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- 20 ← مبتدئ / 30 ← بعد سنتين\n- استرجاع: 1 سنة = +4، 2 سنتان = 12، 3 سنوات = 30\n- الأقصى في آن واحد: 8 (مخالفات) – 10 (جنح) – 14 (مع جنحة) – 16 (مع قتل/جروح)\n- 4 نقط: الضوء الأحمر و«قف» والاتجاه الممنوع\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- أداء الغرامة = اعتراف ← النقط تُخصم تلقائيا\n- الدورة الاختيارية خلال الفترة الاختبارية مرة واحدة فقط\n- الوصل المؤقت يسمح بالسياقة 120 ساعة فقط (5 أيام)\n- انتظار 6 أشهر وليس سنة قبل إعادة الامتحان\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

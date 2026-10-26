@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Localisations</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/07_localisations" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 📍 علامات المواقع (Localisations)\n\n## 🔢 1. أرقام الطرق (Numéros de routes)\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239502.png\"> **علامة تشير إلى رقم طريق وطنية**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239515.png\"> **علامة تشير إلى رقم طريق جهوية**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239529.png\"> **علامة تشير إلى رقم طريق إقليمية**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239542.png\"> **علامة تشير إلى رقم طريق غابوية**\n\n## 🏙️ 2. التجمعات العمرانية والأماكن (Agglomérations et lieux)\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239556.png\"> **علامة تشير إلى مدخل تجمع عمراني**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239571.png\"> **علامة تشير إلى مدخل تجمع عمراني**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239585.png\"> **علامة تشير إلى نهاية تجمع عمراني**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239602.png\"> **علامة تشير إلى نهاية تجمع عمراني**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239620.png\"> **علامة تشير إلى مكان بعينه**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239635.png\"> **علامة تشير إلى موقع مجرى مائي**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239663.png\"> **علامة تحديد اسم شارع**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239649.png\"> **علامة تشير إلى باحة على الطريق السيار**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239705.png\"> **علامة تشير إلى نهاية موقع باحة على الطريق السيار**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239678.png\"> **علامة تبين للراجلين الطريق للوصول لمنفذ الإغاثة على اليمين**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239691.png\"> **علامة تبين للراجلين الطريق للوصول لمنفذ الإغاثة على اليسار**\n\n## 🪨 3. الصوى وعلامات المسافة (Bornes)\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239733.png\"> **صوى الطرق الوطنية: رقم الطريق والنقطة الكيلومترية**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239747.png\"> **صوى الطرق الجهوية: رقم الطريق ونقطة تحديد الموقع**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239761.png\"> **صوى الطرق الإقليمية: رقم الطريق ونقطة الموقع والعلو**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239719.png\"> **صوى تشير إلى الحدود مع الإقليم المجاور**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239788.png\"> **صفيحة التموقع الكيلومتري على الطرق السيارة (A + رقم، خلفية زرقاء)**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239774.png\"> **صوى هيكتومترية: عدد الهكتومترات من 1 إلى 9 بين نقطتين كيلومتريتين**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239824.png\"> **صفيحة لتبيان تموقع النقط المميزة**\n- ألوان الجزء العلوي للصوى\n  - 🔴 أحمر ← طريق وطنية\n  - 🟡 أصفر ← طريق جهوية\n  - 🔵 أزرق ← طريق إقليمية\n\n## 🏛️ 4. التنشيط السياحي وذات النفع المحلي (Animation touristique)\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239839.png\"> **معلومات كتابية**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239853.png\"> **معلومات على شكل صورة**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239868.png\"> **معلومات كتابية وأخرى على شكل صورة معا**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239882.png\"> **تحديد موقع مسار سياحي**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239896.png\"> **التشوير المسبق لمسار سياحي**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239923.png\"> **نهاية مسار سياحي**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239937.png\"> **الإشارة إلى موقع سياحي**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239951.png\"> **الإشارة إلى موقع سياحي و الإتجاه الذي يجب اتباعه**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239966.png\"> **الإشارة إلى موقع سياحي والإتجاه الذي يجب اتباعه مع صورة للموقع**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239981.png\"> **الإشارة إلى موقع سياحي مكملة بإشارة على شكل صورة**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407239994.png\"> **لوحة تحديد موقع نشاط سياحي ذي نفع عام ودائم**\n\n## ⚠️ 5. علامات للدلالة على موقع خطر (Balises de danger)\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240010.png\"> **أرمة تشير إلى منعرجات على طرق مصنفة**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240086.png\"> **أرمة المنعرجات**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240025.png\"> **أرمة تشير إلى ملتقى طرق (أحمر عاكس للضوء)**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240072.png\"> **أرمة تبين حدود قارعة الطريق**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240043.png\"> **جهاز لتعزيز التشوير الدائم والمستمر**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240058.png\"> **جهاز لتعزيز التشوير الدائم في اتجاهات متباعدة**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240100.png\"> **تشوير لرأس أرض مسطحة تفصل تيارين في اتجاهين متعاكسين**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240127.png\"> **أرمة للإشارة إلى تباعد المسالك**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240169.png\"> **أرمة متعددة الأسهم للإشارة إلى تباعد المسالك**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240141.png\"> **أرمة للإشارة إلى عائق**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240155.png\"> **مقبض هوائي: مكان هبوب الرياح وقوتها واتجاهها**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240211.png\"> **أرمة تعلن الإقتراب من تقاطع الطريق مع سكة حديدية**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240198.png\"> **تقاطع مع سكة حديدية تمر فوقه أسلاك كهربائية على علو أقل من 6 أمتار**\n- <img src=\"../../inputs/01_la_route/07_localisations/المحور الفرعي_files/1682407240183.png\"> **تقاطع غير محروس مع سكة حديدية أو خطر جوي (طيران منخفض)**\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- مدخل التجمع العمراني ← تبدأ قواعد السير داخل المدينة (السرعة 60 كلم/س ما لم يُشر لغير ذلك)\n- نهاية التجمع العمراني ← نفس العلامة مشطوبة بخط أحمر\n- لون الصوى يعرّفك بصنف الطريق: أحمر وطنية، أصفر جهوية، أزرق إقليمية\n- الأرمة الحمراء والبيضاء ← خطر قريب: خفف السرعة\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- علامة مدخل التجمع العمراني ليست علامة تحديد سرعة بحد ذاتها ← لكنها تفرض قواعد المدينة\n- الصوى الهيكتومترية ← تعد من 1 إلى 9 (كل 100 متر)\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

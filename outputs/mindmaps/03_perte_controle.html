@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Perte de Contrôle</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/03_perte_controle" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🌀 فقدان السيطرة على المركبة (Perte de Contrôle)\n\n## 🎬 0. محتوى Perminou (Vidéo du cours)\n- فيديو: فقدان السيطرة على المركبة ← الملخص مبني على دروس المنعرجات والأخطار الاستثنائية والظروف المناخية\n\n## ⚠️ 1. الأسباب (Causes)\n- سرعة غير ملائمة (خاصة في المنعرجات)\n- القوة النابذة: السرعة ↑ + الوزن ↑ + منعرج ضيق ↓\n- <img src=\"../../inputs/01_la_route/16_virages_et_pentes/المحور الفرعي_files/1684317709226.png\"> **القوة النابذة تدفع المركبة إلى خارج المنعرج**\n- طريق مبللة أو جليد أو حصى أو زيت\n- الانزلاق المائي (Aquaplaning): سرعة + إطارات متآكلة\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1684315344513.png\"> **الانزلاق المائي**\n- انفجار إطار، عطب الفرامل، رياح جانبية قوية\n- حركة مفاجئة للمقود أو فرملة قوية\n\n## 🛞 2. الانزلاق (Dérapage)\n- لا فرامل، لا مسرع، لا واصل\n- وجّه المقود بلطف نحو الجهة التي انزلق إليها المؤخر\n- انظر إلى حيث تريد الذهاب\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1684315567670.png\"> **على الجليد: حصار المحرك بدل الفرامل**\n\n## 💥 3. انفجار الإطار (Éclatement)\n- أمسك المقود بإحكام\n- لا تفرمل ← ارفع القدم عن المسرع تدريجيا\n- وجّه المركبة تدريجيا نحو اليمين وأوقفها في مكان آمن + Warning\n\n## 🛑 4. عطب الفرامل (Freins)\n- خفض السرعات تدريجيا + الحصار اليدوي تدريجيا\n- مسلك الإغاثة إن وجد + المنبه والأضواء\n\n## 🛡️ 5. الوقاية (Prévention)\n- خفف قبل المنعرج وليس داخله\n- راقب الإطارات (الضغط والنقوش ≥ 1.6 مم)\n- ESP و ABS يساعدان لكن لا يعوضان السائق\n- <img src=\"../../inputs/04_le_vehicule/03_aides_conduite/images/1684505203590.png\"> **ESP: يصحح المسار في المنعرج**\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- «العيون تقود اليدين»: انظر إلى المخرج لا إلى العائق\n- المقود خفيف فجأة تحت المطر ← انزلاق مائي: ارفع القدم ولا تفرمل\n- كل الحلول تبدأ بـ «بلطف»\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- عند الانزلاق: الفرملة القوية أسوأ رد فعل\n- عند الانفجار: لا تقف فجأة في وسط الطريق\n- النزول بنقطة الحياد يسبب فقدان التحكم\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

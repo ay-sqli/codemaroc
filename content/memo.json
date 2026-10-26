@@ -1,0 +1,135 @@
+[
+  {
+    "id": "methode",
+    "emoji": "🧠",
+    "title": "La méthode pour retenir sans effort",
+    "intro": "Ton cerveau retient ce qu'il comprend, ce qu'il voit et ce qu'il répète au bon moment. Applique ces 6 règles à chaque chiffre difficile.",
+    "items": [
+      { "q": "Répétition espacée", "a": "Revoir une info juste avant de l'oublier : 1 jour, 2 jours, 4 jours, 8 jours, 16 jours. C'est exactement ce que fait ton carnet d'erreurs.", "hook": "Peu mais souvent > beaucoup en une fois." },
+      { "q": "Se tester plutôt que relire", "a": "Cacher la réponse et essayer de la retrouver (mode flashcards) ancre 2 à 3 fois mieux que relire la fiche.", "hook": "Si ça coûte un petit effort, ça rentre." },
+      { "q": "Regrouper (chunking)", "a": "On ne retient pas 30 chiffres, on retient 4 « familles » : 4 points, 3 points, 2 points, 1 point.", "hook": "Des tiroirs, pas un tas." },
+      { "q": "Trouver la logique", "a": "Un chiffre compris ne s'oublie plus : réaction = 1 seconde = (V/10)×3, sécurité = 2 secondes = le double (×6).", "hook": "Pourquoi ? avant Combien ?" },
+      { "q": "Image mentale / histoire", "a": "Associer un chiffre à une scène absurde : « 0,2 g/l : deux gorgées et c'est déjà trop ».", "hook": "Plus c'est bizarre, plus ça colle." },
+      { "q": "Palais de mémoire", "a": "Place chaque info dans une pièce de ta maison : l'entrée = permis 20 points, le salon = 30 points, la cuisine = 3 ans pour tout récupérer…", "hook": "Tu « marches » dans ta maison pour te rappeler." }
+    ]
+  },
+  {
+    "id": "vitesses",
+    "emoji": "⏱️",
+    "title": "Les vitesses",
+    "intro": "Une seule série à connaître parfaitement pour la voiture, puis les exceptions.",
+    "items": [
+      { "q": "Voiture : ville / route / autoroute ?", "a": "60 – 100 – 120 km/h", "hook": "« 6-10-12 » : on ajoute un zéro. Comme les heures : 6 h, 10 h, midi." },
+      { "q": "Permis probatoire (2 ans) ?", "a": "90 km/h maximum partout, disque « 90 » à l'arrière.", "hook": "Débutant = « 9 » comme « neuf » (nouveau) → 90." },
+      { "q": "Vitesse minimale sur autoroute ?", "a": "60 km/h (en circulation normale).", "hook": "Le minimum de l'autoroute = le maximum de la ville." },
+      { "q": "Taxi hors agglomération ?", "a": "90 km/h (mais 120 sur autoroute).", "hook": "Le taxi s'arrête souvent → un cran de moins sur route." },
+      { "q": "Groupe de piétons, engins agricoles, zone 30 ?", "a": "30 km/h", "hook": "30 = 90 % de chances de survie pour un piéton." },
+      { "q": "Cyclomoteur ?", "a": "40 en ville, 60 hors ville, interdit sur autoroute.", "hook": "Il ne peut pas tenir le minimum de 60 de l'autoroute." },
+      { "q": "Poids lourds sur autoroute ?", "a": "3,5–12 t : 100 · 12–19 t : 90 · > 19 t : 80", "hook": "Plus c'est lourd, moins c'est rapide : 100 → 90 → 80 (−10 à chaque palier)." }
+    ]
+  },
+  {
+    "id": "distances",
+    "emoji": "📏",
+    "title": "Distances (le calcul magique)",
+    "intro": "Prends uniquement le chiffre des dizaines de la vitesse (90 → 9). Tout le reste se calcule de tête.",
+    "items": [
+      { "q": "Distance parcourue pendant la réaction ?", "a": "(V/10) × 3 → à 90 km/h : 27 m", "hook": "1 seconde = 3 fois le chiffre." },
+      { "q": "Distance de sécurité avec le véhicule devant ?", "a": "(V/10) × 6 = 2 secondes → à 90 km/h : 54 m", "hook": "2 secondes = le double de la réaction (3 × 2 = 6)." },
+      { "q": "Distance d'arrêt ?", "a": "(V/10)² → à 90 km/h : 81 m", "hook": "Le chiffre multiplié par lui-même : 9 × 9." },
+      { "q": "Distance de freinage ?", "a": "Arrêt − réaction → 81 − 27 = 54 m", "hook": "Freinage = ce qui reste quand on enlève la réaction." },
+      { "q": "Sur route mouillée ?", "a": "La distance de freinage est multipliée par 2.", "hook": "Mouillé = doublé." },
+      { "q": "Distance latérale pour dépasser un cycliste, un piéton, un animal ?", "a": "1 mètre minimum.", "hook": "Un bras tendu + un peu plus." },
+      { "q": "Stationnement près d'un carrefour ?", "a": "5 m (ville, carrefour non signalisé) · 12 m (carrefour signalisé, passage à niveau, hors agglomération).", "hook": "« 5 doigts, 12 mois » : petite ville 5, le reste 12." },
+      { "q": "Panneaux de danger : à quelle distance ?", "a": "150 m hors agglomération, 50 m en agglomération.", "hook": "Hors ville tu roules ~3 fois plus vite → 3 fois plus loin (50 × 3)." }
+    ]
+  },
+  {
+    "id": "points",
+    "emoji": "🔢",
+    "title": "Les points du permis",
+    "intro": "Range chaque infraction dans un des 4 tiroirs : 6, 4, 3, 2, 1 point(s).",
+    "items": [
+      { "q": "Capital de départ ?", "a": "20 points pendant 2 ans de probatoire, puis 30 points.", "hook": "« 20 ans » = jeune conducteur ; « 30 ans » = conducteur confirmé." },
+      { "q": "−6 points ?", "a": "Excès ≥ 50 km/h · alcool ou drogue (ou refus de contrôle) · délit de fuite · homicide involontaire SANS circonstance aggravante · blessures AVEC circonstances aggravantes. (Homicide aggravé = −14, infirmité permanente aggravée = −10.)", "hook": "Les « 6 péchés capitaux » : vite, ivre, fuite." },
+      { "q": "−4 points ?", "a": "Feu rouge / STOP grillé · sens interdit · dépassement dangereux · excès +30 à +50 km/h.", "hook": "Les « 4 coins du carrefour » : feu, stop, sens, dépassement." },
+      { "q": "−3 points ?", "a": "Sans contrôle technique · de nuit sans éclairage · bande d'arrêt d'urgence · marche arrière / demi-tour sur autoroute.", "hook": "« 3 sans » : sans contrôle, sans lumière, sans raison sur la bande d'urgence." },
+      { "q": "−2 points ?", "a": "Refus de priorité · excès +20 à +30 km/h · deux-roues sans casque · médicaments interdits · refus d'obtempérer.", "hook": "« 2 roues sans casque, 2 secondes pour céder »." },
+      { "q": "−1 point ?", "a": "Ceinture · enfant de moins de 10 ans à l'avant · téléphone tenu en main.", "hook": "Les 3 « gestes d'une seconde » à l'intérieur de la voiture." },
+      { "q": "Récupérer des points ?", "a": "1 an sans infraction : +4 · 2 ans (solde < 8) : remonte à 12 · 3 ans : retour à 30 · stage : +4.", "hook": "« 1-2-3 » → « 4-12-30 »." },
+      { "q": "Maximum retiré en une seule fois ?", "a": "8 (contraventions) · 10 (délits) · 14 (contraventions + 1 délit) · 16 (avec homicide/blessures aggravées).", "hook": "8 → 10 → 14 → 16 : ça monte avec la gravité." },
+      { "q": "Plus de points ?", "a": "Permis annulé : nouvel examen après 6 mois minimum + stage (2 ans si récidive dans les 5 ans).", "hook": "0 point = 6 mois au « purgatoire »." }
+    ]
+  },
+  {
+    "id": "amendes",
+    "emoji": "💰",
+    "title": "Les amendes",
+    "intro": "4 classes. Retiens le bas de chaque fourchette et le barème de paiement rapide.",
+    "items": [
+      { "q": "Les 4 classes (fourchettes) ?", "a": "1ʳᵉ : 700–1 400 · 2ᵉ : 500–1 000 · 3ᵉ : 300–600 · 4ᵉ (piétons) : 20–50 DH", "hook": "Le haut = le double du bas : 700×2, 500×2, 300×2." },
+      { "q": "Payer tout de suite ?", "a": "400 / 300 / 150 / 25 DH", "hook": "« 4-3-1,5 » : on paie à peu près la moitié du minimum." },
+      { "q": "Payer sous 15 jours ?", "a": "500 / 350 / 200 / 25 DH", "hook": "+100, +50, +50." },
+      { "q": "Payer sous 30 jours ?", "a": "700 / 500 / 300 / 25 DH = le minimum de la fourchette.", "hook": "Au 30ᵉ jour on paie « le bas de l'échelle »." },
+      { "q": "Excès de vitesse : quelle classe ?", "a": "< +20 : 3ᵉ · +20 à +30 : 2ᵉ · +30 à +50 : 1ʳᵉ · ≥ +50 : délit (4 000–8 000 DH).", "hook": "« 20-30-50 » : chaque marche fait monter d'une classe." },
+      { "q": "Ligne continue franchie ?", "a": "Contravention de 1ʳᵉ classe (sans retrait de points).", "hook": "La ligne continue = un mur : 1ʳᵉ classe." },
+      { "q": "Ceinture : conducteur vs passager ?", "a": "Conducteur sans ceinture : 2ᵉ classe et −1 pt · passager sans ceinture : 2ᵉ classe · véhicule sans ceinture : 1ʳᵉ classe.", "hook": "Le véhicule sans ceinture est plus grave que l'oubli." }
+    ]
+  },
+  {
+    "id": "alcool",
+    "emoji": "🍷",
+    "title": "Alcool & santé",
+    "intro": "Deux chiffres seulement, liés par une division par 2.",
+    "items": [
+      { "q": "Seuil d'alcool ?", "a": "0,20 g/l de sang = 0,10 mg/l d'air expiré.", "hook": "« L'air pèse la moitié du sang » : 0,2 → 0,1." },
+      { "q": "Risque d'accident mortel sous alcool ?", "a": "17 fois plus élevé.", "hook": "17 = l'âge où on rêve du permis… ne le gâche pas." },
+      { "q": "Pictogramme médicament niveau 3 ?", "a": "Interdit de conduire.", "hook": "3 = rouge = STOP." },
+      { "q": "Visite médicale ?", "a": "Tous les 10 ans · tous les 2 ans pour les pros et après 65 ans.", "hook": "« 10 ans, puis 2 ans après 65 »." },
+      { "q": "Fatigue : la solution ?", "a": "S'arrêter et dormir 15–20 min ; pause toutes les 2 heures.", "hook": "« 2 heures – 15 minutes »." }
+    ]
+  },
+  {
+    "id": "permis",
+    "emoji": "🪪",
+    "title": "Permis, âges & papiers",
+    "intro": "Suis l'ordre des véhicules, du plus petit au plus gros.",
+    "items": [
+      { "q": "Âges minimums ?", "a": "AM : 14 · A1 : 16 · A et B : 18 · C : 21 ans.", "hook": "14-16-18-21 : on grandit avec le véhicule." },
+      { "q": "Permis B = jusqu'à combien ?", "a": "8 places + le conducteur, et 3 500 kg.", "hook": "« 8 + toi, 3,5 tonnes »." },
+      { "q": "Remorque avec un permis B ?", "a": "Jusqu'à 750 kg ; au-delà (sous conditions) il faut le permis EB.", "hook": "750 = « 3/4 de tonne »." },
+      { "q": "Les 5 papiers obligatoires ?", "a": "Permis, carte grise, assurance, vignette (taxe annuelle), contrôle technique.", "hook": "« PCAVC » : Permis, Carte grise, Assurance, Vignette, Contrôle." },
+      { "q": "Premier contrôle technique d'une voiture particulière ?", "a": "Avant 5 ans, puis chaque année.", "hook": "5 ans de tranquillité, puis tous les ans." },
+      { "q": "Déclarer un accident à l'assurance ?", "a": "Dans les 5 jours (constat amiable conseillé).", "hook": "5 doigts, 5 jours." },
+      { "q": "Taxe annuelle (vignette) ?", "a": "En janvier ; voitures électriques et hybrides exonérées.", "hook": "Nouvelle année, nouvelle vignette." }
+    ]
+  },
+  {
+    "id": "urgences",
+    "emoji": "🚨",
+    "title": "Urgences",
+    "intro": "Ordre P.A.S. et 4 numéros.",
+    "items": [
+      { "q": "Que faire en premier sur un accident ?", "a": "P.A.S. : Protéger, Alerter, Secourir.", "hook": "« PAS » = « ne fais PAS n'importe quoi »." },
+      { "q": "Numéros d'urgence ?", "a": "15 / 150 pompiers · 19 police · 177 gendarmerie · 5050 autoroutes.", "hook": "Police 19, gendarmerie 1-7-7, pompiers 15, autoroute 50-50." },
+      { "q": "Massage cardiaque ?", "a": "100–120 compressions/min, 5–6 cm ; adulte 30/2, enfant 5 insufflations puis 15/2.", "hook": "Le rythme de « Stayin' Alive » ≈ 100/min." },
+      { "q": "Pneu qui éclate ?", "a": "Tenir le volant, ne PAS freiner, lever le pied doucement, se garer à droite.", "hook": "« Tiens, lève, range »." },
+      { "q": "Profondeur minimale des sculptures ?", "a": "1,6 mm", "hook": "1,6 = une pièce de monnaie posée sur la tranche." }
+    ]
+  },
+  {
+    "id": "panneaux",
+    "emoji": "🔷",
+    "title": "Panneaux : deviner sans connaître",
+    "intro": "La forme et la couleur suffisent souvent à trouver la bonne réponse.",
+    "items": [
+      { "q": "Triangle rouge ?", "a": "Danger.", "hook": "Le triangle est « pointu » comme le danger." },
+      { "q": "Rond rouge ?", "a": "Interdiction.", "hook": "Le rouge dit NON." },
+      { "q": "Rond bleu ?", "a": "Obligation.", "hook": "Le bleu dit FAIS-LE." },
+      { "q": "Carré bleu ?", "a": "Indication / information.", "hook": "Le carré est un « panneau d'affichage »." },
+      { "q": "Barre noire / barre rouge ?", "a": "Barre noire sur blanc = fin d'interdiction · barre rouge sur bleu = fin d'obligation.", "hook": "La barre « raye » la règle." },
+      { "q": "Fond jaune ?", "a": "Temporaire (travaux) : il prime sur le permanent.", "hook": "Jaune = chantier = provisoire mais prioritaire." },
+      { "q": "Qui commande ?", "a": "Agent > feux > panneaux > règles.", "hook": "« L'homme avant la machine, la machine avant le métal, le métal avant le livre »." }
+    ]
+  }
+]

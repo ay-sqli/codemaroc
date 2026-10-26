@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Alcool et Médicaments</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/02_alcool_medicaments" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🍷 الكحول والأدوية والمواد المخدرة (Alcool, Médicaments, Drogues)\n\n## 🍺 1. السياقة تحت تأثير الكحول (Alcool)\n- عامل رئيسي في حوادث السير عبر العالم\n- السائق تحت تأثير الكحول ← 17 مرة أكثر عرضة لحادثة مميتة\n- يؤثر على الدماغ ← سوء تقييم المخاطر\n- طريقتان للقياس\n  - في الدم ← غرام لكل لتر من الدم (g/l)\n  - في الهواء المنبعث من الفم ← ملغ لكل لتر من الهواء (mg/l)\n- <img src=\"../../inputs/03_le_conducteur/02_alcool_medicaments/images/1682678999145.png\"> **ممنوع السياقة إذا كانت النسبة ≥ 0.20 غ/ل في الدم أو ≥ 0.1 ملغ/ل في الهواء**\n\n## 💊 2. المواد المخدرة (Stupéfiants)\n- كل مادة تؤثر على النشاط العقلي والسلوك\n- منومات، أدوية خارج ضوابطها، القنب الهندي، الهيروين، الكوكايين، حبوب الهلوسة...\n- 4 مستويات للاستهلاك\n  - 1. بسيط ← بدون مضاعفات\n  - 2. محفوف بالخطر ← مثلا مع السياقة\n  - 3. مفرط ← أضرار جسدية أو نفسية أو اجتماعية (مثلا توقيف الرخصة)\n  - 4. الإدمان ← لا يمكن الاستغناء عنها\n- <img src=\"../../inputs/03_le_conducteur/02_alcool_medicaments/images/1682678999145.png\"> **المخدرات: إدراك أضعف، زمن رد فعل أطول، مجال بصري أضيق، سوء تقدير السرعة والمسافات**\n\n## 🔺 3. الأدوية (Médicaments)\n- بعضها يسبب النعاس أو ضعف الرؤية\n- مثلث صغير على العلبة يحدد الخطر\n  - 🟡 المستوى 1 ← السياقة غير ممنوعة: اقرأ التعليمات\n  - 🟠 المستوى 2 ← لا تسق دون استشارة الطبيب أو الصيدلي\n  - 🔴 المستوى 3 ← ممنوع السياقة مطلقا\n- <img src=\"../../inputs/03_le_conducteur/02_alcool_medicaments/images/1689948460228.png\" class=\"big\"> المستويات الثلاثة على علب الأدوية\n- اقرأ دائما الآثار الجانبية في النشرة\n\n## 📢 4. المخالفات (Infractions)\n- <img src=\"../../inputs/03_le_conducteur/02_alcool_medicaments/images/1683121978323.png\" class=\"big\"> المخالفات المتعلقة بالكحول والأدوية والمخدرات\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- 0.2 في الدم = 0.1 في الهواء (الهواء = نصف الدم)\n- عمليا: كأس واحد قد يكفي لتجاوز 0.2 ← القاعدة: لا كحول قبل السياقة\n- القهوة أو الماء البارد لا يُخفضان نسبة الكحول، الوقت فقط\n- المثلث الأحمر (3) = لا سياقة\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- 0.20 غ/ل بالضبط ← ممنوع (يساوي أو يفوق)\n- الدواء المسموح به طبيا قد يكون خطيرا على السياقة\n- الكحول + الأدوية ← الآثار تتضاعف\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

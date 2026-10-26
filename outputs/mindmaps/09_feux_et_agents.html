@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Feux et Agents</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/09_feux_et_agents" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 👮 الإشارات الضوئية وإشارات أعوان المرور (Feux et Agents)\n\n## 🧩 1. أنواع التشوير الطرقي (Types de signalisation)\n- التشوير العمودي\n- التشوير الأفقي\n- الإشارات الضوئية\n- إشارات أعوان المرور\n\n## 💡 2. الأضواء الوامضة (Feux clignotants)\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1695739541054.gif\"> **الضوء الأحمر الوامض: «قف» ← تقاطع مع سكة حديدية أو جسر متحرك**\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1695739563566.gif\"> **الضوء الأصفر الوامض: «انتبه، خفف السرعة» ← مكان بالغ الخطورة**\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1695739583058.gif\"> **الضوء الأصفر الوامض: «انتبه، خفف السرعة»**\n\n## 🚦 3. الأضواء المنظمة للسير عند التقاطعات (Feux tricolores)\n- الترتيب: أخضر ثم أصفر ثم أحمر (من الأسفل إلى الأعلى)\n- الدورة: أخضر ← أصفر ← أحمر، بدون وموض\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1685351683413.png\"> **🟢 الأخضر: المرور مسموح بعد التأكد من خلو الطريق**\n  - لا تدخل الملتقى إذا كان الازدحام سيوقفك داخله\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1685351660429.png\"> **🟡 الأصفر: يعلن عن قرب الأحمر ← يجب الوقوف**\n  - استثناء: إذا كان التوقف المفاجئ خطيرا (قريب جدا من الضوء)\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1685351739635.png\"> **🔴 الأحمر: المرور ممنوع**\n  - الوقوف عند خط الوقوف أو قبل ممر الراجلين أو بمحاذاة عمود الأضواء\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1685094556359.png\"> **الإشارات الضوئية لها الأولوية على قواعد السير والتشوير الطرقي (إلا إشارات الأعوان)**\n\n## 👮‍♂️ 4. إشارات أعوان المرور (Gestes des agents)\n- مهام العون: تسهيل السيولة، مراقبة السائقين والمركبات، تنظيم الإغاثة\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1681913533014.jpeg\"> **اليد مرفوعة عموديا ← «انتباه، قف» لكل مستعملي الطريق**\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1681913533031.jpeg\"> **اليد أو اليدان ممدودتان أفقيا ← «قف» للقادمين من الاتجاهات المتقاطعة**\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1681913533049.png\"> **إنزال اليد أو اليدين ← «قف» للسائقين أمام العون أو وراءه**\n  - لا تفرض التوقف على من توغل في الملتقى\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1682072118400.png\"> **تأرجح ضوء أحمر بالعرض ← «قف» للسائقين الموجه إليهم الضوء**\n- الامتثال لإشارات العون يكون فورا\n\n## 🏆 5. ترتيب الأولوية بين أنواع التشوير (Hiérarchie)\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1681913533108.jpeg\"> **1. إشارات أعوان المرور**\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1685352358467.png\"> **2. الإشارات الضوئية**\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1681913533142.jpeg\"> **3. التشوير الطرقي (العلامات)**\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1681913533159.jpeg\"> **4. قواعد السير**\n\n## 📢 6. المخالفات (Infractions)\n- <img src=\"../../inputs/01_la_route/09_feux_et_agents/المحور الفرعي_files/1687425061645.png\" class=\"big\"> المخالفات المتعلقة بالتشوير الضوئي وإشارات أعوان المرور\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- احفظ الترتيب: عون ← ضوء ← علامة ← قاعدة (Agent > Feu > Panneau > Règle)\n- ضوء أخضر + عون يقول قف ← تقف (العون أقوى)\n- ضوء معطل أو أصفر وامض ← تطبق العلامات ثم قواعد الأسبقية\n- الأصفر الثابت ليس «أسرع» ← هو أمر بالوقوف إلا إذا كان الوقوف خطيرا\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- الأحمر الوامض ≠ الأصفر الوامض: الأحمر = قف (قطار/جسر)، الأصفر = انتبه\n- اليد مرفوعة عموديا ← تعني قف للجميع، حتى من يتقدم من الخلف\n- العون يواجهك أو يعطيك ظهره (ذراعان ممدودتان) ← قف\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Signalisation Horizontale</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/10_signalisation_horizontale" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 〰️ التشوير الأفقي (Signalisation Horizontale)\n\n## 📌 1. التعريف (Définition)\n- مجموع العلامات على الأرض: تحدد المسالك ودورها وقواعد السير فيها\n- تعزز قواعد الأسبقية وتبين أماكن العبور (ممرات الراجلين...)\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1695804783654.png\" class=\"big\"> أنواع التشوير الأفقي\n\n## ↕️ 2. الخطوط الطولية (Lignes longitudinales)\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1691675178899.png\"> **خط متصل**: يمنع التجاوز ونصف الدورة ← ممنوع تخطيه\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1691675221504.png\"> **خط متقطع متباعد**: الانتقال بين المسالك والتجاوز مسموح\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1685004594508.png\"> **خط متقطع متقارب بدون أسهم**: يعلن عن اقتراب خط متصل\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1692179830431.png\"> **خط متقطع بأسهم الانحياز**: اقتراب خط متصل ← عد إلى اليمين ولا تتجاوز\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1691664067287.png\"> **خط مزدوج**: احترم الخط الأقرب إليك\n  - المسلك 1 (جهة الخط المتصل) ← ممنوع تخطيه\n  - المسلك 2 (جهة الخط المتقطع) ← يمكن تخطيه\n\n## ↔️ 3. الخطوط العرضية (Lignes transversales)\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1695374389852.png\"> **خط متصل عرضي «الوقوف»**: الوقوف إجباري (عرضه 0.50 م)\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1695374373654.png\"> **خط متقطع عرضي «ليس لكم حق الأسبقية»**: أعط الأسبقية (عرضه 0.50 م)\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1684920390673.png\"> **خط متقطع عرضي «خط مفعول أضواء السير»**: مكان الوقوف عند الضوء (عرضه 0.15 م)\n\n## ➡️ 4. العلامات التكميلية (Marques complémentaires)\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1692179842429.png\"> **أسهم الرجوع**: يجب الرجوع إلى المسلك الذي يشير إليه السهم\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1692179856687.png\"> **أسهم توجيهية وانتقائية**: اتبع الاتجاه أو اختر أحد الاتجاهات المشار إليها\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1683889371691.png\"> **ممرات الراجلين**: أعط الأسبقية للراجلين ← الوقوف والتوقف عليها ممنوع\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1683889183253.png\"> **مربعات الشطرنج الحمراء والبيضاء**: بداية مسلك الإغاثة (عطب الفرامل) ← ممنوع الوقوف\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1683889325285.png\"> **كلمة «PAYANT»**: التوقف مؤدى عنه\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1683889692061.png\"> **كلمة «TAXI»**: مكان مخصص لسيارات الأجرة\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1695639007635.png\"> **مثلثات بيضاء على شكل سهم**: تهيئة تتطلب تخفيض السرعة\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1684920543919.png\"> **رمز الكرسي المتحرك**: توقف خاص بالأشخاص ذوي الاحتياجات الخاصة\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1691747055102.png\"> **خط أصفر متعرج**: محطة الحافلات ← الوقوف والتوقف ممنوع على غير الحافلات\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1691742089518.png\"> **كلمة «LIVRAISON»**: مكان شحن وتفريغ البضائع (أصفر)\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1682409280046.png\"> **علامات محل نداء الإغاثة**: المسافة والاتجاه نحو هاتف الطوارئ\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1682409280015.png\"> **علامات منفذ الإغاثة**: الاتجاه والمسافة نحو أقرب منفذ\n\n## 🎨 5. ألوان العلامات (Couleurs)\n- ⚪ الأبيض ← اللون العادي لكل العلامات\n- 🟡 الأصفر ← منع الوقوف والتوقف، محطات الحافلات، التسليم، الأوراش (مؤقت)\n- 🔵 الأزرق ← التوقف المحدد زمنيا والمراقب بقرص\n- 🔴⚪ الأحمر والأبيض ← بداية منافذ الإغاثة\n\n## 📏 6. أبعاد الخطوط المتقطعة (Dimensions)\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1683889902885.png\"> **طريق بمسلكين: الوسط 3 م خط / 10 م فراغ**\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1683889865671.png\"> **طريق بثلاثة مسالك: الحاشية 20 م / 6 م، الوسط 3 م / 10 م**\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1687511041561.png\"> **الطريق السريع: الحاشية 20 م / 6 م، الوسط 3 م / 10 م**\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1683889781096.png\"> **الطريق السيار: الحاشية متصلة، الوسط 3 م / 10 م**\n\n## 👮 7. المخالفات (Infractions)\n- <img src=\"../../inputs/01_la_route/10_signalisation_horizontale/المحور الفرعي_files/1695806143986.jpeg\" class=\"big\"> المخالفات المتعلقة بالتشوير\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- كلما تقاربت الخطوط المتقطعة ← اقترب الخطر أو الخط المتصل\n- الأصفر على الأرض يغلب الأبيض ← في الأوراش اتبع الخطوط الصفراء\n- خط عرضي متصل = علامة «قف» على الأرض، متقطع = «أفسح المجال»\n- حفظ الأرقام: 3 م خط / 10 م فراغ في الوسط على كل الطرق\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- الخط المتصل يمنع حتى تجاوز دراجة إذا اضطررت لتخطيه\n- الخط المزدوج: انظر إلى الخط الذي في جهتك أنت\n- لا توقف على ممر الراجلين حتى لثوان\n- أسهم الانحياز ← ممنوع البدء في التجاوز، عد إلى مسلكك\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

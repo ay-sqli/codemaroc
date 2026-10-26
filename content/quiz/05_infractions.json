@@ -1,0 +1,3342 @@
+[
+  {
+    "id": "01_permis_a_points-01",
+    "t": "01_permis_a_points",
+    "q": "Pendant la période probatoire, le titulaire d'un permis B dispose d'un capital de :",
+    "qa": "خلال الفترة الاختبارية، يتوفر صاحب رخصة السياقة من صنف B على رصيد قدره :",
+    "o": [
+      "12 points",
+      "15 points",
+      "20 points",
+      "30 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le permis probatoire (catégories A1, A et B) démarre avec 20 points. Les 30 points ne sont attribués qu'après la période probatoire.",
+    "r": "Permis probatoire : capital de 20 points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-02",
+    "t": "01_permis_a_points",
+    "q": "La période probatoire d'un nouveau permis B dure :",
+    "qa": "مدة الفترة الاختبارية لرخصة سياقة جديدة من صنف B هي :",
+    "o": [
+      "6 mois",
+      "1 an",
+      "18 mois",
+      "2 ans"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La période probatoire dure 2 ans, avec un capital de 20 points ; ensuite le capital passe à 30 points.",
+    "r": "Période probatoire : 2 ans.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-03",
+    "t": "01_permis_a_points",
+    "q": "À la fin de la période probatoire, le capital de points passe à :",
+    "qa": "بعد انتهاء الفترة الاختبارية، يصبح رصيد النقط :",
+    "o": [
+      "20 points (inchangé)",
+      "24 points",
+      "30 points",
+      "40 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Après les 2 ans probatoires, le conducteur obtient 30 points, à condition que son solde ne soit pas descendu sous 7 points.",
+    "r": "Après la période probatoire : 30 points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-04",
+    "t": "01_permis_a_points",
+    "q": "Pour passer à 30 points à la fin de la période probatoire, le solde ne doit pas être inférieur à :",
+    "qa": "للحصول على 30 نقطة بعد الفترة الاختبارية، يجب ألا يقل الرصيد عن :",
+    "o": [
+      "5 points",
+      "6 points",
+      "7 points",
+      "8 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le passage à 30 points suppose un solde d'au moins 7 points. Celui qui a perdu plus des deux tiers de ses points doit d'abord suivre un stage obligatoire.",
+    "r": "30 points si le solde n'est pas inférieur à 7.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-05",
+    "t": "01_permis_a_points",
+    "q": "Quelles catégories de permis sont concernées par la période probatoire (2 ans, 20 points) ?",
+    "qa": "ما هي أصناف رخصة السياقة المعنية بالفترة الاختبارية (سنتان و20 نقطة) ؟",
+    "o": [
+      "A1",
+      "A",
+      "B",
+      "D"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "La fiche cite les catégories A1, A et B. La catégorie D n'en fait pas partie.",
+    "r": "Période probatoire : catégories A1, A et B.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-06",
+    "t": "01_permis_a_points",
+    "q": "Le retrait de points devient effectif :",
+    "qa": "يثبت خصم النقط :",
+    "o": [
+      "par une décision de justice devenue définitive",
+      "à la réception d'une lettre recommandée",
+      "par le paiement de l'amende transactionnelle",
+      "dès que l'agent arrête le véhicule"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Le retrait est établi soit par le paiement de l'amende transactionnelle, soit par un jugement définitif. La lettre recommandée ne fait qu'informer le conducteur.",
+    "r": "Retrait : paiement de l'amende ou jugement définitif.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-07",
+    "t": "01_permis_a_points",
+    "q": "Vrai ou faux : payer l'amende transactionnelle revient à reconnaître l'infraction, et les points sont retirés de plein droit.",
+    "qa": "صحيح أم خطأ : أداء الغرامة التصالحية يعني الاعتراف بالمخالفة، وتُخصم النقط بقوة القانون.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Vrai : payer = reconnaître l'infraction, donc le retrait de points est automatique. Payer n'évite pas la perte de points.",
+    "r": "Payer l'amende = reconnaître = perdre les points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-08",
+    "t": "01_permis_a_points",
+    "q": "Un conducteur titulaire des catégories B et C commet une infraction avec sa voiture. Le retrait de points s'applique :",
+    "qa": "سائق يتوفر على الصنفين B و C ارتكب مخالفة بسيارته. يُطبق خصم النقط :",
+    "o": [
+      "uniquement sur la catégorie C",
+      "sur aucune catégorie : seule l'amende est due",
+      "uniquement sur la catégorie B",
+      "sur toutes les catégories du permis en même temps"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le retrait de points touche toutes les catégories du permis à la fois, quelle que soit la catégorie utilisée.",
+    "r": "Le retrait touche toutes les catégories à la fois.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-09",
+    "t": "01_permis_a_points",
+    "q": "Plusieurs contraventions sont commises en même temps. Le retrait total est plafonné à :",
+    "qa": "عند ارتكاب عدة مخالفات في آن واحد، يكون الحد الأقصى للنقط المخصومة :",
+    "o": [
+      "8 points",
+      "10 points",
+      "14 points",
+      "16 points"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Plusieurs contraventions simultanées : 8 points au maximum. 10 concerne plusieurs délits, 14 des contraventions accompagnées d'un délit.",
+    "r": "Plusieurs contraventions : 8 points au maximum.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-10",
+    "t": "01_permis_a_points",
+    "q": "Des contraventions accompagnées d'un seul délit, commises en même temps, entraînent un retrait maximal de :",
+    "qa": "مخالفات مع جنحة واحدة في آن واحد، الحد الأقصى للنقط المخصومة هو :",
+    "o": [
+      "8 points",
+      "10 points",
+      "14 points",
+      "16 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le plafond est de 14 points quand des contraventions s'accompagnent d'un délit. 16 est réservé aux délits incluant un homicide ou des blessures aggravés.",
+    "r": "Contraventions + 1 délit : 14 points au maximum.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-11",
+    "t": "01_permis_a_points",
+    "q": "Plusieurs délits commis en même temps (sans homicide ni blessures aggravés) entraînent un retrait maximal de :",
+    "qa": "عدة جنح في آن واحد (بدون قتل أو جروح مع ظروف التشديد)، الحد الأقصى للنقط المخصومة :",
+    "o": [
+      "6 points",
+      "8 points",
+      "10 points",
+      "14 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Plusieurs délits : 10 points au maximum. Attention, c'est moins que « contraventions + un délit » (14).",
+    "r": "Plusieurs délits : 10 points au maximum.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-12",
+    "t": "01_permis_a_points",
+    "q": "Des délits commis en même temps, dont un homicide ou des blessures involontaires avec circonstances aggravantes, entraînent un retrait maximal de :",
+    "qa": "جنح في آن واحد من بينها قتل أو جروح غير عمدية مع ظروف التشديد، الحد الأقصى للنقط المخصومة :",
+    "o": [
+      "10 points",
+      "12 points",
+      "14 points",
+      "16 points"
+    ],
+    "a": [
+      3
+    ],
+    "e": "C'est le plafond le plus élevé : 16 points. Ordre à retenir : 8 (contraventions) – 10 (délits) – 14 (avec un délit) – 16 (homicide/blessures).",
+    "r": "Avec homicide ou blessures aggravés : 16 points max.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-13",
+    "t": "01_permis_a_points",
+    "q": "Un homicide involontaire avec circonstances aggravantes entraîne un retrait de :",
+    "qa": "القتل غير العمدي مع ظروف التشديد يؤدي إلى خصم :",
+    "o": [
+      "6 points",
+      "10 points",
+      "14 points",
+      "16 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "C'est le délit qui coûte le plus de points : 14. Sans circonstance aggravante, l'homicide involontaire coûte 6 points.",
+    "r": "Homicide involontaire aggravé : 14 points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-14",
+    "t": "01_permis_a_points",
+    "q": "Des blessures entraînant une infirmité permanente, avec circonstances aggravantes, coûtent :",
+    "qa": "الجروح المؤدية إلى عاهة دائمة مع ظروف التشديد تكلف :",
+    "o": [
+      "4 points",
+      "6 points",
+      "10 points",
+      "14 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Infirmité permanente avec circonstances aggravantes = 10 points (4 points sans circonstance aggravante).",
+    "r": "Infirmité permanente aggravée : 10 points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-15",
+    "t": "01_permis_a_points",
+    "q": "Des blessures involontaires avec circonstances aggravantes (sans infirmité permanente) coûtent :",
+    "qa": "الجروح غير العمدية مع ظروف التشديد (بدون عاهة دائمة) تكلف :",
+    "o": [
+      "3 points",
+      "4 points",
+      "6 points",
+      "10 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Blessures involontaires aggravées = 6 points ; sans circonstance aggravante = 3 points.",
+    "r": "Blessures involontaires aggravées : 6 points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-16",
+    "t": "01_permis_a_points",
+    "q": "Conduire sans certificat de contrôle technique (شهادة المراقبة التقنية) entraîne un retrait de :",
+    "qa": "السياقة بدون شهادة المراقبة التقنية تؤدي إلى خصم :",
+    "o": [
+      "1 point",
+      "2 points",
+      "3 points",
+      "4 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Défaut de contrôle technique = 3 points, comme la circulation de nuit sans éclairage hors agglomération.",
+    "r": "Sans contrôle technique : 3 points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-17",
+    "t": "01_permis_a_points",
+    "q": "Transporter un enfant de moins de 10 ans sur le siège avant coûte :",
+    "qa": "إركاب طفل يقل عمره عن 10 سنوات في المقعد الأمامي يكلف :",
+    "o": [
+      "1 point",
+      "2 points",
+      "3 points",
+      "aucun point"
+    ],
+    "a": [
+      0
+    ],
+    "e": "C'est une infraction à 1 point, comme le non-port de la ceinture et le téléphone tenu en main.",
+    "r": "Enfant de moins de 10 ans à l'avant : 1 point.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-18",
+    "t": "01_permis_a_points",
+    "q": "Dans quels cas le conducteur est-il informé par lettre recommandée (رسالة مضمونة) ?",
+    "qa": "في أي حالات يُشعر السائق برسالة مضمونة ؟",
+    "o": [
+      "lors du premier retrait de points",
+      "à chaque contrôle routier, même sans infraction",
+      "lorsqu'il a perdu la moitié de son capital ou plus",
+      "lorsqu'il perd plus des deux tiers de ses points en période probatoire"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Trois cas : premier retrait, perte de la moitié du capital ou plus, perte de plus des 2/3 des points en période probatoire (avec stage obligatoire).",
+    "r": "Lettre : 1er retrait, moitié perdue, plus des 2/3 en probatoire.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-19",
+    "t": "01_permis_a_points",
+    "q": "Un conducteur en période probatoire a perdu plus des deux tiers de ses points. Il doit :",
+    "qa": "سائق في الفترة الاختبارية فقد أكثر من ثلثي نقطه. يجب عليه :",
+    "o": [
+      "repasser immédiatement l'examen du permis",
+      "cesser de conduire pendant 6 mois",
+      "suivre un stage obligatoire pour obtenir les 30 points après la période probatoire",
+      "payer une amende de 1re classe"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Perdre plus des 2/3 des points en période probatoire impose un stage de sensibilisation pour accéder aux 30 points. Le permis reste valable tant qu'il reste des points.",
+    "r": "Plus des 2/3 perdus en probatoire : stage obligatoire.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-20",
+    "t": "01_permis_a_points",
+    "q": "Un stage volontaire de sensibilisation à la sécurité routière permet de récupérer :",
+    "qa": "دورة التربية على السلامة الطرقية الاختيارية تمكن من استرجاع :",
+    "o": [
+      "4 points",
+      "6 points",
+      "12 points",
+      "la totalité du capital"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le stage volontaire rapporte 4 points ; il est limité à une fois en période probatoire, puis une fois tous les 3 ans.",
+    "r": "Stage volontaire : +4 points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-21",
+    "t": "01_permis_a_points",
+    "q": "Pendant la période probatoire, le stage volontaire de récupération de points peut être suivi :",
+    "qa": "خلال الفترة الاختبارية، يمكن متابعة الدورة الاختيارية لاسترجاع النقط :",
+    "o": [
+      "une seule fois",
+      "une fois par an",
+      "une fois tous les 3 ans",
+      "sans limite"
+    ],
+    "a": [
+      0
+    ],
+    "e": "En période probatoire : une seule fois. Après la période probatoire : une fois tous les 3 ans.",
+    "r": "Stage volontaire en probatoire : une seule fois.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-22",
+    "t": "01_permis_a_points",
+    "q": "Après la période probatoire, le stage volontaire de récupération de points peut être suivi :",
+    "qa": "بعد الفترة الاختبارية، يمكن متابعة الدورة الاختيارية لاسترجاع النقط :",
+    "o": [
+      "une fois par an",
+      "une fois tous les 2 ans",
+      "une fois tous les 3 ans",
+      "une seule fois dans la vie"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Hors période probatoire, le stage volontaire (+4 points) est possible une fois tous les 3 ans.",
+    "r": "Hors probatoire : un stage volontaire tous les 3 ans.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-23",
+    "t": "01_permis_a_points",
+    "q": "Un conducteur passe 1 an sans commettre d'infraction. Il récupère automatiquement :",
+    "qa": "سائق قضى سنة كاملة بدون مخالفة. يسترجع تلقائيا :",
+    "o": [
+      "1 point",
+      "2 points",
+      "3 points",
+      "4 points"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Récupération automatique : 1 an sans infraction = +4 points ; 3 ans sans infraction = capital complet.",
+    "r": "1 an sans infraction : +4 points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-24",
+    "t": "01_permis_a_points",
+    "q": "Après 2 ans sans infraction, un conducteur dont le solde est inférieur à 8 points voit son solde porté à :",
+    "qa": "بعد سنتين بدون مخالفة، سائق رصيده أقل من 8 نقط يُرفع رصيده إلى :",
+    "o": [
+      "8 points",
+      "10 points",
+      "12 points",
+      "20 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Règle des 2 ans : un solde inférieur à 8 points est relevé à 12 points.",
+    "r": "2 ans sans infraction et solde < 8 : remonte à 12.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-25",
+    "t": "01_permis_a_points",
+    "q": "Combien d'années sans infraction faut-il pour retrouver la totalité du capital de 30 points ?",
+    "qa": "كم سنة بدون مخالفة يلزم لاسترجاع الرصيد الكامل 30 نقطة ؟",
+    "o": [
+      "1 an",
+      "2 ans",
+      "3 ans",
+      "5 ans"
+    ],
+    "a": [
+      2
+    ],
+    "e": "1 an = +4 points ; 2 ans = 12 points si le solde était inférieur à 8 ; 3 ans = 30 points.",
+    "r": "3 ans sans infraction : retour à 30 points.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-26",
+    "t": "01_permis_a_points",
+    "q": "Le paiement immédiat d'une amende fait tomber le solde de points à zéro. L'agent :",
+    "qa": "أداء فوري لغرامة أدى إلى نفاد رصيد النقط. العون :",
+    "o": [
+      "laisse le permis au conducteur jusqu'à la lettre recommandée",
+      "retient le permis et remet un récépissé provisoire",
+      "suspend le permis pour 1 à 3 mois",
+      "met immédiatement le véhicule en fourrière"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Quand le paiement immédiat amène le solde à zéro, l'agent garde le permis et remet un récépissé provisoire ; le permis est transmis à l'administration.",
+    "r": "Solde à zéro sur place : permis retenu + récépissé.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-27",
+    "t": "01_permis_a_points",
+    "q": "Le récépissé provisoire remis après la perte de tous les points permet de conduire pendant :",
+    "qa": "الوصل المؤقت المسلم بعد فقدان كل النقط يسمح بالسياقة لمدة :",
+    "o": [
+      "48 heures",
+      "72 heures",
+      "120 heures (5 jours)",
+      "1 mois"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le récépissé n'est valable que 120 heures, soit 5 jours. 48 heures, c'est le délai d'envoi du permis à l'administration.",
+    "r": "Récépissé provisoire : 120 heures (5 jours).",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-28",
+    "t": "01_permis_a_points",
+    "q": "Le permis retenu par l'agent (solde à zéro) est envoyé à l'administration dans un délai de :",
+    "qa": "الرخصة التي احتفظ بها العون (رصيد منعدم) تُرسل إلى الإدارة خلال :",
+    "o": [
+      "12 heures",
+      "24 heures",
+      "48 heures",
+      "120 heures"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le permis retenu est transmis à l'administration dans les 48 heures ; le conducteur, lui, roule avec un récépissé de 120 heures.",
+    "r": "Permis retenu envoyé à l'administration sous 48 h.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-29",
+    "t": "01_permis_a_points",
+    "q": "Le conducteur qui a perdu tous ses points reçoit une lettre recommandée. Il doit remettre son permis dans un délai de :",
+    "qa": "السائق الذي فقد كل نقطه يتوصل برسالة مضمونة. يجب عليه تسليم رخصته خلال :",
+    "o": [
+      "48 heures",
+      "15 jours",
+      "1 mois",
+      "6 mois"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Après la lettre recommandée, le permis doit être remis dans le mois. Ne pas le remettre est un délit (1000 à 4000 DH).",
+    "r": "Solde nul notifié : remettre le permis sous 1 mois.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-30",
+    "t": "01_permis_a_points",
+    "q": "Après l'annulation du permis pour perte de tous les points, le conducteur peut repasser l'examen après au moins :",
+    "qa": "بعد إلغاء الرخصة لفقدان كل النقط، يمكن للسائق اجتياز امتحان جديد بعد مرور :",
+    "o": [
+      "6 mois",
+      "1 an",
+      "18 mois",
+      "2 ans"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Il faut attendre au moins 6 mois (et non 1 an) et suivre un stage de sensibilisation.",
+    "r": "Annulation pour 0 point : 6 mois minimum + stage.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-31",
+    "t": "01_permis_a_points",
+    "q": "Un conducteur perd de nouveau tous ses points dans les 5 ans qui suivent une première annulation. Il doit attendre au moins :",
+    "qa": "سائق فقد من جديد كل نقطه خلال 5 سنوات بعد إلغاء أول. يجب أن ينتظر على الأقل :",
+    "o": [
+      "6 mois",
+      "1 an",
+      "2 ans",
+      "5 ans"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Nouvelle perte totale dans les 5 ans : le délai d'attente passe à 2 ans au moins (au lieu de 6 mois).",
+    "r": "Nouvelle perte totale en 5 ans : 2 ans d'attente.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-32",
+    "t": "01_permis_a_points",
+    "q": "Dans le cas général, le nouveau permis obtenu après une annulation pour perte de points comporte :",
+    "qa": "في الحالة العامة، الرخصة الجديدة المحصل عليها بعد الإلغاء لفقدان النقط تتضمن :",
+    "o": [
+      "12 points",
+      "20 points sans période probatoire",
+      "30 points sans période probatoire",
+      "20 points et une nouvelle période probatoire de 2 ans"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le nouveau permis repart à 20 points avec une nouvelle période probatoire de 2 ans (sauf exception C ou D depuis 4 ans).",
+    "r": "Nouveau permis après annulation : 20 points + 2 ans.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-33",
+    "t": "01_permis_a_points",
+    "q": "Après annulation, un conducteur titulaire de la catégorie C ou D depuis 4 ans obtient son nouveau permis avec :",
+    "qa": "بعد الإلغاء، سائق يتوفر على الصنف C أو D منذ 4 سنوات يحصل على رخصته الجديدة بـ :",
+    "o": [
+      "12 points",
+      "30 points et une période probatoire de 2 ans",
+      "30 points sans période probatoire",
+      "20 points et une période probatoire de 2 ans"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Exception : un titulaire de C ou D depuis 4 ans récupère directement 30 points, sans période probatoire.",
+    "r": "Exception C ou D depuis 4 ans : 30 points directement.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-34",
+    "t": "01_permis_a_points",
+    "q": "Quelles affirmations sur les stages de sensibilisation à la sécurité routière sont justes ?",
+    "qa": "ما هي العبارات الصحيحة بخصوص دورات التربية على السلامة الطرقية ؟",
+    "o": [
+      "ils ont lieu dans des établissements agréés",
+      "ils durent 3 jours",
+      "ils sont payants",
+      "ils sont gratuits et durent une demi-journée"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Le stage est payant (بمقابل مالي), se déroule dans un établissement agréé et dure 3 jours.",
+    "r": "Stage : 3 jours, payant, établissement agréé.",
+    "s": "points"
+  },
+  {
+    "id": "01_permis_a_points-35",
+    "t": "01_permis_a_points",
+    "q": "Dans quels cas le stage de sensibilisation est-il obligatoire ?",
+    "qa": "في أي حالات تكون دورة التربية على السلامة الطرقية إجبارية ؟",
+    "o": [
+      "perte de plus des 2/3 des points pendant la période probatoire",
+      "premier retrait d'un point pour défaut de ceinture",
+      "annulation du permis après la perte de tous les points",
+      "homicide involontaire"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Le stage est obligatoire dans 5 cas : plus des 2/3 perdus en probatoire, annulation pour 0 point, restitution après accident aggravé, infirmité permanente aggravée, homicide involontaire. Un simple retrait d'1 point ne l'impose pas.",
+    "r": "Stage obligatoire : 2/3 perdus, 0 point, accidents graves.",
+    "s": "points"
+  },
+  {
+    "id": "02_amendes-01",
+    "t": "02_amendes",
+    "q": "Les amendes transactionnelles forfaitaires sont réparties en :",
+    "qa": "تنقسم الغرامات التصالحية الجزافية إلى :",
+    "o": [
+      "2 classes",
+      "3 classes",
+      "4 classes",
+      "5 classes"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Il existe 4 classes (درجات) selon la gravité : de la 1re (la plus grave) à la 4e (piétons).",
+    "r": "Amendes transactionnelles : 4 classes.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-02",
+    "t": "02_amendes",
+    "q": "Le montant d'une contravention de 1re classe est compris entre :",
+    "qa": "مبلغ غرامة مخالفة من الدرجة الأولى يتراوح بين :",
+    "o": [
+      "300 et 600 DH",
+      "500 et 1000 DH",
+      "700 et 1400 DH",
+      "1000 et 2000 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "1re classe : 700 à 1400 DH ; 2e : 500 à 1000 DH ; 3e : 300 à 600 DH ; 4e : 20 à 50 DH.",
+    "r": "1re classe : 700 à 1400 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-03",
+    "t": "02_amendes",
+    "q": "Le montant d'une contravention de 2e classe est compris entre :",
+    "qa": "مبلغ غرامة مخالفة من الدرجة الثانية يتراوح بين :",
+    "o": [
+      "300 et 600 DH",
+      "400 et 800 DH",
+      "500 et 1000 DH",
+      "700 et 1400 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La 2e classe va de 500 à 1000 DH. 700 à 1400 DH, c'est la 1re classe.",
+    "r": "2e classe : 500 à 1000 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-04",
+    "t": "02_amendes",
+    "q": "Le montant d'une contravention de 3e classe est compris entre :",
+    "qa": "مبلغ غرامة مخالفة من الدرجة الثالثة يتراوح بين :",
+    "o": [
+      "20 et 50 DH",
+      "150 et 300 DH",
+      "300 et 600 DH",
+      "500 et 1000 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La 3e classe va de 300 à 600 DH. Astuce : les minimums sont 700 / 500 / 300 / 20.",
+    "r": "3e classe : 300 à 600 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-05",
+    "t": "02_amendes",
+    "q": "Les contraventions de 4e classe concernent principalement :",
+    "qa": "مخالفات الدرجة الرابعة تخص أساسا :",
+    "o": [
+      "les conducteurs professionnels",
+      "les piétons (الراجلون)",
+      "les conducteurs de motocycles",
+      "les poids lourds"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La 4e classe sanctionne surtout les piétons : eux aussi peuvent recevoir une amende.",
+    "r": "4e classe : les piétons.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-06",
+    "t": "02_amendes",
+    "q": "Le montant d'une contravention de 4e classe est compris entre :",
+    "qa": "مبلغ غرامة مخالفة من الدرجة الرابعة يتراوح بين :",
+    "o": [
+      "20 et 50 DH",
+      "50 et 100 DH",
+      "100 et 200 DH",
+      "300 et 600 DH"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La 4e classe (piétons) va de 20 à 50 DH.",
+    "r": "4e classe : 20 à 50 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-07",
+    "t": "02_amendes",
+    "q": "Une contravention de 1re classe payée immédiatement (le jour même) coûte :",
+    "qa": "مخالفة من الدرجة الأولى أُديت غرامتها فورا (نفس اليوم) تكلف :",
+    "o": [
+      "400 DH",
+      "500 DH",
+      "600 DH",
+      "700 DH"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Barème de la 1re classe : 400 DH immédiatement, 500 DH dans les 15 jours, 700 DH dans les 30 jours.",
+    "r": "1re classe : 400 / 500 / 700 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-08",
+    "t": "02_amendes",
+    "q": "Une contravention de 2e classe payée immédiatement coûte :",
+    "qa": "مخالفة من الدرجة الثانية أُديت غرامتها فورا تكلف :",
+    "o": [
+      "150 DH",
+      "250 DH",
+      "300 DH",
+      "350 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Barème de la 2e classe : 300 DH immédiatement, 350 DH dans les 15 jours, 500 DH dans les 30 jours.",
+    "r": "2e classe : 300 / 350 / 500 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-09",
+    "t": "02_amendes",
+    "q": "Une contravention de 3e classe payée immédiatement coûte :",
+    "qa": "مخالفة من الدرجة الثالثة أُديت غرامتها فورا تكلف :",
+    "o": [
+      "150 DH",
+      "200 DH",
+      "250 DH",
+      "300 DH"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Barème de la 3e classe : 150 DH immédiatement, 200 DH dans les 15 jours, 300 DH dans les 30 jours.",
+    "r": "3e classe : 150 / 200 / 300 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-10",
+    "t": "02_amendes",
+    "q": "Une contravention de 1re classe payée dans le délai de 15 jours coûte :",
+    "qa": "مخالفة من الدرجة الأولى أُديت غرامتها داخل أجل 15 يوما تكلف :",
+    "o": [
+      "300 DH",
+      "400 DH",
+      "450 DH",
+      "500 DH"
+    ],
+    "a": [
+      3
+    ],
+    "e": "1re classe : 400 DH sur-le-champ, 500 DH dans les 15 jours, 700 DH dans les 30 jours.",
+    "r": "1re classe dans les 15 jours : 500 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-11",
+    "t": "02_amendes",
+    "q": "Une contravention de 2e classe payée dans le délai de 15 jours coûte :",
+    "qa": "مخالفة من الدرجة الثانية أُديت غرامتها داخل أجل 15 يوما تكلف :",
+    "o": [
+      "250 DH",
+      "300 DH",
+      "350 DH",
+      "500 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "2e classe : 300 DH immédiatement, 350 DH dans les 15 jours, 500 DH dans les 30 jours.",
+    "r": "2e classe dans les 15 jours : 350 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-12",
+    "t": "02_amendes",
+    "q": "Une contravention de 3e classe payée dans le délai de 15 jours coûte :",
+    "qa": "مخالفة من الدرجة الثالثة أُديت غرامتها داخل أجل 15 يوما تكلف :",
+    "o": [
+      "100 DH",
+      "150 DH",
+      "200 DH",
+      "300 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "3e classe : 150 DH immédiatement, 200 DH dans les 15 jours, 300 DH dans les 30 jours.",
+    "r": "3e classe dans les 15 jours : 200 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-13",
+    "t": "02_amendes",
+    "q": "Une contravention de 1re classe payée après 15 jours mais dans le délai de 30 jours coûte :",
+    "qa": "مخالفة من الدرجة الأولى أُديت غرامتها بعد 15 يوما وداخل أجل 30 يوما تكلف :",
+    "o": [
+      "400 DH",
+      "500 DH",
+      "700 DH",
+      "1400 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Dans le délai de 30 jours, la 1re classe coûte 700 DH : c'est le minimum de sa fourchette (700 à 1400 DH).",
+    "r": "1re classe dans les 30 jours : 700 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-14",
+    "t": "02_amendes",
+    "q": "Une contravention de 2e classe payée après 15 jours mais dans le délai de 30 jours coûte :",
+    "qa": "مخالفة من الدرجة الثانية أُديت غرامتها بعد 15 يوما وداخل أجل 30 يوما تكلف :",
+    "o": [
+      "300 DH",
+      "350 DH",
+      "400 DH",
+      "500 DH"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Dans le délai de 30 jours, la 2e classe coûte 500 DH (minimum de la fourchette 500 à 1000 DH).",
+    "r": "2e classe dans les 30 jours : 500 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-15",
+    "t": "02_amendes",
+    "q": "Une contravention de 3e classe payée après 15 jours mais dans le délai de 30 jours coûte :",
+    "qa": "مخالفة من الدرجة الثالثة أُديت غرامتها بعد 15 يوما وداخل أجل 30 يوما تكلف :",
+    "o": [
+      "150 DH",
+      "200 DH",
+      "300 DH",
+      "600 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Dans le délai de 30 jours, la 3e classe coûte 300 DH (minimum de la fourchette 300 à 600 DH).",
+    "r": "3e classe dans les 30 jours : 300 DH.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-16",
+    "t": "02_amendes",
+    "q": "Une contravention de 4e classe (piéton) se paie :",
+    "qa": "مخالفة من الدرجة الرابعة (راجل) تُؤدى بمبلغ :",
+    "o": [
+      "20 DH",
+      "25 DH, quel que soit le délai",
+      "25 DH sur place, 50 DH dans les 30 jours",
+      "50 DH"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Pour la 4e classe, le montant est de 25 DH, que le paiement soit immédiat, dans les 15 jours ou dans les 30 jours.",
+    "r": "4e classe : 25 DH quel que soit le délai.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-17",
+    "t": "02_amendes",
+    "q": "Le délai maximal pour payer une amende transactionnelle est de :",
+    "qa": "الأجل الأقصى لأداء الغرامة التصالحية هو :",
+    "o": [
+      "30 jours à compter du lendemain de l'infraction",
+      "60 jours à compter du lendemain de l'infraction",
+      "15 jours à compter du jour de l'infraction",
+      "30 jours à compter du jour de l'infraction"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le délai maximal est de 30 jours, comptés à partir du jour qui suit l'infraction.",
+    "r": "Délai max : 30 jours à partir du lendemain.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-18",
+    "t": "02_amendes",
+    "q": "Que produit le paiement d'une amende transactionnelle ?",
+    "qa": "ماذا يترتب عن أداء الغرامة التصالحية ؟",
+    "o": [
+      "le retrait des points prévus pour l'infraction",
+      "un règlement à l'amiable de l'infraction",
+      "l'extinction de l'action publique (سقوط الدعوى العمومية)",
+      "l'annulation de tout retrait de points"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Payer règle l'affaire à l'amiable et éteint l'action publique, mais vaut reconnaissance de l'infraction : les points sont retirés.",
+    "r": "Payer éteint l'action publique mais retire les points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-19",
+    "t": "02_amendes",
+    "q": "Dans quels cas la transaction (amende transactionnelle) n'est-elle PAS possible ?",
+    "qa": "في أي حالات لا يمكن التصالح ؟",
+    "o": [
+      "récidive d'une contravention de 1re classe",
+      "plusieurs contraventions simultanées dont une ne peut pas faire l'objet d'une transaction",
+      "contravention précédée, accompagnée ou suivie d'un délit",
+      "première contravention de 3e classe"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Pas de transaction en cas de récidive d'une 1re classe, de délit lié à la contravention, ou d'infractions simultanées dont une est non transigible.",
+    "r": "Pas de transaction : récidive 1re classe, délit lié.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-20",
+    "t": "02_amendes",
+    "q": "Vrai ou faux : une contravention commise en même temps qu'un délit peut quand même être réglée par amende transactionnelle.",
+    "qa": "صحيح أم خطأ : مخالفة صاحبتها جنحة يمكن رغم ذلك تسويتها بغرامة تصالحية.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : une contravention précédée, accompagnée ou suivie d'un délit ne peut pas faire l'objet d'une transaction ; le délit relève du tribunal.",
+    "r": "Contravention + délit : pas de transaction.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-21",
+    "t": "02_amendes",
+    "q": "Un excès de vitesse de 40 km/h au-dessus de la limite est une contravention de :",
+    "qa": "تجاوز السرعة المحددة بـ 40 كلم/س هو مخالفة من :",
+    "o": [
+      "2e classe",
+      "4e classe",
+      "3e classe",
+      "1re classe"
+    ],
+    "a": [
+      3
+    ],
+    "e": "De 30 à moins de 50 km/h au-dessus de la limite : 1re classe. À partir de 50 km/h, c'est un délit.",
+    "r": "Excès de +30 à moins de +50 km/h : 1re classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-22",
+    "t": "02_amendes",
+    "q": "Un excès de vitesse de 15 km/h au-dessus de la limite est une contravention de :",
+    "qa": "تجاوز السرعة المحددة بـ 15 كلم/س هو مخالفة من :",
+    "o": [
+      "1re classe",
+      "3e classe",
+      "4e classe",
+      "2e classe"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Moins de 20 km/h au-dessus de la limite : 3e classe (sans retrait de points).",
+    "r": "Excès de moins de 20 km/h : 3e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-23",
+    "t": "02_amendes",
+    "q": "Franchir (chevaucher) une ligne continue est une contravention de :",
+    "qa": "قطع خط متصل مخالفة من :",
+    "o": [
+      "4e classe",
+      "1re classe",
+      "2e classe",
+      "3e classe"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le franchissement d'une ligne continue est jugé grave : 1re classe (700 à 1400 DH).",
+    "r": "Ligne continue : 1re classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-24",
+    "t": "02_amendes",
+    "q": "Un passager ne porte pas sa ceinture de sécurité. C'est une contravention de :",
+    "qa": "راكب لا يستعمل حزام السلامة. هذه مخالفة من :",
+    "o": [
+      "3e classe",
+      "4e classe",
+      "2e classe",
+      "1re classe"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Ceinture non portée par le passager : 2e classe. Ne pas confondre avec un véhicule non équipé de ceintures : 1re classe.",
+    "r": "Ceinture du passager : 2e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-25",
+    "t": "02_amendes",
+    "q": "Un véhicule n'est pas équipé de ceintures de sécurité. C'est une contravention de :",
+    "qa": "مركبة غير مزودة بحزام السلامة. هذه مخالفة من :",
+    "o": [
+      "2e classe",
+      "4e classe",
+      "3e classe",
+      "1re classe"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Véhicule sans ceinture de sécurité : 1re classe. Le passager qui ne la boucle pas : 2e classe.",
+    "r": "Véhicule sans ceinture : 1re classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-26",
+    "t": "02_amendes",
+    "q": "Quelles infractions sont des contraventions de 2e classe ?",
+    "qa": "ما هي المخالفات من الدرجة الثانية ؟",
+    "o": [
+      "non-respect de la priorité due aux piétons",
+      "non-respect des restrictions mentionnées sur le permis",
+      "arrêt ou stationnement sur le trottoir ou un passage pour piétons",
+      "franchissement d'une ligne continue"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Priorité des piétons, trottoir/passage piétons et restrictions du permis : 2e classe. La ligne continue est en 1re classe.",
+    "r": "2e classe : piétons, trottoir, restrictions du permis.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-27",
+    "t": "02_amendes",
+    "q": "Quelles infractions sont des contraventions de 3e classe ?",
+    "qa": "ما هي المخالفات من الدرجة الثالثة ؟",
+    "o": [
+      "non-respect des règles de croisement (التقابل)",
+      "non-conformité des plaques d'immatriculation",
+      "non-renouvellement du support papier du permis",
+      "non-respect d'une interdiction de tourner imposée par un panneau"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Support papier du permis, règles de croisement et interdiction de tourner : 3e classe. Les plaques non conformes sont en 1re classe.",
+    "r": "3e classe : support papier, croisement, défense de tourner.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-28",
+    "t": "02_amendes",
+    "q": "Ne pas respecter les signaux (gestes) d'un agent de la circulation est une contravention de :",
+    "qa": "عدم احترام إشارات أعوان المرور مخالفة من :",
+    "o": [
+      "4e classe",
+      "3e classe",
+      "1re classe",
+      "2e classe"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le non-respect des signaux d'un agent est classé en 3e classe. À distinguer du refus d'obtempérer aux ordres des agents, qui est un délit (2 points).",
+    "r": "Signaux d'un agent non respectés : 3e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-29",
+    "t": "02_amendes",
+    "q": "S'arrêter illégalement de nuit, sans feux, hors agglomération est une contravention de :",
+    "qa": "التوقف غير القانوني ليلا بدون أضواء خارج المدينة مخالفة من :",
+    "o": [
+      "4e classe",
+      "2e classe",
+      "1re classe",
+      "3e classe"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'arrêt illégal de nuit sans feux hors agglomération est très dangereux : 1re classe.",
+    "r": "Arrêt de nuit sans feux hors agglo : 1re classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-30",
+    "t": "02_amendes",
+    "q": "Ne pas céder le passage à un véhicule prioritaire qui utilise ses avertisseurs spéciaux est une contravention de :",
+    "qa": "عدم احترام أسبقية مركبات الأولوية التي تستعمل منبهاتها الخاصة مخالفة من :",
+    "o": [
+      "1re classe",
+      "3e classe",
+      "4e classe",
+      "2e classe"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le non-respect de la priorité des véhicules prioritaires (avec leurs avertisseurs) est une contravention de 2e classe.",
+    "r": "Véhicule prioritaire en intervention ignoré : 2e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-31",
+    "t": "02_amendes",
+    "q": "Pour une contravention de 1re classe, payer immédiatement plutôt que dans le délai de 30 jours fait économiser :",
+    "qa": "بالنسبة لمخالفة من الدرجة الأولى، الأداء الفوري بدل الأداء داخل 30 يوما يوفر :",
+    "o": [
+      "100 DH",
+      "200 DH",
+      "300 DH",
+      "400 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "700 DH (dans les 30 jours) − 400 DH (immédiatement) = 300 DH d'économie.",
+    "r": "1re classe : 400 DH immédiat contre 700 DH à 30 jours.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-32",
+    "t": "02_amendes",
+    "q": "Un conducteur paie 350 DH pour une contravention de 2e classe. Il a payé :",
+    "qa": "سائق أدى 350 درهما عن مخالفة من الدرجة الثانية. لقد أدى :",
+    "o": [
+      "immédiatement",
+      "dans le délai de 15 jours",
+      "dans le délai de 30 jours",
+      "après le délai de 30 jours"
+    ],
+    "a": [
+      1
+    ],
+    "e": "2e classe : 300 DH immédiatement, 350 DH dans les 15 jours, 500 DH dans les 30 jours.",
+    "r": "350 DH = 2e classe payée dans les 15 jours.",
+    "s": "sanctions"
+  },
+  {
+    "id": "02_amendes-33",
+    "t": "02_amendes",
+    "q": "Une amende de 150 DH payée immédiatement correspond à une contravention de :",
+    "qa": "غرامة 150 درهما أُديت فورا تخص مخالفة من :",
+    "o": [
+      "1re classe",
+      "2e classe",
+      "3e classe",
+      "4e classe"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Paiement immédiat : 400 DH (1re), 300 DH (2e), 150 DH (3e), 25 DH (4e).",
+    "r": "150 DH immédiat = 3e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "03_immobilisation_fourriere-01",
+    "t": "03_immobilisation_fourriere",
+    "q": "L'immobilisation d'un véhicule (توقيف المركبة) consiste à :",
+    "qa": "توقيف المركبة يعني :",
+    "o": [
+      "le transporter vers un lieu de garde désigné",
+      "l'arrêter sur le lieu de l'infraction ou à proximité",
+      "le confisquer définitivement",
+      "retirer ses plaques d'immatriculation"
+    ],
+    "a": [
+      1
+    ],
+    "e": "L'immobilisation est un arrêt du véhicule sur place ou tout près. Le transfert vers un lieu de garde, c'est la fourrière.",
+    "r": "Immobilisation = arrêt du véhicule sur place."
+  },
+  {
+    "id": "03_immobilisation_fourriere-02",
+    "t": "03_immobilisation_fourriere",
+    "q": "La mise en fourrière (الإيداع بالمحجز) consiste à :",
+    "qa": "الإيداع بالمحجز يعني :",
+    "o": [
+      "arrêter le véhicule sur place jusqu'à la fin de l'infraction",
+      "retenir les clés pendant 7 jours",
+      "retenir uniquement le permis du conducteur",
+      "transférer le véhicule vers un lieu désigné et l'y garder aux frais du propriétaire"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La fourrière, c'est le transfert du véhicule vers un lieu fixé par l'agent ou l'autorité, et sa garde aux frais du propriétaire.",
+    "r": "Fourrière = transfert + garde aux frais du propriétaire."
+  },
+  {
+    "id": "03_immobilisation_fourriere-03",
+    "t": "03_immobilisation_fourriere",
+    "q": "L'immobilisation est ordonnée, à titre de mesure conservatoire, par :",
+    "qa": "يُتخذ قرار توقيف المركبة كأمر احتياطي من طرف :",
+    "o": [
+      "l'agent qui rédige le procès-verbal",
+      "le tribunal uniquement",
+      "le propriétaire du véhicule",
+      "la compagnie d'assurance"
+    ],
+    "a": [
+      0
+    ],
+    "e": "C'est l'agent verbalisateur (العون محرر المحضر) qui ordonne l'immobilisation, sur le lieu de l'infraction ou à proximité.",
+    "r": "Immobilisation : décidée par l'agent verbalisateur."
+  },
+  {
+    "id": "03_immobilisation_fourriere-04",
+    "t": "03_immobilisation_fourriere",
+    "q": "Pendant l'immobilisation, le véhicule reste sous la responsabilité :",
+    "qa": "خلال توقيف المركبة، تبقى المركبة تحت مسؤولية :",
+    "o": [
+      "de l'État",
+      "du conducteur ou du propriétaire",
+      "de l'agent verbalisateur",
+      "du gardien de fourrière"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le véhicule immobilisé reste sous la responsabilité du conducteur ou du propriétaire, pas de l'agent.",
+    "r": "Véhicule immobilisé : responsabilité conducteur/propriétaire."
+  },
+  {
+    "id": "03_immobilisation_fourriere-05",
+    "t": "03_immobilisation_fourriere",
+    "q": "Le conducteur d'un véhicule immobilisé est absent, refuse ou est incapable de s'en occuper. L'agent :",
+    "qa": "سائق المركبة الموقوفة غائب أو رافض أو عاجز عن التكفل بها. العون :",
+    "o": [
+      "laisse le véhicule sur place sans aucune mesure",
+      "fait payer les frais par l'État",
+      "annule l'immobilisation",
+      "place le véhicule en stationnement régulier aux frais du propriétaire"
+    ],
+    "a": [
+      3
+    ],
+    "e": "En cas d'absence, de refus ou d'incapacité du conducteur, l'agent met le véhicule en stationnement régulier, aux frais du propriétaire.",
+    "r": "Conducteur absent : stationnement régulier aux frais du propriétaire."
+  },
+  {
+    "id": "03_immobilisation_fourriere-06",
+    "t": "03_immobilisation_fourriere",
+    "q": "Lors d'un contrôle, vous ne pouvez pas présenter votre permis de conduire. Le véhicule est :",
+    "qa": "أثناء المراقبة، لم تستطع الإدلاء برخصة السياقة. المركبة :",
+    "o": [
+      "immobilisé jusqu'à la cessation de l'infraction",
+      "confisqué",
+      "mis en fourrière",
+      "laissé libre, seule une amende est due"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Défaut de présentation du permis : immobilisation jusqu'à ce que l'infraction cesse, par exemple quand le document est apporté. Pas de fourrière.",
+    "r": "Document non présenté : immobilisation jusqu'à présentation."
+  },
+  {
+    "id": "03_immobilisation_fourriere-07",
+    "t": "03_immobilisation_fourriere",
+    "q": "Quels cas entraînent l'immobilisation du véhicule (et non la fourrière) ?",
+    "qa": "ما هي الحالات الموجبة لتوقيف المركبة (وليس الإيداع بالمحجز) ؟",
+    "o": [
+      "défaut d'assurance",
+      "plaques d'immatriculation falsifiées",
+      "défaut de présentation de la carte grise (الرمادية)",
+      "conduite sous l'effet de stupéfiants"
+    ],
+    "a": [
+      2,
+      3
+    ],
+    "e": "Carte grise non présentée et conduite sous alcool ou stupéfiants : immobilisation. Défaut d'assurance et plaques falsifiées : fourrière.",
+    "r": "Immobilisation : document non présenté, alcool, drogue."
+  },
+  {
+    "id": "03_immobilisation_fourriere-08",
+    "t": "03_immobilisation_fourriere",
+    "q": "Vous ne pouvez pas présenter le document de contrôle technique (وثيقة المراقبة التقنية), alors que le véhicule a bien passé le contrôle. Quelle mesure ?",
+    "qa": "لم تستطع الإدلاء بوثيقة المراقبة التقنية رغم أن المركبة خضعت للفحص. ما هو الإجراء ؟",
+    "o": [
+      "retrait du permis pendant 30 jours",
+      "immobilisation jusqu'à la cessation de l'infraction",
+      "récépissé de 7 jours pour passer le contrôle",
+      "mise en fourrière"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Simple défaut de présentation du document : immobilisation jusqu'à sa présentation. Le récépissé de 7 jours concerne le véhicule qui n'a pas passé le contrôle technique.",
+    "r": "Document de contrôle technique absent : immobilisation."
+  },
+  {
+    "id": "03_immobilisation_fourriere-09",
+    "t": "03_immobilisation_fourriere",
+    "q": "Le véhicule n'a pas été soumis au contrôle technique. Le conducteur reçoit un récépissé qui lui laisse, pour effectuer le contrôle :",
+    "qa": "المركبة لم تخضع للمراقبة التقنية. يتسلم السائق وصلا يمنحه للقيام بالفحص مدة :",
+    "o": [
+      "48 heures",
+      "3 jours",
+      "7 jours",
+      "15 jours"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Défaut de contrôle technique : récépissé de 7 jours pour faire le contrôle ; la carte grise n'est rendue qu'après un contrôle favorable.",
+    "r": "Pas de contrôle technique : récépissé de 7 jours."
+  },
+  {
+    "id": "03_immobilisation_fourriere-10",
+    "t": "03_immobilisation_fourriere",
+    "q": "En cas de défaut de contrôle technique, la carte grise retirée est restituée :",
+    "qa": "في حالة عدم الخضوع للمراقبة التقنية، تُرجع الرمادية :",
+    "o": [
+      "dès le paiement de l'amende",
+      "après un stage de sensibilisation",
+      "automatiquement au bout de 7 jours",
+      "après un contrôle technique favorable"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La carte grise n'est rendue qu'après un contrôle technique positif, pas simplement après 7 jours ou le paiement de l'amende.",
+    "r": "Carte grise rendue après un contrôle technique positif."
+  },
+  {
+    "id": "03_immobilisation_fourriere-11",
+    "t": "03_immobilisation_fourriere",
+    "q": "Un conducteur est contrôlé sous l'effet de l'alcool. Son véhicule est immobilisé jusqu'à :",
+    "qa": "سائق ضُبط تحت تأثير الكحول. تُوقف مركبته إلى حين :",
+    "o": [
+      "le paiement d'une amende de 3e classe",
+      "la fin de l'état d'infraction ou l'arrivée d'un autre conducteur qualifié",
+      "l'expiration d'un délai fixe de 7 jours",
+      "la décision du tribunal uniquement"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Alcool ou stupéfiants : immobilisation jusqu'à la fin de l'infraction ou jusqu'à l'arrivée d'un autre conducteur qualifié.",
+    "r": "Alcool : immobilisé jusqu'à la fin ou un autre conducteur."
+  },
+  {
+    "id": "03_immobilisation_fourriere-12",
+    "t": "03_immobilisation_fourriere",
+    "q": "Pour reprendre le volant d'un véhicule immobilisé pour alcool, l'autre conducteur doit être titulaire :",
+    "qa": "لقيادة مركبة موقوفة بسبب الكحول، يجب أن يكون السائق الآخر حاصلا على :",
+    "o": [
+      "de n'importe quel permis",
+      "d'un permis avec 30 points",
+      "d'un permis professionnel uniquement",
+      "d'un permis de la même catégorie"
+    ],
+    "a": [
+      3
+    ],
+    "e": "L'autre conducteur doit être qualifié : titulaire d'un permis de la même catégorie que le véhicule.",
+    "r": "Autre conducteur : permis de la même catégorie."
+  },
+  {
+    "id": "03_immobilisation_fourriere-13",
+    "t": "03_immobilisation_fourriere",
+    "q": "Un véhicule circule sans assurance ou avec une attestation d'assurance expirée. Quelle mesure ?",
+    "qa": "مركبة تسير بدون تأمين أو بشهادة تأمين منتهية الصلاحية. ما هو الإجراء ؟",
+    "o": [
+      "récépissé de 7 jours pour s'assurer",
+      "aucune mesure sur le véhicule",
+      "immobilisation jusqu'à présentation d'une attestation",
+      "mise en fourrière"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Défaut d'assurance ou attestation expirée : fourrière directement. Ce n'est pas un simple oubli de document.",
+    "r": "Pas d'assurance : fourrière directe."
+  },
+  {
+    "id": "03_immobilisation_fourriere-14",
+    "t": "03_immobilisation_fourriere",
+    "q": "Quels cas entraînent la mise en fourrière ?",
+    "qa": "ما هي حالات الإيداع بالمحجز ؟",
+    "o": [
+      "défaut de présentation du permis",
+      "plaques d'immatriculation falsifiées",
+      "usage frauduleux de la carte grise ou du titre de propriété",
+      "défaut de présentation du document de contrôle technique"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Plaques falsifiées et usage frauduleux des documents : fourrière. Un document simplement non présenté entraîne une immobilisation.",
+    "r": "Fourrière : fraude, défaut d'assurance, fuite, feux spéciaux."
+  },
+  {
+    "id": "03_immobilisation_fourriere-15",
+    "t": "03_immobilisation_fourriere",
+    "q": "Après un accident, un conducteur prend la fuite (التملص من المسؤولية). Quelle mesure concerne son véhicule ?",
+    "qa": "بعد حادثة سير، فرّ السائق (التملص من المسؤولية). ما هو الإجراء المتعلق بمركبته ؟",
+    "o": [
+      "aucune mesure",
+      "mise en fourrière",
+      "restitution immédiate au propriétaire",
+      "immobilisation sur place pendant 7 jours"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le délit de fuite fait partie des cas de mise en fourrière.",
+    "r": "Délit de fuite : fourrière."
+  },
+  {
+    "id": "03_immobilisation_fourriere-16",
+    "t": "03_immobilisation_fourriere",
+    "q": "Utiliser les feux et avertisseurs réservés aux véhicules de police, de gendarmerie ou d'intervention d'urgence entraîne :",
+    "qa": "استعمال الأضواء والمنبهات الخاصة بمركبات الشرطة والدرك والتدخل الاستعجالي يؤدي إلى :",
+    "o": [
+      "aucune mesure sur le véhicule",
+      "la confiscation du permis",
+      "une simple immobilisation de quelques heures",
+      "la mise en fourrière du véhicule"
+    ],
+    "a": [
+      3
+    ],
+    "e": "L'usage des feux et avertisseurs spéciaux réservés à la police, à la gendarmerie ou aux secours est un cas de mise en fourrière.",
+    "r": "Feux/avertisseurs spéciaux usurpés : fourrière."
+  },
+  {
+    "id": "03_immobilisation_fourriere-17",
+    "t": "03_immobilisation_fourriere",
+    "q": "Les frais de fourrière sont à la charge :",
+    "qa": "مصاريف المحجز على عاتق :",
+    "o": [
+      "de l'État",
+      "du propriétaire du véhicule",
+      "de l'assureur",
+      "de la commune"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le transfert et la garde en fourrière se font aux frais du propriétaire.",
+    "r": "Frais de fourrière : à la charge du propriétaire."
+  },
+  {
+    "id": "03_immobilisation_fourriere-18",
+    "t": "03_immobilisation_fourriere",
+    "q": "Vrai ou faux : l'immobilisation et la mise en fourrière sont une seule et même mesure.",
+    "qa": "صحيح أم خطأ : توقيف المركبة والإيداع بالمحجز إجراء واحد.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : l'immobilisation arrête le véhicule sur place ; la fourrière le transfère et le garde dans un lieu désigné.",
+    "r": "Immobilisation (sur place) ≠ fourrière (transfert)."
+  },
+  {
+    "id": "03_immobilisation_fourriere-19",
+    "t": "03_immobilisation_fourriere",
+    "q": "Le lieu de mise en fourrière est déterminé par :",
+    "qa": "مكان الإيداع بالمحجز يحدده :",
+    "o": [
+      "le propriétaire du véhicule",
+      "l'agent ou l'autorité compétente",
+      "le conducteur",
+      "l'assureur"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le véhicule est conduit dans un lieu désigné par l'agent ou l'autorité, et gardé aux frais du propriétaire.",
+    "r": "Lieu de fourrière : fixé par l'agent ou l'autorité."
+  },
+  {
+    "id": "03_immobilisation_fourriere-20",
+    "t": "03_immobilisation_fourriere",
+    "q": "Quelles associations sont correctes ?",
+    "qa": "ما هي الاقترانات الصحيحة ؟",
+    "o": [
+      "oubli du permis → immobilisation",
+      "conduite sous alcool → fourrière",
+      "plaques falsifiées → immobilisation",
+      "défaut d'assurance → fourrière"
+    ],
+    "a": [
+      0,
+      3
+    ],
+    "e": "Oubli d'un document ou alcool → immobilisation ; défaut d'assurance ou plaques falsifiées → fourrière.",
+    "r": "Oubli/alcool = immobilisation ; fraude/assurance = fourrière."
+  },
+  {
+    "id": "04_delits-01",
+    "t": "04_delits",
+    "q": "Obtenir un duplicata du permis ou se présenter à l'examen pendant une suspension ou un retrait est puni d'une amende de :",
+    "qa": "الحصول على نظير لرخصة السياقة أو التقدم للامتحان خلال مدة التوقيف أو السحب يعاقب عليه بغرامة من :",
+    "o": [
+      "1000 à 4000 DH",
+      "1200 à 2000 DH",
+      "2000 à 8000 DH",
+      "5000 à 10000 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "C'est 2000 à 8000 DH, et le double en cas de récidive.",
+    "r": "Duplicata/examen pendant suspension : 2000 à 8000 DH."
+  },
+  {
+    "id": "04_delits-02",
+    "t": "04_delits",
+    "q": "En cas de récidive d'un délit routier, les peines :",
+    "qa": "في حالة العود في جنحة، فإن العقوبات :",
+    "o": [
+      "sont réduites de moitié",
+      "restent les mêmes",
+      "sont doublées",
+      "sont remplacées par une amende transactionnelle"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La récidive (العود) double les peines prévues pour le délit.",
+    "r": "Récidive de délit : peines doublées."
+  },
+  {
+    "id": "04_delits-03",
+    "t": "04_delits",
+    "q": "Fraude à l'examen du permis : quelles sanctions sont prévues ?",
+    "qa": "الغش في امتحان رخصة السياقة : ما هي العقوبات المقررة ؟",
+    "o": [
+      "amende de 2000 à 5000 DH",
+      "interdiction de passer l'examen pendant 1 à 3 ans",
+      "retrait de 14 points",
+      "emprisonnement de 6 mois à 3 ans"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "La fraude à l'examen est punie de 6 mois à 3 ans de prison, 2000 à 5000 DH et 1 à 3 ans d'interdiction. Les 14 points concernent l'homicide aggravé.",
+    "r": "Fraude à l'examen : prison, 2000-5000 DH, 1-3 ans."
+  },
+  {
+    "id": "04_delits-04",
+    "t": "04_delits",
+    "q": "Quel délit est puni d'une amende de 1000 à 4000 DH ?",
+    "qa": "أي جنحة يعاقب عليها بغرامة من 1000 إلى 4000 درهم ؟",
+    "o": [
+      "ne pas remettre un permis dont le solde de points est épuisé",
+      "circuler sans plaques d'immatriculation",
+      "obtenir un duplicata pendant une suspension",
+      "refuser d'obtempérer aux ordres des agents"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Ne pas restituer un permis à 0 point : 1000 à 4000 DH. Duplicata pendant suspension : 2000 à 8000 DH ; refus d'obtempérer : 1200 à 2000 DH ; sans plaques : 2000 à 12000 DH.",
+    "r": "Permis à 0 point non remis : 1000 à 4000 DH."
+  },
+  {
+    "id": "04_delits-05",
+    "t": "04_delits",
+    "q": "Conduire avec un permis falsifié : quelles sanctions sont prévues ?",
+    "qa": "السياقة برخصة مزورة : ما هي العقوبات المقررة ؟",
+    "o": [
+      "simple suspension de 1 à 3 mois",
+      "interdiction de repasser l'examen pendant 1 à 2 ans",
+      "emprisonnement de 6 mois à 3 ans",
+      "amende de 1200 à 5000 DH"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Permis falsifié : 6 mois à 3 ans de prison, 1200 à 5000 DH et interdiction de 1 à 2 ans. Ce n'est pas une simple suspension.",
+    "r": "Permis falsifié : prison, 1200-5000 DH, 1-2 ans."
+  },
+  {
+    "id": "04_delits-06",
+    "t": "04_delits",
+    "q": "Faire circuler un véhicule dépourvu de carte grise (شهادة التسجيل) est puni de :",
+    "qa": "سياقة مركبة بدون شهادة التسجيل يعاقب عليها بـ :",
+    "o": [
+      "5000 à 10000 DH et retrait de 6 points",
+      "une simple immobilisation jusqu'à présentation",
+      "2000 à 6000 DH et mise en fourrière",
+      "une contravention de 2e classe"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Véhicule sans carte grise : délit puni de 2000 à 6000 DH + fourrière (confiscation possible). Le simple oubli de la carte grise, lui, entraîne une immobilisation.",
+    "r": "Véhicule sans carte grise : 2000-6000 DH + fourrière."
+  },
+  {
+    "id": "04_delits-07",
+    "t": "04_delits",
+    "q": "Quel délit est puni de 2000 à 12000 DH et de la mise en fourrière ?",
+    "qa": "أي جنحة يعاقب عليها بغرامة من 2000 إلى 12000 درهم والإيداع بالمحجز ؟",
+    "o": [
+      "véhicule sans plaques d'immatriculation",
+      "véhicule sans carte grise",
+      "véhicule équipé d'un détecteur de radar",
+      "abandon d'un chargement sur la chaussée"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Sans plaques : 2000 à 12000 DH + fourrière. Sans carte grise : 2000 à 6000 DH. Anti-radar et abandon sur la chaussée : 5000 à 10000 DH.",
+    "r": "Sans plaques : 2000 à 12000 DH + fourrière."
+  },
+  {
+    "id": "04_delits-08",
+    "t": "04_delits",
+    "q": "Plaques falsifiées ou fraude sur les documents du véhicule : quelles sanctions ?",
+    "qa": "صفائح تسجيل مزورة أو تدليس في وثائق المركبة : ما هي العقوبات ؟",
+    "o": [
+      "amende de 2000 à 5000 DH",
+      "mise en fourrière du véhicule",
+      "emprisonnement de 6 mois à 3 ans",
+      "suspension du permis de 1 à 3 mois"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Plaques falsifiées ou fraude documentaire : 6 mois à 3 ans de prison, 2000 à 5000 DH et fourrière.",
+    "r": "Plaques falsifiées : prison + 2000-5000 DH + fourrière."
+  },
+  {
+    "id": "04_delits-09",
+    "t": "04_delits",
+    "q": "Équiper son véhicule d'un détecteur de radar (جهاز مضاد للرادار) :",
+    "qa": "تجهيز المركبة بجهاز مضاد للرادار :",
+    "o": [
+      "contravention de 1re classe",
+      "délit : 5000 à 10000 DH et confiscation de l'appareil",
+      "contravention de 3e classe, l'appareil est rendu",
+      "délit : 1200 à 2000 DH et 2 points"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le détecteur de radar est un délit (pas une contravention) : 5000 à 10000 DH et confiscation de l'appareil.",
+    "r": "Anti-radar : délit, 5000-10000 DH + confiscation."
+  },
+  {
+    "id": "04_delits-10",
+    "t": "04_delits",
+    "q": "Abandonner un véhicule ou son chargement sur la chaussée est puni de :",
+    "qa": "ترك مركبة أو حمولة على القارعة يعاقب عليه بـ :",
+    "o": [
+      "une contravention de 3e classe",
+      "2000 à 6000 DH + confiscation",
+      "5000 à 10000 DH + frais d'enlèvement",
+      "1200 à 2000 DH"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Laisser un véhicule ou une charge sur la chaussée : 5000 à 10000 DH, en plus des frais d'enlèvement.",
+    "r": "Abandon sur la chaussée : 5000-10000 DH + enlèvement."
+  },
+  {
+    "id": "04_delits-11",
+    "t": "04_delits",
+    "q": "Refuser d'obtempérer aux ordres des agents est puni de :",
+    "qa": "رفض الامتثال لأوامر الأعوان يعاقب عليه بـ :",
+    "o": [
+      "une contravention de 3e classe sans points",
+      "5000 à 10000 DH et retrait de 6 points",
+      "4000 à 8000 DH et retrait de 4 points",
+      "1200 à 2000 DH et retrait de 2 points"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Refus d'obtempérer : délit puni de 1200 à 2000 DH et de 2 points.",
+    "r": "Refus d'obtempérer : 1200-2000 DH + 2 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "04_delits-12",
+    "t": "04_delits",
+    "q": "Faire marche arrière ou demi-tour sur l'autoroute coûte :",
+    "qa": "الرجوع إلى الخلف أو نصف دورة في الطريق السيار يكلف :",
+    "o": [
+      "3 points",
+      "4 points",
+      "5 points",
+      "6 points"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Marche arrière ou demi-tour : 3 points ; contresens : 4 points. Dans les deux cas : 4000 à 8000 DH et suspension de 1 à 3 mois.",
+    "r": "Demi-tour ou marche arrière sur autoroute : 3 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "04_delits-13",
+    "t": "04_delits",
+    "q": "Un conducteur dépasse la limite de vitesse de 55 km/h. Quelles sanctions s'appliquent ?",
+    "qa": "سائق تجاوز السرعة المحددة بـ 55 كلم/س. ما هي العقوبات المطبقة ؟",
+    "o": [
+      "retrait de 6 points",
+      "amende de 4000 à 8000 DH",
+      "suspension du permis de 1 à 3 mois",
+      "amende transactionnelle de 1re classe"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "À partir de 50 km/h d'excès, c'est un délit : 4000 à 8000 DH, suspension de 1 à 3 mois et 6 points. Pas d'amende transactionnelle.",
+    "r": "Excès ≥ 50 km/h : 4000-8000 DH, 1-3 mois, 6 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "04_delits-14",
+    "t": "04_delits",
+    "q": "Délit de fuite après un accident : la peine d'emprisonnement prévue est de :",
+    "qa": "الفرار بعد حادثة : عقوبة الحبس المقررة هي :",
+    "o": [
+      "1 à 3 mois",
+      "6 mois à 1 an",
+      "6 mois à 3 ans",
+      "3 mois à 5 ans"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Délit de fuite : 6 mois à 1 an de prison, 5000 à 10000 DH, suspension de 1 à 2 ans et 6 points.",
+    "r": "Délit de fuite : 6 mois à 1 an de prison."
+  },
+  {
+    "id": "04_delits-15",
+    "t": "04_delits",
+    "q": "Délit de fuite après un accident : la suspension du permis est de :",
+    "qa": "الفرار بعد حادثة : مدة توقيف الرخصة هي :",
+    "o": [
+      "1 à 3 mois",
+      "3 mois à 1 an",
+      "1 à 2 ans",
+      "2 à 4 ans"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La fuite entraîne une suspension de 1 à 2 ans (1 à 3 mois, c'est pour les infractions d'autoroute et l'excès de 50 km/h ou plus).",
+    "r": "Délit de fuite : suspension de 1 à 2 ans."
+  },
+  {
+    "id": "04_delits-16",
+    "t": "04_delits",
+    "q": "Délit de fuite après un accident : l'amende est de :",
+    "qa": "الفرار بعد حادثة : الغرامة هي :",
+    "o": [
+      "1200 à 2000 DH",
+      "2000 à 6000 DH",
+      "4000 à 8000 DH",
+      "5000 à 10000 DH"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Délit de fuite : 5000 à 10000 DH, en plus de la prison (6 mois à 1 an).",
+    "r": "Délit de fuite : 5000 à 10000 DH."
+  },
+  {
+    "id": "04_delits-17",
+    "t": "04_delits",
+    "q": "Vrai ou faux : un délit est jugé par le tribunal, alors qu'une contravention peut être réglée par une amende transactionnelle.",
+    "qa": "صحيح أم خطأ : الجنحة يُحكم فيها من طرف المحكمة، أما المخالفة فيمكن تسويتها بغرامة تصالحية.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Vrai : le délit relève du tribunal ; la contravention peut se régler à l'amiable par amende transactionnelle.",
+    "r": "Délit = tribunal ; contravention = amende transactionnelle."
+  },
+  {
+    "id": "04_delits-18",
+    "t": "04_delits",
+    "q": "Un excès de vitesse d'exactement 50 km/h au-dessus de la limite est :",
+    "qa": "تجاوز السرعة المحددة بـ 50 كلم/س بالضبط هو :",
+    "o": [
+      "une contravention de 2e classe",
+      "une contravention de 1re classe",
+      "un délit",
+      "une contravention de 3e classe"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le délit commence à 50 km/h ou plus. De 30 à moins de 50 km/h, c'est une contravention de 1re classe.",
+    "r": "Exactement +50 km/h : c'est déjà un délit.",
+    "s": "sanctions"
+  },
+  {
+    "id": "04_delits-19",
+    "t": "04_delits",
+    "q": "Parmi ces infractions, lesquelles sont des délits ?",
+    "qa": "من بين هذه المخالفات، ما هي الجنح ؟",
+    "o": [
+      "excès de vitesse de 40 km/h",
+      "excès de vitesse de 60 km/h",
+      "franchissement d'une ligne continue",
+      "véhicule équipé d'un détecteur de radar"
+    ],
+    "a": [
+      1,
+      3
+    ],
+    "e": "Excès de 50 km/h ou plus et détecteur de radar : délits. Excès de 40 km/h et ligne continue : contraventions de 1re classe.",
+    "r": "Délits : +50 km/h, anti-radar ; +40 km/h = contravention.",
+    "s": "sanctions"
+  },
+  {
+    "id": "04_delits-20",
+    "t": "04_delits",
+    "q": "Vrai ou faux : un véhicule circulant sans carte grise peut, en plus de l'amende et de la fourrière, être confisqué.",
+    "qa": "صحيح أم خطأ : المركبة التي تسير بدون شهادة التسجيل يمكن، إضافة إلى الغرامة والمحجز، أن تُصادر.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Vrai : sans carte grise, c'est 2000 à 6000 DH + fourrière, et la confiscation est possible.",
+    "r": "Sans carte grise : confiscation possible."
+  },
+  {
+    "id": "04_delits-21",
+    "t": "04_delits",
+    "q": "Parmi ces délits, lesquels prévoient une peine de prison ?",
+    "qa": "من بين هذه الجنح، ما هي التي تتضمن عقوبة الحبس ؟",
+    "o": [
+      "refus d'obtempérer aux ordres des agents",
+      "délit de fuite après un accident",
+      "fraude à l'examen du permis",
+      "détecteur de radar"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Fraude à l'examen (6 mois à 3 ans) et fuite (6 mois à 1 an) prévoient la prison. Refus d'obtempérer et anti-radar : amende (avec points ou confiscation).",
+    "r": "Prison : fraude à l'examen, fuite, faux documents."
+  },
+  {
+    "id": "04_delits-22",
+    "t": "04_delits",
+    "q": "Circuler à contresens sur l'autoroute : quelles sanctions ?",
+    "qa": "السير في الاتجاه المعاكس في الطريق السيار : ما هي العقوبات ؟",
+    "o": [
+      "emprisonnement de 6 mois à 1 an",
+      "amende de 4000 à 8000 DH",
+      "retrait de 4 points",
+      "suspension du permis de 1 à 3 mois"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Contresens sur autoroute : 4000 à 8000 DH, suspension de 1 à 3 mois et 4 points. La prison de 6 mois à 1 an concerne le délit de fuite.",
+    "r": "Contresens autoroute : 4000-8000 DH, 1-3 mois, 4 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "04_delits-23",
+    "t": "04_delits",
+    "q": "Falsifier (contrefaire) un permis de conduire est puni de :",
+    "qa": "تزييف رخصة السياقة يعاقب عليه بـ :",
+    "o": [
+      "6 mois à 3 ans de prison et 2000 à 5000 DH",
+      "une contravention de 1re classe",
+      "un retrait de 4 points seulement",
+      "1000 à 4000 DH seulement"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La falsification du permis est un délit : 6 mois à 3 ans de prison et 2000 à 5000 DH.",
+    "r": "Faux permis : 6 mois à 3 ans + 2000 à 5000 DH."
+  },
+  {
+    "id": "05_homicide_blessures-01",
+    "t": "05_homicide_blessures",
+    "q": "Homicide involontaire : la peine de prison prévue est de :",
+    "qa": "القتل غير العمدي : عقوبة الحبس المقررة هي :",
+    "o": [
+      "1 mois à 2 ans",
+      "3 mois à 5 ans",
+      "6 mois à 1 an",
+      "6 mois à 3 ans"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Homicide involontaire : 3 mois à 5 ans de prison, doublés en cas de circonstances aggravantes.",
+    "r": "Homicide involontaire : 3 mois à 5 ans de prison."
+  },
+  {
+    "id": "05_homicide_blessures-02",
+    "t": "05_homicide_blessures",
+    "q": "Homicide involontaire : l'amende prévue est de :",
+    "qa": "القتل غير العمدي : الغرامة المقررة هي :",
+    "o": [
+      "1200 à 6000 DH",
+      "2400 à 10000 DH",
+      "5000 à 10000 DH",
+      "7500 à 30000 DH"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Homicide involontaire : 7500 à 30000 DH. 1200 à 6000 DH concerne l'ITT de plus de 30 jours, 2400 à 10000 DH l'infirmité permanente.",
+    "r": "Homicide involontaire : 7500 à 30000 DH."
+  },
+  {
+    "id": "05_homicide_blessures-03",
+    "t": "05_homicide_blessures",
+    "q": "Homicide involontaire sans circonstance aggravante : le permis est suspendu pendant :",
+    "qa": "القتل غير العمدي بدون ظروف التشديد : تُوقف الرخصة لمدة :",
+    "o": [
+      "1 à 3 mois",
+      "3 mois à 1 an",
+      "1 à 2 ans",
+      "1 à 3 ans"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Homicide involontaire : suspension de 1 à 3 ans. Avec circonstances aggravantes, le permis est annulé.",
+    "r": "Homicide involontaire : suspension de 1 à 3 ans."
+  },
+  {
+    "id": "05_homicide_blessures-04",
+    "t": "05_homicide_blessures",
+    "q": "Homicide involontaire avec circonstances aggravantes : quelles conséquences ?",
+    "qa": "القتل غير العمدي مع ظروف التشديد : ما هي العواقب ؟",
+    "o": [
+      "annulation du permis",
+      "stage de sensibilisation obligatoire",
+      "peines doublées",
+      "simple suspension de 1 à 3 mois"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Avec circonstances aggravantes : peines doublées, annulation du permis, interdiction de 2 à 4 ans et stage obligatoire.",
+    "r": "Homicide aggravé : peines ×2, annulation, 2-4 ans, stage."
+  },
+  {
+    "id": "05_homicide_blessures-05",
+    "t": "05_homicide_blessures",
+    "q": "Blessures avec incapacité temporaire de plus de 30 jours : l'amende est de :",
+    "qa": "جروح بعجز مؤقت يفوق 30 يوما : الغرامة هي :",
+    "o": [
+      "1200 à 6000 DH",
+      "2400 à 10000 DH",
+      "4000 à 8000 DH",
+      "7500 à 30000 DH"
+    ],
+    "a": [
+      0
+    ],
+    "e": "ITT de plus de 30 jours : 1 mois à 2 ans de prison et/ou 1200 à 6000 DH.",
+    "r": "ITT de plus de 30 jours : 1200 à 6000 DH."
+  },
+  {
+    "id": "05_homicide_blessures-06",
+    "t": "05_homicide_blessures",
+    "q": "Blessures avec ITT de plus de 30 jours, sans circonstance aggravante : quelles mesures touchent le conducteur ?",
+    "qa": "جروح بعجز مؤقت يفوق 30 يوما بدون ظروف التشديد : ما هي الإجراءات التي تخص السائق ؟",
+    "o": [
+      "suspension du permis de 3 mois à 1 an",
+      "interdiction de repasser l'examen pendant 2 à 4 ans",
+      "stage de sensibilisation obligatoire",
+      "annulation du permis"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "ITT > 30 jours : suspension de 3 mois à 1 an et stage obligatoire. L'annulation et l'interdiction de 2 à 4 ans concernent l'homicide aggravé.",
+    "r": "ITT > 30 jours : suspension 3 mois-1 an + stage."
+  },
+  {
+    "id": "05_homicide_blessures-07",
+    "t": "05_homicide_blessures",
+    "q": "Un conducteur roulant 60 km/h au-dessus de la limite blesse un piéton (ITT de 45 jours). Le permis est suspendu pendant :",
+    "qa": "سائق تجاوز السرعة المحددة بـ 60 كلم/س وتسبب في جروح لراجل (عجز مؤقت 45 يوما). تُوقف رخصته لمدة :",
+    "o": [
+      "1 à 3 mois",
+      "3 mois à 1 an",
+      "1 à 2 ans",
+      "2 à 4 ans"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Un excès de 50 km/h ou plus est une circonstance aggravante : pour une ITT de plus de 30 jours, la suspension passe de 3 mois–1 an à 1–2 ans.",
+    "r": "ITT > 30 jours aggravée : suspension de 1 à 2 ans."
+  },
+  {
+    "id": "05_homicide_blessures-08",
+    "t": "05_homicide_blessures",
+    "q": "Blessures entraînant une infirmité permanente : l'amende est de :",
+    "qa": "جروح أدت إلى عاهة مستديمة : الغرامة هي :",
+    "o": [
+      "1200 à 6000 DH",
+      "2400 à 10000 DH",
+      "5000 à 10000 DH",
+      "7500 à 30000 DH"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Infirmité permanente : 1 mois à 2 ans de prison et/ou 2400 à 10000 DH.",
+    "r": "Infirmité permanente : 2400 à 10000 DH."
+  },
+  {
+    "id": "05_homicide_blessures-09",
+    "t": "05_homicide_blessures",
+    "q": "Infirmité permanente sans circonstance aggravante : la peine de prison est de :",
+    "qa": "عاهة مستديمة بدون ظروف التشديد : عقوبة الحبس هي :",
+    "o": [
+      "1 mois à 2 ans",
+      "3 mois à 5 ans",
+      "6 mois à 1 an",
+      "2 à 4 ans"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Pour les blessures (ITT > 30 jours ou infirmité permanente), la prison va de 1 mois à 2 ans ; 3 mois à 5 ans, c'est l'homicide.",
+    "r": "Blessures graves : 1 mois à 2 ans de prison."
+  },
+  {
+    "id": "05_homicide_blessures-10",
+    "t": "05_homicide_blessures",
+    "q": "Un conducteur grille un feu rouge et renverse un cycliste qui garde une infirmité permanente. Conséquence sur le permis :",
+    "qa": "سائق لم يقف عند الضوء الأحمر وصدم دراجا أصيب بعاهة مستديمة. ما هي العاقبة بالنسبة للرخصة ؟",
+    "o": [
+      "suspension de 3 mois à 1 an",
+      "annulation et interdiction de repasser l'examen pendant 1 à 2 ans",
+      "annulation et interdiction de 2 à 4 ans",
+      "simple amende de 1re classe"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le feu rouge est une circonstance aggravante. Infirmité permanente aggravée : annulation + interdiction de 1 à 2 ans (2 à 4 ans, c'est l'homicide aggravé).",
+    "r": "Infirmité permanente aggravée : annulation + 1 à 2 ans."
+  },
+  {
+    "id": "05_homicide_blessures-11",
+    "t": "05_homicide_blessures",
+    "q": "Pour des blessures avec ITT de plus de 30 jours, le juge peut prononcer :",
+    "qa": "في حالة جروح بعجز مؤقت يفوق 30 يوما، يمكن للقاضي أن يحكم بـ :",
+    "o": [
+      "uniquement un avertissement",
+      "obligatoirement la prison et l'amende ensemble",
+      "uniquement une amende transactionnelle",
+      "la prison et/ou l'amende"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La fiche prévoit la prison « et/ou » l'amende : l'une, l'autre ou les deux.",
+    "r": "Blessures involontaires : prison et/ou amende."
+  },
+  {
+    "id": "05_homicide_blessures-12",
+    "t": "05_homicide_blessures",
+    "q": "Quelles situations sont des circonstances aggravantes ?",
+    "qa": "ما هي الحالات التي تعتبر ظروف تشديد ؟",
+    "o": [
+      "conduite en état d'ivresse ou sous l'effet de l'alcool",
+      "excès de vitesse de 50 km/h ou plus",
+      "conduite sous l'effet de stupéfiants",
+      "excès de vitesse de 25 km/h"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Alcool, stupéfiants et excès de 50 km/h ou plus sont des circonstances aggravantes. Un excès de 25 km/h n'en fait pas partie.",
+    "r": "Aggravant : alcool, drogue, excès de 50 km/h ou plus."
+  },
+  {
+    "id": "05_homicide_blessures-13",
+    "t": "05_homicide_blessures",
+    "q": "Lesquelles sont des circonstances aggravantes ?",
+    "qa": "أي منها تعتبر ظروف تشديد ؟",
+    "o": [
+      "oubli de la carte grise à la maison",
+      "conduite malgré un retrait, une suspension ou une annulation du permis",
+      "conduite sans permis ou sans la catégorie requise",
+      "prise de médicaments interdisant la conduite"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Médicaments interdisant la conduite, absence de permis ou de catégorie, conduite malgré retrait/suspension/annulation : circonstances aggravantes.",
+    "r": "Aggravant : médicaments, sans permis, permis suspendu."
+  },
+  {
+    "id": "05_homicide_blessures-14",
+    "t": "05_homicide_blessures",
+    "q": "Lesquelles de ces infractions, commises lors de l'accident, sont des circonstances aggravantes ?",
+    "qa": "أي من هذه المخالفات المرتكبة أثناء الحادثة تعتبر ظروف تشديد ؟",
+    "o": [
+      "stationnement sur le trottoir",
+      "non-arrêt au stop",
+      "dépassement irrégulier",
+      "non-arrêt au feu rouge"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Feu rouge, stop et dépassement irrégulier figurent dans la liste des circonstances aggravantes ; le stationnement sur le trottoir, non.",
+    "r": "Aggravant : feu rouge, stop, dépassement irrégulier."
+  },
+  {
+    "id": "05_homicide_blessures-15",
+    "t": "05_homicide_blessures",
+    "q": "Lesquelles sont aussi des circonstances aggravantes ?",
+    "qa": "أي منها تعتبر أيضا ظروف تشديد ؟",
+    "o": [
+      "non-port de la ceinture de sécurité",
+      "circulation en sens interdit",
+      "véhicule sans freins conformes",
+      "arrêt de nuit sans éclairage hors agglomération"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "La liste cite l'arrêt de nuit sans éclairage hors agglomération, les freins non conformes et le sens interdit. La ceinture n'y figure pas.",
+    "r": "Aggravant : nuit sans feux, freins, sens interdit."
+  },
+  {
+    "id": "05_homicide_blessures-16",
+    "t": "05_homicide_blessures",
+    "q": "Vrai ou faux : ne pas s'arrêter après l'accident ou modifier l'état des lieux est une circonstance aggravante.",
+    "qa": "صحيح أم خطأ : عدم التوقف بعد الحادثة أو تغيير حالة مكانها ظرف من ظروف التشديد.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Vrai : la fuite ou la modification de l'état des lieux de l'accident aggrave la peine.",
+    "r": "Fuite ou modification des lieux : aggravant."
+  },
+  {
+    "id": "05_homicide_blessures-17",
+    "t": "05_homicide_blessures",
+    "q": "En présence d'une circonstance aggravante, la peine prévue est :",
+    "qa": "عند وجود ظرف من ظروف التشديد، فإن العقوبة :",
+    "o": [
+      "inchangée",
+      "doublée",
+      "augmentée d'un mois seulement",
+      "réduite si le conducteur paie immédiatement"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les circonstances aggravantes doublent la peine d'origine (العقوبة × 2).",
+    "r": "Circonstance aggravante : peine × 2."
+  },
+  {
+    "id": "05_homicide_blessures-18",
+    "t": "05_homicide_blessures",
+    "q": "Vrai ou faux : le non-respect de la priorité suffit, à lui seul, à constituer une circonstance aggravante.",
+    "qa": "صحيح أم خطأ : عدم احترام حق الأسبقية وحده يكفي ليكون ظرفا من ظروف التشديد.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Vrai : le non-respect du droit de priorité fait partie de la liste ; il suffit à lui seul.",
+    "r": "Refus de priorité seul = circonstance aggravante."
+  },
+  {
+    "id": "05_homicide_blessures-19",
+    "t": "05_homicide_blessures",
+    "q": "Vrai ou faux : puisque l'homicide est « involontaire », le conducteur n'encourt pas de sanction pénale.",
+    "qa": "صحيح أم خطأ : بما أن القتل « غير عمدي »، فإن السائق لا يتعرض لأي عقوبة.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : « involontaire » ne veut pas dire « sans sanction ». L'homicide involontaire est puni de 3 mois à 5 ans de prison et de 7500 à 30000 DH.",
+    "r": "Involontaire ne veut pas dire sans sanction."
+  },
+  {
+    "id": "05_homicide_blessures-20",
+    "t": "05_homicide_blessures",
+    "q": "Un conducteur ivre cause un accident mortel. Après l'annulation de son permis, l'interdiction de repasser l'examen est de :",
+    "qa": "سائق في حالة سكر تسبب في حادثة مميتة. بعد إلغاء رخصته، مدة المنع من اجتياز الامتحان هي :",
+    "o": [
+      "6 mois",
+      "1 à 2 ans",
+      "1 à 3 ans",
+      "2 à 4 ans"
+    ],
+    "a": [
+      3
+    ],
+    "e": "L'ivresse est une circonstance aggravante : homicide aggravé = annulation + interdiction de 2 à 4 ans.",
+    "r": "Homicide aggravé : interdiction de 2 à 4 ans."
+  },
+  {
+    "id": "05_homicide_blessures-21",
+    "t": "05_homicide_blessures",
+    "q": "Pour les blessures involontaires, la durée d'incapacité temporaire qui sert de seuil est de :",
+    "qa": "بالنسبة للجروح غير العمدية، مدة العجز المؤقت التي تعتبر حدا فاصلا هي :",
+    "o": [
+      "8 jours",
+      "15 jours",
+      "30 jours",
+      "3 mois"
+    ],
+    "a": [
+      2
+    ],
+    "e": "30 jours d'incapacité temporaire marquent la limite entre délit et contravention pour les blessures.",
+    "r": "Seuil des blessures : 30 jours d'incapacité."
+  },
+  {
+    "id": "06_suspension_retrait-01",
+    "t": "06_suspension_retrait",
+    "q": "Un conducteur perd les capacités physiques ou mentales nécessaires à la conduite. L'administration peut :",
+    "qa": "سائق فقد القدرات البدنية أو العقلية اللازمة للسياقة. يمكن للإدارة :",
+    "o": [
+      "lui retirer 6 points",
+      "mettre son véhicule en fourrière",
+      "lui infliger une amende de 1re classe",
+      "retirer ou annuler son permis"
+    ],
+    "a": [
+      3
+    ],
+    "e": "En cas d'inaptitude physique ou mentale, l'administration retire ou annule le permis ; il est rendu après un examen médical favorable.",
+    "r": "Inaptitude : retrait ou annulation par l'administration."
+  },
+  {
+    "id": "06_suspension_retrait-02",
+    "t": "06_suspension_retrait",
+    "q": "Un titulaire des catégories B et C devient médicalement inapte pour la seule catégorie C. Que se passe-t-il ?",
+    "qa": "صاحب الصنفين B و C أصبح غير مؤهل طبيا للصنف C فقط. ماذا يحدث ؟",
+    "o": [
+      "seule la catégorie C est retirée",
+      "tout le permis est annulé",
+      "il perd 6 points sur toutes les catégories",
+      "il garde les deux catégories sans restriction"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Une inaptitude qui concerne une catégorie précise n'entraîne le retrait que de cette catégorie ; les autres sont conservées.",
+    "r": "Inaptitude pour une catégorie : seule celle-ci est retirée."
+  },
+  {
+    "id": "06_suspension_retrait-03",
+    "t": "06_suspension_retrait",
+    "q": "Un permis retiré pour inaptitude physique est restitué :",
+    "qa": "الرخصة المسحوبة بسبب فقدان القدرات البدنية تُرجع :",
+    "o": [
+      "automatiquement après 6 mois",
+      "après un stage de 3 jours",
+      "après paiement d'une amende",
+      "après un examen médical prouvant l'aptitude"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La restitution suppose un examen médical qui établit de nouveau l'aptitude à conduire.",
+    "r": "Restitution après examen médical favorable."
+  },
+  {
+    "id": "06_suspension_retrait-04",
+    "t": "06_suspension_retrait",
+    "q": "Sur une autoroute limitée à 120 km/h, un conducteur est contrôlé à 175 km/h. La suspension de permis encourue est de :",
+    "qa": "في طريق سيار محددة سرعته في 120 كلم/س، ضُبط سائق بسرعة 175 كلم/س. مدة توقيف الرخصة هي :",
+    "o": [
+      "1 à 3 mois",
+      "3 mois à 1 an",
+      "1 à 2 ans",
+      "aucune suspension"
+    ],
+    "a": [
+      0
+    ],
+    "e": "175 − 120 = 55 km/h d'excès, soit 50 km/h ou plus : délit, suspension de 1 à 3 mois (et 6 points).",
+    "r": "Excès de 50 km/h ou plus : suspension de 1 à 3 mois.",
+    "s": "sanctions"
+  },
+  {
+    "id": "06_suspension_retrait-05",
+    "t": "06_suspension_retrait",
+    "q": "Quelles infractions entraînent une suspension du permis de 1 à 3 mois ?",
+    "qa": "ما هي المخالفات التي تؤدي إلى توقيف الرخصة من شهر إلى 3 أشهر ؟",
+    "o": [
+      "marche arrière ou demi-tour sur l'autoroute",
+      "blessures avec infirmité permanente",
+      "excès de vitesse de 50 km/h ou plus",
+      "contresens sur l'autoroute"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Contresens, marche arrière ou demi-tour sur autoroute et excès de 50 km/h ou plus : 1 à 3 mois. L'infirmité permanente : 3 mois à 1 an.",
+    "r": "1 à 3 mois : autoroute (contresens, demi-tour), +50 km/h."
+  },
+  {
+    "id": "06_suspension_retrait-06",
+    "t": "06_suspension_retrait",
+    "q": "Blessures ayant causé une infirmité permanente (sans circonstance aggravante) : durée de suspension du permis :",
+    "qa": "جروح أدت إلى عاهة مستديمة (بدون ظروف التشديد) : مدة توقيف الرخصة :",
+    "o": [
+      "1 à 3 mois",
+      "3 mois à 1 an",
+      "1 à 2 ans",
+      "2 à 4 ans"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Infirmité permanente : suspension de 3 mois à 1 an (avec circonstances aggravantes : annulation + interdiction de 1 à 2 ans).",
+    "r": "Infirmité permanente : suspension de 3 mois à 1 an."
+  },
+  {
+    "id": "06_suspension_retrait-07",
+    "t": "06_suspension_retrait",
+    "q": "Quelles sont les conséquences de la perte de tous les points ?",
+    "qa": "ما هي عواقب نفاد رصيد النقط ؟",
+    "o": [
+      "attente d'au moins 6 mois avant un nouvel examen",
+      "annulation du permis",
+      "simple suspension de 1 à 3 mois",
+      "stage de sensibilisation obligatoire"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Solde nul : le permis est annulé ; il faut attendre au moins 6 mois, suivre un stage et repasser l'examen.",
+    "r": "0 point : annulation + 6 mois minimum + stage.",
+    "s": "points"
+  },
+  {
+    "id": "06_suspension_retrait-08",
+    "t": "06_suspension_retrait",
+    "q": "L'interdiction de repasser l'examen pendant 1 à 3 ans sanctionne :",
+    "qa": "المنع من اجتياز الامتحان من سنة إلى 3 سنوات يخص :",
+    "o": [
+      "les fausses déclarations",
+      "l'usurpation de la qualité de candidat (انتحال صفة مترشح)",
+      "la perte de tous les points",
+      "le contresens sur l'autoroute"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "Fausses déclarations ou usurpation de la qualité de candidat : interdiction de 1 à 3 ans. La perte de tous les points : 6 mois au moins.",
+    "r": "Fausses déclarations ou usurpation : interdiction 1 à 3 ans."
+  },
+  {
+    "id": "06_suspension_retrait-09",
+    "t": "06_suspension_retrait",
+    "q": "Une annulation avec interdiction de repasser l'examen pendant 2 à 4 ans sanctionne :",
+    "qa": "الإلغاء مع المنع من اجتياز الامتحان من سنتين إلى 4 سنوات يخص :",
+    "o": [
+      "la perte de tous les points",
+      "l'homicide involontaire avec circonstances aggravantes",
+      "les fausses déclarations",
+      "l'infirmité permanente avec circonstances aggravantes"
+    ],
+    "a": [
+      1
+    ],
+    "e": "2 à 4 ans : homicide involontaire aggravé. Infirmité permanente aggravée : 1 à 2 ans ; fausses déclarations : 1 à 3 ans ; 0 point : 6 mois.",
+    "r": "2 à 4 ans d'interdiction : homicide aggravé."
+  },
+  {
+    "id": "06_suspension_retrait-10",
+    "t": "06_suspension_retrait",
+    "q": "Une annulation avec interdiction de repasser l'examen pendant 1 à 2 ans sanctionne :",
+    "qa": "الإلغاء مع المنع من اجتياز الامتحان من سنة إلى سنتين يخص :",
+    "o": [
+      "l'homicide involontaire avec circonstances aggravantes",
+      "les blessures avec infirmité permanente et circonstances aggravantes",
+      "l'excès de vitesse de 50 km/h ou plus",
+      "la perte de tous les points"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Infirmité permanente aggravée : annulation + 1 à 2 ans. L'homicide aggravé, c'est 2 à 4 ans ; l'excès de 50 km/h ou plus, une suspension de 1 à 3 mois.",
+    "r": "1 à 2 ans d'interdiction : infirmité permanente aggravée."
+  },
+  {
+    "id": "06_suspension_retrait-11",
+    "t": "06_suspension_retrait",
+    "q": "Vrai ou faux : à la fin d'une suspension, le conducteur doit repasser l'examen pour récupérer son permis.",
+    "qa": "صحيح أم خطأ : عند انتهاء مدة التوقيف، يجب على السائق اجتياز الامتحان من جديد لاسترجاع رخصته.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : la suspension est temporaire, on récupère son permis à la fin. C'est l'annulation qui oblige à repasser l'examen.",
+    "r": "Suspension = temporaire ; annulation = nouvel examen."
+  },
+  {
+    "id": "06_suspension_retrait-12",
+    "t": "06_suspension_retrait",
+    "q": "Conduire pendant la période de suspension de son permis est :",
+    "qa": "السياقة خلال مدة توقيف الرخصة هي :",
+    "o": [
+      "une contravention de 3e classe",
+      "toléré si le trajet est court",
+      "un délit",
+      "une contravention de 1re classe"
+    ],
+    "a": [
+      2
+    ],
+    "e": "C'est un délit, et en cas d'accident, c'est aussi une circonstance aggravante.",
+    "r": "Conduire pendant une suspension : délit."
+  },
+  {
+    "id": "06_suspension_retrait-13",
+    "t": "06_suspension_retrait",
+    "q": "Ne pas déposer un permis dont la suspension a été décidée entraîne un retrait de :",
+    "qa": "عدم إيداع رخصة تقرر توقيفها يؤدي إلى خصم :",
+    "o": [
+      "2 points",
+      "3 points",
+      "4 points",
+      "6 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le permis suspendu doit être déposé ; ne pas le faire coûte 4 points.",
+    "r": "Permis suspendu non déposé : 4 points.",
+    "s": "points"
+  },
+  {
+    "id": "06_suspension_retrait-14",
+    "t": "06_suspension_retrait",
+    "q": "Parmi ces infractions, laquelle entraîne la suspension la plus longue ?",
+    "qa": "من بين هذه المخالفات، أيها تؤدي إلى أطول مدة توقيف للرخصة ؟",
+    "o": [
+      "excès de vitesse de 50 km/h ou plus",
+      "blessures avec infirmité permanente (sans aggravation)",
+      "délit de fuite après un accident",
+      "demi-tour sur l'autoroute"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Délit de fuite : 1 à 2 ans. Infirmité permanente : 3 mois à 1 an. Excès de 50 km/h ou plus et demi-tour sur autoroute : 1 à 3 mois.",
+    "r": "Fuite 1-2 ans > infirmité 3 mois-1 an > autoroute 1-3 mois."
+  },
+  {
+    "id": "06_suspension_retrait-15",
+    "t": "06_suspension_retrait",
+    "q": "Conduire malgré la suspension de son permis (ou pendant sa rétention) coûte :",
+    "qa": "السياقة رغم توقيف الرخصة أو أثناء الاحتفاظ بها تكلف :",
+    "o": [
+      "1 point",
+      "2 points",
+      "3 points",
+      "4 points"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Conduire malgré une suspension ou pendant la rétention du permis : délit à 4 points.",
+    "r": "Conduire malgré une suspension : 4 points.",
+    "s": "points"
+  },
+  {
+    "id": "06_suspension_retrait-16",
+    "t": "06_suspension_retrait",
+    "q": "Après une annulation du permis, pour conduire à nouveau, il faut :",
+    "qa": "بعد إلغاء الرخصة، لكي يسوق من جديد يجب :",
+    "o": [
+      "payer une amende de 1re classe",
+      "repasser l'examen du permis",
+      "simplement attendre la fin de la suspension",
+      "récupérer 4 points par un stage"
+    ],
+    "a": [
+      1
+    ],
+    "e": "L'annulation fait perdre le permis : il faut repasser l'examen. Seule la suspension se termine par la restitution du permis.",
+    "r": "Annulation : il faut repasser l'examen."
+  },
+  {
+    "id": "06_suspension_retrait-17",
+    "t": "06_suspension_retrait",
+    "q": "Quelles situations entraînent l'annulation du permis ?",
+    "qa": "ما هي الحالات التي تؤدي إلى إلغاء الرخصة ؟",
+    "o": [
+      "perte de tous les points",
+      "homicide involontaire avec circonstances aggravantes",
+      "excès de vitesse de 50 km/h ou plus",
+      "infirmité permanente avec circonstances aggravantes"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Annulation : solde nul, homicide aggravé, infirmité permanente aggravée. L'excès de 50 km/h ou plus entraîne une suspension de 1 à 3 mois.",
+    "r": "Annulation : 0 point, homicide ou infirmité aggravés."
+  },
+  {
+    "id": "06_suspension_retrait-18",
+    "t": "06_suspension_retrait",
+    "q": "Quelles infractions entraînent une suspension (et non une annulation) du permis ?",
+    "qa": "ما هي المخالفات التي تؤدي إلى توقيف الرخصة (وليس إلغائها) ؟",
+    "o": [
+      "homicide involontaire avec circonstances aggravantes",
+      "perte de tous les points",
+      "demi-tour sur l'autoroute",
+      "blessures avec infirmité permanente sans circonstance aggravante"
+    ],
+    "a": [
+      2,
+      3
+    ],
+    "e": "Demi-tour sur autoroute (1 à 3 mois) et infirmité permanente simple (3 mois à 1 an) : suspension. Homicide aggravé et 0 point : annulation.",
+    "r": "Suspension : demi-tour autoroute, infirmité sans aggravant."
+  },
+  {
+    "id": "06_suspension_retrait-19",
+    "t": "06_suspension_retrait",
+    "q": "Infirmité permanente sans aggravation : en plus de la suspension de 3 mois à 1 an, le conducteur doit :",
+    "qa": "عاهة مستديمة بدون ظروف التشديد : إضافة إلى التوقيف من 3 أشهر إلى سنة، يجب على السائق :",
+    "o": [
+      "suivre un stage de sensibilisation",
+      "repasser l'examen du permis",
+      "attendre 2 ans avant de conduire",
+      "rien d'autre"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Pour l'infirmité permanente, la suspension (3 mois à 1 an) s'accompagne d'un stage de sensibilisation.",
+    "r": "Infirmité permanente : suspension + stage."
+  },
+  {
+    "id": "06_suspension_retrait-20",
+    "t": "06_suspension_retrait",
+    "q": "Vrai ou faux : un permis annulé pour perte de tous les points est rendu automatiquement après 6 mois.",
+    "qa": "صحيح أم خطأ : الرخصة الملغاة بسبب نفاد رصيد النقط تُرجع تلقائيا بعد 6 أشهر.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : après au moins 6 mois, il faut suivre un stage et repasser l'examen ; le nouveau permis repart à 20 points.",
+    "r": "0 point : pas de restitution automatique, nouvel examen.",
+    "s": "points"
+  },
+  {
+    "id": "07_annexe_infractions-01",
+    "t": "07_annexe_infractions",
+    "q": "Quelles contraventions coûtent 4 points ?",
+    "qa": "ما هي المخالفات التي تكلف 4 نقط ؟",
+    "o": [
+      "dépassement irrégulier",
+      "non-arrêt au stop ou au feu rouge",
+      "non-respect de la priorité",
+      "circulation en sens interdit"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Les « 4 grands » à 4 points : feu rouge/stop, sens interdit, dépassement irrégulier, excès de +30 à +50 km/h. La priorité ne coûte que 2 points.",
+    "r": "4 points : feu rouge/stop, sens interdit, dépassement, +30.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-02",
+    "t": "07_annexe_infractions",
+    "q": "Sur une route limitée à 80 km/h, un conducteur roule à 125 km/h. Quelles affirmations sont justes ?",
+    "qa": "في طريق محددة سرعتها في 80 كلم/س، يسير سائق بسرعة 125 كلم/س. ما هي العبارات الصحيحة ؟",
+    "o": [
+      "il perd 4 points",
+      "il perd 6 points",
+      "c'est une contravention de 1re classe",
+      "c'est un délit avec suspension du permis"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "125 − 80 = 45 km/h d'excès : entre +30 et +50, donc 1re classe et 4 points. Le délit commence à +50 km/h.",
+    "r": "+30 à +50 km/h : 1re classe, 4 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-03",
+    "t": "07_annexe_infractions",
+    "q": "Sur une route limitée à 100 km/h, vous roulez à 124 km/h. Quelles affirmations sont justes ?",
+    "qa": "في طريق محددة سرعتها في 100 كلم/س، تسير بسرعة 124 كلم/س. ما هي العبارات الصحيحة ؟",
+    "o": [
+      "contravention de 2e classe",
+      "retrait de 2 points",
+      "retrait de 4 points",
+      "contravention de 1re classe"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "124 − 100 = 24 km/h d'excès : entre +20 et +30, donc 2e classe et 2 points.",
+    "r": "+20 à moins de +30 km/h : 2e classe, 2 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-04",
+    "t": "07_annexe_infractions",
+    "q": "Un excès de vitesse de 10 km/h au-dessus de la limite entraîne :",
+    "qa": "تجاوز السرعة المحددة بـ 10 كلم/س يؤدي إلى :",
+    "o": [
+      "une contravention de 3e classe et 1 point",
+      "une contravention de 2e classe et 2 points",
+      "une contravention de 1re classe et 4 points",
+      "une contravention de 3e classe, sans retrait de points"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Moins de 20 km/h d'excès : 3e classe (300 à 600 DH) et aucun point retiré.",
+    "r": "Moins de +20 km/h : 3e classe, 0 point.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-05",
+    "t": "07_annexe_infractions",
+    "q": "À partir de quel excès de vitesse l'infraction devient-elle un délit ?",
+    "qa": "ابتداء من أي تجاوز للسرعة تصبح المخالفة جنحة ؟",
+    "o": [
+      "+20 km/h",
+      "+30 km/h",
+      "+50 km/h",
+      "+60 km/h"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Échelle : moins de +20 = 3e classe ; +20 à +30 = 2e classe ; +30 à +50 = 1re classe ; +50 et plus = délit (6 points, suspension de 1 à 3 mois).",
+    "r": "Excès de 50 km/h ou plus = délit.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-06",
+    "t": "07_annexe_infractions",
+    "q": "Quelles infractions coûtent 1 point ?",
+    "qa": "ما هي المخالفات التي تكلف نقطة واحدة ؟",
+    "o": [
+      "téléphone tenu en main en conduisant",
+      "excès de vitesse de 25 km/h",
+      "non-respect de la priorité",
+      "non-port de la ceinture de sécurité"
+    ],
+    "a": [
+      0,
+      3
+    ],
+    "e": "Le « petit 1 point » : ceinture, téléphone tenu en main, enfant de moins de 10 ans à l'avant. Priorité et excès de 25 km/h : 2 points.",
+    "r": "1 point : ceinture, enfant à l'avant, téléphone en main.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-07",
+    "t": "07_annexe_infractions",
+    "q": "Vrai ou faux : tenir son téléphone en main n'est pas sanctionné quand on est arrêté dans un embouteillage.",
+    "qa": "صحيح أم خطأ : مسك الهاتف باليد غير معاقب عليه عند الوقوف في الازدحام.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : le téléphone tenu en main coûte 1 point, même à l'arrêt dans un embouteillage.",
+    "r": "Téléphone en main : 1 point, même dans un bouchon.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-08",
+    "t": "07_annexe_infractions",
+    "q": "Le téléphone tenu en main pendant la conduite est une contravention de :",
+    "qa": "استعمال الهاتف ممسوكا باليد أثناء السياقة مخالفة من :",
+    "o": [
+      "2e classe",
+      "1re classe",
+      "4e classe",
+      "3e classe"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le téléphone tenu en main est classé en 2e classe (1 point), comme la ceinture et l'enfant de moins de 10 ans à l'avant.",
+    "r": "Téléphone en main : 2e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-09",
+    "t": "07_annexe_infractions",
+    "q": "Quelles infractions coûtent 3 points ?",
+    "qa": "ما هي المخالفات التي تكلف 3 نقط ؟",
+    "o": [
+      "arrêt ou stationnement de nuit sans éclairage sur une route non éclairée",
+      "circulation de nuit sans éclairage hors agglomération",
+      "excès de vitesse de 25 km/h",
+      "conduite d'une moto sans casque"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "3 points : nuit sans éclairage, défaut de contrôle technique, bande d'arrêt d'urgence. L'excès de 25 km/h et le casque coûtent 2 points.",
+    "r": "3 points : nuit sans feux, contrôle technique, BAU.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-10",
+    "t": "07_annexe_infractions",
+    "q": "Non-respect de la priorité : quelle classe et combien de points ?",
+    "qa": "عدم احترام حق الأسبقية : ما هي الدرجة وكم نقطة ؟",
+    "o": [
+      "2e classe, 4 points",
+      "2e classe, 2 points",
+      "1re classe, 4 points",
+      "3e classe, 0 point"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Piège : le non-respect de la priorité coûte 2 points (2e classe), et non 4.",
+    "r": "Priorité non respectée : 2e classe, 2 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-11",
+    "t": "07_annexe_infractions",
+    "q": "Conduire une moto ou un cyclomoteur sans casque :",
+    "qa": "سياقة دراجة نارية أو دراجة بمحرك بدون خوذة :",
+    "o": [
+      "aucun retrait de points",
+      "contravention de 3e classe",
+      "contravention de 1re classe",
+      "retrait de 2 points"
+    ],
+    "a": [
+      1,
+      3
+    ],
+    "e": "Le casque est une exception : contravention de 3e classe, mais qui coûte 2 points.",
+    "r": "Sans casque : 3e classe mais 2 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-12",
+    "t": "07_annexe_infractions",
+    "q": "Franchir une ligne continue :",
+    "qa": "قطع خط متصل :",
+    "o": [
+      "1re classe, 0 point",
+      "1re classe, 4 points",
+      "2e classe, 2 points",
+      "3e classe, 0 point"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Piège : la ligne continue est une 1re classe (700 à 1400 DH) mais ne coûte aucun point.",
+    "r": "Ligne continue : 1re classe, 0 point.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-13",
+    "t": "07_annexe_infractions",
+    "q": "Conduire sous l'effet de l'alcool est :",
+    "qa": "السياقة تحت تأثير الكحول هي :",
+    "o": [
+      "un délit, 4 points",
+      "une contravention de 1re classe, 4 points",
+      "un délit, 6 points",
+      "une contravention de 2e classe, 2 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'alcool est un délit (et non une contravention) qui coûte 6 points, comme les stupéfiants ou le refus du dépistage.",
+    "r": "Alcool : délit, 6 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-14",
+    "t": "07_annexe_infractions",
+    "q": "Quels délits coûtent 6 points ?",
+    "qa": "ما هي الجنح التي تكلف 6 نقط ؟",
+    "o": [
+      "homicide involontaire sans circonstance aggravante",
+      "refus de se soumettre au dépistage de l'alcool ou des stupéfiants",
+      "délit de fuite après un accident",
+      "infirmité permanente sans circonstance aggravante"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "6 points : fuite, alcool/stupéfiants ou refus du dépistage, +50 km/h, homicide simple, blessures aggravées. L'infirmité permanente simple coûte 4 points.",
+    "r": "6 points : fuite, alcool, refus, +50, homicide simple.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-15",
+    "t": "07_annexe_infractions",
+    "q": "Infirmité permanente sans circonstance aggravante : combien de points sont retirés ?",
+    "qa": "عاهة دائمة بدون ظروف التشديد : كم نقطة تُخصم ؟",
+    "o": [
+      "3 points",
+      "4 points",
+      "6 points",
+      "10 points"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Infirmité permanente : 4 points sans circonstance aggravante, 10 points avec.",
+    "r": "Infirmité permanente simple : 4 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-16",
+    "t": "07_annexe_infractions",
+    "q": "Blessures involontaires sans circonstance aggravante : combien de points sont retirés ?",
+    "qa": "جروح غير عمدية بدون ظروف التشديد : كم نقطة تُخصم ؟",
+    "o": [
+      "1 point",
+      "2 points",
+      "3 points",
+      "6 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Blessures involontaires : 3 points sans circonstance aggravante, 6 points avec.",
+    "r": "Blessures involontaires simples : 3 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-17",
+    "t": "07_annexe_infractions",
+    "q": "Conduire sous l'effet de médicaments interdisant la conduite coûte :",
+    "qa": "السياقة تحت تأثير أدوية تمنع السياقة تكلف :",
+    "o": [
+      "2 points",
+      "4 points",
+      "6 points",
+      "aucun point"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Médicaments interdisant la conduite : 2 points. L'alcool ou les stupéfiants coûtent 6 points.",
+    "r": "Médicaments interdisant la conduite : 2 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-18",
+    "t": "07_annexe_infractions",
+    "q": "Exercer la conduite professionnelle sans carte de conducteur professionnel coûte :",
+    "qa": "السياقة المهنية بدون بطاقة السائق المهني تكلف :",
+    "o": [
+      "2 points",
+      "3 points",
+      "4 points",
+      "6 points"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Conduite professionnelle sans carte professionnelle : 2 points.",
+    "r": "Sans carte de conducteur professionnel : 2 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-19",
+    "t": "07_annexe_infractions",
+    "q": "Dépasser le poids autorisé en passant sur un ouvrage d'art (pont, منشأة عبور) coûte :",
+    "qa": "تجاوز الوزن المأذون به عند المرور بمنشأة عبور (قنطرة) يكلف :",
+    "o": [
+      "2 points",
+      "3 points",
+      "4 points",
+      "6 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Surcharge au passage d'un ouvrage d'art : délit à 4 points.",
+    "r": "Surcharge sur un pont : 4 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-20",
+    "t": "07_annexe_infractions",
+    "q": "Circuler sur la bande d'arrêt d'urgence de l'autoroute (شريط التوقف العاجل) :",
+    "qa": "السير على شريط التوقف العاجل في الطريق السيار :",
+    "o": [
+      "retrait de 4 points",
+      "retrait de 3 points",
+      "contravention de 2e classe",
+      "contravention de 1re classe"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "La bande d'arrêt d'urgence (ou un arrêt injustifié sur autoroute) : 2e classe et 3 points.",
+    "r": "Bande d'arrêt d'urgence : 2e classe, 3 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-21",
+    "t": "07_annexe_infractions",
+    "q": "Quelles infractions sont des contraventions de 1re classe ?",
+    "qa": "ما هي المخالفات من الدرجة الأولى ؟",
+    "o": [
+      "arrêt dangereux dans un virage ou au sommet d'une côte",
+      "transport de personnes sur le toit du véhicule",
+      "non-paiement du péage de l'autoroute",
+      "circulation sur une piste cyclable"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Arrêt dangereux, péage non payé et personnes sur le toit : 1re classe (sans retrait de points). La piste cyclable : 2e classe.",
+    "r": "1re classe : arrêt dangereux, péage, personnes sur le toit.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-22",
+    "t": "07_annexe_infractions",
+    "q": "S'arrêter à moins de 10 m d'une intersection est une contravention de :",
+    "qa": "التوقف على بعد أقل من 10 أمتار من ملتقى الطرق مخالفة من :",
+    "o": [
+      "3e classe",
+      "4e classe",
+      "2e classe",
+      "1re classe"
+    ],
+    "a": [
+      3
+    ],
+    "e": "C'est un arrêt dangereux, comme en virage, au sommet d'une côte, sur un pont ou dans un tunnel : 1re classe.",
+    "r": "Arrêt à moins de 10 m d'une intersection : 1re classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-23",
+    "t": "07_annexe_infractions",
+    "q": "S'arrêter ou stationner sur un passage à niveau (تقاطع مع سكة حديدية) est une contravention de :",
+    "qa": "الوقوف أو التوقف عند تقاطع مع سكة حديدية مخالفة من :",
+    "o": [
+      "1re classe",
+      "2e classe",
+      "4e classe",
+      "3e classe"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Les infractions aux passages à niveau (arrêt, engagement sans s'assurer de l'absence de train, ne pas dégager la voie) sont en 1re classe.",
+    "r": "Arrêt sur un passage à niveau : 1re classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-24",
+    "t": "07_annexe_infractions",
+    "q": "Dépasser de 30 % à 40 % le poids total autorisé en charge est une contravention de :",
+    "qa": "تجاوز الوزن الإجمالي المأذون به بنسبة 30% إلى 40% مخالفة من :",
+    "o": [
+      "4e classe",
+      "3e classe",
+      "2e classe",
+      "1re classe"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Une surcharge de 30 % à 40 % du poids total autorisé est classée en 1re classe.",
+    "r": "Surcharge de 30 à 40 % : 1re classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-25",
+    "t": "07_annexe_infractions",
+    "q": "Lesquelles relèvent de la 1re classe (700 à 1400 DH) ?",
+    "qa": "أي منها من الدرجة الأولى (700 إلى 1400 درهم) ؟",
+    "o": [
+      "non-soumission à la visite médicale obligatoire",
+      "fumée excessive",
+      "pneus dont les sculptures sont sous le minimum",
+      "entrer sur l'autoroute ou en sortir par un endroit non prévu"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Pneus usés, visite médicale non passée et accès à l'autoroute par un endroit non prévu : 1re classe. La fumée excessive : 3e classe.",
+    "r": "1re classe : pneus usés, visite médicale, accès autoroute.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-26",
+    "t": "07_annexe_infractions",
+    "q": "Lesquelles de ces infractions sont classées en 2e classe (500 à 1000 DH) ?",
+    "qa": "أي من هذه المخالفات مصنفة في الدرجة الثانية (500 إلى 1000 درهم) ؟",
+    "o": [
+      "circuler sur l'autoroute avec un véhicule incapable de rouler à 60 km/h",
+      "utiliser des chaînes à neige sur une route non enneigée",
+      "donner des leçons de conduite sur l'autoroute",
+      "pénétrer sur le terre-plein central de l'autoroute"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Véhicule incapable de 60 km/h, leçons de conduite et terre-plein central sur autoroute : 2e classe. Les chaînes sur route non enneigée : 3e classe.",
+    "r": "2e classe : 60 km/h, leçons, terre-plein central.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-27",
+    "t": "07_annexe_infractions",
+    "q": "Effectuer des réparations importantes sur la bande d'arrêt d'urgence est une contravention de :",
+    "qa": "القيام بإصلاحات مهمة على شريط التوقف العاجل مخالفة من :",
+    "o": [
+      "4e classe",
+      "1re classe",
+      "3e classe",
+      "2e classe"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Les réparations importantes sur la bande d'arrêt d'urgence sont une contravention de 2e classe, sans retrait de points.",
+    "r": "Réparations sur la BAU : 2e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-28",
+    "t": "07_annexe_infractions",
+    "q": "Lesquelles de ces infractions sont classées en 3e classe (300 à 600 DH) ?",
+    "qa": "أي من هذه المخالفات مصنفة في الدرجة الثالثة (300 إلى 600 درهم) ؟",
+    "o": [
+      "transport de personnes sur le toit",
+      "absence d'avertisseur sonore",
+      "participer à une course de vitesse",
+      "couper un cortège funèbre ou une colonne militaire"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Course de vitesse, cortège ou colonne coupé et absence d'avertisseur sonore : 3e classe. Les personnes sur le toit : 1re classe.",
+    "r": "3e classe : course, cortège coupé, pas de klaxon.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-29",
+    "t": "07_annexe_infractions",
+    "q": "Un défaut des rétroviseurs ou des essuie-glaces est une contravention de :",
+    "qa": "عيب في المرايا أو مساحات الزجاج مخالفة من :",
+    "o": [
+      "3e classe",
+      "4e classe",
+      "2e classe",
+      "1re classe"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Défaut de freins, rétroviseurs, essuie-glaces ou catadioptres : 3e classe. Mais un véhicule sans freins conformes : 1re classe.",
+    "r": "Rétroviseurs, essuie-glaces défectueux : 3e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-30",
+    "t": "07_annexe_infractions",
+    "q": "Changer de file ou de direction sans précaution est une contravention de :",
+    "qa": "تغيير الصف أو الاتجاه دون اتخاذ الاحتياطات مخالفة من :",
+    "o": [
+      "1re classe",
+      "4e classe",
+      "3e classe",
+      "2e classe"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le changement de file ou de direction sans précaution est classé en 3e classe.",
+    "r": "Changement de file sans précaution : 3e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-31",
+    "t": "07_annexe_infractions",
+    "q": "Un piéton qui pénètre sur l'autoroute commet une contravention de :",
+    "qa": "راجل يدخل إلى الطريق السيار يرتكب مخالفة من :",
+    "o": [
+      "4e classe",
+      "1re classe",
+      "2e classe",
+      "3e classe"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Piège : ce n'est pas la 4e classe. L'entrée des piétons, bêtes de somme et animaux sur l'autoroute est en 1re classe.",
+    "r": "Piéton sur l'autoroute : 1re classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-32",
+    "t": "07_annexe_infractions",
+    "q": "Utiliser des feux ou avertisseurs réservés aux véhicules prioritaires est une contravention de :",
+    "qa": "استعمال الأضواء أو المنبهات الخاصة بمركبات الأولوية مخالفة من :",
+    "o": [
+      "3e classe",
+      "4e classe",
+      "1re classe",
+      "2e classe"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Classée en 3e classe, cette infraction entraîne aussi la mise en fourrière du véhicule.",
+    "r": "Feux spéciaux de priorité : 3e classe + fourrière.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-33",
+    "t": "07_annexe_infractions",
+    "q": "Un chargement qui gêne la visibilité ou masque les feux ou les plaques est une contravention de :",
+    "qa": "حمولة تعيق الرؤية أو تحجب الأضواء أو صفائح التسجيل مخالفة من :",
+    "o": [
+      "3e classe",
+      "1re classe",
+      "4e classe",
+      "2e classe"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Un chargement qui gêne la visibilité ou masque feux et plaques est une contravention de 2e classe.",
+    "r": "Chargement masquant feux ou plaques : 2e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-34",
+    "t": "07_annexe_infractions",
+    "q": "Non-arrêt au stop : quelle classe et combien de points ?",
+    "qa": "عدم الوقوف عند علامة «قف» : ما هي الدرجة وكم نقطة ؟",
+    "o": [
+      "délit, 6 points",
+      "2e classe, 2 points",
+      "1re classe, 4 points",
+      "1re classe, 0 point"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le stop (comme le feu rouge) est une contravention de 1re classe qui coûte 4 points.",
+    "r": "Stop non respecté : 1re classe, 4 points.",
+    "s": "sanctions"
+  },
+  {
+    "id": "07_annexe_infractions-35",
+    "t": "07_annexe_infractions",
+    "q": "Ne pas soumettre son véhicule au contrôle technique :",
+    "qa": "عدم الخضوع للمراقبة التقنية :",
+    "o": [
+      "2e classe, 3 points",
+      "1re classe, 4 points",
+      "3e classe, 0 point",
+      "1re classe, 3 points"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le défaut de contrôle technique est une contravention de 1re classe qui coûte 3 points.",
+    "r": "Pas de contrôle technique : 1re classe, 3 points.",
+    "s": "sanctions"
+  }
+]

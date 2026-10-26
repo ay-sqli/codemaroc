@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Obligations et Fins</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/04_obligations" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🔵 علامات الإجبار ونهاية الإجبار (Obligations)\n\n## ⬆️ 1. اتجاهات إجبارية (Directions obligatoires)\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406893748.png\"> **إجبارية الانعطاف نحو اليمين قبل العلامة**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406893762.png\"> **إجبارية الانعطاف نحو اليسار قبل العلامة**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406893803.png\"> **اتجاه إجباري عند أول ملتقى طرق: إلى الأمام**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406893816.png\"> **اتجاه إجباري عند أول ملتقى طرق: نحو اليمين**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406893830.png\"> **اتجاه إجباري عند أول ملتقى طرق: نحو اليسار**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406893844.png\"> **اتجاهان إجباريان عند أول ملتقى طرق: إلى الأمام أو نحو اليمين**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674311495.png\"> **اتجاهان إجباريان عند أول ملتقى طرق: إلى الأمام أو نحو اليسار**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674325877.png\"> **اتجاهان إجباريان عند أول ملتقى طرق: نحو اليمين أو نحو اليسار**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674343212.png\"> **اتجاه دوراني إجباري**\n\n## ↔️ 2. مدار إجباري (Contournement obligatoire)\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406893776.png\"> **مدار إجباري نحو اليسار**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406893789.png\"> **مدار إجباري نحو اليمين**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406893979.png\"> **إلتزموا أقصى اليمين**\n\n## 🚲 3. ممرات إجبارية (Chemins obligatoires)\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674364455.png\"> **ممر إجباري على مستعملي الدراجات**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674433869.png\"> **ممر إجباري على الراجلين**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674420092.png\"> **ممر إجباري على الفرسان**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674406604.png\"> **ممر إجباري للحيوانات**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674381053.png\"> **ممر إجباري على المركبات المجرورة بواسطة الدواب**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674393579.png\"> **ممر إجباري على العربات اليدوية**\n\n## 🚌 4. مسالك مخصصة (Voies réservées)\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674446411.png\"> **مسلك مخصص لمركبات الخدمات المنتظمة للنقل الجماعي**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674514314.png\"> **مسلك مخصص للترمواي**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674549825.png\"> **مسلك مخصص للمركبات البطيئة**\n\n## ⚙️ 5. إجبارات أخرى (Autres obligations)\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894005.png\"> **سرعة دنيا إجبارية**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674459117.png\"> **إجبارية وضع سلاسل الثلوج حول عجلتين دافعتين على الأقل**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1689674473456.png\"> **إجبارية تشغيل أضواء التقابل**\n\n## 🟦 6. علامات نهاية الإجبار (Fins d'obligation)\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894092.png\"> **نهاية السرعة الدنيا الإجبارية**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894106.png\"> **نهاية الممر الإجباري لمستعملي الدراجات**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894120.png\"> **نهاية الممر الإجباري على الراجلين**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894134.png\"> **نهاية الممر الإجباري على الفرسان**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894147.png\"> **نهاية الممر الإجباري على مركبات الخدمات المنتظمة للنقل الجماعي**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894161.png\"> **نهاية إجبارية استعمال سلاسل الثلوج حول عجلتين دافعتين على الأقل**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894177.png\"> **نهاية إجبارية تشغيل أضواء التقابل**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894194.png\"> **نهاية المسلك المخصص للترامواي**\n- <img src=\"../../inputs/01_la_route/04_obligations/images/1682406894209.png\"> **نهاية المسلك المخصص للمركبات البطيئة**\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- دائرة زرقاء = إجبار (Rond bleu = obligation)\n- دائرة حمراء = منع ← لا تخلط بينهما (Rond rouge = interdiction)\n- نهاية الإجبار = نفس العلامة + خط أحمر مائل\n- السرعة الدنيا: الرقم أبيض على خلفية زرقاء ← يجب السير بسرعة لا تقل عنه\n- تحديد السرعة القصوى: الرقم أسود داخل دائرة حمراء ← لا تتجاوزه\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- «قبل العلامة» ← الانعطاف يكون مباشرة قبل مكان العلامة\n- «عند أول ملتقى طرق» ← الإجبار يطبق في الملتقى الموالي فقط\n- الممر الإجباري للدراجات ← ممنوع على السيارات السير أو الوقوف فيه\n- المسلك المخصص للنقل الجماعي ← سيارتك الخاصة ممنوعة فيه\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

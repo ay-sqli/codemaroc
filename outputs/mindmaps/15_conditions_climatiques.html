@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Conditions Climatiques</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/15_conditions_climatiques" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🌧️ السياقة في الظروف المناخية السيئة (Conditions Climatiques)\n\n## 📌 1. القاعدة العامة (Règle générale)\n- السائق يجب أن يبقى متحكما في مركبته دائما\n- ملاءمة السرعة حسب الطقس: ضباب، مطر، ثلج، رياح قوية\n\n## 🌧️ 2. المطر (Pluie)\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/images/_D9_86_D8_B5_D8_A7_D8_A6_D8_AD_2B_D9_84_D9_84_D8_B3_D9_8A_D8_A7_D9_82_D8_A9_2B_D8_A3_D8_AB_D9_86_D8_A7_D8_A1_2B_D9_87_D8_B7_D9_88_D9_84_2B_D8_A7_D9_84_D8_A3_D9_85_D8_B7_D8_A7_D8_B1.png\" class=\"big\"> نصائح السياقة أثناء هطول الأمطار\n- ✅ تخفيض السرعة\n- ✅ زيادة مسافة الأمان\n- ✅ تفادي الحصر المفاجئ\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1684315352004.png\"> **مع أولى قطرات المطر: الالتحام ينخفض إلى النصف ← مسافة الحصر تتضاعف**\n- الأضواء: التقابل إجبارية، وفي المطر الغزير الضباب الأمامية أو الاثنان معا\n\n## 🌊 3. الانزلاق المائي (Aquaplaning)\n- نقوش الإطارات لا تستطيع إخلاء الماء ← الإطار يطفو فوق الماء\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1684315344513.png\"> **كلما زادت السرعة وتآكل الإطارات زاد خطر الانزلاق المائي**\n- الحل: خفف السرعة وراقب نقوش الإطارات\n\n## 🌫️ 4. تضبب الزجاج (Buée)\n- الهواء الدافئ داخل المركبة + الزجاج البارد ← ضباب على الزجاج\n- الحل: التدفئة ومزيل الضباب\n\n## ❄️ 5. الثلج والجليد (Neige et verglas)\n- الثلج قد يتحول إلى جليد ← فقدان السيطرة والانزلاق\n- ✅ خفف السرعة، زد مسافة الأمان\n- ✅ لا حصر مفاجئ ولا تحريك مفاجئ للمقود\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1684315567670.png\"> **إذا انزلقت: لا تضغط على الفرامل ← استعمل حصار المحرك (Frein moteur)**\n- قبل الانطلاق: أزل الثلج عن النوافذ والسقف والأضواء\n- الأضواء: التقابل، أو الضباب، أو الاثنان معا\n\n## 🌬️ 6. الرياح القوية (Vent fort)\n- الرياح الجانبية تدفع المركبة يمينا أو يسارا\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1684315639629.png\"> **الخطر: الخروج من نفق أو غابة أو بعد تجاوز شاحنة**\n- ✅ خفف السرعة وأمسك المقود بإحكام\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1691418486295.png\"> **مقبض هوائي متدل: عدم هبوب الرياح**\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1691418441795.png\"> **مقبض هوائي مائل: هبوب رياح ضعيفة**\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1691418396093.png\"> **مقبض هوائي أفقي: هبوب رياح قوية**\n\n## 🌫️ 7. الضباب (Brouillard)\n- الرؤية تنقص ← الحوادث غالبا قاتلة\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1686927775482.png\" class=\"big\"> السياقة في الضباب\n- ضباب كثيف وانعدام الرؤية ← قف في مكان آمن ومسموح\n- <img src=\"../../inputs/01_la_route/15_conditions_climatiques/المحور الفرعي_files/1684315890580.png\"> **في الضباب: الحذر، مسافة الأمان، اتبع الخطوط البيضاء، لا تجاوز**\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- مطر = مسافة الحصر × 2 ← ضاعف مسافة الأمان\n- القاعدة الذهبية في كل الأحوال السيئة: خفف + ابتعد + لا مفاجآت\n- الانزلاق المائي: المقود يصبح خفيفا فجأة ← ارفع القدم عن المسرع ولا تفرمل\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- عند الانزلاق على الجليد: الفرامل هي الخطأ ← حصار المحرك هو الصواب\n- خارج المدينة: أضواء الوضع وحدها غير كافية في المطر أو الضباب ← التقابل\n- الرياح أخطر عند الخروج من نفق أو بعد تجاوز شاحنة\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

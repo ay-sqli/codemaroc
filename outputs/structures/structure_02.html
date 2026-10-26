@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Dangers et Priorités</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        .markmap-node img { vertical-align: middle; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 5px; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view"></script>
+</head>
+<body>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = `
+# 🚦 علامات الخطر والأسبقية (Dangers et Priorités)
+
+## ⚠️ 1. أخطار مرتبطة بالطريق (Profil de la route)
+- **خطر منعرج على اليمين**
+- **خطر منعرج على اليسار**
+- **خطر منعرجات متتابعة أولها على اليمين**
+- **خطر منعرجات متتابعة أولها على اليسار**
+- **منحدر خطير**
+- **خطر عقبة ذات صعود حاد**
+- **خطر قارعة ضيقة**
+- **خطر قارعة ضيقة من اليمين**
+- **خطر قارعة ضيقة من اليسار**
+- **خطر قارعة ضيقة محليا**
+
+## 🧊 2. حالة القارعة (État de la chaussée)
+- **خطر طريق محدودب**
+- **خطر مخفض سرعة محدودب**
+- **خطر قارعة يقع بها انزلاق**
+- **خطر قارعة تطفو عليها المياه**
+- **خطر تناثر الحصى**
+- **خطر تساقط الأحجار**
+
+## 🚶‍♂️ 3. مستعملو الطريق (Autres usagers)
+- **خطر ممر الراجلين**
+- **مكان يرتاده الاطفال**
+- **خطر منفذ لمستعملي الدراجات والدراجات بمحرك**
+- **خطر مرور الفرسان**
+- **خطر مرور مركبات فلاحية**
+- **خطر مرور مركبات مجرورة بواسطة الدواب**
+
+## 🐄 4. الحيوانات (Animaux)
+- **خطر مرور حيوانات أليفة**
+- **خطر مرور حيوانات متوحشة**
+
+## 🚂 5. التقاطعات مع السكك (Passages à niveau & Tramway)
+- **خطر تقاطع طريق مع سكة حديدية مجهز بحاجز يستعمل يدويا عند مرور القطارات**
+- **خطر تقاطع طريق مع سكة حديدية بدون حواجز وبدون نصف حاجز**
+- **خطر عبور ممرات الترامواي**
+
+## 🌪️ 6. أخطار متنوعة (Dangers divers)
+- **خطر جسر متحرك**
+- **خطر منفذ إلى رصيف أو سيف نهر**
+- **إعلان عن أضواء ثلاثية اللون**
+- **عبور منطقة خطر جوي**
+- **خطر السير في الاتجاهين**
+- **خطر ريح جانبية**
+- **أخطار أخرى**
+
+## 🚧 7. علامات الخطر المؤقتة (Dangers Temporaires)
+- **خطر مؤقت: طريق محدودب**
+- **خطر مؤقت: قارعة ضيقة**
+- **خطر مؤقت: قارعة ضيقة على اليمين**
+- **خطر مؤقت: قارعة ضيقة على اليسار**
+- **خطر مؤقت: قارعة يقع بها انزلاق**
+- **خطر مؤقت: أشغال**
+- **خطر مؤقت: تناثر الحصى**
+- **خطر مؤقت: حادثة سير**
+- **خطر مؤقت: ازدحام شديد**
+- **إعلان مؤقت عن إشارات ضوئية لتنظيم السير**
+- **أخطار أخرى مؤقتة**
+
+## 🛑 8. علامات ملتقى الطرق والأسبقية (Intersections et Priorités)
+- **قف**
+- **إعطاء حق الأسبقية عند ملتقى الطرق - علامة وضعية**
+- **إعطاء حق الأسبقية عند ملتقى الطرق - إشارة متقدمة على مسافة 150 متر**
+- **إعطاء حق الأسبقية عند ملتقى الطرق - إشارة متقدمة لعلامة قف**
+- **ملتقى طرق تطبق فيه قاعدة حق الأسبقية للقادم من اليمين**
+- **ملتقى طريق ذات أولوية مع طريق أقل أهمية**
+- **ملتقى طرقي دوراني**
+- **الإشارة إلى الطابع الأولوي لطريق**
+- **نهاية الطابع الأولوي لطريق**
+            `;
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 350 }, root);
+        });
+    </script>
+</body>
+</html>

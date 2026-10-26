@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - L'Autoroute</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/11_autoroute" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🛣️ السير على الطريق السيار (L'Autoroute)\n\n## 📌 1. تعاريف (Définitions)\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1687174262061.png\" class=\"big\"> الطريق السيار\n- طريق ذات غرض خاص، لا تتقاطع مع غيرها، الدخول والخروج من منافذ معدة\n- خاصة بالمركبات ذات محرك الخاضعة للتسجيل\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1681998093291.jpeg\"> **شريط التوقف العاجل: للوقوف في حالة الضرورة القصوى فقط**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1687426196686.png\"> **اتجاه واحد + بالأداء + 120 كلم/س (خارج الفترة الاختبارية)**\n\n## ⛔ 2. الممنوعون من الطريق السيار (Interdits)\n- الراجلون\n- راكبو الدواب والمركبات المجرورة بالدواب\n- الحيوانات\n- الدراجات، الدراجات بمحرك، ثلاثية ورباعية العجلات\n- المركبات ذات الجر غير الميكانيكي\n- المركبات ذات المحرك غير الخاضعة للتسجيل\n- الجرارات والآلات الفلاحية ومعدات الأشغال\n- المركبات التي لا تستطيع تجاوز 60 كلم/س\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1687345820862.png\"> **ولوج ممنوع على الدراجات**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1687345847735.png\"> **ولوج ممنوع على الراجلين**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1687345969248.png\"> **ولوج ممنوع على الدراجات بمحرك**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1687346091479.png\"> **ولوج ممنوع على الجرارات والآلات الفلاحية**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1687346017691.png\"> **ولوج ممنوع على المركبات المجرورة بواسطة دواب**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1687345993350.png\"> **ولوج ممنوع على العربات اليدوية**\n\n## ↗️ 3. الدخول (Entrée)\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1689149420692.png\"> **لوحة الإشارة إلى اتجاه مدخل الطريق السيار**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1689149290380.png\"> **مدخل طريق السيار**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1689149377285.png\"> **إعلان قبلي عن مكان سحب تذكرة الأداء**\n- مسلك التسريع ← الوصول إلى سرعة المركبات في الطريق السيار\n- أعط الأسبقية للمركبات الموجودة في الطريق السيار\n- شغّل المؤشر ولا تجبر الآخرين على الفرملة أو تغيير المسلك\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1692198637251.png\" class=\"big\"> الاندماج عبر مسلك التسريع\n\n## 🚗 4. السير (Circulation)\n- المسلك الأيمن دائما في السير العادي\n- السرعة الدنيا: 60 كلم/س\n- المسالك الأخرى ← للتجاوز فقط\n- ممنوع السير على شريط التوقف العاجل\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1686923483319.png\" class=\"big\"> المسالك في الطريق السيار\n\n## ⏱️ 5. السرعات القصوى (Vitesses)\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1681998093515.png\"> **120: الدراجات النارية، السيارات ≤ 3.5 طن، سيارات الأجرة**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1681998093529.png\"> **100: البضائع 3.5–12 طن، النقل الجماعي > 3.5 طن**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1681998093544.png\"> **90: البضائع 12–19 طن**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1681998093558.png\"> **80: البضائع > 19 طن**\n\n## ❌ 6. الممنوعات (Interdictions)\n- تجريب المركبات + دروس السياقة + الوقوف لصعود أو نزول الركاب\n- استعمال الشريط المركزي (الوقوف أو التوقف فيه)\n- نصف الدورة وعبور الشريط المركزي\n- الرجوع إلى الخلف\n- السير على شريط التوقف العاجل\n- الوقوف في مسالك الإغاثة (إلا عند عطب الفرامل)\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1687174124237.png\" class=\"big\"> المناورات الممنوعة\n\n## 🚨 7. الوقوف الاستعجالي (Arrêt d'urgence)\n- مسموح فقط: حادثة، عطب يفرض الوقوف الفوري، عدم القدرة على السياقة\n- أعلن عن وقوفك (Warning + المثلث)\n- أنزل الركاب من الجهة اليمنى\n- انتظر المساعدة وراء حاجز الحماية\n- ممنوع القيام بإصلاحات مهمة على شريط التوقف العاجل\n\n## ☕ 8. محطة الاستراحة والأداء (Aires et péage)\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1682005413722.png\"> **محطة للتزود بالوقود مفتوحة 7/7 و24/24**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1682005413743.png\"> **مطعم**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1682005413760.png\"> **ألعاب الأطفال**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1682005413775.png\"> **محل بيع المشروبات ومقهى**\n- محطة الأداء: خفف حسب العلامات + اختر المسلك المفتوح وطريقة الأداء\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1686914511072.png\"> **إعلان عن مكان الأداء**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1686914521894.png\"> **إعلان عن الأداء بواسطة القطع النقدية**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1689150593498.png\"> **إعلان عن الأداء بواسطة بطاقة الاشتراك**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1682005413839.png\"> **إعلان عن الأداء بواسطة الدفع المسبق**\n\n## 🧱 9. مسلك الإغاثة (Voie de détresse)\n- في المنحدرات، لإيقاف المركبات عند عطب الفرامل\n- مربعات حمراء وبيضاء + صهريج مملوء بالرمال\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1686914556569.png\"> **مسلك الإغاثة على اليمين**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1686914569963.png\"> **مسلك الإغاثة على اليسار**\n\n## ↘️ 10. الخروج (Sortie)\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1682005413903.png\"> **لوحة للتشوير المسبق لخروج من الطريق السيار**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1682005413918.png\"> **نهاية الطريق السيار**\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1682005413935.png\"> **لوحة للتشوير المسبق لانشعاب الطريق السيار**\n- انتقل إلى المسلك الأيمن مبكرا ← أنهِ المناورة قبل بداية مسلك الخروج\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1686923365675.png\" class=\"big\"> مثال لمنفذ الخروج\n\n## 📢 11. المخالفات والجنح (Infractions)\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1703256285356.png\" class=\"big\"> المخالفات المتعلقة بالطريق السيار\n- <img src=\"../../inputs/02_regles_circulation/11_autoroute/images/1694166315779.png\" class=\"big\"> الجنح المتعلقة بالطريق السيار\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- الأسبقية دائما لمن هو في الطريق السيار، وليس لمن يندمج\n- فاتك المخرج ← المخرج الموالي (لا رجوع، لا نصف دورة)\n- عطب ← Warning + سترة عاكسة + اخرج من الجهة اليمنى + وراء الحاجز\n- 120 / 100 / 90 / 80 حسب الوزن\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- السرعة الدنيا 60 كلم/س ← الجرار والدراجة بمحرك ممنوعان\n- دروس السياقة ممنوعة في الطريق السيار\n- الوقوف لإنزال راكب على شريط التوقف العاجل ممنوع\n- الاستراحة: كل ساعتين في المحطات وليس على الشريط\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1908 @@
+[
+  {
+    "id": "01_principes_securite-01",
+    "t": "01_principes_securite",
+    "q": "Pour un conducteur en état normal, le temps de réaction moyen est d'environ :",
+    "qa": "بالنسبة لسائق في حالة عادية، متوسط زمن رد الفعل هو حوالي :",
+    "o": [
+      "0,5 seconde",
+      "1 seconde",
+      "3 secondes",
+      "5 secondes"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Entre le moment où l'on voit le danger et celui où l'on appuie sur la pédale de frein, il s'écoule en moyenne 1 seconde. Ce temps s'allonge avec la fatigue, l'alcool, les médicaments ou le téléphone.",
+    "r": "Temps de réaction moyen = 1 seconde."
+  },
+  {
+    "id": "01_principes_securite-02",
+    "t": "01_principes_securite",
+    "q": "Quelle est la dernière étape du temps de réaction ?",
+    "qa": "ما هي المرحلة الأخيرة من زمن رد الفعل ؟",
+    "o": [
+      "Voir le signal (رؤية الإشارة)",
+      "Analyser le signal (تحليل الإشارة)",
+      "Appuyer sur la pédale de frein (الضغط على دواسة الحصر)",
+      "L'arrêt complet du véhicule"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le temps de réaction comprend 3 étapes : voir le signal, l'analyser, puis appuyer sur la pédale de frein. L'arrêt complet vient plus tard, à la fin de la distance de freinage.",
+    "r": "Voir → analyser → appuyer sur le frein."
+  },
+  {
+    "id": "01_principes_securite-03",
+    "t": "01_principes_securite",
+    "q": "Quels éléments allongent le temps de réaction du conducteur ?",
+    "qa": "ما هي العناصر التي تطيل زمن رد الفعل لدى السائق ؟",
+    "o": [
+      "Garder le pied face à la pédale de frein (conduite anticipée)",
+      "La fatigue",
+      "L'alcool",
+      "L'utilisation du téléphone"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "La fatigue, l'alcool, les médicaments et le téléphone allongent le temps de réaction. À l'inverse, l'anticipation (pied face à la pédale de frein) le ramène sous la seconde.",
+    "r": "Fatigue, alcool, médicaments, téléphone = réaction plus lente."
+  },
+  {
+    "id": "01_principes_securite-04",
+    "t": "01_principes_securite",
+    "q": "À 90 km/h, quelle distance parcourt-on pendant le temps de réaction, avant même de freiner ?",
+    "qa": "بسرعة 90 كلم/س، ما هي المسافة المقطوعة خلال زمن رد الفعل قبل أي فرملة ؟",
+    "o": [
+      "27 m",
+      "45 m",
+      "54 m",
+      "81 m"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Distance de réaction = (V ÷ 10) × 3, soit 9 × 3 = 27 m parcourus sans aucun freinage. 81 m est la distance d'arrêt totale à 90 km/h.",
+    "r": "Distance de réaction = (V ÷ 10) × 3.",
+    "s": "distance"
+  },
+  {
+    "id": "01_principes_securite-05",
+    "t": "01_principes_securite",
+    "q": "Véhicule à l'arrêt, le champ visuel d'un conducteur est d'environ :",
+    "qa": "عندما تكون المركبة متوقفة، مجال الرؤية لدى السائق هو حوالي :",
+    "o": [
+      "180° à l'horizontale et 120° à la verticale",
+      "120° à l'horizontale et 180° à la verticale",
+      "90° à l'horizontale et 60° à la verticale",
+      "360° à l'horizontale et 180° à la verticale"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le champ visuel direct couvre environ 180° horizontalement et 120° verticalement. Seul le centre est précis ; les bords sont flous.",
+    "r": "Champ visuel : 180° horizontal, 120° vertical."
+  },
+  {
+    "id": "01_principes_securite-06",
+    "t": "01_principes_securite",
+    "q": "Quand la vitesse augmente, le champ visuel du conducteur :",
+    "qa": "عندما تزداد السرعة، فإن مجال رؤية السائق :",
+    "o": [
+      "S'élargit",
+      "Reste identique",
+      "Ne change que la nuit",
+      "Se rétrécit (vision tunnel)"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Plus on roule vite, plus le champ visuel se rétrécit : c'est la « vision tunnel ». Croire que la vitesse l'élargit est un piège classique.",
+    "r": "Vitesse ↑ = champ visuel ↓ (vision tunnel)."
+  },
+  {
+    "id": "01_principes_securite-07",
+    "t": "01_principes_securite",
+    "q": "Quels angles morts existent autour d'une voiture ?",
+    "qa": "ما هي الزوايا الميتة الموجودة حول السيارة ؟",
+    "o": [
+      "Arrière",
+      "Aucun, si les rétroviseurs sont bien réglés",
+      "Avant, à cause des montants du pare-brise",
+      "Latéraux (à droite et à gauche)"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Il existe des angles morts avant (montants du pare-brise), latéraux et arrière. L'angle mort ne se voit pas dans les rétroviseurs, même bien réglés.",
+    "r": "Angles morts : avant, latéraux, arrière."
+  },
+  {
+    "id": "01_principes_securite-08",
+    "t": "01_principes_securite",
+    "q": "Avant de changer de voie, que devez-vous faire ?",
+    "qa": "قبل تغيير المسلك، ماذا يجب عليك أن تفعل ؟",
+    "o": [
+      "Regarder uniquement le rétroviseur intérieur",
+      "Regarder les rétroviseurs puis tourner la tête pour contrôler l'angle mort",
+      "Klaxonner puis changer de voie",
+      "Changer de voie rapidement pour gêner le moins possible"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les rétroviseurs donnent une vision indirecte, moins précise, et ne montrent pas l'angle mort. Il faut donc tourner la tête avant chaque changement de voie.",
+    "r": "Rétroviseurs puis tourner la tête avant de changer de voie."
+  },
+  {
+    "id": "01_principes_securite-09",
+    "t": "01_principes_securite",
+    "q": "Si la vitesse double, l'énergie cinétique du véhicule est multipliée par :",
+    "qa": "إذا تضاعفت السرعة، فإن الطاقة الحركية للمركبة تُضرب في :",
+    "o": [
+      "2",
+      "3",
+      "4",
+      "8"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'énergie cinétique est proportionnelle au carré de la vitesse : 2² = 4. Rouler deux fois plus vite rend le choc quatre fois plus violent.",
+    "r": "Vitesse × 2 = énergie × 4.",
+    "s": "energie"
+  },
+  {
+    "id": "01_principes_securite-10",
+    "t": "01_principes_securite",
+    "q": "Une voiture de 2000 kg possède environ 277,5 kJ d'énergie cinétique à 60 km/h. À 120 km/h, elle en possède environ :",
+    "qa": "سيارة كتلتها 2000 كلغ لها طاقة حركية تقارب 277.5 كيلوجول بسرعة 60 كلم/س. بسرعة 120 كلم/س تصبح طاقتها حوالي :",
+    "o": [
+      "555 kJ",
+      "1110 kJ",
+      "1665 kJ",
+      "2220 kJ"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La vitesse double (60 → 120 km/h), donc l'énergie est multipliée par 4 : 277,5 × 4 ≈ 1110 kJ. 555 kJ correspondrait à tort à une simple multiplication par 2.",
+    "r": "60 → 120 km/h : énergie × 4.",
+    "s": "energie"
+  },
+  {
+    "id": "01_principes_securite-11",
+    "t": "01_principes_securite",
+    "q": "Un choc à 50 km/h équivaut approximativement à une chute :",
+    "qa": "الاصطدام بسرعة 50 كلم/س يعادل تقريبا السقوط من :",
+    "o": [
+      "Du 1er étage",
+      "Du 2e étage",
+      "Du 3e étage",
+      "Du 10e étage"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Un choc à 50 km/h correspond à peu près à une chute du 3e étage. Même à vitesse urbaine, un choc est donc très grave.",
+    "r": "Choc à 50 km/h ≈ chute du 3e étage.",
+    "s": "energie"
+  },
+  {
+    "id": "01_principes_securite-12",
+    "t": "01_principes_securite",
+    "q": "Un piéton percuté à 30 km/h a environ combien de chances de survie ?",
+    "qa": "ما هي تقريبا نسبة نجاة راجل صدمته مركبة بسرعة 30 كلم/س ؟",
+    "o": [
+      "20 %",
+      "50 %",
+      "70 %",
+      "90 %"
+    ],
+    "a": [
+      3
+    ],
+    "e": "À 30 km/h, environ 90 % des piétons survivent ; à 50 km/h, 50 % ; à 60 km/h, seulement 20 %.",
+    "r": "Piéton : 30 km/h = 90 % / 50 = 50 % / 60 = 20 % de survie."
+  },
+  {
+    "id": "01_principes_securite-13",
+    "t": "01_principes_securite",
+    "q": "Un piéton percuté à 60 km/h a environ combien de chances de survie ?",
+    "qa": "ما هي تقريبا نسبة نجاة راجل صدمته مركبة بسرعة 60 كلم/س ؟",
+    "o": [
+      "20 %",
+      "50 %",
+      "80 %",
+      "90 %"
+    ],
+    "a": [
+      0
+    ],
+    "e": "À 60 km/h, seulement 20 % des piétons survivent, contre 90 % à 30 km/h. Quelques km/h de plus changent tout.",
+    "r": "Piéton percuté à 60 km/h : 20 % de survie seulement."
+  },
+  {
+    "id": "01_principes_securite-14",
+    "t": "01_principes_securite",
+    "q": "Lors d'une collision, quel est le 3e choc ?",
+    "qa": "عند وقوع اصطدام، ما هو الاصطدام الثالث ؟",
+    "o": [
+      "Les organes internes contre le corps",
+      "Le véhicule contre l'obstacle",
+      "Le corps contre l'avant du véhicule",
+      "Le véhicule suiveur contre l'arrière"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Il y a trois chocs successifs : 1) le véhicule contre l'obstacle, 2) le corps contre l'avant du véhicule, 3) les organes internes contre le corps.",
+    "r": "3 chocs : véhicule, corps, organes internes."
+  },
+  {
+    "id": "01_principes_securite-15",
+    "t": "01_principes_securite",
+    "q": "La distance de sécurité minimale avec le véhicule qui précède correspond à :",
+    "qa": "الحد الأدنى لمسافة الأمان مع المركبة التي أمامك هو :",
+    "o": [
+      "Une demi-seconde",
+      "1 seconde",
+      "2 secondes",
+      "4 secondes"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Il faut garder au moins 2 secondes avec le véhicule de devant. Astuce : compter « mille un, mille deux » après son passage devant un repère.",
+    "r": "Distance de sécurité = au moins 2 secondes.",
+    "s": "distance"
+  },
+  {
+    "id": "01_principes_securite-16",
+    "t": "01_principes_securite",
+    "q": "La vitesse à adopter est :",
+    "qa": "السرعة التي يجب اعتمادها هي :",
+    "o": [
+      "Une vitesse adaptée aux conditions, sans dépasser la limite autorisée",
+      "Toujours la vitesse maximale autorisée",
+      "Celle des autres véhicules",
+      "N'importe laquelle si la route est déserte"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La règle d'or est une vitesse adaptée aux conditions (météo, trafic, visibilité), et pas seulement la vitesse permise. La limite est un maximum, pas un objectif.",
+    "r": "Vitesse adaptée aux conditions, pas seulement autorisée."
+  },
+  {
+    "id": "01_principes_securite-17",
+    "t": "01_principes_securite",
+    "q": "Le port de la ceinture de sécurité aux places arrière est :",
+    "qa": "ربط حزام السلامة في المقاعد الخلفية :",
+    "o": [
+      "Facultatif",
+      "Obligatoire seulement sur autoroute",
+      "Obligatoire seulement hors agglomération",
+      "Obligatoire"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La ceinture est obligatoire pour tous les occupants, à l'avant comme à l'arrière. La croire facultative à l'arrière est un piège classique.",
+    "r": "Ceinture obligatoire à l'avant ET à l'arrière."
+  },
+  {
+    "id": "01_principes_securite-18",
+    "t": "01_principes_securite",
+    "q": "La conduite défensive consiste à :",
+    "qa": "السياقة الدفاعية تعني :",
+    "o": [
+      "Rouler vite pour s'éloigner des dangers",
+      "Anticiper les erreurs des autres usagers",
+      "Klaxonner à chaque intersection",
+      "Toujours imposer sa priorité"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Conduire de façon défensive, c'est prévoir les erreurs possibles des autres : un ballon près de la route annonce un enfant, un bus arrêté peut cacher des piétons.",
+    "r": "Conduite défensive = anticiper les erreurs des autres."
+  },
+  {
+    "id": "01_principes_securite-19",
+    "t": "01_principes_securite",
+    "q": "Vrai ou faux : sur une route mouillée, le temps de réaction du conducteur est plus long.",
+    "qa": "صحيح أم خطأ : على طريق مبللة يكون زمن رد الفعل لدى السائق أطول.",
+    "o": [
+      "Vrai (صحيح)",
+      "Faux (خطأ)"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le temps de réaction dépend de l'état du conducteur, pas de la route. Sur route mouillée, c'est la distance de freinage qui augmente.",
+    "r": "Route mouillée : freinage ↑, temps de réaction inchangé."
+  },
+  {
+    "id": "01_principes_securite-20",
+    "t": "01_principes_securite",
+    "q": "Pourquoi une vitesse élevée augmente-t-elle le danger ?",
+    "qa": "لماذا تزيد السرعة المرتفعة من الخطر ؟",
+    "o": [
+      "Le champ visuel se rétrécit",
+      "La distance parcourue pendant le temps de réaction augmente",
+      "Le temps de réaction diminue",
+      "L'énergie du choc augmente fortement"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "À vitesse élevée, la vision se rétrécit, on parcourt plus de mètres pendant la seconde de réaction et l'énergie du choc croît avec le carré de la vitesse. Le temps de réaction, lui, ne diminue pas.",
+    "r": "Vitesse ↑ : vision ↓, distances ↑, énergie ↑↑."
+  },
+  {
+    "id": "02_distance_arret-02",
+    "t": "02_distance_arret",
+    "q": "Sur route sèche, à 90 km/h, la distance d'arrêt est d'environ :",
+    "qa": "على طريق جافة، بسرعة 90 كلم/س، مسافة الوقوف هي حوالي :",
+    "o": [
+      "54 m",
+      "81 m",
+      "90 m",
+      "108 m"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Distance d'arrêt = (V ÷ 10)² = 9 × 9 = 81 m (27 m de réaction + 54 m de freinage). Le piège est de répondre 90 m.",
+    "r": "90 km/h → arrêt 81 m, pas 90 m.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-03",
+    "t": "02_distance_arret",
+    "q": "Sur route sèche, à 120 km/h, la distance d'arrêt est d'environ :",
+    "qa": "على طريق جافة، بسرعة 120 كلم/س، مسافة الوقوف هي حوالي :",
+    "o": [
+      "108 m",
+      "120 m",
+      "132 m",
+      "144 m"
+    ],
+    "a": [
+      3
+    ],
+    "e": "12 × 12 = 144 m : 36 m de réaction + 108 m de freinage. 108 m n'est que la distance de freinage.",
+    "r": "120 km/h → arrêt 144 m (36 + 108).",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-04",
+    "t": "02_distance_arret",
+    "q": "À 120 km/h, la distance de réaction est d'environ :",
+    "qa": "بسرعة 120 كلم/س، مسافة رد الفعل هي حوالي :",
+    "o": [
+      "12 m",
+      "24 m",
+      "36 m",
+      "72 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Distance de réaction = (V ÷ 10) × 3 = 12 × 3 = 36 m. 72 m correspond à la distance de sécurité (12 × 6).",
+    "r": "Réaction = dizaine × 3 ; sécurité = dizaine × 6.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-05",
+    "t": "02_distance_arret",
+    "q": "À 60 km/h, la distance de réaction est d'environ :",
+    "qa": "بسرعة 60 كلم/س، مسافة رد الفعل هي حوالي :",
+    "o": [
+      "18 m",
+      "24 m",
+      "36 m",
+      "60 m"
+    ],
+    "a": [
+      0
+    ],
+    "e": "6 × 3 = 18 m. À 60 km/h, la distance d'arrêt de 36 m se partage en 18 m de réaction et 18 m de freinage.",
+    "r": "60 km/h : réaction 18 m + freinage 18 m = 36 m.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-06",
+    "t": "02_distance_arret",
+    "q": "Sur route sèche, à 90 km/h, la distance de freinage est d'environ :",
+    "qa": "على طريق جافة، بسرعة 90 كلم/س، مسافة الحصر هي حوالي :",
+    "o": [
+      "27 m",
+      "45 m",
+      "54 m",
+      "81 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Freinage = arrêt − réaction = 81 − 27 = 54 m. 27 m est la distance de réaction et 81 m la distance d'arrêt totale.",
+    "r": "Freinage = arrêt − réaction (81 − 27 = 54 m).",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-07",
+    "t": "02_distance_arret",
+    "q": "Sur route sèche, à 100 km/h, la distance de freinage est d'environ :",
+    "qa": "على طريق جافة، بسرعة 100 كلم/س، مسافة الحصر هي حوالي :",
+    "o": [
+      "30 m",
+      "50 m",
+      "60 m",
+      "70 m"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Arrêt = 10 × 10 = 100 m ; réaction = 10 × 3 = 30 m ; freinage = 100 − 30 = 70 m. 60 m est la distance de sécurité.",
+    "r": "100 km/h : 30 m + 70 m = 100 m.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-08",
+    "t": "02_distance_arret",
+    "q": "Sur route sèche, à 80 km/h, la distance d'arrêt est d'environ :",
+    "qa": "على طريق جافة، بسرعة 80 كلم/س، مسافة الوقوف هي حوالي :",
+    "o": [
+      "40 m",
+      "48 m",
+      "64 m",
+      "80 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "8 × 8 = 64 m, soit 24 m de réaction + 40 m de freinage. 48 m est la distance de sécurité (8 × 6).",
+    "r": "80 km/h → arrêt 64 m (24 + 40).",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-09",
+    "t": "02_distance_arret",
+    "q": "Sur route sèche, à 50 km/h, la distance d'arrêt est d'environ :",
+    "qa": "على طريق جافة، بسرعة 50 كلم/س، مسافة الوقوف هي حوالي :",
+    "o": [
+      "25 m",
+      "30 m",
+      "35 m",
+      "50 m"
+    ],
+    "a": [
+      0
+    ],
+    "e": "5 × 5 = 25 m : 15 m de réaction + 10 m de freinage. 35 m serait la distance d'arrêt sur route mouillée.",
+    "r": "50 km/h → arrêt 25 m (15 + 10).",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-10",
+    "t": "02_distance_arret",
+    "q": "Sur route mouillée, à 90 km/h, la distance d'arrêt est d'environ :",
+    "qa": "على طريق مبللة، بسرعة 90 كلم/س، مسافة الوقوف هي حوالي :",
+    "o": [
+      "135 m",
+      "81 m",
+      "108 m",
+      "162 m"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Sur route mouillée, seule la distance de freinage double : 27 m de réaction + 54 × 2 = 108 m de freinage, soit 135 m. 162 m est faux car la distance de réaction ne double pas.",
+    "r": "Route mouillée : on double le freinage, pas la réaction.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-11",
+    "t": "02_distance_arret",
+    "q": "Sur route mouillée, à 50 km/h, la distance d'arrêt est d'environ :",
+    "qa": "على طريق مبللة، بسرعة 50 كلم/س، مسافة الوقوف هي حوالي :",
+    "o": [
+      "20 m",
+      "25 m",
+      "30 m",
+      "35 m"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Réaction 15 m (inchangée) + freinage 10 × 2 = 20 m, soit 35 m. 25 m est la distance d'arrêt sur route sèche.",
+    "r": "50 km/h mouillé : 15 + 20 = 35 m.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-12",
+    "t": "02_distance_arret",
+    "q": "Sur route mouillée, à 120 km/h, la distance d'arrêt est d'environ :",
+    "qa": "على طريق مبللة، بسرعة 120 كلم/س، مسافة الوقوف هي حوالي :",
+    "o": [
+      "144 m",
+      "216 m",
+      "252 m",
+      "288 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Réaction 36 m + freinage 108 × 2 = 216 m, soit 252 m. 216 m n'est que la distance de freinage, et 288 m double à tort aussi la réaction.",
+    "r": "120 km/h mouillé : 36 + 216 = 252 m.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-13",
+    "t": "02_distance_arret",
+    "q": "Sur route mouillée, quelle distance est multipliée par 2 ?",
+    "qa": "على طريق مبللة، ما هي المسافة التي تتضاعف ؟",
+    "o": [
+      "Toute la distance d'arrêt (réaction + freinage)",
+      "Le temps de réaction",
+      "La distance de réaction",
+      "La distance de freinage"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Dès les premières gouttes de pluie, l'adhérence baisse de moitié et la distance de freinage double. Le temps et la distance de réaction ne dépendent pas de la route.",
+    "r": "Pluie = distance de freinage × 2.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-14",
+    "t": "02_distance_arret",
+    "q": "Si la vitesse double, la distance d'arrêt est multipliée environ par :",
+    "qa": "إذا تضاعفت السرعة، فإن مسافة الوقوف تُضرب تقريبا في :",
+    "o": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La distance d'arrêt suit le carré de la vitesse, (V ÷ 10)². Exemple : 60 km/h → 36 m et 120 km/h → 144 m, soit 4 fois plus.",
+    "r": "Vitesse × 2 = distance d'arrêt × 4.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-15",
+    "t": "02_distance_arret",
+    "q": "Le système ABS :",
+    "qa": "نظام ABS (النظام المضاد لحصر العجلات) :",
+    "o": [
+      "Réduit la distance de freinage",
+      "Supprime le temps de réaction",
+      "Double l'adhérence sur route mouillée",
+      "Empêche le blocage des roues et permet de garder la direction"
+    ],
+    "a": [
+      3
+    ],
+    "e": "L'ABS empêche les roues de se bloquer lors d'un freinage fort, ce qui permet de freiner et de diriger en même temps. Il ne réduit pas la distance de freinage.",
+    "r": "ABS = garder la direction, pas freiner plus court."
+  },
+  {
+    "id": "02_distance_arret-16",
+    "t": "02_distance_arret",
+    "q": "Quels facteurs allongent la distance de freinage ?",
+    "qa": "ما هي العوامل التي تطيل مسافة الحصر ؟",
+    "o": [
+      "Des pneus usés",
+      "Une route mouillée",
+      "La fatigue du conducteur",
+      "Une vitesse élevée"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "La distance de freinage dépend de la vitesse, des freins et des pneus, de l'adhérence de la route, de la météo, de la charge et de la pente. La fatigue allonge la distance de réaction, pas celle de freinage.",
+    "r": "Freinage : vitesse, pneus, freins, route, météo, charge.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-17",
+    "t": "02_distance_arret",
+    "q": "Sur route sèche, à 80 km/h, la distance de freinage est d'environ :",
+    "qa": "على طريق جافة، بسرعة 80 كلم/س، مسافة الحصر هي حوالي :",
+    "o": [
+      "24 m",
+      "40 m",
+      "48 m",
+      "64 m"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Freinage = arrêt − réaction = 64 − 24 = 40 m. 24 m est la distance de réaction et 48 m la distance de sécurité.",
+    "r": "80 km/h : réaction 24 m + freinage 40 m.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-18",
+    "t": "02_distance_arret",
+    "q": "Pourquoi la distance de sécurité (2 secondes) peut-elle être plus courte que la distance d'arrêt ?",
+    "qa": "لماذا يمكن أن تكون مسافة الأمان (ثانيتان) أقل من مسافة الوقوف ؟",
+    "o": [
+      "Parce que le véhicule de devant freine lui aussi",
+      "Parce que l'ABS supprime la distance de freinage",
+      "Parce que le temps de réaction est nul en ville",
+      "Ce n'est jamais le cas"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La distance de sécurité (dizaine × 6) est plus courte que la distance d'arrêt, car le véhicule qui précède freine aussi et ne s'arrête pas net. Exemple à 90 km/h : 54 m de sécurité pour 81 m d'arrêt.",
+    "r": "Sécurité < arrêt, car celui de devant freine aussi.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-19",
+    "t": "02_distance_arret",
+    "q": "Avec la formule (V ÷ 10)², quelle est la distance d'arrêt à 70 km/h sur route sèche ?",
+    "qa": "باستعمال المعادلة (V ÷ 10)²، ما هي مسافة الوقوف بسرعة 70 كلم/س على طريق جافة ؟",
+    "o": [
+      "49 m",
+      "21 m",
+      "42 m",
+      "70 m"
+    ],
+    "a": [
+      0
+    ],
+    "e": "7 × 7 = 49 m, dont 7 × 3 = 21 m de réaction. 42 m correspond à la distance de sécurité (7 × 6).",
+    "r": "Arrêt = chiffre des dizaines au carré.",
+    "s": "distance"
+  },
+  {
+    "id": "02_distance_arret-20",
+    "t": "02_distance_arret",
+    "q": "À 40 km/h, la distance d'arrêt réelle est d'environ :",
+    "qa": "بسرعة 40 كلم/س، ما هي مسافة الوقوف الحقيقية تقريبا ؟",
+    "o": [
+      "8 m",
+      "12 m",
+      "16 m",
+      "20 m"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La formule (V ÷ 10)² n'est pas valable sous 50 km/h. À 40 km/h : 12 m de réaction + 8 m de freinage = 20 m, et non 16 m.",
+    "r": "Sous 50 km/h, la formule (V ÷ 10)² ne s'applique pas.",
+    "s": "distance"
+  },
+  {
+    "id": "03_perte_controle-02",
+    "t": "03_perte_controle",
+    "q": "Quels éléments augmentent la force centrifuge dans un virage ?",
+    "qa": "ما هي العناصر التي تزيد من القوة النابذة في المنعرج ؟",
+    "o": [
+      "Un virage large (grand rayon)",
+      "Une vitesse élevée",
+      "Un véhicule lourdement chargé",
+      "Un virage serré (petit rayon)"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "La force centrifuge augmente avec la vitesse et le poids, et quand le rayon du virage diminue. Virage serré + vitesse élevée + charge lourde = force centrifuge maximale.",
+    "r": "Vitesse ↑ + poids ↑ + virage serré = danger maximal.",
+    "img": "1684317709226.png"
+  },
+  {
+    "id": "03_perte_controle-03",
+    "t": "03_perte_controle",
+    "q": "À l'approche d'un virage, quand faut-il ralentir ?",
+    "qa": "عند الاقتراب من منعرج، متى يجب تخفيف السرعة ؟",
+    "o": [
+      "Au milieu du virage, en freinant fort",
+      "Avant d'entrer dans le virage",
+      "À la sortie du virage",
+      "Ce n'est pas nécessaire si la voiture a l'ESP"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On ralentit avant le virage, puis on accélère doucement à la sortie. Un freinage fort dans le virage risque de provoquer un dérapage.",
+    "r": "Ralentir AVANT le virage, jamais dedans."
+  },
+  {
+    "id": "03_perte_controle-04",
+    "t": "03_perte_controle",
+    "q": "Quels éléments favorisent l'aquaplanage (الانزلاق المائي) ?",
+    "qa": "ما هي العناصر التي تساعد على حدوث الانزلاق المائي ؟",
+    "o": [
+      "Une vitesse élevée",
+      "Des pneus usés",
+      "L'utilisation du frein moteur",
+      "Une couche d'eau sur la chaussée"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Quand les rainures des pneus ne peuvent plus évacuer l'eau, le pneu flotte sur l'eau. Le risque augmente avec la vitesse et l'usure des pneus.",
+    "r": "Aquaplanage = eau + vitesse + pneus usés.",
+    "img": "1684315344513.png"
+  },
+  {
+    "id": "03_perte_controle-05",
+    "t": "03_perte_controle",
+    "q": "Sous la pluie, le volant devient soudain très léger. Il s'agit probablement :",
+    "qa": "تحت المطر، أصبح المقود فجأة خفيفا جدا. يتعلق الأمر غالبا بـ :",
+    "o": [
+      "D'une crevaison à l'arrière",
+      "D'une panne de freins",
+      "D'un vent latéral",
+      "D'un aquaplanage"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Un volant soudain léger sous la pluie est le signe typique de l'aquaplanage : les pneus flottent sur l'eau et ne tiennent plus la route.",
+    "r": "Volant soudain léger sous la pluie = aquaplanage."
+  },
+  {
+    "id": "03_perte_controle-06",
+    "t": "03_perte_controle",
+    "q": "En situation d'aquaplanage, que devez-vous faire ?",
+    "qa": "في حالة الانزلاق المائي، ماذا يجب عليك أن تفعل ؟",
+    "o": [
+      "Freiner fortement",
+      "Accélérer pour traverser la nappe d'eau",
+      "Lever le pied de l'accélérateur sans freiner",
+      "Donner un coup de volant"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Il faut lever le pied de l'accélérateur et ne pas freiner, pour laisser les pneus retrouver le contact avec la route. Un freinage ou un geste brusque au volant aggrave la perte de contrôle.",
+    "r": "Aquaplanage : lever le pied, ne pas freiner."
+  },
+  {
+    "id": "03_perte_controle-07",
+    "t": "03_perte_controle",
+    "q": "En cas de dérapage, quelles réactions sont correctes ?",
+    "qa": "في حالة انزلاق المركبة، ما هي ردود الفعل الصحيحة ؟",
+    "o": [
+      "Ne pas freiner",
+      "Freiner à fond pour stopper la glissade",
+      "Ne pas accélérer ni débrayer",
+      "Tourner doucement le volant du côté où glisse l'arrière"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "En dérapage : ni frein, ni accélérateur, ni embrayage ; on oriente doucement le volant du côté où part l'arrière, en regardant où l'on veut aller. Le freinage fort est la pire réaction.",
+    "r": "Dérapage : ni frein, ni accélérateur, ni embrayage."
+  },
+  {
+    "id": "03_perte_controle-08",
+    "t": "03_perte_controle",
+    "q": "L'arrière de votre voiture glisse vers la droite (survirage). Vous tournez le volant :",
+    "qa": "مؤخر سيارتك ينزلق نحو اليمين. تدير المقود :",
+    "o": [
+      "Brusquement vers la gauche",
+      "Doucement vers la droite",
+      "Vers la gauche en accélérant",
+      "Vous bloquez le volant et freinez"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On oriente doucement le volant du côté où l'arrière a glissé, ici vers la droite, sans freiner. Un coup de volant brusque ou un freinage aggrave le dérapage.",
+    "r": "Arrière qui glisse à droite → volant doucement à droite."
+  },
+  {
+    "id": "03_perte_controle-09",
+    "t": "03_perte_controle",
+    "q": "En cas de perte de contrôle, où devez-vous regarder ?",
+    "qa": "عند فقدان السيطرة على المركبة، إلى أين يجب أن تنظر ؟",
+    "o": [
+      "L'endroit où vous voulez aller",
+      "L'obstacle à éviter",
+      "Le compteur de vitesse",
+      "Le rétroviseur intérieur"
+    ],
+    "a": [
+      0
+    ],
+    "e": "« Les yeux guident les mains » : il faut regarder la sortie, là où l'on veut aller, et non l'obstacle.",
+    "r": "Regarder la sortie, pas l'obstacle."
+  },
+  {
+    "id": "03_perte_controle-10",
+    "t": "03_perte_controle",
+    "q": "Sur le verglas, votre véhicule commence à glisser. Pour ralentir, vous utilisez :",
+    "qa": "على الجليد، بدأت مركبتك تنزلق. لتخفيف السرعة تستعمل :",
+    "o": [
+      "Un freinage d'urgence",
+      "Le frein à main",
+      "Le point mort",
+      "Le frein moteur (حصار المحرك)"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Sur le verglas, appuyer sur les freins est l'erreur : on utilise le frein moteur en rétrogradant en douceur.",
+    "r": "Verglas : frein moteur, pas les freins."
+  },
+  {
+    "id": "03_perte_controle-11",
+    "t": "03_perte_controle",
+    "q": "Un pneu éclate en roulant. Quelles réactions sont correctes ?",
+    "qa": "انفجر إطار أثناء السير. ما هي ردود الفعل الصحيحة ؟",
+    "o": [
+      "Tenir fermement le volant",
+      "Freiner fortement",
+      "Lever progressivement le pied de l'accélérateur",
+      "S'arrêter immédiatement au milieu de la chaussée"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Il faut tenir fermement le volant, ne pas freiner (risque de tête-à-queue) et lever le pied de l'accélérateur progressivement. Il ne faut pas s'arrêter brusquement au milieu de la route.",
+    "r": "Éclatement : tenir le volant, lever le pied, sans freiner."
+  },
+  {
+    "id": "03_perte_controle-12",
+    "t": "03_perte_controle",
+    "q": "Après l'éclatement d'un pneu, où arrêtez-vous le véhicule ?",
+    "qa": "بعد انفجار الإطار، أين توقف المركبة ؟",
+    "o": [
+      "Immédiatement sur la voie où vous êtes",
+      "Sur la voie de gauche",
+      "Progressivement à droite, dans un endroit sûr, feux de détresse allumés",
+      "Vous continuez jusqu'au prochain garage"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Après avoir vérifié que la droite est libre, on dirige progressivement le véhicule vers le bord droit et on l'arrête dans un endroit sûr, feux de détresse (Warning) allumés.",
+    "r": "Éclatement : se ranger à droite en lieu sûr + Warning."
+  },
+  {
+    "id": "03_perte_controle-13",
+    "t": "03_perte_controle",
+    "q": "Vos freins ne fonctionnent plus. Que devez-vous faire ?",
+    "qa": "تعطلت الفرامل الرئيسية لمركبتك. ماذا يجب عليك أن تفعل ؟",
+    "o": [
+      "Passer au point mort",
+      "Rétrograder progressivement",
+      "Serrer progressivement le frein à main",
+      "Utiliser la voie de détresse si elle existe"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "En cas de panne de freins : rétrograder progressivement, serrer le frein à main progressivement (pas d'un coup), utiliser la voie de détresse et avertir avec le klaxon et les feux. Le point mort fait perdre le contrôle.",
+    "r": "Panne de freins : rétrograder + frein à main progressif."
+  },
+  {
+    "id": "03_perte_controle-15",
+    "t": "03_perte_controle",
+    "q": "La profondeur minimale des rainures (nervures) d'un pneu est de :",
+    "qa": "العمق الأدنى لنقوش الإطار هو :",
+    "o": [
+      "0,8 mm",
+      "1 mm",
+      "1,6 mm",
+      "3 mm"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les rainures doivent mesurer au moins 1,6 mm. Des pneus usés évacuent mal l'eau et augmentent le risque d'aquaplanage ; en dessous de ce seuil, il faut les remplacer.",
+    "r": "Rainures des pneus ≥ 1,6 mm."
+  },
+  {
+    "id": "03_perte_controle-16",
+    "t": "03_perte_controle",
+    "q": "L'ESP (correcteur électronique de trajectoire) :",
+    "qa": "نظام ESP (مصحح المسار الإلكتروني) :",
+    "o": [
+      "Corrige la trajectoire, notamment dans les virages",
+      "Permet de prendre les virages plus vite sans risque",
+      "Remplace la vigilance du conducteur",
+      "Réduit la distance d'arrêt de moitié"
+    ],
+    "a": [
+      0
+    ],
+    "e": "L'ESP réduit l'effet de la force centrifuge et corrige la trajectoire dans les virages. Comme l'ABS, il aide mais ne remplace pas le conducteur.",
+    "r": "ESP et ABS aident mais ne remplacent pas le conducteur."
+  },
+  {
+    "id": "03_perte_controle-17",
+    "t": "03_perte_controle",
+    "q": "Quelles situations peuvent provoquer une perte de contrôle ?",
+    "qa": "ما هي الحالات التي قد تسبب فقدان السيطرة على المركبة ؟",
+    "o": [
+      "Une vitesse inadaptée dans un virage",
+      "Ralentir avant le virage",
+      "Un coup de volant brusque",
+      "Un fort vent latéral"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Vitesse inadaptée, mouvement brusque du volant ou freinage violent, route glissante (eau, gravillons, huile), éclatement de pneu ou fort vent latéral peuvent faire perdre le contrôle. Ralentir avant le virage est au contraire la bonne prévention.",
+    "r": "Vitesse, gestes brusques, route glissante, vent = danger."
+  },
+  {
+    "id": "03_perte_controle-18",
+    "t": "03_perte_controle",
+    "q": "Un fort vent latéral est particulièrement dangereux :",
+    "qa": "تكون الرياح الجانبية القوية خطيرة بشكل خاص :",
+    "o": [
+      "À la sortie d'un tunnel",
+      "Juste après avoir dépassé un camion",
+      "Dans un parking couvert",
+      "À l'arrêt à un feu rouge"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "Le vent latéral surprend surtout à la sortie d'un tunnel ou d'une forêt et après le dépassement d'un camion. Il faut alors ralentir et tenir fermement le volant.",
+    "r": "Vent latéral : sortie de tunnel, après un camion."
+  },
+  {
+    "id": "04_equipements_securite-01",
+    "t": "04_equipements_securite",
+    "q": "Quels sont les rôles de la ceinture de sécurité ?",
+    "qa": "ما هي أدوار حزام السلامة ؟",
+    "o": [
+      "Maintenir l'occupant dans son siège et ralentir son mouvement lors du choc",
+      "Empêcher l'éjection hors du véhicule",
+      "N'être utile que sur autoroute",
+      "Protéger du choc du corps contre le volant ou l'avant du véhicule"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "La ceinture maintient l'occupant, ralentit son mouvement et empêche son éjection ; elle protège du « 2e choc » (corps contre l'avant du véhicule). Elle est utile partout, même en ville.",
+    "r": "Ceinture : maintient, ralentit, empêche l'éjection."
+  },
+  {
+    "id": "04_equipements_securite-02",
+    "t": "04_equipements_securite",
+    "q": "Comment la ceinture doit-elle être placée ?",
+    "qa": "كيف يجب وضع حزام السلامة ؟",
+    "o": [
+      "Sur le cou et le ventre",
+      "Sous le bras pour plus de confort",
+      "Légèrement lâche pour pouvoir bouger",
+      "Sur la poitrine et les os du bassin, à plat et bien tendue"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La sangle passe sur la poitrine et sur les os du bassin, bien à plat et tendue. Une ceinture lâche ou mal placée protège mal.",
+    "r": "Ceinture : poitrine + bassin, à plat et tendue."
+  },
+  {
+    "id": "04_equipements_securite-03",
+    "t": "04_equipements_securite",
+    "q": "Vrai ou faux : pour un court trajet en ville, la ceinture n'est pas obligatoire.",
+    "qa": "صحيح أم خطأ : في مسافة قصيرة داخل المدينة، حزام السلامة غير إجباري.",
+    "o": [
+      "Vrai (صحيح)",
+      "Faux (خطأ)"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La ceinture est obligatoire pour tous, même pour les petits trajets et en ville. Un choc à 50 km/h équivaut déjà à une chute du 3e étage.",
+    "r": "Ceinture obligatoire même en ville et sur court trajet."
+  },
+  {
+    "id": "04_equipements_securite-04",
+    "t": "04_equipements_securite",
+    "q": "Quelles infractions entraînent le retrait de 1 point ?",
+    "qa": "ما هي المخالفات التي يترتب عنها خصم نقطة واحدة ؟",
+    "o": [
+      "Conduire une moto sans casque",
+      "Ne pas attacher sa ceinture",
+      "Transporter à l'avant un enfant de moins de 10 ans",
+      "Tenir son téléphone en main en conduisant"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Ceinture non attachée, enfant de moins de 10 ans à l'avant et téléphone tenu en main : 1 point chacun. La moto sans casque coûte 2 points.",
+    "r": "−1 point : ceinture, enfant < 10 ans devant, téléphone.",
+    "s": "points"
+  },
+  {
+    "id": "04_equipements_securite-05",
+    "t": "04_equipements_securite",
+    "q": "Le coussin gonflable de sécurité (airbag) :",
+    "qa": "الوسادة الهوائية (Airbag) :",
+    "o": [
+      "Remplace la ceinture de sécurité",
+      "Dispense les passagers avant de la ceinture",
+      "Ne remplace pas la ceinture : il s'utilise avec elle",
+      "Rend inutile le siège pour enfant"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'airbag ne remplace pas la ceinture : sans ceinture, le corps n'est pas retenu. Les deux équipements fonctionnent ensemble.",
+    "r": "L'airbag ne remplace jamais la ceinture."
+  },
+  {
+    "id": "04_equipements_securite-06",
+    "t": "04_equipements_securite",
+    "q": "Comment transporter un jeune enfant en voiture ?",
+    "qa": "كيف يجب نقل طفل صغير في السيارة ؟",
+    "o": [
+      "Dans un siège adapté, aux places arrière",
+      "Avec la ceinture adulte, à l'avant",
+      "Sur les genoux d'un passager avant",
+      "Sans attache, à l'arrière"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La ceinture normale n'est pas adaptée aux enfants : ils voyagent dans un siège adapté, à l'arrière. Un enfant sur les genoux d'un passager avant est dangereux et interdit.",
+    "r": "Enfant : siège adapté, à l'arrière."
+  },
+  {
+    "id": "04_equipements_securite-07",
+    "t": "04_equipements_securite",
+    "q": "Il est interdit d'installer sur le siège avant un enfant de moins de :",
+    "qa": "يمنع إجلاس طفل في المقعد الأمامي إذا كان سنه أقل من :",
+    "o": [
+      "8 ans",
+      "10 ans",
+      "12 ans",
+      "14 ans"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Un enfant de moins de 10 ans ne doit pas voyager à l'avant. L'infraction entraîne le retrait de 1 point.",
+    "r": "Moins de 10 ans = interdit à l'avant."
+  },
+  {
+    "id": "04_equipements_securite-08",
+    "t": "04_equipements_securite",
+    "q": "De quel côté les enfants doivent-ils descendre du véhicule ?",
+    "qa": "من أي جهة يجب أن ينزل الأطفال من المركبة ؟",
+    "o": [
+      "Côté chaussée",
+      "Par la portière du conducteur",
+      "Peu importe",
+      "Côté trottoir"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Les passagers, et surtout les enfants, descendent toujours du côté du trottoir, jamais du côté de la circulation.",
+    "r": "Enfants : descente côté trottoir."
+  },
+  {
+    "id": "04_equipements_securite-09",
+    "t": "04_equipements_securite",
+    "q": "L'appuie-tête (مسند الرأس) doit être réglé :",
+    "qa": "يجب ضبط مسند الرأس :",
+    "o": [
+      "Au niveau du cou",
+      "Le plus bas possible",
+      "Au niveau de la tête",
+      "Retiré pour mieux voir derrière"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'appuie-tête se règle au niveau de la tête. Ordre avant de partir : siège, appuie-tête, volant, rétroviseurs, ceinture, moteur.",
+    "r": "Appuie-tête au niveau de la tête."
+  },
+  {
+    "id": "04_equipements_securite-10",
+    "t": "04_equipements_securite",
+    "q": "Conduire une moto sans casque entraîne le retrait de :",
+    "qa": "سياقة دراجة نارية بدون خوذة يترتب عنها خصم :",
+    "o": [
+      "1 point",
+      "2 points",
+      "3 points",
+      "4 points"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le deux-roues motorisé sans casque est sanctionné par le retrait de 2 points, et non 1 comme la ceinture.",
+    "r": "Deux-roues sans casque = −2 points.",
+    "s": "points"
+  },
+  {
+    "id": "04_equipements_securite-11",
+    "t": "04_equipements_securite",
+    "q": "Des pneus sous-gonflés entraînent :",
+    "qa": "الإطارات ذات الضغط المنخفض تؤدي إلى :",
+    "o": [
+      "Une meilleure adhérence",
+      "Une surconsommation de carburant",
+      "Une distance de freinage plus courte",
+      "Un risque d'éclatement"
+    ],
+    "a": [
+      1,
+      3
+    ],
+    "e": "Une pression trop basse augmente la consommation et provoque un risque d'éclatement. Les pneus sont le seul contact avec la route : on surveille la pression et les rainures.",
+    "r": "Pression basse = surconsommation + risque d'éclatement.",
+    "img": "1683034883980.png"
+  },
+  {
+    "id": "04_equipements_securite-12",
+    "t": "04_equipements_securite",
+    "q": "L'AFU (aide au freinage d'urgence) :",
+    "qa": "نظام AFU (النظام المساعد على الحصر) :",
+    "o": [
+      "Empêche le blocage des roues",
+      "Corrige la trajectoire dans les virages",
+      "Augmente automatiquement la force de freinage en urgence",
+      "Maintient une vitesse choisie"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'AFU augmente la force de freinage quand le conducteur n'appuie pas assez fort en urgence, et allume les feux de détresse. L'anti-blocage, c'est l'ABS ; la trajectoire, c'est l'ESP.",
+    "r": "ABS = anti-blocage ; AFU = plus de force de freinage."
+  },
+  {
+    "id": "04_equipements_securite-13",
+    "t": "04_equipements_securite",
+    "q": "Le témoin d'usure des plaquettes de frein s'allume. Que faites-vous ?",
+    "qa": "اشتعل مؤشر صفائح الفرامل. ماذا تفعل ؟",
+    "o": [
+      "Je continue normalement",
+      "Je freine plus fort pour compenser",
+      "J'utilise seulement le frein à main",
+      "Je ralentis et j'augmente ma distance de sécurité"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Des plaquettes usées freinent moins bien : il faut réduire sa vitesse et augmenter la distance de sécurité.",
+    "r": "Plaquettes usées : ralentir + augmenter la distance."
+  },
+  {
+    "id": "04_equipements_securite-14",
+    "t": "04_equipements_securite",
+    "q": "Quelles associations entre feux et portée sont justes ?",
+    "qa": "ما هي العلاقات الصحيحة بين الأضواء ومسافة إنارتها أو رؤيتها ؟",
+    "o": [
+      "Feux de position : visibles à 150 m",
+      "Feux de croisement : éclairent au moins 150 m",
+      "Feux de croisement : éclairent au moins 30 m",
+      "Feux de route : éclairent au moins 100 m"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Position : visibles à 150 m (être vu) ; croisement : 30 m ; route : 100 m (voir). Les feux servent à voir et à être vu.",
+    "r": "Position 150 m / croisement 30 m / route 100 m."
+  },
+  {
+    "id": "04_equipements_securite-15",
+    "t": "04_equipements_securite",
+    "q": "Des amortisseurs usés provoquent :",
+    "qa": "ممتص الصدمات المتآكل يؤدي إلى :",
+    "o": [
+      "Moins d'adhérence et une distance de freinage plus longue",
+      "Une meilleure tenue de route",
+      "Une distance de freinage plus courte",
+      "Seulement moins de confort, sans effet sur la sécurité"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Des amortisseurs usés réduisent l'adhérence et allongent la distance de freinage : c'est un problème de sécurité, pas seulement de confort.",
+    "r": "Amortisseurs usés = adhérence ↓, freinage plus long."
+  },
+  {
+    "id": "04_equipements_securite-16",
+    "t": "04_equipements_securite",
+    "q": "Pour une voiture particulière neuve, le contrôle technique périodique a lieu :",
+    "qa": "بالنسبة لسيارة خاصة جديدة، تُجرى المراقبة التقنية الدورية :",
+    "o": [
+      "Chaque année dès l'achat",
+      "Une 1re fois après 2 ans, puis tous les 2 ans",
+      "Une 1re fois avant la fin de la 5e année, puis chaque année",
+      "Tous les 10 ans"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Une voiture particulière passe son premier contrôle technique avant la fin de sa 5e année d'utilisation, puis chaque année. Les taxis et voitures d'auto-école sont contrôlés chaque année dès la 1re année.",
+    "r": "Voiture particulière : 1er CT avant 5 ans, puis annuel."
+  },
+  {
+    "id": "04_equipements_securite-18",
+    "t": "04_equipements_securite",
+    "q": "Le gilet jaune réfléchissant doit être enfilé :",
+    "qa": "يجب ارتداء السترة العاكسة الصفراء :",
+    "o": [
+      "Seulement la nuit",
+      "Avant de descendre du véhicule",
+      "Après avoir posé le triangle",
+      "Seulement sur autoroute"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le gilet se met à l'intérieur du véhicule, avant d'en descendre, pour être visible dès que l'on pose le pied sur la route.",
+    "r": "Gilet jaune : enfilé AVANT de descendre."
+  },
+  {
+    "id": "04_equipements_securite-19",
+    "t": "04_equipements_securite",
+    "q": "Avant un long trajet, quelles vérifications rapides sont recommandées ?",
+    "qa": "قبل رحلة طويلة، ما هي الفحوصات السريعة المنصوح بها ؟",
+    "o": [
+      "La pression des pneus",
+      "Le kilométrage total du compteur",
+      "Les feux",
+      "Les niveaux d'huile et d'eau"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Avant chaque voyage : pneus (pression), feux, niveaux (huile, eau) et essuie-glaces. Le kilométrage total n'est pas un contrôle de sécurité.",
+    "r": "Avant de partir : pneus, feux, huile, eau, essuie-glaces."
+  },
+  {
+    "id": "05_sous_influence-01",
+    "t": "05_sous_influence",
+    "q": "Il est interdit de conduire avec un taux d'alcool dans le sang égal ou supérieur à :",
+    "qa": "يمنع السياقة إذا كانت نسبة الكحول في الدم تساوي أو تفوق :",
+    "o": [
+      "0,10 g/l",
+      "0,20 g/l",
+      "0,50 g/l",
+      "0,80 g/l"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La limite est de 0,20 g/l dans le sang, soit 0,10 mg/l dans l'air expiré. Attention : 0,10 est la valeur dans l'air, pas dans le sang.",
+    "r": "Alcool : interdit dès 0,20 g/l de sang.",
+    "s": "alcool"
+  },
+  {
+    "id": "05_sous_influence-02",
+    "t": "05_sous_influence",
+    "q": "Mesuré dans l'air expiré, le seuil interdit correspond à :",
+    "qa": "عند القياس في الهواء المنبعث من الفم، الحد الممنوع يعادل :",
+    "o": [
+      "0,10 mg/l",
+      "0,20 mg/l",
+      "0,40 mg/l",
+      "0,50 mg/l"
+    ],
+    "a": [
+      0
+    ],
+    "e": "0,20 g/l dans le sang = 0,10 mg/l dans l'air expiré : la valeur dans l'air est la moitié de celle du sang.",
+    "r": "0,2 g/l de sang = 0,1 mg/l d'air.",
+    "s": "alcool"
+  },
+  {
+    "id": "05_sous_influence-03",
+    "t": "05_sous_influence",
+    "q": "Vrai ou faux : avec exactement 0,20 g/l d'alcool dans le sang, on peut encore conduire.",
+    "qa": "صحيح أم خطأ : بنسبة 0.20 غ/ل بالضبط من الكحول في الدم، ما زال يمكن السياقة.",
+    "o": [
+      "Vrai (صحيح)",
+      "Faux (خطأ)"
+    ],
+    "a": [
+      1
+    ],
+    "e": "L'interdiction s'applique dès que le taux est égal ou supérieur à 0,20 g/l. Exactement 0,20 g/l, c'est donc déjà interdit.",
+    "r": "0,20 g/l pile = déjà interdit.",
+    "s": "alcool"
+  },
+  {
+    "id": "05_sous_influence-04",
+    "t": "05_sous_influence",
+    "q": "Sous l'emprise de l'alcool, le risque d'accident mortel est multiplié par environ :",
+    "qa": "تحت تأثير الكحول، يكون السائق أكثر عرضة لحادثة مميتة بحوالي :",
+    "o": [
+      "2",
+      "5",
+      "10",
+      "17"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Un conducteur sous l'emprise de l'alcool a environ 17 fois plus de risques d'avoir un accident mortel.",
+    "r": "Alcool = risque d'accident mortel × 17.",
+    "s": "alcool"
+  },
+  {
+    "id": "05_sous_influence-06",
+    "t": "05_sous_influence",
+    "q": "Conduire avec un taux d'alcool interdit est :",
+    "qa": "السياقة بنسبة كحول ممنوعة تعتبر :",
+    "o": [
+      "Une contravention avec retrait de 2 points",
+      "Une contravention avec retrait de 4 points",
+      "Un délit avec retrait de 6 points et immobilisation du véhicule",
+      "Un simple avertissement la première fois"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La conduite sous l'emprise de l'alcool est un délit, pas une contravention : retrait de 6 points, immobilisation du véhicule et circonstance aggravante en cas d'accident.",
+    "r": "Alcool = délit : −6 points + immobilisation.",
+    "s": "sanctions"
+  },
+  {
+    "id": "05_sous_influence-07",
+    "t": "05_sous_influence",
+    "q": "Quelles infractions entraînent le retrait de 6 points ?",
+    "qa": "ما هي المخالفات التي يترتب عنها خصم 6 نقط ؟",
+    "o": [
+      "Conduire sous l'emprise de l'alcool",
+      "Conduire sous l'effet d'un médicament interdisant la conduite",
+      "Conduire après avoir consommé des stupéfiants",
+      "Refuser le dépistage"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Alcool, stupéfiants et refus de dépistage coûtent 6 points : refuser le contrôle n'évite pas la sanction. Un médicament interdisant la conduite coûte 2 points.",
+    "r": "−6 points : alcool, drogue, refus de dépistage.",
+    "s": "points"
+  },
+  {
+    "id": "05_sous_influence-08",
+    "t": "05_sous_influence",
+    "q": "Quels sont les effets des drogues (المواد المخدرة) sur la conduite ?",
+    "qa": "ما هي آثار المواد المخدرة على السياقة ؟",
+    "o": [
+      "Une perception affaiblie",
+      "Une mauvaise appréciation des vitesses et des distances",
+      "Une meilleure concentration",
+      "Un champ visuel rétréci"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Les stupéfiants affaiblissent la perception, ralentissent les réactions, rétrécissent le champ visuel et faussent l'appréciation des vitesses et des distances.",
+    "r": "Drogue : perception ↓, réaction ↓, vision ↓."
+  },
+  {
+    "id": "05_sous_influence-09",
+    "t": "05_sous_influence",
+    "q": "Sur une boîte de médicament, le pictogramme de niveau 1 (triangle jaune) signifie :",
+    "qa": "على علبة الدواء، الرمز من المستوى 1 (المثلث الأصفر) يعني :",
+    "o": [
+      "Conduite interdite",
+      "Ne pas conduire sans l'avis d'un médecin",
+      "Conduite non interdite, mais il faut lire la notice",
+      "Aucun risque, inutile de lire la notice"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Niveau 1 (jaune) : conduite non interdite, mais il faut lire la notice. Niveau 2 (orange) : avis du médecin ou du pharmacien. Niveau 3 (rouge) : ne pas conduire.",
+    "r": "Jaune : notice / orange : médecin / rouge : interdit."
+  },
+  {
+    "id": "05_sous_influence-10",
+    "t": "05_sous_influence",
+    "q": "Le pictogramme de niveau 2 (triangle orange) sur un médicament signifie :",
+    "qa": "الرمز من المستوى 2 (المثلث البرتقالي) على علبة الدواء يعني :",
+    "o": [
+      "Ne pas conduire sans l'avis d'un médecin ou d'un pharmacien",
+      "Conduite totalement interdite",
+      "Lire simplement la notice",
+      "Conduire uniquement de jour"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Au niveau 2, il ne faut pas conduire sans avoir demandé l'avis d'un médecin ou d'un pharmacien. L'interdiction totale correspond au niveau 3 (rouge).",
+    "r": "Niveau 2 (orange) : avis du médecin avant de conduire."
+  },
+  {
+    "id": "05_sous_influence-11",
+    "t": "05_sous_influence",
+    "q": "Un médicament portant le pictogramme de niveau 3 (triangle rouge) :",
+    "qa": "دواء يحمل رمز المستوى 3 (المثلث الأحمر) :",
+    "o": [
+      "Peut être pris avant de conduire si l'on lit la notice",
+      "Nécessite seulement l'avis du médecin",
+      "N'a aucun effet sur la vigilance",
+      "Interdit de conduire"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le niveau 3 (rouge) interdit absolument la conduite. Conduire sous l'effet d'un tel médicament coûte 2 points.",
+    "r": "Triangle rouge (niveau 3) = ne pas conduire.",
+    "img": "1689948460228.png"
+  },
+  {
+    "id": "05_sous_influence-12",
+    "t": "05_sous_influence",
+    "q": "Conduire sous l'effet d'un médicament interdisant la conduite entraîne le retrait de :",
+    "qa": "السياقة تحت تأثير دواء يمنع السياقة يترتب عنها خصم :",
+    "o": [
+      "1 point",
+      "2 points",
+      "4 points",
+      "6 points"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les médicaments interdisant la conduite coûtent 2 points. Ne pas confondre avec l'alcool et les stupéfiants (6 points).",
+    "r": "Médicament interdisant la conduite = −2 points.",
+    "s": "points"
+  },
+  {
+    "id": "05_sous_influence-13",
+    "t": "05_sous_influence",
+    "q": "Que faut-il faire pour faire baisser son taux d'alcool ?",
+    "qa": "ماذا يجب فعله لخفض نسبة الكحول في الدم ؟",
+    "o": [
+      "Boire un café",
+      "Rouler vitres ouvertes",
+      "Boire de l'eau froide",
+      "Attendre : seul le temps fait baisser le taux"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Ni le café ni l'eau froide ne font baisser l'alcoolémie : seul le temps l'élimine. La seule vraie solution est de ne pas boire avant de conduire.",
+    "r": "Seul le temps fait baisser l'alcoolémie.",
+    "s": "alcool"
+  },
+  {
+    "id": "05_sous_influence-14",
+    "t": "05_sous_influence",
+    "q": "Que se passe-t-il si l'on associe alcool et médicaments ?",
+    "qa": "ماذا يحدث عند الجمع بين الكحول والأدوية ؟",
+    "o": [
+      "Les effets se cumulent : le danger est multiplié",
+      "Les effets s'annulent",
+      "Le médicament neutralise l'alcool",
+      "Rien de particulier"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Alcool et médicaments renforcent mutuellement leurs effets : le danger est multiplié. Il ne faut jamais les associer avant de conduire.",
+    "r": "Alcool + médicament = danger multiplié."
+  },
+  {
+    "id": "05_sous_influence-15",
+    "t": "05_sous_influence",
+    "q": "Vous êtes invité à une fête et devez rentrer en voiture. Quelle est la bonne attitude ?",
+    "qa": "أنت مدعو إلى حفلة ويجب عليك العودة بالسيارة. ما هو التصرف الصحيح ؟",
+    "o": [
+      "Boire un peu et rouler lentement",
+      "Boire puis prendre un café avant de partir",
+      "Ne pas boire, ou laisser conduire un autre conducteur ou prendre un taxi",
+      "Boire, mais seulement de la bière"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La seule solution sûre : ne pas boire si l'on conduit, ou confier le volant à un autre conducteur, ou prendre un taxi. Le café ne fait pas baisser le taux d'alcool.",
+    "r": "Si je bois, je ne conduis pas.",
+    "s": "alcool"
+  },
+  {
+    "id": "05_sous_influence-16",
+    "t": "05_sous_influence",
+    "q": "Un seul verre d'alcool :",
+    "qa": "كأس واحد من الكحول :",
+    "o": [
+      "Peut suffire à dépasser 0,20 g/l",
+      "Ne peut jamais faire dépasser la limite",
+      "Est toléré pour les conducteurs expérimentés",
+      "N'a aucun effet sur la conduite"
+    ],
+    "a": [
+      0
+    ],
+    "e": "En pratique, un seul verre peut suffire à dépasser 0,20 g/l. D'où la règle : pas d'alcool avant de conduire.",
+    "r": "Un seul verre peut suffire à dépasser la limite.",
+    "s": "alcool"
+  },
+  {
+    "id": "05_sous_influence-17",
+    "t": "05_sous_influence",
+    "q": "Dans quelles unités mesure-t-on le taux d'alcool ?",
+    "qa": "بأي وحدات تُقاس نسبة الكحول ؟",
+    "o": [
+      "En grammes par litre de sang (g/l)",
+      "En milligrammes par litre d'air expiré (mg/l)",
+      "En grammes par litre d'air expiré"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "Deux méthodes : dans le sang, en g/l, ou dans l'air expiré, en mg/l. 0,20 g/l de sang correspond à 0,10 mg/l d'air.",
+    "r": "Sang : g/l ; air expiré : mg/l.",
+    "s": "alcool"
+  },
+  {
+    "id": "05_sous_influence-18",
+    "t": "05_sous_influence",
+    "q": "Un médicament prescrit par un médecin :",
+    "qa": "دواء موصوف من طرف الطبيب :",
+    "o": [
+      "Ne présente jamais de danger pour la conduite",
+      "Peut quand même être dangereux au volant : il faut vérifier le pictogramme et la notice",
+      "Annule les effets de l'alcool"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Un médicament autorisé médicalement peut provoquer somnolence ou troubles de la vue. Il faut toujours vérifier le pictogramme et lire les effets indésirables dans la notice.",
+    "r": "Médicament prescrit ≠ sans danger au volant."
+  },
+  {
+    "id": "06_etat_sante-01",
+    "t": "06_etat_sante",
+    "q": "Quelle est la conséquence de la fatigue sur la conduite ?",
+    "qa": "ما هو أثر التعب على السياقة ؟",
+    "o": [
+      "Seule la distance de freinage augmente",
+      "Le temps de réaction s'allonge, donc la distance d'arrêt aussi",
+      "Aucune, si la route est droite",
+      "Le champ visuel s'élargit"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La fatigue allonge le temps de réaction : on parcourt plus de mètres avant de freiner et la distance d'arrêt augmente. Elle rétrécit aussi le champ visuel.",
+    "r": "Fatigue = réaction plus lente = arrêt plus long.",
+    "s": "distance"
+  },
+  {
+    "id": "06_etat_sante-02",
+    "t": "06_etat_sante",
+    "q": "Plus de 40 % des accidents ont lieu :",
+    "qa": "أكثر من 40% من الحوادث تقع :",
+    "o": [
+      "Entre 6 h et 10 h",
+      "Entre 12 h et 15 h",
+      "Entre 17 h et 20 h",
+      "Entre 22 h et 5 h"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Plus de 40 % des accidents se produisent entre 22 h et 5 h, malgré une circulation plus faible : mauvaise visibilité, éclairage réduit et fatigue.",
+    "r": "Plus de 40 % des accidents : entre 22 h et 5 h."
+  },
+  {
+    "id": "06_etat_sante-04",
+    "t": "06_etat_sante",
+    "q": "Vous commencez à avoir sommeil au volant. Que faites-vous ?",
+    "qa": "بدأت تشعر بالنعاس أثناء السياقة. ماذا تفعل ؟",
+    "o": [
+      "J'ouvre la fenêtre et je continue",
+      "Je monte le volume de la musique",
+      "Je m'arrête et je fais une sieste de 15 à 20 minutes",
+      "J'accélère pour arriver plus vite"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La seule solution contre la somnolence est de s'arrêter et de se reposer (sieste de 15 à 20 minutes). La fenêtre ouverte et la musique ne traitent pas le sommeil.",
+    "r": "Somnolence : s'arrêter et dormir 15 à 20 min."
+  },
+  {
+    "id": "06_etat_sante-05",
+    "t": "06_etat_sante",
+    "q": "Lors d'un long trajet, il est conseillé de faire une pause :",
+    "qa": "خلال رحلة طويلة، يُنصح بالتوقف للاستراحة :",
+    "o": [
+      "Toutes les 30 minutes",
+      "Toutes les 5 heures",
+      "Uniquement pour faire le plein",
+      "Toutes les 2 heures environ"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Sur un long trajet, on s'arrête environ toutes les 2 heures, pendant une quinzaine de minutes.",
+    "r": "Pause d'environ 15 min toutes les 2 heures."
+  },
+  {
+    "id": "06_etat_sante-06",
+    "t": "06_etat_sante",
+    "q": "Vrai ou faux : un café permet de remplacer le sommeil et de continuer à conduire sans risque.",
+    "qa": "صحيح أم خطأ : القهوة تعوض النوم وتسمح بمواصلة السياقة بدون خطر.",
+    "o": [
+      "Vrai (صحيح)",
+      "Faux (خطأ)"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le café ne remplace pas le sommeil. Face à la fatigue, la seule solution est de s'arrêter et de se reposer.",
+    "r": "Le café ne remplace pas le sommeil."
+  },
+  {
+    "id": "06_etat_sante-07",
+    "t": "06_etat_sante",
+    "q": "Rester 17 heures sans dormir a, sur la conduite, un effet comparable à celui :",
+    "qa": "البقاء 17 ساعة بدون نوم له على السياقة أثر يشبه أثر :",
+    "o": [
+      "De l'alcool",
+      "D'une nuit de repos",
+      "D'une sieste de 20 minutes",
+      "D'un repas léger"
+    ],
+    "a": [
+      0
+    ],
+    "e": "« Fatigue = alcool » : après 17 heures sans sommeil, les effets sur la conduite ressemblent à ceux de l'alcool.",
+    "r": "17 h sans dormir ≈ effet de l'alcool."
+  },
+  {
+    "id": "06_etat_sante-08",
+    "t": "06_etat_sante",
+    "q": "Avant un long voyage, que faut-il faire ?",
+    "qa": "قبل سفر طويل، ماذا يجب فعله ؟",
+    "o": [
+      "Dormir suffisamment",
+      "Prendre un repas copieux",
+      "Prendre un repas léger",
+      "Éviter les médicaments qui font dormir"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Avant de partir : un sommeil suffisant, un repas léger (et non copieux) et aucun médicament qui fait dormir.",
+    "r": "Avant le voyage : dormir, manger léger, pas de somnifère."
+  },
+  {
+    "id": "06_etat_sante-09",
+    "t": "06_etat_sante",
+    "q": "Pour un conducteur non professionnel de moins de 65 ans, la visite médicale se renouvelle :",
+    "qa": "بالنسبة لسائق غير مهني يقل سنه عن 65 سنة، يُجدد الفحص الطبي :",
+    "o": [
+      "Chaque année",
+      "Tous les 2 ans",
+      "Tous les 5 ans",
+      "Tous les 10 ans"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Après la visite médicale passée avant le permis, le contrôle est renouvelé tous les 10 ans. Il passe à tous les 2 ans après 65 ans et pour les conducteurs professionnels.",
+    "r": "Visite médicale : tous les 10 ans (2 ans après 65 ans)."
+  },
+  {
+    "id": "06_etat_sante-10",
+    "t": "06_etat_sante",
+    "q": "Un conducteur de plus de 65 ans doit passer une visite médicale :",
+    "qa": "السائق الذي تجاوز 65 سنة يجب عليه إجراء فحص طبي :",
+    "o": [
+      "Tous les 2 ans",
+      "Tous les 5 ans",
+      "Tous les 10 ans",
+      "Plus jamais"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Après 65 ans, la visite médicale a lieu tous les 2 ans, et non tous les 10 ans. C'est aussi le cas des conducteurs professionnels.",
+    "r": "Plus de 65 ans : visite médicale tous les 2 ans."
+  },
+  {
+    "id": "06_etat_sante-11",
+    "t": "06_etat_sante",
+    "q": "L'aptitude médicale du candidat au permis est vérifiée :",
+    "qa": "يتم التحقق من الأهلية الطبية للمترشح لرخصة السياقة :",
+    "o": [
+      "Par le moniteur d'auto-école",
+      "Par un médecin agréé, avant l'examen",
+      "Par l'examinateur pendant l'épreuve pratique",
+      "Seulement après un accident"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Avant l'examen, le candidat passe une visite chez un médecin agréé, qui vérifie son aptitude physique et mentale.",
+    "r": "Médecin agréé avant l'examen du permis."
+  },
+  {
+    "id": "06_etat_sante-12",
+    "t": "06_etat_sante",
+    "q": "Quelles affections sont incompatibles avec la conduite ?",
+    "qa": "ما هي الأمراض المانعة للسياقة ؟",
+    "o": [
+      "Une faiblesse visuelle grave",
+      "Une myopie corrigée par des lunettes",
+      "Une surdité grave",
+      "La maladie de Parkinson (شلل الرعاش)"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Faiblesse visuelle grave, surdité grave, maladie de Parkinson ou retard mental sont des maladies incompatibles avec la conduite. Une vue corrigée par des lunettes reste compatible : le permis porte alors un code de restriction.",
+    "r": "Vue ou ouïe gravement atteinte = incompatible."
+  },
+  {
+    "id": "06_etat_sante-13",
+    "t": "06_etat_sante",
+    "q": "Votre permis vous impose le port de lunettes. Conduire sans elles est :",
+    "qa": "رخصتك تفرض عليك وضع النظارات. السياقة بدونها تعتبر :",
+    "o": [
+      "Autorisé en ville",
+      "Autorisé de jour",
+      "Une contravention de 2e classe",
+      "Un délit avec retrait de 6 points"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les lunettes imposées figurent sur le permis sous forme de code de restriction. Ne pas respecter cette restriction est une contravention de 2e classe.",
+    "r": "Sans les lunettes imposées = contravention de 2e classe.",
+    "s": "sanctions"
+  },
+  {
+    "id": "06_etat_sante-14",
+    "t": "06_etat_sante",
+    "q": "Une incapacité physique compatible avec la conduite peut nécessiter :",
+    "qa": "عجز بدني لا يتنافى مع السياقة قد يتطلب :",
+    "o": [
+      "Un véhicule aménagé ou des appareils, avec des codes sur le permis",
+      "L'interdiction définitive de conduire",
+      "De conduire uniquement la nuit",
+      "Aucune mention particulière"
+    ],
+    "a": [
+      0
+    ],
+    "e": "En cas d'incapacité physique compatible avec la conduite, on aménage le véhicule ou on utilise des appareils (lunettes…), et des codes de restriction sont inscrits sur le permis.",
+    "r": "Incapacité compatible : véhicule aménagé + codes."
+  },
+  {
+    "id": "06_etat_sante-15",
+    "t": "06_etat_sante",
+    "q": "Un conducteur perd les capacités nécessaires pour conduire une catégorie de véhicules. Son permis :",
+    "qa": "سائق فقد القدرات اللازمة لسياقة صنف معين من المركبات. رخصته :",
+    "o": [
+      "Est retiré ou annulé pour toutes les catégories",
+      "Est retiré ou annulé pour la catégorie concernée uniquement",
+      "Reste valable sans changement",
+      "Est seulement prolongé de 2 ans"
+    ],
+    "a": [
+      1
+    ],
+    "e": "En cas de perte des capacités, le permis peut être retiré ou annulé, mais seulement pour la catégorie concernée.",
+    "r": "Perte d'aptitude : retrait pour la catégorie concernée."
+  },
+  {
+    "id": "06_etat_sante-16",
+    "t": "06_etat_sante",
+    "q": "La nuit, vous êtes ébloui par les phares d'un véhicule venant en face. Vous regardez :",
+    "qa": "ليلا، أبهرتك أضواء مركبة قادمة من الاتجاه المعاكس. تنظر إلى :",
+    "o": [
+      "Les phares du véhicule",
+      "Le bord gauche de la chaussée",
+      "Le rétroviseur intérieur",
+      "Le bord droit de la chaussée"
+    ],
+    "a": [
+      3
+    ],
+    "e": "En cas d'éblouissement, on ne fixe pas les phares : on regarde le bord droit de la route et on ralentit ; si l'on ne voit plus rien, on s'arrête.",
+    "r": "Ébloui : regarder le bord droit et ralentir."
+  },
+  {
+    "id": "06_etat_sante-17",
+    "t": "06_etat_sante",
+    "q": "L'audition aide le conducteur à :",
+    "qa": "يساعد السمع السائق على :",
+    "o": [
+      "Percevoir les avertisseurs sonores (klaxons)",
+      "Entendre les sirènes des véhicules de secours",
+      "Remplacer le contrôle visuel des angles morts"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "L'ouïe permet de percevoir les klaxons et les sirènes des ambulances. Elle ne remplace pas le coup d'œil dans les angles morts.",
+    "r": "L'ouïe sert à percevoir klaxons et sirènes."
+  },
+  {
+    "id": "06_etat_sante-18",
+    "t": "06_etat_sante",
+    "q": "Le téléphone et la musique très forte au volant :",
+    "qa": "الهاتف والموسيقى العالية أثناء السياقة :",
+    "o": [
+      "Améliorent la vigilance",
+      "Sont sans effet si l'on est expérimenté",
+      "Détournent l'attention du conducteur",
+      "Remplacent une pause"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le téléphone et une musique trop forte distraient le conducteur. Tenir son téléphone en main en conduisant coûte en plus 1 point.",
+    "r": "Téléphone, musique forte = distraction."
+  },
+  {
+    "id": "06_etat_sante-19",
+    "t": "06_etat_sante",
+    "q": "Quels éléments rétrécissent le champ visuel du conducteur ?",
+    "qa": "ما هي العناصر التي تضيّق مجال رؤية السائق ؟",
+    "o": [
+      "Une vitesse élevée",
+      "Un repos suffisant",
+      "La fatigue"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Le champ visuel se rétrécit avec la vitesse et avec la fatigue. Un bon repos, au contraire, préserve la vigilance.",
+    "r": "Vitesse et fatigue rétrécissent le champ visuel."
+  }
+]

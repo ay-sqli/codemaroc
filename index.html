@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة خرائط NARSA التفاعلية - لوحة التحكم</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Tajawal', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fa;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+        }
+
+        .tab-btn.active {
+            background-color: #ffffff;
+            border-right: 4px solid #004a8f;
+            color: #004a8f;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(0, 74, 143, 0.08);
+        }
+
+        .card-hover {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 30px rgba(0, 74, 143, 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-800 min-h-screen flex flex-col pb-16">
+
+    <!-- Hero Header -->
+    <header class="bg-gradient-to-r from-[#003d75] via-[#004a8f] to-[#005da3] text-white pt-10 pb-20 px-6 text-center shadow-lg relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="relative z-10 max-w-3xl mx-auto">
+            <span class="inline-flex items-center gap-2 bg-white/15 border border-white/25 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-3 shadow-sm backdrop-blur-sm">
+                <span>🇲🇦 المملكة المغربية</span>
+                <span>•</span>
+                <span>الوكالة الوطنية للسلامة الطرقية NARSA 2026</span>
+            </span>
+            <h1 class="text-3xl md:text-5xl font-black mb-3 tracking-tight">
+                الخرائط الذهنية التفاعلية <span class="text-orange-400">لرخصة السياقة</span>
+            </h1>
+            <p class="text-blue-100 text-base md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
+                منظومة تعليمية متكاملة لربط المنطق البصري (Mindmaps) بترسيخ ردود الأفعال اللحظية عبر التكرار المتباعد (Anki Flashcards).
+            </p>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="max-w-5xl mx-auto px-6 -mt-10 relative z-20 w-full">
+        <div class="glass-panel rounded-2xl shadow-xl grid grid-cols-2 md:grid-cols-4 gap-4 p-5 md:p-6 border border-slate-100/80">
+            <div class="text-center">
+                <span class="block text-2xl md:text-3xl font-black text-[#004a8f]">100%</span>
+                <span class="text-xs md:text-sm text-slate-500 font-bold">مطابق لاختبارات NARSA</span>
+            </div>
+            <div class="text-center border-r md:border-r border-slate-200/80">
+                <span class="block text-2xl md:text-3xl font-black text-orange-500">410+</span>
+                <span class="text-xs md:text-sm text-slate-500 font-bold">علامة وصورة مستخرجة</span>
+            </div>
+            <div class="text-center border-r border-slate-200/80">
+                <span class="block text-2xl md:text-3xl font-black text-[#004a8f]">3 / 16</span>
+                <span class="text-xs md:text-sm text-slate-500 font-bold">دروس محور الطريق المكتملة</span>
+            </div>
+            <div class="text-center border-r border-slate-200/80">
+                <span class="block text-2xl md:text-3xl font-black text-emerald-600">6</span>
+                <span class="text-xs md:text-sm text-slate-500 font-bold">محاور رئيسية معتمدة</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Area (Master-Detail) -->
+    <main class="max-w-6xl mx-auto px-6 mt-10 w-full flex-1 flex flex-col lg:flex-row gap-8">
+        
+        <!-- Sidebar : Macro-modules (Master) -->
+        <aside class="w-full lg:w-80 shrink-0">
+            <div class="sticky top-6 flex flex-col gap-3">
+                <div class="flex items-center justify-between px-2 mb-1">
+                    <h2 class="text-lg font-black text-slate-900 flex items-center gap-2">
+                        <span class="w-2 h-5 bg-orange-500 rounded-full inline-block"></span>
+                        المحاور الرئيسية
+                    </h2>
+                    <span class="text-xs font-bold text-slate-600 bg-slate-200/70 px-2 py-0.5 rounded-full">6 محاور</span>
+                </div>
+
+                <nav class="flex flex-col gap-2" id="modulesTabs">
+                    <!-- Tab 01 (Active) -->
+                    <button onclick="switchTab('01')" id="tab-01" class="tab-btn active flex items-center justify-between w-full p-4 rounded-xl text-slate-600 transition-all text-right group hover:bg-white">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl group-hover:scale-110 transition-transform">🛣️</span>
+                            <div>
+                                <span class="block font-bold text-sm text-slate-900">1. الطريق</span>
+                                <span class="text-xs text-slate-600 font-mono">La Route</span>
+                            </div>
+                        </div>
+                        <span class="bg-blue-100 text-[#004a8f] text-xs font-bold px-2 py-1 rounded-md">3 / 16</span>
+                    </button>
+
+                    <!-- Tab 02 -->
+                    <button onclick="switchTab('02')" id="tab-02" class="tab-btn flex items-center justify-between w-full p-4 rounded-xl text-slate-600 transition-all text-right group hover:bg-white">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl group-hover:scale-110 transition-transform">🚦</span>
+                            <div>
+                                <span class="block font-bold text-sm text-slate-900">2. قواعد السير</span>
+                                <span class="text-xs text-slate-600 font-mono">Règles de circulation</span>
+                            </div>
+                        </div>
+                        <span class="bg-slate-200 text-slate-600 text-xs font-bold px-2 py-1 rounded-md">قريباً</span>
+                    </button>
+
+                    <!-- Tab 03 -->
+                    <button onclick="switchTab('03')" id="tab-03" class="tab-btn flex items-center justify-between w-full p-4 rounded-xl text-slate-600 transition-all text-right group hover:bg-white">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl group-hover:scale-110 transition-transform">👤</span>
+                            <div>
+                                <span class="block font-bold text-sm text-slate-900">3. السائق</span>
+                                <span class="text-xs text-slate-600 font-mono">Le Conducteur</span>
+                            </div>
+                        </div>
+                        <span class="bg-slate-200 text-slate-600 text-xs font-bold px-2 py-1 rounded-md">قريباً</span>
+                    </button>
+
+                    <!-- Tab 04 -->
+                    <button onclick="switchTab('04')" id="tab-04" class="tab-btn flex items-center justify-between w-full p-4 rounded-xl text-slate-600 transition-all text-right group hover:bg-white">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl group-hover:scale-110 transition-transform">🚗</span>
+                            <div>
+                                <span class="block font-bold text-sm text-slate-900">4. المركبة</span>
+                                <span class="text-xs text-slate-600 font-mono">Le Véhicule</span>
+                            </div>
+                        </div>
+                        <span class="bg-slate-200 text-slate-600 text-xs font-bold px-2 py-1 rounded-md">قريباً</span>
+                    </button>
+
+                    <!-- Tab 05 -->
+                    <button onclick="switchTab('05')" id="tab-05" class="tab-btn flex items-center justify-between w-full p-4 rounded-xl text-slate-600 transition-all text-right group hover:bg-white">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl group-hover:scale-110 transition-transform">⚖️</span>
+                            <div>
+                                <span class="block font-bold text-sm text-slate-900">5. المخالفات والعقوبات</span>
+                                <span class="text-xs text-slate-600 font-mono">Infractions & Sanctions</span>
+                            </div>
+                        </div>
+                        <span class="bg-slate-200 text-slate-600 text-xs font-bold px-2 py-1 rounded-md">قريباً</span>
+                    </button>
+
+                    <!-- Tab 06 -->
+                    <button onclick="switchTab('06')" id="tab-06" class="tab-btn flex items-center justify-between w-full p-4 rounded-xl text-slate-600 transition-all text-right group hover:bg-white">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl group-hover:scale-110 transition-transform">🛡️</span>
+                            <div>
+                                <span class="block font-bold text-sm text-slate-900">6. السلامة الطرقية</span>
+                                <span class="text-xs text-slate-600 font-mono">Sécurité Routière</span>
+                            </div>
+                        </div>
+                        <span class="bg-slate-200 text-slate-600 text-xs font-bold px-2 py-1 rounded-md">قريباً</span>
+                    </button>
+                </nav>
+
+                <!-- Anki Info Tip Box -->
+                <div class="bg-amber-50 border border-amber-200/80 rounded-xl p-4 mt-2 text-xs text-amber-900">
+                    <div class="font-bold flex items-center gap-1.5 mb-1.5 text-amber-800">
+                        <span>💡</span>
+                        <span>كيف تستعمل بطاقات Anki؟</span>
+                    </div>
+                    <p class="leading-relaxed text-slate-700">
+                        اضغط على زر <strong>🗂️ Anki CSV</strong> لتحميل الملف، ثم في Anki اختر <em>File > Import</em> (الفاصل: <code>;</code> مع تفعيل خيار HTML).
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Detail Section : Sub-modules Content -->
+        <section class="flex-1">
+            
+            <!-- Module 01 Content (Active) -->
+            <div id="content-01" class="tab-content flex flex-col gap-6">
+                <!-- Section Header -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="text-xs font-bold text-white bg-[#004a8f] px-2.5 py-0.5 rounded-full">المحور الأول</span>
+                            <h3 class="text-xl md:text-2xl font-black text-slate-900">الطريق (La Route)</h3>
+                        </div>
+                        <p class="text-slate-500 text-sm">التشوير العمودي، الأفقي، علامات الخطر، المنع، الإجبار، الإرشاد وملتقيات الطرق.</p>
+                    </div>
+                    <div class="md:text-left shrink-0 bg-slate-50 md:bg-transparent p-3 md:p-0 rounded-xl">
+                        <div class="flex items-center md:justify-end gap-2 mb-1.5">
+                            <span class="text-xs text-slate-500 font-medium">التقدم المنجز :</span>
+                            <span class="text-sm font-black text-[#004a8f]">3 / 16 درس (19%)</span>
+                        </div>
+                        <div class="w-full md:w-40 h-2.5 bg-slate-200 rounded-full overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-orange-400 to-orange-500 rounded-full transition-all duration-500" style="width: 19%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Card 01 : Signalisation Verticale -->
+                    <div class="card-hover bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col h-full relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-[#004a8f]"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-[#004a8f] text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">المحور 01</span>
+                            <span class="text-3xl p-2 bg-blue-50 rounded-xl">🚦</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900 mb-1">التشوير العمودي</h4>
+                        <p class="text-xs text-slate-400 mb-3 font-mono font-bold tracking-wide">Signalisation Verticale</p>
+                        <p class="text-sm text-slate-600 mb-4 line-clamp-2 leading-relaxed">
+                            دراسة شاملة لقواعد الأشكال والألوان، علامات الخطر، المنع، الإجبار، الإرشاد والتشوير المؤقت وأصناف الطرق.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+                            <span class="bg-blue-50 text-[#004a8f] text-xs font-bold px-2.5 py-1 rounded-lg">178 علامة</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs font-bold px-2.5 py-1 rounded-lg">منطق الألوان والأشكال</span>
+                            <span class="bg-emerald-50 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">✓ مكتمل</span>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <a href="outputs/mindmap_01.html" target="_blank" class="flex-1 bg-[#004a8f] hover:bg-blue-800 text-white text-center text-sm font-bold py-2.5 px-3 rounded-xl transition-all shadow-sm hover:shadow flex items-center justify-center gap-2">
+                                <span>🗺️ الخريطة الذهنية</span>
+                            </a>
+                            <a href="outputs/01_signalisation_verticale.csv" download class="bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 text-sm font-bold px-3.5 py-2.5 rounded-xl transition-all flex items-center justify-center gap-1.5" title="تحميل ملف Anki CSV">
+                                <span>🗂️ Anki</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 02 : Dangers et Priorités -->
+                    <div class="card-hover bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col h-full relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-amber-500"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-amber-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">المحور 02</span>
+                            <span class="text-3xl p-2 bg-amber-50 rounded-xl">⚠️</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900 mb-1">علامات الخطر والأسبقية</h4>
+                        <p class="text-xs text-slate-400 mb-3 font-mono font-bold tracking-wide">Dangers et Priorités</p>
+                        <p class="text-sm text-slate-600 mb-4 line-clamp-2 leading-relaxed">
+                            أخطار الطريق، حالة القارعة، مستعملو الطريق، الحيوانات، تقاطعات السكك، علامات حق الأسبقية والغرامات.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+                            <span class="bg-amber-50 text-amber-800 text-xs font-bold px-2.5 py-1 rounded-lg">166 علامة</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs font-bold px-2.5 py-1 rounded-lg">8 أقسام رئيسية</span>
+                            <span class="bg-emerald-50 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">✓ مكتمل</span>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <a href="outputs/mindmap_02_finale.html" target="_blank" class="flex-1 bg-[#004a8f] hover:bg-blue-800 text-white text-center text-sm font-bold py-2.5 px-3 rounded-xl transition-all shadow-sm hover:shadow flex items-center justify-center gap-2">
+                                <span>🗺️ الخريطة الذهنية</span>
+                            </a>
+                            <a href="outputs/02_dangers_priorites.csv" download class="bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 text-sm font-bold px-3.5 py-2.5 rounded-xl transition-all flex items-center justify-center gap-1.5" title="تحميل ملف Anki CSV">
+                                <span>🗂️ Anki</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 03 : Interdictions -->
+                    <div class="card-hover bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col h-full relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-1.5 bg-rose-500"></div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-rose-600 text-white text-xs font-black px-3 py-1 rounded-full shadow-sm">المحور 03</span>
+                            <span class="text-3xl p-2 bg-rose-50 rounded-xl">⛔</span>
+                        </div>
+                        <h4 class="text-lg font-black text-slate-900 mb-1">علامات المنع ونهاية المنع</h4>
+                        <p class="text-xs text-slate-400 mb-3 font-mono font-bold tracking-wide">Interdictions et Fins</p>
+                        <p class="text-sm text-slate-600 mb-4 line-clamp-2 leading-relaxed">
+                            تصنيف ذكي في 9 أصناف: الاتجاهات الممنوعة، أصناف المركبات، الحمولات والأبعاد، التجاوز، السرعات ونهاية المنع.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-6 mt-auto">
+                            <span class="bg-rose-50 text-rose-800 text-xs font-bold px-2.5 py-1 rounded-lg">68 علامة</span>
+                            <span class="bg-slate-100 text-slate-600 text-xs font-bold px-2.5 py-1 rounded-lg">9 أصناف منطقية</span>
+                            <span class="bg-emerald-50 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-lg">✓ مكتمل</span>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <a href="outputs/mindmap_03_finale.html" target="_blank" class="flex-1 bg-[#004a8f] hover:bg-blue-800 text-white text-center text-sm font-bold py-2.5 px-3 rounded-xl transition-all shadow-sm hover:shadow flex items-center justify-center gap-2">
+                                <span>🗺️ الخريطة الذهنية</span>
+                            </a>
+                            <a href="outputs/03_interdictions.csv" download class="bg-orange-50 hover:bg-orange-100 text-orange-600 border border-orange-200 text-sm font-bold px-3.5 py-2.5 rounded-xl transition-all flex items-center justify-center gap-1.5" title="تحميل ملف Anki CSV">
+                                <span>🗂️ Anki</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Card 04 (Obligations) Placeholder -->
+                    <div class="bg-slate-50/80 rounded-2xl p-6 border-2 border-dashed border-slate-200 flex flex-col justify-between h-full relative">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-slate-200 text-slate-600 text-xs font-bold px-3 py-1 rounded-full">المحور 04</span>
+                                <span class="text-2xl p-2 bg-slate-100 rounded-xl opacity-60">🔵</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-slate-700 mb-1">علامات الإجبار ونهاية الإجبار</h4>
+                            <p class="text-xs text-slate-400 mb-3 font-mono">Obligations et Fins</p>
+                            <p class="text-sm text-slate-500 mb-4 leading-relaxed">
+                                الاتجاهات الإجبارية، المسالك المخصصة، السرعة الدنيا الإجبارية ونهاية الإجبار.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-slate-200 text-xs text-slate-500 font-bold">
+                            <span class="flex items-center gap-1.5 text-amber-700">
+                                <span class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                                جاهز للاستخراج فور وضع الملفات
+                            </span>
+                            <span class="font-mono text-slate-600">04_obligations</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Generic Placeholder for Tabs 02 to 06 -->
+            <div id="content-empty" class="tab-content hidden">
+                <div class="bg-white rounded-3xl p-12 border border-slate-100 shadow-sm text-center flex flex-col items-center justify-center max-w-lg mx-auto mt-8">
+                    <div class="w-20 h-20 bg-blue-50 rounded-3xl flex items-center justify-center text-4xl mb-4 text-[#004a8f]" id="emptyIcon">
+                        📁
+                    </div>
+                    <h3 class="text-2xl font-black text-slate-900 mb-2" id="emptyTitle">المحور قيد الإعداد</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed mb-6" id="emptyDesc">
+                        لإضافة دروس هذا المحور، ضع ملف HTML المستخرج من Perminou مع مجلد الصور في المسار المخصص داخل <code>inputs/</code> ثم قم بتشغيل مستخرج Antigravity.
+                    </p>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-3 font-mono text-xs text-slate-700 w-full mb-6 text-left dir-ltr" id="emptyCommand">
+                        python scripts/parser.py 02_regles_circulation
+                    </div>
+                    <button onclick="switchTab('01')" class="bg-[#004a8f] text-white text-sm font-bold px-6 py-2.5 rounded-xl hover:bg-blue-800 transition-all shadow-sm">
+                        ← العودة إلى محور الطريق (المتاح حالياً)
+                    </button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto pt-10 text-center text-xs text-slate-600 font-medium">
+        <p>© 2026 جميع الحقوق محفوظة • مشروع المنظومة التفاعلية لرخصة السياقة NARSA صنف B</p>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        const moduleDetails = {
+            '02': { title: 'قواعد السير (Règles de la circulation)', icon: '🚦', cmd: 'python scripts/parser.py 02_regles_circulation' },
+            '03': { title: 'السائق (Le Conducteur)', icon: '👤', cmd: 'python scripts/parser.py 03_le_conducteur' },
+            '04': { title: 'المركبة (Le Véhicule)', icon: '🚗', cmd: 'python scripts/parser.py 04_le_vehicule' },
+            '05': { title: 'المخالفات والعقوبات (Infractions et Sanctions)', icon: '⚖️', cmd: 'python scripts/parser.py 05_infractions_sanctions' },
+            '06': { title: 'السلامة الطرقية (Sécurité Routière)', icon: '🛡️', cmd: 'python scripts/parser.py 06_principes_securite' }
+        };
+
+        function switchTab(moduleId) {
+            // Update Tab buttons
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            const activeBtn = document.getElementById('tab-' + moduleId);
+            if (activeBtn) activeBtn.classList.add('active');
+
+            // Toggle Contents
+            if (moduleId === '01') {
+                document.getElementById('content-01').classList.remove('hidden');
+                document.getElementById('content-empty').classList.add('hidden');
+            } else {
+                document.getElementById('content-01').classList.add('hidden');
+                document.getElementById('content-empty').classList.remove('hidden');
+
+                const details = moduleDetails[moduleId];
+                if (details) {
+                    document.getElementById('emptyTitle').textContent = details.title;
+                    document.getElementById('emptyIcon').textContent = details.icon;
+                    document.getElementById('emptyCommand').textContent = details.cmd;
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Distances de Sécurité</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/12_distances" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 📏 مسافة الأمان ومسافة الحصر ومسافة الوقوف (Distances)\n\n## 🕒 1. زمن رد الفعل (Temps de réaction)\n- المدة بين رؤية الخطر والضغط على دواسة الحصر\n- المتوسط: ثانية واحدة (سائق في حالة عادية)\n- يزداد مع: التعب، الأدوية، الكحول، الحالة النفسية\n- <img src=\"../../inputs/02_regles_circulation/12_distances/images/1682417696964.png\"> **1. رؤية الإشارة**\n- <img src=\"../../inputs/02_regles_circulation/12_distances/images/1682417688060.png\"> **2. تحليل الإشارة**\n- <img src=\"../../inputs/02_regles_circulation/12_distances/images/1682417675951.png\"> **3. الضغط على دواسة الحصر**\n- السياقة الاستباقية: القدم قبالة دواسة الحصر ← زمن أقل من ثانية\n\n## ↔️ 2. مسافة رد الفعل (Distance de réaction) = (السرعة ÷ 10) × 3\n- <img src=\"../../inputs/02_regles_circulation/12_distances/images/1689951496731.png\" class=\"big\"> مسافة رد الفعل\n- 120 كلم/س ← 36 م\n- 100 كلم/س ← 30 م\n- 90 كلم/س ← 27 م\n- 80 كلم/س ← 24 م\n- 60 كلم/س ← 18 م\n- 40 كلم/س ← 12 م\n\n## 🚗↔️🚗 3. مسافة الأمان (Distance de sécurité) = (السرعة ÷ 10) × 6\n- الحد الأدنى بيني وبين المركبة التي أمامي = ثانيتان\n- 120 ← 72 م / 100 ← 60 م / 90 ← 54 م / 80 ← 48 م / 60 ← 36 م / 40 ← 24 م\n- تقدير المسافة على الطريق\n  - <img src=\"../../inputs/02_regles_circulation/12_distances/images/1689256309697.png\"> **في المدينة: بين شجرتين حوالي 10 م**\n  - <img src=\"../../inputs/02_regles_circulation/12_distances/images/1689951520032.png\"> **في المدينة: بين عمودي كهرباء حوالي 30 م**\n  - الطريق الوطنية والسريعة: خط الحاشية 20 م / فراغ 6 م، خط الوسط 3 م / فراغ 10 م\n  - <img src=\"../../inputs/02_regles_circulation/12_distances/images/1689935911939.png\"> **الطريق السيار: خط الوسط 3 م والفراغ 10 م**\n- مسافة الأمان الجانبية: متر واحد على الأقل (راجل، دراجة، دابة...)\n- <img src=\"../../inputs/02_regles_circulation/12_distances/images/1692090475782.png\" class=\"big\"> مسافة الأمان الجانبية\n- زدها إذا: الطريق أو الرؤية سيئة، السرعة كبيرة، التعب أو طول الطريق\n\n## 🛑 4. مسافة الوقوف (Distance d'arrêt) = (السرعة ÷ 10)²\n- = مسافة رد الفعل + مسافة الحصر\n- <img src=\"../../inputs/02_regles_circulation/12_distances/images/1689951549079.png\" class=\"big\"> مسافة الوقوف\n- 120 ← 144 م / 100 ← 100 م / 90 ← 81 م / 80 ← 64 م / 60 ← 36 م\n- <img src=\"../../inputs/02_regles_circulation/12_distances/images/1689951580994.png\" class=\"big\"> أمثلة مسافة الوقوف\n- غير صحيحة للسرعات أقل من 50 كلم/س\n- العوامل: السرعة، الفرامل والعجلات، الالتحام، حالة الطريق، الطقس، حالة السائق\n\n## 🧱 5. مسافة الحصر (Distance de freinage) = الوقوف − رد الفعل\n- من الضغط على الفرامل إلى التوقف التام\n- <img src=\"../../inputs/02_regles_circulation/12_distances/images/1689951599960.png\" class=\"big\"> مسافة الحصر\n- 120 ← 108 م / 100 ← 70 م / 90 ← 54 م / 80 ← 40 م / 60 ← 18 م\n- <img src=\"../../inputs/02_regles_circulation/12_distances/images/1689951615080.png\" class=\"big\"> جدول مسافات الحصر\n- السرعات المنخفضة (معامل الالتحام 0.8)\n  - 40 كلم/س ← حصر 8 م + رد فعل 12 م = وقوف 20 م\n  - 30 كلم/س ← حصر 4 م + رد فعل 9 م = وقوف 13 م\n  - 20 كلم/س ← حصر 2 م + رد فعل 6 م = وقوف 8 م\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- ثلاث قواعد بالرقم العشري للسرعة (مثال 90 ← 9)\n  - × 3 = رد الفعل (9×3 = 27 م)\n  - × 6 = الأمان (9×6 = 54 م)\n  - × نفسه = الوقوف (9×9 = 81 م)\n- الحصر = الوقوف − رد الفعل (81 − 27 = 54 م)\n- مطر ← مسافة الحصر تتضاعف\n- قاعدة الثانيتين: عدّ «واحد، اثنان» بعد مرور السيارة الأمامية أمام علامة\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- مضاعفة السرعة ← مسافة الوقوف × 4 (لأنها مربع)\n- زمن رد الفعل لا يتغير مع الطريق، يتغير مع حالة السائق\n- مسافة الحصر تتغير مع الطريق والطقس، وليس زمن رد الفعل\n- مسافة الأمان الجانبية مع الدراجة: متر واحد على الأقل\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

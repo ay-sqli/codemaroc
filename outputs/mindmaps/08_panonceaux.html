@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Panonceaux</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/08_panonceaux" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🪧 العلامات الصغرى «اللويحات» (Panonceaux)\n\n## 🚗 1. لويحات متعلقة بالفئات (Catégories d'usagers)\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705327891252.png\"> **مركبات النقل العمومي**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880745803.png\"> **المركبات التي لا يفوق وزنها الإجمالي المأذون به 3.5 طن**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880747427.png\"> **جميع مركبات نقل البضائع**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880747688.png\"> **مركبات نقل البضائع التي يفوق وزنها الإجمالي المأذون به العدد المشار إليه**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880747609.png\"> **الدراجات النارية**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880747731.png\"> **دراجات بمحرك**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748018.png\"> **دراجات هوائية**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880747651.png\"> **مركبات فلاحية بمحرك**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880747835.png\"> **راجلون**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748150.png\"> **عربات مجرورة بواسطة دواب**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748285.png\"> **عربة يدوية**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748415.png\"> **مركبات يفوق عرضها العدد المشار إليه**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749699.png\"> **مركبات يفوق طولها العدد المشار إليه**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748779.png\"> **مركبات يفوق علوها العدد المشار إليه**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748619.png\"> **المركبات ذات الوزن الإجمالي المأذون به محملة يفوق العدد المشار إليه**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749149.png\"> **مركبات ذات حمولة على المحور تفوق العدد المشار إليه**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880750167.png\"> **مركبات تنقل مواد قابلة للانفجار أو للاشتعال تفوق الكمية المحددة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749813.png\"> **مركبات تنقل مواد من شأنها تلويث المياه تفوق الكمية المحددة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749653.png\"> **مركبات تنقل مواد خطيرة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749768.png\"> **مركبات مجهزة بسلاسل الثلوج**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749427.png\"> **مركبات تجر قافلة أو مقطورة يفوق وزنها 250 كلغ**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749520.png\"> **مرفق مهيأ للأشخاص ذوي الحركية المحدودة**\n\n## 🅿️ 2. لويحات مكملة لعلامات الوقوف والتوقف (Arrêt et stationnement)\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749869.png\"> **بيانات عن المنع**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880747797.png\"> **توقف من جانب واحد بتناوب نصف شهري**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880750584.png\"> **توقف مؤدى عنه ذو طابع غير زمني**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749909.png\"> **توقف مؤدى عنه ذو طابع زمني**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880747952.png\"> **توقف خاص بالمركبات المخصصة للأشخاص ذوي الحركية المحدودة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749952.png\"> **المركبات معرضة للإيداع في المحجز**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748865.png\"> **لويحة اتجاه لتطبيق تعليمات الوقوف والتوقف: اتجاه وطول المقطع**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749028.png\"> **لويحة مسافة: طول المقطع الذي يطبق فيه المنع ابتداء من العلامة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749101.png\"> **لويحة طول مقطع: التعليمات تطبق قبل وبعد العلامة (تذكير بالمنع)**\n\n## 📏 3. لويحات المسافة والامتداد (Distance et étendue)\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880747987.png\"> **لويحة مسافة: المسافة بين العلامة وبداية الخطر أو المنطقة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748064.png\"> **لويحة مسافة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748241.png\"> **لويحة امتداد: طول المقطع الخطير أو المقنن**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748341.png\"> **لويحة امتداد**\n\n## 🛑 4. لويحات الوقوف والأسبقية (Stop et cédez le passage)\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880750004.png\"> **لويحة «أترك الأسبقية»**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880750047.png\"> **لويحة «قف»: المسافة بين العلامة ومكان الوقوف الإجباري**\n\n## ↗️ 5. لويحات التموقع والاتجاهات (Position et direction)\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748519.png\"> **تحدد المسلك المعني بالعلامة التي تكملها**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748653.png\"> **العلامة الرئيسية تخص الطريق التي نصبت فوقها**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880748702.png\"> **الاتجاه الواجب اتباعه للاستفادة من الخدمات المشار إليها**\n\n## 🧩 6. إرشادات مختلفة (Indications diverses)\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749244.png\"> **إرشادات مختلفة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880750521.png\"> **منفذ إغاثة مجهز بوسيلة لإطفاء الحريق**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749339.png\"> **منفذ إغاثة مجهز بمحل نداء استغاثة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749378.png\"> **ممر راجلين محدودب**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880749482.png\"> **منطقة خطر جوي**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880750315.png\"> **خطر الاصطدام بمركبات بطيئة**\n- <img src=\"../../inputs/01_la_route/08_panonceaux/المحور الفرعي_files/1705880750412.png\"> **رسم تبياني للتقاطع الموالي: الخط العريض = الطريق ذات الأولوية**\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- اللويحة لا تُقرأ وحدها ← تكمّل أو تحدد معنى العلامة التي فوقها\n- لويحة المسافة (رقم + م) ← «الخطر بعد X متر»\n- لويحة الامتداد (سهمان ↕) ← «الخطر يمتد على X متر»\n- لويحة الفئة ← العلامة تخص هذه المركبات فقط\n- الرسم التبياني: الخط العريض = الطريق ذات الأولوية، الخط الرقيق = أعطِ الأسبقية\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- لويحة «قف» + 150 م ← الوقوف الإجباري بعد 150 متر وليس عند العلامة\n- علامة منع + لويحة شاحنة ← المنع للشاحنات فقط، السيارة مسموح لها\n- لويحة المحجز ← الوقوف المخالف يعرض سيارتك للإيداع في المحجز\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

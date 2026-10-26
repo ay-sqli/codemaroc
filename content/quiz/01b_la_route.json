@@ -1,0 +1,2446 @@
+[
+  {
+    "id": "09_feux_et_agents-01",
+    "t": "09_feux_et_agents",
+    "q": "Un agent de circulation lève le bras verticalement (voir image). Pour qui ce geste signifie-t-il « attention, arrêt » ?",
+    "qa": "عون المرور يرفع يده عموديا (انظر الصورة). لمن تعني هذه الإشارة «انتباه، قف» ؟",
+    "o": [
+      "Seulement pour les usagers placés face à lui",
+      "Seulement pour les usagers placés dans son dos",
+      "Pour tous les usagers de la route",
+      "Seulement pour les piétons"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Bras levé verticalement (اليد مرفوعة عموديا) = « attention, arrêt » pour tous les usagers, même ceux qui arrivent derrière l'agent. Ce geste ne vise pas une seule direction.",
+    "r": "Bras levé verticalement = arrêt pour tout le monde.",
+    "s": "hierarchie",
+    "img": "1681913533014.jpeg"
+  },
+  {
+    "id": "09_feux_et_agents-02",
+    "t": "09_feux_et_agents",
+    "q": "L'agent tient les bras tendus horizontalement (voir image). Quels conducteurs doivent s'arrêter ? (plusieurs réponses)",
+    "qa": "العون يمد يديه أفقيا (انظر الصورة). أي السائقين يجب عليهم الوقوف ؟ (عدة أجوبة)",
+    "o": [
+      "Ceux qui sont face à l'agent",
+      "Ceux qui circulent dans l'axe de ses bras",
+      "Ceux qui sont dans le dos de l'agent"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Bras tendus horizontalement = « arrêt » pour les usagers venant des directions qui coupent celle des bras, c'est-à-dire ceux qui voient l'agent de face ou de dos. Ceux qui circulent dans l'axe des bras ne sont pas visés par cet arrêt.",
+    "r": "Bras tendus : agent de face ou de dos = je m'arrête.",
+    "s": "hierarchie",
+    "img": "1681913533031.jpeg"
+  },
+  {
+    "id": "09_feux_et_agents-03",
+    "t": "09_feux_et_agents",
+    "q": "L'agent baisse le bras (ou les deux bras). Ce geste signifie « arrêt » pour :",
+    "qa": "العون ينزل يده أو يديه. هذه الإشارة تعني «قف» بالنسبة لـ :",
+    "o": [
+      "Tous les conducteurs, même ceux déjà engagés dans le carrefour",
+      "Les conducteurs placés devant ou derrière l'agent",
+      "Personne : le carrefour est libéré",
+      "Uniquement les poids lourds"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Bras baissé(s) (إنزال اليد أو اليدين) = « arrêt » pour les conducteurs qui se trouvent devant ou derrière l'agent. Ce geste n'impose pas l'arrêt à ceux qui sont déjà engagés dans le carrefour.",
+    "r": "Bras baissés = arrêt devant et derrière, sauf véhicules engagés."
+  },
+  {
+    "id": "09_feux_et_agents-04",
+    "t": "09_feux_et_agents",
+    "q": "Un agent balance transversalement un feu rouge. Que signifie ce signal ?",
+    "qa": "عون المرور يؤرجح ضوءا أحمر بالعرض. ماذا تعني هذه الإشارة ؟",
+    "o": [
+      "« Ralentissez » seulement",
+      "« Passez rapidement »",
+      "« Arrêt » pour les conducteurs vers qui le feu est dirigé",
+      "Aucune obligation, simple information"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le balancement transversal d'un feu rouge (تأرجح ضوء أحمر بالعرض) est un ordre d'arrêt pour les conducteurs vers lesquels le feu est dirigé, et on doit obéir immédiatement.",
+    "r": "Feu rouge balancé par un agent = arrêt."
+  },
+  {
+    "id": "09_feux_et_agents-05",
+    "t": "09_feux_et_agents",
+    "q": "Dans quel ordre de priorité faut-il obéir aux différentes signalisations ?",
+    "qa": "ما هو ترتيب الأولوية بين أنواع التشوير ؟",
+    "o": [
+      "Feux > agents > panneaux > règles de circulation",
+      "Panneaux > feux > agents > règles de circulation",
+      "Règles de circulation > panneaux > feux > agents",
+      "Agents > feux > panneaux > règles de circulation"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Les gestes des agents passent avant tout, puis les feux, puis la signalisation (panneaux, marquages), et enfin les règles de circulation.",
+    "r": "Agent > feu > panneau > règle.",
+    "s": "hierarchie"
+  },
+  {
+    "id": "09_feux_et_agents-06",
+    "t": "09_feux_et_agents",
+    "q": "Le feu est vert, mais l'agent de circulation m'ordonne de m'arrêter. Que dois-je faire ?",
+    "qa": "الضوء أخضر، لكن عون المرور يأمرني بالوقوف. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "Je m'arrête : l'ordre de l'agent prime sur le feu",
+      "Je passe : le feu vert m'y autorise",
+      "Je passe prudemment en klaxonnant"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Les gestes de l'agent l'emportent sur les feux. Feu vert + agent qui ordonne l'arrêt = je m'arrête.",
+    "r": "L'agent l'emporte toujours sur le feu.",
+    "s": "hierarchie"
+  },
+  {
+    "id": "09_feux_et_agents-07",
+    "t": "09_feux_et_agents",
+    "q": "À un carrefour, un panneau « STOP » est placé avant des feux qui fonctionnent normalement. Le feu est vert. Que dois-je faire ?",
+    "qa": "في ملتقى، توجد علامة «قف» قبل أضواء تعمل بشكل عادي. الضوء أخضر. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "Je marque quand même l'arrêt au STOP",
+      "Je cède le passage à droite",
+      "Je passe si la voie est libre : le feu prime sur le panneau"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les feux ont priorité sur les panneaux et sur les règles de circulation ; seuls les agents passent avant eux. Le panneau ne s'applique que si les feux sont en panne ou à l'orange clignotant.",
+    "r": "Feu en marche > panneau ; feu en panne = panneau.",
+    "s": "hierarchie"
+  },
+  {
+    "id": "09_feux_et_agents-08",
+    "t": "09_feux_et_agents",
+    "q": "Les feux d'un carrefour clignotent à l'orange (ou sont en panne). Que dois-je appliquer ?",
+    "qa": "أضواء الملتقى صفراء وامضة (أو معطلة). ماذا يجب علي أن أطبق ؟",
+    "o": [
+      "L'arrêt obligatoire, comme au feu rouge",
+      "J'attends que le feu repasse au vert",
+      "Rien : j'ai automatiquement la priorité",
+      "La signalisation par panneaux, puis les règles de priorité"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Un feu en panne ou à l'orange clignotant ne règle plus le carrefour : on applique les panneaux, puis à défaut les règles de priorité, en passant avec prudence.",
+    "r": "Orange clignotant ou feu en panne = panneaux, puis priorité.",
+    "s": "hierarchie"
+  },
+  {
+    "id": "09_feux_et_agents-09",
+    "t": "09_feux_et_agents",
+    "q": "Un feu rouge clignotant signifie :",
+    "qa": "الضوء الأحمر الوامض يعني :",
+    "o": [
+      "« Arrêt » : passage à niveau ou pont mobile",
+      "« Attention, ralentissez »",
+      "Feu en panne : priorité à droite",
+      "Fin de chantier"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le rouge clignotant impose l'arrêt : on le trouve à un passage à niveau (تقاطع مع سكة حديدية) ou à un pont mobile. Ne pas le confondre avec l'orange clignotant, qui signifie seulement « attention ».",
+    "r": "Rouge clignotant = STOP (train ou pont mobile)."
+  },
+  {
+    "id": "09_feux_et_agents-10",
+    "t": "09_feux_et_agents",
+    "q": "Un feu orange (jaune) clignotant signifie :",
+    "qa": "الضوء الأصفر الوامض يعني :",
+    "o": [
+      "Arrêt obligatoire",
+      "Le feu va passer au vert",
+      "Passage réservé aux bus",
+      "Attention, ralentir : endroit dangereux"
+    ],
+    "a": [
+      3
+    ],
+    "e": "L'orange clignotant (الأصفر الوامض) dit « attention, ralentissez » : il signale un endroit particulièrement dangereux. Il n'impose pas l'arrêt, contrairement au rouge clignotant.",
+    "r": "Orange clignotant = prudence, pas arrêt obligatoire."
+  },
+  {
+    "id": "09_feux_et_agents-11",
+    "t": "09_feux_et_agents",
+    "q": "Sur un feu tricolore, comment les couleurs sont-elles disposées, de bas en haut ?",
+    "qa": "كيف ترتب ألوان الإشارة الضوئية الثلاثية من الأسفل إلى الأعلى ؟",
+    "o": [
+      "Rouge, orange, vert",
+      "Orange, vert, rouge",
+      "Vert, orange, rouge"
+    ],
+    "a": [
+      2
+    ],
+    "e": "De bas en haut : vert, orange (jaune), puis rouge tout en haut. Le cycle est vert → orange → rouge, sans clignotement.",
+    "r": "De bas en haut : vert, orange, rouge."
+  },
+  {
+    "id": "09_feux_et_agents-12",
+    "t": "09_feux_et_agents",
+    "q": "Le feu vert m'autorise à passer :",
+    "qa": "الضوء الأخضر يسمح لي بالمرور :",
+    "o": [
+      "Sans aucune vérification",
+      "Après m'être assuré que la voie est libre",
+      "Uniquement pour tourner à droite",
+      "Uniquement si je klaxonne"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le vert autorise le passage, mais seulement après avoir vérifié que la voie est libre (المرور مسموح بعد التأكد من خلو الطريق). Il ne dispense jamais de la prudence.",
+    "r": "Vert = passage permis, après avoir vérifié la voie."
+  },
+  {
+    "id": "09_feux_et_agents-13",
+    "t": "09_feux_et_agents",
+    "q": "Le feu passe à l'orange fixe alors que je peux encore m'arrêter sans danger. Que dois-je faire ?",
+    "qa": "الضوء يتحول إلى الأصفر الثابت وما زال بإمكاني الوقوف دون خطر. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "J'accélère pour passer avant le rouge",
+      "Je m'arrête",
+      "Je passe : seul le rouge impose l'arrêt"
+    ],
+    "a": [
+      1
+    ],
+    "e": "L'orange fixe annonce le rouge et impose l'arrêt. On ne passe que si l'on est si près du feu qu'un arrêt brusque serait dangereux.",
+    "r": "Orange fixe = arrêt, sauf si freiner devient dangereux."
+  },
+  {
+    "id": "09_feux_et_agents-14",
+    "t": "09_feux_et_agents",
+    "q": "Le feu est vert, mais le carrefour est encombré : je risque d'y rester bloqué. Que dois-je faire ?",
+    "qa": "الضوء أخضر، لكن الملتقى مزدحم وقد أبقى متوقفا داخله. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "J'avance : le vert m'y autorise",
+      "Je klaxonne pour libérer le passage",
+      "Je n'entre pas et j'attends avant le carrefour"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Même au vert, il ne faut pas s'engager si l'encombrement risque de m'immobiliser dans le carrefour : je bloquerais les usagers des autres directions.",
+    "r": "Vert + bouchon = je n'entre pas dans le carrefour."
+  },
+  {
+    "id": "09_feux_et_agents-15",
+    "t": "09_feux_et_agents",
+    "q": "Au feu rouge, où puis-je m'arrêter ? (plusieurs réponses)",
+    "qa": "عند الضوء الأحمر، أين يمكنني الوقوف ؟ (عدة أجوبة)",
+    "o": [
+      "À la ligne d'arrêt",
+      "Avant le passage pour piétons",
+      "À hauteur du poteau qui porte le feu",
+      "Sur le passage pour piétons"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Au rouge, on s'arrête à la ligne d'arrêt, ou avant le passage pour piétons, ou à hauteur du poteau des feux. Jamais sur le passage pour piétons.",
+    "r": "Rouge : ligne d'arrêt, avant passage piéton ou au poteau."
+  },
+  {
+    "id": "09_feux_et_agents-16",
+    "t": "09_feux_et_agents",
+    "q": "Quelles sont les missions de l'agent de circulation citées dans le cours ? (plusieurs réponses)",
+    "qa": "ما هي مهام عون المرور الواردة في الدرس ؟ (عدة أجوبة)",
+    "o": [
+      "Faciliter la fluidité de la circulation",
+      "Réparer les feux en panne",
+      "Contrôler les conducteurs et les véhicules",
+      "Organiser les secours"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "L'agent facilite la fluidité, contrôle les conducteurs et les véhicules et organise les secours. Réparer les feux ne fait pas partie de ses missions.",
+    "r": "Agent : fluidité, contrôle, organisation des secours."
+  },
+  {
+    "id": "09_feux_et_agents-17",
+    "t": "09_feux_et_agents",
+    "q": "Quand dois-je obéir aux ordres d'un agent de circulation ?",
+    "qa": "متى يجب علي الامتثال لإشارات عون المرور ؟",
+    "o": [
+      "Immédiatement",
+      "Seulement s'il n'y a pas de feux",
+      "Seulement s'il utilise un sifflet",
+      "Après avoir vérifié la couleur du feu"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Les ordres des agents s'exécutent immédiatement (الامتثال يكون فورا) : ils priment sur les feux, les panneaux et les règles de circulation.",
+    "r": "Ordre d'un agent = obéissance immédiate.",
+    "s": "hierarchie"
+  },
+  {
+    "id": "09_feux_et_agents-18",
+    "t": "09_feux_et_agents",
+    "q": "Selon le cours, quels éléments font partie de la signalisation routière ? (plusieurs réponses)",
+    "qa": "حسب الدرس، ما هي أنواع التشوير الطرقي ؟ (عدة أجوبة)",
+    "o": [
+      "La signalisation verticale (panneaux)",
+      "Les panneaux publicitaires",
+      "Les signaux lumineux (feux)",
+      "Les gestes des agents de circulation"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Le cours distingue quatre types : signalisation verticale, signalisation horizontale (marquages), signaux lumineux et gestes des agents. Les panneaux publicitaires n'en font pas partie.",
+    "r": "4 signalisations : verticale, horizontale, feux, agents."
+  },
+  {
+    "id": "10_signalisation_horizontale-01",
+    "t": "10_signalisation_horizontale",
+    "q": "Une ligne longitudinale continue au milieu de la chaussée interdit : (plusieurs réponses)",
+    "qa": "الخط الطولي المتصل في وسط القارعة يمنع : (عدة أجوبة)",
+    "o": [
+      "De la franchir",
+      "De dépasser en la franchissant",
+      "De faire demi-tour en la franchissant",
+      "De circuler à sa droite"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "La ligne continue (خط متصل) ne doit jamais être franchie : elle interdit donc le dépassement et le demi-tour qui obligeraient à la traverser. Rouler à sa droite est normal.",
+    "r": "Ligne continue : ni franchir, ni dépasser, ni demi-tour.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-02",
+    "t": "10_signalisation_horizontale",
+    "q": "Ligne continue : un cycliste roule lentement devant moi. Pour le dépasser, je devrais franchir la ligne. Ai-je le droit ?",
+    "qa": "خط متصل، ودراجة تسير ببطء أمامي. لتجاوزها يجب أن أتخطى الخط. هل يحق لي ذلك ؟",
+    "o": [
+      "Oui, ce n'est qu'un vélo",
+      "Oui, si je klaxonne avant",
+      "Non, la ligne continue l'interdit"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Piège classique : la ligne continue interdit tout franchissement, même pour dépasser un vélo. Je reste derrière jusqu'à ce que le marquage le permette.",
+    "r": "Ligne continue = pas de franchissement, même pour un vélo.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-03",
+    "t": "10_signalisation_horizontale",
+    "q": "Une ligne discontinue à traits espacés au milieu de la chaussée permet :",
+    "qa": "الخط المتقطع المتباعد في وسط القارعة يسمح :",
+    "o": [
+      "De changer de voie et de dépasser",
+      "Uniquement de faire demi-tour",
+      "Rien : elle a la même valeur qu'une ligne continue",
+      "Seulement aux bus de la franchir"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La ligne discontinue à traits espacés (خط متقطع متباعد) peut être franchie : le changement de voie et le dépassement sont permis, si la manœuvre est sans danger.",
+    "r": "Traits espacés = franchissement permis.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-04",
+    "t": "10_signalisation_horizontale",
+    "q": "Une ligne discontinue à traits rapprochés, sans flèches, annonce :",
+    "qa": "الخط المتقطع المتقارب بدون أسهم يعلن عن :",
+    "o": [
+      "Un passage pour piétons",
+      "Une zone de stationnement",
+      "L'approche d'une ligne continue",
+      "La fin d'une autoroute"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Plus les traits se rapprochent, plus la ligne continue (ou le danger) est proche : c'est une ligne d'annonce (خط متقطع متقارب).",
+    "r": "Traits rapprochés = ligne continue bientôt.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-05",
+    "t": "10_signalisation_horizontale",
+    "q": "Que signifient ces flèches courbes peintes sur la ligne discontinue ?",
+    "qa": "ماذا تعني هذه الأسهم المرسومة على الخط المتقطع ؟",
+    "o": [
+      "Je peux commencer un dépassement",
+      "Ligne continue proche : je me rabats à droite et je ne dépasse pas",
+      "Je dois tourner à droite au prochain carrefour",
+      "Voie réservée aux bus"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Ce sont des flèches de rabattement (أسهم الانحياز) : une ligne continue approche. Il faut revenir à droite et ne pas commencer de dépassement.",
+    "r": "Flèches de rabattement = je me rabats, pas de dépassement.",
+    "s": "marquage",
+    "img": "1692179830431.png"
+  },
+  {
+    "id": "10_signalisation_horizontale-06",
+    "t": "10_signalisation_horizontale",
+    "q": "Ligne mixte (voir schéma) : quel véhicule a le droit de franchir la ligne ?",
+    "qa": "خط مزدوج (انظر الرسم) : أي مركبة يحق لها تخطي الخط ؟",
+    "o": [
+      "Le véhicule de la voie 1, côté ligne continue",
+      "Les deux véhicules",
+      "Aucun des deux",
+      "Le véhicule de la voie 2, côté ligne discontinue"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Avec une ligne mixte (خط مزدوج), on obéit à la ligne la plus proche de soi. La voie 2 a les tirets de son côté : elle peut franchir ; la voie 1 a la ligne continue : c'est interdit.",
+    "r": "Ligne mixte : j'obéis à la ligne de mon côté.",
+    "s": "marquage",
+    "img": "1691664067287.png"
+  },
+  {
+    "id": "10_signalisation_horizontale-07",
+    "t": "10_signalisation_horizontale",
+    "q": "Une ligne transversale continue de 0,50 m de large, au débouché d'une route, signifie :",
+    "qa": "خط عرضي متصل عرضه 0.50 م عند مخرج طريق يعني :",
+    "o": [
+      "Cédez le passage",
+      "Arrêt obligatoire (STOP)",
+      "Ligne d'effet des feux",
+      "Passage pour piétons"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La ligne transversale continue « الوقوف » rend l'arrêt obligatoire : c'est le « STOP » peint au sol. Une ligne discontinue de même largeur signifie « cédez le passage ».",
+    "r": "Ligne transversale continue = arrêt obligatoire.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-08",
+    "t": "10_signalisation_horizontale",
+    "q": "Une ligne transversale discontinue de 0,50 m de large signifie :",
+    "qa": "خط عرضي متقطع عرضه 0.50 م يعني :",
+    "o": [
+      "Arrêt absolu obligatoire",
+      "Stationnement interdit",
+      "Fin de limitation de vitesse",
+      "Vous n'avez pas la priorité : cédez le passage"
+    ],
+    "a": [
+      3
+    ],
+    "e": "C'est la ligne « ليس لكم حق الأسبقية » : je cède le passage et je ne m'arrête que si c'est nécessaire. L'arrêt absolu correspond à la ligne continue.",
+    "r": "Transversale discontinue 0,50 m = cédez le passage.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-09",
+    "t": "10_signalisation_horizontale",
+    "q": "Au feu rouge, je m'arrête avant cette ligne transversale discontinue (ligne d'effet des feux). Quelle est sa largeur ?",
+    "qa": "عند الضوء الأحمر، أقف قبل هذا الخط العرضي المتقطع (خط مفعول أضواء السير). كم عرضه ؟",
+    "o": [
+      "0,50 m",
+      "0,15 m",
+      "0,30 m",
+      "1 m"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La ligne d'effet des feux (خط مفعول أضواء السير) mesure 0,15 m. Les lignes « STOP » et « cédez le passage » sont plus larges : 0,50 m.",
+    "r": "Ligne des feux 0,15 m ; STOP et cédez 0,50 m.",
+    "s": "marquage",
+    "img": "1684920390673.png"
+  },
+  {
+    "id": "10_signalisation_horizontale-10",
+    "t": "10_signalisation_horizontale",
+    "q": "Puis-je m'arrêter quelques secondes sur un passage pour piétons pour déposer un passager ?",
+    "qa": "هل يمكنني الوقوف لثوان فوق ممر الراجلين لإنزال راكب ؟",
+    "o": [
+      "Oui, si l'arrêt est très court",
+      "Oui, avec les feux de détresse allumés",
+      "Non, l'arrêt et le stationnement y sont interdits"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Sur un passage pour piétons, l'arrêt (الوقوف) comme le stationnement (التوقف) sont interdits, même quelques secondes. Je dois y céder le passage aux piétons.",
+    "r": "Passage piéton : ni arrêt ni stationnement, même un instant."
+  },
+  {
+    "id": "10_signalisation_horizontale-11",
+    "t": "10_signalisation_horizontale",
+    "q": "Que signale ce damier rouge et blanc peint au bord de la chaussée ?",
+    "qa": "ماذا تشير إليه مربعات الشطرنج الحمراء والبيضاء المرسومة على جانب القارعة ؟",
+    "o": [
+      "Une zone de stationnement payant",
+      "Un passage à niveau",
+      "Une aire de repos",
+      "Le début d'une voie de détresse (freins défaillants)"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Les carrés rouges et blancs marquent le début d'une voie de détresse (مسلك الإغاثة) destinée aux véhicules dont les freins lâchent. Il est interdit de s'y arrêter.",
+    "r": "Damier rouge et blanc = voie de détresse, arrêt interdit.",
+    "img": "1683889183253.png"
+  },
+  {
+    "id": "10_signalisation_horizontale-12",
+    "t": "10_signalisation_horizontale",
+    "q": "Un marquage bleu au sol indique :",
+    "qa": "العلامات الأرضية الزرقاء تشير إلى :",
+    "o": [
+      "Arrêt et stationnement interdits",
+      "Une zone de chantier",
+      "Stationnement à durée limitée contrôlé par disque",
+      "Le début d'une voie de détresse"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le bleu marque le stationnement à durée limitée contrôlé par disque (التوقف المحدد زمنيا والمراقب بقرص). L'interdiction d'arrêt et de stationnement est en jaune, la voie de détresse en rouge et blanc.",
+    "r": "Bleu au sol = stationnement limité avec disque.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-13",
+    "t": "10_signalisation_horizontale",
+    "q": "Que peut indiquer un marquage jaune au sol ? (plusieurs réponses)",
+    "qa": "على ماذا يمكن أن تدل العلامات الأرضية الصفراء ؟ (عدة أجوبة)",
+    "o": [
+      "Un arrêt de bus",
+      "Une interdiction d'arrêt et de stationnement",
+      "Un stationnement à durée limitée par disque",
+      "Une zone de livraison"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Le jaune sert à interdire l'arrêt et le stationnement, à marquer les arrêts de bus, les zones de livraison et les chantiers (marquage temporaire). Le stationnement contrôlé par disque est en bleu.",
+    "r": "Jaune au sol : interdiction, bus, livraison, chantier.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-14",
+    "t": "10_signalisation_horizontale",
+    "q": "Je conduis une voiture particulière. Puis-je m'arrêter sur cette ligne jaune en zigzag ?",
+    "qa": "أسوق سيارة خاصة. هل يمكنني الوقوف على هذا الخط الأصفر المتعرج ؟",
+    "o": [
+      "Non : arrêt et stationnement interdits, sauf aux bus",
+      "Oui, pour un arrêt très bref",
+      "Oui, la nuit seulement"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La ligne jaune en zigzag (خط أصفر متعرج) marque un arrêt de bus : l'arrêt et le stationnement y sont interdits à tous les autres véhicules.",
+    "r": "Zigzag jaune = arrêt de bus, interdit aux autres.",
+    "img": "1691747055102.png"
+  },
+  {
+    "id": "10_signalisation_horizontale-15",
+    "t": "10_signalisation_horizontale",
+    "q": "Ces triangles blancs peints sur la chaussée annoncent :",
+    "qa": "هذه المثلثات البيضاء المرسومة على القارعة تعلن عن :",
+    "o": [
+      "Un cédez-le-passage",
+      "Une sortie d'autoroute",
+      "Une voie réservée aux taxis",
+      "Un aménagement qui impose de ralentir"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Les triangles blancs en forme de flèche (مثلثات بيضاء على شكل سهم) signalent un aménagement, par exemple un ralentisseur, qui exige de réduire sa vitesse.",
+    "r": "Triangles blancs au sol = aménagement, je ralentis.",
+    "img": "1695639007635.png"
+  },
+  {
+    "id": "10_signalisation_horizontale-16",
+    "t": "10_signalisation_horizontale",
+    "q": "Dans une zone de travaux, le marquage jaune contredit l'ancien marquage blanc. Lequel dois-je suivre ?",
+    "qa": "في منطقة أشغال، تتعارض الخطوط الصفراء مع الخطوط البيضاء القديمة. أيها يجب أن أتبع ؟",
+    "o": [
+      "Le jaune : il est temporaire et prime sur le blanc",
+      "Le blanc : il est permanent",
+      "Aucun : je roule au centre de la chaussée"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le marquage jaune est temporaire (chantier) et l'emporte sur le marquage blanc habituel : il faut suivre les lignes jaunes.",
+    "r": "Au chantier, le jaune au sol remplace le blanc.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-17",
+    "t": "10_signalisation_horizontale",
+    "q": "Sur une route à deux voies, la ligne discontinue axiale est formée de :",
+    "qa": "في طريق بمسلكين، يتكون الخط المتقطع في الوسط من :",
+    "o": [
+      "10 m de trait et 3 m d'espace",
+      "3 m de trait et 10 m d'espace",
+      "20 m de trait et 6 m d'espace",
+      "1 m de trait et 1 m d'espace"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sur toutes les routes, la ligne axiale discontinue compte 3 m de trait pour 10 m d'espace. Le 20 m / 6 m concerne la ligne de rive des routes à trois voies et des voies express.",
+    "r": "Axe : 3 m de trait, 10 m d'espace.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-18",
+    "t": "10_signalisation_horizontale",
+    "q": "Sur autoroute, la ligne de rive (bord de la chaussée) est :",
+    "qa": "في الطريق السيار، خط الحاشية يكون :",
+    "o": [
+      "Discontinue : 20 m de trait / 6 m d'espace",
+      "Discontinue : 3 m de trait / 10 m d'espace",
+      "Jaune",
+      "Continue"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Sur autoroute, la rive est une ligne continue. Sur une route à trois voies et sur une voie express, la rive est discontinue (20 m / 6 m).",
+    "r": "Rive : continue sur autoroute, 20 m/6 m sur voie express.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-19",
+    "t": "10_signalisation_horizontale",
+    "q": "Quelles inscriptions au sol sont associées à leur bonne signification ? (plusieurs réponses)",
+    "qa": "أي الكتابات الأرضية مقرونة بمعناها الصحيح ؟ (عدة أجوبة)",
+    "o": [
+      "« TAXI » : emplacement réservé aux taxis",
+      "« PAYANT » : stationnement gratuit",
+      "« LIVRAISON » : chargement et déchargement de marchandises",
+      "Fauteuil roulant : stationnement réservé aux personnes handicapées"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "« TAXI » réserve la place aux taxis, « LIVRAISON » (en jaune) au chargement et au déchargement, le fauteuil roulant aux personnes à besoins spécifiques. « PAYANT » signifie au contraire que le stationnement est payant.",
+    "r": "TAXI, LIVRAISON, fauteuil = réservé ; PAYANT = payant."
+  },
+  {
+    "id": "10_signalisation_horizontale-20",
+    "t": "10_signalisation_horizontale",
+    "q": "Les flèches directionnelles et de sélection peintes dans ma voie m'imposent :",
+    "qa": "الأسهم التوجيهية والانتقائية المرسومة في مسلكي تلزمني بـ :",
+    "o": [
+      "D'accélérer",
+      "De suivre la direction indiquée ou l'une des directions indiquées",
+      "De dépasser par la droite",
+      "De m'arrêter"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Dans une voie marquée de flèches de sélection, je dois prendre la direction indiquée (ou l'une des directions s'il y a plusieurs flèches). Il faut donc choisir sa voie à l'avance.",
+    "r": "Flèche au sol = direction imposée dans cette voie.",
+    "s": "marquage"
+  },
+  {
+    "id": "10_signalisation_horizontale-21",
+    "t": "10_signalisation_horizontale",
+    "q": "Les marques peintes signalant un poste d'appel d'urgence indiquent :",
+    "qa": "علامات محل نداء الإغاثة تشير إلى :",
+    "o": [
+      "La distance et la direction du téléphone d'urgence",
+      "La vitesse maximale autorisée",
+      "L'emplacement d'une station-service"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Les marques d'appel d'urgence (علامات محل نداء الإغاثة) donnent la direction et la distance du téléphone de secours. D'autres marques indiquent de même l'issue de secours la plus proche.",
+    "r": "Marque d'appel d'urgence = direction et distance du téléphone."
+  },
+  {
+    "id": "11_signaux_lumineux-01",
+    "t": "11_signaux_lumineux",
+    "q": "Ce signal lumineux est placé au-dessus d'une voie. Que signifie-t-il ?",
+    "qa": "توجد هذه الإشارة الضوئية فوق مسلك. ماذا تعني ؟",
+    "o": [
+      "Voie ouverte à la circulation",
+      "Fin de toutes les interdictions",
+      "Croisement dangereux",
+      "Interdiction d'emprunter la voie située en dessous"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La croix rouge (❌ أحمر) au-dessus d'une voie interdit de l'utiliser : la voie est fermée et il ne faut jamais y entrer.",
+    "r": "Croix rouge au-dessus d'une voie = voie fermée.",
+    "img": "1682407572397.png"
+  },
+  {
+    "id": "11_signaux_lumineux-02",
+    "t": "11_signaux_lumineux",
+    "q": "Une flèche verte pointée vers le bas, au-dessus d'une voie, signifie :",
+    "qa": "سهم أخضر موجه نحو الأسفل فوق مسلك يعني :",
+    "o": [
+      "La voie située en dessous est ouverte : je peux l'utiliser",
+      "Je dois quitter cette voie",
+      "Voie réservée aux bus",
+      "Je dois m'arrêter"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La flèche verte vers le bas (⬇️ أخضر) autorise l'utilisation de la voie qu'elle surplombe. La croix rouge, elle, ferme la voie.",
+    "r": "Flèche verte vers le bas = voie ouverte."
+  },
+  {
+    "id": "11_signaux_lumineux-03",
+    "t": "11_signaux_lumineux",
+    "q": "Cette flèche lumineuse oblique apparaît au-dessus de ma voie. Que dois-je faire ?",
+    "qa": "يظهر هذا السهم الضوئي المائل فوق مسلكي. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "M'arrêter immédiatement",
+      "Quitter ma voie pour rejoindre la voie adjacente indiquée",
+      "Continuer : ma voie est ouverte",
+      "Faire demi-tour"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La flèche oblique (سهم مائل) demande de quitter la voie pour rejoindre la voie voisine indiquée, dès que possible et en sécurité.",
+    "r": "Flèche oblique = je change de voie dès que possible.",
+    "img": "1682407572424.png"
+  },
+  {
+    "id": "11_signaux_lumineux-04",
+    "t": "11_signaux_lumineux",
+    "q": "En voiture particulière, quels signaux lumineux ne s'adressent pas à moi ? (plusieurs réponses)",
+    "qa": "وأنا أسوق سيارة خاصة، أي الإشارات الضوئية لا تعنيني ؟ (عدة أجوبة)",
+    "o": [
+      "Les feux à formes blanches réservés aux transports collectifs réguliers",
+      "Le feu tricolore vert-orange-rouge du carrefour",
+      "Les feux réservés aux cyclistes",
+      "Le feu bicolore destiné aux piétons"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Les feux spéciaux (formes blanches pour les transports collectifs, feux cyclistes, feu bicolore des piétons) ne concernent pas les voitures. Le feu tricolore classique, lui, s'adresse bien à moi.",
+    "r": "Feux bus, vélo, piétons : pas pour les voitures."
+  },
+  {
+    "id": "11_signaux_lumineux-05",
+    "t": "11_signaux_lumineux",
+    "q": "Le feu du bas de ce signal clignote à l'orange. Que dois-je faire ?",
+    "qa": "الضوء السفلي لهذه الإشارة أصفر وامض. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "M'arrêter comme au feu rouge",
+      "Ralentir et passer avec prudence, en respectant les règles de priorité",
+      "Accélérer : le passage m'est réservé"
+    ],
+    "a": [
+      1
+    ],
+    "e": "L'orange clignotant (الأصفر الوامض) signifie « attention » : il n'impose pas l'arrêt. Je ralentis et j'applique les règles de priorité.",
+    "r": "Orange clignotant = prudence + règles de priorité.",
+    "s": "hierarchie",
+    "img": "1682407572243.png"
+  },
+  {
+    "id": "11_signaux_lumineux-06",
+    "t": "11_signaux_lumineux",
+    "q": "Un véhicule de travaux porte une flèche lumineuse oblique pointée vers le bas. Que dois-je faire ?",
+    "qa": "مركبة أشغال تحمل سهما ضوئيا مائلا نحو الأسفل. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "Le suivre de près",
+      "Klaxonner pour qu'il se range",
+      "Le dépasser par la droite",
+      "Ralentir et rejoindre la voie adjacente indiquée"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Une flèche ou une plateforme lumineuse sur un véhicule d'intervention ou de travaux impose de ralentir et de suivre la flèche vers la voie voisine indiquée.",
+    "r": "Flèche lumineuse sur un engin = je ralentis et je la suis."
+  },
+  {
+    "id": "11_signaux_lumineux-07",
+    "t": "11_signaux_lumineux",
+    "q": "Parmi les signaux lumineux temporaires, il existe un feu spécial destiné :",
+    "qa": "من بين العلامات الضوئية المؤقتة، يوجد ضوء خاص موجه إلى :",
+    "o": [
+      "Aux ambulances",
+      "Aux taxis",
+      "Aux véhicules lents",
+      "Aux motocyclettes"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le cours cite un feu spécial pour les véhicules lents (ضوء خاص بالمركبات بطيئة السير) parmi les dispositifs lumineux temporaires.",
+    "r": "Feu temporaire spécial = véhicules lents."
+  },
+  {
+    "id": "11_signaux_lumineux-08",
+    "t": "11_signaux_lumineux",
+    "q": "Quels signaux lumineux font partie de la signalisation temporaire ? (plusieurs réponses)",
+    "qa": "أي العلامات الضوئية تنتمي إلى التشوير المؤقت ؟ (عدة أجوبة)",
+    "o": [
+      "Les feux tricolores à alternance",
+      "La flèche lumineuse sur un véhicule de travaux",
+      "Le signal lumineux mobile annonçant un rétrécissement de chaussée",
+      "Le feu bicolore destiné aux piétons"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Feux tricolores à alternance, flèches et plateformes lumineuses sur engins, signal mobile de rétrécissement : ce sont des dispositifs temporaires. Le feu bicolore des piétons fait partie des signaux permanents.",
+    "r": "Alternance, flèche sur engin, signal mobile = temporaire."
+  },
+  {
+    "id": "11_signaux_lumineux-09",
+    "t": "11_signaux_lumineux",
+    "q": "Une croix rouge s'allume au-dessus de la voie voisine, qui paraît vide. Puis-je m'y rabattre ?",
+    "qa": "يضيء صليب أحمر فوق المسلك المجاور الذي يبدو فارغا. هل يمكنني الانتقال إليه ؟",
+    "o": [
+      "Oui, puisqu'elle est vide",
+      "Non, cette voie est fermée : je n'y entre pas"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Une croix rouge ferme la voie, même si elle paraît libre : je n'y entre jamais.",
+    "r": "Croix rouge = je n'entre jamais, même voie vide."
+  },
+  {
+    "id": "11_signaux_lumineux-10",
+    "t": "11_signaux_lumineux",
+    "q": "Feux tricolores à alternance sur un chantier : le feu est rouge, mais personne n'arrive en face. Puis-je passer ?",
+    "qa": "إشارات ثلاثية بالتناوب في ورش : الضوء أحمر لكن لا أحد قادم من الاتجاه المعاكس. هل يمكنني المرور ؟",
+    "o": [
+      "Oui, la voie est libre",
+      "Oui, en klaxonnant",
+      "Non, le feu rouge interdit le passage"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les feux temporaires à alternance font passer chaque sens à tour de rôle. Comme tout feu rouge, ils interdisent le passage, même si la voie semble libre.",
+    "r": "Feu de chantier rouge = arrêt, même voie libre.",
+    "s": "hierarchie"
+  },
+  {
+    "id": "11_signaux_lumineux-11",
+    "t": "11_signaux_lumineux",
+    "q": "Que dois-je faire face à un signal lumineux mobile annonçant un rétrécissement temporaire de la chaussée ?",
+    "qa": "ماذا يجب علي أن أفعل أمام علامة ضوئية متنقلة تشير إلى ضيق مؤقت للقارعة ؟",
+    "o": [
+      "Ralentir et suivre les indications de la signalisation",
+      "Accélérer pour passer avant le rétrécissement",
+      "L'ignorer : seule la signalisation permanente compte"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Ce signal annonce un rétrécissement temporaire : je ralentis et je suis les indications. La signalisation temporaire l'emporte sur la signalisation permanente.",
+    "r": "Signal lumineux de chantier = je ralentis et je suis."
+  },
+  {
+    "id": "11_signaux_lumineux-12",
+    "t": "11_signaux_lumineux",
+    "q": "Les feux tricolores temporaires à alternance peuvent présenter : (plusieurs réponses)",
+    "qa": "يمكن أن تتكون الإشارات الثلاثية المؤقتة بالتناوب من : (عدة أجوبة)",
+    "o": [
+      "Vert, orange, rouge",
+      "Orange clignotant, orange, rouge",
+      "Bleu, blanc, rouge",
+      "Uniquement un vert clignotant"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "Le cours cite deux combinaisons pour les feux à alternance : vert / orange / rouge, et orange clignotant / orange / rouge.",
+    "r": "Alternance : vert/orange/rouge ou orange clignotant/orange/rouge."
+  },
+  {
+    "id": "12_signalisation_temporaire-01",
+    "t": "12_signalisation_temporaire",
+    "q": "Quelle est la couleur de fond des panneaux de signalisation temporaire ?",
+    "qa": "ما هو لون خلفية علامات التشوير المؤقت ؟",
+    "o": [
+      "Blanc",
+      "Bleu",
+      "Vert",
+      "Jaune"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le fond jaune signale une situation temporaire (chantier, déviation, danger provisoire). Cette signalisation l'emporte sur la signalisation permanente.",
+    "r": "Fond jaune = temporaire.",
+    "s": "formes"
+  },
+  {
+    "id": "12_signalisation_temporaire-02",
+    "t": "12_signalisation_temporaire",
+    "q": "Un panneau permanent limite à 100 km/h et un panneau temporaire jaune limite à 60 km/h. Quelle vitesse dois-je respecter ?",
+    "qa": "علامة دائمة تحدد السرعة في 100 كلم/س وعلامة مؤقتة صفراء تحددها في 60 كلم/س. ما السرعة التي يجب احترامها ؟",
+    "o": [
+      "100 km/h",
+      "80 km/h",
+      "60 km/h",
+      "La plus élevée des deux"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La signalisation temporaire prime sur la signalisation permanente : c'est le panneau jaune qui s'applique, donc 60 km/h.",
+    "r": "Temporaire > permanent : 60 l'emporte sur 100.",
+    "s": "formes"
+  },
+  {
+    "id": "12_signalisation_temporaire-03",
+    "t": "12_signalisation_temporaire",
+    "q": "Dans une zone de travaux, que dois-je faire ? (plusieurs réponses)",
+    "qa": "في منطقة الأشغال، ماذا يجب علي أن أفعل ؟ (عدة أجوبة)",
+    "o": [
+      "Ralentir",
+      "Dépasser pour sortir plus vite du chantier",
+      "Respecter les cônes et les balises",
+      "Ne pas dépasser"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Au chantier : on ralentit, on respecte les cônes et les balises et on ne dépasse pas.",
+    "r": "Chantier : ralentir, suivre les cônes, ne pas dépasser."
+  },
+  {
+    "id": "12_signalisation_temporaire-04",
+    "t": "12_signalisation_temporaire",
+    "q": "Je suis une déviation signalée en jaune. Jusqu'où dois-je suivre les flèches jaunes ?",
+    "qa": "أتبع انحرافا مشورا باللون الأصفر. إلى أين يجب أن أتبع الأسهم الصفراء ؟",
+    "o": [
+      "Jusqu'au premier carrefour",
+      "Jusqu'au panneau « fin de déviation »",
+      "Sur 500 m seulement",
+      "Jusqu'à la prochaine ville"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On suit l'itinéraire de déviation balisé en jaune jusqu'au panneau « نهاية الانحراف » (fin de déviation).",
+    "r": "Déviation : suivre le jaune jusqu'à « fin de déviation »."
+  },
+  {
+    "id": "12_signalisation_temporaire-05",
+    "t": "12_signalisation_temporaire",
+    "q": "Un agent agite ce drapeau rouge au bord de la route. Que dois-je faire ?",
+    "qa": "عون يلوح بهذه الراية الحمراء على جانب الطريق. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "Accélérer pour passer vite",
+      "Klaxonner et continuer",
+      "Ralentir et me préparer à m'arrêter",
+      "L'ignorer : ce n'est pas un panneau"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le drapeau rouge tenu par un agent annonce un danger ou un obstacle temporaire : je ralentis et je me prépare à m'arrêter.",
+    "r": "Drapeau rouge d'un agent = je ralentis, prêt à m'arrêter.",
+    "img": "1696509418256.png"
+  },
+  {
+    "id": "12_signalisation_temporaire-06",
+    "t": "12_signalisation_temporaire",
+    "q": "Le fanion (راية) de signalisation temporaire peut signaler : (plusieurs réponses)",
+    "qa": "يمكن أن تشير الراية في التشوير المؤقت إلى : (عدة أجوبة)",
+    "o": [
+      "Un obstacle temporaire de faible importance",
+      "L'arrivée d'un train à un passage à niveau non gardé",
+      "Un parking gratuit",
+      "La fin d'une autoroute"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "Selon le cours, le fanion signale un obstacle temporaire peu important ou l'arrivée d'un train à un passage à niveau non gardé (تقاطع غير محروس).",
+    "r": "Fanion : petit obstacle ou train à un passage non gardé."
+  },
+  {
+    "id": "12_signalisation_temporaire-07",
+    "t": "12_signalisation_temporaire",
+    "q": "À quoi sert le ruban (شريط) de signalisation temporaire ? (plusieurs réponses)",
+    "qa": "ما هو دور الشريط في التشوير المؤقت ؟ (عدة أجوبة)",
+    "o": [
+      "Indiquer une aire de repos",
+      "Délimiter un chantier",
+      "Fermer un passage à niveau",
+      "Remplacer une ligne continue"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Le ruban sert à délimiter un chantier ou à fermer un passage à niveau (تقاطع مع سكة حديدية).",
+    "r": "Ruban : délimiter un chantier ou fermer un passage à niveau."
+  },
+  {
+    "id": "12_signalisation_temporaire-08",
+    "t": "12_signalisation_temporaire",
+    "q": "À quoi servent les cônes, les piquets et les balises d'alignement ?",
+    "qa": "ما هو دور الأجهزة المخروطية والأوتاد وأرمات المحاذاة ؟",
+    "o": [
+      "Délimiter des obstacles temporaires ou des chantiers",
+      "Marquer des places de stationnement",
+      "Indiquer un passage pour piétons",
+      "Annoncer une station-service"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Cônes, piquets, balises d'alignement et de direction délimitent les obstacles temporaires et les chantiers : il faut les respecter.",
+    "r": "Cônes et balises = limites du chantier à respecter."
+  },
+  {
+    "id": "12_signalisation_temporaire-09",
+    "t": "12_signalisation_temporaire",
+    "q": "Le poteau (عمود) de signalisation temporaire présignale :",
+    "qa": "العمود في التشوير المؤقت يشير مسبقا إلى :",
+    "o": [
+      "La vitesse minimale",
+      "Les dimensions maximales autorisées (largeur et hauteur du véhicule)",
+      "Un poste d'appel d'urgence",
+      "Une aire de repos"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le poteau annonce à l'avance les dimensions maximales (largeur et hauteur) qu'un véhicule peut avoir pour passer.",
+    "r": "Poteau temporaire = largeur et hauteur maximales."
+  },
+  {
+    "id": "12_signalisation_temporaire-10",
+    "t": "12_signalisation_temporaire",
+    "q": "Un panneau jaune de déviation porte le pictogramme d'une catégorie de véhicules (par exemple un camion). Je suis en voiture : suis-je concerné ?",
+    "qa": "علامة انحراف صفراء تحمل رمز صنف من المركبات (مثلا شاحنة). أنا أسوق سيارة : هل أنا معني ؟",
+    "o": [
+      "Oui, une déviation s'impose à tous",
+      "Non, elle ne vise que cette catégorie de véhicules"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Il existe des déviations réservées à une catégorie de véhicules (اتجاه الانحراف لصنف من المركبات). Si le pictogramme ne correspond pas à mon véhicule, je ne suis pas obligé de la suivre.",
+    "r": "Déviation avec pictogramme = seulement cette catégorie."
+  },
+  {
+    "id": "12_signalisation_temporaire-11",
+    "t": "12_signalisation_temporaire",
+    "q": "Lesquels sont des panneaux de danger temporaires ? (plusieurs réponses)",
+    "qa": "أي من هذه العلامات هي علامات خطر مؤقتة ؟ (عدة أجوبة)",
+    "o": [
+      "Travaux",
+      "Projection de gravillons",
+      "Accident",
+      "Stationnement payant"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Travaux, projection de gravillons, accident, chaussée rétrécie ou glissante, bouchon : ce sont des dangers temporaires sur fond jaune. « Stationnement payant » n'est pas un panneau de danger.",
+    "r": "Travaux, gravillons, accident, bouchon = dangers temporaires.",
+    "s": "formes"
+  },
+  {
+    "id": "12_signalisation_temporaire-12",
+    "t": "12_signalisation_temporaire",
+    "q": "Sur un chantier, une personne règle la circulation avec un panneau manuel (علامة يدوية). Que dois-je faire ?",
+    "qa": "في ورش، ينظم شخص حركة السير بعلامة يدوية. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "L'ignorer : il n'a qu'une valeur indicative",
+      "Me conformer à ses indications",
+      "Le contourner par la gauche"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le panneau manuel sert à régler la circulation au chantier : ses indications s'imposent, et la signalisation temporaire prime sur la signalisation permanente.",
+    "r": "Panneau manuel au chantier = j'obéis."
+  },
+  {
+    "id": "12_signalisation_temporaire-13",
+    "t": "12_signalisation_temporaire",
+    "q": "À quoi sert le séparateur de voies (فاصل المسالك) temporaire ?",
+    "qa": "ما هو دور فاصل المسالك المؤقت ؟",
+    "o": [
+      "Signaler un radar",
+      "Indiquer un parking",
+      "Séparer deux sens de circulation, ou délimiter et guider"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le séparateur de voies sépare deux sens de circulation ou sert à délimiter et à guider la circulation.",
+    "r": "Séparateur : sépare les sens, délimite et guide."
+  },
+  {
+    "id": "12_signalisation_temporaire-14",
+    "t": "12_signalisation_temporaire",
+    "q": "Un panneau d'indication temporaire peut annoncer : (plusieurs réponses)",
+    "qa": "يمكن أن تعلن علامة إرشاد مؤقتة عن : (عدة أجوبة)",
+    "o": [
+      "La réduction du nombre de voies",
+      "Un changement de chaussée ou d'itinéraire",
+      "L'affectation des voies",
+      "Une limitation définitive à 120 km/h"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Les indications temporaires annoncent l'affectation des voies, la réduction d'une ou plusieurs voies (signalisation d'urgence sur autoroute) ou un changement de chaussée et d'itinéraire. Une limitation « définitive » n'a rien de temporaire.",
+    "r": "Indication temporaire : voies réduites, affectation, changement."
+  },
+  {
+    "id": "12_signalisation_temporaire-15",
+    "t": "12_signalisation_temporaire",
+    "q": "La barrière (حاجز) de signalisation temporaire marque :",
+    "qa": "الحاجز في التشوير المؤقت يشير إلى :",
+    "o": [
+      "Le début d'une déviation de la chaussée ou d'un rétrécissement temporaire",
+      "Une aire de repos",
+      "La fin d'une autoroute",
+      "Un passage pour piétons"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La barrière signale le début d'une déviation de la chaussée ou d'un rétrécissement temporaire : je ralentis et je suis le balisage.",
+    "r": "Barrière = déviation ou rétrécissement temporaire."
+  },
+  {
+    "id": "13_types_de_routes-01",
+    "t": "13_types_de_routes",
+    "q": "Hors période probatoire, quelle est la vitesse maximale d'une voiture sur autoroute ?",
+    "qa": "خارج الفترة الاختبارية، ما هي السرعة القصوى للسيارة في الطريق السيار ؟",
+    "o": [
+      "100 km/h",
+      "110 km/h",
+      "120 km/h",
+      "130 km/h"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Sur autoroute, la limite est de 120 km/h pour un conducteur hors période probatoire. 100 km/h correspond à la route nationale.",
+    "r": "Autoroute : 120 km/h (hors période probatoire).",
+    "s": "vitesses"
+  },
+  {
+    "id": "13_types_de_routes-02",
+    "t": "13_types_de_routes",
+    "q": "Hors période probatoire, quelle est la vitesse maximale d'une voiture sur route nationale ?",
+    "qa": "خارج الفترة الاختبارية، ما هي السرعة القصوى للسيارة في الطريق الوطنية ؟",
+    "o": [
+      "120 km/h",
+      "100 km/h",
+      "90 km/h",
+      "80 km/h"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sur route nationale, la vitesse maximale est de 100 km/h pour un conducteur hors période probatoire. Les 120 km/h sont réservés à l'autoroute.",
+    "r": "Route nationale : 100 km/h (hors période probatoire).",
+    "s": "vitesses"
+  },
+  {
+    "id": "13_types_de_routes-03",
+    "t": "13_types_de_routes",
+    "q": "Selon le mémo du cours, quelle est la vitesse maximale en agglomération ?",
+    "qa": "حسب ملخص الدرس، ما هي السرعة القصوى داخل المدينة ؟",
+    "o": [
+      "60 km/h",
+      "50 km/h",
+      "40 km/h",
+      "70 km/h"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le mémo du cours : 120 sur autoroute, 100 sur route nationale, 60 en ville.",
+    "r": "Mémo : 120 autoroute / 100 nationale / 60 en ville.",
+    "s": "vitesses"
+  },
+  {
+    "id": "13_types_de_routes-04",
+    "t": "13_types_de_routes",
+    "q": "Sur cette route, la borne kilométrique a une tête rouge. De quel type de route s'agit-il ?",
+    "qa": "في هذه الطريق، رأس الصوى أحمر. ما نوع هذه الطريق ؟",
+    "o": [
+      "Route nationale",
+      "Route régionale",
+      "Route provinciale",
+      "Route forestière"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Couleur des bornes : rouge = nationale, jaune = régionale, bleu = provinciale, vert = forestière.",
+    "r": "Borne rouge = route nationale.",
+    "img": "1683901617177.png"
+  },
+  {
+    "id": "13_types_de_routes-05",
+    "t": "13_types_de_routes",
+    "q": "La borne de cette route a une tête jaune. Il s'agit d'une route :",
+    "qa": "رأس الصوى في هذه الطريق أصفر. يتعلق الأمر بطريق :",
+    "o": [
+      "Nationale",
+      "Provinciale",
+      "Régionale",
+      "Forestière"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Borne jaune = route régionale, qui relie deux zones ou deux villes d'une même région. Le rouge est réservé aux routes nationales.",
+    "r": "Borne jaune = route régionale.",
+    "img": "1686578562384.png"
+  },
+  {
+    "id": "13_types_de_routes-06",
+    "t": "13_types_de_routes",
+    "q": "Une borne kilométrique à tête bleue indique une route :",
+    "qa": "الصوى ذات الرأس الأزرق تدل على طريق :",
+    "o": [
+      "Régionale",
+      "Provinciale",
+      "Nationale",
+      "Forestière"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Bleu = route provinciale, qui relie deux zones ou villes d'une même province. Mémo : rouge nationale, jaune régionale, bleu provinciale, vert forestière.",
+    "r": "Borne bleue = route provinciale."
+  },
+  {
+    "id": "13_types_de_routes-07",
+    "t": "13_types_de_routes",
+    "q": "Une route forestière (borne verte) relie :",
+    "qa": "الطريق الغابوية (الصوى الخضراء) تربط بين :",
+    "o": [
+      "Deux villes de régions différentes",
+      "Deux villes d'une même province",
+      "Deux zones de montagne, en bordure de forêt",
+      "Deux autoroutes"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La route forestière relie deux zones montagneuses le long de la forêt ; ses bornes sont vertes.",
+    "r": "Route forestière = borne verte, zones de montagne."
+  },
+  {
+    "id": "13_types_de_routes-08",
+    "t": "13_types_de_routes",
+    "q": "Une route nationale relie :",
+    "qa": "الطريق الوطنية تربط بين :",
+    "o": [
+      "Deux villes qui n'appartiennent pas à la même région",
+      "Deux villes d'une même région",
+      "Deux villes d'une même province",
+      "Deux zones de montagne"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La route nationale relie deux villes de régions différentes. La régionale relie deux villes d'une même région, la provinciale deux villes d'une même province.",
+    "r": "Nationale = villes de régions différentes."
+  },
+  {
+    "id": "13_types_de_routes-09",
+    "t": "13_types_de_routes",
+    "q": "Quelle est la principale différence entre une autoroute et une voie express ?",
+    "qa": "ما هو الفرق الرئيسي بين الطريق السيار والطريق السريع ؟",
+    "o": [
+      "La voie express est payante, l'autoroute gratuite",
+      "La voie express est à double sens sur une seule chaussée",
+      "Les deux sont payantes",
+      "L'autoroute est payante, la voie express gratuite"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Les deux ont des chaussées à sens unique, mais l'autoroute est à péage (بالأداء) alors que la voie express est gratuite (بالمجان). Une voie express n'est donc pas une autoroute.",
+    "r": "Autoroute = péage ; voie express = gratuite."
+  },
+  {
+    "id": "13_types_de_routes-10",
+    "t": "13_types_de_routes",
+    "q": "Quels usagers sont interdits sur autoroute ? (plusieurs réponses)",
+    "qa": "أي مستعملي الطريق ممنوعون في الطريق السيار ؟ (عدة أجوبة)",
+    "o": [
+      "Les piétons",
+      "Les voitures particulières immatriculées",
+      "Les cyclistes",
+      "Les tracteurs"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "L'autoroute est réservée aux véhicules à moteur soumis à immatriculation. Piétons, cyclistes et tracteurs y sont interdits.",
+    "r": "Autoroute : interdite aux piétons, vélos et tracteurs."
+  },
+  {
+    "id": "13_types_de_routes-11",
+    "t": "13_types_de_routes",
+    "q": "Quelles caractéristiques correspondent à une autoroute ? (plusieurs réponses)",
+    "qa": "ما هي خصائص الطريق السيار ؟ (عدة أجوبة)",
+    "o": [
+      "Aucune intersection avec d'autres routes",
+      "Entrées et sorties par des accès aménagés",
+      "Deux chaussées séparées, chacune à sens unique",
+      "Circulation gratuite"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "L'autoroute ne croise aucune route, on y entre et on en sort par des accès prévus, ses chaussées sont séparées et à sens unique. Elle est à péage, donc pas gratuite.",
+    "r": "Autoroute : sans croisement, accès aménagés, sens unique, péage."
+  },
+  {
+    "id": "13_types_de_routes-12",
+    "t": "13_types_de_routes",
+    "q": "Sur une voie express, les chaussées sont séparées par :",
+    "qa": "في الطريق السريع، تفصل القارعات بواسطة :",
+    "o": [
+      "Un terre-plein non destiné à la circulation",
+      "Une simple ligne discontinue",
+      "Rien : une seule chaussée à double sens"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La voie express a des chaussées séparées par un terre-plein (شريط أرضي) non destiné à la circulation, chacune à sens unique. Elle est gratuite.",
+    "r": "Voie express : chaussées séparées par un terre-plein."
+  },
+  {
+    "id": "13_types_de_routes-13",
+    "t": "13_types_de_routes",
+    "q": "Un conducteur en période probatoire roule sur autoroute. Sa vitesse maximale est :",
+    "qa": "سائق في الفترة الاختبارية يسير في الطريق السيار. سرعته القصوى هي :",
+    "o": [
+      "90 km/h",
+      "100 km/h",
+      "120 km/h",
+      "80 km/h"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Piège du cours : les 120 km/h ne concernent que les conducteurs hors période probatoire. Pendant la période probatoire, on ne dépasse pas 90 km/h, quelle que soit la route.",
+    "r": "Période probatoire : 90 km/h maximum, même sur autoroute.",
+    "s": "vitesses"
+  },
+  {
+    "id": "13_types_de_routes-14",
+    "t": "13_types_de_routes",
+    "q": "Une route nationale est le plus souvent :",
+    "qa": "الطريق الوطنية تكون في الغالب :",
+    "o": [
+      "Une route à péage",
+      "Une chaussée à double sens, gratuite",
+      "Une route à sens unique",
+      "Une route réservée aux poids lourds"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La route nationale est le plus souvent une chaussée à double sens et gratuite. Le péage concerne l'autoroute.",
+    "r": "Nationale : souvent double sens et gratuite."
+  },
+  {
+    "id": "13_types_de_routes-15",
+    "t": "13_types_de_routes",
+    "q": "Que doit connaître le conducteur de la route qu'il emprunte ? (plusieurs réponses)",
+    "qa": "ماذا يجب على السائق أن يعرف عن الطريق التي يسلكها ؟ (عدة أجوبة)",
+    "o": [
+      "Sa structure (nombre de voies, sens)",
+      "Le nom de l'entreprise qui l'a construite",
+      "Sa nature (autoroute, nationale…)",
+      "Les consignes particulières qui s'y appliquent"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Le cours demande de connaître la structure de la route (une, deux ou trois voies, un ou deux sens), sa nature (autoroute, express, nationale…) et les consignes qui lui sont propres.",
+    "r": "Connaître la structure, la nature et les règles de la route."
+  },
+  {
+    "id": "14_conditions_eclairage-01",
+    "t": "14_conditions_eclairage",
+    "q": "Quelle part des accidents se produit entre 22 h et 5 h, malgré une circulation plus faible ?",
+    "qa": "ما هي نسبة الحوادث التي تقع بين 22h و05h رغم قلة حركة السير ؟",
+    "o": [
+      "Moins de 10 %",
+      "Environ 20 %",
+      "Plus de 40 %",
+      "Plus de 80 %"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Plus de 40 % des accidents ont lieu entre 22 h et 5 h, alors que la circulation y est faible : visibilité réduite, éclairage insuffisant et fatigue.",
+    "r": "Nuit (22 h - 5 h) : plus de 40 % des accidents."
+  },
+  {
+    "id": "14_conditions_eclairage-02",
+    "t": "14_conditions_eclairage",
+    "q": "Pourquoi la conduite de nuit est-elle plus dangereuse ? (plusieurs réponses)",
+    "qa": "لماذا تعد السياقة ليلا أكثر خطورة ؟ (عدة أجوبة)",
+    "o": [
+      "La visibilité est réduite",
+      "La circulation est toujours plus dense",
+      "La fatigue",
+      "Les distances et les vitesses sont plus difficiles à estimer"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "La nuit, le champ de vision se réduit, l'éclairage est faible et la fatigue s'installe : estimer les distances et les vitesses devient difficile. La circulation, elle, est plutôt moins dense.",
+    "r": "Nuit : moins de visibilité, fatigue, distances mal jugées."
+  },
+  {
+    "id": "14_conditions_eclairage-03",
+    "t": "14_conditions_eclairage",
+    "q": "Dans quelles situations dois-je réduire ma vitesse ? (plusieurs réponses)",
+    "qa": "في أي الحالات يجب علي تخفيض السرعة ؟ (عدة أجوبة)",
+    "o": [
+      "En passant d'une zone sombre à une zone très éclairée",
+      "Au coucher et au lever du soleil",
+      "En passant des feux de route aux feux de croisement",
+      "Sur une route droite, sèche et bien éclairée"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Il faut ralentir lors des changements brusques de luminosité (zone sombre vers zone très éclairée), au coucher du soleil (lumière faible), au lever du soleil (éblouissement) et en repassant en feux de croisement.",
+    "r": "Changement de lumière = je ralentis."
+  },
+  {
+    "id": "14_conditions_eclairage-04",
+    "t": "14_conditions_eclairage",
+    "q": "Un éblouissement peut priver le conducteur de la vue pendant :",
+    "qa": "يمكن أن يفقد الإبهار السائق البصر لمدة :",
+    "o": [
+      "Jusqu'à 5 secondes",
+      "Une fraction de seconde seulement",
+      "Jusqu'à 30 secondes",
+      "Plusieurs minutes"
+    ],
+    "a": [
+      0
+    ],
+    "e": "L'éblouissement (الإبهار) est une perte de vision de plusieurs secondes, jusqu'à 5 secondes, due à un changement de l'intensité lumineuse.",
+    "r": "Éblouissement = jusqu'à 5 s sans voir."
+  },
+  {
+    "id": "14_conditions_eclairage-05",
+    "t": "14_conditions_eclairage",
+    "q": "Je suis ébloui par les feux d'un véhicule venant en face. Que faire ? (plusieurs réponses)",
+    "qa": "أتعرض للإبهار من أضواء مركبة قادمة من الأمام. ماذا أفعل ؟ (عدة أجوبة)",
+    "o": [
+      "Fixer ses phares pour bien le repérer",
+      "Regarder le bord droit de la chaussée",
+      "L'avertir par un bref signal lumineux",
+      "Allumer mes feux de route en continu pour lui répondre"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Ébloui de face : je regarde la bordure droite de la route et je préviens le conducteur par un signal lumineux. Fixer ses phares ou l'éblouir à mon tour aggrave le danger.",
+    "r": "Ébloui de face : regarder à droite, bref appel de phares.",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-06",
+    "t": "14_conditions_eclairage",
+    "q": "Ébloui, je ne vois plus la route. Que dois-je faire ?",
+    "qa": "بسبب الإبهار لم أعد أرى الطريق. ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "Garder ma vitesse et ma trajectoire",
+      "Accélérer pour sortir vite de l'éblouissement",
+      "Ralentir, et m'arrêter jusqu'au retour de la vision"
+    ],
+    "a": [
+      2
+    ],
+    "e": "En cas de perte de vision (انعدام الرؤية), il faut ralentir et s'arrêter jusqu'à ce que la vue revienne. Continuer, c'est rouler plusieurs secondes à l'aveugle.",
+    "r": "Plus de vision = ralentir, voire s'arrêter."
+  },
+  {
+    "id": "14_conditions_eclairage-07",
+    "t": "14_conditions_eclairage",
+    "q": "Je suis ébloui par les feux du véhicule qui me suit. Que faire ? (plusieurs réponses)",
+    "qa": "أتعرض للإبهار من أضواء المركبة التي تسير خلفي. ماذا أفعل ؟ (عدة أجوبة)",
+    "o": [
+      "Mettre le rétroviseur intérieur en position nuit",
+      "Freiner brutalement pour qu'il recule",
+      "Donner de légères pressions sur la pédale de frein",
+      "Allumer mes feux de brouillard arrière"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Ébloui par l'arrière : je mets le rétroviseur intérieur en position nuit et je donne de légères pressions sur le frein pour l'avertir. Un freinage brutal risquerait de provoquer une collision.",
+    "r": "Ébloui de l'arrière : rétro position nuit, légers coups de frein."
+  },
+  {
+    "id": "14_conditions_eclairage-08",
+    "t": "14_conditions_eclairage",
+    "q": "Ce témoin correspond aux feux de position (veilleuses). À quelle distance doivent-ils être visibles ?",
+    "qa": "هذا المؤشر خاص بأضواء الوضع. على أي مسافة يجب أن تكون مرئية ؟",
+    "o": [
+      "30 m",
+      "100 m",
+      "150 m",
+      "20 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les feux de position servent à être vu : ils doivent être visibles à 150 m. 30 m et 100 m correspondent à la portée des feux de croisement et des feux de route.",
+    "r": "Position 150 m / croisement 30 m / route 100 m.",
+    "s": "feux",
+    "img": "1684419342293.png"
+  },
+  {
+    "id": "14_conditions_eclairage-09",
+    "t": "14_conditions_eclairage",
+    "q": "Les feux de croisement doivent éclairer la route sur au moins :",
+    "qa": "يجب أن تنير أضواء التقابل الطريق على مسافة لا تقل عن :",
+    "o": [
+      "30 m",
+      "50 m",
+      "100 m",
+      "150 m"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Les feux de croisement éclairent au moins 30 m devant le véhicule. Ils sont obligatoires de jour par brouillard, pluie ou neige.",
+    "r": "Feux de croisement : au moins 30 m.",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-10",
+    "t": "14_conditions_eclairage",
+    "q": "Ce témoin indique que les feux de route sont allumés. Ils doivent éclairer sur au moins :",
+    "qa": "هذا المؤشر يدل على تشغيل أضواء الطريق. يجب أن تنير على مسافة لا تقل عن :",
+    "o": [
+      "150 m",
+      "100 m",
+      "30 m",
+      "200 m"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les feux de route éclairent au moins 100 m : ils servent à voir loin. Il faut les éteindre dès qu'ils risquent d'éblouir quelqu'un.",
+    "r": "Feux de route : au moins 100 m.",
+    "s": "feux",
+    "img": "1684419588113.png"
+  },
+  {
+    "id": "14_conditions_eclairage-11",
+    "t": "14_conditions_eclairage",
+    "q": "Dans quels cas dois-je éteindre mes feux de route ? (plusieurs réponses)",
+    "qa": "في أي الحالات يجب علي إطفاء أضواء الطريق ؟ (عدة أجوبة)",
+    "o": [
+      "Quand je vais croiser un véhicule",
+      "Sur une route de campagne déserte et sans éclairage",
+      "Quand je suis un véhicule de près",
+      "Par brouillard, pluie ou neige"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Les feux de route s'éteignent à l'arrêt, avant de croiser un véhicule, quand on suit un véhicule de près et par brouillard, pluie ou neige. Sur une route déserte et non éclairée, ils sont utiles pour voir loin.",
+    "r": "Feux de route éteints : croisement, suivi, brouillard, pluie, neige.",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-12",
+    "t": "14_conditions_eclairage",
+    "q": "La nuit, mon véhicule est arrêté au bord de la route. Puis-je laisser mes feux de route allumés ?",
+    "qa": "ليلا، مركبتي متوقفة على جانب الطريق. هل يمكنني ترك أضواء الطريق مشتعلة ؟",
+    "o": [
+      "Oui, pour être bien vu",
+      "Non, les feux de route sont interdits à l'arrêt"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Piège d'examen : les feux de route doivent être éteints quand le véhicule est à l'arrêt (أضواء الطريق ممنوعة عند وقوف المركبة).",
+    "r": "Véhicule arrêté = jamais de feux de route.",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-13",
+    "t": "14_conditions_eclairage",
+    "q": "Un véhicule arrive en face. Quand dois-je passer en feux de croisement ?",
+    "qa": "مركبة قادمة من الاتجاه المعاكس. متى يجب علي الانتقال إلى أضواء التقابل ؟",
+    "o": [
+      "Au moment exact où je la croise",
+      "Seulement si elle me fait un appel de phares",
+      "À une distance suffisante, avant le croisement"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les feux de route s'éteignent « à une distance suffisante » avant le croisement, pas au dernier moment : sinon le conducteur d'en face est déjà ébloui.",
+    "r": "Passer en croisement assez tôt, pas au moment du croisement.",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-14",
+    "t": "14_conditions_eclairage",
+    "q": "Comment signaler, la nuit, mon intention de dépasser ?",
+    "qa": "كيف أعلن ليلا عن نيتي في التجاوز ؟",
+    "o": [
+      "Avec les feux de détresse",
+      "En alternant feux de croisement et feux de route",
+      "Avec les feux de brouillard arrière",
+      "Avec les feux de recul"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les feux de route utilisés en alternance avec les feux de croisement servent à annoncer l'intention de dépasser.",
+    "r": "Alternance croisement / route = j'annonce un dépassement.",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-15",
+    "t": "14_conditions_eclairage",
+    "q": "De jour, hors agglomération, par brouillard, pluie ou neige, quels feux dois-je allumer ?",
+    "qa": "نهارا، خارج التجمعات العمرانية، في الضباب أو المطر أو الثلج، أي الأضواء يجب علي تشغيلها ؟",
+    "o": [
+      "Aucun, il fait jour",
+      "Les feux de croisement",
+      "Les feux de position seuls",
+      "Les feux de route"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Hors agglomération, de jour, brouillard, pluie ou neige imposent les feux de croisement : les feux de position seuls ne suffisent pas, et les feux de route sont à proscrire par ce temps. (En agglomération, les feux de position sont admis.)",
+    "r": "Hors ville, brouillard/pluie/neige de jour = feux de croisement.",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-16",
+    "t": "14_conditions_eclairage",
+    "q": "Ce témoin correspond aux feux de brouillard. Quelles couleurs peuvent-ils avoir ? (plusieurs réponses)",
+    "qa": "هذا المؤشر خاص بأضواء الضباب. ما هي الألوان التي يمكن أن تكون لها ؟ (عدة أجوبة)",
+    "o": [
+      "À l'avant : jaune ou blanc",
+      "À l'arrière : blanc",
+      "À l'arrière : rouge",
+      "À l'avant : bleu"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Les feux de brouillard avant sont jaunes ou blancs, le feu de brouillard arrière est rouge. Le blanc à l'arrière correspond au feu de recul.",
+    "r": "Antibrouillard : avant jaune ou blanc, arrière rouge.",
+    "s": "feux",
+    "img": "1684419671811.png"
+  },
+  {
+    "id": "14_conditions_eclairage-17",
+    "t": "14_conditions_eclairage",
+    "q": "Quand peut-on allumer le feu de brouillard arrière ?",
+    "qa": "متى يمكن تشغيل ضوء الضباب الخلفي ؟",
+    "o": [
+      "Toute la nuit hors agglomération",
+      "Dès qu'il commence à faire sombre",
+      "Seulement par brouillard, neige ou forte pluie",
+      "Pour annoncer un dépassement"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le feu de brouillard arrière ne s'utilise que par brouillard, neige ou forte pluie : sinon il éblouit les conducteurs qui suivent.",
+    "r": "Brouillard arrière : brouillard, neige ou forte pluie seulement.",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-18",
+    "t": "14_conditions_eclairage",
+    "q": "Dans quels cas utiliser les feux de détresse (warning) ? (plusieurs réponses)",
+    "qa": "في أي الحالات تستعمل أضواء الإغاثة (Warning) ؟ (عدة أجوبة)",
+    "o": [
+      "Pour signaler un danger",
+      "Pour stationner en double file",
+      "En dernier véhicule d'un embouteillage",
+      "Lors d'un arrêt dangereux"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Les feux de détresse (tous les clignotants ensemble) signalent un danger, une allure très réduite, un arrêt dangereux ou la fin d'un bouchon. Ils n'autorisent pas un stationnement interdit.",
+    "r": "Warning : danger, allure lente, arrêt dangereux, fin de bouchon.",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-19",
+    "t": "14_conditions_eclairage",
+    "q": "L'éclairage de la plaque d'immatriculation arrière doit la rendre lisible, la nuit, à :",
+    "qa": "يجب أن يجعل ضوء صفيحة التسجيل الرقم مقروءا ليلا على مسافة :",
+    "o": [
+      "20 m",
+      "5 m",
+      "50 m",
+      "100 m"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Grâce à son éclairage, la plaque arrière doit pouvoir être lue à 20 m la nuit.",
+    "r": "Plaque éclairée : lisible à 20 m la nuit."
+  },
+  {
+    "id": "14_conditions_eclairage-20",
+    "t": "14_conditions_eclairage",
+    "q": "Les catadioptres arrière (عاكسا الضوء) d'une voiture sont :",
+    "qa": "عاكسا الضوء الخلفيان للسيارة يكونان :",
+    "o": [
+      "Rouges et triangulaires",
+      "Rouges, mais pas triangulaires : le triangle est réservé aux remorques",
+      "Blancs",
+      "Orange"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les catadioptres arrière sont rouges. La forme triangulaire est réservée aux remorques.",
+    "r": "Catadioptres arrière rouges ; triangle = remorque."
+  },
+  {
+    "id": "14_conditions_eclairage-21",
+    "t": "14_conditions_eclairage",
+    "q": "La nuit, en agglomération suffisamment éclairée, lesquels de ces feux le cours permet-il d'utiliser ?",
+    "qa": "ليلا، داخل مدينة مضاءة بشكل كاف، أي هذه الأضواء يسمح الدرس باستعمالها ؟",
+    "o": [
+      "Les feux de route",
+      "Les feux de brouillard arrière",
+      "Les feux de position (veilleuses)"
+    ],
+    "a": [
+      2
+    ],
+    "e": "En ville suffisamment éclairée, la nuit, les feux de position suffisent (les feux de croisement restent possibles). Les feux de route éblouiraient, et le feu de brouillard arrière est réservé au brouillard, à la neige ou à la forte pluie.",
+    "r": "Ville bien éclairée la nuit : position (ou croisement).",
+    "s": "feux"
+  },
+  {
+    "id": "14_conditions_eclairage-22",
+    "t": "14_conditions_eclairage",
+    "q": "Quelles associations entre feux et couleurs sont justes ? (plusieurs réponses)",
+    "qa": "أي هذه الأضواء مقرونة بلونها الصحيح ؟ (عدة أجوبة)",
+    "o": [
+      "Clignotants : orange",
+      "Feux stop : rouges",
+      "Feux de recul : rouges",
+      "Feux de recul : blancs"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Clignotants = orange (وامض), feux stop = rouges (ils s'allument au freinage), feux de recul = blancs à l'arrière.",
+    "r": "Clignotant orange, stop rouge, recul blanc."
+  },
+  {
+    "id": "15_conditions_climatiques-01",
+    "t": "15_conditions_climatiques",
+    "q": "Dès les premières gouttes de pluie, l'adhérence des pneus sur la route :",
+    "qa": "مع أولى قطرات المطر، التحام العجلات بالطريق :",
+    "o": [
+      "Ne change pas",
+      "Diminue légèrement, d'environ 10 %",
+      "Double",
+      "Diminue de moitié"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Dès les premières gouttes, l'adhérence (الالتحام) tombe de moitié : la distance de freinage double.",
+    "r": "Premières gouttes : adhérence divisée par 2.",
+    "s": "distance"
+  },
+  {
+    "id": "15_conditions_climatiques-02",
+    "t": "15_conditions_climatiques",
+    "q": "Sous la pluie, quelles affirmations sont justes ? (plusieurs réponses)",
+    "qa": "تحت المطر، أي العبارات صحيحة ؟ (عدة أجوبة)",
+    "o": [
+      "La distance de freinage double",
+      "Je dois doubler ma distance de sécurité",
+      "La distance de freinage diminue grâce à l'eau",
+      "Je peux garder la même distance de sécurité"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "Mémo du cours : pluie = distance de freinage × 2, donc on double la distance de sécurité.",
+    "r": "Pluie : freinage × 2, distance de sécurité × 2.",
+    "s": "distance"
+  },
+  {
+    "id": "15_conditions_climatiques-03",
+    "t": "15_conditions_climatiques",
+    "q": "Sous la pluie, sur route hors agglomération, quels comportements adopter ? (plusieurs réponses)",
+    "qa": "تحت المطر، في طريق خارج التجمعات العمرانية، أي سلوك يجب اعتماده ؟ (عدة أجوبة)",
+    "o": [
+      "Coller le véhicule de devant pour suivre ses feux",
+      "Réduire la vitesse",
+      "Éviter les freinages brusques",
+      "Rouler avec les seuls feux de position"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Sous la pluie : je ralentis, j'augmente mes distances et j'évite les freinages brusques. Hors agglomération, les feux de position seuls ne suffisent pas : les feux de croisement sont obligatoires.",
+    "r": "Pluie : ralentir, pas de freinage brusque, croisement allumé.",
+    "s": "feux"
+  },
+  {
+    "id": "15_conditions_climatiques-04",
+    "t": "15_conditions_climatiques",
+    "q": "Sous une pluie forte, quels feux puis-je allumer ? (plusieurs réponses)",
+    "qa": "تحت مطر غزير، أي الأضواء يمكنني تشغيلها ؟ (عدة أجوبة)",
+    "o": [
+      "Les feux de croisement",
+      "Les feux de route",
+      "Les feux de brouillard avant",
+      "Les feux de détresse en roulant normalement"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Sous la pluie, les feux de croisement sont obligatoires ; sous une pluie forte, on peut utiliser les feux de brouillard avant, ou les deux ensemble. Les feux de route sont à éteindre sous la pluie.",
+    "r": "Forte pluie : croisement et/ou brouillard avant.",
+    "s": "feux"
+  },
+  {
+    "id": "15_conditions_climatiques-05",
+    "t": "15_conditions_climatiques",
+    "q": "L'aquaplanage (الانزلاق المائي) se produit lorsque :",
+    "qa": "يحدث الانزلاق المائي عندما :",
+    "o": [
+      "Le moteur prend l'eau",
+      "La route est gelée",
+      "Les essuie-glaces sont usés",
+      "Les sculptures des pneus ne peuvent plus évacuer l'eau : le pneu flotte"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Quand les sculptures des pneus (نقوش الإطارات) ne parviennent plus à chasser l'eau, le pneu perd le contact avec la route et flotte sur l'eau.",
+    "r": "Aquaplanage = le pneu flotte sur l'eau."
+  },
+  {
+    "id": "15_conditions_climatiques-06",
+    "t": "15_conditions_climatiques",
+    "q": "Le risque d'aquaplanage augmente avec : (plusieurs réponses)",
+    "qa": "يزداد خطر الانزلاق المائي مع : (عدة أجوبة)",
+    "o": [
+      "Des pneus neufs bien sculptés",
+      "La vitesse",
+      "L'usure des pneus",
+      "Une vitesse réduite"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Plus la vitesse est élevée et plus les pneus sont usés, plus le risque d'aquaplanage est grand. Il faut donc ralentir et surveiller les sculptures des pneus.",
+    "r": "Aquaplanage : vitesse + pneus usés."
+  },
+  {
+    "id": "15_conditions_climatiques-07",
+    "t": "15_conditions_climatiques",
+    "q": "En aquaplanage, la direction devient soudain légère. Que faire ?",
+    "qa": "أثناء الانزلاق المائي، يصبح المقود خفيفا فجأة. ماذا أفعل ؟",
+    "o": [
+      "Freiner fortement",
+      "Accélérer pour traverser la nappe d'eau",
+      "Lever le pied de l'accélérateur sans freiner",
+      "Braquer fortement"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Volant soudain léger = aquaplanage. Je lève le pied de l'accélérateur et je ne freine pas, jusqu'à ce que les pneus retrouvent la route.",
+    "r": "Aquaplanage : lever le pied, ne pas freiner."
+  },
+  {
+    "id": "15_conditions_climatiques-08",
+    "t": "15_conditions_climatiques",
+    "q": "Les vitres s'embuent. Que faut-il utiliser ? (plusieurs réponses)",
+    "qa": "تضبب الزجاج. ماذا يجب استعماله ؟ (عدة أجوبة)",
+    "o": [
+      "Le chauffage",
+      "Les feux de brouillard",
+      "Le désembueur",
+      "Le klaxon"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "La buée vient de l'air chaud de l'habitacle au contact des vitres froides. On l'élimine avec le chauffage et le désembueur (مزيل الضباب).",
+    "r": "Buée : chauffage + désembueur."
+  },
+  {
+    "id": "15_conditions_climatiques-09",
+    "t": "15_conditions_climatiques",
+    "q": "Sur la neige ou le verglas, mon véhicule commence à glisser. Que faire ?",
+    "qa": "على الثلج أو الجليد، بدأت مركبتي تنزلق. ماذا أفعل ؟",
+    "o": [
+      "Freiner fortement",
+      "Donner un coup de volant brusque",
+      "Ne pas freiner et utiliser le frein moteur",
+      "Accélérer"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Piège classique : sur la glace, freiner est l'erreur. Il faut utiliser le frein moteur (حصار المحرك), sans geste brusque.",
+    "r": "Glissade sur glace : frein moteur, pas les freins."
+  },
+  {
+    "id": "15_conditions_climatiques-10",
+    "t": "15_conditions_climatiques",
+    "q": "Sur une route enneigée, quelles règles appliquer ? (plusieurs réponses)",
+    "qa": "في طريق مغطاة بالثلج، أي القواعد يجب تطبيقها ؟ (عدة أجوبة)",
+    "o": [
+      "Réduire la vitesse",
+      "Augmenter la distance de sécurité",
+      "Éviter les freinages et les coups de volant brusques",
+      "Rouler au point mort pour plus de douceur"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Neige : on ralentit, on augmente la distance de sécurité et on évite tout geste brusque, car la neige peut se transformer en verglas. Le point mort fait perdre le frein moteur.",
+    "r": "Neige : ralentir, s'espacer, aucun geste brusque."
+  },
+  {
+    "id": "15_conditions_climatiques-11",
+    "t": "15_conditions_climatiques",
+    "q": "Avant de partir avec un véhicule couvert de neige, que dois-je dégager ? (plusieurs réponses)",
+    "qa": "قبل الانطلاق بمركبة مغطاة بالثلج، ماذا يجب علي إزالته ؟ (عدة أجوبة)",
+    "o": [
+      "Les vitres",
+      "Rien : la neige partira en roulant",
+      "Le toit",
+      "Les feux"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Avant le départ, on enlève la neige des vitres, du toit et des feux, pour voir et être vu.",
+    "r": "Neige : dégager vitres, toit et feux avant de partir."
+  },
+  {
+    "id": "15_conditions_climatiques-12",
+    "t": "15_conditions_climatiques",
+    "q": "Où le vent latéral est-il particulièrement dangereux ? (plusieurs réponses)",
+    "qa": "أين تكون الرياح الجانبية خطيرة بشكل خاص ؟ (عدة أجوبة)",
+    "o": [
+      "À la sortie d'un tunnel",
+      "Dans un embouteillage en ville",
+      "À la sortie d'une forêt",
+      "Après avoir dépassé un camion"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Le vent latéral surprend à la sortie d'un tunnel ou d'une forêt, ou après avoir dépassé un camion : il peut alors pousser le véhicule à droite ou à gauche.",
+    "r": "Vent : danger en sortie de tunnel, de forêt ou après un camion."
+  },
+  {
+    "id": "15_conditions_climatiques-13",
+    "t": "15_conditions_climatiques",
+    "q": "Par fort vent latéral, que dois-je faire ?",
+    "qa": "في حالة رياح جانبية قوية، ماذا يجب علي أن أفعل ؟",
+    "o": [
+      "Réduire la vitesse et tenir fermement le volant",
+      "Accélérer pour stabiliser le véhicule",
+      "Tenir le volant d'une seule main pour plus de souplesse"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le vent latéral pousse le véhicule hors de sa trajectoire : je ralentis et je tiens fermement le volant.",
+    "r": "Vent fort : ralentir, volant bien tenu."
+  },
+  {
+    "id": "15_conditions_climatiques-14",
+    "t": "15_conditions_climatiques",
+    "q": "Cette manche à air (مقبض هوائي) est à l'horizontale. Elle indique :",
+    "qa": "هذا المقبض الهوائي في وضع أفقي. ماذا يدل عليه ؟",
+    "o": [
+      "L'absence de vent",
+      "Un vent faible",
+      "Un vent fort",
+      "Du brouillard"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Manche à air horizontale = vent fort ; inclinée = vent faible ; pendante = pas de vent.",
+    "r": "Manche à air horizontale = vent fort.",
+    "img": "1691418396093.png"
+  },
+  {
+    "id": "15_conditions_climatiques-15",
+    "t": "15_conditions_climatiques",
+    "q": "Cette manche à air est inclinée. Elle indique :",
+    "qa": "هذا المقبض الهوائي مائل. ماذا يدل عليه ؟",
+    "o": [
+      "Un vent fort",
+      "Un vent faible",
+      "L'absence de vent"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Inclinée = vent faible. Horizontale = vent fort ; pendante = pas de vent.",
+    "r": "Manche à air inclinée = vent faible.",
+    "img": "1691418441795.png"
+  },
+  {
+    "id": "15_conditions_climatiques-16",
+    "t": "15_conditions_climatiques",
+    "q": "Brouillard très épais, je ne vois plus rien. Que faire ?",
+    "qa": "ضباب كثيف جدا وانعدام الرؤية. ماذا أفعل ؟",
+    "o": [
+      "M'arrêter sur la chaussée avec les feux de détresse",
+      "Suivre de très près les feux du véhicule de devant",
+      "Accélérer pour sortir du brouillard",
+      "M'arrêter dans un endroit sûr et autorisé"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Quand le brouillard supprime toute visibilité, il faut s'arrêter dans un endroit sûr où l'arrêt est permis. S'arrêter sur la chaussée ou suivre de près expose à une collision.",
+    "r": "Brouillard sans visibilité : arrêt dans un lieu sûr et autorisé."
+  },
+  {
+    "id": "15_conditions_climatiques-17",
+    "t": "15_conditions_climatiques",
+    "q": "Dans le brouillard, quels comportements sont recommandés ? (plusieurs réponses)",
+    "qa": "في الضباب، أي السلوكات موصى بها ؟ (عدة أجوبة)",
+    "o": [
+      "Augmenter la distance de sécurité",
+      "Allumer les feux de route pour voir plus loin",
+      "Suivre les lignes blanches",
+      "Éviter de dépasser"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Dans le brouillard : prudence, distance de sécurité, on se guide sur les lignes blanches et on ne dépasse pas. Les feux de route doivent être éteints par brouillard.",
+    "r": "Brouillard : distance, lignes blanches, pas de dépassement.",
+    "s": "feux"
+  },
+  {
+    "id": "15_conditions_climatiques-18",
+    "t": "15_conditions_climatiques",
+    "q": "Par mauvais temps (pluie, neige, brouillard, vent), quelle est la règle d'or du cours ?",
+    "qa": "في الأحوال الجوية السيئة، ما هي القاعدة الذهبية حسب الدرس ؟",
+    "o": [
+      "Accélérer pour sortir vite de la zone",
+      "Ralentir, s'éloigner des autres et éviter les gestes brusques",
+      "Rouler au milieu de la chaussée",
+      "Coller le véhicule de devant"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La règle d'or par mauvais temps : ralentir, augmenter les distances et éviter toute manœuvre brusque. Le conducteur doit toujours rester maître de son véhicule.",
+    "r": "Mauvais temps : ralentir, s'espacer, aucune surprise."
+  },
+  {
+    "id": "16_virages_et_pentes-01",
+    "t": "16_virages_et_pentes",
+    "q": "Quelles sont, dans l'ordre, les trois étapes pour aborder un virage ?",
+    "qa": "ما هي، بالترتيب، المراحل الثلاث للسير في المنعرج ؟",
+    "o": [
+      "Adapter l'allure, détecter le virage, klaxonner",
+      "Détecter le virage, adapter l'allure, contrôler la trajectoire",
+      "Freiner dans le virage, accélérer, détecter",
+      "Contrôler la trajectoire, détecter, freiner"
+    ],
+    "a": [
+      1
+    ],
+    "e": "1) Détecter le virage et estimer son rayon et sa difficulté ; 2) adapter l'allure (vitesse et position) ; 3) contrôler la trajectoire et le véhicule.",
+    "r": "Virage : détecter, puis adapter, puis contrôler."
+  },
+  {
+    "id": "16_virages_et_pentes-02",
+    "t": "16_virages_et_pentes",
+    "q": "À quel moment dois-je réduire ma vitesse pour aborder un virage ?",
+    "qa": "متى يجب علي تخفيض السرعة للسير في المنعرج ؟",
+    "o": [
+      "Avant le virage",
+      "Au milieu du virage",
+      "À la sortie du virage"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On ralentit avant d'entrer dans le virage, pas dedans. Un virage signalé par un panneau est dangereux : on réduit sa vitesse avant de l'aborder.",
+    "r": "On ralentit avant le virage, jamais dedans."
+  },
+  {
+    "id": "16_virages_et_pentes-03",
+    "t": "16_virages_et_pentes",
+    "q": "Freiner fortement au milieu d'un virage :",
+    "qa": "الفرملة القوية داخل المنعرج :",
+    "o": [
+      "Est recommandé pour garder le contrôle",
+      "Risque de provoquer un dérapage",
+      "N'a aucun effet sur la trajectoire"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Piège classique : un freinage fort dans le virage expose au dérapage (خطر الانزلاق). Le freinage se fait avant le virage.",
+    "r": "Pas de freinage fort dans le virage."
+  },
+  {
+    "id": "16_virages_et_pentes-04",
+    "t": "16_virages_et_pentes",
+    "q": "Dans un virage, la force centrifuge pousse le véhicule :",
+    "qa": "في المنعرج، تدفع القوة النابذة المركبة :",
+    "o": [
+      "Vers l'intérieur du virage",
+      "Vers l'arrière",
+      "Vers l'extérieur du virage",
+      "Vers le bas"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La force centrifuge (القوة النابذة) pousse le véhicule vers l'extérieur du virage. Plus elle est forte, plus le risque de sortie de route est grand.",
+    "r": "Force centrifuge = vers l'extérieur du virage."
+  },
+  {
+    "id": "16_virages_et_pentes-05",
+    "t": "16_virages_et_pentes",
+    "q": "La force centrifuge augmente quand : (plusieurs réponses)",
+    "qa": "تزداد القوة النابذة عندما : (عدة أجوبة)",
+    "o": [
+      "La vitesse augmente",
+      "Le virage est plus large",
+      "Le véhicule est plus lourd",
+      "Le virage est plus serré"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Elle augmente avec la vitesse, avec le poids et quand le rayon du virage diminue (virage serré). Virage serré + vitesse élevée + forte charge = force centrifuge maximale.",
+    "r": "Vitesse, poids, virage serré = plus de force centrifuge."
+  },
+  {
+    "id": "16_virages_et_pentes-06",
+    "t": "16_virages_et_pentes",
+    "q": "Au milieu du virage, une fois la vitesse adaptée, que conseille le cours ?",
+    "qa": "في وسط المنعرج، بعد ملاءمة السرعة، بماذا ينصح الدرس ؟",
+    "o": [
+      "Freiner fortement",
+      "Accélérer légèrement pour sortir de façon équilibrée",
+      "Débrayer et rouler en roue libre"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Une légère accélération au milieu du virage permet d'en sortir de façon équilibrée : « ralentir avant, accélérer doucement en sortie ».",
+    "r": "Milieu de virage : légère accélération."
+  },
+  {
+    "id": "16_virages_et_pentes-07",
+    "t": "16_virages_et_pentes",
+    "q": "Virage serré en montagne : comment signaler ma présence ?",
+    "qa": "منعرج حاد في الجبل : كيف أنبه إلى وجودي ؟",
+    "o": [
+      "Avec l'avertisseur sonore le jour et un signal lumineux la nuit",
+      "Avec un signal lumineux le jour et l'avertisseur sonore la nuit",
+      "Avec les feux de détresse",
+      "Je n'ai pas à signaler ma présence"
+    ],
+    "a": [
+      0
+    ],
+    "e": "En montagne, avant un virage serré : avertisseur sonore (المنبه) le jour, signal lumineux la nuit.",
+    "r": "Virage de montagne : klaxon le jour, appel de phares la nuit."
+  },
+  {
+    "id": "16_virages_et_pentes-08",
+    "t": "16_virages_et_pentes",
+    "q": "Avant de freiner à l'approche d'un virage, je dois :",
+    "qa": "قبل الفرملة عند الاقتراب من منعرج، يجب علي :",
+    "o": [
+      "Passer au point mort",
+      "Allumer mes feux de détresse",
+      "Surveiller ce qui se passe derrière moi"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le cours demande de surveiller l'arrière (راقب من خلفك) avant de freiner, pour ne pas surprendre le véhicule qui suit.",
+    "r": "Avant de freiner : regarder derrière."
+  },
+  {
+    "id": "16_virages_et_pentes-09",
+    "t": "16_virages_et_pentes",
+    "q": "En montée, quels rapports de vitesse faut-il utiliser ?",
+    "qa": "في العقبة، أي السرعات يجب استعمالها ؟",
+    "o": [
+      "Les rapports bas (1re ou 2e)",
+      "Les rapports hauts (4e ou 5e)",
+      "Le point mort"
+    ],
+    "a": [
+      0
+    ],
+    "e": "En montée, le poids retient le véhicule et le moteur force davantage : les rapports bas (1re ou 2e) donnent plus de force de traction.",
+    "r": "Montée : rapports bas (1re ou 2e)."
+  },
+  {
+    "id": "16_virages_et_pentes-10",
+    "t": "16_virages_et_pentes",
+    "q": "En montée, derrière un poids lourd, je dois :",
+    "qa": "في العقبة خلف شاحنة، يجب علي :",
+    "o": [
+      "Le suivre de près pour profiter de son aspiration",
+      "Augmenter ma distance de sécurité",
+      "Le dépasser immédiatement, quelle que soit la visibilité"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le cours demande d'augmenter la distance de sécurité avec les poids lourds en montée. Dépasser sans visibilité suffisante est interdit.",
+    "r": "Montée derrière un camion : plus de distance.",
+    "s": "distance"
+  },
+  {
+    "id": "16_virages_et_pentes-11",
+    "t": "16_virages_et_pentes",
+    "q": "Descendre une pente au point mort :",
+    "qa": "النزول في المنحدر بنقطة الحياد :",
+    "o": [
+      "Permet d'économiser du carburant sans danger",
+      "Est interdit : risque de perte de contrôle",
+      "Est conseillé pour reposer le moteur"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Il est interdit de descendre au point mort (نقطة الحياد) : le moteur ne retient plus le véhicule et on risque de perdre le contrôle. Cela n'économise même pas de carburant.",
+    "r": "Descente au point mort = interdit."
+  },
+  {
+    "id": "16_virages_et_pentes-12",
+    "t": "16_virages_et_pentes",
+    "q": "Dans une longue descente, quel rapport choisir ?",
+    "qa": "في منحدر طويل، أي سرعة يجب اختيارها ؟",
+    "o": [
+      "Le rapport le plus élevé",
+      "Le point mort",
+      "Le même rapport que celui qu'on utiliserait pour monter cette pente"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Règle du cours : en descente, on engage le même rapport que pour monter la pente. Le frein moteur (حصار المحرك) retient alors le véhicule.",
+    "r": "Descente : même rapport qu'en montée."
+  },
+  {
+    "id": "16_virages_et_pentes-13",
+    "t": "16_virages_et_pentes",
+    "q": "Dans une longue descente dangereuse, que dois-je faire ? (plusieurs réponses)",
+    "qa": "في منحدر طويل وخطير، ماذا يجب علي أن أفعل ؟ (عدة أجوبة)",
+    "o": [
+      "Rétrograder pour utiliser le frein moteur",
+      "Freiner de façon continue du début à la fin",
+      "Freiner par pressions intermittentes",
+      "Rouler au point mort"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "On rétrograde pour profiter du frein moteur et on freine par à-coups. Un freinage continu fait chauffer les freins, qui perdent leur efficacité.",
+    "r": "Longue descente : frein moteur + freinage par à-coups."
+  },
+  {
+    "id": "16_virages_et_pentes-14",
+    "t": "16_virages_et_pentes",
+    "q": "Croisement difficile sur une route de montagne : quel véhicule doit s'arrêter le premier ?",
+    "qa": "تقابل صعب في طريق جبلية : أي مركبة يجب أن تتوقف أولا ؟",
+    "o": [
+      "Celui qui monte",
+      "Le premier qui klaxonne",
+      "Le plus rapide",
+      "Celui qui descend"
+    ],
+    "a": [
+      3
+    ],
+    "e": "En montagne, lors d'un croisement difficile, le véhicule qui descend s'arrête le premier pour laisser passer celui qui monte (النازل يتوقف أولا ليمر الصاعد).",
+    "r": "Montagne : celui qui descend s'arrête pour celui qui monte.",
+    "s": "depassement"
+  },
+  {
+    "id": "16_virages_et_pentes-15",
+    "t": "16_virages_et_pentes",
+    "q": "Croisement impossible dans une pente entre deux véhicules de même catégorie : qui doit reculer ?",
+    "qa": "تقابل مستحيل في منحدر بين مركبتين من نفس الصنف : من يجب أن يرجع إلى الخلف ؟",
+    "o": [
+      "Celui qui descend, sauf si c'est plus facile pour celui qui monte (place d'évitement proche)",
+      "Toujours celui qui monte",
+      "Celui qui est arrivé le dernier"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Entre véhicules de même catégorie, c'est le véhicule descendant qui recule, sauf si la manœuvre est plus facile pour le montant, par exemple près d'une place d'évitement (مجتنب).",
+    "r": "Même catégorie : le descendant recule (sauf évitement proche).",
+    "s": "depassement"
+  },
+  {
+    "id": "16_virages_et_pentes-16",
+    "t": "16_virages_et_pentes",
+    "q": "Quelles affirmations sur les montées et les descentes sont justes ? (plusieurs réponses)",
+    "qa": "أي العبارات حول العقبة والمنحدر صحيحة ؟ (عدة أجوبة)",
+    "o": [
+      "En montée, le poids retient le véhicule et le moteur fournit plus d'effort",
+      "En descente, le poids freine le véhicule",
+      "En descente, le poids pousse le véhicule vers l'avant",
+      "En montée, il faut passer la 5e pour garder de l'élan"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "En montée, le poids tire le véhicule vers l'arrière et le moteur travaille plus ; en descente, le poids le pousse vers l'avant, d'où l'utilité des rapports bas et du frein moteur.",
+    "r": "Montée : le poids retient ; descente : il pousse vers l'avant."
+  },
+  {
+    "id": "14_conditions_eclairage-23",
+    "t": "14_conditions_eclairage",
+    "q": "De jour, en agglomération, par brouillard ou forte pluie, quels feux puis-je utiliser ? (plusieurs réponses)",
+    "qa": "نهارا، داخل التجمعات العمرانية، في الضباب أو المطر، أي الأضواء يمكنني استعمالها ؟ (عدة أجوبة)",
+    "o": [
+      "Les feux de position",
+      "Les feux de croisement",
+      "Les feux de route",
+      "Aucun feu, il fait jour"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "Perminou : de jour, les feux de position s'utilisent en agglomération uniquement par brouillard, pluie ou neige ; les feux de croisement, en et hors agglomération dans les mêmes conditions. Les feux de route éblouiraient dans le brouillard.",
+    "r": "Jour + brouillard en ville : position ou croisement.",
+    "s": "feux"
+  }
+]

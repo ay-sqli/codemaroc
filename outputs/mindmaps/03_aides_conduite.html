@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Aides à la Conduite</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/03_aides_conduite" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🛰️ أنظمة المساعدة على السياقة (Aides à la Conduite)\n\n## 📌 1. المبدأ (Principe)\n- أجهزة تعزز السلامة وتسهل السياقة وقد تصحح بعض الأخطاء\n- السائق يبقى المتحكم الأول ← لا تصحح كل المخاطر\n\n## 🛞 2. ABS: النظام المضاد لحصر العجلات (Anti-blocage)\n- <img src=\"../../inputs/04_le_vehicule/03_aides_conduite/images/1686925650545.jpeg\"> **ABS: يمنع انغلاق العجلات عند الفرملة القوية**\n- مجسات على العجلات ← تكشف خطر الانزلاق\n- يحافظ على التحكم في المقود أثناء الفرملة\n- ⚠️ لا يقلص مسافة الحصر\n\n## 🦶 3. AFU: النظام المساعد على الحصر (Aide au freinage d'urgence)\n- السائق لا يضغط بقوة كافية في الفرملة المفاجئة\n- AFU يزيد قوة الحصر تلقائيا (يعمل دائما مع ABS)\n- يشغل أضواء الاستغاثة تلقائيا لتحذير من في الخلف\n- <img src=\"../../inputs/04_le_vehicule/03_aides_conduite/images/1686647047394.png\" class=\"big\"> AFU\n\n## ⏯️ 4. START & STOP\n- يوقف المحرك تلقائيا عند وقوف المركبة\n- يشتغل تلقائيا عند الضغط على الواصل للانطلاق\n- يوفر الوقود ← مفيد في المدينة والازدحام\n\n## 🧭 5. ESP: مصحح المسار الإلكتروني (Correcteur de trajectoire)\n- <img src=\"../../inputs/04_le_vehicule/03_aides_conduite/images/1684505203590.png\"> **ESP: يقلل تأثير القوة النابذة ويصحح المسار في المنعرج**\n\n## ⏩ 6. جهاز تثبيت السرعة (Régulateur)\n- <img src=\"../../inputs/04_le_vehicule/03_aides_conduite/images/1683117535599.png\"> **مثبت السرعة: يحافظ على سرعة مختارة بدون دواسة السرعة**\n- يتوقف عند الضغط على الفرامل\n- يُنصح به خارج المدينة\n\n## 🛑 7. محدد السرعة (Limiteur)\n- <img src=\"../../inputs/04_le_vehicule/03_aides_conduite/images/1683120110927.png\"> **محدد السرعة: لا تتجاوز المركبة السرعة المحددة حتى مع الضغط على الدواسة**\n\n## 🗺️ 8. GPS وكاميرا الرجوع (GPS et caméra de recul)\n- <img src=\"../../inputs/04_le_vehicule/03_aides_conduite/images/1683194581839.png\"> **GPS: تحديد المكان والوجهة + تحديد مكان المركبة عند السرقة**\n- <img src=\"../../inputs/04_le_vehicule/03_aides_conduite/images/1683018283689.jpeg\"> **كاميرا الرجوع إلى الخلف: تظهر ما خلف المركبة على الشاشة**\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- ABS = «أفرمل وأوجّه في نفس الوقت»\n- مثبت (Régulateur) يحافظ ≠ محدد (Limiteur) يمنع التجاوز\n- ESP = ضد الانزلاق في المنعرج\n- AFU = قوة فرملة إضافية + Warning تلقائي\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- ABS لا يقلص مسافة الحصر ← يحافظ على التحكم فقط\n- مثبت السرعة غير منصوح به في المدينة أو على طريق مبللة\n- الأنظمة لا تعوض يقظة السائق\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

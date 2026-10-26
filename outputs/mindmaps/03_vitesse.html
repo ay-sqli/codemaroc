@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - La Vitesse</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/03_vitesse" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# ⏱️ السرعة (La Vitesse)\n\n## 📊 1. السرعة والوقت المربوح (Gain de temps illusoire)\n- 35% من السائقين يسرعون لأنهم مستعجلون\n- +10 كلم/س على 10 كلم في المدينة (60 بدل 50) ← ربح أقل من دقيقتين\n- +10 كلم/س على 200 كلم في الطريق السيار (130 بدل 120) ← ربح 7 دقائق فقط\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1684489906474.png\"> **السرعة هي العامل الأساسي في حوادث السير: الرؤية، مسافة الحصر، فرص النجاة**\n\n## 🐢 2. متى يجب تخفيض السرعة؟ (Quand ralentir)\n- داخل التجمعات العمرانية\n  - عند الاقتراب من سكة حديدية أو سكة الترامواي\n  - عند مقابلة أو تجاوز حيوانات أو دواب خائفة\n- خارج التجمعات العمرانية\n  - الرؤية غير كافية أو محدودة بأضواء التقابل\n  - المنعرجات، المنحدرات، المقاطع الضيقة أو المزدحمة، الملتقيات، قمة منحدر\n  - حافلة نقل عمومي متوقفة لصعود أو نزول الركاب\n  - قافلة متوقفة\n  - قرب مدرسة\n  - الدواب\n  - الغروب أو الشروق أو الضباب\n\n## 🚦 3. علامات السرعة (Panneaux de vitesse)\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1704711284037.png\"> **تحديد السرعة في 120 كلم / الساعة**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1704711334415.png\"> **تحديد السرعة في 100 كلم / الساعة**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1704711415878.png\"> **تحديد السرعة في 60 كلم / الساعة**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1704711432353.png\"> **تحديد السرعة في 30 كلم / الساعة**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1704711353845.png\"> **دخول منطقة السرعة فيها محدودة في 30 كلم / س**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1705675590917.png\"> **نهاية تحديد السرعة التي سبق الإعلان عنها**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1704711486272.png\"> **نهاية كل أشكال المنع المفروضة على المركبات المتحركة**\n\n## 🚗 4. السرعات القصوى (Limitations — hors période probatoire)\n- سيارة ≤ 3.5 طن / دراجة نارية\n  - <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1682588043638.png\"> **داخل التجمعات العمرانية: 60 كلم/س**\n  - <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1682588043659.png\"> **خارج التجمعات العمرانية: 100 كلم/س**\n  - <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1682588043679.png\"> **الطريق السيار: 120 كلم/س**\n- سيارات الأجرة: 60 / 90 / 120\n- النقل العمومي للأشخاص 3.5–10 طن: 60 / 90 / 100\n- نقل البضائع 3.5–12 طن: 60 / 90 / 100\n- نقل البضائع 12–19 طن: 60 / 80 / 90\n- نقل البضائع > 19 طن: 60 / 70 / 80\n- دراجة بمحرك (Cyclomoteur): 40 داخل / 60 خارج / ممنوعة في السيار\n- السرعة الدنيا في الطريق السيار: 60 كلم/س\n\n## 🔰 5. حالات استثنائية (Cas particuliers)\n- الفترة الاختبارية ← لا تتجاوز 90 كلم/س في جميع الحالات\n- مركبات الأولوية في تدخل استعجالي ← لا تخضع لتحديد السرعة\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1692095087290.png\"> **مركبة التدخل السريع**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1682001504996.png\"> **مركبة الوقاية المدنية**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1692095135049.png\"> **مركبة الإسعاف**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1692095145684.png\"> **مركبة الدرك الملكي**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1692095153840.png\"> **مركبة الأمن الوطني (الشرطة)**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1692095160579.png\"> **مركبة القوات المساعدة**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1684747415429.png\"> **30 كلم/س: مقابلة أو تجاوز جماعة راجلين في حالة سير**\n- 30 كلم/س: المركبات الفلاحية والغابوية وآليات الأشغال\n- 60 كلم/س: مركبة عرضها أو عرض حمولتها > 2.60 م\n\n## 🐌 6. السرعة المنخفضة بشكل غير عادي (Lenteur anormale)\n- ممنوع إعاقة السير بسرعة منخفضة بدون سبب\n- مضطر للسير ببطء ← شغّل أضواء الإغاثة (Warning)\n- في صف متواصل ← هذا الإجبار يخص المركبة الأخيرة فقط\n\n## 🏘️ 7. منطقة 30 (Zone 30)\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1687269778819.png\"> **دخول منطقة السرعة فيها محدودة في 30 كلم / س**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1687269764505.png\"> **نهاية المنطقة ذات السرعة المحددة في 30 كلم / س**\n- 30 كلم/س في المنطقة بأكملها + الطرق المكسوة بالحصى + المناطق السكنية المشورة\n\n## 🏷️ 8. إجبارية لصق علامة السرعة (Disque de vitesse)\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1682001505163.jpeg\"> **المركبات التي يفوق وزنها الإجمالي المأذون به 3500 كلغ**\n- <img src=\"../../inputs/02_regles_circulation/03_vitesse/images/1697025009064.jpeg\"> **مركبات النقل الجماعي للأشخاص > 10000 كلغ**\n- السائقون في الفترة الاختبارية ← علامة 90\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- احفظ: 60 – 100 – 120 (مدينة – خارجها – سيار)\n- مبتدئ (Permis probatoire) = 90 كحد أقصى حتى في الطريق السيار\n- الراجلون في جماعة أو المدرسة ← فكر في 30\n- تحديد السرعة هو حد أقصى وليس هدفا ← لاءم السرعة مع الظروف\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- السرعة الدنيا في الطريق السيار 60 كلم/س (في السير العادي)\n- سيارة الأجرة في الطريق الوطنية: 90 وليس 100\n- علامة «نهاية تحديد السرعة» ← ترجع إلى السرعة العامة للطريق وليس «بلا حدود»\n- سيارة إسعاف بدون منبه ولا ضوء دوار ← تخضع لتحديد السرعة\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

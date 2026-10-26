@@ -1,0 +1,400 @@
+@import "tailwindcss";
+
+/*
+ * ─────────────────────────────────────────────────────────────────────────────
+ *  Design system « Code Maroc B »
+ *  Inspiré du langage visuel des grandes plateformes d'apprentissage en ligne :
+ *  fond blanc, bleu primaire unique, bordures bleu-gris fines, rayons de 8 px,
+ *  typographie Source Sans 3 en 400/600/700, aucune ombre lourde, pas d'emoji.
+ *  Documentation vivante : /design-system
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+
+:root {
+  /* Couleurs de base */
+  --c-blue-900: #002761;
+  --c-blue-800: #00337f;
+  --c-blue-700: #00419e;
+  --c-blue-600: #0056d2; /* primaire */
+  --c-blue-500: #2a73cc;
+  --c-blue-200: #c1d6f8;
+  --c-blue-100: #e3eefe;
+  --c-blue-50: #f0f6ff;
+
+  --c-grey-975: #1f1f1f; /* texte principal */
+  --c-grey-900: #333333;
+  --c-grey-700: #5b6780; /* texte secondaire */
+  --c-grey-600: #636363;
+  --c-grey-400: #a8b2c5;
+  --c-grey-300: #c7d0dd;
+  --c-grey-200: #dae1ed; /* bordures */
+  --c-grey-100: #e8eef7;
+  --c-grey-50: #f5f7f8; /* fond du pied de page */
+
+  --c-panel: #f2f5fa; /* panneaux bleu-gris (listes « Nouveau et populaire ») */
+
+  --c-green-700: #137333;
+  --c-green-600: #1f8354;
+  --c-green-50: #e9f6ee;
+  --c-red-700: #b00020;
+  --c-red-600: #d30001;
+  --c-red-50: #fdecec;
+  --c-amber-700: #8a5300;
+  --c-amber-500: #f5a700;
+  --c-amber-50: #fff6e0;
+  --c-purple-600: #5c3de8;
+
+  /* Rôles sémantiques (utilisés par les classes Tailwind ci-dessous) */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: var(--c-panel);
+  --border: var(--c-grey-200);
+  --text: var(--c-grey-975);
+  --muted: var(--c-grey-700);
+  --brand: var(--c-blue-600);
+  --brand-2: var(--c-blue-700);
+  --accent: #c25700;
+  --ok: var(--c-green-600);
+  --ko: var(--c-red-600);
+
+  --shadow-1: 0 1px 2px rgb(31 31 31 / 0.08), 0 1px 4px rgb(31 31 31 / 0.04);
+  --shadow-2: 0 2px 8px rgb(31 31 31 / 0.12);
+  --shadow-3: 0 8px 24px rgb(31 31 31 / 0.16);
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-panel: var(--c-panel);
+  --color-line: var(--border);
+  --color-line-strong: var(--c-grey-300);
+  --color-ink: var(--text);
+  --color-ink-2: var(--c-grey-900);
+  --color-muted: var(--muted);
+  --color-subtle: var(--c-grey-400);
+  --color-brand: var(--brand);
+  --color-brand-2: var(--brand-2);
+  --color-brand-900: var(--c-blue-900);
+  --color-brand-800: var(--c-blue-800);
+  --color-brand-200: var(--c-blue-200);
+  --color-brand-100: var(--c-blue-100);
+  --color-brand-50: var(--c-blue-50);
+  --color-accent: var(--accent);
+  --color-ok: var(--ok);
+  --color-ok-50: var(--c-green-50);
+  --color-ko: var(--ko);
+  --color-ko-50: var(--c-red-50);
+  --color-warn: var(--c-amber-700);
+  --color-warn-500: var(--c-amber-500);
+  --color-warn-50: var(--c-amber-50);
+  --color-night: var(--c-grey-975);
+  --color-foot: var(--c-grey-50);
+
+  --font-sans: var(--font-source), var(--font-arabic), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-ar: var(--font-arabic), var(--font-source), system-ui, sans-serif;
+
+  /* Rayons : 4 px (contrôles), 8 px (cartes), 12 px (grands bandeaux) */
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
+  --radius-2xl: 8px;
+  --radius-3xl: 12px;
+
+  /* Graisses plafonnées à 700 (pas de 800/900) */
+  --font-weight-extrabold: 700;
+  --font-weight-black: 700;
+
+  --shadow-sm: var(--shadow-1);
+  --shadow: var(--shadow-1);
+  --shadow-md: var(--shadow-2);
+  --shadow-lg: var(--shadow-3);
+  --shadow-xl: var(--shadow-3);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--c-blue-100);
+}
+
+/* ─────────────────────────── Typographie ─────────────────────────── */
+.t-display {
+  font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.t-h1 {
+  font-size: clamp(1.625rem, 1.35rem + 1vw, 2.125rem);
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.t-h2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  font-weight: 600;
+}
+.t-h3 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+.t-h4 {
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 600;
+}
+.t-body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.t-small {
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+.t-caption {
+  font-size: 0.75rem;
+  line-height: 1.33;
+  color: var(--muted);
+}
+.t-overline {
+  font-size: 0.75rem;
+  line-height: 1.33;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Texte arabe des cours */
+.ar {
+  font-family: var(--font-ar);
+  direction: rtl;
+  line-height: 1.85;
+}
+
+/* ─────────────────────────── Version arabe ───────────────────────────
+ * html[lang=ar] : police arabe en premier, interligne plus aéré,
+ * flèches retournées, pas de majuscules forcées. */
+html[lang="ar"] body {
+  font-family: var(--font-ar);
+  line-height: 1.7;
+}
+html[lang="ar"] .t-overline {
+  letter-spacing: 0;
+  text-transform: none;
+}
+html[lang="ar"] .t-display,
+html[lang="ar"] .t-h1,
+html[lang="ar"] .t-h2 {
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+[dir="rtl"] .lucide-arrow-right,
+[dir="rtl"] .lucide-arrow-left,
+[dir="rtl"] .lucide-chevron-right,
+[dir="rtl"] .lucide-chevron-left,
+[dir="rtl"] .lucide-chevrons-right,
+[dir="rtl"] .lucide-chevrons-left,
+[dir="rtl"] .lucide-arrow-up-right,
+[dir="rtl"] .flip-rtl {
+  transform: scaleX(-1);
+}
+/* Afficher un élément dans une seule langue (utile dans les composants serveur) */
+html[lang="ar"] .only-fr,
+html:not([lang="ar"]) .only-ar {
+  display: none !important;
+}
+/* Contenu toujours écrit de gauche à droite (chiffres, schémas, médias) */
+.ltr {
+  direction: ltr;
+}
+
+/* Lien standard (bleu, souligné au survol) */
+.link {
+  color: var(--brand);
+  font-weight: 600;
+}
+.link:hover {
+  color: var(--brand-2);
+  text-decoration: underline;
+}
+
+/* ─────────────────────────── Classes héritées ───────────────────────────
+ * Utilisées par les schémas interactifs : elles suivent le design system. */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 40px;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+}
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--brand-2);
+}
+.btn-accent {
+  background: var(--brand);
+  color: #fff;
+}
+.btn-accent:hover:not(:disabled) {
+  background: var(--brand-2);
+}
+.btn-ghost {
+  background: #fff;
+  color: var(--brand);
+  border-color: var(--brand);
+}
+.btn-ghost:hover:not(:disabled) {
+  background: var(--c-blue-50);
+}
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 4px;
+  padding: 0.125rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ─────────────────────────── Fiche de cours ─────────────────────────── */
+.fiche img {
+  max-height: 56px;
+  width: auto;
+  border-radius: 4px;
+  background: #fff;
+}
+.fiche img.big {
+  max-height: 180px;
+}
+.fiche img.xl {
+  max-height: none;
+  width: 100%;
+  max-width: 880px;
+  border: 1px solid var(--border);
+}
+.fiche strong {
+  font-weight: 600;
+}
+
+/* ─────────────────────────── Mindmap ─────────────────────────── */
+svg.markmap.markmap {
+  --markmap-font: 400 15px/1.6 var(--font-ar);
+  --markmap-text-color: var(--text);
+  --markmap-circle-open-bg: #fff;
+  color: var(--text);
+}
+svg.markmap .markmap-foreign {
+  color: var(--text) !important;
+  font-family: var(--font-ar);
+}
+svg.markmap .markmap-foreign strong {
+  font-weight: 600;
+}
+.markmap-foreign img {
+  height: 34px !important;
+  width: auto !important;
+  display: inline-block !important;
+  vertical-align: middle;
+  border-radius: 4px;
+  background: #fff;
+  margin-inline-end: 6px;
+}
+.markmap-foreign img.big {
+  height: 90px !important;
+}
+.markmap-foreign img.xl {
+  height: 140px !important;
+}
+
+/* ─────────────────────────── Mouvements ─────────────────────────── */
+@keyframes pop {
+  0% {
+    transform: translateY(4px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.animate-pop {
+  animation: pop 0.2s ease-out both;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  75% {
+    transform: translateX(4px);
+  }
+}
+.animate-shake {
+  animation: shake 0.25s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Barre de défilement horizontale masquée (carrousels, onglets) */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

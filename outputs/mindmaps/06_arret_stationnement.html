@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Arrêt et Stationnement</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/06_arret_stationnement" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🅿️ الوقوف والتوقف (Arrêt et Stationnement)\n\n## 📌 1. تعاريف (Définitions)\n- **الوقوف (Arrêt)**: إيقاف مؤقت لصعود أو نزول الأشخاص أو الشحن والتفريغ ← السائق يبقى في المركبة أو قربها\n- **التوقف (Stationnement)**: إيقاف المركبة (المحرك متوقف) والنزول منها\n\n## 🚗 2. أنواع الوقوف (Types de stationnement)\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1694600329377.png\"> **الوقوف العمودي: المركبات متجاورة عموديا على الرصيف**\n  - يُنصح بالدخول إلى الخلف ← رؤية أفضل عند الخروج\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1694600398980.png\"> **الوقوف المتوازي (الطولي): المركبات بموازاة الرصيف واحدة خلف الأخرى**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1694600501390.png\"> **الوقوف بزاوية: المركبات مائلة بالنسبة للرصيف**\n\n## 🚫 3. علامات منع الوقوف والتوقف (Panneaux)\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003767962.png\"> **منع التوقف: حتى الملتقى الموالي أو علامة مماثلة**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003767977.png\"> **منع الوقوف والتوقف: حتى الملتقى الموالي أو علامة مماثلة**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003767993.png\"> **منع التوقف من بداية الشهر إلى غاية منتصفه**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768009.png\"> **منع التوقف من منتصف الشهر إلى نهايته**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768025.png\"> **دخول منطقة ممنوع فيها التوقف**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768043.png\"> **دخول منطقة ذات التوقف من جانب واحد بالتناوب النصف شهري**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768061.png\"> **دخول منطقة يكون التوقف فيها محددا زمنيا ومراقبا بواسطة قرص**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768081.png\"> **دخول منطقة التوقف فيها مؤدى عنه**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768098.png\"> **دخول منطقة التوقف بالتناوب النصف الشهري ولمدة محددة ومراقبة بقرص**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768114.png\"> **نهاية منطقة ممنوع التوقف**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768129.png\"> **نهاية منطقة ذات التوقف من جانب واحد بالتناوب النصف شهري**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768144.png\"> **نهاية منطقة ذات التوقف المحدد زمنها والمراقب بواسطة قرص**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768159.png\"> **نهاية منطقة التوقف المؤدى عنه**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768175.png\"> **نهاية منطقة التوقف بالتناوب النصف الشهري ولمدة محددة ومراقبة بقرص**\n\n## 🪧 4. أمثلة مع اللويحات (Avec panonceaux)\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768191.png\"> **التوقف ممنوع ابتداء من العلامة**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768207.png\"> **التوقف ممنوع قبل العلامة**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768246.png\"> **التوقف ممنوع قبل وبعد العلامة**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1682003768224.png\"> **التوقف ممنوع على مركبات نقل البضائع**\n\n## ⚠️ 5. الوقوف والتوقف المضايقان (Gênants)\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686320751395.png\"> **على الأرصفة والممرات المخصصة للراجلين**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686568214504.png\"> **على الجهة اليسرى (إلا في طريق ذات اتجاه واحد داخل المدينة)**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686568236537.png\"> **على مسالك وأشرطة الدراجات وجوانبها**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686568376016.png\"> **في أماكن الحافلات وسيارات الأجرة ومركبات المرفق العمومي**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686318887638.png\"> **بين حافة القارعة وخط متصل إذا لم يبق عرض كاف للمرور**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686318919717.png\"> **قرب الأضواء أو العلامات بشكل يحجبها**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686318854717.png\"> **أمام صنابير إطفاء الحريق ومداخل المنشآت تحت الأرضية**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686320186484.png\"> **أمام مداخل المركبات إلى العقارات**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686319701766.png\"> **في الصف المزدوج (إلا الدراجات والدراجات النارية بدون عربة جانبية)**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686318956386.png\"> **في أماكن تسليم البضائع**\n- في مكان يمنع مركبة أخرى من الخروج أو الدخول\n\n## ☠️ 6. الوقوف والتوقف الخطيران (Dangereux)\n- عندما تكون الرؤية غير كافية في أو قرب\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686569034638.png\"> **ملتقيات الطرق**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686319586020.png\"> **المنعرجات**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686319563008.png\"> **قمم المنحدرات**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686319389718.png\"> **تقاطعات الطرق مع السكك الحديدية**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686568328628.png\"> **المسلك المركزي لطريق بثلاثة مسالك ذات اتجاهين**\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1686320121638.png\"> **ممرات ومسطحات الترامواي**\n- المنشآت الفنية (القناطر)، الممرات تحت الأرضية والأنفاق\n\n## 📏 7. المسافات الدنيا (Distances minimales)\n- خارج المدينة ← 12 م من ملتقى أو تقاطع مع سكة حديدية\n- داخل المدينة ← 12 م من ملتقى مشور أو سكة حديدية أو ترامواي\n- داخل المدينة ← 5 م من ملتقى بدون أي علامة\n- <img src=\"../../inputs/02_regles_circulation/06_arret_stationnement/images/1684229102205.png\"> **ممنوع فتح الباب أو النزول دون التأكد من عدم وجود خطر**\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- الوقوف = قصير والسائق حاضر / التوقف = المحرك متوقف والسائق غائب\n- علامة بخط واحد (/) = منع التوقف، بخطين (X) = منع الوقوف والتوقف\n- 12 م و 5 م: احفظ الرقمين\n- علامة I = النصف الأول من الشهر (1–15)، II = النصف الثاني (16–آخر الشهر)\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- الصف المزدوج ممنوع حتى «لدقيقة واحدة»\n- الجهة اليسرى مسموحة فقط في طريق ذات اتجاه واحد داخل المدينة\n- علامة منع التوقف تبقى سارية حتى الملتقى الموالي\n- الوقوف فوق ممر الراجلين ممنوع ← مضايق وخطير\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

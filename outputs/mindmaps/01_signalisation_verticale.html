@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Signalisation Verticale</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/01_signalisation_verticale" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🚦 التشوير العمودي (Signalisation Verticale)\n\n## 📐 1. دلالة الشكل واللون (Formes et Couleurs)\n- **دلالة الشكل**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282449717.png\"> **مثلث**: خطر\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687258198569.png\"> **دائرة**: أمر مطلق (منع أو إجبار)\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018898.png\"> **مستطيل**: إرشاد\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019007.png\"> **سهم**: اتجاه\n- **دلالة اللون**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282319215.png\"> **أحمر**: المنع والخطر\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868180434.png\"> **أزرق**: الإجبار والإرشاد\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513243278.png\"> **أصفر**: تشوير مؤقت\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018674.png\"> **أبيض**: خصوصية دائمة للتشوير والإرشاد\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018660.png\"> **خط أسود على أبيض**: نهاية المنع\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692869194123.png\"> **خط أحمر على أزرق**: نهاية الإجبار\n\n## ⚠️ 2. علامات الخطر (Dangers)\n- **قاعدة المسافة**\n  - 🏙️ **داخل التجمعات العمرانية**: 50 متر\n  - 🛣️ **خارج التجمعات العمرانية**: 150 متر\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018447.png\"> **استثناء**: علامة السير في الاتجاهين (علامة وضعية)\n- **الأنواع**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282449717.png\"> **دائمة (خلفية بيضاء)**: منعرج، ممر الراجلين، طريق محدودب\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508881334.png\"> **مؤقتة (خلفية صفراء)**: أشغال، تطاير الحصى، انزلاق\n\n## ⛔ 3. علامات المنع (Interdictions)\n- **القاعدة**: علامات وضعية تطبق فورا\n- **استثناءات التوقف والوقوف**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687258191796.png\"> **علامة منع الوقوف والتوقف**: ينتهي مفعولها عند ملتقى الطرق\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687258198569.png\"> **علامة منع التوقف**: ينتهي مفعولها عند ملتقى الطرق\n- **أمثلة المنع**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282319215.png\"> **تحديد السرعة**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282348944.png\"> **منع استعمال المنبه الصوتي**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692958563932.png\"> **ممنوع الانعطاف نحو اليمين**\n- **نهاية المنع**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018660.png\"> **علامة بيضاء بشريط أسود/رمادي** (نهاية المنع)\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018674.png\"> **نهاية تحديد السرعة**\n\n## 🔵 4. علامات الإجبار (Obligations)\n- **القاعدة**: <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868180434.png\"> **علامات وضعية زرقاء** تلزم بالقيام بالفعل\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018717.png\"> **إجبارية الانعطاف نحو اليمين**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018745.png\"> **سرعة دنيا إجبارية**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868180434.png\"> **ممر إجباري لمستعملي الدراجات**\n- **نهاية الإجبار**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692869194123.png\"> **علامة زرقاء بشريط أحمر** (نهاية الإجبار)\n\n## 🅿️ 5. علامات الإرشاد والاتجاه (Indications & Directions)\n- **الإرشاد**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1691677868794.png\"> **خلفية زرقاء**: منشآت وقواعد متعلقة بالسير (مدخل طريق السيار، <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018898.png\"> موقف سيارات)\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018913.png\"> **خلفية بيضاء بإطار أزرق**: خدمات (محطة وقود، <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018941.png\"> نفخ العجلات، <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018927.png\"> مطعم)\n- **الاتجاه**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018988.png\"> **توضع عند ملتقى الطرق لتبين الاتجاه** (اتجاه المدن، <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019007.png\"> علامة تكميلية للاتجاه)\n\n## 📍 6. علامات المواقع واللويحات (Localisation & Panonceaux)\n- **علامات المواقع**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019022.png\"> **طريق وطنية** (أحمر)\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019036.png\"> **طريق جهوية** (أصفر)\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019050.png\"> **طريق غابوية** (أخضر)\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019066.png\"> **طريق إقليمية** (أزرق)\n- **اللويحات**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019108.png\"> **توضح مسافة** (على بعد 600m)، <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019123.png\"> **امتداد** (على طول 15km)، أو <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019080.png\"> **صنف المركبات أو الحجم**\n\n## 🚧 7. التشوير المؤقت (Signalisation Temporaire)\n- **الاستخدامات**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508927393.png\"> **خطر مؤقت**: ازدحام شديد، <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508881334.png\"> قارعة يقع بها انزلاق\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508145791.png\"> **إرشاد مؤقت**: تغییر القارعة، <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508115227.png\"> تخصيص المسالك\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507640722.png\"> **تحويل الاتجاه**: انحراف، <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507667238.png\"> نهاية الانحراف\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682407572662.png\"> **أجهزة ضوئية مؤقتة**: منصة ضوئية، <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682407572589.png\"> سهم ضوئي\n\n## ⚖️ 8. المخالفات (Infractions)\n- **4 نقط | 700 إلى 1400 درهم**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018551.jpeg\"> **عدم احترام الوقوف المفروض بعلامة قف**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508898992.png\"> **عدم احترام الضوء الأحمر**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282202109.png\"> **السير في الاتجاه الممنوع**\n- **0 نقط | 300 إلى 600 درهم**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692958563932.png\"> **عدم احترام منع تغيير الاتجاه**\n  - <img src=\"../../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868180434.png\"> **السير بممر مخصص لبعض أصناف المركبات**\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

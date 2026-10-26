@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Règles Administratives</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/01_regles_administratives" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 📄 القواعد الإدارية المتعلقة بالمركبات (Règles Administratives)\n\n## 📌 1. تعاريف (Définitions)\n- **مركبة**: وسيلة نقل بعجلتين على الأقل، بقوتها الذاتية أو بقوة خارجية\n- **مركبة ذات محرك**: مجهزة بمحرك وتسير بوسائلها الذاتية\n- **الوزن فارغة (PV)**: المركبة جاهزة للسير (خزانات مملوءة، عجلة احتياط، أدوات)\n- **الوزن الإجمالي المأذون به (PTAC)**: أقصى وزن محملة تقبله NARSA\n- **الحمولة النافعة**: PTAC − الوزن فارغة\n- **الوزن الحقيقي**: الوزن الفعلي محملة مع الطاقم والركاب\n- **الوزن الإجمالي الدارج المأذون به (PTRA)**: لمركبة متمفصلة أو مجموعة مركبات\n\n## 🗂️ 2. الوثائق على متن المركبة (Documents)\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1686731595528.jpeg\"> **1. رخصة السياقة**\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1686731564677.png\"> **2. شهادة تسجيل المركبة (البطاقة الرمادية)**\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1683563209298.png\"> **3. شهادة أداء الضريبة الخصوصية السنوية**\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1697617415509.jpeg\"> **4. شهادة التأمين**\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1695033213590.jpeg\"> **5. محضر المراقبة التقنية الدورية**\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1690462348338.jpeg\"> **المعاينة الودية (وثيقة اختيارية)**\n- تحقق من وجودها وصلاحيتها قبل الإقلاع\n\n## 🪪 3. رخصة السياقة وشهادة التسجيل (Permis et carte grise)\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1686650430554.png\"> **الواجهة الأمامية لرخصة السياقة**\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1686650444973.png\"> **الواجهة الخلفية لرخصة السياقة: الأصناف وتاريخ نهاية الصلاحية**\n- شهادة التسجيل: إجبارية قبل استعمال المركبة\n  - رقم التسجيل (NARSA)، هوية المالك وعنوانه\n  - تواريخ الاستخدام والتسجيل وانتقال الملكية\n  - الخصائص التقنية والقوة الجبائية ونوع الاستعمال\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1686731580229.png\"> **الواجهة الأمامية لشهادة التسجيل**\n\n## 🛡️ 4. التأمين (Assurance)\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1697617448376.jpeg\"> **شهادة التأمين**\n- التأمين عن المسؤولية المدنية ← إلزامي في المغرب\n- 3 أنواع\n  - الطرف الثالث (Tiers) ← الأبسط والأرخص: أضرار الغير المادية والجسدية\n  - الطرف الثالث + (Tiers +) ← تغطية أوسع وتكلفة متوسطة\n  - جميع المخاطر (Tous risques) ← الأكثر شمولا: سرقة، زجاج، حريق، مساعدة...\n\n## 💰 5. الضريبة الخصوصية السنوية (Vignette)\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1683283834240.png\"> **شهادة أداء الضريبة**\n- الأداء خلال شهر يناير من كل سنة\n- المبلغ حسب القوة الجبائية ونوع الوقود\n- المركبات الكهربائية والهجينة ← معفاة\n\n## 🔧 6. المراقبة التقنية (Contrôle technique)\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1695033243486.jpeg\"> **محضر المراقبة التقنية**\n- الهدف: المركبة مطابقة وأجهزة السلامة تعمل، بدون تفكيك\n- عيب ← مهلة شهر واحد للمراقبة التكميلية\n- 10 وظائف و 77 نقطة تحقق\n  - الهوية، الحصر، التوجيه، الرؤية، الإضاءة والتشوير\n  - الاتصال بالأرض، الهيكل، المعدات، الدفع والتحكم، التلوث\n- الأنواع: إرادية / دورية / عند تحويل الملكية أو التعديل\n- انتهت مدة المراقبة ← التنقل فقط نحو المرأب أو مركز المراقبة\n- الدورية\n  - المركبات الخاصة ← الأولى قبل 5 سنوات، ثم كل سنة\n  - الأجرة، البضائع، تعليم السياقة ← كل سنة\n  - الحافلات والمستأجرة بدون سائق ← كل 6 أشهر\n\n## 📝 7. المعاينة الودية (Constat amiable)\n- <img src=\"../../inputs/04_le_vehicule/01_regles_administratives/images/1690462439785.jpeg\"> **المعاينة الودية: الواجهة الأمامية**\n- تملأ عند حادثة بأضرار مادية فقط، بهدوء وعناية\n- ليست اعترافا بالمسؤولية ← تصف الوقائع للتعويض\n- إصابات بدنية ← الشرطة أو الدرك ينجزون تقريرا\n- إبلاغ شركة التأمين داخل أجل 5 أيام\n- احتفظ بنموذج فارغ في المركبة\n\n## ⏲️ 8. مدة صلاحية الوثائق (Validité)\n- شهادة التسجيل ← 10 سنوات (أو عند البيع/الشراء)\n- رخصة السياقة ← 10 سنوات\n- الضريبة ← سنة واحدة\n- المراقبة التقنية ← سنة واحدة\n- التأمين ← حسب العقد (شهر، 3، 6 أشهر، سنة...)\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- 5 وثائق إجبارية: رخصة، رمادية، تأمين، ضريبة، فحص تقني\n- سيارة خاصة جديدة: أول فحص قبل متم 5 سنوات من أول استعمال، ثم كل سنة\n- حادث مادي ← المعاينة الودية + التأمين خلال 5 أيام\n- الحمولة النافعة = PTAC − الوزن فارغة\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- المعاينة الودية ليست إجبارية لكنها مفيدة جدا\n- التأمين الإلزامي هو «المسؤولية المدنية» وليس «جميع المخاطر»\n- الضريبة تؤدى في يناير\n- المركبة الكهربائية معفاة من الضريبة\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

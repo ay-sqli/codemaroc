@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Véhicule et Environnement</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/06_environnement" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🌱 المركبة واحترام البيئة (Véhicule et Environnement)\n\n## ♻️ 1. السياقة المراعية للبيئة (Éco-conduite)\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1690281628362.png\" class=\"big\"> السياقة المراعية للبيئة\n- اقتصادية ← وقود أقل\n- إيكولوجية ← انبعاثات أقل\n- آمنة ← تحكم أفضل في المركبة\n\n## 🔍 2. قبل الانطلاق (Avant de partir)\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1683034883980.png\"> **ضغط الإطارات: ضغط منخفض ← استهلاك أكثر وتآكل سريع**\n- الحالة الميكانيكية: سوء الصيانة ← استهلاك أكثر وحوادث أكثر\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1683035185939.png\"> **مراقبة التسربات: ضارة بالبيئة وبالمحرك**\n- تخفيف الوزن: أزل الأشياء غير الضرورية\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1686732716154.png\"> **حامل الأمتعة السطحي: يزيد الاستهلاك 10–15% ← أزله بعد الاستعمال**\n\n## 📈 3. عداد الدورات: 4 مناطق (Compte-tours)\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1683043415085.png\" class=\"big\"> عداد الدورات\n- ⚫ الرمادية ← أقل من 1000 د/د (الحد الأدنى للاشتغال)\n- ⚪ العادية ← 1000 إلى 5000 د/د\n- 🟢 الخضراء ← 1500 إلى 2500 د/د (الأفضل: أقل استهلاك)\n- 🔴 الحمراء ← 5000 إلى 7000 د/د (ممنوعة: إتلاف المحرك)\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1686663482715.png\" class=\"big\"> مناطق عداد الدورات\n\n## 🍃 4. السياقة المرنة (Conduite souple)\n- السرعة المناسبة حسب الطريق\n- انطلق بمستوى منخفض ثم ارفع حسب الحاجة\n- ابق في المنطقة الخضراء: ارفع فوق 2500، اخفض تحت 1500\n- استبق التخفيض بحصار المحرك بدل الفرامل\n- 100 بدل 110 على 500 كلم ← توفير 5 لترات و 12.5% انبعاثات أقل\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1683022376212.png\"> **وقوف أكثر من 20 ثانية ← أطفئ المحرك**\n- المكيف: +25% استهلاك في المدينة و +10% خارجها، +3.5 كلغ CO2 لكل 100 كلم\n  - سرعة منخفضة ← افتح النوافذ\n  - سرعة عالية ← المكيف مع النوافذ مغلقة\n\n## ⚡ 5. الطاقة الحركية (Énergie cinétique)\n- تتناسب مع مربع السرعة: ضعف السرعة ← 4 أضعاف الطاقة\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1683022376227.png\" class=\"big\"> الطاقة الحركية\n- سيارة 2000 كلغ: 60 كلم/س ← 277.5 كيلوجول / 120 كلم/س ← 1110.8 كيلوجول (×4)\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1684317919902.png\" class=\"big\"> منحنى الطاقة الحركية حسب السرعة\n- الكتلة أيضا: شاحنة أو حافلة ← طاقة هائلة حتى بسرعة 30 كلم/س\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1683022376260.png\" class=\"big\"> الطاقة حسب الكتلة\n- الفرملة ← الطاقة تتحول إلى حرارة\n- الاصطدام ← الطاقة تتحول إلى تشوه\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1684746041052.png\" class=\"big\"> الاصطدام والتشوه\n\n## 💥 6. الاصطدامات الثلاثة (Les 3 chocs)\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1684745937290.png\"> **1. اصطدام المركبة مع الحاجز**\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1684745977004.png\"> **2. اصطدام السائق مع الواجهة الأمامية**\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1684746001054.png\"> **3. اصطدام الأعضاء الداخلية مع الجسم**\n- حزام السلامة ← يثبت الراكب ويبطئ حركته ويمنع قذفه خارج المركبة\n- <img src=\"../../inputs/04_le_vehicule/06_environnement/images/1692873999597.png\"> **ربط الحمولة: تبقى طاقتها منعدمة ← لا ترتطم بالركاب**\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- المنطقة الخضراء 1500–2500 = اقتصاد + سلامة\n- «حصار المحرك قبل الفرامل»\n- السرعة × 2 = الطاقة × 4 = مسافة الوقوف × 4\n- حامل الأمتعة الفارغ = وقود ضائع\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- التسخين الطويل للمحرك قبل الانطلاق ← تبذير (انطلق بلطف)\n- النزول بالحياد لا يوفر الوقود\n- إطارات منفوخة بشكل ناقص ← استهلاك أكثر وخطر أكبر\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

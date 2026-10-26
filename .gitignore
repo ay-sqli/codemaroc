@@ -1,0 +1,16 @@
+# Dépendances et builds (web/.gitignore couvre aussi node_modules, .next, out)
+node_modules/
+__pycache__/
+*.pyc
+
+# Sources brutes volumineuses : déjà copiées dans web/public (exam_bank) ou retraitées dans content/
+/inputs/
+/exam_bank/audio/
+/exam_bank/images/
+
+# Anciennes versions
+/web_src_backup_v1/
+/index_v1_backup.html
+
+# Réglages locaux de Claude Code
+/.claude/settings.local.json

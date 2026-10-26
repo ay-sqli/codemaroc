@@ -1,0 +1,168 @@
+# 🚦 المحور الفرعي: علامات الخطر والأسبقية لمحور التكوين: الطريق
+
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899805.png" height="50"> **علامات الخطر**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899805.png" height="50"> **خطر منعرج على اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899820.png" height="50"> **خطر منعرج على اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899834.png" height="50"> **خطر منعرجات متتابعة أولها على اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899848.png" height="50"> **خطر منعرجات متتابعة أولها على اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899863.png" height="50"> **خطر عقبة ذات صعود حاد**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899884.png" height="50"> **منحدر خطير**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899899.png" height="50"> **خطر قارعة ضيقة من اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899913.png" height="50"> **خطر قارعة ضيقة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899927.png" height="50"> **خطر قارعة ضيقة محليا**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899940.png" height="50"> **خطر قارعة ضيقة من اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899954.png" height="50"> **خطر منفذ إلى رصيف أو سيف نهر**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899968.png" height="50"> **خطر جسر متحرك**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899982.png" height="50"> **خطر مخفض سرعة محدودب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899996.png" height="50"> **خطر طريق محدودب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900012.png" height="50"> **خطر قارعة تطفو عليها المياه**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900031.png" height="50"> **خطر قارعة يقع بها انزلاق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900046.png" height="50"> **خطر تساقط الأحجار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900060.png" height="50"> **خطر تناثر الحصى**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900073.png" height="50"> **مكان يرتاده الاطفال**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900088.png" height="50"> **خطر ممر الراجلين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900102.png" height="50"> **خطر مرور حيوانات أليفة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900116.png" height="50"> **خطر منفذ لمستعملي الدراجات والدراجات بمحرك**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900130.png" height="50"> **خطر مرور حيوانات أليفة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900143.png" height="50"> **خطر مرور حيوانات أليفة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673163046.png" height="50"> **خطر مرور الفرسان**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673182554.png" height="50"> **خطر مرور حيوانات متوحشة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673207291.png" height="50"> **عبور منطقة خطر جوي**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673223260.png" height="50"> **إعلان عن أضواء ثلاثية اللون**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900221.png" height="50"> **خطر السير في الاتجاهين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900236.png" height="50"> **خطر ريح جانبية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900250.png" height="50"> **خطر تقاطع طريق مع سكة حديدية مجهزبحاجز يستعمل يدويا عند مرور القطارات**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900263.png" height="50"> **أخطار أخرى**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900278.png" height="50"> **خطر تقاطع طريق مع سكة حديدية بدون حواجز وبدون نصف حاج ز**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900291.png" height="50"> **خطر عبور ممرات الترامواي**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673265950.png" height="50"> **خطر مرور مركبات فلاحية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673287559.png" height="50"> **خطر مرور مركبات مجرورة بواسطة الدواب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900335.png" height="50"> **خطر مؤقت: طريق محدودب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900353.png" height="50"> **خطر مؤقت: قارعة ضيقة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900368.png" height="50"> **خطر مؤقت: قارعة ضيقة على اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900382.png" height="50"> **خطر مؤقت: قارعة ضيقة على اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900396.png" height="50"> **خطر مؤقت قارعة يقع بها انزلاق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900410.png" height="50"> **خطر مؤقت: أشغال**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900424.png" height="50"> **أخطار أخرى مؤقتة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900438.png" height="50"> **إعلان مؤقت عن إشارات ضوئية لتنظيم السير**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900452.png" height="50"> **خطر مؤقت: تناثر الحصى**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900466.png" height="50"> **خطر مؤقت: حادثة سير**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900480.png" height="50"> **خطر مؤقت: ازدحام شديد**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900516.png" height="50"> **إعطاء حق الأسبقية عند ملتقى الطرق- علامة وضعية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673393547.png" height="50"> **إعطاء حق الأسبقية عند ملتقى الطرق - إشارة متقدمة على مسافة 150 متر**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673379906.png" height="50"> **إعطاء حق الأسبقية عند ملتقى الطرق - إ شارة متقدمة لعلامة قف**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673417803.png" height="50"> **ملتقى طرق تطبق فيه قاعدة حق الأسبقية للقادم من اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900573.png" height="50"> **ملتقى طريق ذات أولوية مع طريق أقل أهمية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900587.png" height="50"> **ملتقى طرقي دوراني**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900601.png" height="50"> **الإشارة إلى الطابع الأولوي لطريق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900614.png" height="50"> **نهاية الطابع الأولوي لطريق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899805.png" height="50"> **خطر منعرج على اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899820.png" height="50"> **خطر منعرج على اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899834.png" height="50"> **خطر منعرجات متتابعة أولها على اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899848.png" height="50"> **خطر منعرجات متتابعة أولها على اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899863.png" height="50"> **خطر عقبة ذات صعود حاد**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899884.png" height="50"> **منحدر خطير**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899899.png" height="50"> **خطر قارعة ضيقة من اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899913.png" height="50"> **خطر قارعة ضيقة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899927.png" height="50"> **خطر قارعة ضيقة محليا**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899940.png" height="50"> **خطر قارعة ضيقة من اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899954.png" height="50"> **خطر منفذ إلى رصيف أو سيف نهر**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899968.png" height="50"> **خطر جسر متحرك**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899982.png" height="50"> **خطر مخفض سرعة محدودب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899996.png" height="50"> **خطر طريق محدودب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900012.png" height="50"> **خطر قارعة تطفو عليها المياه**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900031.png" height="50"> **خطر قارعة يقع بها انزلاق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900046.png" height="50"> **خطر تساقط الأحجار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900060.png" height="50"> **خطر تناثر الحصى**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900073.png" height="50"> **مكان يرتاده الاطفال**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900088.png" height="50"> **خطر ممر الراجلين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900102.png" height="50"> **خطر مرور حيوانات أليفة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900116.png" height="50"> **خطر منفذ لمستعملي الدراجات والدراجات بمحرك**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900130.png" height="50"> **خطر مرور حيوانات أليفة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900143.png" height="50"> **خطر مرور حيوانات أليفة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673163046.png" height="50"> **خطر مرور الفرسان**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673182554.png" height="50"> **خطر مرور حيوانات متوحشة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673207291.png" height="50"> **عبور منطقة خطر جوي**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673223260.png" height="50"> **إعلان عن أضواء ثلاثية اللون**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900221.png" height="50"> **خطر السير في الاتجاهين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900236.png" height="50"> **خطر ريح جانبية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900250.png" height="50"> **خطر تقاطع طريق مع سكة حديدية مجهزبحاجز يستعمل يدويا عند مرور القطارات**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900263.png" height="50"> **أخطار أخرى**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900278.png" height="50"> **خطر تقاطع طريق مع سكة حديدية بدون حواجز وبدون نصف حاج ز**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900291.png" height="50"> **خطر عبور ممرات الترامواي**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673265950.png" height="50"> **خطر مرور مركبات فلاحية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673287559.png" height="50"> **خطر مرور مركبات مجرورة بواسطة الدواب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900335.png" height="50"> **خطر مؤقت: طريق محدودب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900353.png" height="50"> **خطر مؤقت: قارعة ضيقة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900368.png" height="50"> **خطر مؤقت: قارعة ضيقة على اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900382.png" height="50"> **خطر مؤقت: قارعة ضيقة على اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900396.png" height="50"> **خطر مؤقت قارعة يقع بها انزلاق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900410.png" height="50"> **خطر مؤقت: أشغال**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900424.png" height="50"> **أخطار أخرى مؤقتة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900438.png" height="50"> **إعلان مؤقت عن إشارات ضوئية لتنظيم السير**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900452.png" height="50"> **خطر مؤقت: تناثر الحصى**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900466.png" height="50"> **خطر مؤقت: حادثة سير**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900480.png" height="50"> **خطر مؤقت: ازدحام شديد**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673393547.png" height="50"> **إعطاء حق الأسبقية عند ملتقى الطرق- علامة وضعية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673379906.png" height="50"> **إعطاء حق الأسبقية عند ملتقى الطرق - إشارة متقدمة على مسافة 150 متر**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673417803.png" height="50"> **إعطاء حق الأسبقية عند ملتقى الطرق - إ شارة متقدمة لعلامة قف**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900573.png" height="50"> **ملتقى طرق تطبق فيه قاعدة حق الأسبقية للقادم من اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900587.png" height="50"> **ملتقى طريق ذات أولوية مع طريق أقل أهمية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900601.png" height="50"> **ملتقى طرقي دوراني**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900614.png" height="50"> **الإشارة إلى الطابع الأولوي لطريق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900628.png" height="50"> **نهاية الطابع الأولوي لطريق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899805.png" height="50"> **خطر منعرج على اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899820.png" height="50"> **خطر منعرج على اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899834.png" height="50"> **خطر منعرجات متتابعة أولها على اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899848.png" height="50"> **خطر منعرجات متتابعة أولها على اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899863.png" height="50"> **خطر عقبة ذات صعود حاد**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899884.png" height="50"> **منحدر خطير**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899899.png" height="50"> **خطر قارعة ضيقة من اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899913.png" height="50"> **خطر قارعة ضيقة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899927.png" height="50"> **خطر قارعة ضيقة محليا**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899940.png" height="50"> **خطر قارعة ضيقة من اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899954.png" height="50"> **خطر منفذ إلى رصيف أو سيف نهر**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899968.png" height="50"> **خطر جسر متحرك**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899982.png" height="50"> **خطر مخفض سرعة محدودب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901899996.png" height="50"> **خطر طريق محدودب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900012.png" height="50"> **خطر قارعة تطفو عليها المياه**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900031.png" height="50"> **خطر قارعة يقع بها انزلاق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900046.png" height="50"> **خطر تساقط الأحجار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900060.png" height="50"> **خطر تناثر الحصى**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900073.png" height="50"> **مكان يرتاده الاطفال**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900088.png" height="50"> **خطر ممر الراجلين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900102.png" height="50"> **خطر مرور حيوانات أليفة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900116.png" height="50"> **خطر منفذ لمستعملي الدراجات والدراجات بمحرك**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900130.png" height="50"> **خطر مرور حيوانات أليفة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900143.png" height="50"> **خطر مرور حيوانات أليفة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673163046.png" height="50"> **خطر مرور الفرسان**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673182554.png" height="50"> **خطر مرور حيوانات متوحشة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673207291.png" height="50"> **عبور منطقة خطر جوي**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673223260.png" height="50"> **إعلان عن أضواء ثلاثية اللون**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900221.png" height="50"> **خطر السير في الاتجاهين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900236.png" height="50"> **خطر ريح جانبية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900250.png" height="50"> **خطر تقاطع طريق مع سكة حديدية مجهزبحاجز يستعمل يدويا عند مرور القطارات**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900263.png" height="50"> **أخطار أخرى**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900278.png" height="50"> **خطر تقاطع طريق مع سكة حديدية بدون حواجز وبدون نصف حاج ز**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900291.png" height="50"> **خطر عبور ممرات الترامواي**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673265950.png" height="50"> **خطر مرور مركبات فلاحية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673287559.png" height="50"> **خطر مرور مركبات مجرورة بواسطة الدواب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900335.png" height="50"> **خطر مؤقت: طريق محدودب**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900353.png" height="50"> **خطر مؤقت: قارعة ضيقة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900368.png" height="50"> **خطر مؤقت: قارعة ضيقة على اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900382.png" height="50"> **خطر مؤقت: قارعة ضيقة على اليسار**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900396.png" height="50"> **خطر مؤقت قارعة يقع بها انزلاق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900410.png" height="50"> **خطر مؤقت: أشغال**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900424.png" height="50"> **أخطار أخرى مؤقتة**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900438.png" height="50"> **إعلان مؤقت عن إشارات ضوئية لتنظيم السير**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900452.png" height="50"> **خطر مؤقت: تناثر الحصى**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900466.png" height="50"> **خطر مؤقت: حادثة سير**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900480.png" height="50"> **خطر مؤقت: ازدحام شديد**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673393547.png" height="50"> **إعطاء حق الأسبقية عند ملتقى الطرق- علامة وضعية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673379906.png" height="50"> **إعطاء حق الأسبقية عند ملتقى الطرق - إشارة متقدمة على مسافة 150 متر**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1689673417803.png" height="50"> **إعطاء حق الأسبقية عند ملتقى الطرق - إ شارة متقدمة لعلامة قف**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900573.png" height="50"> **ملتقى طرق تطبق فيه قاعدة حق الأسبقية للقادم من اليمين**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900587.png" height="50"> **ملتقى طريق ذات أولوية مع طريق أقل أهمية**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900601.png" height="50"> **ملتقى طرقي دوراني**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900614.png" height="50"> **الإشارة إلى الطابع الأولوي لطريق**
+- <img src="../inputs/01_la_route/02_dangers_priorites/المحور الفرعي_files/1681901900628.png" height="50"> **نهاية الطابع الأولوي لطريق**

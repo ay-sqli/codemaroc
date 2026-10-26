@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Éléments Mécaniques</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/02_elements_mecaniques" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🔧 العناصر الميكانيكية المرتبطة بسلامة السياقة (Éléments Mécaniques)\n\n## 📌 1. تعاريف (Définitions)\n- **تجهيزات المركبة**: لسلامة السائق (وسادات هوائية...) والآخرين (ضبط الأضواء) والراحة والسهولة\n- **السلسلة الحركية**: المحرك ← الواصل ← علبة السرعة ← العجلات (دائما بهذا الترتيب)\n- **المذكرة الوصفية**: الوصف الكامل للمركبة (ضغط الإطارات، سعة الخزان...)\n- **دليل الصيانة**: يُقرأ عند تسلم المركبة (الخصائص ودورية الصيانة)\n- **مستويات السوائل**: الزيت، سائل التبريد، سائل الفرامل، غسل الزجاج...\n- **ضغط الإطارات**: التحام أمثل مع الأرض + خطر انفجار أقل\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1687432224725.png\" class=\"big\"> العناصر الأساسية المكونة للمركبة\n\n## 🚗 2. المكونات (Composants)\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1683197885750.png\"> **الهيكل: بنية تحمل الأجزاء المحركة**\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1683017253665.jpeg\"> **المحرك: يحول الطاقة الحرارية (احتراق الوقود) إلى طاقة حركية**\n- العجلات الأمامية ← مرتبطة بالمقود (العجلات الموجهة)\n- العجلات الخلفية ← تتبع الأمامية\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1683017253705.png\"> **المقود: التحكم في العجلات الأمامية ومسار المركبة**\n\n## 🛞 3. الإطارات (Pneus)\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1693319605704.png\" class=\"big\"> أنواع الإطارات\n- العجلة = الطوق + الإطار المطاطي\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/D_C3_A9signation_20sur_20pneus_20compress_C3_A9.png\" class=\"big\"> المعلومات المنقوشة على الإطار\n- Run Flat ← تواصل السير بعد الثقب: ≤ 80 كلم/س لمسافة قد تصل 250 كلم\n- Tubeless ← بدون أنبوب داخلي، الصمام على الطوق\n\n## ⚙️ 4. علبة السرعة (Boîte de vitesses)\n- المستوى 1 ← أكبر عزم: الإقلاع والعقبات الحادة جدا\n- المستوى 2 ← عزم جيد: العقبات\n- المستوى 3 ← عزم وسرعة: العقبات والمنعرجات\n- المستوى 4 ← الطرق المستوية\n- المستوى 5 ← أكبر سرعة: الطرق المستوية بدون منعرجات\n- ارفع المستوى فوق 2500 دورة/د، اخفضه تحت 1500 دورة/د\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1685453370907.jpeg\" class=\"big\"> مستويات السرعة\n- اليدوية (BVM) ← صيانة أقل وأرخص، السياقة الاقتصادية، الأكثر انتشارا\n- الأوتوماتيكية (BVA) ← راحة في الازدحام، اليدان على المقود، لكن استهلاك وثمن وصيانة أكثر\n\n## 🦶 5. الدواسات (Pédales)\n- يمين ← التسريع\n- وسط (أو يسار في الأوتوماتيكية) ← الحصر\n- يسار ← الواصل (فقط في اليدوية): الضغط = فصل المحرك عن العلبة\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1685026788090.png\"> **مركبة بعلبة سرعة يدوية: 3 دواسات**\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1685025480508.png\"> **مركبة بعلبة سرعة أوتوماتيكية: دواستان**\n\n## 🅿️ 6. أوضاع العلبة الأوتوماتيكية (P R N D)\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1685114219327.png\"> **P موقف، R رجوع، N حياد، D سير للأمام**\n- P ← عند التوقف: يمنع نقل الحركة (حصار ثان)\n- R ← الرجوع إلى الخلف\n- N ← المحرك يدور بحرية دون تحريك العجلات\n- D ← السير للأمام مع تغيير تلقائي للمستويات\n\n## 📟 7. لوحة القيادة (Tableau de bord)\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1683017253749.jpeg\" class=\"big\"> لوحة القيادة\n- عداد الدورات ← دورات المحرك في الدقيقة\n- عداد السرعة ← كلم/س\n- مؤشر الوقود ← يسار فارغ، يمين ممتلئ\n- حرارة سائل التبريد ← تستقر عند 90°م\n- أسباب ارتفاع الحرارة: تسرب السائل، مضخة الماء، المبرد، حشية رأس الأسطوانة، المستشعر\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1683017253818.png\"> **مؤشرات التنبيه الحمراء: عطب خطير ← توقف فورا**\n- ألوان المؤشرات\n  - 🔴 أحمر ← خطر فوري: توقف\n  - 🟠 برتقالي ← خطر محتمل: عطل أو مراقبة\n  - 🟢🔵 أخضر وأزرق ← تجهيزات تعمل (الأضواء، المثبت...)\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1685455373856.png\" class=\"big\"> مؤشرات لوحة القيادة\n\n## 🔩 8. المحرك ومبدأ الاشتغال (Moteur)\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1686924689727.jpeg\" class=\"big\"> المكونات الأساسية للمحرك\n- محرك بنزين ← اشتعال بالشرارة (الشماعات)\n- محرك غازوال ← اشتعال بالانضغاط\n- رباعي الأشواط: السحب ← الانضغاط ← الشغل ← العادم\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1689597879752.png\" class=\"big\"> السلسلة الحركية للمحرك\n- المولد يعيد شحن البطارية عند دوران المحرك\n\n## 🎛️ 9. وسائل التحكم (Commandes)\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1683122836359.png\"> **وسائل التحكم حول المقود: الأضواء، المؤشرات، المساحات**\n- ذراع المؤشرات على اليسار ← تحت = يسار، فوق = يمين\n- ذراع المساحات على اليمين ← درجات للسرعة\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1683017254224.jpeg\"> **التهوية: الشدة، الحرارة (أزرق بارد/أحمر ساخن)، تدوير الهواء، المكيف، إزالة الضباب**\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1683274038166.png\"> **واقية الشمس**\n- أحزمة السلامة + مقاعد الأطفال (في المقاعد الخلفية)\n\n## 📢 10. المخالفات (Infractions)\n- <img src=\"../../inputs/04_le_vehicule/02_elements_mecaniques/images/1752072539142.png\" class=\"big\"> مخالفات متعلقة بالمركبة\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- ألوان المؤشرات مثل الأضواء: أحمر قف، برتقالي انتبه، أخضر يعمل\n- 1500 ↓ / 2500 ↑ : قاعدة تغيير السرعة\n- الحرارة فوق 90° وترتفع ← توقف قبل إتلاف المحرك\n- الترتيب: محرك ← واصل ← علبة ← عجلات\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- المؤشر الأحمر ← توقف فورا وليس «عند أقرب مرأب»\n- الأوتوماتيكية: لا دواسة للواصل\n- الوضع P ليس بديلا كاملا عن الحصار اليدوي\n- Run Flat لا تتجاوز 80 كلم/س بعد الثقب\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

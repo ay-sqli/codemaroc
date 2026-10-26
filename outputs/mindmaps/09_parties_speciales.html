@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Endroits Particuliers</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/09_parties_speciales" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🔀 السياقة عند الاقتراب من الأجزاء المميزة للطريق (Endroits Particuliers)\n\n## ⭕ 1. الممر الدائري ≠ ملتقى الطرق الدوراني (Giratoires)\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1693222631311.png\" class=\"big\"> السير عكس عقارب الساعة حول شريط مركزي غير قابل للعبور\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1693222652607.png\"> **الممر الدائري (بدون تشوير): الأسبقية لليمين ← من يريد الدخول له الأسبقية**\n- ملتقى الطرق الدوراني: 3 علامات\n  - <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1704811027114.png\"> **ملتقى طرق دوراني (علامة خطر + المسافة)**\n  - <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1704811003605.png\"> **أترك الأسبقية (عند كل مدخل)**\n  - <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1693222668211.png\"> **اتجاه دوراني إلزامي (في الشريط المركزي)**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1693222710012.png\"> **ملتقى الطرق الدوراني: من في الداخل له الأسبقية ← الداخل يعطي الأسبقية**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1704810732083.png\"> **لا تخلط: الممر الدائري ← الأسبقية للداخل إليه، الملتقى الدوراني ← الأسبقية لمن بداخله**\n\n## 🔄 2. اختيار المسلك في الدائرة (Choix de la voie)\n- المسلك الأيمن ← الأمام أو الانعطاف يمينا\n- المسلك الأيسر ← الانعطاف يسارا أو نصف دورة\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1693222726839.png\"> **إلى الأمام: المسلك الأيمن بدون مؤشر عند الدخول، ثم المؤشر الأيمن قبل الخروج**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1693222739695.png\"> **إلى اليمين: المسلك الأيمن + المؤشر الأيمن قبل الدخول**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1693222755352.png\"> **إلى اليسار أو نصف دورة: المسلك الأيسر + المؤشر الأيسر، ثم الأيمن قبل الخروج**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1693222812748.png\" class=\"big\"> الدوائر الكبيرة (أكثر من 4 طرق ومسلكين)\n\n## 🚪 3. الخروج من الدائرة (Sortie)\n- المراقبة غير المباشرة: المرايا قبل تغيير المسلك\n- المراقبة المباشرة: الزاوية الميتة اليمنى واليسرى ← الدراجة القادمة من اليمين (أكثر التصادمات)\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1693222777568.png\" class=\"big\"> الخروج الآمن\n- فاتك المخرج؟ ← أكمل الدورة (ممنوع الفرملة القوية والرجوع إلى الخلف)\n- خطأ في المسلك داخل الدائرة ← أعط الأسبقية لليمين\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1704810751051.png\"> **عند الاقتراب: نوع الملتقى ← تخفيض السرعة ← المسلك المناسب ← المرايا ← الاندماج**\n\n## 🚲 4. ممر الدراجات (Pistes cyclables)\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1686827836540.png\"> **منفذ لراكبي الدراجات والدراجات النارية الخفيفة**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1686827813421.png\"> **ممر إلزامي على الدراجات**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1686578254648.png\"> **قبل الانعطاف: أعط الأسبقية للدراجات الموجودة في الممر الخاص بها**\n\n## 🚶 5. ممرات الراجلين (Passages piétons)\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1686827878265.png\"> **ممر الراجلين**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1686827862616.png\"> **إرشاد إلى ممر الراجلين**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1684754807633.png\"> **عند الاقتراب: خفف السرعة وقف إذا دعت الضرورة**\n\n## ⛰️ 6. العقبات والمنحدرات الطويلة (Montées et descentes)\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1687338348722.png\"> **منحدر خطير**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1686828342168.png\"> **عقبة حادة**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1686828716555.png\"> **لويحة خطر الاصطدام بمركبات بطيئة: زد مسافة الأمان**\n- <img src=\"../../inputs/02_regles_circulation/09_parties_speciales/images/1704810774676.png\"> **ممنوع النزول في المنحدر بنقطة الحياد**\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- علامة «أترك الأسبقية» عند مدخل الدائرة ← هي ملتقى دوراني: من بالداخل أولا\n- لا علامة عند المدخل ← ممر دائري: الأسبقية لليمين (الداخل إليه)\n- في الدائرة: يمين = أمام/يمين، يسار = يسار/نصف دورة\n- المؤشر الأيمن دائما قبل الخروج\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- الرجوع إلى الخلف داخل الدائرة ممنوع ← أكمل الدورة\n- للذهاب إلى الأمام: لا مؤشر عند الدخول\n- الراجل الذي ينتظر عند الممر ← خفف واستعد للوقوف\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

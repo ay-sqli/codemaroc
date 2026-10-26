@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Panne et Accident</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/15_panne_accident" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 🚨 عطب المركبة أو حادثة سير (Panne et Accident)\n\n## 🆘 1. القاعدة الذهبية P.A.S (Protéger – Alerter – Secourir)\n- 1️⃣ حماية مكان الحادثة (PROTÉGER)\n- 2️⃣ التبليغ عن الحادثة (ALERTER)\n- 3️⃣ إغاثة المصابين (SECOURIR)\n\n## ⚠️ 2. الحماية (Protéger)\n- وضع مثلث العطب\n- الإشارة بمصباح الجيب\n- تشغيل أضواء الاستغاثة (Warning)\n- أضواء الطريق ليلا أو عند ضعف الإضاءة\n- عدم التوقف = جنحة الفرار\n- عدم التبليغ = جنحة عدم تقديم المساعدة لشخص في خطر\n\n## 📞 3. التبليغ (Alerter)\n- <img src=\"../../inputs/02_regles_circulation/15_panne_accident/images/1682675682104.png\"> **15 أو 150: رجال المطافئ (الوقاية المدنية)**\n- <img src=\"../../inputs/02_regles_circulation/15_panne_accident/images/1687357587576.png\"> **19: الشرطة**\n- <img src=\"../../inputs/02_regles_circulation/15_panne_accident/images/1682675880263.png\"> **177: الدرك الملكي**\n- <img src=\"../../inputs/02_regles_circulation/15_panne_accident/images/1687357574135.png\"> **5050: الطرق السيارة بالمغرب**\n- المعلومات الواجب إعطاؤها\n  - مكان الحادثة\n  - نوع الحادثة (انقلاب، اصطدام...)\n  - عدد المركبات وأصنافها\n  - عدد الضحايا والجرحى وحالتهم\n\n## 🩹 4. الإغاثة (Secourir)\n- في جميع الحالات\n  - أزل ما يعيق التنفس\n  - غطّ المصابين ضد البرد\n  - تكلم معهم وطمئنهم وأبقهم واعين\n- مع شهادة الإسعافات الأولية\n  - الوضعية الجانبية للسلامة (على الجانب الأيمن)\n  - توقف القلب ← ضغطات على الصدر 100–120 في الدقيقة\n  - البالغ ← نفَسان كل 30 ضغطة\n  - الطفل ← 5 أنفاس أولا ثم نفَسان كل 15 ضغطة\n  - غير مؤهل؟ ← ضغطات الصدر فقط بدون انقطاع\n- طريقة الضغط: على الركبتين، اليدان وسط الصدر، الذراعان مستقيمتان، عمق 5–6 سم\n\n## 🔧 5. عطب المركبة (Panne)\n- الهدوء وعدم الارتباك\n- مكان آمن للتوقف\n- السترة الصفراء قبل النزول\n- مثلث العطب على مسافة كافية\n- خلل في الإنارة ليلا ← أضواء بديلة على اليسار + لا تتجاوز 20 كلم/س + توقف في أقرب مكان آمن\n\n## 💥 6. انفجار الإطار (Éclatement de pneu)\n- الأسباب: إطار قديم أو متدهور، ضغط غير مناسب، حمولة زائدة، اصطدام، فرملة متكررة، الطريق\n- ✅ أمسك المقود بإحكام\n- ❌ لا تضغط على الفرامل (خطر الدوران)\n- ✅ ارفع القدم عن المسرع ببطء وتدريجيا\n- ✅ تأكد من خلو اليمين ← وجّه المركبة تدريجيا إلى الحافة\n- ✅ أوقفها في مكان آمن + Warning\n\n## 🛞 7. تغيير العجلة (Changer une roue)\n- استبدال الإطار إذا: ثقب، نقوش ≤ 1.6 مم، حالة متدهورة\n- 1️⃣ المثلث خلف المركبة\n- 2️⃣ العجلة الاحتياطية بجانب الإطار المثقوب\n- 3️⃣ ركائز التثبيت (أمام الأمامية لتغيير خلفية، خلف الخلفية لتغيير أمامية)\n- 4️⃣ إزالة الغطاء ثم فك البراغي قليلا (عكس عقارب الساعة) قبل الرفع\n- 5️⃣ الرافعة على الهيكل ← لا تضع جسمك تحت المركبة\n- 6️⃣ تركيب العجلة وربط البراغي يدويا ← إنزال جزئي ← الربط بالمفتاح ← إنزال كامل\n- 7️⃣ ترتيب المعدات + فحص الضغط + إصلاح الإطار المثقوب\n\n## 🔋 8. البطارية (Batterie)\n- أسباب نفاذها: أجهزة تعمل والمحرك متوقف، تماس، البرد، أجهزة إضافية، التأكسد، تشغيل وإيقاف متكرر، عطب المولد\n- التشغيل بالدفع: السرعة الثانية + تحرير الواصل فجأة ثم التسريع\n- التوصيل ببطارية ثانية: السالب مع السالب، ثم الموجب مع الموجب، ثم تشغيل المركبة الثانية\n- لا تلمس الأقطاب أو الموصلات أثناء الشحن\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- P.A.S بالترتيب: احمِ أولا كي لا تقع حادثة ثانية\n- أرقام: 15 مطافئ، 19 شرطة، 177 درك، 5050 طرق سيارة\n- السترة الصفراء تُلبس داخل السيارة قبل النزول\n- انفجار إطار: «امسك، ارفع، وجّه» ولا فرامل\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- لا تنقل المصاب إلا عند خطر وشيك (حريق...)\n- لا تعطِ المصاب ماء أو أكلا\n- فك البراغي يكون قبل رفع المركبة\n- عمق النقوش الأدنى 1.6 مم\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

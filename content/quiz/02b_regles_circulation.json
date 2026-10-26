@@ -1,0 +1,2553 @@
+[
+  {
+    "id": "09_parties_speciales-01",
+    "t": "09_parties_speciales",
+    "q": "Rond-point sans aucune signalisation à l'entrée : qui passe en premier ?",
+    "qa": "ممر دائري بدون أي تشوير عند المدخل : من يمر أولا ؟",
+    "o": [
+      "Le véhicule rouge, qui sort",
+      "Le véhicule 1, qui veut entrer",
+      "Le véhicule 2, déjà engagé dans l'anneau"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sans panneau à l'entrée, c'est un ممر دائري : la priorité à droite s'applique, donc celui qui entre passe avant celui qui tourne déjà. C'est l'inverse du carrefour giratoire signalé.",
+    "r": "Rond-point sans panneau = priorité à droite : l'entrant passe.",
+    "s": "giratoire",
+    "img": "1693222652607.png"
+  },
+  {
+    "id": "09_parties_speciales-02",
+    "t": "09_parties_speciales",
+    "q": "Carrefour giratoire avec « Cédez le passage » à chaque entrée : qui passe en premier ?",
+    "qa": "ملتقى طرق دوراني بعلامة «أترك الأسبقية» عند كل مدخل : من يمر أولا ؟",
+    "o": [
+      "Le véhicule 1, déjà dans l'anneau",
+      "Le premier qui klaxonne",
+      "Le véhicule 2, qui veut entrer"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Dans un ملتقى الطرق الدوراني, celui qui est à l'intérieur est prioritaire : le véhicule qui entre cède le passage. Ne pas confondre avec le rond-point sans signalisation.",
+    "r": "Giratoire signalé : priorité à celui qui est dans l'anneau.",
+    "s": "giratoire",
+    "img": "1693222710012.png"
+  },
+  {
+    "id": "09_parties_speciales-03",
+    "t": "09_parties_speciales",
+    "q": "Quels panneaux signalent un carrefour giratoire (ملتقى الطرق الدوراني) ?",
+    "qa": "ما هي العلامات التي تشير إلى ملتقى الطرق الدوراني ؟",
+    "o": [
+      "« Sens giratoire obligatoire » sur l'îlot central",
+      "« Cédez le passage » à chaque entrée",
+      "« Stop » à chaque entrée",
+      "Panneau de danger « carrefour giratoire » avec la distance"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Le giratoire est signalé par 3 panneaux : le triangle de danger (avec la distance), « Cédez le passage » à chaque entrée et le panneau bleu de sens giratoire obligatoire au centre. Pas de « Stop ».",
+    "r": "Giratoire = danger + cédez le passage + sens giratoire.",
+    "s": "giratoire"
+  },
+  {
+    "id": "09_parties_speciales-04",
+    "t": "09_parties_speciales",
+    "q": "Ce panneau rond bleu, placé sur l'îlot central, signifie :",
+    "qa": "هذه العلامة الدائرية الزرقاء الموجودة في الشريط المركزي تعني :",
+    "o": [
+      "Demi-tour autorisé",
+      "Fin de l'obligation de tourner",
+      "Danger : carrefour giratoire à 150 m",
+      "Sens giratoire obligatoire"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Rond bleu = obligation : tourner autour de l'îlot dans le sens indiqué (اتجاه دوراني إلزامي). L'annonce de danger « carrefour giratoire » est un triangle rouge.",
+    "r": "Rond bleu à flèches en cercle = sens giratoire obligatoire.",
+    "s": "giratoire",
+    "img": "1693222668211.png"
+  },
+  {
+    "id": "09_parties_speciales-05",
+    "t": "09_parties_speciales",
+    "q": "Dans un giratoire, on tourne autour de l'îlot central :",
+    "qa": "في الدائرة، يتم السير حول الشريط المركزي :",
+    "o": [
+      "Dans le sens inverse des aiguilles d'une montre",
+      "Dans le sens des aiguilles d'une montre",
+      "Dans le sens qui mène le plus vite à la sortie"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On circule toujours dans le sens inverse des aiguilles d'une montre, autour d'un îlot central infranchissable. Jamais de raccourci par la gauche.",
+    "r": "Giratoire : sens inverse des aiguilles d'une montre.",
+    "s": "giratoire"
+  },
+  {
+    "id": "09_parties_speciales-06",
+    "t": "09_parties_speciales",
+    "q": "Je veux aller tout droit dans un giratoire. Quelle conduite est correcte ?",
+    "qa": "أريد الذهاب إلى الأمام في الدائرة. ما هو السلوك الصحيح ؟",
+    "o": [
+      "Voie de droite, clignotant droit dès l'entrée",
+      "Voie de droite, sans clignotant à l'entrée, puis clignotant droit avant de sortir",
+      "Voie de droite, sans aucun clignotant",
+      "Voie de gauche, clignotant gauche à l'entrée"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Tout droit : voie de droite, pas de clignotant en entrant (piège classique), puis clignotant droit juste avant la sortie pour prévenir les autres.",
+    "r": "Tout droit : voie de droite, clignotant droit seulement à la sortie.",
+    "s": "giratoire"
+  },
+  {
+    "id": "09_parties_speciales-07",
+    "t": "09_parties_speciales",
+    "q": "Je prends la première sortie à droite d'un giratoire. Je me place :",
+    "qa": "سأخرج من أول مخرج على اليمين في الدائرة. أتموضع :",
+    "o": [
+      "Dans la voie de droite, clignotant droit avant d'entrer",
+      "Dans la voie de droite, sans clignotant",
+      "Dans la voie de gauche, clignotant gauche"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Pour tourner à droite : voie de droite et clignotant droit dès avant l'entrée (المسلك الأيمن + المؤشر الأيمن قبل الدخول).",
+    "r": "À droite : voie de droite + clignotant droit avant d'entrer.",
+    "s": "giratoire"
+  },
+  {
+    "id": "09_parties_speciales-08",
+    "t": "09_parties_speciales",
+    "q": "Pour tourner à gauche ou faire demi-tour dans un giratoire, je dois :",
+    "qa": "للانعطاف يسارا أو القيام بنصف دورة في الدائرة، يجب :",
+    "o": [
+      "Prendre la voie de gauche avec le clignotant droit dès l'entrée",
+      "Prendre la voie de gauche avec le clignotant gauche, puis mettre le clignotant droit avant de sortir",
+      "Prendre la voie de droite avec le clignotant gauche",
+      "Prendre la voie de gauche sans clignotant"
+    ],
+    "a": [
+      1
+    ],
+    "e": "À gauche ou demi-tour : voie de gauche + clignotant gauche en entrant, puis clignotant droit avant la sortie (on sort toujours par la droite).",
+    "r": "Gauche ou demi-tour : voie de gauche, clignotant gauche puis droit.",
+    "s": "giratoire"
+  },
+  {
+    "id": "09_parties_speciales-09",
+    "t": "09_parties_speciales",
+    "q": "J'ai manqué ma sortie dans le giratoire. Que dois-je faire ?",
+    "qa": "فاتني المخرج داخل الدائرة. ماذا يجب أن أفعل ؟",
+    "o": [
+      "Couper par l'îlot central",
+      "Faire un tour supplémentaire",
+      "Freiner fort et m'arrêter",
+      "Reculer jusqu'à la sortie"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On complète la boucle et on reprend la sortie. Le freinage brusque et la marche arrière dans un giratoire sont interdits.",
+    "r": "Sortie manquée : je refais un tour, jamais de marche arrière.",
+    "s": "giratoire"
+  },
+  {
+    "id": "09_parties_speciales-10",
+    "t": "09_parties_speciales",
+    "q": "En sortant d'un giratoire, quel usager provoque le plus de collisions et doit être cherché dans l'angle mort droit ?",
+    "qa": "عند الخروج من الدائرة، أي مستعمل يسبب أكثر التصادمات ويجب البحث عنه في الزاوية الميتة اليمنى ؟",
+    "o": [
+      "Le cycliste qui arrive par la droite",
+      "Le véhicule qui me suit",
+      "Le piéton sur le trottoir d'en face"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Avant de sortir : rétroviseurs (contrôle indirect) puis coup d'œil dans les angles morts (contrôle direct). Le cycliste à droite est à l'origine du plus grand nombre de collisions.",
+    "r": "Sortie de giratoire : rétros + angle mort droit (cycliste).",
+    "s": "giratoire"
+  },
+  {
+    "id": "09_parties_speciales-11",
+    "t": "09_parties_speciales",
+    "q": "À l'intérieur du giratoire, je me suis trompé de voie. Pour en changer, je dois :",
+    "qa": "داخل الدائرة أخطأت المسلك. لتغييره يجب :",
+    "o": [
+      "M'arrêter et reculer",
+      "Passer en priorité, je suis déjà dans l'anneau",
+      "Céder le passage à droite"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Une erreur de voie dans le giratoire se corrige en cédant le passage à droite (أعط الأسبقية لليمين). Ni arrêt ni marche arrière dans l'anneau.",
+    "r": "Erreur de voie dans le giratoire : je cède à droite.",
+    "s": "giratoire"
+  },
+  {
+    "id": "09_parties_speciales-12",
+    "t": "09_parties_speciales",
+    "q": "Quel est l'ordre correct des actions à l'approche d'un giratoire ?",
+    "qa": "ما هو الترتيب الصحيح عند الاقتراب من الدائرة ؟",
+    "o": [
+      "Choisir la voie → s'insérer → ralentir → rétroviseurs",
+      "Identifier le type de carrefour → ralentir → choisir la voie → rétroviseurs → s'insérer",
+      "Rétroviseurs → s'insérer → ralentir → identifier le type",
+      "S'insérer → rétroviseurs → choisir la voie → ralentir"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On identifie d'abord le type (rond-point ou giratoire) pour savoir qui est prioritaire, puis on ralentit, on choisit sa voie, on contrôle les rétroviseurs et on s'insère.",
+    "r": "Type → ralentir → voie → rétros → insertion.",
+    "s": "giratoire"
+  },
+  {
+    "id": "09_parties_speciales-13",
+    "t": "09_parties_speciales",
+    "q": "Ce panneau signifie :",
+    "qa": "هذه العلامة تعني :",
+    "o": [
+      "Fin de piste cyclable",
+      "Accès interdit aux cycles",
+      "Piste obligatoire pour les cycles",
+      "Danger : débouché de cyclistes"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Panneau rond bleu = obligation : les cyclistes doivent emprunter cette piste (ممر إلزامي على الدراجات). Une interdiction serait un rond à bord rouge.",
+    "r": "Rond bleu avec vélo = piste cyclable obligatoire.",
+    "img": "1686827813421.png"
+  },
+  {
+    "id": "09_parties_speciales-14",
+    "t": "09_parties_speciales",
+    "q": "Je vais tourner et un cycliste circule sur la piste cyclable qui longe ma voie. Je dois :",
+    "qa": "سأنعطف ودراجة تسير في الممر الخاص بها بجانب مسلكي. يجب :",
+    "o": [
+      "Klaxonner pour qu'il s'arrête",
+      "Lui céder le passage",
+      "Passer avant lui, je suis sur la chaussée principale"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Avant de tourner, on cède le passage aux cyclistes qui circulent sur la piste qui leur est réservée.",
+    "r": "Je tourne : je cède aux cyclistes sur leur piste."
+  },
+  {
+    "id": "09_parties_speciales-15",
+    "t": "09_parties_speciales",
+    "q": "À l'approche d'un passage pour piétons, un piéton attend au bord du trottoir. Je dois :",
+    "qa": "عند الاقتراب من ممر الراجلين، راجل ينتظر عند حافة الرصيف. يجب :",
+    "o": [
+      "Klaxonner pour le prévenir",
+      "Accélérer pour passer avant lui",
+      "Garder ma vitesse, il n'est pas encore engagé",
+      "Ralentir et me préparer à m'arrêter"
+    ],
+    "a": [
+      3
+    ],
+    "e": "À l'approche d'un ممر الراجلين, on ralentit et on s'arrête si nécessaire. Un piéton qui attend peut s'engager à tout moment.",
+    "r": "Passage piéton : ralentir, s'arrêter si nécessaire."
+  },
+  {
+    "id": "09_parties_speciales-16",
+    "t": "09_parties_speciales",
+    "q": "Que signale ce panonceau et que dois-je faire ?",
+    "qa": "ماذا تعني هذه اللويحة وماذا يجب أن أفعل ؟",
+    "o": [
+      "Risque de collision avec des véhicules lents : augmenter la distance de sécurité",
+      "Dépassement des camions interdit",
+      "Les camions sont prioritaires dans la montée",
+      "Voie réservée aux poids lourds"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Ce panonceau (لويحة) annonce un risque de collision avec des véhicules lents, par exemple dans une montée : on augmente la distance de sécurité.",
+    "r": "Véhicules lents signalés : j'augmente ma distance de sécurité.",
+    "img": "1686828716555.png"
+  },
+  {
+    "id": "09_parties_speciales-17",
+    "t": "09_parties_speciales",
+    "q": "Descendre une longue pente au point mort (roue libre) est :",
+    "qa": "النزول في المنحدر بنقطة الحياد :",
+    "o": [
+      "Conseillé si la route est dégagée",
+      "Autorisé pour économiser du carburant",
+      "Interdit"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La descente au point mort (بنقطة الحياد) est interdite : on se prive du frein moteur et on sollicite trop les freins.",
+    "r": "Descente au point mort : interdit."
+  },
+  {
+    "id": "09_parties_speciales-18",
+    "t": "09_parties_speciales",
+    "q": "À l'approche d'un passage à niveau sans barrières, avant de m'engager, je dois :",
+    "qa": "عند الاقتراب من تقاطع مع سكة حديدية بدون حواجز، قبل الدخول يجب :",
+    "o": [
+      "Accélérer pour traverser vite",
+      "Ralentir et m'assurer qu'aucun train n'arrive",
+      "Klaxonner et passer sans ralentir"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On ralentit à l'approche d'une voie ferrée. S'engager sur un passage à niveau sans barrières sans vérifier l'absence de train est sanctionné (1re classe).",
+    "r": "PN sans barrières : ralentir et vérifier l'absence de train."
+  },
+  {
+    "id": "09_parties_speciales-19",
+    "t": "09_parties_speciales",
+    "q": "Mon véhicule se trouve sur la voie ferrée d'un passage à niveau et un train approche. Je dois :",
+    "qa": "مركبتي فوق السكة الحديدية وقطار يقترب. يجب :",
+    "o": [
+      "Dégager immédiatement la voie ferrée",
+      "Appeler le 19 avant de bouger",
+      "Rester immobile avec les feux de détresse"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La priorité absolue est de quitter immédiatement les rails : ne pas le faire à l'approche d'un train est une infraction (1re classe).",
+    "r": "Train qui approche : quitter les rails tout de suite."
+  },
+  {
+    "id": "09_parties_speciales-20",
+    "t": "09_parties_speciales",
+    "q": "Un feu rouge clignotant à un passage à niveau ou à un pont mobile signifie :",
+    "qa": "الضوء الأحمر الوامض عند تقاطع مع سكة حديدية أو جسر متحرك يعني :",
+    "o": [
+      "Arrêt obligatoire",
+      "Prudence, ralentir seulement",
+      "Passage libre si aucun train n'est visible"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le feu rouge clignotant veut dire « قف » : on s'arrête. C'est le feu jaune clignotant qui demande seulement de ralentir avec prudence.",
+    "r": "Rouge clignotant (PN, pont mobile) = arrêt obligatoire.",
+    "s": "feux"
+  },
+  {
+    "id": "09_parties_speciales-21",
+    "t": "09_parties_speciales",
+    "q": "Dans un tunnel, quelles règles s'appliquent ?",
+    "qa": "داخل النفق، ما هي القواعد المطبقة ؟",
+    "o": [
+      "Demi-tour interdit",
+      "Arrêt et stationnement interdits",
+      "Feux de croisement obligatoires",
+      "Feux de route obligatoires"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Dès l'entrée du tunnel : feux de croisement (أضواء التقابل) obligatoires, demi-tour, arrêt et stationnement interdits. Les feux de route éblouiraient les autres.",
+    "r": "Tunnel : feux de croisement, ni demi-tour, ni arrêt."
+  },
+  {
+    "id": "09_parties_speciales-22",
+    "t": "09_parties_speciales",
+    "q": "Où l'arrêt et le stationnement sont-ils dangereux quand la visibilité est insuffisante ?",
+    "qa": "أين يكون الوقوف والتوقف خطيرين عندما تكون الرؤية غير كافية ؟",
+    "o": [
+      "Sur une aire de repos aménagée",
+      "Près d'un passage à niveau",
+      "Au sommet d'une côte",
+      "Sur ou près d'un pont (قنطرة), dans un tunnel"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Ouvrages d'art (ponts), tunnels, passages à niveau, sommets de côte, virages et carrefours sont des endroits d'arrêt dangereux. Une aire aménagée est faite pour s'arrêter.",
+    "r": "Pont, tunnel, PN, sommet de côte = arrêt dangereux.",
+    "s": "stationnement"
+  },
+  {
+    "id": "10_virages-01",
+    "t": "10_virages",
+    "q": "Quelles sont, dans l'ordre, les 3 étapes pour aborder un virage ?",
+    "qa": "ما هي المراحل الثلاث لأخذ المنعرج بالترتيب ؟",
+    "o": [
+      "Maîtriser la trajectoire → analyser → adapter l'allure",
+      "Analyser → adapter l'allure → maîtriser la trajectoire",
+      "Freiner → tourner → accélérer fort",
+      "Adapter l'allure → analyser → klaxonner"
+    ],
+    "a": [
+      1
+    ],
+    "e": "1) Analyser le rayon et la dangerosité du virage, 2) adapter l'allure (ملاءمة وتيرة السير), 3) maîtriser la trajectoire et l'accélération.",
+    "r": "Virage : analyser → adapter → maîtriser."
+  },
+  {
+    "id": "10_virages-02",
+    "t": "10_virages",
+    "q": "À quel moment dois-je ralentir pour un virage ?",
+    "qa": "متى يجب أن أخفض السرعة من أجل المنعرج ؟",
+    "o": [
+      "Avant le virage, en ligne droite",
+      "Au milieu du virage",
+      "À la sortie du virage"
+    ],
+    "a": [
+      0
+    ],
+    "e": "« On freine en ligne droite » : la vitesse se réduit avant d'entrer dans la courbe.",
+    "r": "Freiner en ligne droite, avant le virage."
+  },
+  {
+    "id": "10_virages-03",
+    "t": "10_virages",
+    "q": "Freiner fort au milieu d'un virage entraîne surtout :",
+    "qa": "الفرملة القوية وسط المنعرج تؤدي خاصة إلى :",
+    "o": [
+      "Une meilleure tenue de route",
+      "Un risque de dérapage",
+      "Une économie de carburant",
+      "Aucun effet particulier"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Un freinage brusque en courbe fait perdre l'adhérence : c'est le dérapage (الانزلاق). On freine avant le virage.",
+    "r": "Pas de freinage fort dans le virage : risque de dérapage."
+  },
+  {
+    "id": "10_virages-04",
+    "t": "10_virages",
+    "q": "La force centrifuge (القوة النابذة) augmente avec :",
+    "qa": "القوة النابذة تزداد مع :",
+    "o": [
+      "Le poids du véhicule",
+      "La vitesse",
+      "Un virage plus serré (petit rayon)",
+      "Un virage plus large (grand rayon)"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "La force qui pousse vers l'extérieur du virage grandit avec la vitesse, le poids et la petitesse du rayon. Un grand rayon la diminue.",
+    "r": "Force centrifuge : + vitesse, + poids, + virage serré."
+  },
+  {
+    "id": "10_virages-05",
+    "t": "10_virages",
+    "q": "Pour sortir du virage, à partir du milieu de la courbe, je :",
+    "qa": "للخروج من المنعرج، ابتداء من وسطه :",
+    "o": [
+      "Débraye",
+      "Accélère fort",
+      "Freine énergiquement",
+      "Accélère légèrement"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Une légère augmentation de la vitesse au milieu du virage permet d'en sortir en gardant le contrôle. Accélérer fort ou freiner fort déséquilibre le véhicule.",
+    "r": "Milieu du virage : légère accélération pour sortir."
+  },
+  {
+    "id": "10_virages-06",
+    "t": "10_virages",
+    "q": "Dans un virage à droite, je me place :",
+    "qa": "في منعرج نحو اليمين، أتموضع :",
+    "o": [
+      "Au milieu de la chaussée",
+      "À gauche pour avoir plus de visibilité",
+      "Près du bord droit, sans couper le virage"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On reste près du bord droit. Se décaler à gauche ou couper le virage, c'est empiéter sur la voie d'en face.",
+    "r": "Virage à droite : je reste près du bord droit."
+  },
+  {
+    "id": "10_virages-07",
+    "t": "10_virages",
+    "q": "Couper un virage par la gauche expose surtout à :",
+    "qa": "قطع المنعرج على اليسار يعرض خاصة إلى :",
+    "o": [
+      "Un calage du moteur",
+      "Une crevaison",
+      "Une collision frontale"
+    ],
+    "a": [
+      2
+    ],
+    "e": "En coupant le virage, on roule sur la voie inverse sans voir ce qui arrive : risque de choc frontal (التصادم الأمامي).",
+    "r": "Couper un virage = risque de choc frontal."
+  },
+  {
+    "id": "10_virages-08",
+    "t": "10_virages",
+    "q": "Dépasser dans un virage sans visibilité est :",
+    "qa": "التجاوز في منعرج بدون رؤية :",
+    "o": [
+      "Autorisé si la route est large",
+      "Autorisé de jour seulement",
+      "Interdit",
+      "Autorisé si je klaxonne"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le dépassement exige une visibilité suffisante : dans un virage sans visibilité, il est interdit, même en klaxonnant.",
+    "r": "Virage sans visibilité : dépassement interdit.",
+    "s": "depassement"
+  },
+  {
+    "id": "10_virages-09",
+    "t": "10_virages",
+    "q": "Dans un virage, où dois-je regarder ?",
+    "qa": "في المنعرج، إلى أين يجب أن أنظر ؟",
+    "o": [
+      "Vers la sortie du virage, là où je veux aller",
+      "Juste devant le capot",
+      "Le compteur de vitesse"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le regard guide la trajectoire : on regarde vers la sortie du virage (انظر إلى حيث تريد الذهاب).",
+    "r": "Regarder la sortie du virage."
+  },
+  {
+    "id": "10_virages-10",
+    "t": "10_virages",
+    "q": "Virage serré en montagne : comment signaler ma présence ?",
+    "qa": "منعرج حاد في الجبل : كيف أنبه إلى وجودي ؟",
+    "o": [
+      "Feux de détresse en permanence",
+      "Appel lumineux la nuit",
+      "Feux de route continus le jour",
+      "Avertisseur sonore le jour"
+    ],
+    "a": [
+      1,
+      3
+    ],
+    "e": "En montagne, dans un virage serré : klaxon (منبه صوتي) le jour, appel lumineux (إشارة ضوئية) la nuit.",
+    "r": "Virage de montagne : klaxon le jour, appel lumineux la nuit."
+  },
+  {
+    "id": "10_virages-11",
+    "t": "10_virages",
+    "q": "Un panneau annonce un virage. Cela signifie que :",
+    "qa": "علامة تعلن عن منعرج. هذا يعني أن :",
+    "o": [
+      "Le virage n'est dangereux que la nuit",
+      "Le virage est dangereux : je ralentis avant pour éviter le dérapage ou la sortie de route",
+      "Le panneau est purement informatif"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Un virage signalé (منعرج مشور) est dangereux : il faut ralentir avant d'y arriver, sinon risque de dérapage ou de sortie de route.",
+    "r": "Virage signalé = dangereux : ralentir avant."
+  },
+  {
+    "id": "10_virages-12",
+    "t": "10_virages",
+    "q": "Avant de freiner à l'approche d'un virage, je dois d'abord :",
+    "qa": "قبل الفرملة عند الاقتراب من منعرج، يجب أولا :",
+    "o": [
+      "Passer au point mort",
+      "Mettre le clignotant",
+      "Contrôler derrière moi dans le rétroviseur"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Avant de freiner, on vérifie ce qui se passe derrière (راقب من خلفك) pour ne pas surprendre le véhicule qui suit.",
+    "r": "Avant de freiner : coup d'œil au rétroviseur."
+  },
+  {
+    "id": "10_virages-13",
+    "t": "10_virages",
+    "q": "Lors de l'étape « analyser », qu'est-ce que j'évalue ?",
+    "qa": "في مرحلة «التحليل»، ماذا أقدر ؟",
+    "o": [
+      "La pression des pneus",
+      "Le rayon du virage et sa dangerosité",
+      "La consommation de carburant"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Analyser, c'est voir le virage de loin et estimer son rayon (شعاع المنعرج) et sa dangerosité pour adapter sa vitesse.",
+    "r": "Analyser = estimer le rayon et le danger du virage."
+  },
+  {
+    "id": "10_virages-14",
+    "t": "10_virages",
+    "q": "Vrai ou faux : plus un virage est serré (petit rayon), plus la force centrifuge est faible.",
+    "qa": "صحيح أم خطأ : كلما كان المنعرج حادا (شعاع صغير) كانت القوة النابذة أضعف.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : la force centrifuge augmente quand le rayon diminue. Un virage serré exige donc une vitesse plus faible.",
+    "r": "Virage serré = force centrifuge plus forte."
+  },
+  {
+    "id": "10_virages-15",
+    "t": "10_virages",
+    "q": "Quelles erreurs sont des pièges classiques en virage ?",
+    "qa": "ما هي الأخطاء التي تعتبر من فخاخ المنعرج ؟",
+    "o": [
+      "Freiner fort au milieu du virage",
+      "Couper le virage à gauche",
+      "Ralentir avant d'entrer dans le virage",
+      "Dépasser sans visibilité"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Freiner fort en courbe (dérapage), couper le virage (choc frontal) et dépasser sans visibilité sont des fautes. Ralentir avant le virage est le bon réflexe.",
+    "r": "En virage : ni freinage fort, ni virage coupé, ni dépassement."
+  },
+  {
+    "id": "10_virages-16",
+    "t": "10_virages",
+    "q": "Un camion lourd et une voiture légère prennent le même virage à la même vitesse. La force centrifuge est :",
+    "qa": "شاحنة ثقيلة وسيارة خفيفة تأخذان نفس المنعرج بنفس السرعة. القوة النابذة :",
+    "o": [
+      "Plus forte pour la voiture",
+      "Identique pour les deux",
+      "Plus forte pour le camion"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La force centrifuge augmente avec le poids : le véhicule lourd est davantage poussé vers l'extérieur et doit aborder le virage plus lentement.",
+    "r": "Plus lourd = plus de force centrifuge en virage."
+  },
+  {
+    "id": "11_autoroute-01",
+    "t": "11_autoroute",
+    "q": "Sur autoroute, en circulation normale, la vitesse minimale est de :",
+    "qa": "في الطريق السيار، في السير العادي، السرعة الدنيا هي :",
+    "o": [
+      "40 km/h",
+      "60 km/h",
+      "80 km/h",
+      "Il n'y a pas de vitesse minimale"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On ne doit pas rouler en dessous de 60 km/h sur autoroute en circulation normale.",
+    "r": "Autoroute : vitesse minimale 60 km/h.",
+    "s": "vitesses"
+  },
+  {
+    "id": "11_autoroute-02",
+    "t": "11_autoroute",
+    "q": "Quels usagers sont interdits sur autoroute ?",
+    "qa": "من هم الممنوعون من الطريق السيار ؟",
+    "o": [
+      "Les motocyclettes (الدراجات النارية)",
+      "Les tracteurs et engins agricoles",
+      "Les piétons",
+      "Les cyclomoteurs (الدراجات بمحرك)"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Piétons, animaux, cycles et cyclomoteurs, tracteurs, engins agricoles et de travaux sont interdits. Les motocyclettes sont autorisées (120 km/h).",
+    "r": "Autoroute interdite : piétons, cyclos, tracteurs, animaux."
+  },
+  {
+    "id": "11_autoroute-03",
+    "t": "11_autoroute",
+    "q": "Qu'est-ce qui caractérise une autoroute ?",
+    "qa": "ما الذي يميز الطريق السيار ؟",
+    "o": [
+      "On y entre et on en sort uniquement par des accès aménagés",
+      "Elle ne croise aucune autre route",
+      "Elle comporte des carrefours à feux",
+      "Elle est réservée aux véhicules à moteur soumis à immatriculation"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "L'autoroute est une route à usage spécial : aucun croisement, entrées et sorties par des accès aménagés, réservée aux véhicules à moteur soumis à immatriculation.",
+    "r": "Autoroute : sans croisement, accès aménagés, véhicules immatriculés."
+  },
+  {
+    "id": "11_autoroute-04",
+    "t": "11_autoroute",
+    "q": "Hors période probatoire, la vitesse maximale d'une voiture (≤ 3,5 t) sur autoroute est :",
+    "qa": "خارج الفترة الاختبارية، السرعة القصوى لسيارة (≤ 3.5 طن) في الطريق السيار هي :",
+    "o": [
+      "100 km/h",
+      "110 km/h",
+      "120 km/h",
+      "130 km/h"
+    ],
+    "a": [
+      2
+    ],
+    "e": "120 km/h pour les voitures ≤ 3,5 t, les motocyclettes et les taxis. Rouler à 130 km/h est un excès de vitesse.",
+    "r": "Voiture sur autoroute : 120 km/h.",
+    "s": "vitesses"
+  },
+  {
+    "id": "11_autoroute-05",
+    "t": "11_autoroute",
+    "q": "Un conducteur en période probatoire circule sur autoroute. Sa vitesse maximale est :",
+    "qa": "سائق في الفترة الاختبارية يسير في الطريق السيار. سرعته القصوى هي :",
+    "o": [
+      "80 km/h",
+      "90 km/h",
+      "100 km/h",
+      "120 km/h"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Pendant la période probatoire, la vitesse est limitée à 90 km/h dans tous les cas, même sur autoroute. Le 120 concerne les conducteurs hors période probatoire.",
+    "r": "Permis probatoire : 90 km/h maximum, même sur autoroute.",
+    "s": "vitesses"
+  },
+  {
+    "id": "11_autoroute-06",
+    "t": "11_autoroute",
+    "q": "Sur autoroute, un camion de marchandises de 10 tonnes est limité à :",
+    "qa": "في الطريق السيار، شاحنة لنقل البضائع وزنها 10 أطنان سرعتها القصوى :",
+    "o": [
+      "80 km/h",
+      "90 km/h",
+      "100 km/h",
+      "120 km/h"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Marchandises de 3,5 à 12 t : 100 km/h sur autoroute. 90 concerne 12 à 19 t et 80 plus de 19 t.",
+    "r": "Marchandises 3,5–12 t : 100 km/h sur autoroute.",
+    "s": "vitesses"
+  },
+  {
+    "id": "11_autoroute-07",
+    "t": "11_autoroute",
+    "q": "Sur autoroute, cette limite de vitesse s'applique aux véhicules de marchandises de :",
+    "qa": "في الطريق السيار، هذا التحديد للسرعة يخص مركبات البضائع التي وزنها :",
+    "o": [
+      "3,5 à 12 t",
+      "12 à 19 t",
+      "Plus de 19 t"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sur autoroute : 100 km/h pour 3,5–12 t, 90 km/h pour 12–19 t, 80 km/h au-delà de 19 t. Plus le véhicule est lourd, plus la limite baisse.",
+    "r": "Autoroute : 120 / 100 / 90 / 80 selon le poids.",
+    "s": "vitesses",
+    "img": "1681998093544.png"
+  },
+  {
+    "id": "11_autoroute-08",
+    "t": "11_autoroute",
+    "q": "Un camion de marchandises de plus de 19 tonnes roule sur autoroute. Sa vitesse maximale est :",
+    "qa": "شاحنة لنقل البضائع يفوق وزنها 19 طنا تسير في الطريق السيار. سرعتها القصوى هي :",
+    "o": [
+      "70 km/h",
+      "80 km/h",
+      "90 km/h",
+      "100 km/h"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Au-delà de 19 t, les véhicules de marchandises sont limités à 80 km/h sur autoroute.",
+    "r": "Marchandises > 19 t : 80 km/h sur autoroute.",
+    "s": "vitesses"
+  },
+  {
+    "id": "11_autoroute-09",
+    "t": "11_autoroute",
+    "q": "Un autocar de transport en commun de plus de 3,5 t est limité sur autoroute à :",
+    "qa": "حافلة للنقل الجماعي يفوق وزنها 3.5 طن، سرعتها القصوى في الطريق السيار :",
+    "o": [
+      "80 km/h",
+      "90 km/h",
+      "100 km/h",
+      "120 km/h"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le transport en commun de plus de 3,5 t est limité à 100 km/h sur autoroute, comme les marchandises de 3,5 à 12 t.",
+    "r": "Transport en commun > 3,5 t : 100 km/h sur autoroute.",
+    "s": "vitesses"
+  },
+  {
+    "id": "11_autoroute-10",
+    "t": "11_autoroute",
+    "q": "En circulation normale sur autoroute, quelle voie dois-je utiliser ?",
+    "qa": "في السير العادي على الطريق السيار، أي مسلك يجب أن أستعمل ؟",
+    "o": [
+      "N'importe laquelle si je respecte la vitesse",
+      "La voie de gauche",
+      "La voie de droite",
+      "La voie du milieu"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On roule toujours sur la voie de droite ; les autres voies servent uniquement au dépassement.",
+    "r": "Autoroute : voie de droite, les autres pour dépasser."
+  },
+  {
+    "id": "11_autoroute-11",
+    "t": "11_autoroute",
+    "q": "Sur la voie d'accélération (مسلك التسريع), je dois :",
+    "qa": "في مسلك التسريع، يجب :",
+    "o": [
+      "Rouler lentement pour bien observer",
+      "Atteindre la vitesse des véhicules qui circulent sur l'autoroute",
+      "Obliger les autres à freiner pour m'insérer",
+      "Mettre mon clignotant"
+    ],
+    "a": [
+      1,
+      3
+    ],
+    "e": "La voie d'accélération sert à prendre la vitesse du trafic. On met le clignotant et on s'insère sans obliger les autres à freiner ou à changer de voie.",
+    "r": "Voie d'accélération : prendre la vitesse du trafic + clignotant."
+  },
+  {
+    "id": "11_autoroute-12",
+    "t": "11_autoroute",
+    "q": "Lors de l'insertion sur l'autoroute, qui est prioritaire ?",
+    "qa": "عند الاندماج في الطريق السيار، من له الأسبقية ؟",
+    "o": [
+      "Les véhicules déjà sur l'autoroute",
+      "Le véhicule qui s'insère",
+      "Le véhicule venant de droite"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La priorité appartient toujours à ceux qui sont sur l'autoroute, pas à celui qui s'insère.",
+    "r": "Insertion : priorité à ceux déjà sur l'autoroute.",
+    "s": "priorite"
+  },
+  {
+    "id": "11_autoroute-13",
+    "t": "11_autoroute",
+    "q": "La bande d'arrêt d'urgence (شريط التوقف العاجل) sert à :",
+    "qa": "شريط التوقف العاجل يستعمل من أجل :",
+    "o": [
+      "Déposer ou prendre un passager",
+      "Faire une pause en cas de fatigue",
+      "S'arrêter uniquement en cas de nécessité absolue",
+      "Dépasser les véhicules lents"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Elle est réservée à l'arrêt en cas de nécessité absolue. Y circuler est interdit, et on ne s'y arrête ni pour se reposer ni pour un passager.",
+    "r": "Bande d'arrêt d'urgence : nécessité absolue seulement."
+  },
+  {
+    "id": "11_autoroute-14",
+    "t": "11_autoroute",
+    "q": "Quelles manœuvres ou activités sont interdites sur autoroute ?",
+    "qa": "ما هي المناورات أو الأنشطة الممنوعة في الطريق السيار ؟",
+    "o": [
+      "Le demi-tour et la traversée du terre-plein central",
+      "Le dépassement par la voie de gauche",
+      "Les leçons de conduite",
+      "La marche arrière"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Demi-tour, traversée du terre-plein central, marche arrière, essais de véhicules et leçons de conduite sont interdits. Dépasser par la gauche est la règle normale.",
+    "r": "Autoroute : ni demi-tour, ni marche arrière, ni leçon."
+  },
+  {
+    "id": "11_autoroute-15",
+    "t": "11_autoroute",
+    "q": "Dans quels cas peut-on s'arrêter sur la bande d'arrêt d'urgence ?",
+    "qa": "في أي حالات يسمح بالوقوف على شريط التوقف العاجل ؟",
+    "o": [
+      "Pour répondre au téléphone",
+      "Incapacité de continuer à conduire",
+      "Panne imposant un arrêt immédiat",
+      "Après un accident"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "L'arrêt d'urgence est permis seulement pour un accident, une panne qui oblige à s'arrêter tout de suite ou l'incapacité de conduire.",
+    "r": "Arrêt d'urgence : accident, panne, incapacité de conduire."
+  },
+  {
+    "id": "11_autoroute-16",
+    "t": "11_autoroute",
+    "q": "Arrêt d'urgence sur autoroute : quelles actions sont correctes ?",
+    "qa": "وقوف استعجالي في الطريق السيار : ما هي الأعمال الصحيحة ؟",
+    "o": [
+      "Attendre les secours derrière la glissière de sécurité",
+      "Allumer les feux de détresse et placer le triangle",
+      "Effectuer une réparation importante sur la bande d'arrêt d'urgence",
+      "Faire descendre les passagers par le côté droit"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "On signale l'arrêt (warning + triangle), on fait sortir tout le monde par la droite et on attend derrière la glissière (حاجز الحماية). Les réparations importantes y sont interdites.",
+    "r": "Panne sur autoroute : warning, triangle, sortie à droite, glissière."
+  },
+  {
+    "id": "11_autoroute-17",
+    "t": "11_autoroute",
+    "q": "J'ai manqué ma sortie sur l'autoroute. Je dois :",
+    "qa": "فاتني المخرج في الطريق السيار. يجب :",
+    "o": [
+      "Faire demi-tour par le terre-plein central",
+      "Reculer sur la bande d'arrêt d'urgence",
+      "Prendre la sortie suivante"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Sur autoroute, ni marche arrière ni demi-tour : on continue jusqu'à la sortie suivante.",
+    "r": "Sortie manquée : sortie suivante, jamais de marche arrière."
+  },
+  {
+    "id": "11_autoroute-18",
+    "t": "11_autoroute",
+    "q": "Pour quitter l'autoroute, je rejoins la voie de droite :",
+    "qa": "للخروج من الطريق السيار، أنتقل إلى المسلك الأيمن :",
+    "o": [
+      "En passant par la bande d'arrêt d'urgence",
+      "Au dernier moment, au niveau de la sortie",
+      "Tôt, en terminant la manœuvre avant le début de la voie de sortie"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On se place à l'avance sur la voie de droite, dès la présignalisation, pour finir la manœuvre avant le début de la voie de sortie.",
+    "r": "Sortie : voie de droite tôt, manœuvre finie avant la bretelle."
+  },
+  {
+    "id": "11_autoroute-19",
+    "t": "11_autoroute",
+    "q": "Ce panneau annonce :",
+    "qa": "هذه العلامة تعلن عن :",
+    "o": [
+      "Une bifurcation",
+      "Une voie de détresse à droite",
+      "Une aire de repos",
+      "Une sortie d'autoroute"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le damier rouge et blanc identifie une voie de détresse (مسلك الإغاثة), ici à droite.",
+    "r": "Damier rouge et blanc = voie de détresse.",
+    "img": "1686914556569.png"
+  },
+  {
+    "id": "11_autoroute-20",
+    "t": "11_autoroute",
+    "q": "Une voie de détresse (مسلك الإغاثة) sert à :",
+    "qa": "مسلك الإغاثة يستعمل من أجل :",
+    "o": [
+      "Changer une roue en sécurité",
+      "Se reposer en cas de fatigue",
+      "Arrêter un véhicule dont les freins ont lâché dans une descente",
+      "Laisser passer les véhicules prioritaires"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Placée dans les descentes, elle stoppe les véhicules en panne de freins grâce à un bac rempli de sable. S'y arrêter est interdit sauf en cas de défaillance des freins.",
+    "r": "Voie de détresse : uniquement pour une panne de freins."
+  },
+  {
+    "id": "11_autoroute-21",
+    "t": "11_autoroute",
+    "q": "Sur autoroute, peut-on s'arrêter ou stationner sur le terre-plein central ?",
+    "qa": "في الطريق السيار، هل يمكن الوقوف أو التوقف في الشريط المركزي ؟",
+    "o": [
+      "Oui, pour un arrêt bref",
+      "Oui, en cas de fatigue",
+      "Non, c'est interdit"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'usage du terre-plein central (الشريط المركزي) est interdit, qu'il s'agisse d'arrêt ou de stationnement.",
+    "r": "Terre-plein central : ni arrêt ni stationnement."
+  },
+  {
+    "id": "11_autoroute-22",
+    "t": "11_autoroute",
+    "q": "Sur un long trajet d'autoroute, quand et où faire une pause ?",
+    "qa": "في رحلة طويلة على الطريق السيار، متى وأين آخذ استراحة ؟",
+    "o": [
+      "Toutes les 2 heures, sur la bande d'arrêt d'urgence",
+      "Toutes les 2 heures, sur une aire de repos",
+      "Toutes les 4 heures, sur une aire de repos",
+      "Seulement en cas de sommeil, n'importe où"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On s'arrête environ toutes les 2 heures sur une aire (محطة الاستراحة), jamais sur la bande d'arrêt d'urgence, réservée à la nécessité absolue.",
+    "r": "Pause toutes les 2 h, sur une aire, pas sur la bande d'urgence."
+  },
+  {
+    "id": "11_autoroute-23",
+    "t": "11_autoroute",
+    "q": "Ce panneau signifie :",
+    "qa": "هذه العلامة تعني :",
+    "o": [
+      "Aire de repos",
+      "Fin d'autoroute",
+      "Passage supérieur (pont)",
+      "Entrée d'autoroute : ses règles commencent"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Ce panneau bleu indique l'entrée de l'autoroute : à partir de là s'appliquent ses règles (vitesse minimale, piétons interdits…). La fin d'autoroute est le même panneau barré de rouge.",
+    "r": "Panneau autoroute = début des règles de l'autoroute.",
+    "img": "1689149290380.png"
+  },
+  {
+    "id": "11_autoroute-24",
+    "t": "11_autoroute",
+    "q": "À l'approche d'une gare de péage, je dois :",
+    "qa": "عند الاقتراب من محطة الأداء، يجب :",
+    "o": [
+      "Choisir n'importe quelle voie, même fermée",
+      "Ralentir selon la signalisation et choisir une voie ouverte adaptée à mon mode de paiement",
+      "Garder ma vitesse jusqu'à la barrière"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On ralentit selon les panneaux puis on choisit une voie ouverte qui correspond à son mode de paiement (espèces, abonnement, prépaiement).",
+    "r": "Péage : ralentir, voie ouverte, bon mode de paiement."
+  },
+  {
+    "id": "11_autoroute-25",
+    "t": "11_autoroute",
+    "q": "Un véhicule incapable de dépasser 60 km/h peut-il emprunter l'autoroute ?",
+    "qa": "هل يمكن لمركبة لا تستطيع تجاوز 60 كلم/س أن تسير في الطريق السيار ؟",
+    "o": [
+      "Oui, avec les feux de détresse allumés",
+      "Oui, en restant sur la voie de droite",
+      "Non, il y est interdit"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les véhicules qui ne peuvent pas dépasser 60 km/h sont interdits sur autoroute, où 60 km/h est la vitesse minimale.",
+    "r": "Incapable de dépasser 60 km/h = interdit sur autoroute."
+  },
+  {
+    "id": "12_distances-02",
+    "t": "12_distances",
+    "q": "Quelle formule donne la distance de réaction (مسافة رد الفعل) ?",
+    "qa": "ما هي الصيغة التي تعطي مسافة رد الفعل ؟",
+    "o": [
+      "(Vitesse ÷ 10) × 6",
+      "(Vitesse ÷ 10) × 3",
+      "Vitesse ÷ 2",
+      "(Vitesse ÷ 10)²"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Réaction = chiffre des dizaines × 3. Le × 6 donne la distance de sécurité et le carré la distance d'arrêt.",
+    "r": "Réaction = (V ÷ 10) × 3.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-03",
+    "t": "12_distances",
+    "q": "À 60 km/h, la distance de réaction est de :",
+    "qa": "عند 60 كلم/س، مسافة رد الفعل هي :",
+    "o": [
+      "12 m",
+      "18 m",
+      "24 m",
+      "36 m"
+    ],
+    "a": [
+      1
+    ],
+    "e": "(60 ÷ 10) × 3 = 6 × 3 = 18 m. 36 m serait la distance de sécurité (× 6) ou la distance d'arrêt (6²).",
+    "r": "60 km/h : réaction 18 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-04",
+    "t": "12_distances",
+    "q": "À 120 km/h, quelle distance parcourt-on pendant le temps de réaction ?",
+    "qa": "عند 120 كلم/س، ما هي المسافة المقطوعة خلال زمن رد الفعل ؟",
+    "o": [
+      "24 m",
+      "30 m",
+      "36 m",
+      "72 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "(120 ÷ 10) × 3 = 12 × 3 = 36 m, parcourus avant même de commencer à freiner.",
+    "r": "120 km/h : réaction 36 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-05",
+    "t": "12_distances",
+    "q": "À 100 km/h, la distance de sécurité minimale avec le véhicule de devant est de :",
+    "qa": "عند 100 كلم/س، مسافة الأمان الدنيا مع المركبة التي أمامي هي :",
+    "o": [
+      "30 m",
+      "50 m",
+      "60 m",
+      "100 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Sécurité = (V ÷ 10) × 6 = 10 × 6 = 60 m. 30 m est la distance de réaction et 100 m la distance d'arrêt.",
+    "r": "100 km/h : sécurité 60 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-06",
+    "t": "12_distances",
+    "q": "À 80 km/h, la distance de sécurité est de :",
+    "qa": "عند 80 كلم/س، مسافة الأمان هي :",
+    "o": [
+      "24 m",
+      "40 m",
+      "48 m",
+      "64 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "(80 ÷ 10) × 6 = 8 × 6 = 48 m. 24 m = réaction, 40 m = freinage, 64 m = arrêt.",
+    "r": "80 km/h : sécurité 48 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-07",
+    "t": "12_distances",
+    "q": "La distance de sécurité minimale avec le véhicule qui me précède correspond à :",
+    "qa": "مسافة الأمان الدنيا بيني وبين المركبة التي أمامي تعادل :",
+    "o": [
+      "1 seconde",
+      "2 secondes",
+      "3 secondes",
+      "5 secondes"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le minimum est de 2 secondes : on compte « un, deux » après le passage du véhicule de devant devant un repère.",
+    "r": "Distance de sécurité = 2 secondes minimum.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-08",
+    "t": "12_distances",
+    "q": "À 120 km/h, la distance d'arrêt est d'environ :",
+    "qa": "عند 120 كلم/س، مسافة الوقوف هي حوالي :",
+    "o": [
+      "72 m",
+      "108 m",
+      "120 m",
+      "144 m"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Arrêt = (V ÷ 10)² = 12 × 12 = 144 m. 108 m n'est que la distance de freinage et 72 m la distance de sécurité.",
+    "r": "120 km/h : arrêt 144 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-09",
+    "t": "12_distances",
+    "q": "À 100 km/h, la distance de freinage est d'environ :",
+    "qa": "عند 100 كلم/س، مسافة الحصر هي حوالي :",
+    "o": [
+      "30 m",
+      "60 m",
+      "70 m",
+      "100 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Freinage = arrêt − réaction = 100 − 30 = 70 m.",
+    "r": "100 km/h : freinage 70 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-10",
+    "t": "12_distances",
+    "q": "À 80 km/h, la distance de freinage est d'environ :",
+    "qa": "عند 80 كلم/س، مسافة الحصر هي حوالي :",
+    "o": [
+      "24 m",
+      "40 m",
+      "48 m",
+      "64 m"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Arrêt 8² = 64 m − réaction 24 m = 40 m de freinage.",
+    "r": "80 km/h : freinage 40 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-11",
+    "t": "12_distances",
+    "q": "À 120 km/h, la distance de freinage est d'environ :",
+    "qa": "عند 120 كلم/س، مسافة الحصر هي حوالي :",
+    "o": [
+      "36 m",
+      "72 m",
+      "108 m",
+      "144 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "144 m (arrêt) − 36 m (réaction) = 108 m de freinage.",
+    "r": "120 km/h : freinage 108 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-12",
+    "t": "12_distances",
+    "q": "À 90 km/h, quelles valeurs sont justes ?",
+    "qa": "عند 90 كلم/س، ما هي القيم الصحيحة ؟",
+    "o": [
+      "Distance de réaction : 27 m",
+      "Distance de freinage : 64 m",
+      "Distance de sécurité : 54 m",
+      "Distance d'arrêt : 81 m"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "9 × 3 = 27 m (réaction), 9 × 6 = 54 m (sécurité), 9 × 9 = 81 m (arrêt). Le freinage vaut 81 − 27 = 54 m, pas 64 m.",
+    "r": "90 km/h : réaction 27, sécurité 54, arrêt 81, freinage 54 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-13",
+    "t": "12_distances",
+    "q": "La distance d'arrêt est égale à :",
+    "qa": "مسافة الوقوف تساوي :",
+    "o": [
+      "Distance de sécurité + distance de réaction",
+      "Distance de réaction + distance de freinage",
+      "Distance de freinage − distance de réaction",
+      "Distance de sécurité × 2"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Arrêt = réaction + freinage : on parcourt d'abord la distance de réaction, puis celle de freinage jusqu'à l'arrêt complet.",
+    "r": "Arrêt = réaction + freinage.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-14",
+    "t": "12_distances",
+    "q": "Si je double ma vitesse (de 60 à 120 km/h), ma distance d'arrêt est multipliée par :",
+    "qa": "إذا ضاعفت سرعتي (من 60 إلى 120 كلم/س)، فإن مسافة الوقوف تضرب في :",
+    "o": [
+      "2",
+      "3",
+      "4",
+      "6"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La distance d'arrêt suit le carré de la vitesse : 36 m à 60 km/h, 144 m à 120 km/h, soit 4 fois plus.",
+    "r": "Vitesse × 2 = distance d'arrêt × 4.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-15",
+    "t": "12_distances",
+    "q": "Le temps de réaction s'allonge avec :",
+    "qa": "زمن رد الفعل يزداد مع :",
+    "o": [
+      "La fatigue",
+      "L'alcool",
+      "Une route mouillée",
+      "Les médicaments"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Le temps de réaction dépend de l'état du conducteur (fatigue, alcool, médicaments, état psychologique), pas de l'état de la route.",
+    "r": "Temps de réaction : dépend du conducteur, pas de la route.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-16",
+    "t": "12_distances",
+    "q": "Sur route mouillée par la pluie, qu'est-ce qui change ?",
+    "qa": "على طريق مبللة بالمطر، ما الذي يتغير ؟",
+    "o": [
+      "Le temps de réaction, qui double",
+      "La distance de freinage, qui peut doubler",
+      "Rien, si les pneus sont bons"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La pluie fait doubler la distance de freinage. Le temps de réaction, lui, dépend uniquement du conducteur.",
+    "r": "Pluie = distance de freinage doublée.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-17",
+    "t": "12_distances",
+    "q": "À 40 km/h (adhérence 0,8), la distance d'arrêt réelle est d'environ :",
+    "qa": "عند 40 كلم/س (معامل الالتحام 0.8)، مسافة الوقوف الحقيقية هي حوالي :",
+    "o": [
+      "12 m",
+      "16 m",
+      "20 m",
+      "24 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Sous 50 km/h, la formule (V ÷ 10)² ne s'applique pas (elle donnerait 16 m) : 12 m de réaction + 8 m de freinage = 20 m.",
+    "r": "40 km/h : arrêt 20 m (12 réaction + 8 freinage).",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-18",
+    "t": "12_distances",
+    "q": "La formule de la distance d'arrêt (V ÷ 10)² n'est pas valable :",
+    "qa": "صيغة مسافة الوقوف (السرعة ÷ 10)² غير صحيحة :",
+    "o": [
+      "Pour les vitesses inférieures à 50 km/h",
+      "Au-dessus de 100 km/h",
+      "Sur autoroute"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La règle du carré ne vaut qu'à partir de 50 km/h ; en dessous, on additionne les valeurs du tableau (ex. 20 km/h : 6 m + 2 m = 8 m).",
+    "r": "(V ÷ 10)² : non valable sous 50 km/h.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-19",
+    "t": "12_distances",
+    "q": "À 30 km/h, la distance d'arrêt est d'environ :",
+    "qa": "عند 30 كلم/س، مسافة الوقوف هي حوالي :",
+    "o": [
+      "4 m",
+      "9 m",
+      "13 m",
+      "20 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "9 m de réaction + 4 m de freinage = 13 m.",
+    "r": "30 km/h : arrêt 13 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-20",
+    "t": "12_distances",
+    "q": "En dépassant un piéton, un cycliste ou un animal, l'écart latéral minimal est de :",
+    "qa": "عند تجاوز راجل أو دراجة أو دابة، مسافة الأمان الجانبية الدنيا هي :",
+    "o": [
+      "50 cm",
+      "1 m",
+      "1,5 m",
+      "2 m"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La distance latérale de sécurité est d'au moins 1 m avec tout usager vulnérable (piéton, cycliste, animal).",
+    "r": "Écart latéral : 1 m minimum.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-21",
+    "t": "12_distances",
+    "q": "En ville, la distance entre deux poteaux électriques représente environ :",
+    "qa": "في المدينة، المسافة بين عمودي كهرباء تعادل حوالي :",
+    "o": [
+      "10 m",
+      "20 m",
+      "30 m",
+      "50 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Repères en ville : environ 10 m entre deux arbres et 30 m entre deux poteaux électriques.",
+    "r": "Ville : 2 arbres ≈ 10 m, 2 poteaux électriques ≈ 30 m.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-22",
+    "t": "12_distances",
+    "q": "Sur autoroute, la ligne discontinue du milieu (entre les voies) est formée de :",
+    "qa": "في الطريق السيار، خط الوسط المتقطع يتكون من :",
+    "o": [
+      "Traits de 20 m séparés de 6 m",
+      "Traits de 10 m séparés de 3 m",
+      "Traits de 3 m séparés de 10 m"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Ligne du milieu : traits de 3 m et intervalles de 10 m. Les traits de 20 m séparés de 6 m forment la ligne de rive (route nationale et rapide).",
+    "r": "Ligne du milieu : 3 m de trait, 10 m de vide.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-23",
+    "t": "12_distances",
+    "q": "La distance de freinage dépend de :",
+    "qa": "مسافة الحصر تتعلق ب :",
+    "o": [
+      "Le temps de réaction du conducteur",
+      "La vitesse",
+      "L'état de la route et la météo",
+      "L'état des freins et des pneus"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Le freinage dépend de la vitesse, des freins, des pneus, de l'adhérence, de la route et du temps. Le temps de réaction agit sur la distance de réaction, pas sur celle de freinage.",
+    "r": "Freinage : vitesse, freins, pneus, route, météo.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-24",
+    "t": "12_distances",
+    "q": "Quand faut-il augmenter la distance de sécurité ?",
+    "qa": "متى يجب الزيادة في مسافة الأمان ؟",
+    "o": [
+      "Jamais : 2 secondes suffisent toujours",
+      "Vitesse élevée",
+      "Fatigue ou long trajet",
+      "Route ou visibilité mauvaise"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Les 2 secondes sont un minimum : on les augmente si la route ou la visibilité sont mauvaises, si la vitesse est élevée, en cas de fatigue ou de long trajet.",
+    "r": "2 s = minimum : plus si mauvaise route, vitesse ou fatigue.",
+    "s": "distance"
+  },
+  {
+    "id": "12_distances-25",
+    "t": "12_distances",
+    "q": "En conduite anticipative, comment réduire son temps de réaction ?",
+    "qa": "في السياقة الاستباقية، كيف يمكن تقليص زمن رد الفعل ؟",
+    "o": [
+      "Accélérer pour s'éloigner du danger",
+      "Placer le pied face à la pédale de frein",
+      "Regarder uniquement le véhicule de devant"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Quand un danger est possible, placer le pied en face de la pédale de frein (sans freiner) ramène le temps de réaction sous une seconde.",
+    "r": "Anticiper : pied face au frein = réaction < 1 s.",
+    "s": "distance"
+  },
+  {
+    "id": "13_autres_usagers-01",
+    "t": "13_autres_usagers",
+    "q": "Un piéton heurté à 50 km/h a environ combien de chances de survie ?",
+    "qa": "راجل صدم بسرعة 50 كلم/س، ما هي تقريبا فرص نجاته ؟",
+    "o": [
+      "90 %",
+      "50 %",
+      "20 %",
+      "10 %"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Série à retenir : 30 km/h → 90 %, 50 km/h → 50 %, 60 km/h → 20 % de survie.",
+    "r": "Piéton : 30 → 90 %, 50 → 50 %, 60 → 20 %."
+  },
+  {
+    "id": "13_autres_usagers-02",
+    "t": "13_autres_usagers",
+    "q": "Quelles affirmations sur la survie d'un piéton heurté sont justes ?",
+    "qa": "ما هي العبارات الصحيحة حول فرص نجاة الراجل المصدوم ؟",
+    "o": [
+      "À 60 km/h : environ 20 % de survie",
+      "À 30 km/h : environ 90 % de survie",
+      "À 30 km/h : environ 50 % de survie",
+      "À 60 km/h : environ 50 % de survie"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "À 30 km/h, 9 piétons sur 10 survivent ; à 60 km/h, seulement 2 sur 10. 50 % correspond à 50 km/h.",
+    "r": "30 km/h : 90 % de survie ; 60 km/h : 20 %."
+  },
+  {
+    "id": "13_autres_usagers-03",
+    "t": "13_autres_usagers",
+    "q": "Pour croiser ou dépasser un groupe de piétons en marche (civils ou militaires), je ne dépasse pas :",
+    "qa": "عند مقابلة أو تجاوز جماعة راجلين في حالة سير (مدنيين أو عسكريين)، لا أتجاوز :",
+    "o": [
+      "20 km/h",
+      "30 km/h",
+      "40 km/h",
+      "50 km/h"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Un groupe de piétons en marche, civil ou militaire, impose 30 km/h maximum.",
+    "r": "Groupe de piétons en marche : 30 km/h.",
+    "s": "vitesses"
+  },
+  {
+    "id": "13_autres_usagers-04",
+    "t": "13_autres_usagers",
+    "q": "Ce panneau signale :",
+    "qa": "هذه العلامة تشير إلى :",
+    "o": [
+      "Un endroit fréquenté par des enfants",
+      "Une rue piétonne fermée aux voitures",
+      "Une zone réservée aux piétons",
+      "Un passage pour piétons"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Triangle de danger avec deux silhouettes qui courent : endroit fréquenté par des enfants (مكان يرتاده الأطفال). On ralentit et on s'attend à une traversée soudaine.",
+    "r": "Triangle aux enfants = lieu fréquenté par des enfants : ralentir.",
+    "img": "1689151577726.png"
+  },
+  {
+    "id": "13_autres_usagers-05",
+    "t": "13_autres_usagers",
+    "q": "Un ballon traverse la chaussée devant moi. Que dois-je faire ?",
+    "qa": "كرة تعبر الطريق أمامي. ماذا يجب أن أفعل ؟",
+    "o": [
+      "Le contourner sans ralentir",
+      "M'arrêter : un enfant risque de le suivre",
+      "Klaxonner et continuer"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Un ballon sur la route annonce un enfant qui va courir derrière : il faut s'arrêter.",
+    "r": "Ballon sur la route = enfant derrière : je m'arrête."
+  },
+  {
+    "id": "13_autres_usagers-06",
+    "t": "13_autres_usagers",
+    "q": "Près d'une école, un enfant est sur le trottoir, loin du passage pour piétons. Je dois :",
+    "qa": "قرب مدرسة، طفل على الرصيف بعيدا عن ممر الراجلين. يجب :",
+    "o": [
+      "Klaxonner pour qu'il recule",
+      "Garder ma vitesse, il n'est pas sur le passage",
+      "Ralentir quand même"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les mouvements des enfants sont imprévisibles : on ralentit même s'ils ne sont pas sur le passage.",
+    "r": "Enfant près d'une école : ralentir, même hors passage."
+  },
+  {
+    "id": "13_autres_usagers-07",
+    "t": "13_autres_usagers",
+    "q": "Pourquoi les cyclistes demandent-ils une attention particulière ?",
+    "qa": "لماذا يتطلب سائقو الدراجات انتباها خاصا ؟",
+    "o": [
+      "Beaucoup ne respectent pas la signalisation",
+      "Ils sont toujours prioritaires",
+      "Ils ne sont pas protégés",
+      "Ils circulent sans bruit"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Le cycliste est un usager non protégé, on ne l'entend pas arriver et beaucoup ne respectent pas la signalisation : il faut redoubler d'attention.",
+    "r": "Cycliste : non protégé, silencieux, imprévisible."
+  },
+  {
+    "id": "13_autres_usagers-08",
+    "t": "13_autres_usagers",
+    "q": "En agglomération, puis-je klaxonner pour prévenir un cycliste que je le dépasse ?",
+    "qa": "داخل المدينة، هل يمكن استعمال المنبه الصوتي لإشعار سائق دراجة بأنني سأتجاوزه ؟",
+    "o": [
+      "Oui, mais seulement la nuit",
+      "Oui, c'est recommandé",
+      "Non, sauf en cas de danger"
+    ],
+    "a": [
+      2
+    ],
+    "e": "En ville, le cycliste est sur sa bande ou à l'extrême droite : le klaxon est interdit, sauf danger. Hors agglomération (surtout en montagne), on peut l'utiliser pour signaler son passage.",
+    "r": "Klaxon pour un cycliste : interdit en ville, sauf danger."
+  },
+  {
+    "id": "13_autres_usagers-09",
+    "t": "13_autres_usagers",
+    "q": "Cette voiture se trouve sur la bande cyclable. Est-ce permis ?",
+    "qa": "هذه السيارة موجودة فوق شريط الدراجات. هل هذا مسموح ؟",
+    "o": [
+      "Oui, pour un arrêt de moins de 2 minutes",
+      "Non : y circuler, s'y arrêter ou y stationner est interdit",
+      "Oui, avec les feux de détresse allumés"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La bande cyclable (شريط الدراجات) est réservée aux cycles : interdiction d'y circuler, de s'y arrêter et d'y stationner.",
+    "r": "Bande cyclable : ni circulation, ni arrêt, ni stationnement.",
+    "s": "stationnement",
+    "img": "1684834013562.png"
+  },
+  {
+    "id": "13_autres_usagers-10",
+    "t": "13_autres_usagers",
+    "q": "Je dépasse un cycliste sur une route hors agglomération. Quelles actions sont correctes ?",
+    "qa": "أتجاوز سائق دراجة على طريق خارج المدينة. ما هي الأعمال الصحيحة ؟",
+    "o": [
+      "Le frôler pour gagner du temps",
+      "Laisser au moins 1 m d'écart latéral",
+      "Utiliser l'avertisseur sonore pour signaler mon passage",
+      "Rester collé derrière lui puis accélérer fort"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Hors agglomération, le klaxon peut prévenir le cycliste de mon passage, et je laisse au moins 1 m d'écart sur le côté.",
+    "r": "Dépasser un vélo : 1 m d'écart ; klaxon permis hors ville.",
+    "s": "depassement"
+  },
+  {
+    "id": "13_autres_usagers-11",
+    "t": "13_autres_usagers",
+    "q": "Combien de types de véhicules prioritaires le cours cite-t-il ?",
+    "qa": "كم عدد أنواع المركبات ذات الأولوية ؟",
+    "o": [
+      "4",
+      "5",
+      "6",
+      "8"
+    ],
+    "a": [
+      2
+    ],
+    "e": "6 types : intervention rapide, protection civile, ambulance, gendarmerie royale, sûreté nationale (police), forces auxiliaires.",
+    "r": "6 types de véhicules prioritaires.",
+    "s": "priorite"
+  },
+  {
+    "id": "13_autres_usagers-12",
+    "t": "13_autres_usagers",
+    "q": "Lesquels sont des véhicules prioritaires ?",
+    "qa": "ما هي المركبات ذات الأولوية من بين هذه ؟",
+    "o": [
+      "Un véhicule de la Gendarmerie royale",
+      "Un véhicule des Forces auxiliaires",
+      "Une ambulance",
+      "Un taxi"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Ambulance, gendarmerie royale et forces auxiliaires font partie des 6 véhicules prioritaires. Le taxi n'en fait pas partie.",
+    "r": "Taxi ≠ véhicule prioritaire.",
+    "s": "priorite"
+  },
+  {
+    "id": "13_autres_usagers-13",
+    "t": "13_autres_usagers",
+    "q": "Une voiture de police circule sans gyrophare ni avertisseur spécial. Dois-je lui céder le passage ?",
+    "qa": "سيارة شرطة تسير بدون أضواء دوارة ولا منبه خاص. هل يجب أن أعطيها الأسبقية ؟",
+    "o": [
+      "Oui, toujours",
+      "Oui, mais seulement en agglomération",
+      "Non, c'est alors un véhicule ordinaire"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Un véhicule prioritaire n'a la priorité que lorsqu'il utilise ses gyrophares ou son avertisseur spécial. Sans eux, c'est un véhicule ordinaire.",
+    "r": "Prioritaire sans gyrophare ni sirène = véhicule ordinaire.",
+    "s": "priorite"
+  },
+  {
+    "id": "13_autres_usagers-14",
+    "t": "13_autres_usagers",
+    "q": "Une ambulance arrive derrière moi, gyrophare et avertisseur spécial en marche. Je dois :",
+    "qa": "سيارة إسعاف تأتي خلفي بالأضواء الدوارة والمنبه الخاص. يجب :",
+    "o": [
+      "Ne rien changer, je suis dans ma voie",
+      "Lui laisser le passage",
+      "Accélérer pour rester devant elle"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Avec gyrophare ou avertisseur spécial, l'ambulance est prioritaire : je reste attentif à ses signaux et je lui laisse le passage (أفسح لها المجال).",
+    "r": "Gyrophare ou sirène : je laisse passer le prioritaire.",
+    "s": "priorite"
+  },
+  {
+    "id": "13_autres_usagers-15",
+    "t": "13_autres_usagers",
+    "q": "Un autobus est arrêté et des voyageurs en descendent. Je dois :",
+    "qa": "حافلة نقل عمومي متوقفة لنزول الركاب. يجب :",
+    "o": [
+      "Garder ma vitesse, les piétons doivent attendre",
+      "Klaxonner et le dépasser rapidement",
+      "Ralentir et ne le dépasser qu'après m'être assuré qu'aucun piéton ne traverse"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Des piétons cachés par le bus peuvent traverser : on ralentit et on ne dépasse qu'une fois sûr qu'aucun ne traverse.",
+    "r": "Bus à l'arrêt : ralentir, attention aux piétons cachés."
+  },
+  {
+    "id": "13_autres_usagers-16",
+    "t": "13_autres_usagers",
+    "q": "Un bus ou un tramway est à l'arrêt. D'où peuvent surgir des piétons ?",
+    "qa": "حافلة أو ترامواي في حالة وقوف. من أين يمكن أن يعبر الراجلون ؟",
+    "o": [
+      "Seulement de la droite",
+      "De la droite comme de la gauche",
+      "Seulement de devant le véhicule"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Quand un bus ou un tram s'arrête, des piétons peuvent traverser par la droite ou par la gauche, souvent cachés par le véhicule.",
+    "r": "Bus ou tram à l'arrêt : piétons possibles des deux côtés."
+  },
+  {
+    "id": "13_autres_usagers-17",
+    "t": "13_autres_usagers",
+    "q": "Je croise ou je dépasse des animaux effrayés. Je dois :",
+    "qa": "أقابل أو أتجاوز حيوانات أو دوابا خائفة. يجب :",
+    "o": [
+      "Klaxonner pour les éloigner",
+      "Accélérer pour passer vite",
+      "Ralentir"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le cours impose de réduire la vitesse à la rencontre ou au dépassement d'animaux effrayés, et de laisser au moins 1 m d'écart latéral en les dépassant.",
+    "r": "Animaux effrayés : ralentir."
+  },
+  {
+    "id": "13_autres_usagers-18",
+    "t": "13_autres_usagers",
+    "q": "Pourquoi les piétons, surtout les enfants, exigent-ils une vigilance particulière ?",
+    "qa": "لماذا يتطلب الراجلون، خاصة الأطفال، يقظة خاصة ؟",
+    "o": [
+      "Ils entendent toujours les voitures arriver",
+      "Leurs mouvements sont difficiles à prévoir",
+      "Ils traversent toujours sur les passages"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les déplacements des piétons, en particulier des enfants, sont difficiles à prévoir : il faut anticiper et leur céder le passage, surtout aux passages pour piétons.",
+    "r": "Piétons et enfants : imprévisibles, anticiper."
+  },
+  {
+    "id": "14_dangers_exceptionnels-01",
+    "t": "14_dangers_exceptionnels",
+    "q": "Mes freins principaux ne répondent plus. Quel est le premier réflexe ?",
+    "qa": "الفرامل الرئيسية لا تستجيب. ما هو أول رد فعل ؟",
+    "o": [
+      "Passer au point mort",
+      "Rétrograder progressivement, de la vitesse la plus haute vers la plus basse",
+      "Couper le contact"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On rétrograde une vitesse après l'autre jusqu'à la 2e, en serrant progressivement le frein à main. Le point mort et la coupure du contact ne font pas partie des bons gestes.",
+    "r": "Panne de freins : rétrograder progressivement."
+  },
+  {
+    "id": "14_dangers_exceptionnels-02",
+    "t": "14_dangers_exceptionnels",
+    "q": "En cas de panne de freins, jusqu'à quel rapport rétrograder ?",
+    "qa": "عند عطب الفرامل، إلى أي سرعة يتم التخفيض ؟",
+    "o": [
+      "1re vitesse",
+      "2e vitesse",
+      "3e vitesse",
+      "Point mort"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On rétrograde progressivement jusqu'à la 2e vitesse, en serrant le frein à main un peu plus à chaque rétrogradation.",
+    "r": "Panne de freins : rétrograder jusqu'en 2e."
+  },
+  {
+    "id": "14_dangers_exceptionnels-03",
+    "t": "14_dangers_exceptionnels",
+    "q": "Pendant une panne de freins, comment utiliser le frein à main ?",
+    "qa": "أثناء عطب الفرامل، كيف يستعمل الحصار اليدوي ؟",
+    "o": [
+      "Le tirer d'un coup, à fond",
+      "Ne jamais l'utiliser",
+      "Le serrer progressivement à chaque rétrogradation"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le frein à main (الحصار اليدوي) se serre progressivement, jamais d'un seul coup : c'est un piège d'examen.",
+    "r": "Frein à main : progressivement, jamais d'un coup."
+  },
+  {
+    "id": "14_dangers_exceptionnels-04",
+    "t": "14_dangers_exceptionnels",
+    "q": "Panne de freins dans une descente : une voie de détresse se présente. Je :",
+    "qa": "عطب في الفرامل في منحدر : يظهر مسلك الإغاثة. أنا :",
+    "o": [
+      "L'évite, elle est réservée aux camions",
+      "L'utilise",
+      "M'arrête plutôt sur la bande d'arrêt d'urgence"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La voie de détresse (مسلك الإغاثة) est faite pour arrêter les véhicules en panne de freins : on l'utilise si elle existe.",
+    "r": "Panne de freins : voie de détresse si elle existe."
+  },
+  {
+    "id": "14_dangers_exceptionnels-05",
+    "t": "14_dangers_exceptionnels",
+    "q": "Pour avertir les autres usagers pendant une panne de freins, j'utilise :",
+    "qa": "لتنبيه الآخرين أثناء عطب الفرامل، أستعمل :",
+    "o": [
+      "L'avertisseur sonore",
+      "Les feux de détresse (warning)",
+      "Les appels lumineux",
+      "Les feux de brouillard arrière"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Klaxon, appels lumineux et feux de détresse préviennent les autres du danger.",
+    "r": "Panne de freins : klaxon + appels lumineux + warning."
+  },
+  {
+    "id": "14_dangers_exceptionnels-06",
+    "t": "14_dangers_exceptionnels",
+    "q": "Ébloui la nuit par les feux de route d'un véhicule venant en face, je dois :",
+    "qa": "ليلا، أبهرتني أضواء الطريق لمركبة مقابلة. يجب :",
+    "o": [
+      "Serrer à droite",
+      "Fixer ses phares pour bien le voir",
+      "Ralentir",
+      "Accélérer pour le croiser plus vite"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "On ralentit et on serre à droite. Au lieu de fixer les phares, on regarde les lignes du bord droit de la route.",
+    "r": "Ébloui : ralentir et serrer à droite."
+  },
+  {
+    "id": "14_dangers_exceptionnels-07",
+    "t": "14_dangers_exceptionnels",
+    "q": "Pendant l'éblouissement, où dois-je regarder ?",
+    "qa": "أثناء الإبهار، إلى أين يجب أن أنظر ؟",
+    "o": [
+      "Le centre de la chaussée",
+      "Les phares du véhicule d'en face",
+      "Les lignes du bord droit de la route"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On regarde les lignes du côté droit de la route pour garder sa trajectoire sans être aveuglé.",
+    "r": "Ébloui : regarder le bord droit."
+  },
+  {
+    "id": "14_dangers_exceptionnels-08",
+    "t": "14_dangers_exceptionnels",
+    "q": "Le conducteur d'en face garde ses feux de route. Pour le prévenir, je :",
+    "qa": "سائق المركبة المقابلة يبقي على أضواء الطريق. لتنبيهه :",
+    "o": [
+      "Allume mes feux de route en continu pour qu'il comprenne",
+      "Klaxonne longuement",
+      "Fais des appels lumineux courts et répétés"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Des appels lumineux courts et répétés suffisent. Allumer ses feux de route en continu l'éblouirait à son tour : c'est un piège d'examen.",
+    "r": "Éblouissement : appels courts, jamais feux de route continus."
+  },
+  {
+    "id": "14_dangers_exceptionnels-09",
+    "t": "14_dangers_exceptionnels",
+    "q": "Dans une longue descente dangereuse, comment freiner ?",
+    "qa": "في منحدر خطير، كيف تتم الفرملة ؟",
+    "o": [
+      "Appuyer en continu sur la pédale de frein",
+      "Passer au point mort et freiner",
+      "Rétrograder (frein moteur) et freiner par petits coups répétés"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On utilise le frein moteur (حصار المحرك) en rétrogradant, avec des freinages intermittents, répétés et successifs.",
+    "r": "Descente : frein moteur + freinages brefs répétés."
+  },
+  {
+    "id": "14_dangers_exceptionnels-10",
+    "t": "14_dangers_exceptionnels",
+    "q": "Pourquoi éviter d'appuyer en continu sur le frein dans une longue descente ?",
+    "qa": "لماذا يجب تجنب الضغط المتواصل على الفرامل في منحدر طويل ؟",
+    "o": [
+      "Les freins chauffent et perdent leur efficacité",
+      "Le moteur s'use plus vite",
+      "La consommation augmente fortement"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Un freinage continu fait chauffer les freins, qui perdent leur efficacité.",
+    "r": "Freinage continu en descente : freins qui chauffent."
+  },
+  {
+    "id": "14_dangers_exceptionnels-11",
+    "t": "14_dangers_exceptionnels",
+    "q": "Dans une longue descente, quel rapport engager ?",
+    "qa": "في منحدر طويل، أي سرعة يجب استعمالها ؟",
+    "o": [
+      "Le même que pour monter cette côte",
+      "Le rapport le plus élevé",
+      "Le point mort"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Règle pratique : on descend avec le rapport qu'on utiliserait pour monter la même pente. Le point mort est interdit en descente.",
+    "r": "Descente : même rapport qu'à la montée."
+  },
+  {
+    "id": "14_dangers_exceptionnels-12",
+    "t": "14_dangers_exceptionnels",
+    "q": "Dans les virages d'une descente dangereuse, le volant se manie :",
+    "qa": "في منعرجات منحدر خطير، يوجه المقود :",
+    "o": [
+      "D'une seule main",
+      "Avec souplesse et lentement",
+      "Par mouvements brusques"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les gestes au volant doivent être souples et lents (بليونة وببطء) pour ne pas déstabiliser le véhicule.",
+    "r": "Descente : volant souple et lent."
+  },
+  {
+    "id": "14_dangers_exceptionnels-13",
+    "t": "14_dangers_exceptionnels",
+    "q": "Ma voiture dérape. Que dois-je éviter ?",
+    "qa": "مركبتي تنزلق. ماذا يجب أن أتجنب ؟",
+    "o": [
+      "Débrayer",
+      "Accélérer",
+      "Freiner",
+      "Diriger doucement le volant"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "En dérapage : ni frein, ni accélérateur, ni embrayage (لا فرامل، لا مسرع، لا واصل). Seul le volant, manié doucement, permet de reprendre le contrôle.",
+    "r": "Dérapage : pas de frein, pas d'accélérateur, pas d'embrayage."
+  },
+  {
+    "id": "14_dangers_exceptionnels-14",
+    "t": "14_dangers_exceptionnels",
+    "q": "En dérapage, sur une route dégagée, je tourne doucement le volant :",
+    "qa": "عند الانزلاق، والطريق خالية، أوجه المقود بليونة :",
+    "o": [
+      "Du côté où part l'arrière du véhicule",
+      "Je ne touche plus au volant",
+      "Du côté opposé à l'arrière"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On oriente doucement le volant vers le côté où l'arrière du véhicule a glissé.",
+    "r": "Dérapage : braquer doucement du côté où part l'arrière."
+  },
+  {
+    "id": "14_dangers_exceptionnels-15",
+    "t": "14_dangers_exceptionnels",
+    "q": "Vrai ou faux : en dérapage, je regarde là où je veux aller, les pieds levés des pédales.",
+    "qa": "صحيح أم خطأ : عند الانزلاق، أنظر إلى حيث أريد الذهاب والقدمان مرفوعتان.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Vrai : on regarde et on dirige le volant vers où on veut aller, sans frein, accélérateur ni embrayage. Freiner fort est l'erreur classique.",
+    "r": "Dérapage : regarder où aller, pieds levés."
+  },
+  {
+    "id": "14_dangers_exceptionnels-16",
+    "t": "14_dangers_exceptionnels",
+    "q": "Le « frein moteur » consiste à :",
+    "qa": "«حصار المحرك» يعني :",
+    "o": [
+      "Serrer le frein à main",
+      "Couper le moteur en roulant",
+      "Rétrograder pour que le moteur retienne le véhicule"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Rétrograder (passer des grands rapports aux petits) fait ralentir le véhicule par le moteur. C'est la base en descente et en panne de freins.",
+    "r": "Frein moteur = rétrograder."
+  },
+  {
+    "id": "15_panne_accident-01",
+    "t": "15_panne_accident",
+    "q": "La règle d'or P.A.S. en cas d'accident, c'est dans l'ordre :",
+    "qa": "القاعدة الذهبية P.A.S عند وقوع حادثة هي بالترتيب :",
+    "o": [
+      "Protéger – Alerter – Secourir",
+      "Secourir – Alerter – Protéger",
+      "Protéger – Secourir – Alerter",
+      "Alerter – Protéger – Secourir"
+    ],
+    "a": [
+      0
+    ],
+    "e": "1) Protéger les lieux (الحماية) d'abord, pour éviter un second accident, 2) alerter (التبليغ), 3) secourir les blessés (الإغاثة).",
+    "r": "P.A.S. : Protéger, Alerter, Secourir.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-02",
+    "t": "15_panne_accident",
+    "q": "Pour protéger les lieux d'un accident, je peux :",
+    "qa": "لحماية مكان الحادثة، يمكنني :",
+    "o": [
+      "Signaler avec une lampe de poche",
+      "Allumer les feux de détresse",
+      "Déplacer immédiatement tous les blessés",
+      "Placer le triangle de présignalisation"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Triangle, lampe de poche, feux de détresse (et feux de route la nuit ou par faible luminosité) protègent la zone. Les blessés ne se déplacent qu'en cas de danger imminent.",
+    "r": "Protéger : triangle, warning, lampe, feux la nuit.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-03",
+    "t": "15_panne_accident",
+    "q": "Ne pas s'arrêter après avoir causé un accident constitue :",
+    "qa": "عدم التوقف بعد التسبب في حادثة يشكل :",
+    "o": [
+      "Une contravention de 3e classe",
+      "Le délit de fuite (جنحة الفرار)",
+      "Le délit de non-assistance à personne en danger"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Ne pas s'arrêter = délit de fuite. Ne pas alerter les secours est un autre délit : la non-assistance à personne en danger.",
+    "r": "Ne pas s'arrêter = délit de fuite.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-04",
+    "t": "15_panne_accident",
+    "q": "Après un accident, ne pas alerter les secours alors qu'une personne est en danger constitue :",
+    "qa": "بعد حادثة، عدم التبليغ بينما يوجد شخص في خطر يشكل :",
+    "o": [
+      "Une simple contravention",
+      "Le délit de non-assistance à personne en danger",
+      "Le délit de fuite"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Ne pas alerter = délit de non-assistance à personne en danger (عدم تقديم المساعدة لشخص في خطر). Le délit de fuite, c'est ne pas s'arrêter.",
+    "r": "Ne pas alerter = non-assistance à personne en danger.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-05",
+    "t": "15_panne_accident",
+    "q": "Quelles associations de numéros d'urgence sont justes ?",
+    "qa": "ما هي أرقام الطوارئ الصحيحة ؟",
+    "o": [
+      "177 : police",
+      "19 : police",
+      "15 ou 150 : sapeurs-pompiers (protection civile)",
+      "5050 : gendarmerie royale"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "15 ou 150 : pompiers ; 19 : police ; 177 : gendarmerie royale ; 5050 : Autoroutes du Maroc.",
+    "r": "15 pompiers, 19 police, 177 gendarmerie, 5050 autoroutes.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-06",
+    "t": "15_panne_accident",
+    "q": "Quel numéro permet d'appeler la Gendarmerie royale ?",
+    "qa": "ما هو الرقم الذي يمكن من الاتصال بالدرك الملكي ؟",
+    "o": [
+      "19",
+      "150",
+      "177",
+      "5050"
+    ],
+    "a": [
+      2
+    ],
+    "e": "177 = Gendarmerie royale. 19 = police, 15 ou 150 = pompiers, 5050 = autoroutes.",
+    "r": "Gendarmerie royale : 177.",
+    "s": "pas",
+    "img": "1682675880263.png"
+  },
+  {
+    "id": "15_panne_accident-07",
+    "t": "15_panne_accident",
+    "q": "Panne sur autoroute : quel numéro joint l'assistance des Autoroutes du Maroc ?",
+    "qa": "عطب في الطريق السيار : ما هو رقم الطرق السيارة بالمغرب ؟",
+    "o": [
+      "15",
+      "19",
+      "177",
+      "5050"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le 5050 joint les Autoroutes du Maroc. 15 = pompiers, 19 = police, 177 = gendarmerie.",
+    "r": "Autoroutes du Maroc : 5050.",
+    "s": "pas",
+    "img": "1687357574135.png"
+  },
+  {
+    "id": "15_panne_accident-08",
+    "t": "15_panne_accident",
+    "q": "En alertant les secours, quelles informations dois-je donner ?",
+    "qa": "عند التبليغ عن الحادثة، ما هي المعلومات الواجب إعطاؤها ؟",
+    "o": [
+      "Le lieu de l'accident",
+      "Le nombre et la catégorie des véhicules",
+      "Le nombre de victimes et leur état",
+      "Le nom de mon assureur"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "On précise le lieu, le type d'accident (renversement, collision…), le nombre et la catégorie des véhicules, le nombre de victimes et leur état.",
+    "r": "Alerte : lieu, type, véhicules, victimes et leur état.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-09",
+    "t": "15_panne_accident",
+    "q": "Dans tous les cas, que dois-je faire pour un blessé ?",
+    "qa": "في جميع الحالات، ماذا يجب أن أفعل للمصاب ؟",
+    "o": [
+      "Le couvrir contre le froid",
+      "Dégager ce qui gêne sa respiration",
+      "Le laisser seul en attendant les secours",
+      "Lui parler, le rassurer et le garder conscient"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Même sans formation : libérer la respiration, couvrir le blessé contre le froid, lui parler et le rassurer pour le garder conscient.",
+    "r": "Blessé : respiration libre, couverture, parole rassurante.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-10",
+    "t": "15_panne_accident",
+    "q": "Quand peut-on déplacer un blessé ?",
+    "qa": "متى يمكن نقل المصاب ؟",
+    "o": [
+      "Toujours, pour l'installer confortablement",
+      "Jamais, même en cas d'incendie",
+      "Seulement en cas de danger imminent (incendie…)"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On ne déplace pas un blessé, sauf danger imminent comme un incendie.",
+    "r": "Déplacer un blessé : seulement si danger imminent.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-11",
+    "t": "15_panne_accident",
+    "q": "Un blessé conscient réclame de l'eau. Je :",
+    "qa": "مصاب واع يطلب الماء. أنا :",
+    "o": [
+      "Ne lui donne ni eau ni nourriture",
+      "Lui donne quelques gorgées",
+      "Lui donne du sucre pour le réconforter"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Piège d'examen : on ne donne ni eau ni nourriture à un blessé. On le rassure en attendant les secours.",
+    "r": "Blessé : ni eau ni nourriture.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-12",
+    "t": "15_panne_accident",
+    "q": "Un secouriste formé place un blessé en position latérale de sécurité. Sur quel côté ?",
+    "qa": "مسعف مؤهل يضع مصابا في الوضعية الجانبية للسلامة. على أي جانب ؟",
+    "o": [
+      "Le côté droit",
+      "Le côté gauche",
+      "Sur le dos",
+      "Sur le ventre"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Selon le cours, la position latérale de sécurité se fait sur le côté droit ; elle est réservée aux personnes formées aux premiers secours.",
+    "r": "Position latérale de sécurité : côté droit.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-13",
+    "t": "15_panne_accident",
+    "q": "Arrêt cardiaque : à quel rythme faire les compressions thoraciques ?",
+    "qa": "توقف القلب : ما هو إيقاع الضغطات على الصدر ؟",
+    "o": [
+      "60 à 80 par minute",
+      "100 à 120 par minute",
+      "150 à 180 par minute"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les compressions se font à 100–120 par minute : à genoux, mains au centre de la poitrine, bras tendus, en enfonçant de 5 à 6 cm.",
+    "r": "Massage cardiaque : 100 à 120 compressions par minute.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-14",
+    "t": "15_panne_accident",
+    "q": "Réanimation d'un adulte par une personne formée : quel rythme ?",
+    "qa": "إنعاش شخص بالغ من طرف شخص مؤهل : ما هو الإيقاع ؟",
+    "o": [
+      "2 insufflations toutes les 30 compressions",
+      "5 insufflations d'abord, puis 2 toutes les 10 compressions",
+      "2 insufflations toutes les 15 compressions"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Adulte : 2 insufflations toutes les 30 compressions. Le rythme de l'enfant est différent.",
+    "r": "Adulte : 30 compressions, 2 insufflations.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-15",
+    "t": "15_panne_accident",
+    "q": "Réanimation d'un enfant par une personne formée : quel rythme ?",
+    "qa": "إنعاش طفل من طرف شخص مؤهل : ما هو الإيقاع ؟",
+    "o": [
+      "Compressions seulement, sans insufflation",
+      "5 insufflations d'abord, puis 2 insufflations toutes les 15 compressions",
+      "2 insufflations toutes les 30 compressions, sans insufflation préalable"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Enfant : on commence par 5 insufflations, puis 2 insufflations toutes les 15 compressions.",
+    "r": "Enfant : 5 insufflations, puis 2 toutes les 15 compressions.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-16",
+    "t": "15_panne_accident",
+    "q": "Je ne suis pas formé aux premiers secours et la victime est en arrêt cardiaque. Je fais :",
+    "qa": "لست مؤهلا في الإسعافات الأولية والضحية في حالة توقف القلب. أقوم ب :",
+    "o": [
+      "Rien, j'attends les secours",
+      "Des compressions thoraciques seulement, sans interruption",
+      "Des insufflations seulement"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sans formation, on pratique uniquement les compressions thoraciques, sans interruption.",
+    "r": "Non formé : compressions seules, sans interruption.",
+    "s": "pas"
+  },
+  {
+    "id": "15_panne_accident-17",
+    "t": "15_panne_accident",
+    "q": "En panne, quand dois-je enfiler le gilet jaune ?",
+    "qa": "عند العطب، متى يجب ارتداء السترة الصفراء ؟",
+    "o": [
+      "Après avoir posé le triangle",
+      "Avant de descendre du véhicule",
+      "Uniquement la nuit"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le gilet jaune s'enfile à l'intérieur de la voiture, avant de descendre : on est visible dès le premier pas, y compris pour poser le triangle.",
+    "r": "Gilet jaune : enfilé avant de sortir du véhicule."
+  },
+  {
+    "id": "15_panne_accident-18",
+    "t": "15_panne_accident",
+    "q": "La nuit, mon éclairage tombe en panne. Que dois-je faire ?",
+    "qa": "ليلا، حدث خلل في الإنارة. ماذا يجب أن أفعل ؟",
+    "o": [
+      "Continuer normalement jusqu'à destination",
+      "Ne pas dépasser 20 km/h",
+      "Utiliser des feux de remplacement à gauche",
+      "M'arrêter au plus proche endroit sûr"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Feux de remplacement placés à gauche, 20 km/h maximum et arrêt au plus proche endroit sûr.",
+    "r": "Éclairage en panne la nuit : feu à gauche, 20 km/h max."
+  },
+  {
+    "id": "15_panne_accident-19",
+    "t": "15_panne_accident",
+    "q": "Un pneu éclate en roulant. Quelles actions sont correctes ?",
+    "qa": "انفجر إطار أثناء السير. ما هي الأعمال الصحيحة ؟",
+    "o": [
+      "Lever doucement et progressivement le pied de l'accélérateur",
+      "Vérifier que la droite est libre puis rejoindre progressivement le bord",
+      "Freiner fort immédiatement",
+      "Tenir fermement le volant"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "« Tenir, lever, guider » : volant bien tenu, pied levé progressivement, direction vers le bord puis arrêt en lieu sûr avec warning. Freiner fait risquer un tête-à-queue (خطر الدوران).",
+    "r": "Éclatement : tenir, lever le pied, guider ; pas de frein."
+  },
+  {
+    "id": "15_panne_accident-20",
+    "t": "15_panne_accident",
+    "q": "Il faut remplacer un pneu dont les sculptures (النقوش) ont une profondeur de :",
+    "qa": "يجب استبدال الإطار الذي يبلغ عمق نقوشه :",
+    "o": [
+      "3 mm ou moins",
+      "2,5 mm ou moins",
+      "1,6 mm ou moins",
+      "1 mm ou moins"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La profondeur minimale des sculptures est de 1,6 mm : à 1,6 mm ou moins, on remplace le pneu (comme en cas de crevaison ou de mauvais état).",
+    "r": "Sculptures des pneus : 1,6 mm minimum."
+  },
+  {
+    "id": "15_panne_accident-21",
+    "t": "15_panne_accident",
+    "q": "Pour changer une roue, quand desserrer les écrous ?",
+    "qa": "عند تغيير العجلة، متى يتم فك البراغي ؟",
+    "o": [
+      "Légèrement, avant de soulever le véhicule",
+      "Après avoir soulevé le véhicule",
+      "Après avoir posé la roue de secours"
+    ],
+    "a": [
+      0
+    ],
+    "e": "On retire l'enjoliveur puis on desserre un peu les écrous (sens inverse des aiguilles d'une montre) roue au sol, avant de lever le véhicule.",
+    "r": "Desserrer les écrous avant de lever la voiture."
+  },
+  {
+    "id": "15_panne_accident-22",
+    "t": "15_panne_accident",
+    "q": "Pour changer une roue arrière, où placer les cales ?",
+    "qa": "لتغيير عجلة خلفية، أين توضع ركائز التثبيت ؟",
+    "o": [
+      "Sous le cric",
+      "Derrière une roue arrière",
+      "Devant une roue avant"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On cale l'autre essieu : devant une roue avant pour changer une roue arrière, derrière une roue arrière pour changer une roue avant.",
+    "r": "Roue arrière à changer : caler devant une roue avant."
+  },
+  {
+    "id": "15_panne_accident-23",
+    "t": "15_panne_accident",
+    "q": "Démarrer avec une batterie de secours : dans quel ordre brancher les câbles ?",
+    "qa": "التشغيل بالتوصيل ببطارية ثانية : ما هو ترتيب التوصيل ؟",
+    "o": [
+      "Négatif avec négatif, puis positif avec positif, puis démarrer le 2e véhicule",
+      "Positif avec négatif, puis négatif avec positif",
+      "Démarrer le 2e véhicule, puis brancher positif avec positif seulement"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Selon le cours : négatif avec négatif, puis positif avec positif, puis on démarre le véhicule de secours. On ne touche pas les bornes pendant la charge.",
+    "r": "Câbles : − avec −, + avec +, puis démarrer le 2e véhicule."
+  },
+  {
+    "id": "15_panne_accident-24",
+    "t": "15_panne_accident",
+    "q": "Démarrer une voiture en la poussant : quelle vitesse engager ?",
+    "qa": "التشغيل بالدفع : أي سرعة يجب استعمالها ؟",
+    "o": [
+      "1re vitesse",
+      "2e vitesse",
+      "Marche arrière",
+      "Point mort"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On engage la 2e, on relâche brusquement l'embrayage puis on accélère.",
+    "r": "Démarrage poussé : 2e vitesse, embrayage relâché d'un coup."
+  },
+  {
+    "id": "15_panne_accident-25",
+    "t": "15_panne_accident",
+    "q": "Quelles sont des causes de batterie déchargée ?",
+    "qa": "ما هي أسباب نفاد البطارية ؟",
+    "o": [
+      "Le froid",
+      "Un long trajet sur autoroute",
+      "Une panne de l'alternateur (المولد)",
+      "Des appareils laissés en marche moteur arrêté"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Appareils en marche moteur arrêté, court-circuit, froid, accessoires ajoutés, oxydation, démarrages répétés et panne de l'alternateur vident la batterie.",
+    "r": "Batterie à plat : appareils allumés, froid, alternateur, oxydation."
+  }
+]

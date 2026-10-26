@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Mentale - Annexe des Infractions</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body {
+            width: 100%; height: 100%; overflow: hidden;
+            font-family: 'Tajawal', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8f9fa;
+        }
+        #mindmap { width: 100vw; height: 100vh; display: block; }
+        /* CSS anti-troncature et affichage optimal des noeuds Markmap */
+        .markmap-node foreignObject { overflow: visible !important; }
+        .markmap-node foreignObject > div {
+            white-space: nowrap !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+        }
+        .markmap-node img {
+            vertical-align: middle;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 2px;
+            height: 35px !important;
+            width: auto !important;
+            display: inline-block !important;
+        }
+        .markmap-node img.big { height: 110px !important; }
+        .markmap-node img.xl { height: 180px !important; }
+        /* Boutons flottants (haut gauche) */
+        .toolbar { position: fixed; top: 15px; left: 15px; z-index: 9999; display: flex; gap: 8px; }
+        .btn-home {
+            background: linear-gradient(135deg, #0056a4, #003d7a);
+            color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 25px;
+            font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 14px rgba(0, 86, 164, 0.3);
+            display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.25); backdrop-filter: blur(5px);
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .btn-home:hover {
+            background: linear-gradient(135deg, #ff7e00, #e67000);
+            box-shadow: 0 6px 18px rgba(255, 126, 0, 0.4);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .btn-home svg { width: 16px; height: 16px; fill: currentColor; }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-lib@0.18.12/dist/browser/index.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script>
+</head>
+<body>
+    <div class="toolbar">
+        <a href="../../index.html#/" class="btn-home" title="العودة إلى التطبيق">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>الرئيسية</span>
+        </a>
+        <a href="../../index.html#/cours/07_annexe_infractions" class="btn-home" title="ملخص الدرس">📖 <span>الملخص</span></a>
+        <span class="btn-home" onclick="window.__mm && window.__mm.fit()">⤢ <span>ملاءمة</span></span>
+    </div>
+    <svg id="mindmap"></svg>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const markdownContent = "# 📋 ملحق خاص بجميع المخالفات (Annexe des Infractions)\n\n## 🚔 1. الجنح وخصم النقط (Délits → points)\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723548889241.png\" class=\"xl\"> لائحة الجنح وخصم النقط\n- 14 ← القتل غير العمدي مع ظروف التشديد\n- 10 ← جروح بعاهة دائمة مع ظروف التشديد\n- 6 ← القتل غير العمدي بدون ظروف التشديد\n- 6 ← جروح غير عمدية مع ظروف التشديد\n- 6 ← الفرار بعد الحادثة\n- 6 ← تجاوز السرعة بـ 50 كلم/س أو أكثر\n- 6 ← الكحول أو المخدرات أو رفض الفحص\n- 4 ← عاهة دائمة بدون ظروف التشديد\n- 4 ← السياقة رغم توقيف الرخصة أو أثناء الاحتفاظ بها\n- 4 ← عدم إيداع رخصة موقوفة\n- 4 ← عكس الاتجاه في الطريق السيار أو السريع\n- 4 ← تجاوز الوزن المأذون به عند المرور بمنشأة عبور (قنطرة)\n- 3 ← جروح غير عمدية بدون ظروف التشديد\n- 3 ← الرجوع إلى الخلف أو نصف دورة في الطريق السيار أو السريع\n- 2 ← أدوية تمنع السياقة\n- 2 ← رفض الامتثال لأمر التوقف أو للأعوان\n- 2 ← السياقة المهنية بدون بطاقة السائق المهني\n\n## 🚦 2. المخالفات وخصم النقط (Contraventions → points)\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723548918134.png\" class=\"xl\"> لائحة المخالفات وخصم النقط\n- 4 ← عدم الوقوف عند «قف» أو الضوء الأحمر\n- 4 ← تجاوز السرعة بأكثر من 30 وأقل من 50 كلم/س\n- 4 ← السير في الاتجاه الممنوع\n- 4 ← التجاوز غير القانوني (المعيب)\n- 3 ← السير ليلا بدون إنارة خارج المدينة\n- 3 ← بدون شهادة المراقبة التقنية\n- 3 ← السير على شريط التوقف العاجل أو التوقف غير المبرر في الطريق السيار\n- 3 ← الوقوف أو التوقف ليلا بدون إنارة في طريق غير مضاءة\n- 2 ← عدم احترام حق الأسبقية\n- 2 ← تجاوز السرعة بأكثر من 20 وحتى 30 كلم/س\n- 2 ← الدراجة النارية بدون خوذة\n- 1 ← عدم ربط حزام السلامة\n- 1 ← طفل أقل من 10 سنوات في المقعد الأمامي\n- 1 ← الهاتف ممسوكا باليد أثناء السياقة\n\n## 1️⃣ 3. الدرجة الأولى: أهم المخالفات (Classe 1)\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1724419410919.png\" class=\"xl\"> لائحة الدرجة الأولى\n- قف أو الضوء الأحمر، الاتجاه الممنوع، التجاوز المعيب، السرعة +30 إلى +50 ← 4 نقط\n- عدم الخضوع للمراقبة التقنية، السير ليلا بدون إنارة ← 3 نقط\n- بدون خصم نقط (لكن غرامة الدرجة الأولى)\n  - قطع خط متصل\n  - التوقف الخطير (منعرج، قمة منحدر، قنطرة، نفق، أقل من 10 م من ملتقى)\n  - الوقوف أو التوقف عند تقاطع مع سكة حديدية\n  - دخول الراجلين والدواب والحيوانات إلى الطريق السيار\n  - عدم أداء رسوم الطريق السيار\n  - نقل أشخاص فوق السقف\n  - الوقوف لصعود أو نزول الركاب في الطريق السيار\n  - الدخول إلى تقاطع سكة حديدية بدون حواجز دون التأكد من غياب القطار\n  - المركبة بدون فرامل مطابقة أو بدون حزام سلامة أو بعيب في التوجيه أو التعليق أو الإنارة\n  - عدم مطابقة صفائح التسجيل\n  - تجاوز الوزن الإجمالي المأذون به بـ 30% إلى 40%\n  - نقوش الإطارات تحت الحد الأدنى أو تمزقات\n  - عدم الخروج فورا من السكة الحديدية عند اقتراب قطار\n  - الدخول إلى الطريق السيار أو الخروج منه من مكان غير مخصص\n  - عدم الخضوع للفحص الطبي الإجباري\n\n## 2️⃣ 4. الدرجة الثانية: أهم المخالفات (Classe 2)\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549025198.png\" class=\"xl\"> لائحة الدرجة الثانية\n- شريط التوقف العاجل في الطريق السيار ← 3 نقط\n- السرعة +20 إلى أقل من +30، عدم احترام الأسبقية ← 2 نقط\n- الحزام، الهاتف باليد، طفل < 10 سنوات في الأمام ← 1 نقطة\n- بدون خصم نقط\n  - عدم احترام التقييدات المتعلقة بالرخصة\n  - إصلاحات مهمة على شريط التوقف العاجل\n  - مركبة لا تستطيع 60 كلم/س في الطريق السيار\n  - دخول الشريط المركزي للطريق السيار\n  - دروس السياقة وتجريب المركبات في الطريق السيار\n  - عدم احترام أسبقية الراجلين\n  - السير في مسالك الدراجات\n  - الوقوف على الأرصفة وممرات الراجلين\n  - حزام الراكب\n  - عدم احترام أسبقية مركبات الأولوية (مع منبهاتها)\n  - حمولة تعيق الرؤية أو تحجب الأضواء أو صفائح التسجيل\n\n## 3️⃣ 5. الدرجة الثالثة: أهم المخالفات (Classe 3)\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549079786.png\" class=\"xl\"> لائحة الدرجة الثالثة\n- الدراجة بمحرك بدون خوذة ← 2 نقط\n- بدون خصم نقط\n  - عدم احترام منع تغيير الاتجاه المفروض بعلامة\n  - عدم تجديد الحامل الورقي للرخصة\n  - عدم احترام إشارات الأعوان\n  - السير في ممر مخصص لأصناف أخرى\n  - عدم التزام أقصى اليمين / إعاقة السير\n  - قطع طريق الصفوف العسكرية أو الجنازات أو المواكب\n  - التسابق على السرعة\n  - تجاوز السرعة بأقل من 20 كلم/س\n  - تغيير الصف أو الاتجاه دون احتياطات\n  - عدم احترام قواعد التقابل\n  - سلاسل الثلج على طريق غير مغطاة بالثلوج\n  - شاشة ترفيه غير مطابقة، عدم وجود المنبه الصوتي، دخان مفرط\n  - عيب في الفرامل أو المرايا أو مساحات الزجاج أو العاكسات\n  - استعمال الأضواء أو المنبهات الخاصة بمركبات الأولوية\n\n## 4️⃣ 6. الدرجة الرابعة (Classe 4)\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549115547.png\" class=\"xl\"> مخالفات الراجلين\n\n## 🔒 7. التوقيف والمحجز (Immobilisation / Fourrière)\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549190831.png\" class=\"xl\"> توقيف المركبة\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549233629.png\" class=\"xl\"> الإيداع بالمحجز بأمر من الإدارة\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549279375.png\" class=\"xl\"> الإيداع بالمحجز بأمر من الشرطة القضائية\n\n## ⚖️ 8. الجنح والعقوبات (Délits et peines)\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549338475.png\" class=\"xl\"> الجنح المتعلقة بالطريق السيار\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549381315.png\" class=\"xl\"> الجنح المتعلقة بالمركبة\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549433349.png\" class=\"xl\"> الجنح المتعلقة برخصة السياقة\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549471156.png\" class=\"xl\"> الجنح المتعلقة بالسائق\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549512184.png\" class=\"xl\"> القتل غير العمدي والعقوبات\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549556574.png\" class=\"xl\"> توقيف رخصة السياقة\n- <img src=\"../../inputs/05_infractions_sanctions/07_annexe_infractions/images/1723549592450.png\" class=\"xl\"> منع اجتياز امتحان رخصة السياقة\n\n## 💡 نصائح المدرب (Astuces du moniteur)\n- «سلّم السرعة» (Échelle de vitesse)\n  - أقل من +20 ← درجة 3 / 0 نقطة\n  - من +20 إلى +30 ← درجة 2 / 2 نقط\n  - من +30 إلى +50 ← درجة 1 / 4 نقط\n  - +50 فما فوق ← جنحة / 6 نقط + توقيف 1–3 أشهر\n- «الأربعة الكبار» = 4 نقط: الأحمر/قف، الاتجاه الممنوع، التجاوز المعيب، +30\n- «الواحد الصغير» = 1 نقطة: الحزام، الطفل في الأمام، الهاتف\n- «الثلاثة»: ليلا بدون أضواء، بدون فحص تقني، شريط التوقف العاجل\n\n## ⚠️ فخاخ الامتحان (Pièges d'examen)\n- قطع خط متصل = درجة أولى لكن 0 نقطة\n- الهاتف باليد = 1 نقطة (حتى عند الوقوف في الازدحام)\n- عدم احترام الأسبقية = 2 نقط وليس 4\n- الكحول = جنحة (6 نقط) وليس مخالفة\n";
+            const { Transformer, Markmap } = window.markmap;
+            const transformer = new Transformer();
+            const { root } = transformer.transform(markdownContent);
+            const mm = Markmap.create('#mindmap', { embedAssets: true, duration: 300, maxWidth: 0, initialExpandLevel: 3 }, root);
+            window.__mm = mm;
+            setTimeout(() => { if (mm && mm.fit) mm.fit(); }, 300);
+            document.querySelectorAll('#mindmap img').forEach(img => {
+                img.addEventListener('load', () => { if (mm && mm.fit) mm.fit(); });
+            });
+        });
+    </script>
+</body>
+</html>

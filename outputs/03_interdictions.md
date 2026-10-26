@@ -1,0 +1,71 @@
+# 🚦 المحور الفرعي: علامات المنع ونهاية المنع لمحور التكوين: الطريق
+
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244008.png" height="50"> **اتجاه ممنوع**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1687172497846.png" height="50"> **ممنوع السير في الاتجاهين**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1687172455040.png" height="50"> **ولوج ممنوع على كل مركبة ذات محرك باستثناء الدراجات بمحرك والدراجات النارية**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244051.png" height="50"> **ولوج ممنوع على مركبات النقل الجماعي للأشخاص**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1687172077432.png" height="50"> **ولوج ممنوع على الدراجات**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244079.png" height="50"> **ولوج ممنوع على الدراجات بمحرك**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1687171996891.png" height="50"> **ولوج ممنوع على الدراجات النارية**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1687172127674.png" height="50"> **ولوج ممنوع على المركبات المخصصة لنقل البضائع**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1687172362264.png" height="50"> **ولوج ممنوع على الراجلين**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1687172309415.png" height="50"> **ولوج ممنوع على المركبات المجرورة بواسطة دواب**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1687172186991.png" height="50"> **ولوج ممنوع على العربات اليدوية**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1687172246334.png" height="50"> **ولوج ممنوع على المركبات الفلاحية ذات محرك**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244185.png" height="50"> **ولوج ممنوع على المركبات ذات محرك باستثناء الدراجات بمحرك**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244199.png" height="50"> **ولوج ممنوع على المركبات التي تحمل أكثر من قدر معين من مواد قابلة للانفجار أو قابلة للاحتراق**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244212.png" height="50"> **ولوج ممنوع على المركبات التي تحمل أكثر من قدر معين من المواد من شأنها أن تلوث المياه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244226.png" height="50"> **ولوج ممنوع على المركبات التي تحمل أكثر من قدر معين من البضائع الخطيرة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244239.png" height="50"> **ولوج ممنوع على المركبات التي يزيد عرضها مع الحمولة عن العدد المشار إليه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244253.png" height="50"> **ولوج ممنوع على المركبات التي يزيد علوها مع الحمولة عن العدد المشار إليه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244266.png" height="50"> **ولوج ممنوع على المركبات التي تفوق حمولتها الإجمالية المسموح بها أو وزنها الإجمالي الدارج المأذون به العدد المشار إليه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244280.png" height="50"> **ولوج ممنوع على المركبات التي يتجاوز وزنها عن كل محور العدد المشار إليه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244294.png" height="50"> **ولوج ممنوع على المركبات والمركبات المتمفصلة والقطارات المزدوجة أو مجموعة من المركبات التي يزيد طولها عن العدد المشار إليه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244310.png" height="50"> **ممنوع على المركبات السير دون ترك مسافة دنيا فاصلة تساوي العدد المشار إليه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244329.png" height="50"> **ممنوع الانعطاف نحو اليسار**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244344.png" height="50"> **ممنوع الانعطاف نحو اليمين**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244358.png" height="50"> **ممنوع القيام بنصف دورة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244372.png" height="50"> **ممنوع التجاوز**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244386.png" height="50"> **السماح بالمرور للقادم من الاتجاه المعاكس**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244415.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244429.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244442.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244455.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244469.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244482.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244495.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244513.png" height="50"> **منع استعمال المنبه الصوتي**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244530.png" height="50"> **وقوف عند مركز الجمارك**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244545.png" height="50"> **وقوف عند حاجز الشرطة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244559.png" height="50"> **وقوف عند حاجز الدرك**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244572.png" height="50"> **وقوف عند حاجز المراقبة الطرقية**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244586.png" height="50"> **وقوف عند حاجز الثلج**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244600.png" height="50"> **وقوف عند مركز الأداء**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244613.png" height="50"> **ممنوع التوقف**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244627.png" height="50"> **ممنوع الوقوف والتوقف**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244642.png" height="50"> **ممنوع التوقف من بداية الشهر إلى غاية النصف منه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244655.png" height="50"> **ممنوع التوقف من 16 من الشهر إلى متمه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244669.png" height="50"> **ولوج ممنوع على جميع المركبات ذات محرك**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244683.png" height="50"> **ولوج ممنوع على المركبات التي تجر قافلة أو مقطورة يفوق وزنها 250 كلغ**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244696.png" height="50"> **أشكال أخرى من المنع تبين طبيعتها بواسطة كتابة على العلامة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244713.png" height="50"> **دخول منطقة ممنوع فيها التوقف**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244732.png" height="50"> **دخول منطقة ذات التوقف من جانب واحد بالتناوب النصف شهري**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244746.png" height="50"> **دخول منطقة يكون التوقف فيها محددا زمنيا ومراقبا بواسطة قرص**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244760.png" height="50"> **دخول منطقة التوقف فيها مؤدى عنه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244774.png" height="50"> **دخول منطقة ذات التوقف بالتناوب النصف الشهري من جانب واحد ولمدة زمنية محددة ومراقبة بواسطة قرص**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244787.png" height="50"> **دخول منطقة السرعة فيها محدودة في 30 كلم/س**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244801.png" height="50"> **نهاية تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244815.png" height="50"> **نهاية كل أشكال المنع التي سبقت الإشارة إليها المفروضة على المركبات المتحركة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244828.png" height="50"> **نهاية تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244842.png" height="50"> **نهاية تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244856.png" height="50"> **نهاية تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244870.png" height="50"> **نهاية تحديد السرعة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244884.png" height="50"> **نهاية منع التجاوز**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244914.png" height="50"> **نهاية المنع المبينة طبيعته على العلامة**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244932.png" height="50"> **نهاية منع استعمال المنبه الصوتي**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244947.png" height="50"> **نهاية منطقة التوقف الممنوع**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244960.png" height="50"> **نهاية منطقة ذات التوقف من جانب واحد بالتناوب النصف شهري**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244974.png" height="50"> **نهاية منطقة ذات التوقف المحدد زمنيا مع المراقبة بواسطة قرص**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406244987.png" height="50"> **نهاية منطقة التوقف المؤدى عنه**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406245001.png" height="50"> **نهاية منطقة ذات التوقف من جانب واحد بالتناوب النصف الشهري ولمدة محددة زمنيا مع المراقبة بواسطة قرص**
+- <img src="../inputs/01_la_route/03_interdictions/المحور الفرعي_files/1682406245015.png" height="50"> **نهاية المنطقة ذات السرعة المحددة في 30 كلم/س**

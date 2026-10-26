@@ -1,0 +1,177 @@
+# 🚦 المحور الفرعي: التشوير العمودي لمحور التكوين: الطريق
+
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1689590854923.png" height="50"> **دلالة العلامة حسب الشكل**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282449717.png" height="50"> **خطر منعرج على اليمين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018447.png" height="50"> **خطر السير في اتجاهين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018490.png" height="50"> **خطر طريق محدودب**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1683555457678.png" height="50"> **خطر قارعة ضيقة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018551.jpeg" height="50"> **يعلن هذا التشوير الطرقي عن تواجد علامة " ليس لكم حق الأسبقية " على بعد 200 متر.**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687258191796.png" height="50"> **منع التوقف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282319215.png" height="50"> **منع الوقوف والتوقف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282348944.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513243278.png" height="50"> **منع استعمال المنبه الصوتي**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513213267.png" height="50"> **تحديد السرعة في 60 كلم في الساعة مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018660.png" height="50"> **ممنوع على المركبات السير دون ترك مسافة دنيا فاصلة تساوي العدد المشار إليه مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018703.png" height="50"> **نهاية كل أشكال المنع التي سبق الإعلان عنها والمفروضة على المركبات المتحركة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018717.png" height="50"> **نهاية منع استعمال المنبه الصوتي**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868180434.png" height="50"> **إجبارية الانعطاف نحو اليمين قبل العلامة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692869194123.png" height="50"> **ممر إجباري لمستعملي الدراجات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018828.png" height="50"> **نهاية الممر الإجباري لمستعملي الدراجات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1691677849661.png" height="50"> **نهاية الممر الإجباري على الراجلين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868275677.png" height="50"> **محطة سيارة الأجرة حيث الوقوف والتوقف مخصص فقط لسيارات الأجرة، يحدد امتداد هذا التخصيص بتشوير أفقي**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018898.png" height="50"> **موقف سيارات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018941.png" height="50"> **مركز الإغاثة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018955.png" height="50"> **محطة نفخ العجلات ذات استعمال مجاني خارج المحطة متعددة الخدمات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019007.png" height="50"> **علامة للتشوير المسبق لانشعاب على طريق سيار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019022.png" height="50"> **علامة تكميلية للاتجاه**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019066.png" height="50"> **علامة تشير إلى رقم طريق وطنية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019080.png" height="50"> **علامة تشير إلى رقم طريق إقليمية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019123.png" height="50"> **العرض الأقصى هو 2 متر**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508927393.png" height="50"> **على إمتداد 15 كلم**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508881334.png" height="50"> **خطر مؤقت: ازدحام شديد**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507578735.png" height="50"> **خطر مؤقت: قارعة يقع بها انزلاق**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508145791.png" height="50"> **علامة تشوير مسبق لتغيير القارعة أوالمسار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507640722.png" height="50"> **تشوير لورش هام أو وضعيات مختلفة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507667238.png" height="50"> **لوحة انحراف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506850058.png" height="50"> **علامة نهاية الانحراف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506898820.png" height="50"> **لويحة امتداد مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507143554.png" height="50"> **لويحة مسافة مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682407572662.png" height="50"> **منصة ضوئية لتقوية تشوير الوضع لمركبات التدخل والأشغال**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282392115.png" height="50"> **خطر منعرج على اليمين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692958488459.png" height="50"> **خطر م نعرج على اليسار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282425860.png" height="50"> **ممر الراجلين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282449717.png" height="50"> **خطر السير في اتجاهين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018447.png" height="50"> **خطر طريق محدودب**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018461.png" height="50"> **خطر حادثة سير**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018476.png" height="50"> **خطر أشغال**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018490.png" height="50"> **خطر قارعة ضيقة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1683555457678.png" height="50"> **يعلن هذا التشوير الطرقي عن تواجد علامة " ليس لكم حق الأسبقية " على بعد 200 متر.**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687258198569.png" height="50"> **منع التوقف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687258191796.png" height="50"> **منع الوقوف والتوقف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282319215.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282202109.png" height="50"> **ولوج ممنوع على كل مركبة ذات محرك باستثناء الدراجات والدراجات النارية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692958563932.png" height="50"> **ممنوع الإنعطاف نحو اليمين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282348944.png" height="50"> **منع استعمال المنبه الصوتي**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513243278.png" height="50"> **تحديد السرعة في 60 كلم في الساعة مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513230651.png" height="50"> **ممنوع التجاوز مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513223984.png" height="50"> **وقوف عند حاجز الدرك مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513213267.png" height="50"> **ممنوع على المركبات السير دون ترك مسافة دنيا فاصلة تساوي العدد المشار إليه مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018660.png" height="50"> **نهاية كل أشكال المنع التي سبق الإعلان عنها والمفروضة على المركبات المتحركة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018674.png" height="50"> **نهاية تحديد السرعة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018689.png" height="50"> **نهاية منع التجاوز**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018703.png" height="50"> **نهاية منع استعمال المنبه الصوتي**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018717.png" height="50"> **إجبارية الانعطاف نحو اليمين قبل العلامة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018731.png" height="50"> **اتجاه إجباري عند أول ملتقى طرق نحو اليسار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018745.png" height="50"> **سرعة دنيا إجبارية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868180434.png" height="50"> **ممر إجباري لمستعملي الدراجات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692869194123.png" height="50"> **نهاية الممر الإجباري لمستعملي الدراجات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018798.png" height="50"> **نهاية المسلك المخصص للمركبات البطيئة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018814.png" height="50"> **نهاية إجبارية تشغيل أضواء التقابل**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018828.png" height="50"> **نهاية الممر الإجباري على الراجلين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1691677849661.png" height="50"> **محطة سيارة الأجرة حيث الوقوف والتوقف مخصص فقط لسيارات الأجرة، يحدد امتداد هذا التخصيص بتشوير أفقي**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1691677868794.png" height="50"> **مدخل طريق السيار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868856779.png" height="50"> **إعلان عن وجود مسلك للدراجات منصوح به مخصص للدراجات ذات عجلتين أو ثلاث عجلات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868275677.png" height="50"> **موقف سيارات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018898.png" height="50"> **مركز الإغاثة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018913.png" height="50"> **محطة للتزود بالوقود مفتوحة 7 أيام/7 و24 ساعة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018927.png" height="50"> **مطعم**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018941.png" height="50"> **محطة نفخ العجلات ذات استعمال مجاني خارج المحطة متعددة الخدمات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018955.png" height="50"> **علامة للتشوير المسبق لانشعاب على طريق سيار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018969.png" height="50"> **علامة للإشارة إلى موقع منفذ من طريق سيار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018988.png" height="50"> **علامة تشير لاتجاه مدينتي الرباط والدار البيضاء**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019007.png" height="50"> **علامة تكميلية للاتجاه**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019022.png" height="50"> **علامة تشير إلى رقم طريق وطنية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019036.png" height="50"> **علامة تشير إلى رقم طريق جهوية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019050.png" height="50"> **علامة تشير إلى رقم طريق غابوية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019066.png" height="50"> **علامة تشير إلى رقم طريق إقليمية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019080.png" height="50"> **العرض الأقصى هو 2 متر**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019094.png" height="50"> **الوزن الإجمالي الأقصى المأذون به هو 5.5 طن**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019108.png" height="50"> **على بعد 600 متر**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019123.png" height="50"> **على إمتداد 15 كلم**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508927393.png" height="50"> **خطر مؤقت: ازدحام شديد**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508916425.png" height="50"> **خطر مؤقت: تطاير الحصى**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508898992.png" height="50"> **إعلان مؤقت عن أضواء ثلاثية اللون**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508881334.png" height="50"> **خطر مؤقت: قارعة يقع بها انزلاق**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507578735.png" height="50"> **علامة تشوير مسبق لتغيير القارعة أوالمسار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508115227.png" height="50"> **لوحة تخصيص المسالك**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507640722.png" height="50"> **لوحة انحراف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507750402.png" height="50"> **لوحة انحراف صنف من المركبات مع ذكر المدينة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507682789.png" height="50"> **علامة لتأكيد الانحراف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507667238.png" height="50"> **علامة نهاية الانحراف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506850058.png" height="50"> **لويحة امتداد مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506863741.png" height="50"> **لويحة إرشاد مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506872598.png" height="50"> **لويحة إرشاد مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506898820.png" height="50"> **لويحة مسافة مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507143554.png" height="50"> **منصة ضوئية لتقوية تشوير الوضع لمركبات التدخل والأشغال**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682407572589.png" height="50"> **سهم ضوئي أفقي يكون وامضا يدل على الاتجاه الذي يجب اتباعه**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682407572550.png" height="50"> **أضواء صفراء وهاجة تستخدم لتتميم التشويرالمؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682407572662.png" height="50"> **علامة ضوئية تضم رسالة حرفية ضوئية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282392115.png" height="50"> **خطر منعرج على اليمين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692958488459.png" height="50"> **خطر م نعرج على اليسار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282425860.png" height="50"> **ممر الراجلين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282449717.png" height="50"> **خطر السير في اتجاهين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018447.png" height="50"> **خطر طريق محدودب**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018461.png" height="50"> **خطر حادثة سير**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018476.png" height="50"> **خطر أشغال**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018490.png" height="50"> **خطر قارعة ضيقة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1683555457678.png" height="50"> **يعلن هذا التشوير الطرقي عن تواجد علامة " ليس لكم حق الأسبقية " على بعد 200 متر.**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687258198569.png" height="50"> **منع التوقف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687258191796.png" height="50"> **منع الوقوف والتوقف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282319215.png" height="50"> **تحديد السرعة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282202109.png" height="50"> **ولوج ممنوع على كل مركبة ذات محرك باستثناء الدراجات والدراجات النارية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692958563932.png" height="50"> **ممنوع الإنعطاف نحو اليمين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1690282348944.png" height="50"> **منع استعمال المنبه الصوتي**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513243278.png" height="50"> **تحديد السرعة في 60 كلم في الساعة مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513230651.png" height="50"> **ممنوع التجاوز مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513223984.png" height="50"> **وقوف عند حاجز الدرك مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1687513213267.png" height="50"> **ممنوع على المركبات السير دون ترك مسافة دنيا فاصلة تساوي العدد المشار إليه مؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018660.png" height="50"> **نهاية كل أشكال المنع التي سبق الإعلان عنها والمفروضة على المركبات المتحركة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018674.png" height="50"> **نهاية تحديد السرعة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018689.png" height="50"> **نهاية منع التجاوز**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018703.png" height="50"> **نهاية منع استعمال المنبه الصوتي**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018717.png" height="50"> **إجبارية الانعطاف نحو اليمين قبل العلامة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018731.png" height="50"> **اتجاه إجباري عند أول ملتقى طرق نحو اليسار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018745.png" height="50"> **سرعة دنيا إجبارية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868180434.png" height="50"> **ممر إجباري لمستعملي الدراجات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692869194123.png" height="50"> **نهاية الممر الإجباري لمستعملي الدراجات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018798.png" height="50"> **نهاية المسلك المخصص للمركبات البطيئة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018814.png" height="50"> **نهاية إجبارية تشغيل أضواء التقابل**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018828.png" height="50"> **نهاية الممر الإجباري على الراجلين**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1691677849661.png" height="50"> **محطة سيارة الأجرة حيث الوقوف والتوقف مخصص فقط لسيارات الأجرة، يحدد امتداد هذا التخصيص بتشوير أفقي**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1691677868794.png" height="50"> **مدخل طريق السيار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868856779.png" height="50"> **إعلان عن وجود مسلك للدراجات منصوح به مخصص للدراجات ذات عجلتين أو ثلاث عجلات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1692868275677.png" height="50"> **موقف سيارات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018898.png" height="50"> **مركز الإغاثة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018913.png" height="50"> **محطة للتزود بالوقود مفتوحة 7 أيام/7 و24 ساعة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018927.png" height="50"> **مطعم**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018941.png" height="50"> **محطة نفخ العجلات ذات استعمال مجاني خارج المحطة متعددة الخدمات**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018955.png" height="50"> **علامة للتشوير المسبق لانشعاب على طريق سيار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018969.png" height="50"> **علامة للإشارة إلى موقع منفذ من طريق سيار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350018988.png" height="50"> **علامة تشير لاتجاه مدينتي الرباط والدار البيضاء**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019007.png" height="50"> **علامة تكميلية للاتجاه**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019022.png" height="50"> **علامة تشير إلى رقم طريق وطنية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019036.png" height="50"> **علامة تشير إلى رقم طريق جهوية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019050.png" height="50"> **علامة تشير إلى رقم طريق غابوية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019066.png" height="50"> **علامة تشير إلى رقم طريق إقليمية**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019080.png" height="50"> **العرض الأقصى هو 2 متر**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019094.png" height="50"> **الوزن الإجمالي الأقصى المأذون به هو 5.5 طن**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019108.png" height="50"> **على بعد 600 متر**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682350019123.png" height="50"> **على إمتداد 15 كلم**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508927393.png" height="50"> **خطر مؤقت: ازدحام شديد**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508916425.png" height="50"> **خطر مؤقت: تطاير الحصى**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508898992.png" height="50"> **إعلان مؤقت عن أضواء ثلاثية اللون**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508881334.png" height="50"> **خطر مؤقت: قارعة يقع بها انزلاق**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507578735.png" height="50"> **علامة تشوير مسبق لتغيير القارعة أوالمسار**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696508115227.png" height="50"> **لوحة تخصيص المسالك**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507640722.png" height="50"> **لوحة انحراف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507750402.png" height="50"> **لوحة انحراف صنف من المركبات مع ذكر المدينة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507682789.png" height="50"> **علامة لتأكيد الانحراف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507667238.png" height="50"> **علامة نهاية الانحراف**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506850058.png" height="50"> **لويحة امتداد مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506863741.png" height="50"> **لويحة إرشاد مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506872598.png" height="50"> **لويحة إرشاد مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696506898820.png" height="50"> **لويحة مسافة مرتبطة بلوحات مؤقتة**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1696507143554.png" height="50"> **منصة ضوئية لتقوية تشوير الوضع لمركبات التدخل والأشغال**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682407572589.png" height="50"> **سهم ضوئي أفقي يكون وامضا يدل على الاتجاه الذي يجب اتباعه**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682407572550.png" height="50"> **أضواء صفراء وهاجة تستخدم لتتميم التشويرالمؤقت**
+- <img src="../inputs/01_la_route/01_signalisation_verticale/المحور الفرعي_files/1682407572662.png" height="50"> **علامة ضوئية تضم رسالة حرفية ضوئية**

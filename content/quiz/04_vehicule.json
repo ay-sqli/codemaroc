@@ -1,0 +1,1936 @@
+[
+  {
+    "id": "01_regles_administratives-01",
+    "t": "01_regles_administratives",
+    "q": "Combien de documents sont obligatoires à bord d'une voiture ?",
+    "qa": "كم عدد الوثائق الإجبارية على متن المركبة ؟",
+    "o": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "a": [
+      2
+    ],
+    "e": "5 documents obligatoires : permis de conduire, carte grise, attestation d'assurance, attestation de vignette (taxe annuelle) et procès-verbal du contrôle technique. Le constat amiable est facultatif.",
+    "r": "5 documents : permis, carte grise, assurance, vignette, CT."
+  },
+  {
+    "id": "01_regles_administratives-02",
+    "t": "01_regles_administratives",
+    "q": "Quels documents doivent obligatoirement se trouver à bord ?",
+    "qa": "ما هي الوثائق التي يجب أن توجد إجباريا على متن المركبة ؟",
+    "o": [
+      "Le permis de conduire (رخصة السياقة)",
+      "Le constat amiable (المعاينة الودية)",
+      "La carte grise (شهادة التسجيل)",
+      "Le procès-verbal du contrôle technique (محضر المراقبة التقنية)"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Permis, carte grise et PV de contrôle technique font partie des 5 documents obligatoires. Le constat amiable est un document facultatif, seulement conseillé.",
+    "r": "Constat amiable : facultatif, mais utile à garder à bord."
+  },
+  {
+    "id": "01_regles_administratives-03",
+    "t": "01_regles_administratives",
+    "q": "Quelles propositions sur le constat amiable sont justes ?",
+    "qa": "ما هي الاقتراحات الصحيحة بخصوص المعاينة الودية ؟",
+    "o": [
+      "Il est obligatoire à bord",
+      "Il se remplit après un accident avec dégâts matériels seulement",
+      "Il vaut reconnaissance de responsabilité",
+      "Il décrit les faits en vue de l'indemnisation"
+    ],
+    "a": [
+      1,
+      3
+    ],
+    "e": "Le constat amiable se remplit calmement après un accident uniquement matériel ; il décrit les faits pour l'indemnisation et n'est pas un aveu de responsabilité. Il n'est pas obligatoire, mais très utile.",
+    "r": "Constat : dégâts matériels, décrit les faits, pas un aveu."
+  },
+  {
+    "id": "01_regles_administratives-04",
+    "t": "01_regles_administratives",
+    "q": "Un accident fait des blessés. Qui établit le rapport ?",
+    "qa": "وقعت حادثة نتجت عنها إصابات بدنية. من ينجز التقرير ؟",
+    "o": [
+      "La police ou la gendarmerie",
+      "Les conducteurs, avec un constat amiable",
+      "La compagnie d'assurance",
+      "La NARSA"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le constat amiable ne concerne que les accidents à dégâts matériels. En cas de blessés, c'est la police ou la gendarmerie qui rédige un rapport.",
+    "r": "Blessés → rapport de la police ou de la gendarmerie."
+  },
+  {
+    "id": "01_regles_administratives-05",
+    "t": "01_regles_administratives",
+    "q": "Après un accident matériel, dans quel délai faut-il informer sa compagnie d'assurance ?",
+    "qa": "بعد حادثة بأضرار مادية، داخل أي أجل يجب إبلاغ شركة التأمين ؟",
+    "o": [
+      "24 heures",
+      "48 heures",
+      "5 jours",
+      "1 mois"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'assureur doit être informé dans un délai de 5 jours. Le délai d'un mois concerne la contre-visite après un défaut au contrôle technique.",
+    "r": "Déclaration à l'assurance : 5 jours."
+  },
+  {
+    "id": "01_regles_administratives-06",
+    "t": "01_regles_administratives",
+    "q": "Au Maroc, quelle assurance automobile est obligatoire ?",
+    "qa": "في المغرب، ما هو التأمين الإلزامي للمركبة ؟",
+    "o": [
+      "L'assurance tous risques",
+      "L'assurance vol et incendie",
+      "Aucune, l'assurance est facultative",
+      "L'assurance de responsabilité civile"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Seule l'assurance de responsabilité civile est obligatoire. La formule tous risques est un choix personnel : c'est un piège classique de l'examen.",
+    "r": "Obligatoire = responsabilité civile, pas tous risques."
+  },
+  {
+    "id": "01_regles_administratives-07",
+    "t": "01_regles_administratives",
+    "q": "Quelle formule d'assurance est la plus simple et la moins chère ?",
+    "qa": "ما هي صيغة التأمين الأبسط والأرخص ؟",
+    "o": [
+      "Tous risques (جميع المخاطر)",
+      "Tiers + (الطرف الثالث +)",
+      "Tiers (الطرف الثالث)"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La formule au tiers couvre seulement les dommages matériels et corporels causés aux autres : c'est la moins chère. Tiers + couvre davantage pour un coût moyen ; tous risques est la plus complète.",
+    "r": "Tiers < Tiers + < Tous risques (couverture et prix)."
+  },
+  {
+    "id": "01_regles_administratives-08",
+    "t": "01_regles_administratives",
+    "q": "Quelle formule couvre aussi le vol, le bris de glace, l'incendie et l'assistance ?",
+    "qa": "ما هي الصيغة التي تغطي أيضا السرقة والزجاج والحريق والمساعدة ؟",
+    "o": [
+      "Tiers (الطرف الثالث)",
+      "Tous risques (جميع المخاطر)",
+      "Aucune formule ne couvre le vol"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La formule tous risques est la plus complète : vol, bris de glace, incendie, assistance… La formule au tiers ne couvre que les dommages causés aux autres.",
+    "r": "Tous risques = la couverture la plus complète."
+  },
+  {
+    "id": "01_regles_administratives-09",
+    "t": "01_regles_administratives",
+    "q": "Quand doit-on payer la taxe spéciale annuelle sur les véhicules (vignette) ?",
+    "qa": "متى تؤدى الضريبة الخصوصية السنوية على المركبات ؟",
+    "o": [
+      "En décembre, pour l'année suivante",
+      "En janvier de chaque année",
+      "À la date anniversaire de la carte grise",
+      "Tous les 5 ans"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La vignette se paie chaque année, pendant le mois de janvier. L'attestation de paiement est valable un an.",
+    "r": "Vignette : chaque année, en janvier.",
+    "img": "1683563209298.png"
+  },
+  {
+    "id": "01_regles_administratives-10",
+    "t": "01_regles_administratives",
+    "q": "De quoi dépend le montant de la vignette ?",
+    "qa": "على ماذا يتوقف مبلغ الضريبة الخصوصية السنوية ؟",
+    "o": [
+      "Du nombre de passagers",
+      "De la puissance fiscale",
+      "Du type de carburant",
+      "De l'âge du conducteur"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Le montant de la vignette est fixé selon la puissance fiscale du véhicule et son type de carburant.",
+    "r": "Vignette = puissance fiscale + type de carburant."
+  },
+  {
+    "id": "01_regles_administratives-11",
+    "t": "01_regles_administratives",
+    "q": "Une voiture électrique ou hybride doit-elle payer la vignette ?",
+    "qa": "هل يجب على مركبة كهربائية أو هجينة أداء الضريبة الخصوصية السنوية ؟",
+    "o": [
+      "Oui, comme toutes les voitures",
+      "Non, elle est exonérée",
+      "Oui, mais à moitié prix"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les véhicules électriques et hybrides sont exonérés de la vignette : piège fréquent à l'examen.",
+    "r": "Électrique ou hybride → exonéré de vignette."
+  },
+  {
+    "id": "01_regles_administratives-12",
+    "t": "01_regles_administratives",
+    "q": "Quelle est la durée de validité du certificat d'immatriculation (carte grise) ?",
+    "qa": "ما هي مدة صلاحية شهادة تسجيل المركبة (البطاقة الرمادية) ؟",
+    "o": [
+      "1 an",
+      "5 ans",
+      "10 ans (ou jusqu'à la vente du véhicule)",
+      "Illimitée"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La carte grise est valable 10 ans, ou jusqu'à la vente/l'achat du véhicule. La vignette et le contrôle technique, eux, valent un an.",
+    "r": "Carte grise : 10 ans (ou jusqu'à la vente)."
+  },
+  {
+    "id": "01_regles_administratives-13",
+    "t": "01_regles_administratives",
+    "q": "Le verso du permis indique les catégories et la date de fin de validité. Combien de temps le permis de conduire est-il valable ?",
+    "qa": "تبين الواجهة الخلفية لرخصة السياقة الأصناف وتاريخ نهاية الصلاحية. ما هي مدة صلاحية رخصة السياقة ؟",
+    "o": [
+      "10 ans",
+      "2 ans",
+      "5 ans",
+      "À vie"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le permis de conduire est valable 10 ans ; son verso indique les catégories obtenues et la date de fin de validité.",
+    "r": "Permis : valable 10 ans (date de fin au verso).",
+    "img": "1686650444973.png"
+  },
+  {
+    "id": "01_regles_administratives-14",
+    "t": "01_regles_administratives",
+    "q": "Quels documents ont une validité d'un an ?",
+    "qa": "ما هي الوثائق التي مدة صلاحيتها سنة واحدة ؟",
+    "o": [
+      "La carte grise",
+      "L'attestation de vignette",
+      "Le permis de conduire",
+      "Le procès-verbal du contrôle technique"
+    ],
+    "a": [
+      1,
+      3
+    ],
+    "e": "La vignette et le contrôle technique valent un an. La carte grise et le permis de conduire valent 10 ans.",
+    "r": "1 an : vignette et CT ; 10 ans : carte grise et permis."
+  },
+  {
+    "id": "01_regles_administratives-15",
+    "t": "01_regles_administratives",
+    "q": "Quelle est la durée de validité de l'attestation d'assurance ?",
+    "qa": "ما هي مدة صلاحية شهادة التأمين ؟",
+    "o": [
+      "Toujours 1 an",
+      "10 ans",
+      "Toujours 6 mois",
+      "Elle dépend du contrat (1 mois, 3 mois, 6 mois, 1 an…)"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La validité de l'assurance est fixée par le contrat : un mois, 3 mois, 6 mois, un an… Il faut vérifier sa date de fin avant de partir.",
+    "r": "Assurance : validité selon le contrat."
+  },
+  {
+    "id": "01_regles_administratives-16",
+    "t": "01_regles_administratives",
+    "q": "Pour une voiture particulière neuve, quel est le rythme du contrôle technique périodique ?",
+    "qa": "بالنسبة لسيارة خاصة جديدة، ما هي دورية المراقبة التقنية ؟",
+    "o": [
+      "Avant la fin de la 1re année, puis chaque année",
+      "Après 3 ans, puis tous les 2 ans",
+      "Avant la fin de la 5e année, puis tous les 5 ans",
+      "Avant la fin de la 5e année, puis chaque année"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Voiture particulière : premier contrôle technique avant la fin de la 5e année d'utilisation, puis chaque année. « Avant la fin de la 1re année » concerne les taxis, les véhicules de marchandises et d'auto-école ; les autocars passent tous les 6 mois.",
+    "r": "Voiture particulière : 1er CT avant 5 ans d'usage, puis chaque année."
+  },
+  {
+    "id": "01_regles_administratives-17",
+    "t": "01_regles_administratives",
+    "q": "À quelle fréquence les taxis, les véhicules de transport de marchandises et les véhicules d'auto-école passent-ils le contrôle technique ?",
+    "qa": "ما هي دورية المراقبة التقنية لسيارات الأجرة ومركبات نقل البضائع ومركبات تعليم السياقة ؟",
+    "o": [
+      "Tous les 6 mois",
+      "Chaque année",
+      "Tous les 2 ans",
+      "Tous les 5 ans"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Taxis, transport de marchandises et auto-écoles : contrôle technique chaque année.",
+    "r": "Taxi, marchandises, auto-école : CT chaque année."
+  },
+  {
+    "id": "01_regles_administratives-18",
+    "t": "01_regles_administratives",
+    "q": "Quels véhicules doivent passer le contrôle technique tous les 6 mois ?",
+    "qa": "ما هي المركبات التي تخضع للمراقبة التقنية كل 6 أشهر ؟",
+    "o": [
+      "Les autocars (الحافلات)",
+      "Les voitures particulières de plus de 5 ans",
+      "Les véhicules de location sans chauffeur",
+      "Les taxis"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Autocars, véhicules loués sans chauffeur et transport mixte : tous les 6 mois. Taxis : chaque année ; voitures particulières : chaque année après le premier contrôle (avant la fin de la 5e année).",
+    "r": "Autocars et location sans chauffeur : CT tous les 6 mois."
+  },
+  {
+    "id": "01_regles_administratives-19",
+    "t": "01_regles_administratives",
+    "q": "Le contrôle technique relève un défaut. De quel délai disposez-vous pour la contre-visite ?",
+    "qa": "كشفت المراقبة التقنية عن عيب. ما هي المهلة المتاحة للمراقبة التكميلية ؟",
+    "o": [
+      "1 mois",
+      "5 jours",
+      "15 jours",
+      "6 mois"
+    ],
+    "a": [
+      0
+    ],
+    "e": "En cas de défaut, on dispose d'un mois pour faire réparer et passer le contrôle complémentaire (contre-visite).",
+    "r": "Défaut au CT → contre-visite sous 1 mois."
+  },
+  {
+    "id": "01_regles_administratives-20",
+    "t": "01_regles_administratives",
+    "q": "Le contrôle technique de votre véhicule a expiré. Vous pouvez :",
+    "qa": "انتهت مدة المراقبة التقنية لمركبتك. يمكنك :",
+    "o": [
+      "Circuler normalement pendant un mois",
+      "Circuler seulement en agglomération",
+      "Vous rendre uniquement au garage ou au centre de contrôle",
+      "Circuler normalement si l'assurance est valide"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Avec un contrôle technique expiré, seul le déplacement vers le garage ou le centre de contrôle est permis.",
+    "r": "CT expiré → seulement vers le garage ou le centre de contrôle."
+  },
+  {
+    "id": "01_regles_administratives-21",
+    "t": "01_regles_administratives",
+    "q": "Le contrôle technique porte sur :",
+    "qa": "تشمل المراقبة التقنية :",
+    "o": [
+      "5 fonctions et 50 points de contrôle",
+      "7 fonctions et 70 points de contrôle",
+      "12 fonctions et 100 points de contrôle",
+      "10 fonctions et 77 points de contrôle"
+    ],
+    "a": [
+      3
+    ],
+    "e": "Le contrôle technique vérifie, sans démontage, 10 fonctions (identification, freinage, direction, visibilité, éclairage, liaison au sol, pollution…) et 77 points.",
+    "r": "Contrôle technique : 10 fonctions, 77 points, sans démontage."
+  },
+  {
+    "id": "01_regles_administratives-22",
+    "t": "01_regles_administratives",
+    "q": "Quels types de contrôle technique existent ?",
+    "qa": "ما هي أنواع المراقبة التقنية ؟",
+    "o": [
+      "Le contrôle volontaire",
+      "Le contrôle périodique",
+      "Le contrôle lors d'un transfert de propriété ou d'une modification du véhicule",
+      "Le contrôle après chaque vidange"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Il existe trois types de contrôle : volontaire, périodique, et lors d'un transfert de propriété ou d'une modification. La vidange n'impose aucun contrôle technique.",
+    "r": "CT : volontaire, périodique, mutation ou modification."
+  },
+  {
+    "id": "01_regles_administratives-23",
+    "t": "01_regles_administratives",
+    "q": "Quelles informations figurent sur le certificat d'immatriculation (carte grise) ?",
+    "qa": "ما هي المعلومات الموجودة في شهادة التسجيل (البطاقة الرمادية) ؟",
+    "o": [
+      "Le numéro d'immatriculation",
+      "Les points restants du permis",
+      "L'identité et l'adresse du propriétaire",
+      "La puissance fiscale et les caractéristiques techniques"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "La carte grise, obligatoire avant toute utilisation du véhicule, porte le numéro d'immatriculation, l'identité et l'adresse du propriétaire, les dates, les caractéristiques techniques, la puissance fiscale et le genre d'usage. Les points concernent le permis, pas le véhicule.",
+    "r": "Carte grise : immatriculation, propriétaire, caractéristiques."
+  },
+  {
+    "id": "01_regles_administratives-24",
+    "t": "01_regles_administratives",
+    "q": "La charge utile d'un véhicule est égale à :",
+    "qa": "الحمولة النافعة للمركبة تساوي :",
+    "o": [
+      "PTAC + poids à vide",
+      "PTAC − poids à vide",
+      "Poids réel − PTAC",
+      "PTRA − PTAC"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La charge utile est ce que le véhicule peut transporter : poids total autorisé en charge (PTAC) moins le poids à vide (PV).",
+    "r": "Charge utile = PTAC − poids à vide."
+  },
+  {
+    "id": "01_regles_administratives-25",
+    "t": "01_regles_administratives",
+    "q": "Que désigne le PTAC (poids total autorisé en charge) ?",
+    "qa": "ماذا يعني الوزن الإجمالي المأذون به (PTAC) ؟",
+    "o": [
+      "Le poids du véhicule vide, prêt à rouler",
+      "Le poids réel avec le conducteur et les passagers",
+      "Le poids maximal du véhicule chargé, autorisé par la NARSA",
+      "Le poids roulant d'un ensemble de véhicules"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le PTAC est le poids maximal du véhicule chargé accepté par la NARSA. Le poids d'un véhicule articulé ou d'un ensemble de véhicules est le PTRA ; le poids à vide (PV) se mesure véhicule prêt à rouler.",
+    "r": "PTAC = poids max en charge ; PTRA = ensemble de véhicules."
+  },
+  {
+    "id": "02_elements_mecaniques-01",
+    "t": "02_elements_mecaniques",
+    "q": "Dans quel ordre se présente la chaîne cinématique d'une voiture ?",
+    "qa": "ما هو ترتيب السلسلة الحركية للمركبة ؟",
+    "o": [
+      "Moteur → boîte de vitesses → embrayage → roues",
+      "Moteur → embrayage → boîte de vitesses → roues",
+      "Embrayage → moteur → boîte de vitesses → roues",
+      "Moteur → roues → boîte de vitesses → embrayage"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La chaîne cinématique suit toujours le même ordre : moteur → embrayage → boîte de vitesses → roues.",
+    "r": "Moteur → embrayage → boîte → roues."
+  },
+  {
+    "id": "02_elements_mecaniques-02",
+    "t": "02_elements_mecaniques",
+    "q": "Quelles roues sont reliées au volant (roues directrices) ?",
+    "qa": "ما هي العجلات المرتبطة بالمقود (العجلات الموجهة) ؟",
+    "o": [
+      "Les roues arrière",
+      "Les quatre roues",
+      "Les roues avant"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le volant commande les roues avant, qui orientent la trajectoire ; les roues arrière suivent les roues avant.",
+    "r": "Volant → roues avant ; l'arrière suit."
+  },
+  {
+    "id": "02_elements_mecaniques-03",
+    "t": "02_elements_mecaniques",
+    "q": "Après une crevaison, un pneu « Run Flat » permet de continuer à rouler :",
+    "qa": "بعد الثقب، يسمح إطار من نوع Run Flat بمواصلة السير :",
+    "o": [
+      "À 50 km/h maximum, sur 50 km",
+      "À 80 km/h maximum, sur une distance pouvant atteindre 250 km",
+      "À 110 km/h, sur 500 km",
+      "Sans aucune limitation"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le pneu Run Flat continue de rouler après une crevaison, mais sans dépasser 80 km/h et sur 250 km au maximum.",
+    "r": "Run Flat crevé : 80 km/h max, jusqu'à 250 km."
+  },
+  {
+    "id": "02_elements_mecaniques-04",
+    "t": "02_elements_mecaniques",
+    "q": "Un pneu « Tubeless » est un pneu :",
+    "qa": "الإطار من نوع Tubeless هو إطار :",
+    "o": [
+      "Sans chambre à air, avec la valve sur la jante",
+      "Qui peut rouler à plat après une crevaison",
+      "Équipé d'une chambre à air renforcée"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Tubeless signifie sans chambre à air : la valve est fixée sur la jante. Le pneu qui roule après une crevaison est le Run Flat.",
+    "r": "Tubeless = sans chambre à air ; Run Flat = roule crevé."
+  },
+  {
+    "id": "02_elements_mecaniques-05",
+    "t": "02_elements_mecaniques",
+    "q": "Quelle est la profondeur minimale des sculptures d'un pneu ?",
+    "qa": "ما هو العمق الأدنى لنقوش الإطار ؟",
+    "o": [
+      "1 mm",
+      "1,6 mm",
+      "2,5 mm",
+      "3 mm"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les sculptures doivent mesurer au moins 1,6 mm. Un pneu usé jusqu'à cette limite, crevé ou en mauvais état doit être remplacé.",
+    "r": "Sculptures des pneus : 1,6 mm minimum."
+  },
+  {
+    "id": "02_elements_mecaniques-06",
+    "t": "02_elements_mecaniques",
+    "q": "Une pression des pneus correcte assure :",
+    "qa": "ضغط الإطارات المناسب يضمن :",
+    "o": [
+      "Une adhérence optimale à la route",
+      "Une vitesse maximale plus élevée",
+      "Un risque d'éclatement plus faible"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "La bonne pression donne une adhérence optimale au sol et réduit le risque d'éclatement. Elle n'augmente pas la vitesse maximale du véhicule.",
+    "r": "Bonne pression = meilleure adhérence, moins d'éclatement."
+  },
+  {
+    "id": "02_elements_mecaniques-07",
+    "t": "02_elements_mecaniques",
+    "q": "Quels niveaux de liquides faut-il surveiller régulièrement ?",
+    "qa": "ما هي مستويات السوائل التي يجب مراقبتها بانتظام ؟",
+    "o": [
+      "L'huile moteur",
+      "Le liquide de refroidissement",
+      "Le liquide de frein",
+      "Le liquide de lave-glace"
+    ],
+    "a": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "e": "Les niveaux à contrôler sont l'huile, le liquide de refroidissement, le liquide de frein et le lave-glace.",
+    "r": "Niveaux : huile, refroidissement, frein, lave-glace."
+  },
+  {
+    "id": "02_elements_mecaniques-08",
+    "t": "02_elements_mecaniques",
+    "q": "Quel rapport offre le plus grand couple, utile au démarrage et dans les montées très raides ?",
+    "qa": "ما هو مستوى السرعة الذي يعطي أكبر عزم، ويستعمل للإقلاع والعقبات الحادة جدا ؟",
+    "o": [
+      "La 5e",
+      "La 3e",
+      "La 1re",
+      "La 4e"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La 1re donne le plus de couple : démarrage et montées très raides. La 5e donne la plus grande vitesse, sur routes plates sans virages.",
+    "r": "1re = force maximale ; 5e = vitesse maximale."
+  },
+  {
+    "id": "02_elements_mecaniques-09",
+    "t": "02_elements_mecaniques",
+    "q": "Quel rapport allie couple et vitesse, adapté aux montées et aux virages ?",
+    "qa": "ما هو مستوى السرعة الذي يجمع بين العزم والسرعة، ويناسب العقبات والمنعرجات ؟",
+    "o": [
+      "La 3e",
+      "La 1re",
+      "La 5e",
+      "La 4e"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La 3e combine couple et vitesse : montées et virages. La 4e convient aux routes plates, la 5e aux routes plates sans virages.",
+    "r": "3e : montées et virages ; 4e-5e : routes plates."
+  },
+  {
+    "id": "02_elements_mecaniques-10",
+    "t": "02_elements_mecaniques",
+    "q": "Quand faut-il changer de rapport ?",
+    "qa": "متى يجب تغيير مستوى السرعة ؟",
+    "o": [
+      "Monter au-dessus de 1500 tr/min, rétrograder sous 1000 tr/min",
+      "Monter au-dessus de 5000 tr/min, rétrograder sous 2500 tr/min",
+      "Monter au-dessus de 2500 tr/min, rétrograder sous 1500 tr/min"
+    ],
+    "a": [
+      2
+    ],
+    "e": "On passe le rapport supérieur au-dessus de 2500 tr/min et on rétrograde sous 1500 tr/min : on reste ainsi dans la zone verte, la plus économique.",
+    "r": "Monter > 2500 tr/min, rétrograder < 1500 tr/min."
+  },
+  {
+    "id": "02_elements_mecaniques-11",
+    "t": "02_elements_mecaniques",
+    "q": "Quelles propositions sur la boîte de vitesses automatique (BVA) sont justes ?",
+    "qa": "ما هي الاقتراحات الصحيحة بخصوص علبة السرعة الأوتوماتيكية ؟",
+    "o": [
+      "Elle est confortable dans les embouteillages",
+      "Elle consomme moins qu'une boîte manuelle",
+      "Elle coûte plus cher à l'achat et à l'entretien",
+      "Elle permet de garder les mains sur le volant"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "La BVA apporte du confort dans les embouteillages et laisse les mains sur le volant, mais elle consomme plus et coûte plus cher (achat et entretien) qu'une boîte manuelle.",
+    "r": "BVA : confort, mais conso, prix et entretien plus élevés."
+  },
+  {
+    "id": "02_elements_mecaniques-12",
+    "t": "02_elements_mecaniques",
+    "q": "Combien de pédales possède une voiture à boîte automatique ?",
+    "qa": "كم عدد الدواسات في مركبة بعلبة سرعة أوتوماتيكية ؟",
+    "o": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Une voiture automatique n'a que deux pédales : accélérateur à droite et frein à gauche. Il n'y a pas de pédale d'embrayage.",
+    "r": "Boîte automatique : 2 pédales, pas d'embrayage."
+  },
+  {
+    "id": "02_elements_mecaniques-13",
+    "t": "02_elements_mecaniques",
+    "q": "Appuyer sur la pédale d'embrayage permet de :",
+    "qa": "الضغط على دواسة الواصل يسمح بـ :",
+    "o": [
+      "Freiner le véhicule",
+      "Accélérer",
+      "Séparer le moteur de la boîte de vitesses",
+      "Bloquer les roues à l'arrêt"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'embrayage (pédale de gauche, seulement en boîte manuelle) sépare le moteur de la boîte de vitesses, par exemple pour changer de rapport.",
+    "r": "Embrayage enfoncé = moteur séparé de la boîte."
+  },
+  {
+    "id": "02_elements_mecaniques-14",
+    "t": "02_elements_mecaniques",
+    "q": "Sur une voiture à boîte manuelle, de gauche à droite, les pédales sont :",
+    "qa": "في مركبة بعلبة سرعة يدوية، من اليسار إلى اليمين، الدواسات هي :",
+    "o": [
+      "Embrayage – frein – accélérateur",
+      "Frein – embrayage – accélérateur",
+      "Embrayage – accélérateur – frein",
+      "Accélérateur – frein – embrayage"
+    ],
+    "a": [
+      0
+    ],
+    "e": "À gauche l'embrayage, au milieu le frein, à droite l'accélérateur. En boîte automatique, le frein se trouve à gauche.",
+    "r": "Gauche embrayage, milieu frein, droite accélérateur."
+  },
+  {
+    "id": "02_elements_mecaniques-15",
+    "t": "02_elements_mecaniques",
+    "q": "Sur une boîte automatique, que signifie la position N ?",
+    "qa": "في علبة السرعة الأوتوماتيكية، ماذا يعني الوضع N ؟",
+    "o": [
+      "Stationnement (parking)",
+      "Marche arrière",
+      "Neutre : le moteur tourne sans entraîner les roues",
+      "Marche avant avec changement automatique des rapports"
+    ],
+    "a": [
+      2
+    ],
+    "e": "P = parking, R = marche arrière, N = neutre (le moteur tourne librement sans entraîner les roues), D = marche avant avec passage automatique des rapports.",
+    "r": "P parking, R arrière, N neutre, D marche avant.",
+    "img": "1685114219327.png"
+  },
+  {
+    "id": "02_elements_mecaniques-16",
+    "t": "02_elements_mecaniques",
+    "q": "À l'arrêt, votre voiture automatique est en position P. Faut-il aussi serrer le frein à main ?",
+    "qa": "عند التوقف، مركبتك الأوتوماتيكية في الوضع P. هل يجب أيضا شد الحصار اليدوي ؟",
+    "o": [
+      "Non, la position P suffit",
+      "Seulement en montée",
+      "Oui : la position P ne remplace pas complètement le frein à main"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La position P empêche la transmission du mouvement (blocage complémentaire), mais elle ne remplace pas complètement le frein à main.",
+    "r": "Position P ≠ frein à main : serrer le frein à main."
+  },
+  {
+    "id": "02_elements_mecaniques-17",
+    "t": "02_elements_mecaniques",
+    "q": "Un voyant rouge de ce type s'allume pendant que vous roulez. Que faites-vous ?",
+    "qa": "اشتعل مؤشر أحمر من هذا النوع أثناء السير. ماذا تفعل ؟",
+    "o": [
+      "Je continue jusqu'au garage le plus proche",
+      "Je réduis ma vitesse et je continue",
+      "Je m'arrête immédiatement",
+      "J'attends qu'il s'éteigne tout seul"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Rouge = danger immédiat, panne grave : il faut s'arrêter tout de suite, et non continuer jusqu'au garage le plus proche (piège d'examen).",
+    "r": "Voyant rouge → arrêt immédiat.",
+    "img": "1683017253818.png"
+  },
+  {
+    "id": "02_elements_mecaniques-18",
+    "t": "02_elements_mecaniques",
+    "q": "Que signale un voyant orange au tableau de bord ?",
+    "qa": "ماذا يعني مؤشر برتقالي في لوحة القيادة ؟",
+    "o": [
+      "Un danger potentiel : une anomalie à surveiller ou à faire vérifier",
+      "Un danger immédiat : arrêt obligatoire",
+      "Un équipement qui fonctionne normalement"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Orange = danger potentiel (anomalie, surveillance). Rouge = danger immédiat ; vert et bleu = équipement en fonctionnement.",
+    "r": "Rouge stop, orange attention, vert/bleu en marche."
+  },
+  {
+    "id": "02_elements_mecaniques-19",
+    "t": "02_elements_mecaniques",
+    "q": "Un voyant vert ou bleu allumé au tableau de bord indique :",
+    "qa": "مؤشر أخضر أو أزرق مشتعل في لوحة القيادة يعني :",
+    "o": [
+      "Une panne grave",
+      "Un niveau d'huile insuffisant",
+      "Un équipement en fonctionnement (feux, régulateur…)"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les voyants verts et bleus sont des témoins de fonctionnement : feux allumés, régulateur activé… Ils ne signalent pas de panne.",
+    "r": "Voyant vert ou bleu = équipement en marche."
+  },
+  {
+    "id": "02_elements_mecaniques-20",
+    "t": "02_elements_mecaniques",
+    "q": "En fonctionnement normal, la température du liquide de refroidissement se stabilise vers :",
+    "qa": "في الاشتغال العادي، تستقر حرارة سائل التبريد عند حوالي :",
+    "o": [
+      "70 °C",
+      "90 °C",
+      "120 °C",
+      "150 °C"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La température se stabilise vers 90 °C. Si elle dépasse 90° et continue de monter, il faut s'arrêter avant d'endommager le moteur.",
+    "r": "Refroidissement ≈ 90 °C ; au-delà et ça monte → s'arrêter."
+  },
+  {
+    "id": "02_elements_mecaniques-21",
+    "t": "02_elements_mecaniques",
+    "q": "Quelles peuvent être les causes d'une surchauffe du moteur ?",
+    "qa": "ما هي الأسباب المحتملة لارتفاع حرارة المحرك ؟",
+    "o": [
+      "Une fuite de liquide de refroidissement",
+      "Une pompe à eau défectueuse",
+      "Des pneus sous-gonflés",
+      "Un joint de culasse défectueux"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Une fuite de liquide, la pompe à eau, le radiateur, le joint de culasse ou la sonde de température peuvent provoquer une surchauffe. La pression des pneus n'y est pour rien.",
+    "r": "Surchauffe : fuite, pompe à eau, radiateur, joint, sonde."
+  },
+  {
+    "id": "02_elements_mecaniques-22",
+    "t": "02_elements_mecaniques",
+    "q": "Comment se fait l'allumage dans un moteur diesel ?",
+    "qa": "كيف يتم الاشتعال في محرك الغازوال ؟",
+    "o": [
+      "Par compression",
+      "Par l'étincelle des bougies",
+      "Par l'alternateur"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Moteur diesel : allumage par compression. Moteur essence : allumage par l'étincelle des bougies.",
+    "r": "Essence = bougies ; diesel = compression."
+  },
+  {
+    "id": "02_elements_mecaniques-23",
+    "t": "02_elements_mecaniques",
+    "q": "Quel élément recharge la batterie lorsque le moteur tourne ?",
+    "qa": "ما هو العنصر الذي يعيد شحن البطارية عند دوران المحرك ؟",
+    "o": [
+      "Le radiateur",
+      "L'embrayage",
+      "Les bougies",
+      "L'alternateur"
+    ],
+    "a": [
+      3
+    ],
+    "e": "L'alternateur recharge la batterie tant que le moteur tourne.",
+    "r": "Alternateur = recharge la batterie."
+  },
+  {
+    "id": "02_elements_mecaniques-24",
+    "t": "02_elements_mecaniques",
+    "q": "Pour signaler que vous allez tourner à droite, vous actionnez la manette des clignotants (à gauche du volant) :",
+    "qa": "للإشارة إلى أنك ستنعطف نحو اليمين، تحرك ذراع المؤشرات (على يسار المقود) :",
+    "o": [
+      "Vers le bas",
+      "Vers le haut"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La manette des clignotants est à gauche du volant : vers le bas = gauche, vers le haut = droite. La manette des essuie-glaces est à droite.",
+    "r": "Clignotant : haut = droite, bas = gauche."
+  },
+  {
+    "id": "02_elements_mecaniques-25",
+    "t": "02_elements_mecaniques",
+    "q": "Le compte-tours indique :",
+    "qa": "يشير عداد الدورات إلى :",
+    "o": [
+      "Le nombre de tours du moteur par minute",
+      "La vitesse du véhicule en km/h",
+      "La température du moteur",
+      "Le niveau de carburant"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le compte-tours affiche le régime du moteur en tours par minute ; c'est le compteur de vitesse qui affiche les km/h.",
+    "r": "Compte-tours = tr/min ; compteur de vitesse = km/h."
+  },
+  {
+    "id": "03_aides_conduite-01",
+    "t": "03_aides_conduite",
+    "q": "À quoi sert l'ABS ?",
+    "qa": "ما هو دور نظام ABS ؟",
+    "o": [
+      "À maintenir une vitesse choisie",
+      "À corriger la trajectoire en virage",
+      "À couper le moteur à l'arrêt",
+      "À empêcher le blocage des roues lors d'un freinage fort"
+    ],
+    "a": [
+      3
+    ],
+    "e": "L'ABS (système anti-blocage) empêche les roues de se bloquer lors d'un freinage fort. Maintenir la vitesse = régulateur ; corriger la trajectoire = ESP ; couper le moteur à l'arrêt = Start & Stop.",
+    "r": "ABS = pas de roues bloquées au freinage."
+  },
+  {
+    "id": "03_aides_conduite-02",
+    "t": "03_aides_conduite",
+    "q": "L'ABS réduit-il la distance de freinage ?",
+    "qa": "هل يقلص نظام ABS مسافة الحصر ؟",
+    "o": [
+      "Oui, de moitié",
+      "Non : il permet surtout de garder le contrôle de la direction",
+      "Oui, surtout sur route mouillée"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Piège classique : l'ABS ne raccourcit pas la distance de freinage. Il permet de freiner tout en continuant à diriger le véhicule.",
+    "r": "ABS : freiner et diriger, pas freiner plus court.",
+    "s": "distance"
+  },
+  {
+    "id": "03_aides_conduite-03",
+    "t": "03_aides_conduite",
+    "q": "Comment l'ABS détecte-t-il le risque de blocage des roues ?",
+    "qa": "كيف يكشف نظام ABS خطر انغلاق العجلات ؟",
+    "o": [
+      "Grâce à une caméra",
+      "Grâce au GPS",
+      "Grâce à des capteurs placés sur les roues",
+      "Grâce au compte-tours"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Des capteurs montés sur les roues détectent le risque de glissement ; l'ABS empêche alors le blocage des roues.",
+    "r": "ABS : capteurs sur les roues."
+  },
+  {
+    "id": "03_aides_conduite-04",
+    "t": "03_aides_conduite",
+    "q": "Quel système augmente automatiquement la force de freinage quand le conducteur n'appuie pas assez fort lors d'un freinage d'urgence ?",
+    "qa": "ما هو النظام الذي يزيد قوة الحصر تلقائيا عندما لا يضغط السائق بقوة كافية في الفرملة المفاجئة ؟",
+    "o": [
+      "L'ESP",
+      "Le limiteur de vitesse",
+      "Le Start & Stop",
+      "L'AFU"
+    ],
+    "a": [
+      3
+    ],
+    "e": "L'AFU (aide au freinage d'urgence) augmente la force de freinage quand l'appui du conducteur est insuffisant.",
+    "r": "AFU = force de freinage renforcée en urgence."
+  },
+  {
+    "id": "03_aides_conduite-05",
+    "t": "03_aides_conduite",
+    "q": "En plus de renforcer le freinage, que fait l'AFU ?",
+    "qa": "بالإضافة إلى تقوية الحصر، ماذا يفعل نظام AFU ؟",
+    "o": [
+      "Il allume automatiquement les feux de détresse",
+      "Il coupe le moteur",
+      "Il actionne le klaxon"
+    ],
+    "a": [
+      0
+    ],
+    "e": "L'AFU allume automatiquement les feux de détresse (warning) pour prévenir les usagers qui suivent.",
+    "r": "AFU : freinage renforcé + warning automatique."
+  },
+  {
+    "id": "03_aides_conduite-06",
+    "t": "03_aides_conduite",
+    "q": "L'AFU fonctionne toujours en association avec :",
+    "qa": "يعمل نظام AFU دائما مع :",
+    "o": [
+      "L'ABS",
+      "Le régulateur de vitesse",
+      "Le GPS",
+      "La caméra de recul"
+    ],
+    "a": [
+      0
+    ],
+    "e": "L'aide au freinage d'urgence fonctionne toujours avec l'ABS, qui empêche le blocage des roues pendant ce freinage renforcé.",
+    "r": "AFU toujours avec l'ABS."
+  },
+  {
+    "id": "03_aides_conduite-07",
+    "t": "03_aides_conduite",
+    "q": "Ce voyant correspond au système qui réduit l'effet de la force centrifuge et corrige la trajectoire en virage. Il s'agit de :",
+    "qa": "هذا المؤشر يخص النظام الذي يقلل تأثير القوة النابذة ويصحح المسار في المنعرج. يتعلق الأمر بـ :",
+    "o": [
+      "L'ABS",
+      "L'AFU",
+      "L'ESP",
+      "Le limiteur de vitesse"
+    ],
+    "a": [
+      2
+    ],
+    "e": "L'ESP (correcteur électronique de trajectoire) lutte contre la perte de contrôle en virage. L'ABS, lui, empêche le blocage des roues au freinage.",
+    "r": "ESP = correcteur de trajectoire en virage.",
+    "img": "1684505203590.png"
+  },
+  {
+    "id": "03_aides_conduite-08",
+    "t": "03_aides_conduite",
+    "q": "Le système Start & Stop permet surtout :",
+    "qa": "يسمح نظام START & STOP أساسا بـ :",
+    "o": [
+      "De réduire la distance de freinage",
+      "D'économiser du carburant, notamment en ville et dans les embouteillages",
+      "De maintenir la vitesse sur autoroute"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le Start & Stop coupe automatiquement le moteur quand le véhicule est à l'arrêt : il économise du carburant, surtout en ville et dans les embouteillages.",
+    "r": "Start & Stop : moteur coupé à l'arrêt, économie en ville."
+  },
+  {
+    "id": "03_aides_conduite-09",
+    "t": "03_aides_conduite",
+    "q": "Avec le Start & Stop, quand le moteur redémarre-t-il automatiquement ?",
+    "qa": "مع نظام START & STOP، متى يشتغل المحرك تلقائيا من جديد ؟",
+    "o": [
+      "Quand on appuie sur l'embrayage pour repartir",
+      "Après 20 secondes d'arrêt",
+      "Quand on serre le frein à main"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le moteur, coupé à l'arrêt, redémarre automatiquement dès qu'on appuie sur l'embrayage pour repartir.",
+    "r": "Start & Stop : redémarre en appuyant sur l'embrayage."
+  },
+  {
+    "id": "03_aides_conduite-10",
+    "t": "03_aides_conduite",
+    "q": "Quelles propositions sur le régulateur de vitesse sont justes ?",
+    "qa": "ما هي الاقتراحات الصحيحة بخصوص جهاز تثبيت السرعة ؟",
+    "o": [
+      "Il maintient une vitesse choisie sans appuyer sur l'accélérateur",
+      "Il empêche de dépasser une vitesse même si l'on accélère",
+      "Il se désactive quand on appuie sur le frein",
+      "Il remplace la vigilance du conducteur"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Le régulateur maintient la vitesse choisie et se coupe dès qu'on freine. Empêcher de dépasser une vitesse est le rôle du limiteur. Aucune aide ne remplace la vigilance du conducteur.",
+    "r": "Régulateur : maintient la vitesse, se coupe au freinage."
+  },
+  {
+    "id": "03_aides_conduite-11",
+    "t": "03_aides_conduite",
+    "q": "Dans quelles situations le régulateur de vitesse est-il déconseillé ?",
+    "qa": "في أي الحالات لا يُنصح باستعمال مثبت السرعة ؟",
+    "o": [
+      "En ville",
+      "Hors agglomération, sur route sèche et dégagée",
+      "Sur route mouillée"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Le régulateur est déconseillé en ville et sur route mouillée. Il est recommandé hors agglomération.",
+    "r": "Régulateur : pas en ville, pas sur route mouillée."
+  },
+  {
+    "id": "03_aides_conduite-12",
+    "t": "03_aides_conduite",
+    "q": "Avec quel système le véhicule ne dépasse pas la vitesse fixée, même si l'on appuie sur l'accélérateur ?",
+    "qa": "بأي جهاز لا تتجاوز المركبة السرعة المحددة حتى مع الضغط على دواسة السرعة ؟",
+    "o": [
+      "Le régulateur de vitesse",
+      "L'ESP",
+      "Le limiteur de vitesse",
+      "L'ABS"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le limiteur empêche de dépasser la vitesse programmée. Le régulateur, lui, maintient une vitesse sans action sur l'accélérateur.",
+    "r": "Régulateur maintient ≠ limiteur empêche de dépasser."
+  },
+  {
+    "id": "03_aides_conduite-13",
+    "t": "03_aides_conduite",
+    "q": "Le GPS permet :",
+    "qa": "يسمح GPS بـ :",
+    "o": [
+      "De déterminer sa position et sa destination",
+      "De localiser le véhicule en cas de vol",
+      "De réduire la distance de freinage",
+      "De voir ce qui se trouve derrière le véhicule"
+    ],
+    "a": [
+      0,
+      1
+    ],
+    "e": "Le GPS sert à se situer, à trouver sa destination et à localiser le véhicule en cas de vol. Voir derrière le véhicule, c'est le rôle de la caméra de recul.",
+    "r": "GPS : position, destination, localisation en cas de vol."
+  },
+  {
+    "id": "03_aides_conduite-14",
+    "t": "03_aides_conduite",
+    "q": "La caméra de recul :",
+    "qa": "كاميرا الرجوع إلى الخلف :",
+    "o": [
+      "Dispense de regarder autour de soi en marche arrière",
+      "Affiche à l'écran ce qui se trouve derrière le véhicule",
+      "Sert à localiser le véhicule en cas de vol"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La caméra de recul montre l'arrière du véhicule sur l'écran. Comme toutes les aides, elle ne remplace pas la vigilance du conducteur.",
+    "r": "Caméra de recul : une aide, pas un remplaçant du regard."
+  },
+  {
+    "id": "03_aides_conduite-15",
+    "t": "03_aides_conduite",
+    "q": "Quelles propositions sur les aides à la conduite sont justes ?",
+    "qa": "ما هي الاقتراحات الصحيحة بخصوص أنظمة المساعدة على السياقة ؟",
+    "o": [
+      "Elles corrigent tous les risques",
+      "Elles peuvent corriger certaines erreurs",
+      "Elles remplacent la vigilance du conducteur",
+      "Le conducteur reste le premier responsable du contrôle du véhicule"
+    ],
+    "a": [
+      1,
+      3
+    ],
+    "e": "Ces systèmes renforcent la sécurité et peuvent corriger certaines erreurs, mais ils ne corrigent pas tous les risques : le conducteur reste maître de son véhicule et doit rester vigilant.",
+    "r": "Aides = assistance ; le conducteur reste maître."
+  },
+  {
+    "id": "04_precautions_portieres-01",
+    "t": "04_precautions_portieres",
+    "q": "Avant d'ouvrir votre portière pour descendre, vous devez :",
+    "qa": "قبل فتح باب المركبة للنزول، يجب عليك :",
+    "o": [
+      "Regarder dans le rétroviseur extérieur",
+      "Klaxonner pour prévenir",
+      "Tourner la tête pour contrôler l'angle mort",
+      "Ouvrir rapidement pour descendre vite"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Avant d'ouvrir : rétroviseur latéral puis coup d'œil dans l'angle mort, pour ne pas surprendre un cycliste ou un véhicule qui arrive.",
+    "r": "Avant d'ouvrir : rétroviseur + angle mort."
+  },
+  {
+    "id": "04_precautions_portieres-02",
+    "t": "04_precautions_portieres",
+    "q": "Avec quelle main le conducteur doit-il ouvrir sa portière ?",
+    "qa": "بأي يد يجب على السائق فتح باب المركبة ؟",
+    "o": [
+      "La main gauche, la plus proche de la portière",
+      "La main droite, la plus éloignée de la portière",
+      "Peu importe la main"
+    ],
+    "a": [
+      1
+    ],
+    "e": "En ouvrant avec la main droite (la main éloignée de la portière), le buste pivote et on regarde naturellement vers l'arrière : on voit le cycliste qui arrive.",
+    "r": "Ouvrir avec la main éloignée de la portière (droite)."
+  },
+  {
+    "id": "04_precautions_portieres-03",
+    "t": "04_precautions_portieres",
+    "q": "Avant de quitter votre véhicule, quelles actions sont nécessaires ?",
+    "qa": "قبل مغادرة مركبتك، ما هي الإجراءات الضرورية ؟",
+    "o": [
+      "Laisser le moteur tourner pour repartir vite",
+      "Arrêter le véhicule à un endroit autorisé et adapté",
+      "Couper le moteur",
+      "Mettre au point mort et serrer le frein à main"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Pour descendre : arrêt à un endroit autorisé et adapté, moteur coupé, point mort et frein à main, puis rétroviseur et angle mort avant d'ouvrir.",
+    "r": "Descendre : arrêt autorisé, moteur coupé, point mort, frein à main."
+  },
+  {
+    "id": "04_precautions_portieres-04",
+    "t": "04_precautions_portieres",
+    "q": "De quel côté les passagers doivent-ils monter et descendre ?",
+    "qa": "من أي جهة يجب أن يركب الركاب وينزلوا ؟",
+    "o": [
+      "Côté trottoir",
+      "Côté chaussée",
+      "Peu importe, s'ils regardent"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Les passagers, et surtout les enfants, montent et descendent toujours côté trottoir, jamais côté circulation.",
+    "r": "Montée et descente des passagers : côté trottoir."
+  },
+  {
+    "id": "04_precautions_portieres-05",
+    "t": "04_precautions_portieres",
+    "q": "En dessous de quel âge un enfant doit-il voyager sur les sièges arrière ?",
+    "qa": "تحت أي سن يجب أن يجلس الطفل في المقاعد الخلفية ؟",
+    "o": [
+      "8 ans",
+      "10 ans",
+      "12 ans",
+      "14 ans"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Les enfants de moins de 10 ans voyagent à l'arrière, dans un siège adapté. Les placer à l'avant est interdit (retrait d'1 point).",
+    "r": "Enfant de moins de 10 ans → à l'arrière."
+  },
+  {
+    "id": "04_precautions_portieres-06",
+    "t": "04_precautions_portieres",
+    "q": "Pour un court trajet, un enfant de 8 ans peut-il s'asseoir à l'avant s'il attache sa ceinture ?",
+    "qa": "في مسافة قصيرة، هل يمكن لطفل عمره 8 سنوات الجلوس في المقعد الأمامي إذا ربط حزام السلامة ؟",
+    "o": [
+      "Oui, la ceinture suffit",
+      "Oui, car le trajet est court",
+      "Non : à moins de 10 ans, il doit voyager à l'arrière"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La règle s'applique quelle que soit la distance : moins de 10 ans → sièges arrière, avec un siège adapté. La ceinture normale ne convient pas aux enfants.",
+    "r": "Moins de 10 ans à l'avant : interdit, même sur court trajet."
+  },
+  {
+    "id": "04_precautions_portieres-07",
+    "t": "04_precautions_portieres",
+    "q": "Un passager avant veut prendre un jeune enfant sur ses genoux. C'est :",
+    "qa": "راكب في المقعد الأمامي يريد وضع طفل صغير في حضنه. هذا :",
+    "o": [
+      "Autorisé si le passager est attaché",
+      "Autorisé en ville",
+      "Dangereux et interdit"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Un enfant sur les genoux d'un passager avant est dangereux et interdit : il doit voyager à l'arrière, dans un siège adapté.",
+    "r": "Enfant sur les genoux à l'avant : interdit."
+  },
+  {
+    "id": "04_precautions_portieres-08",
+    "t": "04_precautions_portieres",
+    "q": "Qui est responsable du port de la ceinture par les enfants transportés ?",
+    "qa": "من المسؤول عن ربط الأطفال المنقولين لحزام السلامة ؟",
+    "o": [
+      "Le conducteur",
+      "Les parents assis à l'arrière",
+      "L'enfant lui-même"
+    ],
+    "a": [
+      0
+    ],
+    "e": "C'est le conducteur qui est responsable de l'attache des enfants qu'il transporte.",
+    "r": "Ceinture des enfants : responsabilité du conducteur."
+  },
+  {
+    "id": "04_precautions_portieres-09",
+    "t": "04_precautions_portieres",
+    "q": "Qui doit attacher sa ceinture de sécurité ?",
+    "qa": "من يجب عليه ربط حزام السلامة ؟",
+    "o": [
+      "Uniquement le conducteur",
+      "Le conducteur et le passager avant",
+      "Tous les occupants, à l'avant comme à l'arrière"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Tous les passagers attachent leur ceinture, à l'avant comme à l'arrière, même pour un court trajet en ville.",
+    "r": "Ceinture : obligatoire pour tous, avant et arrière."
+  },
+  {
+    "id": "04_precautions_portieres-10",
+    "t": "04_precautions_portieres",
+    "q": "Transporter plus de passagers que le nombre autorisé, pour un trajet très court :",
+    "qa": "نقل عدد من الركاب أكبر من المسموح به، لمسافة قصيرة جدا :",
+    "o": [
+      "Est une infraction",
+      "Est toléré",
+      "Est autorisé si tous sont attachés"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Le nombre de passagers autorisé doit toujours être respecté : le dépasser est une infraction, même sur une courte distance.",
+    "r": "Passagers en surnombre = infraction, même sur court trajet."
+  },
+  {
+    "id": "04_precautions_portieres-11",
+    "t": "04_precautions_portieres",
+    "q": "Ouvrir sa portière côté chaussée sans regarder :",
+    "qa": "فتح الباب من جهة الطريق دون النظر :",
+    "o": [
+      "Est dangereux, surtout pour les cyclistes",
+      "Est permis si le véhicule est arrêté",
+      "Constitue une infraction"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "Une portière ouverte sans contrôle peut faire chuter un cycliste ou heurter un véhicule : c'est dangereux et c'est une infraction.",
+    "r": "Portière ouverte sans regarder = danger + infraction."
+  },
+  {
+    "id": "04_precautions_portieres-12",
+    "t": "04_precautions_portieres",
+    "q": "Une fois monté dans le véhicule, que devez-vous faire avant de démarrer ?",
+    "qa": "بعد الصعود إلى المركبة، ماذا يجب عليك فعله قبل الانطلاق ؟",
+    "o": [
+      "Régler le siège, l'appui-tête, le volant et les rétroviseurs",
+      "Attacher la ceinture de sécurité",
+      "Mettre le contact et vérifier les voyants du tableau de bord",
+      "Régler les rétroviseurs plus tard, en roulant"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "Avant de partir : bonne position (siège, appui-tête, volant, rétroviseurs), ceinture, puis contact et vérification des voyants. Les rétroviseurs se règlent avant de rouler, jamais pendant.",
+    "r": "Avant de partir : réglages, ceinture, voyants."
+  },
+  {
+    "id": "04_precautions_portieres-13",
+    "t": "04_precautions_portieres",
+    "q": "Au contact, tous les voyants s'allument puis s'éteignent, sauf un qui reste allumé. Que faire ?",
+    "qa": "عند التشغيل، تشتعل كل المؤشرات ثم تنطفئ، إلا واحدا يبقى مشتعلا. ماذا تفعل ؟",
+    "o": [
+      "C'est normal, je pars",
+      "J'attends le prochain contrôle technique",
+      "Il signale une anomalie : j'agis selon ce voyant"
+    ],
+    "a": [
+      2
+    ],
+    "e": "À la mise du contact, les voyants s'allument brièvement puis s'éteignent. Un voyant qui reste allumé signale une panne : il faut agir selon sa signification.",
+    "r": "Voyant qui reste allumé au contact = anomalie."
+  },
+  {
+    "id": "04_precautions_portieres-14",
+    "t": "04_precautions_portieres",
+    "q": "Pour transporter un jeune enfant en sécurité :",
+    "qa": "لنقل طفل صغير بأمان :",
+    "o": [
+      "Il voyage à l'arrière",
+      "La ceinture d'adulte lui convient toujours",
+      "Il utilise un siège adapté",
+      "Il descend côté trottoir"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Enfant : sièges arrière, siège adapté et descente côté trottoir. La ceinture normale ne convient pas aux enfants.",
+    "r": "Enfant : arrière + siège adapté + descente côté trottoir."
+  },
+  {
+    "id": "04_precautions_portieres-15",
+    "t": "04_precautions_portieres",
+    "q": "Arrêt d'urgence sur la bande d'arrêt d'urgence d'une autoroute : comment faire descendre les passagers ?",
+    "qa": "وقوف استعجالي على شريط التوقف العاجل في الطريق السيار : كيف تُنزل الركاب ؟",
+    "o": [
+      "Par le côté gauche",
+      "Par le côté droit, puis ils attendent derrière la glissière de sécurité",
+      "Ils restent dans le véhicule en toutes circonstances"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sur autoroute, les passagers descendent du côté droit, à l'opposé de la circulation, et attendent les secours derrière la glissière de sécurité.",
+    "r": "Autoroute : descente à droite, attente derrière la glissière."
+  },
+  {
+    "id": "05_vehicules_prioritaires-01",
+    "t": "05_vehicules_prioritaires",
+    "q": "Combien de types de véhicules prioritaires le cours distingue-t-il ?",
+    "qa": "كم عدد أنواع المركبات ذات الأولوية ؟",
+    "o": [
+      "3",
+      "4",
+      "6",
+      "8"
+    ],
+    "a": [
+      2
+    ],
+    "e": "6 véhicules prioritaires : intervention rapide, protection civile, ambulance, gendarmerie royale, sûreté nationale (police) et forces auxiliaires.",
+    "r": "Véhicules prioritaires : 6 types."
+  },
+  {
+    "id": "05_vehicules_prioritaires-02",
+    "t": "05_vehicules_prioritaires",
+    "q": "Lesquels de ces véhicules font partie des véhicules prioritaires ?",
+    "qa": "أي من هذه المركبات تعتبر من المركبات ذات الأولوية ؟",
+    "o": [
+      "Une ambulance (مركبة الإسعاف)",
+      "Un véhicule des forces auxiliaires (القوات المساعدة)",
+      "Un camion de collecte des ordures (شاحنة جمع النفايات)",
+      "Un véhicule de la protection civile (الوقاية المدنية)"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Ambulance, forces auxiliaires et protection civile font partie des 6 véhicules prioritaires. Le camion de collecte des ordures est un véhicule lent, pas un prioritaire.",
+    "r": "Camion-poubelle = véhicule lent, pas prioritaire."
+  },
+  {
+    "id": "05_vehicules_prioritaires-03",
+    "t": "05_vehicules_prioritaires",
+    "q": "Ce véhicule d'intervention rapide (assistance sur autoroute) circule avec son gyrophare allumé. Est-il prioritaire ?",
+    "qa": "مركبة التدخل السريع هذه (المساعدة في الطريق السيار) تسير بضوئها الدوار مشتعلا. هل هي ذات أولوية ؟",
+    "o": [
+      "Non, seules la police et les ambulances sont prioritaires",
+      "Oui, il fait partie des 6 véhicules prioritaires",
+      "Non, c'est un véhicule lent"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le véhicule d'intervention rapide (par exemple sur autoroute) fait partie des 6 véhicules prioritaires quand il utilise son gyrophare ou son avertisseur spécial.",
+    "r": "Intervention rapide + gyrophare = prioritaire.",
+    "img": "1692095087290.png"
+  },
+  {
+    "id": "05_vehicules_prioritaires-04",
+    "t": "05_vehicules_prioritaires",
+    "q": "Quand un véhicule prioritaire bénéficie-t-il de la priorité ?",
+    "qa": "متى تستفيد المركبة ذات الأولوية من الأسبقية ؟",
+    "o": [
+      "En permanence",
+      "Seulement la nuit",
+      "Seulement en agglomération",
+      "Seulement quand il utilise ses gyrophares ou son avertisseur sonore spécial"
+    ],
+    "a": [
+      3
+    ],
+    "e": "La priorité n'existe que si le véhicule signale sa mission par ses feux tournants (gyrophares) ou son avertisseur sonore spécial. Sans eux, c'est un véhicule ordinaire.",
+    "r": "Prioritaire seulement avec gyrophare ou avertisseur spécial."
+  },
+  {
+    "id": "05_vehicules_prioritaires-05",
+    "t": "05_vehicules_prioritaires",
+    "q": "À une intersection, une voiture de police arrive sans gyrophare ni avertisseur sonore. Que faites-vous ?",
+    "qa": "في ملتقى الطرق، تصل سيارة شرطة بدون ضوء دوار ولا منبه صوتي. ماذا تفعل ؟",
+    "o": [
+      "J'applique les règles de priorité habituelles",
+      "Je lui cède le passage dans tous les cas",
+      "Je m'arrête et j'attends ses instructions"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Sans gyrophare ni avertisseur spécial, la voiture de police est un véhicule ordinaire : on applique les règles de priorité normales.",
+    "r": "Police sans signaux = véhicule ordinaire.",
+    "s": "priorite"
+  },
+  {
+    "id": "05_vehicules_prioritaires-06",
+    "t": "05_vehicules_prioritaires",
+    "q": "Une ambulance, avertisseur et gyrophare en marche, vous croise ou vous dépasse. Que faites-vous ?",
+    "qa": "سيارة إسعاف بمنبهها وضوئها الدوار تقابلك أو تتجاوزك. ماذا تفعل ؟",
+    "o": [
+      "Je serre à l'extrême droite pour lui laisser le passage",
+      "J'accélère pour ne pas la gêner",
+      "Je m'arrête au milieu de ma voie",
+      "Je me déporte vers la gauche"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Lors du croisement ou du dépassement par un véhicule prioritaire en mission, on serre à l'extrême droite et on lui laisse le passage.",
+    "r": "Prioritaire en mission → serrer à droite, laisser passer.",
+    "img": "1685539580038.png"
+  },
+  {
+    "id": "05_vehicules_prioritaires-07",
+    "t": "05_vehicules_prioritaires",
+    "q": "Suivre une ambulance en mission pour profiter de la voie qu'elle dégage :",
+    "qa": "تتبع سيارة إسعاف في مهمة للاستفادة من الطريق المفتوحة أمامها :",
+    "o": [
+      "Est autorisé",
+      "Est toléré sur autoroute",
+      "Est interdit"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Il est interdit de suivre un véhicule prioritaire pour profiter de la route qu'il libère.",
+    "r": "Interdit de suivre un prioritaire pour gagner du temps."
+  },
+  {
+    "id": "05_vehicules_prioritaires-08",
+    "t": "05_vehicules_prioritaires",
+    "q": "À une intersection, un véhicule prioritaire en mission (gyrophare et avertisseur en marche) :",
+    "qa": "في ملتقى الطرق، المركبة ذات الأولوية في مهمة (الضوء الدوار والمنبه مشغلان) :",
+    "o": [
+      "N'est pas soumis aux panneaux ni aux feux",
+      "Doit respecter la limitation de vitesse",
+      "A la priorité",
+      "Doit s'arrêter au feu rouge"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "En mission, le véhicule prioritaire n'est soumis ni aux panneaux ni aux feux, il a la priorité et sa vitesse n'est pas limitée.",
+    "r": "Prioritaire en mission : ni feux, ni panneaux, ni limite."
+  },
+  {
+    "id": "05_vehicules_prioritaires-09",
+    "t": "05_vehicules_prioritaires",
+    "q": "Vous êtes arrêté au feu rouge. Une ambulance, avertisseur en marche, arrive derrière vous. Que faites-vous ?",
+    "qa": "أنت متوقف في الضوء الأحمر. تصل خلفك سيارة إسعاف بمنبهها الصوتي. ماذا تفعل ؟",
+    "o": [
+      "Je franchis le feu immédiatement, quel que soit le danger",
+      "Je reste immobile sans chercher à faciliter son passage",
+      "Je lui facilite le passage avec prudence, sans me mettre en danger"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Il faut faciliter le passage de l'ambulance, mais sans s'exposer au danger : on se dégage prudemment, sans s'engager de façon risquée dans le carrefour.",
+    "r": "Ambulance derrière au feu rouge : dégager prudemment."
+  },
+  {
+    "id": "05_vehicules_prioritaires-10",
+    "t": "05_vehicules_prioritaires",
+    "q": "Une ambulance circule sans avertisseur ni gyrophare. Doit-elle respecter les limitations de vitesse ?",
+    "qa": "سيارة إسعاف تسير بدون منبه ولا ضوء دوار. هل تخضع لتحديد السرعة ؟",
+    "o": [
+      "Oui, comme un véhicule ordinaire",
+      "Non, jamais",
+      "Seulement en agglomération"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Sans signaux spéciaux, l'ambulance est un véhicule ordinaire : elle respecte les limitations de vitesse et les règles de priorité habituelles.",
+    "r": "Sans gyrophare ni avertisseur : limitations de vitesse.",
+    "s": "vitesses"
+  },
+  {
+    "id": "05_vehicules_prioritaires-11",
+    "t": "05_vehicules_prioritaires",
+    "q": "Un véhicule lent est un véhicule dont la vitesse ne dépasse pas :",
+    "qa": "المركبة بطيئة السير هي مركبة لا تتجاوز سرعتها :",
+    "o": [
+      "40 km/h",
+      "50 km/h",
+      "60 km/h",
+      "80 km/h"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Les véhicules lents, souvent volumineux, ne dépassent pas 60 km/h.",
+    "r": "Véhicule lent : 60 km/h maximum."
+  },
+  {
+    "id": "05_vehicules_prioritaires-12",
+    "t": "05_vehicules_prioritaires",
+    "q": "Un tracteur agricole peut-il emprunter l'autoroute ?",
+    "qa": "هل يمكن لجرار فلاحي السير في الطريق السيار ؟",
+    "o": [
+      "Oui, sur la voie de droite",
+      "Non, c'est interdit",
+      "Oui, avec ses feux de détresse"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le tracteur agricole est un véhicule lent (moins de 60 km/h) : il est interdit sur l'autoroute.",
+    "r": "Véhicules lents (tracteurs…) interdits sur autoroute."
+  },
+  {
+    "id": "05_vehicules_prioritaires-13",
+    "t": "05_vehicules_prioritaires",
+    "q": "Quels véhicules sont des véhicules lents ?",
+    "qa": "ما هي المركبات بطيئة السير ؟",
+    "o": [
+      "Les véhicules de la gendarmerie",
+      "Les camions de collecte des ordures ménagères",
+      "Les engins d'entretien des routes",
+      "Les véhicules de nettoyage des routes"
+    ],
+    "a": [
+      1,
+      2,
+      3
+    ],
+    "e": "Camions de collecte des ordures, engins d'entretien et de nettoyage des routes, tracteurs agricoles : ce sont des véhicules lents. La gendarmerie fait partie des véhicules prioritaires.",
+    "r": "Lents : ordures, entretien, nettoyage, tracteurs."
+  },
+  {
+    "id": "05_vehicules_prioritaires-14",
+    "t": "05_vehicules_prioritaires",
+    "q": "Vous suivez un véhicule lent. Quel comportement adopter ?",
+    "qa": "تسير خلف مركبة بطيئة السير. ما هو السلوك المناسب ؟",
+    "o": [
+      "Adapter ma vitesse à la sienne",
+      "Être patient et prudent : il s'arrête souvent",
+      "Le dépasser immédiatement, même si la signalisation l'interdit",
+      "Le dépasser prudemment quand la signalisation le permet"
+    ],
+    "a": [
+      0,
+      1,
+      3
+    ],
+    "e": "Derrière un véhicule lent, on adapte sa vitesse, on reste patient (arrêts fréquents) et on ne dépasse que lorsque la signalisation le permet.",
+    "r": "Véhicule lent : patience, dépassement prudent et autorisé."
+  },
+  {
+    "id": "05_vehicules_prioritaires-15",
+    "t": "05_vehicules_prioritaires",
+    "q": "Pourquoi être particulièrement prudent derrière un camion de collecte des ordures ?",
+    "qa": "لماذا يجب الحذر بشكل خاص خلف شاحنة جمع النفايات ؟",
+    "o": [
+      "Il est prioritaire en permanence",
+      "Des ouvriers peuvent traverser brusquement",
+      "Il roule toujours au-dessus de 60 km/h"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Autour d'un camion-poubelle, des ouvriers peuvent traverser à tout moment, et le camion s'arrête souvent.",
+    "r": "Camion-poubelle : attention aux ouvriers qui traversent."
+  },
+  {
+    "id": "06_environnement-01",
+    "t": "06_environnement",
+    "q": "L'éco-conduite est une conduite :",
+    "qa": "السياقة المراعية للبيئة هي سياقة :",
+    "o": [
+      "Économique : moins de carburant",
+      "Sportive : accélérations franches",
+      "Écologique : moins d'émissions",
+      "Sûre : meilleure maîtrise du véhicule"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "L'éco-conduite est à la fois économique, écologique et sûre. Elle repose sur une conduite souple, pas sportive.",
+    "r": "Éco-conduite = économique + écologique + sûre."
+  },
+  {
+    "id": "06_environnement-03",
+    "t": "06_environnement",
+    "q": "Un porte-bagages (coffre) de toit augmente la consommation d'environ :",
+    "qa": "حامل الأمتعة السطحي يزيد الاستهلاك بحوالي :",
+    "o": [
+      "2 à 5 %",
+      "10 à 15 %",
+      "25 à 30 %",
+      "50 %"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Le porte-bagages de toit augmente la consommation de 10 à 15 % : il faut le retirer après usage, car même vide il gaspille du carburant.",
+    "r": "Coffre de toit : +10 à 15 % → l'enlever après usage."
+  },
+  {
+    "id": "06_environnement-04",
+    "t": "06_environnement",
+    "q": "Avant de partir, quels gestes favorisent l'éco-conduite ?",
+    "qa": "قبل الانطلاق، ما هي التصرفات التي تساعد على السياقة المراعية للبيئة ؟",
+    "o": [
+      "Retirer les objets inutiles pour alléger le véhicule",
+      "Remplir le coffre d'objets « au cas où »",
+      "Surveiller les fuites",
+      "Vérifier la pression des pneus"
+    ],
+    "a": [
+      0,
+      2,
+      3
+    ],
+    "e": "Alléger le véhicule, surveiller les fuites (nuisibles à l'environnement et au moteur) et vérifier la pression des pneus réduisent la consommation. Un coffre chargé d'objets inutiles alourdit le véhicule.",
+    "r": "Avant de partir : alléger, vérifier fuites et pneus."
+  },
+  {
+    "id": "06_environnement-05",
+    "t": "06_environnement",
+    "q": "Faut-il faire chauffer longuement le moteur à l'arrêt avant de partir ?",
+    "qa": "هل يجب تسخين المحرك طويلا قبل الانطلاق ؟",
+    "o": [
+      "Oui, au moins 10 minutes",
+      "Oui, pour protéger le moteur",
+      "Non : c'est du gaspillage, il faut partir en douceur"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Le long échauffement du moteur à l'arrêt gaspille du carburant : il vaut mieux partir en roulant doucement (piège d'examen).",
+    "r": "Pas de chauffe prolongée à l'arrêt : partir en douceur."
+  },
+  {
+    "id": "06_environnement-06",
+    "t": "06_environnement",
+    "q": "Sur le compte-tours, quelle est la zone verte, celle de la consommation la plus faible ?",
+    "qa": "في عداد الدورات، ما هي المنطقة الخضراء ذات الاستهلاك الأقل ؟",
+    "o": [
+      "Moins de 1000 tr/min",
+      "De 1500 à 2500 tr/min",
+      "De 3000 à 4000 tr/min",
+      "De 5000 à 7000 tr/min"
+    ],
+    "a": [
+      1
+    ],
+    "e": "La zone verte (1500 à 2500 tr/min) est la plus économique : on passe le rapport supérieur au-dessus de 2500 et on rétrograde sous 1500.",
+    "r": "Zone verte : 1500 à 2500 tr/min."
+  },
+  {
+    "id": "06_environnement-07",
+    "t": "06_environnement",
+    "q": "Que représente la zone rouge du compte-tours (5000 à 7000 tr/min) ?",
+    "qa": "ماذا تمثل المنطقة الحمراء في عداد الدورات (5000 إلى 7000 د/د) ؟",
+    "o": [
+      "Une zone interdite qui abîme le moteur",
+      "La zone idéale pour dépasser",
+      "La zone d'utilisation normale"
+    ],
+    "a": [
+      0
+    ],
+    "e": "La zone rouge (5000 à 7000 tr/min) est interdite : elle endommage le moteur. La zone d'utilisation normale va de 1000 à 5000 tr/min.",
+    "r": "Zone rouge 5000–7000 tr/min : interdite."
+  },
+  {
+    "id": "06_environnement-08",
+    "t": "06_environnement",
+    "q": "La zone grise du compte-tours, en dessous de 1000 tr/min, correspond :",
+    "qa": "المنطقة الرمادية في عداد الدورات، أقل من 1000 د/د، تمثل :",
+    "o": [
+      "À la zone la plus économique",
+      "Au régime minimum pour que le moteur continue de tourner",
+      "À une zone interdite"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sous 1000 tr/min, c'est la zone grise : le minimum de fonctionnement du moteur. La zone la plus économique est la zone verte (1500–2500 tr/min).",
+    "r": "Zone grise < 1000 tr/min : régime minimum."
+  },
+  {
+    "id": "06_environnement-09",
+    "t": "06_environnement",
+    "q": "À partir de quelle durée d'arrêt est-il conseillé de couper le moteur ?",
+    "qa": "ابتداء من أي مدة وقوف يُنصح بإطفاء المحرك ؟",
+    "o": [
+      "2 minutes",
+      "5 secondes",
+      "20 secondes",
+      "5 minutes"
+    ],
+    "a": [
+      2
+    ],
+    "e": "Au-delà de 20 secondes d'arrêt, il est plus économique de couper le moteur.",
+    "r": "Arrêt de plus de 20 secondes → couper le moteur."
+  },
+  {
+    "id": "06_environnement-10",
+    "t": "06_environnement",
+    "q": "Rouler à 100 km/h au lieu de 110 km/h sur 500 km permet d'économiser environ :",
+    "qa": "السير بسرعة 100 كلم/س بدل 110 كلم/س على مسافة 500 كلم يسمح بتوفير حوالي :",
+    "o": [
+      "1 litre",
+      "5 litres",
+      "15 litres",
+      "25 litres"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Sur 500 km, rouler à 100 au lieu de 110 km/h économise environ 5 litres de carburant et réduit les émissions de 12,5 %.",
+    "r": "100 au lieu de 110 sur 500 km : −5 L et −12,5 % d'émissions."
+  },
+  {
+    "id": "06_environnement-11",
+    "t": "06_environnement",
+    "q": "En ville, la climatisation augmente la consommation d'environ :",
+    "qa": "داخل المدينة، يزيد المكيف الاستهلاك بحوالي :",
+    "o": [
+      "5 %",
+      "10 %",
+      "25 %",
+      "50 %"
+    ],
+    "a": [
+      2
+    ],
+    "e": "La climatisation augmente la consommation d'environ 25 % en ville et 10 % hors agglomération, et ajoute environ 3,5 kg de CO2 aux 100 km.",
+    "r": "Clim : +25 % en ville, +10 % hors agglomération."
+  },
+  {
+    "id": "06_environnement-12",
+    "t": "06_environnement",
+    "q": "Pour se rafraîchir en consommant le moins possible :",
+    "qa": "للتبريد بأقل استهلاك ممكن :",
+    "o": [
+      "À basse vitesse, j'ouvre les fenêtres",
+      "À basse vitesse, je mets la climatisation au maximum",
+      "À vitesse élevée, j'ouvre grand les fenêtres",
+      "À vitesse élevée, j'utilise la climatisation, fenêtres fermées"
+    ],
+    "a": [
+      0,
+      3
+    ],
+    "e": "À basse vitesse, ouvrir les fenêtres est plus économique ; à vitesse élevée, mieux vaut la climatisation avec les fenêtres fermées.",
+    "r": "Basse vitesse : fenêtres ; vitesse élevée : clim, vitres fermées."
+  },
+  {
+    "id": "06_environnement-13",
+    "t": "06_environnement",
+    "q": "Pour ralentir de façon économique, il faut :",
+    "qa": "لتخفيض السرعة بطريقة اقتصادية، يجب :",
+    "o": [
+      "Garder l'accélérateur enfoncé, puis freiner fort au dernier moment",
+      "Anticiper et utiliser le frein moteur plutôt que les freins",
+      "Couper le moteur en roulant"
+    ],
+    "a": [
+      1
+    ],
+    "e": "On anticipe le ralentissement et on utilise le frein moteur avant les freins : c'est plus souple et plus économique.",
+    "r": "Anticiper : frein moteur avant les freins."
+  },
+  {
+    "id": "06_environnement-14",
+    "t": "06_environnement",
+    "q": "Vrai ou faux : descendre une pente au point mort permet d'économiser du carburant.",
+    "qa": "صحيح أم خطأ : النزول في المنحدر بالوضع المحايد يوفر الوقود.",
+    "o": [
+      "Vrai",
+      "Faux"
+    ],
+    "a": [
+      1
+    ],
+    "e": "Faux : rouler au point mort en descente n'économise pas de carburant (piège d'examen). On garde un rapport engagé et on utilise le frein moteur.",
+    "r": "Point mort en descente : aucune économie."
+  },
+  {
+    "id": "06_environnement-17",
+    "t": "06_environnement",
+    "q": "De quoi dépend l'énergie cinétique d'un véhicule ?",
+    "qa": "على ماذا تتوقف الطاقة الحركية للمركبة ؟",
+    "o": [
+      "De sa vitesse",
+      "De la couleur de la carrosserie",
+      "De sa masse",
+      "Du type de boîte de vitesses"
+    ],
+    "a": [
+      0,
+      2
+    ],
+    "e": "L'énergie cinétique dépend de la vitesse (au carré) et de la masse : un camion ou un bus possède une énergie énorme même à 30 km/h.",
+    "r": "Énergie cinétique : masse et vitesse au carré.",
+    "s": "energie"
+  },
+  {
+    "id": "06_environnement-18",
+    "t": "06_environnement",
+    "q": "En quoi se transforme l'énergie cinétique lors d'un freinage, puis lors d'un choc ?",
+    "qa": "إلى ماذا تتحول الطاقة الحركية عند الفرملة، ثم عند الاصطدام ؟",
+    "o": [
+      "Freinage : chaleur ; choc : déformation",
+      "Freinage : déformation ; choc : chaleur",
+      "Freinage : électricité ; choc : bruit"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Au freinage, l'énergie se transforme en chaleur ; lors d'un choc, elle se transforme en déformation.",
+    "r": "Freinage → chaleur ; choc → déformation.",
+    "s": "energie"
+  },
+  {
+    "id": "06_environnement-20",
+    "t": "06_environnement",
+    "q": "Quel est le rôle de la ceinture de sécurité lors d'un choc ?",
+    "qa": "ما هو دور حزام السلامة عند الاصطدام ؟",
+    "o": [
+      "Maintenir l'occupant sur son siège",
+      "Ralentir son mouvement",
+      "Empêcher l'éjection hors du véhicule",
+      "Réduire la vitesse du véhicule avant le choc"
+    ],
+    "a": [
+      0,
+      1,
+      2
+    ],
+    "e": "La ceinture maintient l'occupant, ralentit son déplacement et l'empêche d'être éjecté. Elle n'agit pas sur la vitesse du véhicule.",
+    "r": "Ceinture : maintient, ralentit, empêche l'éjection."
+  },
+  {
+    "id": "06_environnement-21",
+    "t": "06_environnement",
+    "q": "Pourquoi faut-il arrimer (attacher) le chargement dans le véhicule ?",
+    "qa": "لماذا يجب ربط الحمولة داخل المركبة ؟",
+    "o": [
+      "Pour qu'en cas de choc il ne heurte pas les passagers",
+      "Pour réduire la consommation",
+      "Pour respecter le PTAC"
+    ],
+    "a": [
+      0
+    ],
+    "e": "Un chargement bien arrimé reste solidaire du véhicule : son énergie propre reste nulle et il ne vient pas heurter les occupants lors d'un choc.",
+    "r": "Chargement arrimé = pas projeté sur les passagers."
+  },
+  {
+    "id": "06_environnement-22",
+    "t": "06_environnement",
+    "q": "Un véhicule mal entretenu :",
+    "qa": "مركبة سيئة الصيانة :",
+    "o": [
+      "Pollue moins",
+      "Consomme davantage",
+      "Provoque plus d'accidents"
+    ],
+    "a": [
+      1,
+      2
+    ],
+    "e": "Un mauvais état mécanique augmente la consommation et le nombre d'accidents.",
+    "r": "Mauvais entretien = plus de conso, plus d'accidents."
+  }
+]
