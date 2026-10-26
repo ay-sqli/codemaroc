@@ -158,7 +158,7 @@ export function Notebook() {
                     </div>
                     {isOpen && (
                       <div className="space-y-3 border-t border-line p-4">
-                        {q.kind === "official" && q.img && <img src={q.img} alt="" className="w-full rounded-[8px]" />}
+                        {q.kind === "official" && q.img && <img src={q.img} alt="" data-zoom className="w-full rounded-[8px]" />}
                         <Correction q={q} picked={q.answer} />
                       </div>
                     )}

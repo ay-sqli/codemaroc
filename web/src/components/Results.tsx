@@ -126,7 +126,7 @@ export function Results({
                 </button>
                 {open === r.q.id && (
                   <div className="space-y-3 border-t border-line p-4">
-                    {r.q.kind === "official" && r.q.img && <img src={r.q.img} alt="" className="w-full rounded-[8px]" />}
+                    {r.q.kind === "official" && r.q.img && <img src={r.q.img} alt="" data-zoom className="w-full rounded-[8px]" />}
                     <p className="text-sm text-muted">
                       {t("Ta réponse :", "جوابك:")}{" "}
                       <b className="font-semibold text-ink">

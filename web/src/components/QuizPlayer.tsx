@@ -296,7 +296,7 @@ export function QuizPlayer({
 
         {official ? (
           <div className="overflow-hidden rounded-[8px] border border-line">
-            <img src={q.img} alt={t("Question", "السؤال")} className="w-full bg-[#1f1f1f] object-contain" />
+            <img src={q.img} alt={t("Question", "السؤال")} data-zoom data-caption="" className="w-full bg-[#1f1f1f] object-contain" />
             <div className="border-t border-line bg-white p-4">
               <p className="mb-3 text-[15px] font-semibold">
                 {t("Coche la ou les bonnes cases", "اختر الخانة أو الخانات الصحيحة")}{" "}
@@ -339,7 +339,7 @@ export function QuizPlayer({
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               {q.img && (
                 <div className="grid h-40 w-full shrink-0 place-items-center rounded-[8px] border border-line bg-white p-3 sm:w-48">
-                  <img src={q.img} alt="" className="max-h-full max-w-full object-contain" />
+                  <img src={q.img} alt="" data-zoom className="max-h-full max-w-full object-contain" />
                 </div>
               )}
               <div className="space-y-1">

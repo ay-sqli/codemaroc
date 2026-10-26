@@ -55,7 +55,7 @@ export function SignGallery({ chapter }: { chapter?: string }) {
               onClick={() => setRevealed((r) => new Set(r).add(i))}
               className="flex flex-col items-center gap-2 rounded-[8px] border border-line bg-white p-3 text-center transition-shadow hover:shadow-md"
             >
-              <img src={asset(c.img)} alt="" loading="lazy" className="h-24 w-full object-contain" />
+              <img src={asset(c.img)} alt="" data-zoom data-caption={show ? c.label : ""} loading="lazy" className="h-24 w-full object-contain" />
               <span className={`ar text-[13px] leading-snug text-ink-2 ${show ? "" : "select-none blur-sm"}`}>
                 {show ? c.label : "••••••••••"}
               </span>

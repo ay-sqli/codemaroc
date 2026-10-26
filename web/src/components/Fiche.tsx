@@ -7,7 +7,7 @@ function Node({ n }: { n: MdNode }) {
   return (
     <li className="leading-relaxed">
       <span className="inline-flex items-start gap-3">
-        {n.img && <img src={n.img} alt="" className={n.imgClass ?? ""} loading="lazy" />}
+        {n.img && <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} className={n.imgClass ?? ""} loading="lazy" />}
         <span dangerouslySetInnerHTML={{ __html: stripEmoji(n.html) }} />
       </span>
       {n.children.length > 0 && (
@@ -67,7 +67,7 @@ function Section({ s, n }: { s: MdSection; n: number }) {
         <div className="ar grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
           {s.items.map((it, i) => (
             <figure key={i} className="flex flex-col items-center gap-2 rounded-[8px] border border-line bg-white p-3 text-center">
-              {it.img ? <img src={it.img} alt={it.text} loading="lazy" className="h-20 w-auto object-contain" /> : null}
+              {it.img ? <img src={it.img} alt={stripEmoji(it.text)} data-zoom loading="lazy" className="h-20 w-auto object-contain" /> : null}
               <figcaption className="text-[13px] leading-snug text-ink-2" dangerouslySetInnerHTML={{ __html: stripEmoji(it.html) }} />
             </figure>
           ))}

@@ -352,6 +352,11 @@ svg.markmap .markmap-foreign strong {
   height: 140px !important;
 }
 
+/* Images agrandissables (visionneuse ImageZoom) */
+img[data-zoom] {
+  cursor: zoom-in;
+}
+
 /* ─────────────────────────── Mouvements ─────────────────────────── */
 @keyframes pop {
   0% {

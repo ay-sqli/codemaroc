@@ -10,6 +10,7 @@ import { useStore } from "@/lib/store";
 import { CHAPTERS, MODULES, altNameOf, nameOf } from "@/lib/courses";
 import { LangSync, useLang } from "@/lib/i18n";
 import { ButtonLink, CountDot, IconButton, ModuleIcon, cx } from "./ui";
+import { ImageZoom } from "./ImageZoom";
 
 function useDueCount() {
   const srs = useStore((s) => s.srs);
@@ -321,6 +322,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-dvh flex-col">
       <LangSync />
+      <ImageZoom />
       {/* Bandeau supérieur sombre */}
       <div className="hidden bg-[#1f1f1f] text-white md:block">
         <div className="mx-auto flex h-9 max-w-[1200px] items-stretch justify-between px-4 sm:px-6">
