@@ -815,7 +815,7 @@ html[lang="ar"] .duo-btn {
   pointer-events: none;
 }
 .zellige-dark::before {
-  opacity: 0.07;
+  opacity: 0.035;
   mix-blend-mode: multiply;
 }
 /* Bande de zellige pleine (écrans de victoire, haut des cartes) */
@@ -928,4 +928,102 @@ html[lang="ar"] .duo-btn {
 }
 .scene-drive-v {
   top: 110%;
+}
+
+/* ─────────────────────────── Fiche de cours lisible ─────────────────────────── */
+.fiche-card {
+  border-radius: 20px;
+  padding: 1rem;
+}
+@media (min-width: 640px) {
+  .fiche-card {
+    border-radius: 24px;
+    padding: 1.75rem;
+  }
+}
+.fiche-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--text);
+  max-width: 72ch;
+  overflow-wrap: anywhere;
+}
+@media (min-width: 640px) {
+  .fiche-row {
+    gap: 0.85rem;
+    font-size: 17.5px;
+    line-height: 1.95;
+  }
+}
+.fiche-dot {
+  margin-top: 0.8em;
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  border-radius: 999px;
+}
+.fiche-row strong,
+.fiche-visual strong {
+  font-weight: 800;
+  color: var(--c-grey-975);
+}
+.fiche-visual {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem;
+  border-radius: 18px;
+  border: 2px solid var(--border);
+  background: var(--c-grey-50);
+  font-size: 16px;
+  line-height: 1.8;
+}
+.fiche-visual:has(.w-full) {
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+}
+/* Chiffres clés : pastille jaune, lisibles d'un coup d'œil */
+.fiche-num {
+  display: inline-block;
+  padding: 0 0.4em;
+  margin: 0 0.1em;
+  border-radius: 8px;
+  background: #fef3c7;
+  box-shadow: inset 0 -2px 0 #f5b041;
+  color: #7a4b00;
+  font-weight: 800;
+  line-height: 1.6;
+  white-space: nowrap;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+/* Flèches « ← » du cours (= « donc ») : pictogramme rond */
+.fiche-arrow {
+  display: inline-grid;
+  place-items: center;
+  width: 1.55em;
+  height: 1.55em;
+  margin: 0 0.15em;
+  border-radius: 999px;
+  background: #d92b2b;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 900;
+  line-height: 1;
+  vertical-align: 0.1em;
+}
+.fiche-eq {
+  display: inline-grid;
+  place-items: center;
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 6px;
+  background: var(--c-info-50);
+  color: var(--c-info-d);
+  font-weight: 900;
+  font-size: 0.85em;
 }

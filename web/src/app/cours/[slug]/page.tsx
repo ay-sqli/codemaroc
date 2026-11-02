@@ -2,11 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, Download } from "lucide-react";
 import { CHAPTERS, chapterIndex, coverOf, ficheStats, getChapter, moduleOf, neighbours, stripEmoji } from "@/lib/courses";
-import { parseMd, splitTitle } from "@/lib/md";
-import { Fiche } from "@/components/Fiche";
+import { Fiche, ficheOutline } from "@/components/Fiche";
 import { ChapterTabs } from "@/components/ChapterTabs";
 import { ChapterActions, ChapterScore } from "@/components/CourseStatus";
-import { SCHEMA_META, schemaForChapter } from "@/lib/schemaMeta";
+import { SCHEMA_META, schemasForChapter } from "@/lib/schemaMeta";
 import { T } from "@/lib/i18n";
 import { Breadcrumbs, ChapterCover, ModuleIcon } from "@/components/ui";
 import { asset } from "@/lib/base";
@@ -38,21 +37,14 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
   const { prev, next } = neighbours(slug);
   const idx = chapterIndex(slug);
   const st = ficheStats(c);
-  const doc = parseMd(c.md);
-  const outline = doc.sections
-    .filter((s) => s.kind === "normal")
-    .map((s) => {
-      const t = splitTitle(s.title);
-      const ar = stripEmoji(t.ar).replace(/^\d+\.\s*/, "");
-      return { ar, fr: t.fr || ar };
-    });
-  const schema = schemaForChapter(slug);
+  const outline = ficheOutline(c.md);
+  const schemas = schemasForChapter(slug).filter((id) => SCHEMA_META[id]);
   const arTitle = stripEmoji(c.ar);
 
   return (
     <div className="space-y-8">
       {/* En-tête de cours */}
-      <section className="-mx-4 -mt-6 bg-[linear-gradient(180deg,#f0f6ff_0%,#ffffff_100%)] px-4 pb-8 pt-6 sm:-mx-6 sm:px-6 lg:-mt-8 lg:pt-8">
+      <section className="zellige zellige-dark -mx-4 -mt-6 bg-[linear-gradient(180deg,#fdedec_0%,transparent_100%)] px-4 pb-8 pt-6 sm:-mx-6 sm:px-6 lg:-mt-8 lg:pt-8">
         <Breadcrumbs
           items={[
             { label: <T fr="Cours" ar="الدروس" />, href: "/cours/" },
@@ -128,42 +120,70 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
       <div className="grid gap-10 lg:grid-cols-[1fr_300px]">
         <div className="min-w-0">
           <ChapterTabs md={c.md} title={c.fr} titleAr={arTitle} slug={slug} hasCards={!!c.nCards}>
+            {/* Sommaire en puces défilantes (téléphone / tablette ; sur grand écran il est dans la colonne de droite) */}
+            <nav className="no-scrollbar -mx-4 mb-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:hidden" aria-label="Sommaire">
+              {outline.map((o) => (
+                <a
+                  key={o.id}
+                  href={`#${o.id}`}
+                  className="flex shrink-0 items-center gap-2 rounded-full border-2 border-line bg-white py-1 pe-3.5 ps-1 text-[13px] font-[700] text-ink-2 shadow-[0_2px_0_var(--c-grey-200)]"
+                >
+                  <span
+                    className="grid size-6 place-items-center rounded-full text-[11px] font-[800] text-white"
+                    style={{ background: o.kind === "tips" ? "#f5b041" : o.kind === "traps" ? "#e74c3c" : o.kind === "video" ? "#2980b9" : o.tone }}
+                  >
+                    {o.kind === "normal" ? o.n : o.kind === "tips" ? "!" : o.kind === "traps" ? "×" : "▸"}
+                  </span>
+                  <span className="max-w-[11rem] truncate">
+                    <T fr={o.fr} ar={o.ar} />
+                  </span>
+                </a>
+              ))}
+            </nav>
             <Fiche md={c.md} />
           </ChapterTabs>
         </div>
 
         <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-          <div className="rounded-[16px] border-2 border-line p-5">
-            <p className="mb-3 text-base font-semibold">
+          <nav className="rounded-[24px] border-2 border-line bg-white p-4" aria-label="Sommaire">
+            <p className="mb-2 px-1 text-[15px] font-[800]">
               <T fr="Au programme" ar="محتوى الدرس" />
             </p>
-            <ol className="space-y-2 text-sm text-ink-2">
-              {outline.map((o, i) => (
-                <li key={i} className="flex gap-2">
-                  <span className="w-5 shrink-0 text-muted">{i + 1}.</span>
-                  <span className="min-w-0 flex-1">
-                    <T fr={o.fr} ar={o.ar} />
-                  </span>
+            <ol className="space-y-1">
+              {outline.map((o) => (
+                <li key={o.id}>
+                  <a href={`#${o.id}`} className="flex items-center gap-2.5 rounded-[12px] px-2 py-1.5 text-[14px] font-[600] text-ink-2 hover:bg-panel">
+                    <span
+                      className="grid size-7 shrink-0 place-items-center rounded-[9px] text-[13px] font-[800] text-white"
+                      style={{ background: o.kind === "tips" ? "#f5b041" : o.kind === "traps" ? "#e74c3c" : o.kind === "video" ? "#2980b9" : o.tone }}
+                      aria-hidden="true"
+                    >
+                      {o.kind === "normal" ? o.n : o.kind === "tips" ? "!" : o.kind === "traps" ? "×" : "▸"}
+                    </span>
+                    <span className="min-w-0 flex-1 leading-snug">
+                      <T fr={o.fr} ar={o.ar} />
+                    </span>
+                  </a>
                 </li>
               ))}
             </ol>
-          </div>
-          {schema && SCHEMA_META[schema] && (
-            <Link href={`/schemas/#${schema}`} className="block rounded-[16px] border-2 border-line p-5 transition-shadow hover:shadow-md">
+          </nav>
+          {schemas.map((id) => (
+            <Link key={id} href={`/schemas/#${id}`} className="block rounded-[24px] border-2 border-line bg-white p-5 shadow-[0_4px_0_var(--c-grey-300)] transition-transform hover:-translate-y-0.5">
               <p className="t-overline mb-1">
-                <T fr="Schéma interactif" ar="رسم تفاعلي" />
+                <T fr="Schéma animé" ar="رسم متحرك" />
               </p>
-              <p className="text-base font-semibold text-ink">
-                <T fr={SCHEMA_META[schema].title} ar={SCHEMA_META[schema].titleAr} />
+              <p className="text-base font-[800] text-ink">
+                <T fr={SCHEMA_META[id].title} ar={SCHEMA_META[id].titleAr} />
               </p>
               <p className="mt-1 text-sm text-muted">
-                <T fr={SCHEMA_META[schema].desc} ar={SCHEMA_META[schema].descAr} />
+                <T fr={SCHEMA_META[id].desc} ar={SCHEMA_META[id].descAr} />
               </p>
               <span className="link mt-3 inline-flex items-center gap-1 text-sm">
                 <T fr="Ouvrir le schéma" ar="فتح الرسم" /> <ArrowRight className="size-4" />
               </span>
             </Link>
-          )}
+          ))}
           {c.nCards ? (
             <a href={asset(`/anki/${slug}.csv`)} download className="flex items-center gap-3 rounded-[16px] border-2 border-line p-5 text-sm transition-shadow hover:shadow-md">
               <Download className="size-5 text-brand" />

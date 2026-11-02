@@ -1,10 +1,17 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Eye, RotateCcw, Shuffle } from "lucide-react";
+import { Eye, Lightbulb, RotateCcw, Shuffle } from "lucide-react";
 import { MEMO, memoGroupText, memoText, type MemoItem } from "@/lib/memo";
 import { useLang } from "@/lib/i18n";
 import { Breadcrumbs, Button, PageHeader, PillTabs, cx } from "@/components/ui";
+import { enrich } from "@/lib/illustrate";
+import { asset } from "@/lib/base";
+
+const HAS_AR = /[؀-ۿ]/;
+const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+/** Texte mémo → HTML avec chiffres et flèches mis en évidence. */
+const rich = (s: string) => ({ __html: enrich(esc(s)) });
 
 function FlashCard({ item }: { item: MemoItem }) {
   const { lang, t } = useLang();
@@ -14,13 +21,16 @@ function FlashCard({ item }: { item: MemoItem }) {
     <button
       onClick={() => setFlip((f) => !f)}
       aria-pressed={flip}
-      className={cx("flex min-h-44 flex-col rounded-[16px] border bg-white p-5 text-start transition-shadow hover:shadow-md", flip ? "border-brand" : "border-line")}
+      className={cx(
+        "flex min-h-40 flex-col rounded-[20px] border-2 bg-white p-4 text-start shadow-[0_3px_0_var(--c-grey-300)] transition-transform active:translate-y-0.5 sm:p-5",
+        flip ? "border-[#2980b9]" : "border-line",
+      )}
     >
       <p className="text-xs text-muted">{flip ? t("Réponse", "الجواب") : t("Question", "السؤال")}</p>
       <p className="mt-1 text-base font-semibold text-ink">{it.q}</p>
       {flip ? (
         <div className="animate-pop mt-3 space-y-3">
-          <p className="text-[15px] font-semibold text-brand">{it.a}</p>
+          <p className="text-[15px] font-[700] leading-relaxed text-ink" dangerouslySetInnerHTML={rich(it.a)} />
           <p className="rounded-[12px] bg-warn-50 px-3 py-2 text-sm text-ink-2">
             <span className="font-semibold text-warn">{t("Moyen mnémotechnique : ", "حيلة للحفظ: ")}</span>
             {it.hook}
@@ -98,29 +108,39 @@ export function Memo() {
 
       <PillTabs items={MEMO.map((x) => ({ id: x.id, label: memoGroupText(x, lang).title }))} value={g} onChange={setG} />
 
-      <section className="grid gap-8 lg:grid-cols-[1fr_340px]">
-        <div className="space-y-6">
-          <div>
-            <h2 className="t-h2">{gt.title}</h2>
-            <p className="mt-2 text-base text-ink-2">{gt.intro}</p>
+      <section className="grid gap-8 lg:grid-cols-[1fr_320px]">
+        <div className="space-y-5">
+          <div className="flex items-start gap-4 rounded-[24px] border-2 border-line bg-white p-4 shadow-[0_4px_0_var(--c-grey-300)] sm:p-5">
+            <img src={asset("/mascot/teacher.webp")} alt="" className="h-20 w-auto shrink-0 sm:h-24" />
+            <div className="min-w-0">
+              <h2 className="text-[20px] font-[800] leading-snug text-[var(--c-grey-975)] sm:text-[24px]">{gt.title}</h2>
+              <p className="mt-1.5 text-[15px] leading-relaxed text-ink-2 sm:text-base">{gt.intro}</p>
+            </div>
           </div>
-          <div className="divide-y divide-line rounded-[16px] border-2 border-line">
-            {group.items.map((raw) => {
+          <ol className="grid gap-4 xl:grid-cols-2">
+            {group.items.map((raw, i) => {
               const it = memoText(raw, lang);
               return (
-                <div key={raw.q} className="grid gap-2 p-5 sm:grid-cols-[1fr_1.2fr] sm:gap-6">
-                  <p className="font-semibold text-ink">{it.q}</p>
-                  <div className="space-y-2">
-                    <p className="text-[15px] font-semibold text-brand">{it.a}</p>
-                    <p className="text-sm text-ink-2">
-                      <span className="font-semibold text-warn">{t("Astuce : ", "الحيلة: ")}</span>
-                      {it.hook}
+                <li key={raw.q} className="flex flex-col overflow-hidden rounded-[22px] border-2 border-line bg-white shadow-[0_4px_0_var(--c-grey-300)]">
+                  <div className="flex items-start gap-3 p-4 pb-3 sm:p-5 sm:pb-3">
+                    <span className="grid size-8 shrink-0 place-items-center rounded-[10px] bg-[#d92b2b] text-[14px] font-[800] text-white">{i + 1}</span>
+                    <h3 className={cx("text-[17px] font-[800] leading-snug text-[var(--c-grey-975)] sm:text-[18px]", HAS_AR.test(it.q) && "ar")}>{it.q}</h3>
+                  </div>
+                  <p
+                    className={cx("mx-4 rounded-[14px] bg-[#ebf5fb] px-3.5 py-3 text-[16px] font-[600] leading-[1.85] text-ink sm:mx-5", HAS_AR.test(it.a) && "ar")}
+                    dangerouslySetInnerHTML={rich(it.a)}
+                  />
+                  <div className="mt-auto flex items-start gap-2.5 px-4 pb-4 pt-3 sm:px-5 sm:pb-5">
+                    <Lightbulb className="mt-1 size-5 shrink-0 text-[#d68910]" strokeWidth={2.4} aria-hidden="true" />
+                    <p className="text-[15px] leading-relaxed text-ink-2">
+                      <span className="font-[800] text-[#b9770e]">{t("Astuce : ", "الحيلة: ")}</span>
+                      <span className={cx(HAS_AR.test(it.hook) && "ar")}>{it.hook}</span>
                     </p>
                   </div>
-                </div>
+                </li>
               );
             })}
-          </div>
+          </ol>
         </div>
         <aside className="space-y-3 lg:sticky lg:top-24 lg:self-start">
           <h2 className="t-h4">{t("Teste-toi sur ce thème", "اختبر نفسك في هذا الموضوع")}</h2>
