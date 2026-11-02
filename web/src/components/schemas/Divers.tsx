@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { BookOpen, CircleDot, Hand, Signpost, type LucideIcon } from "lucide-react";
 import { useLang } from "@/lib/i18n";
-import { Slider, Stat, Tip, Toggle } from "./ui";
+import { Slider, Stat, Tip, Toggle, vehicleSrc } from "./ui";
 
 /** Paire [français, arabe]. */
 type FA = [string, string];
@@ -295,7 +295,9 @@ export function Stationnement() {
         <text x={300 - (d * 12) / 2} y={124} textAnchor="middle" fill="#fff" fontSize={14} fontWeight={900}>
           {t(`${d} m interdits`, `${d} م ممنوعة`)}
         </text>
-        <rect x={300 - d * 12 - 54} y={78} width={44} height={22} rx={5} fill="#22c55e" />
+        <g style={{ transform: `translate(${300 - d * 12 - 32}px, 89px) rotate(90deg)`, transition: "transform 0.6s ease" }}>
+          <image href={vehicleSrc("voiture-verte")} x={-12} y={-26} width={24} height={52} preserveAspectRatio="xMidYMid meet" />
+        </g>
       </svg>
       <ul className="grid gap-1.5 text-sm font-semibold sm:grid-cols-2">
         {FORBIDDEN.map((x) => (

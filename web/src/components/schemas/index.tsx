@@ -2,7 +2,7 @@
 
 import type { ComponentType } from "react";
 import {
-  Ban, Car, CircleParking, Flame, Gauge, Hash, Lightbulb, Ruler, ShieldAlert, Shapes, Siren, Split, Triangle, Waves, Wine, type LucideIcon,
+  Ambulance, Ban, Car, CircleParking, CloudRain, Flame, Gauge, Hash, Lightbulb, Ruler, ShieldAlert, Shapes, Siren, Split, Triangle, Waves, Wine, type LucideIcon,
 } from "lucide-react";
 import { Modal } from "@/components/ui";
 import { SCHEMA_META, schemaDesc, schemaForChapter, schemaTitle, type SchemaMeta } from "@/lib/schemaMeta";
@@ -15,6 +15,8 @@ import Sanctions from "./Sanctions";
 import Feux from "./Feux";
 import Marquage from "./Marquage";
 import { Alcool, Depassement, Energie, Formes, Hierarchie, Pas, Points, Stationnement } from "./Divers";
+import EtatRoute from "./EtatRoute";
+import Usagers from "./Usagers";
 
 export interface SchemaDef extends SchemaMeta {
   C: ComponentType;
@@ -36,6 +38,8 @@ const COMPONENTS: Record<string, ComponentType> = {
   alcool: Alcool,
   energie: Energie,
   pas: Pas,
+  etat: EtatRoute,
+  usagers: Usagers,
 };
 
 /** Registre des schémas interactifs (id utilisé dans les corrigés : champ `s`). */
@@ -62,6 +66,8 @@ export const SCHEMA_ICONS: Record<string, LucideIcon> = {
   alcool: Wine,
   energie: Flame,
   pas: Siren,
+  etat: CloudRain,
+  usagers: Ambulance,
 };
 
 export function SchemaModal({ id, onClose }: { id: string; onClose: () => void }) {

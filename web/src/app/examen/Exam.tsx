@@ -149,6 +149,7 @@ export function Exam() {
           </div>
         ) : (
           <EmptyState
+              mascot="timer"
             title={t("Aucune tentative pour l'instant", "لا توجد محاولات حتى الآن")}
             desc={t(
               "Ta première note apparaîtra ici. Conseil : fais au moins un examen blanc par jour la dernière semaine.",

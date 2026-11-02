@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useLang } from "@/lib/i18n";
-import { Tip } from "./ui";
+import { Tip, vehicleSrc } from "./ui";
 
 const LINES = [
   {
@@ -100,7 +100,7 @@ export default function Marquage() {
             : ""}
         </text>
         <g transform={`translate(160 ${low ? 128 : 52}) rotate(${low ? 90 : -90})`}>
-          <rect x={-12} y={-20} width={24} height={40} rx={6} fill="#ff7a00" />
+          <image href={vehicleSrc("autoecole")} x={-13} y={-26} width={26} height={52} preserveAspectRatio="xMidYMid meet" />
         </g>
         <path
           d={`M200 ${low ? 128 : 52} C 240 ${low ? 128 : 52}, 250 ${low ? 60 : 128}, 300 ${low ? 60 : 128}`}

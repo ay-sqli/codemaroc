@@ -18,6 +18,7 @@ import { Mascot, MascotSays, OOPS_POSES, PRAISE_POSES } from "./Mascot";
 import { preloadSounds, sfx } from "./sounds";
 import { GameIcon } from "./GameIcon";
 import { VOYANT_UNITS, Voyants } from "./Voyants";
+import { RoadScene } from "./RoadScene";
 
 const HAS_AR = /[؀-ۿ]/;
 const PRAISE: [string, string][] = [
@@ -177,6 +178,8 @@ export function LessonIntro({
           {timed ? (node.kind === "summit" ? t("Le sommet", "القمة") : t("Défi de l'unité", "تحدي الوحدة")) : `${t("Étape", "المرحلة")} ${node.index} · ${t("cours express", "درس سريع")}`}
         </p>
         <h1 className="duo-h mt-1 text-[28px] leading-tight sm:text-[32px]">{lang === "ar" ? node.title.ar : node.title.fr}</h1>
+
+        {node.unit && <RoadScene unit={node.unit} section={node.section} />}
 
         <div className="mt-6">
           {timed ? (

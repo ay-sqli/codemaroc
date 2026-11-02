@@ -68,8 +68,49 @@ const ROW = 112;
 const NODE_Y = 40;
 const OFFSETS = [0, 58, 92, 58, 0, -58, -92, -58];
 
+/** Véhicule qui roule sur la route de chaque unité (varie selon la section et le chapitre). */
+const UNIT_VEHICLE: Record<string, string> = {
+  "05_vehicules_prioritaires": "ambulance",
+  "13_autres_usagers": "charrette",
+  "11_autoroute": "camion",
+  "03_vitesse": "moto",
+  "02_elements_mecaniques": "depanneuse",
+  "01_categories_permis": "bus",
+  "12_signalisation_temporaire": "rouleau",
+  "15_panne_accident": "depanneuse",
+  "02_dangers_priorites": "tracteur",
+};
+const SECTION_VEHICLES: Record<string, string[]> = {
+  "01": ["autoecole", "petit-taxi", "grand-taxi", "voiture-bleue"],
+  "03": ["autoecole", "voiture-verte", "scooter", "velo"],
+  "04": ["4x4", "camionnette", "pickup-charge", "fourgon-jaune"],
+  "02": ["petit-taxi", "bus", "grand-taxi", "triporteur", "autocar"],
+  "06": ["autoecole", "voiture-bleue", "citerne", "porte-voitures"],
+  "05": ["police", "gendarmerie", "moto-police", "grand-taxi"],
+};
+/** Décor posé au bord de la route (feux, barrières, panneaux). */
+const UNIT_PROP: Record<string, string> = {
+  "09_feux_et_agents": "feu-rouge",
+  "11_signaux_lumineux": "feu-fleches",
+  "07_regles_priorite": "feu-vert",
+  "12_signalisation_temporaire": "barriere-fleche",
+  "03_interdictions": "panneau-sens-interdit",
+  "05_indications": "panneau-bleu",
+  "14_dangers_exceptionnels": "barriere",
+  "15_panne_accident": "barriere-noire",
+  "06_arret_stationnement": "grille-panneau",
+};
+const SECTION_PROPS: Record<string, string[]> = {
+  "01": ["panneau-bleu", "feu-vert", "grilles"],
+  "03": ["feu-rouge", "panneau-bleu"],
+  "04": ["barriere", "grilles"],
+  "02": ["feu-fleches", "feu-rouge", "barriere-noire"],
+  "06": ["barriere-fleche", "feu-vert"],
+  "05": ["panneau-sens-interdit", "grille-panneau"],
+};
+
 /** Route asphaltée (bas-côtés blancs + ligne centrale pointillée) reliant les étapes d'une unité. */
-function Road({ xs }: { xs: number[] }) {
+function Road({ xs, vehicle, n }: { xs: number[]; vehicle: string; n: number }) {
   const pts = xs.map((x, k) => [x, k * ROW + NODE_Y] as const);
   const first = pts[0];
   const last = pts[pts.length - 1];
@@ -88,6 +129,13 @@ function Road({ xs }: { xs: number[] }) {
       <path d={d} fill="none" stroke="#fff" strokeWidth="66" strokeLinecap="round" opacity="0.9" />
       <path d={d} fill="none" stroke="#3a414c" strokeWidth="61" strokeLinecap="round" />
       <path d={d} fill="none" stroke="#fff" strokeWidth="3" strokeDasharray="14 14" strokeLinecap="round" />
+      {/* Un véhicule roule sur la voie de droite, d'une étape à l'autre, en boucle */}
+      <g opacity="0.95">
+        <animateMotion dur={`${Math.max(8, xs.length * 2.6)}s`} begin={`-${(n % 5) * 1.7}s`} repeatCount="indefinite" rotate="auto" path={d} />
+        <g transform="rotate(90) translate(15 0)">
+          <image href={asset(`/vehicles/${vehicle}.webp`)} x={-11} y={-22} width={22} height={44} preserveAspectRatio="xMidYMid meet" />
+        </g>
+      </g>
     </svg>
   );
 }
@@ -368,7 +416,19 @@ export function PathView() {
                     </Link>
                   </div>
                   <div className="relative">
-                    <Road xs={xs} />
+                    <Road
+                      xs={xs}
+                      n={u.n}
+                      vehicle={UNIT_VEHICLE[u.chapter.slug] ?? SECTION_VEHICLES[sec.id][u.n % SECTION_VEHICLES[sec.id].length]}
+                    />
+                    {u.nodes.length > 4 && (
+                      <img
+                        src={asset(`/props/${UNIT_PROP[u.chapter.slug] ?? SECTION_PROPS[sec.id][u.n % SECTION_PROPS[sec.id].length]}.webp`)}
+                        alt=""
+                        className="pointer-events-none absolute top-[360px] h-[64px] w-auto"
+                        style={u.n % 2 ? { right: "8%" } : { left: "8%" }}
+                      />
+                    )}
                     {u.nodes.map((node, k) => {
                       const i = flatI++;
                       return (

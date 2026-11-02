@@ -204,6 +204,7 @@ export function Catalog() {
             </div>
           ) : (
             <EmptyState
+              mascot="search"
               title={t("Aucun chapitre ne correspond", "لا يوجد درس مطابق")}
               desc={t("Modifie les filtres ou efface la recherche.", "غيّر معايير التصفية أو امسح البحث.")}
               action={

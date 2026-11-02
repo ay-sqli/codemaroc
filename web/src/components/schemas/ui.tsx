@@ -2,6 +2,7 @@
 
 import { Callout, Segmented } from "@/components/ui";
 import { useLang } from "@/lib/i18n";
+import { asset } from "@/lib/base";
 
 /** Petits composants partagés par les schémas interactifs. */
 
@@ -24,7 +25,7 @@ export function Slider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-3 w-full accent-[#0056d2]"
+        className="mt-3 w-full accent-[#d92b2b]"
       />
     </label>
   );
@@ -56,18 +57,71 @@ export function Tip({ children }: { children: React.ReactNode }) {
   );
 }
 
-/** Petite voiture vue de dessus (SVG) */
-export function Car({ x, y, rot = 0, color = "#2563eb", label }: { x: number; y: number; rot?: number; color?: string; label?: string }) {
+/** Véhicules vus de dessus (public/vehicles), tous dessinés « face vers le haut ». */
+export type Vehicle =
+  | "autoecole" | "petit-taxi" | "grand-taxi" | "police" | "voiture-bleue" | "voiture-verte" | "4x4" | "camion" | "camionnette"
+  | "benne" | "bus" | "autocar" | "pompiers" | "ambulance" | "pickup" | "depanneuse" | "tracteur" | "moto-police" | "scooter"
+  | "moto" | "velo" | "triporteur" | "charrette" | "moto-chargee" | "fourgon-charge" | "pickup-charge" | "camion-moutons"
+  | "citerne" | "porte-voitures" | "gendarmerie" | "benne-ordures" | "fourgon-jaune" | "bulldozer" | "rouleau" | "quad"
+  | "side-car" | "velo-cargo";
+
+/** Anciennes couleurs des schémas → véhicule illustré. */
+const COLOR_VEHICLE: Record<string, Vehicle> = {
+  "#ff7a00": "autoecole",
+  "#2563eb": "voiture-bleue",
+  "#7c3aed": "petit-taxi",
+  "#059669": "voiture-verte",
+  "#f8fafc": "ambulance",
+};
+
+export const vehicleSrc = (v: Vehicle) => asset(`/vehicles/${v}.webp`);
+
+/**
+ * Véhicule vu de dessus dans un schéma SVG. `to` déplace le véhicule avec une animation
+ * (après `delay` secondes) ; `beacon` fait clignoter un gyrophare.
+ */
+export function Car({
+  x, y, rot = 0, color = "#2563eb", label, vehicle, size = 26, to, delay = 0, duration = 1.4, beacon,
+}: {
+  x: number;
+  y: number;
+  rot?: number;
+  color?: string;
+  label?: string;
+  vehicle?: Vehicle;
+  size?: number;
+  to?: { x: number; y: number; rot?: number } | null;
+  delay?: number;
+  duration?: number;
+  beacon?: boolean;
+}) {
+  const v = vehicle ?? COLOR_VEHICLE[color] ?? "voiture-bleue";
+  const p = to ?? { x, y, rot };
   return (
-    <g transform={`translate(${x} ${y}) rotate(${rot})`}>
-      <rect x={-11} y={-19} width={22} height={38} rx={6} fill={color} stroke="#0f172a" strokeOpacity={0.25} />
-      <rect x={-8} y={-11} width={16} height={9} rx={2} fill="#dbeafe" opacity={0.85} />
-      <rect x={-8} y={6} width={16} height={6} rx={2} fill="#dbeafe" opacity={0.6} />
-      {label && (
-        <text x={0} y={4} textAnchor="middle" fontSize={11} fontWeight={900} fill="#fff" transform={`rotate(${-rot})`}>
-          {label}
-        </text>
+    <>
+      <g
+        style={{
+          transform: `translate(${p.x}px, ${p.y}px) rotate(${p.rot ?? rot}deg)`,
+          transition: to ? `transform ${duration}s cubic-bezier(0.45, 0, 0.55, 1) ${delay}s` : "transform 0.4s ease",
+        }}
+      >
+        <ellipse cx={0} cy={2} rx={size * 0.5} ry={size * 0.95} fill="#000" opacity={0.18} />
+        <image href={vehicleSrc(v)} x={-size / 2} y={-size} width={size} height={size * 2} preserveAspectRatio="xMidYMid meet" />
+        {beacon && (
+          <g>
+            <circle cx={-size * 0.18} cy={-size * 0.1} r={size * 0.16} className="schema-beacon-red" />
+            <circle cx={size * 0.18} cy={-size * 0.1} r={size * 0.16} className="schema-beacon-blue" />
+          </g>
+        )}
+      </g>
+      {label && !to && (
+        <g transform={`translate(${x} ${y + size + 10})`} style={{ pointerEvents: "none" }}>
+          <rect x={-18} y={-9} width={36} height={17} rx={8.5} fill="#d92b2b" stroke="#fff" strokeWidth={1.5} />
+          <text y={4} textAnchor="middle" fontSize={10} fontWeight={800} fill="#fff">
+            {label}
+          </text>
+        </g>
       )}
-    </g>
+    </>
   );
 }

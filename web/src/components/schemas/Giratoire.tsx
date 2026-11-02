@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 import { useLang } from "@/lib/i18n";
-import { Car, Tip, Toggle } from "./ui";
+import { asset } from "@/lib/base";
+import { Car, Tip, Toggle, vehicleSrc } from "./ui";
+
+/** Anneau parcouru par les véhicules (sens inverse des aiguilles d'une montre, comme au Maroc). */
+const RING = "M 150 222 A 72 72 0 1 0 150 78 A 72 72 0 1 0 150 222";
 
 /** Différence ممر دائري (sens giratoire, priorité à droite) / ملتقى طرق دوراني (giratoire avec « cédez »). */
 export default function Giratoire() {
@@ -29,12 +33,8 @@ export default function Giratoire() {
         onChange={setType}
       />
       <div className="grid items-center gap-4 md:grid-cols-[1fr_1.1fr]">
-        <svg viewBox="0 0 300 300" className="w-full rounded-2xl bg-emerald-700/80" direction="ltr">
-          <rect x={110} y={0} width={80} height={300} fill="#374151" />
-          <rect x={0} y={110} width={300} height={80} fill="#374151" />
-          <circle cx={150} cy={150} r={88} fill="#374151" />
-          <circle cx={150} cy={150} r={40} fill="#16a34a" stroke="#fff" strokeWidth={3} />
-          <circle cx={150} cy={150} r={64} fill="none" stroke="#fff" strokeDasharray="8 7" strokeWidth={1.5} opacity={0.6} />
+        <svg viewBox="0 0 300 300" className="w-full overflow-hidden rounded-[20px] border-2 border-line bg-[#eadfc6]" direction="ltr">
+          <image href={asset("/tiles/giratoire.webp")} x={-4} y={-4} width={308} height={308} preserveAspectRatio="none" />
           {/* Sens de rotation : inverse des aiguilles d'une montre */}
           <path d="M 205 95 A 78 78 0 0 0 95 95" fill="none" stroke="#facc15" strokeWidth={3} markerEnd="url(#g)" />
           <defs>
@@ -47,14 +47,22 @@ export default function Giratoire() {
               <polygon points="-16,-11 16,-11 0,16" fill="#fff" stroke="#dc2626" strokeWidth={4} strokeLinejoin="round" />
             </g>
           )}
-          <Car x={170} y={262} label={t("Moi", "أنا")} color="#ff7a00" />
-          <Car x={226} y={196} rot={-45} color="#2563eb" />
-          <text x={262} y={168} fontSize={12} fontWeight={700} fill="#fff">
-            {prioInside ? t("1er", "1") : t("2e", "2")}
-          </text>
-          <text x={122} y={258} fontSize={12} fontWeight={700} fill="#fff">
-            {prioInside ? t("2e", "2") : t("1er", "1")}
-          </text>
+          <Car x={170} y={268} label={t("Moi", "أنا")} vehicle="autoecole" />
+          {/* Deux véhicules tournent dans l'anneau en continu */}
+          {[0, 3.5].map((begin, i) => (
+            <g key={i}>
+              <animateMotion dur="7s" begin={`-${begin}s`} repeatCount="indefinite" rotate="auto" path={RING} />
+              <g transform="rotate(90)">
+                <image href={vehicleSrc(i ? "petit-taxi" : "voiture-bleue")} x={-12} y={-24} width={24} height={48} preserveAspectRatio="xMidYMid meet" />
+              </g>
+            </g>
+          ))}
+          <g transform="translate(112 252)">
+            <rect x={-30} y={-11} width={60} height={22} rx={11} fill={prioInside ? "#e74c3c" : "#198754"} />
+            <text y={4} textAnchor="middle" fontSize={11} fontWeight={800} fill="#fff">
+              {prioInside ? t("J'attends", "أنتظر") : t("Je passe", "أمر")}
+            </text>
+          </g>
         </svg>
         <div className="space-y-3">
           <div className={`rounded-2xl p-4 ${prioInside ? "bg-brand/10" : "bg-accent/10"}`}>

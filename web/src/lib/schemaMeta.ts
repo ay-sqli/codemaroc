@@ -106,6 +106,20 @@ export const SCHEMA_META: Record<string, SchemaMeta> = {
     descAr: "لماذا تتضاعف قوة الاصطدام 4 مرات عندما تتضاعف السرعة.",
     chapters: ["06_environnement", "04_equipements_securite", "03_perte_controle"],
   },
+  etat: {
+    title: "État de la route",
+    desc: "Pluie, neige, gravillons, piste, chute de pierres : la voiture freine, la distance d'arrêt s'allonge.",
+    titleAr: "حالة الطريق",
+    descAr: "مطر، ثلج، حصى، طريق ترابية، تساقط الأحجار: السيارة تفرمل ومسافة التوقف تطول.",
+    chapters: ["15_conditions_climatiques", "14_dangers_exceptionnels", "03_perte_controle"],
+  },
+  usagers: {
+    title: "Usagers de la route",
+    desc: "Ambulance, gendarmerie, tracteur, charrette… à qui céder le passage ?",
+    titleAr: "مستعملو الطريق",
+    descAr: "سيارة الإسعاف، الدرك، الجرار، العربة المجرورة… لمن تفسح الطريق ؟",
+    chapters: ["05_vehicules_prioritaires", "13_autres_usagers"],
+  },
   pas: {
     title: "Accident : P.A.S.",
     desc: "Protéger, Alerter, Secourir et les numéros d'urgence.",

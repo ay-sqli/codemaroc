@@ -44,6 +44,7 @@ export function Session() {
     return (
       <div className="mx-auto max-w-xl">
         <EmptyState
+              mascot="vacation"
           icon={<PartyPopper className="size-6" />}
           title={mode === "notebook" ? t("Rien à réviser pour l'instant", "لا شيء للمراجعة حاليا") : t("Aucune question ici", "لا توجد أسئلة هنا")}
           desc={

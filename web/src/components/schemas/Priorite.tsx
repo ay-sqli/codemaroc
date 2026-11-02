@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { ArrowRight, RotateCcw } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, Play, RotateCcw } from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import { asset } from "@/lib/base";
 import { Car, Tip } from "./ui";
 
 type Pos = "me" | "right" | "left" | "front";
@@ -111,6 +112,15 @@ const POS: Record<Pos, { x: number; y: number; rot: number }> = {
   front: { x: 130, y: 38, rot: 180 },
 };
 
+/** Où va chaque véhicule une fois son tour venu (il traverse le carrefour puis sort du cadre). */
+const EXIT: Record<Pos, { x: number; y: number; rot: number }> = {
+  me: { x: 170, y: -70, rot: 0 },
+  right: { x: -70, y: 130, rot: -90 },
+  left: { x: 370, y: 170, rot: 90 },
+  front: { x: 130, y: 370, rot: 180 },
+};
+const EXIT_LEFT_TURN = { x: -70, y: 130, rot: -90 };
+
 const COLORS: Record<Pos, string> = { me: "#ff7a00", right: "#2563eb", left: "#7c3aed", front: "#059669" };
 const NAMES: Record<Pos, [string, string]> = {
   me: ["Moi", "أنا"],
@@ -158,6 +168,16 @@ export default function Priorite() {
   const { lang, t } = useLang();
   const [k, setK] = useState(0);
   const [pick, setPick] = useState<Pos | null>(null);
+  // Animation : après la réponse, les véhicules passent un par un dans l'ordre de priorité.
+  const [play, setPlay] = useState(0);
+  const [go, setGo] = useState<string | null>(null);
+  const run = `${k}-${play}-${pick}`;
+  useEffect(() => {
+    if (!pick) return;
+    // Deux images plus tard : les véhicules sont affichés à leur place, puis partent (transition CSS).
+    let id = requestAnimationFrame(() => (id = requestAnimationFrame(() => setGo(run))));
+    return () => cancelAnimationFrame(id);
+  }, [pick, run]);
   const s = SCENARIOS[k];
   const present: Pos[] = ["me", ...s.others.map((o) => o.pos)];
   const done = pick !== null;
@@ -179,15 +199,8 @@ export default function Priorite() {
       <h4 className="text-lg font-black">{lang === "ar" ? s.titleAr : s.title}</h4>
       <p className="text-sm font-semibold text-muted">{t("Qui passe en premier ? Clique sur la voiture.", "من يمر أولا؟ انقر على السيارة.")}</p>
 
-      <svg viewBox="0 0 300 300" className="mx-auto w-full max-w-sm rounded-2xl bg-emerald-700/80" direction="ltr">
-        <rect x={100} y={0} width={100} height={300} fill="#374151" />
-        <rect x={0} y={100} width={300} height={100} fill="#374151" />
-        {[0, 1].map((i) => (
-          <g key={i} stroke="#fff" strokeWidth={2} strokeDasharray="10 8" opacity={0.7}>
-            <line x1={150} y1={i ? 205 : 0} x2={150} y2={i ? 300 : 95} />
-            <line x1={i ? 205 : 0} y1={150} x2={i ? 300 : 95} y2={150} />
-          </g>
-        ))}
+      <svg key={`${k}-${play}`} viewBox="0 0 300 300" className="mx-auto w-full max-w-sm overflow-hidden rounded-[20px] border-2 border-line bg-[#eadfc6]" direction="ltr">
+        <image href={asset("/tiles/carrefour.webp")} x={-6} y={-6} width={312} height={312} preserveAspectRatio="none" />
         {s.mine !== "none" && <SignIcon kind={s.mine} x={228} y={240} />}
         {s.others.map(
           (o) =>
@@ -211,12 +224,14 @@ export default function Priorite() {
           const rank = done ? s.order.indexOf(p) + 1 : 0;
           return (
             <g key={p} onClick={() => !done && setPick(p)} className={done ? "" : "cursor-pointer"}>
-              <Car {...POS[p]} color={o?.special === "ambulance" ? "#f8fafc" : COLORS[p]} label={p === "me" ? name("me") : undefined} />
-              {o?.special === "ambulance" && (
-                <text x={POS[p].x} y={POS[p].y + 7} textAnchor="middle" fontSize={20} fontWeight={700} fill="#d30001">
-                  +
-                </text>
-              )}
+              <Car
+                {...POS[p]}
+                color={o?.special === "ambulance" ? "#f8fafc" : COLORS[p]}
+                label={p === "me" ? name("me") : undefined}
+                beacon={o?.special === "ambulance"}
+                to={done && go === run ? (p === "me" && s.myTurn === "left" ? EXIT_LEFT_TURN : EXIT[p]) : null}
+                delay={done ? 0.6 + (rank - 1) * 1.5 : 0}
+              />
               {done && (
                 <g transform={`translate(${POS[p].x + 20} ${POS[p].y - 22})`}>
                   <circle r={12} fill={rank === 1 ? "#059669" : "#0f172a"} />
@@ -255,10 +270,17 @@ export default function Priorite() {
         </div>
       )}
 
-      <div className="flex justify-between">
-        <button className="btn btn-ghost !py-2 text-sm" onClick={() => setPick(null)}>
-          <RotateCcw className="size-4" /> {t("Recommencer", "إعادة")}
-        </button>
+      <div className="flex flex-wrap justify-between gap-2">
+        <div className="flex gap-2">
+          <button className="btn btn-ghost !py-2 text-sm" onClick={() => setPick(null)}>
+            <RotateCcw className="size-4" /> {t("Recommencer", "إعادة")}
+          </button>
+          {done && (
+            <button className="btn btn-ghost !py-2 text-sm" onClick={() => setPlay((n) => n + 1)}>
+              <Play className="size-4" /> {t("Revoir le passage", "أعد المشهد")}
+            </button>
+          )}
+        </div>
         <button
           className="btn btn-primary !py-2 text-sm"
           onClick={() => {

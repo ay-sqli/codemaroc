@@ -108,6 +108,7 @@ export function Notebook() {
             <Skeleton className="h-40" />
           ) : shown.length === 0 ? (
             <EmptyState
+              mascot="clap"
               icon={<NotebookPen className="size-6" />}
               title={items.length === 0 ? t("Aucune erreur enregistrée", "لا توجد أخطاء مسجلة") : t("Rien dans cette catégorie", "لا شيء في هذه الفئة")}
               desc={

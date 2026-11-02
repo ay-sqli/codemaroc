@@ -8,6 +8,7 @@ import { Correction, qText } from "./QuizPlayer";
 import { countLabel, useLang } from "@/lib/i18n";
 import { getChapter, nameOf } from "@/lib/courses";
 import { Badge, Button, ButtonLink, ModuleIcon, ProgressRing, cx } from "./ui";
+import { asset } from "@/lib/base";
 
 export function Results({
   results, seconds, exam, onRestart,
@@ -44,6 +45,11 @@ export function Results({
               : t("Continue : tes erreurs sont dans le carnet.", "واصل: أخطاؤك موجودة في الدفتر.")}
         </div>
         <div className="flex flex-col items-center gap-6 p-6 sm:flex-row sm:items-center">
+          <img
+            src={asset(`/mascot/${pass ? (exam ? "permis" : "excellent") : pct >= 60 ? "thinking" : "worried"}.webp`)}
+            alt=""
+            className="duo-mascot-in h-32 w-auto"
+          />
           <ProgressRing pct={pct} size={128} tone={pass ? "ok" : "ko"}>
             <span className="block text-3xl font-semibold leading-none">{Math.round(pct)} %</span>
           </ProgressRing>
