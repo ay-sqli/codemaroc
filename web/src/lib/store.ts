@@ -261,6 +261,68 @@ export function resetState() {
   set(() => initial);
 }
 
+/** Remplace tout l'état (synchronisation avec le compte en ligne). */
+export function replaceState(next: State) {
+  set(() => ({ ...initial, ...next, settings: { ...initial.settings, ...next.settings }, game: { ...initialGame, ...next.game } }));
+}
+
+/** Écoute chaque modification de la progression (sauvegarde en ligne). Renvoie la fonction de désabonnement. */
+export function onStateChange(l: () => void) {
+  listeners.add(l);
+  return () => {
+    listeners.delete(l);
+  };
+}
+
+/**
+ * Fusion de deux progressions (appareil + compte) sans rien perdre :
+ * réponses → la plus récente, étapes validées → union, XP et compteurs → maximum.
+ */
+export function mergeStates(a: State, b: State): State {
+  const answers: State["answers"] = { ...a.answers };
+  for (const [id, r] of Object.entries(b.answers ?? {})) if (!answers[id] || r.last > answers[id].last) answers[id] = r;
+  const srs: State["srs"] = { ...a.srs };
+  for (const [id, it] of Object.entries(b.srs ?? {})) {
+    const newerB = (b.answers?.[id]?.last ?? 0) >= (a.answers?.[id]?.last ?? 0);
+    if (!srs[id] || newerB) srs[id] = it;
+  }
+  const maxMap = (x: Record<string, number> = {}, y: Record<string, number> = {}) => {
+    const out = { ...x };
+    for (const [k, v] of Object.entries(y)) out[k] = Math.max(out[k] ?? 0, v);
+    return out;
+  };
+  const done = { ...a.game.done };
+  for (const [id, d] of Object.entries(b.game?.done ?? {})) done[id] = done[id] ? { ts: Math.max(done[id].ts, d.ts), acc: Math.max(done[id].acc, d.acc) } : d;
+  const exams = [...(a.exams ?? []), ...(b.exams ?? [])]
+    .filter((e, i, all) => all.findIndex((x) => x.ts === e.ts) === i)
+    .sort((x, y) => x.ts - y.ts)
+    .slice(-100);
+  return {
+    v: 1,
+    answers,
+    srs,
+    read: maxMap(a.read, b.read),
+    exams,
+    days: maxMap(a.days, b.days),
+    flags: { ...a.flags, ...b.flags },
+    settings: { ...a.settings, ...b.settings },
+    game: {
+      ...a.game,
+      done,
+      xp: Math.max(a.game.xp ?? 0, b.game?.xp ?? 0),
+      xpDays: maxMap(a.game.xpDays, b.game?.xpDays),
+      lessonDays: maxMap(a.game.lessonDays, b.game?.lessonDays),
+      comboDays: maxMap(a.game.comboDays, b.game?.comboDays),
+      lastBackup: Math.max(a.game.lastBackup ?? 0, b.game?.lastBackup ?? 0) || undefined,
+    },
+  };
+}
+
+/** État vierge, complété par les valeurs par défaut (pour fusionner un état venu du serveur). */
+export function normalizeState(s: Partial<State> | null | undefined): State {
+  return { ...initial, ...(s ?? {}), settings: { ...initial.settings, ...(s?.settings ?? {}) }, game: { ...initialGame, ...(s?.game ?? {}) } } as State;
+}
+
 /** Série de jours consécutifs d'activité (jusqu'à aujourd'hui ou hier). */
 export function streak(days: Record<string, number>) {
   let n = 0;

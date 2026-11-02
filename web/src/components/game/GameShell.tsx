@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo, useRef, useState } from "react";
-import { BookOpen, ClipboardCheck, Gauge, LayoutDashboard, Lightbulb, Map as MapIcon, NotebookPen, Shapes, Target, CloudCheck, Download, Upload } from "lucide-react";
+import { BookOpen, ClipboardCheck, Gauge, LayoutDashboard, Lightbulb, Map as MapIcon, NotebookPen, Shapes, ShieldCheck, Target, CircleUserRound, CloudCheck, Download, Upload } from "lucide-react";
+import { useSession } from "@/lib/session";
+import { useSyncStatus } from "@/components/CloudSync";
 import { downloadBackup, importState, streak, today, useStore } from "@/lib/store";
 import { useBank } from "@/lib/questions";
 import { buildPath, dailyQuests, type GamePath } from "@/lib/game";
@@ -151,6 +153,7 @@ export function BadgesCard() {
  */
 export function BackupCard() {
   const { lang, t } = useLang();
+  const sync = useSyncStatus();
   const last = useStore((s) => s.game.lastBackup);
   const nDone = useStore((s) => Object.keys(s.game.done).length);
   const file = useRef<HTMLInputElement>(null);
@@ -163,21 +166,23 @@ export function BackupCard() {
       </div>
       <p className="text-[14px] font-semibold text-[var(--duo-muted)]">
         {t(
-          "Enregistrée automatiquement sur cet appareil après chaque réponse : tu reprends toujours là où tu t'es arrêté.",
-          "يُحفظ تلقائيا على هذا الجهاز بعد كل جواب: تستأنف دائما من حيث توقفت.",
+          "Sauvegardée automatiquement dans ton compte après chaque réponse : tu la retrouves sur tous tes appareils.",
+          "يُحفظ تلقائيا في حسابك بعد كل جواب: تجده على كل أجهزتك.",
         )}
       </p>
-      <p className="mt-2 text-[13px] font-semibold text-[var(--duo-muted)]">
-        {t("Pour ne rien perdre (nettoyage du navigateur, nouveau téléphone), télécharge une copie de temps en temps.", "حتى لا تفقد شيئا (مسح المتصفح، هاتف جديد)، حمّل نسخة من حين لآخر.")}
-      </p>
       <p className="mt-2 text-[13px] font-[800] text-[var(--duo-grey-d)]">
-        {last
-          ? `${t("Dernière copie :", "آخر نسخة:")} ${fmtDate(last, lang, { day: "numeric", month: "long", hour: "2-digit", minute: "2-digit" })}`
-          : nDone
-            ? t("Aucune copie téléchargée pour l'instant", "لم يتم تحميل أي نسخة بعد")
-            : null}
+        {sync.s === "saved" && sync.at
+          ? `${t("Dernière sauvegarde :", "آخر حفظ:")} ${fmtDate(sync.at, lang, { hour: "2-digit", minute: "2-digit" })}`
+          : sync.s === "error" || sync.s === "offline"
+            ? t("Hors ligne : sauvegarde dès le retour du réseau", "غير متصل: سيتم الحفظ عند عودة الشبكة")
+            : last
+              ? `${t("Dernière copie :", "آخر نسخة:")} ${fmtDate(last, lang, { day: "numeric", month: "long" })}`
+              : nDone
+                ? null
+                : null}
       </p>
-      <div className="mt-4 grid grid-cols-2 gap-2">
+      <p className="mt-2 text-[12px] font-semibold text-[var(--duo-muted)]">{t("Copie de secours (fichier) :", "نسخة احتياطية (ملف):")}</p>
+      <div className="mt-2 grid grid-cols-2 gap-2">
         <button onClick={() => downloadBackup()} className="duo-btn duo-btn-blue !min-h-11 !px-3 !text-[13px]">
           <Download className="size-4" /> {t("Copie", "نسخة")}
         </button>
@@ -234,6 +239,7 @@ function ProgressCard() {
 
 export function GameShell({ children }: { children: React.ReactNode }) {
   const { t } = useLang();
+  const session = useSession();
   const path = usePathname() || "/";
   const due = useDueCount();
   const nav = [
@@ -246,8 +252,10 @@ export function GameShell({ children }: { children: React.ReactNode }) {
     { href: "/memo/", label: t("Mémo", "المذكرة"), icon: Lightbulb },
     { href: "/tableau-de-bord/", label: t("Tableau de bord", "لوحة القيادة"), icon: LayoutDashboard },
     { href: "/progression/", label: t("Progression", "التقدم"), icon: Gauge },
+    { href: "/profil/", label: t("Mon profil", "ملفي"), icon: CircleUserRound },
+    ...(session.user?.role === "admin" ? [{ href: "/admin/", label: t("Back-office", "لوحة الإدارة"), icon: ShieldCheck }] : []),
   ];
-  const mobile = [nav[0], nav[1], nav[3], nav[4], nav[7]];
+  const mobile = [nav[0], nav[1], nav[3], nav[4], nav[9]];
   const active = (href: string) => (href === "/" ? path === "/" : path.startsWith(href.replace(/\/$/, "")));
   // Le parcours a sa colonne de droite (chiffres, défis du jour) ; les autres pages prennent toute la largeur.
   const home = path === "/";

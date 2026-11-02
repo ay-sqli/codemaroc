@@ -1,15 +1,16 @@
 import type { NextConfig } from "next";
 
-// Export statique : l'app tourne sans serveur ni base de données (fichiers locaux),
-// et peut être hébergée telle quelle (Vercel, Netlify, GitHub Pages…).
-// Sur GitHub Pages le site vit sous /<nom-du-dépôt> : le workflow fournit NEXT_PUBLIC_BASE_PATH (vide en local).
+// Application avec serveur : les routes /api (comptes, progression, back-office) parlent à MongoDB Atlas.
+// Hébergement recommandé : Vercel (voir web/DEPLOY.md). NEXT_PUBLIC_BASE_PATH reste possible si le site
+// est servi sous un sous-dossier (vide par défaut).
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || undefined;
 
 const nextConfig: NextConfig = {
-  output: "export",
   basePath,
   trailingSlash: true,
   images: { unoptimized: true },
+  // Le pilote MongoDB et bcrypt restent des dépendances Node côté serveur (pas de bundling).
+  serverExternalPackages: ["mongodb", "bcryptjs"],
   turbopack: {
     rules: {
       "*.css": {
