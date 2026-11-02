@@ -40,8 +40,23 @@ export interface Settings {
   theme: "system" | "light" | "dark";
 }
 
+/** Mode jeu (parcours) : étapes validées, XP et défis du jour. */
+export interface GameState {
+  /** Étapes validées : id → date et précision (0–1) de la meilleure tentative. */
+  done: Record<string, { ts: number; acc: number }>;
+  xp: number;
+  xpDays: Record<string, number>;
+  lessonDays: Record<string, number>;
+  /** Meilleure série de bonnes réponses d'affilée, par jour. */
+  comboDays: Record<string, number>;
+  sound: boolean;
+  /** Date du dernier fichier de sauvegarde téléchargé. */
+  lastBackup?: number;
+}
+
 export interface State {
   v: 1;
+  game: GameState;
   answers: Record<string, AnswerStat>;
   srs: Record<string, SrsItem>;
   read: Record<string, number>;
@@ -56,8 +71,11 @@ const DAY = 86_400_000;
 /** Intervalles de révision par boîte (en jours). */
 export const SRS_INTERVALS = [0, 1, 2, 4, 8, 16];
 
+const initialGame: GameState = { done: {}, xp: 0, xpDays: {}, lessonDays: {}, comboDays: {}, sound: true };
+
 const initial: State = {
   v: 1,
+  game: initialGame,
   answers: {},
   srs: {},
   read: {},
@@ -76,10 +94,15 @@ function load() {
   loaded = true;
   try {
     const raw = window.localStorage.getItem(KEY);
-    if (raw) state = { ...initial, ...JSON.parse(raw), settings: { ...initial.settings, ...JSON.parse(raw).settings } };
+    if (raw) {
+      const p = JSON.parse(raw);
+      state = { ...initial, ...p, settings: { ...initial.settings, ...p.settings }, game: { ...initialGame, ...p.game } };
+    }
   } catch {
     /* stockage indisponible (navigation privée…) : l'app fonctionne sans sauvegarde */
   }
+  // Demande au navigateur de ne jamais effacer ces données de lui-même (manque d'espace, inactivité…).
+  navigator.storage?.persist?.().catch(() => {});
 }
 
 function persist() {
@@ -176,6 +199,39 @@ export function flagQuestion(id: string, note: string) {
   set((s) => ({ ...s, flags: { ...s.flags, [id]: note } }));
 }
 
+/** Étape du parcours réussie : XP gagnés, précision et meilleure série de la tentative. */
+export function completeLesson(id: string, xp: number, acc: number, combo: number) {
+  set((s) => {
+    const d = today();
+    const g = s.game;
+    const prev = g.done[id];
+    return {
+      ...s,
+      game: {
+        ...g,
+        done: { ...g.done, [id]: { ts: Date.now(), acc: Math.max(acc, prev?.acc ?? 0) } },
+        xp: g.xp + xp,
+        xpDays: { ...g.xpDays, [d]: (g.xpDays[d] ?? 0) + xp },
+        lessonDays: { ...g.lessonDays, [d]: (g.lessonDays[d] ?? 0) + 1 },
+        comboDays: { ...g.comboDays, [d]: Math.max(combo, g.comboDays[d] ?? 0) },
+      },
+    };
+  });
+}
+
+/** Série de bonnes réponses d'une tentative ratée : compte quand même pour le défi du jour. */
+export function recordCombo(combo: number) {
+  set((s) => {
+    const d = today();
+    if ((s.game.comboDays[d] ?? 0) >= combo) return s;
+    return { ...s, game: { ...s.game, comboDays: { ...s.game.comboDays, [d]: combo } } };
+  });
+}
+
+export function setGameSound(sound: boolean) {
+  set((s) => ({ ...s, game: { ...s.game, sound } }));
+}
+
 export function updateSettings(p: Partial<Settings>) {
   set((s) => ({ ...s, settings: { ...s.settings, ...p } }));
 }
@@ -184,10 +240,21 @@ export function exportState() {
   return JSON.stringify(getState(), null, 2);
 }
 
+/** Télécharge toute la progression dans un fichier JSON (à garder ou à importer sur un autre appareil). */
+export function downloadBackup() {
+  const blob = new Blob([exportState()], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `progression-code-maroc-${today()}.json`;
+  a.click();
+  URL.revokeObjectURL(a.href);
+  set((s) => ({ ...s, game: { ...s.game, lastBackup: Date.now() } }));
+}
+
 export function importState(json: string) {
   const parsed = JSON.parse(json) as State;
   if (parsed?.v !== 1 || typeof parsed.answers !== "object") throw new Error("Fichier invalide");
-  set(() => ({ ...initial, ...parsed, settings: { ...initial.settings, ...parsed.settings } }));
+  set(() => ({ ...initial, ...parsed, settings: { ...initial.settings, ...parsed.settings }, game: { ...initialGame, ...parsed.game } }));
 }
 
 export function resetState() {

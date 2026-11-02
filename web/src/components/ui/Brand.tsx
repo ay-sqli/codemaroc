@@ -3,12 +3,12 @@ import { cx } from "./cx";
 
 /** Icône et teinte de chaque axe de formation (remplace les emojis). */
 export const MODULE_ICONS: Record<string, { Icon: LucideIcon; tint: string; ink: string; label: string }> = {
-  "01": { Icon: Signpost, tint: "bg-[#e3eefe]", ink: "text-[#0056d2]", label: "La route" },
-  "02": { Icon: TrafficCone, tint: "bg-[#e5f4f1]", ink: "text-[#0b7a6b]", label: "Règles de circulation" },
-  "03": { Icon: UserRound, tint: "bg-[#efeafd]", ink: "text-[#5c3de8]", label: "Le conducteur" },
-  "04": { Icon: Car, tint: "bg-[#fff1df]", ink: "text-[#a35200]", label: "Le véhicule" },
-  "05": { Icon: Scale, tint: "bg-[#fdecec]", ink: "text-[#b00020]", label: "Infractions et sanctions" },
-  "06": { Icon: ShieldCheck, tint: "bg-[#e6f4ea]", ink: "text-[#137333]", label: "Sécurité routière" },
+  "01": { Icon: Signpost, tint: "bg-[#d7ffb8]", ink: "text-[#58a700]", label: "La route" },
+  "02": { Icon: TrafficCone, tint: "bg-[#fff0d9]", ink: "text-[#cc7900]", label: "Règles de circulation" },
+  "03": { Icon: UserRound, tint: "bg-[#f4e3ff]", ink: "text-[#a568cc]", label: "Le conducteur" },
+  "04": { Icon: Car, tint: "bg-[#ddf4ff]", ink: "text-[#1899d6]", label: "Le véhicule" },
+  "05": { Icon: Scale, tint: "bg-[#ffdfe0]", ink: "text-[#ea2b2b]", label: "Infractions et sanctions" },
+  "06": { Icon: ShieldCheck, tint: "bg-[#dbe8fa]", ink: "text-[#1f5aa6]", label: "Sécurité routière" },
 };
 
 /** Logo carré d'un axe (équivalent du logo de l'établissement sur une carte). */
@@ -17,8 +17,8 @@ export function ModuleIcon({ id, size = "sm", className }: { id: string; size?: 
   const box = { xs: "size-5", sm: "size-6", md: "size-10", lg: "size-14" }[size];
   const ico = { xs: "size-3", sm: "size-3.5", md: "size-5", lg: "size-7" }[size];
   return (
-    <span className={cx("inline-grid shrink-0 place-items-center rounded-[4px]", m.tint, m.ink, box, className)} aria-hidden>
-      <m.Icon className={ico} strokeWidth={2} />
+    <span className={cx("inline-grid shrink-0 place-items-center rounded-[12px]", m.tint, m.ink, box, className)} aria-hidden>
+      <m.Icon className={ico} strokeWidth={2.4} />
     </span>
   );
 }

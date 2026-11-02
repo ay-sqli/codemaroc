@@ -24,7 +24,7 @@ export function SignGallery({ chapter }: { chapter?: string }) {
   return (
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-3">
-        <label className="flex h-10 min-w-0 flex-1 items-center gap-2 rounded-[4px] border border-line-strong px-3 focus-within:border-brand sm:max-w-sm">
+        <label className="flex h-10 min-w-0 flex-1 items-center gap-2 rounded-[12px] border-2 border-line-strong px-3 focus-within:border-brand sm:max-w-sm">
           <Search className="size-4 text-muted" />
           <input
             value={q}
@@ -53,7 +53,7 @@ export function SignGallery({ chapter }: { chapter?: string }) {
             <button
               key={c.img + i}
               onClick={() => setRevealed((r) => new Set(r).add(i))}
-              className="flex flex-col items-center gap-2 rounded-[8px] border border-line bg-white p-3 text-center transition-shadow hover:shadow-md"
+              className="flex flex-col items-center gap-2 rounded-[16px] border-2 border-line bg-white p-3 text-center transition-shadow hover:shadow-md"
             >
               <img src={asset(c.img)} alt="" data-zoom data-caption={show ? c.label : ""} loading="lazy" className="h-24 w-full object-contain" />
               <span className={`ar text-[13px] leading-snug text-ink-2 ${show ? "" : "select-none blur-sm"}`}>

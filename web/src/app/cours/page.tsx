@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Catalog } from "./Catalog";
 import { Skeleton } from "@/components/ui";
 
-export const metadata = { title: "Cours · الدروس — codemaroc" };
+export const metadata = { title: "Cours · الدروس — Code Maroc" };
 
 export default function CoursPage() {
   return (

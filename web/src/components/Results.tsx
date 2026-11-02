@@ -32,8 +32,8 @@ export function Results({
   return (
     <div className="mx-auto max-w-3xl space-y-8">
       {/* Note obtenue */}
-      <section className="rounded-[8px] border border-line">
-        <div className={cx("flex items-center gap-2 rounded-t-[8px] px-5 py-3 text-sm font-semibold", pass ? "bg-ok-50 text-[#137333]" : "bg-ko-50 text-[#b00020]")}>
+      <section className="rounded-[16px] border-2 border-line">
+        <div className={cx("flex items-center gap-2 rounded-t-[16px] px-5 py-3 text-sm font-semibold", pass ? "bg-ok-50 text-[#137333]" : "bg-ko-50 text-[#b00020]")}>
           {pass ? <CheckCircle2 className="size-5" /> : <XCircle className="size-5" />}
           {exam
             ? pass
@@ -66,7 +66,7 @@ export function Results({
             </dl>
           </div>
         </div>
-        <div className="flex flex-wrap gap-3 border-t border-line px-5 py-4">
+        <div className="flex flex-wrap gap-3 border-t-2 border-line px-5 py-4">
           <Button onClick={onRestart} icon={<RotateCcw className="size-4" />}>
             {t("Recommencer", "إعادة المحاولة")}
           </Button>
@@ -85,7 +85,7 @@ export function Results({
             {weak.map(([slug, n]) => {
               const c = getChapter(slug);
               return c ? (
-                <Link key={slug} href={`/cours/${slug}/`} className="flex items-center gap-3 rounded-[8px] border border-line p-3 hover:shadow-md">
+                <Link key={slug} href={`/cours/${slug}/`} className="flex items-center gap-3 rounded-[16px] border-2 border-line p-3 hover:shadow-md">
                   <ModuleIcon id={c.module} size="md" />
                   <span className="min-w-0 flex-1">
                     <span className="block truncate font-semibold text-ink">{nameOf(c, lang)}</span>
@@ -101,7 +101,7 @@ export function Results({
       {wrong.length > 0 && (
         <section>
           <h2 className="t-h4 mb-3">{t("Correction de tes erreurs", "تصحيح أخطائك")}</h2>
-          <div className="divide-y divide-line rounded-[8px] border border-line">
+          <div className="divide-y divide-line rounded-[16px] border-2 border-line">
             {wrong.map((r, i) => (
               <div key={r.q.id + i}>
                 <button
@@ -110,9 +110,9 @@ export function Results({
                   onClick={() => setOpen(open === r.q.id ? null : r.q.id)}
                 >
                   {r.q.img ? (
-                    <img src={r.q.img} alt="" className="h-14 w-20 shrink-0 rounded-[4px] border border-line bg-white object-contain" />
+                    <img src={r.q.img} alt="" className="h-14 w-20 shrink-0 rounded-[12px] border-2 border-line bg-white object-contain" />
                   ) : (
-                    <span className="grid h-14 w-20 shrink-0 place-items-center rounded-[4px] bg-panel text-sm text-muted">Q{i + 1}</span>
+                    <span className="grid h-14 w-20 shrink-0 place-items-center rounded-[12px] bg-panel text-sm text-muted">Q{i + 1}</span>
                   )}
                   <span className="min-w-0 flex-1 text-sm text-ink">
                     <span className="line-clamp-2">{qText(r.q, lang).prompt ?? t("Question", "سؤال")}</span>
@@ -125,8 +125,8 @@ export function Results({
                   <ChevronDown className={cx("size-5 shrink-0 text-ink-2 transition-transform", open === r.q.id && "rotate-180")} />
                 </button>
                 {open === r.q.id && (
-                  <div className="space-y-3 border-t border-line p-4">
-                    {r.q.kind === "official" && r.q.img && <img src={r.q.img} alt="" data-zoom className="w-full rounded-[8px]" />}
+                  <div className="space-y-3 border-t-2 border-line p-4">
+                    {r.q.kind === "official" && r.q.img && <img src={r.q.img} alt="" data-zoom className="w-full rounded-[16px]" />}
                     <p className="text-sm text-muted">
                       {t("Ta réponse :", "جوابك:")}{" "}
                       <b className="font-semibold text-ink">

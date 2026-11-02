@@ -56,7 +56,7 @@ export function Exam() {
         </p>
       </header>
 
-      <section className="rounded-[8px] border border-line">
+      <section className="rounded-[16px] border-2 border-line">
         <dl className="grid divide-line sm:grid-cols-2 sm:divide-x">
           <div className="flex gap-3 p-5">
             <ListChecks className="size-5 shrink-0 text-ink-2" />
@@ -65,21 +65,21 @@ export function Exam() {
               <dd className="font-semibold">{t("40 questions, tirées de la banque officielle", "40 سؤالا من البنك الرسمي")}</dd>
             </div>
           </div>
-          <div className="flex gap-3 border-t border-line p-5 sm:border-t-0">
+          <div className="flex gap-3 border-t-2 border-line p-5 sm:border-t-0">
             <Clock className="size-5 shrink-0 text-ink-2" />
             <div>
               <dt className="text-sm text-muted">{t("Temps", "الوقت")}</dt>
               <dd className="font-semibold">{t("30 secondes par question", "30 ثانية لكل سؤال")}</dd>
             </div>
           </div>
-          <div className="flex gap-3 border-t border-line p-5">
+          <div className="flex gap-3 border-t-2 border-line p-5">
             <Headphones className="size-5 shrink-0 text-ink-2" />
             <div>
               <dt className="text-sm text-muted">{t("Audio", "الصوت")}</dt>
               <dd className="font-semibold">{t("Question lue en arabe", "السؤال مقروء بالعربية")}</dd>
             </div>
           </div>
-          <div className="flex gap-3 border-t border-line p-5">
+          <div className="flex gap-3 border-t-2 border-line p-5">
             <Keyboard className="size-5 shrink-0 text-ink-2" />
             <div>
               <dt className="text-sm text-muted">{t("Clavier", "لوحة المفاتيح")}</dt>
@@ -87,7 +87,7 @@ export function Exam() {
             </div>
           </div>
         </dl>
-        <div className="flex flex-wrap items-center justify-between gap-4 border-t border-line bg-panel px-5 py-4">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-t-2 border-line bg-panel px-5 py-4">
           <p className="text-sm">
             {t("Note pour réussir :", "النقطة المطلوبة للنجاح:")} <b className="font-semibold">32 / 40 (80 %)</b>
           </p>
@@ -97,7 +97,7 @@ export function Exam() {
         </div>
       </section>
 
-      <section className="rounded-[8px] border border-line p-5">
+      <section className="rounded-[16px] border-2 border-line p-5">
         <h2 className="t-h4 mb-1">{t("Réglages", "الإعدادات")}</h2>
         <div className="divide-y divide-line">
           <Switch checked={settings.timer} onChange={(v) => updateSettings({ timer: v })} label={t("Chronomètre de 30 secondes par question", "مؤقت 30 ثانية لكل سؤال")} />
@@ -116,7 +116,7 @@ export function Exam() {
           )}
         </div>
         {history.length ? (
-          <div className="overflow-x-auto rounded-[8px] border border-line">
+          <div className="overflow-x-auto rounded-[16px] border-2 border-line">
             <table className="w-full text-sm">
               <thead className="bg-panel text-start text-muted">
                 <tr>

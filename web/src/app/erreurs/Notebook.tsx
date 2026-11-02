@@ -76,7 +76,7 @@ export function Notebook() {
             {reminders.map((r) => {
               const txt = qText(r.q!, lang).rappel!;
               return (
-                <li key={r.id} className="flex items-start justify-between gap-3 rounded-[4px] bg-white p-3 text-[15px] text-ink">
+                <li key={r.id} className="flex items-start justify-between gap-3 rounded-[12px] bg-white p-3 text-[15px] text-ink">
                   <span className={cx(lang === "fr" && /[؀-ۿ]/.test(txt) && "ar")}>{txt}</span>
                   <Badge tone="error" className="shrink-0">
                     {t(`${r.stat?.ko ?? 1}× raté`, `${r.stat?.ko ?? 1}× خطأ`)}
@@ -120,7 +120,7 @@ export function Notebook() {
               }
             />
           ) : (
-            <div className="divide-y divide-line rounded-[8px] border border-line">
+            <div className="divide-y divide-line rounded-[16px] border-2 border-line">
               {shown.map((it) => {
                 const q = it.q!;
                 const ch = getChapter(q.chapter);
@@ -131,9 +131,9 @@ export function Notebook() {
                     <div className="flex items-center gap-3 p-3">
                       <button aria-expanded={isOpen} className="flex min-w-0 flex-1 items-center gap-3 text-start" onClick={() => setOpen(isOpen ? null : it.id)}>
                         {q.img ? (
-                          <img src={q.img} alt="" className="h-14 w-20 shrink-0 rounded-[4px] border border-line bg-white object-contain" />
+                          <img src={q.img} alt="" className="h-14 w-20 shrink-0 rounded-[12px] border-2 border-line bg-white object-contain" />
                         ) : (
-                          <span className="grid h-14 w-20 shrink-0 place-items-center rounded-[4px] bg-panel">{ch && <ModuleIcon id={ch.module} />}</span>
+                          <span className="grid h-14 w-20 shrink-0 place-items-center rounded-[12px] bg-panel">{ch && <ModuleIcon id={ch.module} />}</span>
                         )}
                         <span className="min-w-0 flex-1">
                           <span className="line-clamp-2 text-[15px] text-ink">{qText(q, lang).prompt}</span>
@@ -157,8 +157,8 @@ export function Notebook() {
                       </IconButton>
                     </div>
                     {isOpen && (
-                      <div className="space-y-3 border-t border-line p-4">
-                        {q.kind === "official" && q.img && <img src={q.img} alt="" data-zoom className="w-full rounded-[8px]" />}
+                      <div className="space-y-3 border-t-2 border-line p-4">
+                        {q.kind === "official" && q.img && <img src={q.img} alt="" data-zoom className="w-full rounded-[16px]" />}
                         <Correction q={q} picked={q.answer} />
                       </div>
                     )}

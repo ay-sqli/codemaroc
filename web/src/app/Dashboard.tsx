@@ -133,7 +133,7 @@ export function Dashboard() {
           }
           visual={
             <div className="relative size-full">
-              <div className="absolute end-6 top-1/2 w-44 -translate-y-1/2 rotate-[-4deg] rounded-[8px] bg-white p-3 text-ink shadow-lg">
+              <div className="absolute end-6 top-1/2 w-44 -translate-y-1/2 rotate-[-4deg] rounded-[16px] bg-white p-3 text-ink shadow-lg">
                 <p className="text-xs text-muted">{t("Dernier examen", "آخر امتحان")}</p>
                 <p className="text-3xl font-semibold" dir="ltr">{lastExam ? `${lastExam.score}/${lastExam.total}` : "— /40"}</p>
                 <div className="mt-2">
@@ -141,7 +141,7 @@ export function Dashboard() {
                 </div>
                 <p className="mt-2 text-xs text-muted">{t("Seuil de réussite : 32", "عتبة النجاح: 32")}</p>
               </div>
-              <div className="absolute end-40 top-6 grid size-12 rotate-[6deg] place-items-center rounded-[8px] bg-brand text-white shadow-lg">
+              <div className="absolute end-40 top-6 grid size-12 rotate-[6deg] place-items-center rounded-[16px] bg-brand text-white shadow-lg">
                 <ClipboardCheck className="size-6" />
               </div>
             </div>
@@ -200,7 +200,7 @@ export function Dashboard() {
                 );
               })
             ) : (
-              <div className="rounded-[8px] bg-white p-4 text-sm text-muted shadow-sm">
+              <div className="rounded-[16px] bg-white p-4 text-sm text-muted shadow-sm">
                 {t("Aucune erreur à revoir. Les questions ratées reviendront ici au bon moment.", "لا توجد أخطاء للمراجعة. الأسئلة التي تخطئ فيها ستعود هنا في الوقت المناسب.")}
               </div>
             )}
@@ -216,7 +216,7 @@ export function Dashboard() {
                 meta={t(`Fiche · Mindmap${c.nCards ? ` · ${c.nCards} panneaux` : ""}`, `ملخص · خريطة ذهنية${c.nCards ? ` · ${c.nCards} علامة` : ""}`)}
               />
             ))}
-            {!unread.length && <div className="rounded-[8px] bg-white p-4 text-sm text-muted shadow-sm">{t("Toutes les fiches sont lues.", "قرأت جميع الملخصات.")}</div>}
+            {!unread.length && <div className="rounded-[16px] bg-white p-4 text-sm text-muted shadow-sm">{t("Toutes les fiches sont lues.", "قرأت جميع الملخصات.")}</div>}
           </Panel>
           <Panel title={t("Tes points faibles", "نقاط ضعفك")} href="/entrainement/session/?mode=weak">
             {weak.length ? (
@@ -236,7 +236,7 @@ export function Dashboard() {
                 );
               })
             ) : (
-              <div className="rounded-[8px] bg-white p-4 text-sm text-muted shadow-sm">
+              <div className="rounded-[16px] bg-white p-4 text-sm text-muted shadow-sm">
                 {t("Fais quelques sessions : les chapitres où tu te trompes le plus apparaîtront ici.", "أنجز بعض الحصص: الدروس التي تخطئ فيها أكثر ستظهر هنا.")}
               </div>
             )}
@@ -359,7 +359,7 @@ export function Dashboard() {
       </section>
 
       {/* Que veux-tu faire ? */}
-      <section className="flex flex-col items-center gap-4 rounded-[8px] border border-line px-4 py-5 md:flex-row md:justify-center md:gap-6">
+      <section className="flex flex-col items-center gap-4 rounded-[16px] border-2 border-line px-4 py-5 md:flex-row md:justify-center md:gap-6">
         <p className="text-[15px] font-semibold">{t("Que veux-tu faire aujourd'hui ?", "ماذا تريد أن تفعل اليوم ؟")}</p>
         <div className="flex flex-wrap justify-center gap-2">
           {(
@@ -370,7 +370,7 @@ export function Dashboard() {
               ["/erreurs/", t("Revoir mes erreurs", "مراجعة أخطائي"), NotebookPen],
             ] as [string, string, typeof BookOpen][]
           ).map(([h, l, Icon]) => (
-            <Chip key={h} href={h} icon={<span className="grid size-6 place-items-center rounded-[4px] bg-brand text-white"><Icon className="size-3.5" /></span>}>
+            <Chip key={h} href={h} icon={<span className="grid size-6 place-items-center rounded-[12px] bg-brand text-white"><Icon className="size-3.5" /></span>}>
               {l}
             </Chip>
           ))}

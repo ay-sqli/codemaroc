@@ -9,7 +9,7 @@ export function Slider({
   label, value, min, max, step = 1, unit, onChange,
 }: { label: string; value: number; min: number; max: number; step?: number; unit?: string; onChange: (v: number) => void }) {
   return (
-    <label className="block rounded-[8px] border border-line bg-white p-4">
+    <label className="block rounded-[16px] border-2 border-line bg-white p-4">
       <span className="flex items-baseline justify-between text-sm font-semibold text-ink-2">
         {label}
         <span className="text-2xl font-semibold text-ink">
@@ -39,7 +39,7 @@ export function Toggle<T extends string>({
 export function Stat({ label, value, tone = "brand", sub }: { label: string; value: string; tone?: "brand" | "accent" | "ok" | "ko"; sub?: string }) {
   const c = { brand: "text-ink", accent: "text-warn", ok: "text-ok", ko: "text-ko" }[tone];
   return (
-    <div className="rounded-[8px] border border-line bg-white p-3">
+    <div className="rounded-[16px] border-2 border-line bg-white p-3">
       <p className="text-xs text-muted">{label}</p>
       <p className={`mt-0.5 text-xl font-semibold leading-tight ${c}`}>{value}</p>
       {sub && <p className="mt-0.5 text-[11px] text-muted">{sub}</p>}

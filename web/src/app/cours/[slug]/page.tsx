@@ -20,7 +20,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const c = getChapter(slug);
-  return { title: c ? `${c.fr} · ${stripEmoji(c.ar)} — codemaroc` : "Cours" };
+  return { title: c ? `${c.fr} · ${stripEmoji(c.ar)} — Code Maroc` : "Cours" };
 }
 
 /** Nombre accordé en arabe pour les compteurs de l'en-tête. */
@@ -82,7 +82,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
             </p>
             <ChapterActions slug={slug} />
           </div>
-          <div className="hidden overflow-hidden rounded-[8px] border border-line bg-white lg:block">
+          <div className="hidden overflow-hidden rounded-[16px] border-2 border-line bg-white lg:block">
             <div className="aspect-[16/10]">
               <ChapterCover module={m.id} img={coverOf(c)} />
             </div>
@@ -90,7 +90,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
         </div>
 
         {/* Ligne d'informations */}
-        <div className="mt-8 grid grid-cols-2 divide-line rounded-[8px] border border-line bg-white shadow-sm md:grid-cols-4 md:divide-x rtl:md:divide-x-reverse">
+        <div className="mt-8 grid grid-cols-2 divide-line rounded-[16px] border-2 border-line bg-white shadow-sm md:grid-cols-4 md:divide-x rtl:md:divide-x-reverse">
           <div className="p-4">
             <p className="text-base font-semibold">
               <T fr={`${st.sections} sections`} ar={arCount(st.sections, "قسم", "قسمان", "أقسام", "قسما")} />
@@ -133,7 +133,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
         </div>
 
         <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-          <div className="rounded-[8px] border border-line p-5">
+          <div className="rounded-[16px] border-2 border-line p-5">
             <p className="mb-3 text-base font-semibold">
               <T fr="Au programme" ar="محتوى الدرس" />
             </p>
@@ -149,7 +149,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
             </ol>
           </div>
           {schema && SCHEMA_META[schema] && (
-            <Link href={`/schemas/#${schema}`} className="block rounded-[8px] border border-line p-5 transition-shadow hover:shadow-md">
+            <Link href={`/schemas/#${schema}`} className="block rounded-[16px] border-2 border-line p-5 transition-shadow hover:shadow-md">
               <p className="t-overline mb-1">
                 <T fr="Schéma interactif" ar="رسم تفاعلي" />
               </p>
@@ -165,7 +165,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
             </Link>
           )}
           {c.nCards ? (
-            <a href={asset(`/anki/${slug}.csv`)} download className="flex items-center gap-3 rounded-[8px] border border-line p-5 text-sm transition-shadow hover:shadow-md">
+            <a href={asset(`/anki/${slug}.csv`)} download className="flex items-center gap-3 rounded-[16px] border-2 border-line p-5 text-sm transition-shadow hover:shadow-md">
               <Download className="size-5 text-brand" />
               <span>
                 <span className="block font-semibold text-ink">
@@ -180,9 +180,9 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
         </aside>
       </div>
 
-      <nav className="grid gap-3 border-t border-line pt-6 sm:grid-cols-2">
+      <nav className="grid gap-3 border-t-2 border-line pt-6 sm:grid-cols-2">
         {prev ? (
-          <Link href={`/cours/${prev.slug}/`} className="group rounded-[8px] border border-line p-4 hover:shadow-md">
+          <Link href={`/cours/${prev.slug}/`} className="group rounded-[16px] border-2 border-line p-4 hover:shadow-md">
             <span className="flex items-center gap-1 text-sm text-muted">
               <ArrowLeft className="size-4" /> <T fr="Chapitre précédent" ar="الدرس السابق" />
             </span>
@@ -194,7 +194,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
           <span />
         )}
         {next ? (
-          <Link href={`/cours/${next.slug}/`} className="group rounded-[8px] border border-line p-4 text-end hover:shadow-md">
+          <Link href={`/cours/${next.slug}/`} className="group rounded-[16px] border-2 border-line p-4 text-end hover:shadow-md">
             <span className="flex items-center justify-end gap-1 text-sm text-muted">
               <T fr="Chapitre suivant" ar="الدرس الموالي" /> <ArrowRight className="size-4" />
             </span>

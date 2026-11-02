@@ -25,7 +25,7 @@ const COLORS: [string, string, string][] = [
 
 function Block({ id, title, desc, children }: { id: string; title: string; desc?: string; children: ReactNode }) {
   return (
-    <section id={id} className="scroll-mt-28 border-t border-line pt-10">
+    <section id={id} className="scroll-mt-28 border-t-2 border-line pt-10">
       <h2 className="t-h2">{title}</h2>
       {desc && <p className="mt-1 max-w-3xl text-[15px] text-muted">{desc}</p>}
       <div className="mt-6">{children}</div>
@@ -35,7 +35,7 @@ function Block({ id, title, desc, children }: { id: string; title: string; desc?
 
 function Spec({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <div className="grid gap-3 border-b border-line py-5 last:border-b-0 md:grid-cols-[200px_1fr] md:items-center">
+    <div className="grid gap-3 border-b-2 border-line py-5 last:border-b-0 md:grid-cols-[200px_1fr] md:items-center">
       <p className="text-sm font-semibold text-muted">{label}</p>
       <div className="flex flex-wrap items-center gap-3">{children}</div>
     </div>
@@ -68,13 +68,13 @@ export function Showcase() {
     <div className="space-y-10">
       <PageHeader
         overline="Documentation"
-        title="Design system codemaroc"
+        title="Design system Code Maroc"
         desc="Les fondations et les composants utilisés dans toute l'application. Une seule couleur d'action (bleu), des bordures fines, des rayons de 8 px, la police Source Sans 3 et aucun emoji : l'interface doit rester sobre et lisible pour se concentrer sur le contenu."
       />
 
       <nav className="no-scrollbar sticky top-[68px] z-20 -mx-1 flex gap-2 overflow-x-auto bg-white px-1 py-2">
         {NAV.map(([id, l]) => (
-          <a key={id} href={`#${id}`} className="shrink-0 rounded-full border border-line px-3 py-1 text-sm text-ink-2 hover:border-brand hover:text-brand">
+          <a key={id} href={`#${id}`} className="shrink-0 rounded-full border-2 border-line px-3 py-1 text-sm text-ink-2 hover:border-brand hover:text-brand">
             {l}
           </a>
         ))}
@@ -83,8 +83,8 @@ export function Showcase() {
       <Block id="fondations" title="Fondations" desc="Couleurs sémantiques, rayons, ombres et icônes. Les composants n'utilisent que ces valeurs.">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
           {COLORS.map(([n, hex, use]) => (
-            <div key={hex} className="overflow-hidden rounded-[8px] border border-line">
-              <div className="h-16 border-b border-line" style={{ background: hex }} />
+            <div key={hex} className="overflow-hidden rounded-[16px] border-2 border-line">
+              <div className="h-16 border-b-2 border-line" style={{ background: hex }} />
               <div className="p-3">
                 <p className="text-sm font-semibold">{n}</p>
                 <p className="font-mono text-xs text-muted">{hex}</p>
@@ -94,10 +94,10 @@ export function Showcase() {
           ))}
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
-          <div className="rounded-[8px] border border-line p-4">
+          <div className="rounded-[16px] border-2 border-line p-4">
             <p className="mb-3 text-sm font-semibold">Rayons</p>
             <div className="flex items-end gap-4">
-              {[["4 px", "rounded-[4px]", "Boutons, champs"], ["8 px", "rounded-[8px]", "Cartes"], ["12 px", "rounded-[12px]", "Bandeaux"]].map(([l, c, u]) => (
+              {[["4 px", "rounded-[12px]", "Boutons, champs"], ["8 px", "rounded-[16px]", "Cartes"], ["12 px", "rounded-[12px]", "Bandeaux"]].map(([l, c, u]) => (
                 <div key={l} className="text-center">
                   <div className={`size-14 border-2 border-brand bg-brand-50 ${c}`} />
                   <p className="mt-1 text-xs font-semibold">{l}</p>
@@ -106,17 +106,17 @@ export function Showcase() {
               ))}
             </div>
           </div>
-          <div className="rounded-[8px] border border-line p-4">
+          <div className="rounded-[16px] border-2 border-line p-4">
             <p className="mb-3 text-sm font-semibold">Élévation</p>
             <div className="flex gap-4">
               {[["Repos", "shadow-sm"], ["Survol", "shadow-md"], ["Dialogue", "shadow-lg"]].map(([l, c]) => (
-                <div key={l} className={`grid h-14 flex-1 place-items-center rounded-[8px] bg-white text-xs ${c}`}>
+                <div key={l} className={`grid h-14 flex-1 place-items-center rounded-[16px] bg-white text-xs ${c}`}>
                   {l}
                 </div>
               ))}
             </div>
           </div>
-          <div className="rounded-[8px] border border-line p-4">
+          <div className="rounded-[16px] border-2 border-line p-4">
             <p className="mb-3 text-sm font-semibold">Icônes des axes (Lucide, trait 2 px)</p>
             <div className="flex flex-wrap gap-3">
               {Object.entries(MODULE_ICONS).map(([id, m]) => (
@@ -130,7 +130,7 @@ export function Showcase() {
       </Block>
 
       <Block id="typo" title="Typographie" desc="Source Sans 3 pour le latin, Noto Sans Arabic pour l'arabe. Graisses : 400 (texte), 600 (titres, boutons), 700 (logo).">
-        <div className="rounded-[8px] border border-line px-5">
+        <div className="rounded-[16px] border-2 border-line px-5">
           <Spec label="Display · 40/46 · 600">
             <p className="t-display">Prépare ton code en confiance</p>
           </Spec>
@@ -167,14 +167,14 @@ export function Showcase() {
       </Block>
 
       <Block id="boutons" title="Boutons" desc="Un seul bouton primaire par zone. Le secondaire (contour bleu) accompagne, le tertiaire sert aux actions de moindre importance.">
-        <div className="rounded-[8px] border border-line px-5">
+        <div className="rounded-[16px] border-2 border-line px-5">
           <Spec label="Variantes">
             <Button>Primaire</Button>
             <Button variant="secondary">Secondaire</Button>
             <Button variant="tertiary">Tertiaire</Button>
             <Button variant="ghost">Discret</Button>
             <Button variant="danger">Danger</Button>
-            <span className="rounded-[4px] bg-[#1f1f1f] p-2">
+            <span className="rounded-[12px] bg-[#1f1f1f] p-2">
               <Button variant="inverse">Inversé</Button>
             </span>
           </Spec>
@@ -194,7 +194,7 @@ export function Showcase() {
       </Block>
 
       <Block id="etiquettes" title="Étiquettes et puces">
-        <div className="rounded-[8px] border border-line px-5">
+        <div className="rounded-[16px] border-2 border-line px-5">
           <Spec label="Badge">
             <Badge>Neutre</Badge>
             <Badge tone="brand">Recommandé</Badge>
@@ -218,13 +218,13 @@ export function Showcase() {
 
       <Block id="formulaires" title="Formulaires">
         <div className="grid gap-6 md:grid-cols-2">
-          <div className="space-y-4 rounded-[8px] border border-line p-5">
+          <div className="space-y-4 rounded-[16px] border-2 border-line p-5">
             <Field label="Adresse e-mail" required hint="Message d'aide sous le champ.">
               <Input placeholder="nom@email.com" />
             </Field>
             <SearchField placeholder="Que veux-tu réviser ?" />
           </div>
-          <div className="space-y-1 rounded-[8px] border border-line p-5">
+          <div className="space-y-1 rounded-[16px] border-2 border-line p-5">
             <Checkbox checked={check} onChange={setCheck} label="Case à cocher" count={16} />
             <Switch checked={sw} onChange={setSw} label="Interrupteur" />
             <div className="pt-3">
@@ -235,7 +235,7 @@ export function Showcase() {
       </Block>
 
       <Block id="navigation" title="Navigation">
-        <div className="space-y-6 rounded-[8px] border border-line p-5">
+        <div className="space-y-6 rounded-[16px] border-2 border-line p-5">
           <Breadcrumbs items={[{ label: "Cours", href: "#navigation" }, { label: "La route", href: "#navigation" }, { label: "Chapitre 3" }]} />
           <Tabs
             value={tab}

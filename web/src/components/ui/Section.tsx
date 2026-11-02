@@ -67,7 +67,7 @@ export function Container({ children, className }: { children: ReactNode; classN
 /** État vide. */
 export function EmptyState({ icon, title, desc, action }: { icon?: ReactNode; title: ReactNode; desc?: ReactNode; action?: ReactNode }) {
   return (
-    <div className="flex flex-col items-center gap-3 rounded-[8px] border border-dashed border-line-strong bg-white px-6 py-12 text-center">
+    <div className="flex flex-col items-center gap-3 rounded-[16px] border border-dashed border-line-strong bg-white px-6 py-12 text-center">
       {icon && <span className="grid size-12 place-items-center rounded-full bg-brand-50 text-brand">{icon}</span>}
       <h3 className="t-h4">{title}</h3>
       {desc && <p className="max-w-md text-sm text-muted">{desc}</p>}
@@ -78,5 +78,5 @@ export function EmptyState({ icon, title, desc, action }: { icon?: ReactNode; ti
 
 /** Squelette de chargement. */
 export function Skeleton({ className }: { className?: string }) {
-  return <div className={cx("animate-pulse rounded-[8px] bg-panel", className)} />;
+  return <div className={cx("animate-pulse rounded-[16px] bg-panel", className)} />;
 }

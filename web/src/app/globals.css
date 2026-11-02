@@ -2,64 +2,88 @@
 
 /*
  * ─────────────────────────────────────────────────────────────────────────────
- *  Design system « Code Maroc B »
- *  Inspiré du langage visuel des grandes plateformes d'apprentissage en ligne :
- *  fond blanc, bleu primaire unique, bordures bleu-gris fines, rayons de 8 px,
- *  typographie Source Sans 3 en 400/600/700, aucune ombre lourde, pas d'emoji.
+ *  Design system « Code Maroc »
+ *  Interface gamifiée ancrée dans l'identité marocaine : rouge du petit taxi et du tarbouche,
+ *  vert du drapeau, or des trophées, fond sable chaud. Titres en Nunito, texte en Plus Jakarta
+ *  Sans, arabe en Cairo, chiffres du chrono en JetBrains Mono. Boutons tactiles en relief
+ *  (bordure basse pleine qui s'écrase au clic), bordures de 2 px, rayons 16 / 24 px.
  *  Documentation vivante : /design-system
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
 :root {
-  /* Couleurs de base */
-  --c-blue-900: #002761;
-  --c-blue-800: #00337f;
-  --c-blue-700: #00419e;
-  --c-blue-600: #0056d2; /* primaire */
-  --c-blue-500: #2a73cc;
-  --c-blue-200: #c1d6f8;
-  --c-blue-100: #e3eefe;
-  --c-blue-50: #f0f6ff;
+  /* Marque — rouge du petit taxi et du tarbouche, vert du drapeau, or des trophées */
+  --c-red-brand: #d92b2b; /* primaire : CTA, éléments actifs */
+  --c-red-brand-d: #a81c1c; /* relief des boutons primaires */
+  --c-green-brand: #198754; /* secondaire : progression, validation */
+  --c-green-brand-d: #115c39;
+  --c-gold: #f5b041; /* étoiles, séries, couronnes, XP */
+  --c-gold-d: #d68910;
+  --c-gold-50: #fef9e7;
 
-  --c-grey-975: #1f1f1f; /* texte principal */
-  --c-grey-900: #333333;
-  --c-grey-700: #5b6780; /* texte secondaire */
-  --c-grey-600: #636363;
-  --c-grey-400: #a8b2c5;
-  --c-grey-300: #c7d0dd;
-  --c-grey-200: #dae1ed; /* bordures */
-  --c-grey-100: #e8eef7;
-  --c-grey-50: #f5f7f8; /* fond du pied de page */
+  /* Sémantique (feux de signalisation) */
+  --c-success: #2ecc71; /* feu vert : bonne réponse */
+  --c-success-50: #eafaf1;
+  --c-warning: #f39c12; /* feu orange : indice, temporaire */
+  --c-danger: #e74c3c; /* feu rouge : erreur, perte de points */
+  --c-danger-50: #fdedec;
+  --c-info: #2980b9; /* indication : explications, sélection */
+  --c-info-d: #1f618d;
+  --c-info-50: #ebf5fb;
+  --c-adm: #1b4f72; /* bleu autoroute */
 
-  --c-panel: #f2f5fa; /* panneaux bleu-gris (listes « Nouveau et populaire ») */
+  /* Anciens noms conservés pour les composants existants */
+  --c-blue-900: #133b55;
+  --c-blue-800: #1b4f72;
+  --c-blue-700: #a81c1c;
+  --c-blue-600: #d92b2b;
+  --c-blue-500: #e05252;
+  --c-blue-200: #f5b7b1;
+  --c-blue-100: #fdedec;
+  --c-blue-50: #fef6f5;
 
-  --c-green-700: #137333;
-  --c-green-600: #1f8354;
-  --c-green-50: #e9f6ee;
-  --c-red-700: #b00020;
-  --c-red-600: #d30001;
-  --c-red-50: #fdecec;
-  --c-amber-700: #8a5300;
-  --c-amber-500: #f5a700;
-  --c-amber-50: #fff6e0;
-  --c-purple-600: #5c3de8;
+  /* Surfaces et neutres : sable chaud plutôt que blanc pur */
+  --c-grey-975: #1e2328; /* noir charbon */
+  --c-grey-900: #1e2328;
+  --c-grey-700: #64748b; /* gris ardoise */
+  --c-grey-600: #64748b;
+  --c-grey-400: #94a3b8;
+  --c-grey-300: #cbd5e1; /* relief des tuiles */
+  --c-grey-200: #e2e8f0; /* bordures */
+  --c-grey-100: #f1efea; /* survol */
+  --c-grey-50: #faf8f5; /* fond sable */
+  --c-panel: #f1efea;
+
+  --c-green-700: #198754;
+  --c-green-600: #2ecc71;
+  --c-green-500: #115c39;
+  --c-green-50: #eafaf1;
+  --c-red-700: #c0392b;
+  --c-red-600: #e74c3c;
+  --c-red-50: #fdedec;
+  --c-amber-700: #b9770e;
+  --c-amber-500: #f5b041;
+  --c-amber-50: #fef9e7;
+  --c-purple-600: #1b4f72;
+  --c-orange-500: #f39c12;
 
   /* Rôles sémantiques (utilisés par les classes Tailwind ci-dessous) */
-  --bg: #ffffff;
+  --bg: #faf8f5;
   --surface: #ffffff;
   --surface-2: var(--c-panel);
   --border: var(--c-grey-200);
   --text: var(--c-grey-975);
   --muted: var(--c-grey-700);
-  --brand: var(--c-blue-600);
-  --brand-2: var(--c-blue-700);
-  --accent: #c25700;
-  --ok: var(--c-green-600);
-  --ko: var(--c-red-600);
+  --brand: var(--c-red-brand);
+  --brand-2: var(--c-red-brand-d);
+  --accent: var(--c-gold);
+  --ok: var(--c-green-brand);
+  --ko: var(--c-danger);
 
-  --shadow-1: 0 1px 2px rgb(31 31 31 / 0.08), 0 1px 4px rgb(31 31 31 / 0.04);
-  --shadow-2: 0 2px 8px rgb(31 31 31 / 0.12);
-  --shadow-3: 0 8px 24px rgb(31 31 31 / 0.16);
+  /* Relief : ombre pleine sous les éléments (sans flou), sauf les fenêtres */
+  --shadow-1: 0 2px 0 var(--c-grey-300);
+  --shadow-2: 0 4px 0 var(--c-grey-300);
+  --shadow-3: 0 10px 30px rgb(30 35 40 / 0.16);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -90,23 +114,32 @@
   --color-warn: var(--c-amber-700);
   --color-warn-500: var(--c-amber-500);
   --color-warn-50: var(--c-amber-50);
+  --color-gold: var(--c-gold);
+  --color-gold-d: var(--c-gold-d);
+  --color-maroc-red: var(--c-red-brand);
+  --color-maroc-green: var(--c-green-brand);
+  --color-info: var(--c-info);
+  --color-orange: var(--c-orange-500);
+  --color-purple: var(--c-purple-600);
   --color-night: var(--c-grey-975);
   --color-foot: var(--c-grey-50);
 
-  --font-sans: var(--font-source), var(--font-arabic), system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-ar: var(--font-arabic), var(--font-source), system-ui, sans-serif;
+  --font-sans: var(--font-jakarta), var(--font-arabic), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-nunito), var(--font-arabic), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-ar: var(--font-arabic), var(--font-jakarta), system-ui, sans-serif;
 
-  /* Rayons : 4 px (contrôles), 8 px (cartes), 12 px (grands bandeaux) */
-  --radius-sm: 4px;
-  --radius-md: 4px;
-  --radius-lg: 8px;
-  --radius-xl: 8px;
-  --radius-2xl: 8px;
-  --radius-3xl: 12px;
+  /* Rayons généreux : 12 px (contrôles), 16 px (cartes), 24 px (grands bandeaux) */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 16px;
+  --radius-2xl: 16px;
+  --radius-3xl: 24px;
 
-  /* Graisses plafonnées à 700 (pas de 800/900) */
-  --font-weight-extrabold: 700;
-  --font-weight-black: 700;
+  --color-ok-700: var(--c-green-700);
+  --color-ok-500: var(--c-green-500);
+  --color-ko-700: var(--c-red-700);
 
   --shadow-sm: var(--shadow-1);
   --shadow: var(--shadow-1);
@@ -125,6 +158,7 @@ body {
   color: var(--text);
   font-family: var(--font-sans);
   font-size: 16px;
+  font-weight: 600;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -141,31 +175,41 @@ body {
 
 /* ─────────────────────────── Typographie ─────────────────────────── */
 .t-display {
+  font-family: var(--font-display);
   font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem);
   line-height: 1.15;
-  font-weight: 600;
+  font-weight: 800;
+  color: var(--c-grey-975);
   letter-spacing: -0.01em;
 }
 .t-h1 {
+  font-family: var(--font-display);
   font-size: clamp(1.625rem, 1.35rem + 1vw, 2.125rem);
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 800;
+  color: var(--c-grey-975);
   letter-spacing: -0.005em;
 }
 .t-h2 {
+  font-family: var(--font-display);
   font-size: 1.5rem;
   line-height: 1.25;
-  font-weight: 600;
+  font-weight: 800;
+  color: var(--c-grey-975);
 }
 .t-h3 {
+  font-family: var(--font-display);
   font-size: 1.25rem;
   line-height: 1.3;
-  font-weight: 600;
+  font-weight: 800;
+  color: var(--c-grey-975);
 }
 .t-h4 {
+  font-family: var(--font-display);
   font-size: 1rem;
   line-height: 1.35;
-  font-weight: 600;
+  font-weight: 800;
+  color: var(--c-grey-975);
 }
 .t-body {
   font-size: 1rem;
@@ -181,10 +225,11 @@ body {
   color: var(--muted);
 }
 .t-overline {
-  font-size: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
   line-height: 1.33;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -201,6 +246,7 @@ body {
  * flèches retournées, pas de majuscules forcées. */
 html[lang="ar"] body {
   font-family: var(--font-ar);
+  font-weight: 500;
   line-height: 1.7;
 }
 html[lang="ar"] .t-overline {
@@ -236,7 +282,7 @@ html:not([lang="ar"]) .only-ar {
 /* Lien standard (bleu, souligné au survol) */
 .link {
   color: var(--brand);
-  font-weight: 600;
+  font-weight: 800;
 }
 .link:hover {
   color: var(--brand-2);
@@ -247,55 +293,59 @@ html:not([lang="ar"]) .only-ar {
  * Utilisées par les schémas interactifs : elles suivent le design system. */
 .card {
   background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
 }
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  min-height: 40px;
-  border-radius: 4px;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  font-size: 0.9375rem;
+  min-height: 44px;
+  border-radius: 14px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 800;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   line-height: 1.2;
-  border: 1px solid transparent;
-  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  border: 2px solid transparent;
+  transition: filter 0.1s, transform 0.08s, box-shadow 0.08s;
   cursor: pointer;
+}
+.btn:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: none !important;
 }
 .btn:disabled {
   cursor: not-allowed;
-  opacity: 0.45;
+  opacity: 0.5;
 }
-.btn-primary {
-  background: var(--brand);
-  color: #fff;
-}
-.btn-primary:hover:not(:disabled) {
-  background: var(--brand-2);
-}
+.btn-primary,
 .btn-accent {
-  background: var(--brand);
+  background: var(--c-red-brand);
   color: #fff;
+  border-color: var(--c-red-brand-d);
+  box-shadow: 0 4px 0 var(--c-red-brand-d);
 }
+.btn-primary:hover:not(:disabled),
 .btn-accent:hover:not(:disabled) {
-  background: var(--brand-2);
+  filter: brightness(1.06);
 }
 .btn-ghost {
   background: #fff;
   color: var(--brand);
-  border-color: var(--brand);
+  border-color: var(--border);
+  box-shadow: 0 4px 0 var(--c-grey-300);
 }
 .btn-ghost:hover:not(:disabled) {
-  background: var(--c-blue-50);
+  background: var(--c-grey-50);
 }
 .chip {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 0.125rem 0.5rem;
   font-size: 0.75rem;
   font-weight: 600;
@@ -306,7 +356,7 @@ html:not([lang="ar"]) .only-ar {
 .fiche img {
   max-height: 56px;
   width: auto;
-  border-radius: 4px;
+  border-radius: 8px;
   background: #fff;
 }
 .fiche img.big {
@@ -316,10 +366,10 @@ html:not([lang="ar"]) .only-ar {
   max-height: none;
   width: 100%;
   max-width: 880px;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
 }
 .fiche strong {
-  font-weight: 600;
+  font-weight: 800;
 }
 
 /* ─────────────────────────── Mindmap ─────────────────────────── */
@@ -376,15 +426,21 @@ img[data-zoom] {
   100% {
     transform: translateX(0);
   }
-  25% {
+  20% {
+    transform: translateX(-6px);
+  }
+  40% {
+    transform: translateX(6px);
+  }
+  60% {
     transform: translateX(-4px);
   }
-  75% {
+  80% {
     transform: translateX(4px);
   }
 }
 .animate-shake {
-  animation: shake 0.25s ease-in-out;
+  animation: shake 300ms ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -402,4 +458,384 @@ img[data-zoom] {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* ─────────────────────────── Mode jeu (parcours) ───────────────────────────
+ * Langage visuel des applications d'apprentissage ludiques : couleurs vives, police ronde et grasse,
+ * boutons « en relief » (ombre pleine de 4 px qui s'écrase au clic), grands rayons. Portée : .duo */
+.duo {
+  /* Raccourcis de la charte pour les composants du parcours */
+  --duo-brand: var(--c-red-brand);
+  --duo-brand-d: var(--c-red-brand-d);
+  --duo-green: var(--c-green-brand);
+  --duo-green-d: var(--c-green-brand-d);
+  --duo-green-50: var(--c-success-50);
+  --duo-success: var(--c-success);
+  --duo-blue: var(--c-info);
+  --duo-blue-d: var(--c-info-d);
+  --duo-blue-50: var(--c-info-50);
+  --duo-red: var(--c-danger);
+  --duo-red-d: #c0392b;
+  --duo-red-50: var(--c-danger-50);
+  --duo-yellow: var(--c-gold);
+  --duo-yellow-d: var(--c-gold-d);
+  --duo-orange: var(--c-warning);
+  --duo-purple: var(--c-adm);
+  --duo-grey: var(--c-grey-200);
+  --duo-grey-d: var(--c-grey-300);
+  --duo-ink: var(--c-grey-975);
+  --duo-muted: var(--c-grey-700);
+  --duo-snow: var(--c-grey-100);
+  --duo-canvas: var(--c-grey-50);
+  color: var(--duo-ink);
+}
+.duo-h,
+.duo-btn,
+.duo-node {
+  font-family: var(--font-display);
+}
+.duo-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+html[lang="ar"] .duo-h,
+html[lang="ar"] .duo-btn {
+  font-family: var(--font-ar);
+}
+.duo-h {
+  font-weight: 800;
+  color: var(--duo-ink);
+  letter-spacing: -0.01em;
+}
+html[lang="ar"] .duo-h {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* Bouton tactile : --b fond, --s relief (bordure basse pleine), --t texte */
+.duo-btn {
+  --b: var(--duo-brand);
+  --s: var(--duo-brand-d);
+  --t: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 52px;
+  padding: 0 1.5rem;
+  border-radius: 16px;
+  background: var(--b);
+  color: var(--t);
+  border: 2px solid var(--s);
+  box-shadow: 0 5px 0 var(--s);
+  font-weight: 800;
+  font-size: 0.9375rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: filter 75ms ease-out, transform 75ms ease-out, box-shadow 75ms ease-out;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+html[lang="ar"] .duo-btn {
+  letter-spacing: 0;
+  font-weight: 700;
+}
+.duo-btn:hover:not(:disabled) {
+  filter: brightness(1.06);
+}
+.duo-btn:active:not(:disabled) {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--s);
+}
+.duo-btn:disabled {
+  --b: var(--c-grey-200);
+  --s: var(--c-grey-200);
+  --t: var(--c-grey-400);
+  cursor: not-allowed;
+}
+.duo-btn-green {
+  --b: var(--duo-green);
+  --s: var(--duo-green-d);
+}
+.duo-btn-blue {
+  --b: var(--duo-blue);
+  --s: var(--duo-blue-d);
+}
+.duo-btn-red {
+  --b: var(--duo-red);
+  --s: #c0392b;
+}
+.duo-btn-yellow {
+  --b: var(--duo-yellow);
+  --s: var(--duo-yellow-d);
+}
+.duo-btn-ghost {
+  --b: #fff;
+  --s: var(--c-grey-300);
+  --t: var(--duo-blue);
+  border-color: var(--c-grey-200);
+  box-shadow: 0 4px 0 var(--c-grey-300);
+}
+.duo-btn-plain {
+  --b: transparent;
+  --s: transparent;
+  --t: var(--duo-blue);
+  border-color: transparent;
+}
+
+/* Carte / tuile de réponse en relief (bordure 2 px + ombre 4 px) */
+.duo-card {
+  background: #fff;
+  border: 2px solid var(--duo-grey);
+  border-radius: 24px;
+  box-shadow: 0 3px 0 var(--duo-grey-d);
+}
+.duo-tile {
+  --tb: var(--duo-grey);
+  --tbg: #fff;
+  --tt: var(--duo-ink);
+  background: var(--tbg);
+  color: var(--tt);
+  border: 2px solid var(--tb);
+  border-radius: 16px;
+  box-shadow: 0 4px 0 var(--ts, var(--c-grey-300));
+  transition: transform 0.08s, box-shadow 0.08s, background-color 0.12s;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.duo-tile:hover:not(:disabled) {
+  --tbg: var(--duo-snow);
+}
+.duo-tile:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--ts, var(--c-grey-300));
+}
+.duo-tile[data-state="selected"] {
+  --tb: var(--c-info);
+  --ts: var(--c-info-d);
+  --tbg: var(--c-info-50);
+  --tt: var(--c-info-d);
+}
+.duo-tile[data-state="correct"] {
+  --tb: var(--c-success);
+  --ts: #25a25a;
+  --tbg: var(--c-success-50);
+  --tt: var(--c-green-brand);
+}
+.duo-tile[data-state="wrong"] {
+  --tb: var(--c-danger);
+  --ts: #c0392b;
+  --tbg: var(--c-danger-50);
+  --tt: #c0392b;
+}
+.duo-tile[data-state="missed"] {
+  --tb: var(--c-success);
+  --ts: var(--c-success);
+  border-style: dashed;
+  --tt: var(--c-green-brand);
+}
+.duo-tile:disabled {
+  cursor: default;
+}
+
+/* Nœud du parcours : gros bouton rond en relief posé sur un socle doré (comme un plot sur la route) */
+.duo-node {
+  --b: var(--c-red-brand);
+  --s: var(--c-red-brand-d);
+  --r: var(--c-gold);
+  --rd: var(--c-gold-d);
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--b);
+  color: #fff;
+  box-shadow: 0 7px 0 var(--s), 0 0 0 6px var(--r), 0 13px 0 6px var(--rd);
+  transition: transform 75ms ease-out, box-shadow 75ms ease-out;
+  -webkit-tap-highlight-color: transparent;
+}
+.duo-node:active {
+  transform: translateY(5px);
+  box-shadow: 0 2px 0 var(--s), 0 0 0 6px var(--r), 0 8px 0 6px var(--rd);
+}
+.duo-node[data-status="locked"] {
+  --b: #e8ecf1;
+  --s: var(--c-grey-300);
+  --r: #f1f4f8;
+  --rd: var(--c-grey-300);
+  color: var(--c-grey-400);
+}
+/* Nœud illustré (public/nodes) : s'enfonce au clic */
+.duo-node-img {
+  position: relative;
+  transition: transform 75ms ease-out, filter 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+.duo-node-img:hover:not(:disabled) {
+  filter: brightness(1.05);
+}
+.duo-node-img:active:not(:disabled) {
+  transform: translateY(4px) scale(0.98);
+}
+.duo-node-img.duo-node-current::after {
+  inset: auto 50% 2px auto;
+  width: 112px;
+  height: 46px;
+  transform: translateX(50%);
+  border-radius: 50%;
+  animation: duo-glow 1.6s ease-in-out infinite;
+  border: 4px solid rgb(245 176 65 / 0.8);
+}
+@keyframes duo-glow {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.duo-node-current::after {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 4px dashed rgb(217 43 43 / 0.45);
+  animation: duo-spin 12s linear infinite;
+}
+@keyframes duo-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes duo-bounce {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -6px);
+  }
+}
+.duo-bounce {
+  animation: duo-bounce 1.6s ease-in-out infinite;
+}
+@keyframes duo-sheet {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.duo-sheet {
+  animation: duo-sheet 250ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+@keyframes duo-pop-in {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.duo-pop-in {
+  animation: duo-pop-in 0.35s ease-out both;
+}
+@keyframes duo-heart {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.35);
+  }
+}
+.duo-heart-hit {
+  animation: duo-heart 0.4s ease-in-out;
+}
+@keyframes duo-confetti {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(105vh) rotate(720deg);
+    opacity: 0.9;
+  }
+}
+.duo-confetti {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  animation: duo-confetti linear forwards;
+  pointer-events: none;
+  z-index: 80;
+}
+.duo-progress {
+  height: 16px;
+  border-radius: 999px;
+  background: var(--duo-grey);
+  overflow: hidden;
+}
+.duo-progress > span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--duo-green);
+  box-shadow: inset 0 -4px 0 rgb(0 0 0 / 0.1), inset 0 4px 0 rgb(255 255 255 / 0.25);
+  transition: width 600ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Zellige en filigrane (motif fourni : public/decor/zellige.webp), à poser sur les bandeaux */
+.zellige {
+  position: relative;
+  isolation: isolate;
+}
+.zellige::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0.14;
+  background: var(--zellige-url) center / 360px auto repeat;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+}
+.zellige-dark::before {
+  opacity: 0.07;
+  mix-blend-mode: multiply;
+}
+/* Bande de zellige pleine (écrans de victoire, haut des cartes) */
+.zellige-band {
+  background: var(--zellige-url) center / 260px auto repeat;
+}
+
+@keyframes duo-mascot-in {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.duo-mascot-in {
+  animation: duo-mascot-in 400ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
 }

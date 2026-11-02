@@ -93,4 +93,6 @@ export interface Question {
   rappelAr?: string;
   schema?: string;
   uncertain?: boolean;
+  /** Catégorie du panneau dans le cours (questions « panneau » uniquement). */
+  section?: string;
 }

@@ -14,14 +14,14 @@ function FlashCard({ item }: { item: MemoItem }) {
     <button
       onClick={() => setFlip((f) => !f)}
       aria-pressed={flip}
-      className={cx("flex min-h-44 flex-col rounded-[8px] border bg-white p-5 text-start transition-shadow hover:shadow-md", flip ? "border-brand" : "border-line")}
+      className={cx("flex min-h-44 flex-col rounded-[16px] border bg-white p-5 text-start transition-shadow hover:shadow-md", flip ? "border-brand" : "border-line")}
     >
       <p className="text-xs text-muted">{flip ? t("Réponse", "الجواب") : t("Question", "السؤال")}</p>
       <p className="mt-1 text-base font-semibold text-ink">{it.q}</p>
       {flip ? (
         <div className="animate-pop mt-3 space-y-3">
           <p className="text-[15px] font-semibold text-brand">{it.a}</p>
-          <p className="rounded-[4px] bg-warn-50 px-3 py-2 text-sm text-ink-2">
+          <p className="rounded-[12px] bg-warn-50 px-3 py-2 text-sm text-ink-2">
             <span className="font-semibold text-warn">{t("Moyen mnémotechnique : ", "حيلة للحفظ: ")}</span>
             {it.hook}
           </p>
@@ -76,7 +76,7 @@ export function Memo() {
       </div>
 
       {quiz && (
-        <section className="rounded-[8px] bg-panel p-5">
+        <section className="rounded-[16px] bg-panel p-5">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
             <h2 className="t-h4">{t("Test éclair", "اختبار سريع")}</h2>
             <div className="flex gap-2">
@@ -104,7 +104,7 @@ export function Memo() {
             <h2 className="t-h2">{gt.title}</h2>
             <p className="mt-2 text-base text-ink-2">{gt.intro}</p>
           </div>
-          <div className="divide-y divide-line rounded-[8px] border border-line">
+          <div className="divide-y divide-line rounded-[16px] border-2 border-line">
             {group.items.map((raw) => {
               const it = memoText(raw, lang);
               return (

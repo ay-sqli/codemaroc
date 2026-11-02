@@ -1,5 +1,5 @@
-import { Dashboard } from "./Dashboard";
+import { PathView } from "@/components/game/PathView";
 
 export default function Home() {
-  return <Dashboard />;
+  return <PathView />;
 }

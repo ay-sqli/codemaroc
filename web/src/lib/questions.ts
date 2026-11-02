@@ -5,7 +5,7 @@ import { asset } from "./base";
 import type { Card, ExamQuestion, Question, RuleQuestion } from "./types";
 
 /** Retire emojis et numérotation d'un intitulé de catégorie. */
-const cleanSection = (s: string) =>
+export const cleanSection = (s: string) =>
   s.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{20E3}]/gu, "").replace(/^\s*\d+\.\s*/, "").replace(/\s+/g, " ").trim();
 
 /**
@@ -145,6 +145,7 @@ function cardsToQuestions(cards: Card[]): Question[] {
       explanationAr: `الجواب الصحيح هو « ${card.label} »${card.section ? ` — الفئة: ${cleanSection(card.section).replace(/\s*\([^)]*\)\s*$/, "")}` : ""}.`,
       rappel: card.label,
       rappelAr: card.label,
+      section: card.section,
     });
   }
   return out;

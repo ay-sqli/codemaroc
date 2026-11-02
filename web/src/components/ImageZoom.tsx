@@ -57,7 +57,7 @@ export function ImageZoom() {
         src={img.src}
         alt={img.caption}
         onClick={(e) => e.stopPropagation()}
-        className="max-h-[75dvh] w-[min(92vw,720px)] rounded-[8px] bg-white object-contain p-3"
+        className="max-h-[75dvh] w-[min(92vw,720px)] rounded-[16px] bg-white object-contain p-3"
       />
       {img.caption && (
         <p className="ar max-w-[720px] text-center text-base leading-relaxed text-white" onClick={(e) => e.stopPropagation()}>

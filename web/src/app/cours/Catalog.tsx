@@ -126,7 +126,7 @@ export function Catalog() {
               value={q}
               onChange={(e) => setQ(e.target.value)}
               placeholder={t("Filtrer par titre…", "تصفية حسب العنوان…")}
-              className="h-9 min-w-0 flex-1 rounded-[4px] border border-line-strong px-3 text-sm focus:border-brand focus:outline-none sm:max-w-xs"
+              className="h-9 min-w-0 flex-1 rounded-[12px] border-2 border-line-strong px-3 text-sm focus:border-brand focus:outline-none sm:max-w-xs"
             />
             <p className="text-sm text-muted">
               <b className="font-semibold text-ink">{results}</b>
@@ -136,7 +136,7 @@ export function Catalog() {
               <select
                 value={sort}
                 onChange={(e) => setSort(e.target.value as Sort)}
-                className="h-9 rounded-[4px] border border-line-strong bg-white px-2 text-sm font-semibold text-ink focus:border-brand focus:outline-none"
+                className="h-9 rounded-[12px] border-2 border-line-strong bg-white px-2 text-sm font-semibold text-ink focus:border-brand focus:outline-none"
               >
                 <option value="programme">{t("Ordre du programme", "ترتيب البرنامج")}</option>
                 <option value="az">{t("Titre (A → Z)", "العنوان (أ ← ي)")}</option>

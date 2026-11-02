@@ -40,7 +40,7 @@ function Section({ s, n }: { s: MdSection; n: number }) {
 
   if (special)
     return (
-      <section className={`rounded-[8px] border p-5 sm:p-6 ${special.box}`}>
+      <section className={`rounded-[16px] border p-5 sm:p-6 ${special.box}`}>
         <header className="mb-3 flex flex-wrap items-center gap-2">
           {special.icon}
           <h2 className="t-h4">{special.label}</h2>
@@ -55,7 +55,7 @@ function Section({ s, n }: { s: MdSection; n: number }) {
     );
 
   return (
-    <section className="border-t border-line pt-6 first:border-t-0 first:pt-0">
+    <section className="border-t-2 border-line pt-6 first:border-t-0 first:pt-0">
       <header className="mb-4 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <h2 className="flex items-baseline gap-3">
           <span className="text-sm font-semibold text-muted">{String(t.num || n).padStart(2, "0")}</span>
@@ -66,7 +66,7 @@ function Section({ s, n }: { s: MdSection; n: number }) {
       {isGallery(s) ? (
         <div className="ar grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
           {s.items.map((it, i) => (
-            <figure key={i} className="flex flex-col items-center gap-2 rounded-[8px] border border-line bg-white p-3 text-center">
+            <figure key={i} className="flex flex-col items-center gap-2 rounded-[16px] border-2 border-line bg-white p-3 text-center">
               {it.img ? <img src={it.img} alt={stripEmoji(it.text)} data-zoom loading="lazy" className="h-20 w-auto object-contain" /> : null}
               <figcaption className="text-[13px] leading-snug text-ink-2" dangerouslySetInnerHTML={{ __html: stripEmoji(it.html) }} />
             </figure>

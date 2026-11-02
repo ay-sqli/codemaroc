@@ -3,7 +3,7 @@
 import { useMemo, useRef } from "react";
 import { Download, RotateCcw, Upload } from "lucide-react";
 import { MODULES, nameOf } from "@/lib/courses";
-import { exportState, importState, resetState, streak, updateSettings, useStore } from "@/lib/store";
+import { downloadBackup, importState, resetState, streak, updateSettings, useStore } from "@/lib/store";
 import { useBank } from "@/lib/questions";
 import { useLang } from "@/lib/i18n";
 import { LangSwitch } from "@/components/AppShell";
@@ -55,14 +55,7 @@ export function Progress() {
   const totalOk = Object.values(answers).filter((a) => a.lastOk).length;
   const nFlags = Object.keys(flags).length;
 
-  const download = () => {
-    const blob = new Blob([exportState()], { type: "application/json" });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = `progression-code-maroc-${new Date().toISOString().slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(a.href);
-  };
+  const download = downloadBackup;
 
   return (
     <div className="space-y-10">
@@ -91,7 +84,7 @@ export function Progress() {
 
       <section>
         <SectionHeader title={t("Activité des 30 derniers jours", "النشاط خلال آخر 30 يوما")} />
-        <div className="rounded-[8px] border border-line p-5">
+        <div className="rounded-[16px] border-2 border-line p-5">
           <div className="flex h-32 items-end gap-1">
             {last30.map((d) => (
               <div
@@ -117,7 +110,7 @@ export function Progress() {
             "الشريط الأزرق: أسئلة صحيحة في آخر محاولة. الشريط البرتقالي: أسئلة رأيتها لكنك أخطأت فيها.",
           )}
         />
-        <div className="divide-y divide-line rounded-[8px] border border-line">
+        <div className="divide-y divide-line rounded-[16px] border-2 border-line">
           {perModule.map(({ m, seen, ok, total, read: r }) => (
             <div key={m.id} className="flex flex-col gap-3 p-4 sm:flex-row sm:items-center">
               <div className="flex items-center gap-3 sm:w-72">
@@ -142,7 +135,7 @@ export function Progress() {
       </section>
 
       <div className="grid gap-6 lg:grid-cols-2">
-        <section className="rounded-[8px] border border-line p-5">
+        <section className="rounded-[16px] border-2 border-line p-5">
           <h2 className="t-h4 mb-4">{t("Réglages", "الإعدادات")}</h2>
           <div className="space-y-4">
             <Field label={t("Langue du site", "لغة الموقع")} hint={t("Le site existe en français et en arabe.", "الموقع متوفر بالفرنسية والعربية.")}>
@@ -165,7 +158,7 @@ export function Progress() {
           </div>
         </section>
 
-        <section className="rounded-[8px] border border-line p-5">
+        <section className="rounded-[16px] border-2 border-line p-5">
           <h2 className="t-h4 mb-2">{t("Sauvegarde", "الحفظ")}</h2>
           <p className="mb-4 text-sm text-ink-2">
             {t(

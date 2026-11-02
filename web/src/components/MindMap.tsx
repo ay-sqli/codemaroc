@@ -115,9 +115,9 @@ export function MindMap({ md, title }: { md: string; title: string }) {
   return (
     <div
       ref={wrapRef}
-      className={`${full ? "fixed inset-0 z-[70] rounded-none" : "relative h-[70vh] min-h-[480px] rounded-[8px]"} overflow-hidden border border-line bg-white`}
+      className={`${full ? "fixed inset-0 z-[70] rounded-none" : "relative h-[70vh] min-h-[480px] rounded-[16px]"} overflow-hidden border-2 border-line bg-white`}
     >
-      <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between gap-2 border-b border-line bg-white/95 px-4 py-2">
+      <div className="absolute inset-x-0 top-0 z-10 flex items-center justify-between gap-2 border-b-2 border-line bg-white/95 px-4 py-2">
         <p className="hidden truncate text-sm text-muted sm:block">
           <span className="font-semibold text-ink">{title}</span> · {t("clique sur un nœud pour le plier ou le déplier", "انقر على عقدة لطيّها أو فتحها")}
         </p>

@@ -452,7 +452,7 @@ export function Hierarchie() {
     <div className="space-y-3">
       {HIER.map(([Icon, ti, d], i) => (
         <div key={ti[0]} className="flex items-center gap-3 rounded-2xl bg-surface-2 p-3 ring-1 ring-line" style={{ marginInlineStart: i * 18 }}>
-          <span className="grid size-12 place-items-center rounded-[8px] bg-brand text-white">
+          <span className="grid size-12 place-items-center rounded-[16px] bg-brand text-white">
             <Icon className="size-6" />
           </span>
           <div>

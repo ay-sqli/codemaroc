@@ -10,7 +10,7 @@ export function Input({ className, ...rest }: ComponentProps<"input">) {
   return (
     <input
       className={cx(
-        "min-h-11 w-full rounded-[4px] border border-line-strong bg-white px-3 text-[15px] text-ink placeholder:text-subtle",
+        "min-h-11 w-full rounded-[12px] border-2 border-line-strong bg-white px-3 text-[15px] text-ink placeholder:text-subtle",
         "focus:border-brand focus:outline-none focus:ring-1 focus:ring-brand",
         className,
       )}
@@ -45,7 +45,7 @@ export function SearchField({
         e.preventDefault();
         onSubmit?.();
       }}
-      className={cx("flex h-11 items-center rounded-full border border-line-strong bg-white ps-4 pe-1 focus-within:border-brand", className)}
+      className={cx("flex h-11 items-center rounded-full border-2 border-line-strong bg-white ps-4 pe-1 focus-within:border-brand", className)}
     >
       <input className="min-w-0 flex-1 bg-transparent text-[15px] outline-none placeholder:text-muted" {...rest} />
       <button type="submit" aria-label={t("Rechercher", "بحث")} className="grid size-9 place-items-center rounded-full bg-brand text-white hover:bg-brand-2">
@@ -61,8 +61,8 @@ export function Checkbox({ checked, onChange, label, count }: { checked: boolean
     <label className="flex cursor-pointer items-center gap-3 py-1.5 text-[15px] text-ink-2">
       <span
         className={cx(
-          "grid size-5 shrink-0 place-items-center rounded-[3px] border-2 transition-colors",
-          checked ? "border-brand bg-brand text-white" : "border-[#8c8c8c] bg-white",
+          "grid size-5 shrink-0 place-items-center rounded-[8px] border-2 transition-colors",
+          checked ? "border-brand bg-brand text-white" : "border-line-strong bg-white",
         )}
       >
         {checked && <Check className="size-3.5" strokeWidth={3} />}
@@ -84,9 +84,9 @@ export function Switch({ checked, onChange, label }: { checked: boolean; onChang
         role="switch"
         aria-checked={checked}
         onClick={() => onChange(!checked)}
-        className={cx("relative h-6 w-11 shrink-0 rounded-full transition-colors", checked ? "bg-brand" : "bg-[#b9c2d0]")}
+        className={cx("relative h-7 w-12 shrink-0 rounded-full transition-colors", checked ? "bg-ok" : "bg-line-strong")}
       >
-        <span className={cx("absolute top-0.5 size-5 rounded-full bg-white shadow transition-[inset-inline-start]", checked ? "start-[22px]" : "start-0.5")} />
+        <span className={cx("absolute top-0.5 size-6 rounded-full bg-white shadow transition-[inset-inline-start]", checked ? "start-[22px]" : "start-0.5")} />
       </button>
     </label>
   );
@@ -104,17 +104,18 @@ export function ChoiceOption({
   children: ReactNode;
   disabled?: boolean;
 }) {
+  // Tuile en relief : bordure 2 px + ombre pleine de la couleur de la bordure.
   const border =
     state === "correct"
-      ? "border-ok bg-ok-50"
+      ? "border-[#2ecc71] bg-ok-50 text-ok shadow-[0_4px_0_#25a25a]"
       : state === "wrong"
-        ? "border-ko bg-ko-50"
+        ? "border-ko bg-ko-50 text-ko-700 shadow-[0_4px_0_var(--c-red-700)]"
         : state === "missed"
-          ? "border-ok border-dashed"
+          ? "border-[#2ecc71] border-dashed shadow-[0_4px_0_#2ecc71]"
           : selected
-            ? "border-brand bg-brand-50"
-            : "border-line hover:border-ink-2";
-  const mark = state === "correct" || (selected && !state) ? "border-brand bg-brand" : state === "wrong" ? "border-ko bg-ko" : "border-[#8c8c8c] bg-white";
+            ? "border-info bg-[#ebf5fb] shadow-[0_4px_0_#1f618d]"
+            : "border-line bg-white shadow-[0_4px_0_var(--c-grey-300)] hover:bg-panel";
+  const mark = state === "correct" || (selected && !state) ? "border-info bg-info" : state === "wrong" ? "border-ko bg-ko" : "border-line-strong bg-white";
   return (
     <button
       type="button"
@@ -122,19 +123,19 @@ export function ChoiceOption({
       aria-checked={selected}
       onClick={onClick}
       disabled={disabled}
-      className={cx("flex w-full items-start gap-3 rounded-[8px] border px-4 py-3 text-start transition-colors disabled:cursor-default", border)}
+      className={cx("flex w-full items-start gap-3 rounded-[16px] border-2 px-4 py-3.5 text-start transition-[transform,box-shadow] active:translate-y-[2px] disabled:cursor-default disabled:active:translate-y-0", border)}
     >
       <span
         className={cx(
           "mt-0.5 grid size-5 shrink-0 place-items-center border-2 text-white",
-          multi ? "rounded-[3px]" : "rounded-full",
+          multi ? "rounded-[8px]" : "rounded-full",
           state === "correct" ? "border-ok bg-ok" : mark,
         )}
       >
         {(selected || state === "correct") && (multi ? <Check className="size-3.5" strokeWidth={3} /> : <span className="size-2 rounded-full bg-white" />)}
       </span>
       <span className="sr-only">Option {index + 1}</span>
-      <span className="min-w-0 flex-1 text-[15px] leading-relaxed text-ink">{children}</span>
+      <span className="min-w-0 flex-1 text-[16px] font-[700] leading-relaxed text-ink">{children}</span>
     </button>
   );
 }

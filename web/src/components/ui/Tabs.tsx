@@ -15,7 +15,7 @@ export function Tabs<T extends string>({
   items, value, onChange, className,
 }: { items: TabItem<T>[]; value: T; onChange: (v: T) => void; className?: string }) {
   return (
-    <div role="tablist" className={cx("no-scrollbar flex gap-6 overflow-x-auto border-b border-line", className)}>
+    <div role="tablist" className={cx("no-scrollbar flex gap-6 overflow-x-auto border-b-2 border-line", className)}>
       {items.map((t) => {
         const active = t.id === value;
         return (
@@ -25,14 +25,14 @@ export function Tabs<T extends string>({
             aria-selected={active}
             onClick={() => onChange(t.id)}
             className={cx(
-              "-mb-px inline-flex shrink-0 items-center gap-2 border-b-[3px] pb-3 pt-2 text-[15px] font-semibold transition-colors",
-              active ? "border-brand text-brand" : "border-transparent text-ink-2 hover:text-brand",
+              "-mb-[2px] inline-flex shrink-0 items-center gap-2 border-b-[3px] pb-3 pt-2 text-[14px] font-[800] uppercase tracking-wide transition-colors rtl:tracking-normal",
+              active ? "border-brand text-brand" : "border-transparent text-muted hover:text-brand",
             )}
           >
             {t.icon}
             {t.label}
             {t.count !== undefined && (
-              <span className={cx("rounded-[4px] px-1.5 text-xs leading-5", active ? "bg-brand-100 text-brand-800" : "bg-panel text-muted")}>{t.count}</span>
+              <span className={cx("rounded-[12px] px-1.5 text-xs leading-5", active ? "bg-brand-100 text-brand-800" : "bg-panel text-muted")}>{t.count}</span>
             )}
           </button>
         );
@@ -56,14 +56,14 @@ export function PillTabs<T extends string>({
             aria-selected={active}
             onClick={() => onChange(t.id)}
             className={cx(
-              "inline-flex shrink-0 items-center gap-1.5 rounded-full px-3.5 py-1.5 text-sm font-semibold transition-colors",
+              "inline-flex shrink-0 items-center gap-1.5 rounded-[12px] px-3.5 py-1.5 text-sm font-[800] transition-colors",
               onDark
                 ? active
                   ? "bg-white text-ink"
                   : "bg-white/15 text-white hover:bg-white/25"
                 : active
-                  ? "bg-night text-white"
-                  : "border border-line bg-white text-ink-2 hover:border-ink-2",
+                  ? "border-2 border-brand-200 bg-brand-100 text-brand"
+                  : "border-2 border-line bg-white text-muted shadow-[0_2px_0_var(--c-grey-200)] hover:bg-panel",
             )}
           >
             {t.icon}
@@ -80,7 +80,7 @@ export function Segmented<T extends string>({
   options, value, onChange, className,
 }: { options: { id: T; label: ReactNode }[]; value: T; onChange: (v: T) => void; className?: string }) {
   return (
-    <div role="radiogroup" className={cx("inline-flex w-full flex-wrap rounded-[4px] border border-line bg-white p-0.5", className)}>
+    <div role="radiogroup" className={cx("inline-flex w-full flex-wrap rounded-[12px] border-2 border-line bg-white p-0.5", className)}>
       {options.map((o) => {
         const active = o.id === value;
         return (
@@ -90,8 +90,8 @@ export function Segmented<T extends string>({
             aria-checked={active}
             onClick={() => onChange(o.id)}
             className={cx(
-              "min-h-9 flex-1 rounded-[3px] px-3 text-sm font-semibold transition-colors",
-              active ? "bg-brand text-white" : "text-ink-2 hover:bg-panel",
+              "min-h-9 flex-1 rounded-[8px] px-3 text-sm font-[800] transition-colors",
+              active ? "bg-brand-100 text-brand" : "text-muted hover:bg-panel",
             )}
           >
             {o.label}

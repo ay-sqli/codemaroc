@@ -44,10 +44,10 @@ export function SchemasGrid() {
             <button
               key={id}
               onClick={() => setOpen(id)}
-              className="group flex flex-col overflow-hidden rounded-[8px] border border-line bg-white text-start transition-shadow hover:shadow-md"
+              className="group flex flex-col overflow-hidden rounded-[16px] border-2 border-line bg-white text-start transition-shadow hover:shadow-md"
             >
               <span className="grid aspect-[16/7] w-full place-items-center bg-panel">
-                <span className="grid size-14 place-items-center rounded-[8px] bg-white text-brand shadow-sm">
+                <span className="grid size-14 place-items-center rounded-[16px] bg-white text-brand shadow-sm">
                   <Icon className="size-7" strokeWidth={1.75} />
                 </span>
               </span>

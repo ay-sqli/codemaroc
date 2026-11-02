@@ -108,7 +108,7 @@ export function Correction({ q, picked, compact = false }: { q: Question; picked
             <Link
               href={`/cours/${ch.slug}/`}
               target="_blank"
-              className="inline-flex min-h-8 items-center gap-2 rounded-[4px] px-3 text-sm font-semibold text-brand hover:bg-brand-50"
+              className="inline-flex min-h-8 items-center gap-2 rounded-[12px] px-3 text-sm font-semibold text-brand hover:bg-brand-50"
             >
               <BookOpen className="size-4" /> {t("Revoir le cours :", "راجع الدرس:")} {nameOf(ch, lang)}
             </Link>
@@ -295,9 +295,9 @@ export function QuizPlayer({
         </div>
 
         {official ? (
-          <div className="overflow-hidden rounded-[8px] border border-line">
+          <div className="overflow-hidden rounded-[16px] border-2 border-line">
             <img src={q.img} alt={t("Question", "السؤال")} data-zoom data-caption="" className="w-full bg-[#1f1f1f] object-contain" />
-            <div className="border-t border-line bg-white p-4">
+            <div className="border-t-2 border-line bg-white p-4">
               <p className="mb-3 text-[15px] font-semibold">
                 {t("Coche la ou les bonnes cases", "اختر الخانة أو الخانات الصحيحة")}{" "}
                 <span className="font-normal text-muted">{t("(plusieurs réponses possibles)", "(يمكن أن تكون عدة أجوبة صحيحة)")}</span>
@@ -313,7 +313,7 @@ export function QuizPlayer({
                       aria-checked={sel}
                       onClick={() => toggle(k)}
                       className={cx(
-                        "flex h-16 items-center justify-center gap-2 rounded-[8px] border text-2xl font-semibold transition-colors",
+                        "flex h-16 items-center justify-center gap-2 rounded-[16px] border text-2xl font-semibold transition-colors",
                         st === "correct"
                           ? "border-ok bg-ok-50 text-ok"
                           : st === "wrong"
@@ -338,7 +338,7 @@ export function QuizPlayer({
           <div className="space-y-5">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               {q.img && (
-                <div className="grid h-40 w-full shrink-0 place-items-center rounded-[8px] border border-line bg-white p-3 sm:w-48">
+                <div className="grid h-40 w-full shrink-0 place-items-center rounded-[16px] border-2 border-line bg-white p-3 sm:w-48">
                   <img src={q.img} alt="" data-zoom className="max-h-full max-w-full object-contain" />
                 </div>
               )}
@@ -388,7 +388,7 @@ export function QuizPlayer({
       )}
 
       {/* Barre d'actions */}
-      <div className="sticky bottom-0 z-10 -mx-4 mt-8 flex items-center justify-between gap-3 border-t border-line bg-white px-4 py-3 sm:mx-0 sm:rounded-[8px] sm:border">
+      <div className="sticky bottom-0 z-10 -mx-4 mt-8 flex items-center justify-between gap-3 border-t-2 border-line bg-white px-4 py-3 sm:mx-0 sm:rounded-[16px] sm:border">
         <div>
           {mode === "practice" && !checked && (
             <Button variant="tertiary" onClick={() => onFinish(results, Math.round((Date.now() - start.current) / 1000))}>

@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Session } from "./Session";
 
-export const metadata = { title: "Session d'entraînement · حصة تمرين — codemaroc" };
+export const metadata = { title: "Session d'entraînement · حصة تمرين — Code Maroc" };
 
 export default function SessionPage() {
   return (

@@ -120,7 +120,7 @@ export function Training() {
             <a
               key={m.id}
               href={`/entrainement/session/?mode=module&c=${m.id}&n=30`}
-              className="group flex items-center gap-4 rounded-[8px] border border-line p-4 transition-shadow hover:shadow-md"
+              className="group flex items-center gap-4 rounded-[16px] border-2 border-line p-4 transition-shadow hover:shadow-md"
             >
               <ModuleIcon id={m.id} size="lg" />
               <span className="min-w-0">
