@@ -2,7 +2,7 @@
 
 import type { ComponentType } from "react";
 import {
-  Ambulance, Ban, Car, CircleParking, CloudRain, Flame, Gauge, Hash, Lightbulb, Ruler, ShieldAlert, Shapes, Siren, Split, Triangle, Waves, Wine, type LucideIcon,
+  Ambulance, Ban, Car, CircleParking, CloudRain, Milestone, Mountain, TrainFront, Flame, Gauge, Hash, Lightbulb, Ruler, ShieldAlert, Shapes, Siren, Split, Triangle, Waves, Wine, type LucideIcon,
 } from "lucide-react";
 import { Modal } from "@/components/ui";
 import { SCHEMA_META, schemaDesc, schemaForChapter, schemaTitle, type SchemaMeta } from "@/lib/schemaMeta";
@@ -17,6 +17,9 @@ import Marquage from "./Marquage";
 import { Alcool, Depassement, Energie, Formes, Hierarchie, Pas, Points, Stationnement } from "./Divers";
 import EtatRoute from "./EtatRoute";
 import Usagers from "./Usagers";
+import PassageNiveau from "./PassageNiveau";
+import Autoroute from "./Autoroute";
+import Tunnel from "./Tunnel";
 
 export interface SchemaDef extends SchemaMeta {
   C: ComponentType;
@@ -40,6 +43,9 @@ const COMPONENTS: Record<string, ComponentType> = {
   pas: Pas,
   etat: EtatRoute,
   usagers: Usagers,
+  passage: PassageNiveau,
+  autoroute: Autoroute,
+  tunnel: Tunnel,
 };
 
 /** Registre des schémas interactifs (id utilisé dans les corrigés : champ `s`). */
@@ -68,6 +74,9 @@ export const SCHEMA_ICONS: Record<string, LucideIcon> = {
   pas: Siren,
   etat: CloudRain,
   usagers: Ambulance,
+  passage: TrainFront,
+  autoroute: Milestone,
+  tunnel: Mountain,
 };
 
 export function SchemaModal({ id, onClose }: { id: string; onClose: () => void }) {

@@ -120,6 +120,27 @@ export const SCHEMA_META: Record<string, SchemaMeta> = {
     descAr: "سيارة الإسعاف، الدرك، الجرار، العربة المجرورة… لمن تفسح الطريق ؟",
     chapters: ["05_vehicules_prioritaires", "13_autres_usagers"],
   },
+  passage: {
+    title: "Passage à niveau",
+    desc: "Feux rouges clignotants, barrières, train : quand s'arrêter et quand traverser.",
+    titleAr: "الممر السككي",
+    descAr: "أضواء حمراء وامضة، حواجز، قطار: متى تتوقف ومتى تعبر.",
+    chapters: ["02_dangers_priorites", "09_feux_et_agents"],
+  },
+  autoroute: {
+    title: "Autoroute et péage",
+    desc: "S'insérer par la voie d'accélération, passer le péage, vitesses et interdits.",
+    titleAr: "الطريق السيار والأداء",
+    descAr: "الاندماج عبر مسلك التسريع، محطة الأداء، السرعات والممنوعات.",
+    chapters: ["11_autoroute", "13_types_de_routes"],
+  },
+  tunnel: {
+    title: "Le tunnel",
+    desc: "Mini-jeu : allume tes feux de croisement avant d'entrer.",
+    titleAr: "النفق",
+    descAr: "لعبة: شغّل أضواء التقابل قبل الدخول.",
+    chapters: ["05_indications", "14_conditions_eclairage"],
+  },
   pas: {
     title: "Accident : P.A.S.",
     desc: "Protéger, Alerter, Secourir et les numéros d'urgence.",
@@ -128,6 +149,13 @@ export const SCHEMA_META: Record<string, SchemaMeta> = {
     chapters: ["15_panne_accident", "05_homicide_blessures"],
   },
 };
+
+/** Tous les schémas liés à un chapitre. */
+export function schemasForChapter(slug: string) {
+  return Object.entries(SCHEMA_META)
+    .filter(([, s]) => s.chapters.includes(slug))
+    .map(([id]) => id);
+}
 
 export function schemaForChapter(slug: string) {
   return Object.entries(SCHEMA_META).find(([, s]) => s.chapters.includes(slug))?.[0];

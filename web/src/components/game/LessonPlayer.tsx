@@ -11,7 +11,8 @@ import { getChapter, nameOf } from "@/lib/courses";
 import { schemaTitle } from "@/lib/schemaMeta";
 import { countLabel, useLang } from "@/lib/i18n";
 import { qText } from "@/components/QuizPlayer";
-import { SchemaModal, SCHEMAS, schemaForChapter } from "@/components/schemas";
+import { SchemaModal, SCHEMAS } from "@/components/schemas";
+import { schemasForChapter } from "@/lib/schemaMeta";
 import { cx } from "@/components/ui";
 import { asset } from "@/lib/base";
 import { Mascot, MascotSays, OOPS_POSES, PRAISE_POSES } from "./Mascot";
@@ -158,8 +159,7 @@ export function LessonIntro({
   }, [questions]);
   const schemas = useMemo(() => {
     const ids = new Set(questions.map((q) => q.schema).filter(Boolean) as string[]);
-    const forCh = schemaForChapter(node.unit);
-    if (forCh) ids.add(forCh);
+    schemasForChapter(node.unit).forEach((id) => ids.add(id));
     return [...ids].filter((id) => SCHEMAS[id]);
   }, [questions, node.unit]);
   const timed = node.kind !== "lesson";

@@ -12,36 +12,36 @@ const UNIT_TILE: Record<string, string> = {
   "02_dangers_priorites": "passage-niveau",
   "03_interdictions": "route-2-voies",
   "04_obligations": "carrefour-fleches",
-  "05_indications": "voie-bus",
+  "05_indications": "station-service",
   "06_directions": "bifurcation",
-  "07_localisations": "route-4-voies",
+  "07_localisations": "pont-riviere",
   "08_panonceaux": "parking",
   "09_feux_et_agents": "carrefour-pietons",
   "10_signalisation_horizontale": "zebras-chevrons",
   "11_signaux_lumineux": "carrefour",
-  "12_signalisation_temporaire": "gravillons",
-  "13_types_de_routes": "route-4-voies",
+  "12_signalisation_temporaire": "chantier-eboulement",
+  "13_types_de_routes": "echangeur",
   "14_conditions_eclairage": "route-2-voies",
   "15_conditions_climatiques": "flaques",
-  "16_virages_et_pentes": "eboulement",
+  "16_virages_et_pentes": "epingle",
   "01_montee_descente": "parking",
-  "02_demarrage": "parking",
+  "02_demarrage": "arret-bus",
   "03_vitesse": "route-4-voies",
   "04_position_sur_route": "route-2-voies",
   "05_croisement_depassement": "ligne-continue-jaune",
-  "06_arret_stationnement": "parking",
+  "06_arret_stationnement": "parking-taxis",
   "07_regles_priorite": "carrefour",
   "08_changement_direction": "carrefour-fleches",
-  "09_parties_speciales": "giratoire",
-  "10_virages": "eboulement",
+  "09_parties_speciales": "rond-point-palmier",
+  "10_virages": "virages-glissieres",
   "11_autoroute": "route-4-voies",
   "12_distances": "route-2-voies",
-  "13_autres_usagers": "carrefour-pietons",
+  "13_autres_usagers": "pistes-cyclables",
   "14_dangers_exceptionnels": "neige",
-  "15_panne_accident": "bordure-jaune-blanche",
+  "15_panne_accident": "glissieres-chevrons",
   "01_categories_permis": "voie-bus",
   "02_alcool_medicaments": "route-2-voies",
-  "03_vigilance": "marquage-croise",
+  "03_vigilance": "sortie-ecole",
   "04_perception_reaction": "carrefour-zebre",
   "01_regles_administratives": "parking",
   "02_elements_mecaniques": "terre",
@@ -56,7 +56,7 @@ const SECTION_TILE: Record<string, string> = { "01": "carrefour", "02": "route-2
 const UNIT_VEHICLES: Record<string, [string, string?]> = {
   "05_vehicules_prioritaires": ["ambulance", "police"],
   "13_autres_usagers": ["charrette", "velo"],
-  "11_autoroute": ["autoecole", "camion"],
+  "11_autoroute": ["voiture-bleue", "camion"],
   "01_categories_permis": ["bus", "moto"],
   "02_elements_mecaniques": ["4x4", "tracteur"],
   "02_dangers_priorites": ["autoecole", "tracteur"],
@@ -65,22 +65,30 @@ const UNIT_VEHICLES: Record<string, [string, string?]> = {
   "09_parties_speciales": ["petit-taxi", "grand-taxi"],
 };
 /** Tuiles où la route est horizontale : la voiture roule de gauche à droite. */
-const HORIZONTAL = new Set(["route-2-voies", "route-4-voies", "avenue-terre-plein"]);
+const HORIZONTAL = new Set([
+  "route-2-voies", "route-4-voies", "avenue-terre-plein", "pont-riviere", "chantier-eboulement", "glissieres-chevrons",
+  "sortie-ecole", "station-service", "arret-bus", "route-cotiere", "nids-de-poule",
+]);
+/** Routes sinueuses ou à îlot central : une trajectoire droite sortirait de la route → scène fixe. */
+const STATIC = new Set(["rond-point-palmier", "giratoire", "mini-giratoire", "epingle", "virages-glissieres", "echangeur"]);
 
 export function RoadScene({ unit, section }: { unit: string; section: string }) {
   const tile = UNIT_TILE[unit] ?? SECTION_TILE[section] ?? "carrefour";
   const [a, b] = UNIT_VEHICLES[unit] ?? ["autoecole", "petit-taxi"];
   const h = HORIZONTAL.has(tile);
+  const still = STATIC.has(tile);
   return (
     <div className="relative mt-5 h-[150px] overflow-hidden rounded-[24px] border-2 border-[var(--duo-grey)] bg-[#eadfc6]" aria-hidden="true">
       <img src={asset(`/tiles/${tile}.webp`)} alt="" className="absolute inset-0 h-full w-full object-cover" />
+      {!still && (
       <img
         src={asset(`/vehicles/${a}.webp`)}
         alt=""
         className={cx("absolute w-auto", h ? "scene-drive-h h-[64px]" : "scene-drive-v h-[70px]")}
         style={h ? { top: "54%" } : { left: "calc(50% + 10px)" }}
       />
-      {b && (
+      )}
+      {b && !still && (
         <img
           src={asset(`/vehicles/${b}.webp`)}
           alt=""
