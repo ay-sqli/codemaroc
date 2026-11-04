@@ -338,8 +338,9 @@ export function QuizPlayer({
           <div className="space-y-5">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               {q.img && (
-                <div className="grid h-40 w-full shrink-0 place-items-center rounded-[16px] border-2 border-line bg-white p-3 sm:w-48">
-                  <img src={q.img} alt="" data-zoom className="max-h-full max-w-full object-contain" />
+                <div className="h-40 w-full shrink-0 overflow-hidden rounded-[16px] border-2 border-line bg-white p-3 sm:h-44 sm:w-48">
+                  {/* Taille imposée + object-contain : le panneau reste toujours dans son cadre, quelle que soit sa taille réelle. */}
+                  <img src={q.img} alt="" data-zoom className="block h-full w-full object-contain" />
                 </div>
               )}
               <div className="space-y-1">

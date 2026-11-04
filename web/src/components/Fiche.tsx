@@ -31,15 +31,19 @@ function Row({ n, tone }: { n: MdNode; tone: string }) {
   );
 }
 
-/** Image du cours + sa légende, en carte (cliquable pour agrandir). */
+/**
+ * Image du cours + sa légende, en carte (cliquable pour agrandir).
+ * L'image occupe toute la largeur de la carte, au-dessus du texte : un document (permis, carte grise…)
+ * ou un schéma reste lisible sur mobile comme sur ordinateur, et ne déborde jamais de son cadre.
+ */
 function Visual({ n }: { n: MdNode }) {
   const big = n.imgClass === "big" || n.imgClass === "xl";
   return (
     <figure className={`fiche-visual ${big ? "sm:col-span-2" : ""}`}>
-      <span className={`grid shrink-0 place-items-center rounded-[14px] bg-white ${big ? "w-full p-2" : "size-20 p-1.5"}`}>
-        <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className={big ? "max-h-72 w-auto object-contain" : "max-h-full max-w-full object-contain"} />
+      <span className={`block w-full overflow-hidden rounded-[14px] bg-white p-2 ${big ? "h-56 sm:h-72" : "h-40 sm:h-44"}`}>
+        <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-full w-full object-contain" />
       </span>
-      <figcaption className="min-w-0 flex-1" dangerouslySetInnerHTML={{ __html: html(n) }} />
+      <figcaption className="min-w-0 px-1 pb-0.5" dangerouslySetInnerHTML={{ __html: html(n) }} />
     </figure>
   );
 }
@@ -58,10 +62,12 @@ function Blocks({ items, tone }: { items: MdNode[]; tone: string }) {
       {groups.map((g, i) =>
         g.img && g.list.length >= 4 && g.list.every((n) => !n.imgClass) ? (
           // Galerie de panneaux : vignette au-dessus, signification dessous
-          <div key={i} className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
+          <div key={i} className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             {g.list.map((n, j) => (
-              <figure key={j} className="flex flex-col items-center gap-2 rounded-[18px] border-2 border-line bg-white p-3 text-center shadow-[0_3px_0_var(--c-grey-200)]">
-                <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="h-20 w-auto object-contain" />
+              <figure key={j} className="flex flex-col items-center gap-2 rounded-[18px] border-2 border-line bg-white p-2.5 text-center shadow-[0_3px_0_var(--c-grey-200)] sm:p-3">
+                <span className="block h-28 w-full overflow-hidden sm:h-36">
+                  <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-full w-full object-contain" />
+                </span>
                 <figcaption className="text-[14px] font-[600] leading-snug text-ink" dangerouslySetInnerHTML={{ __html: html(n) }} />
               </figure>
             ))}

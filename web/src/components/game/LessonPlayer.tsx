@@ -501,8 +501,8 @@ export function LessonPlay({
             {tx.prompt && <h1 className={cx("duo-h text-[22px] leading-snug sm:text-[26px]", lang === "ar" && "leading-relaxed")}>{tx.prompt}</h1>}
             {tx.promptAlt && <p className={cx("mt-1 font-[600] text-[var(--duo-muted)]", HAS_AR.test(tx.promptAlt) ? "ar text-[17px]" : "text-[15px]")}>{tx.promptAlt}</p>}
             {q.img && (
-              <div className="duo-card mx-auto mt-5 grid h-44 w-full max-w-[280px] place-items-center p-3">
-                <img src={q.img} alt="" data-zoom className="max-h-full max-w-full object-contain" />
+              <div className="duo-card mx-auto mt-5 h-44 w-full max-w-[280px] overflow-hidden p-3">
+                <img src={q.img} alt="" data-zoom className="block h-full w-full object-contain" />
               </div>
             )}
             <div className="mt-6 space-y-3" role={q.multi ? "group" : "radiogroup"}>
