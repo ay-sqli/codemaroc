@@ -1,0 +1,11 @@
+# Netlify : l'adaptateur Next.js transforme le build en pages + fonctions serveur (/api).
+# Sans lui, Netlify publie le dossier .next brut et toutes les pages renvoient 404.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
