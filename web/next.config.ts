@@ -13,12 +13,11 @@ const nextConfig: NextConfig = {
   serverExternalPackages: ["mongodb", "bcryptjs"],
   turbopack: {
     rules: {
-      "*.css": {
+      // Tailwind ne traite que notre feuille de styles : le CSS généré par next/font ne doit pas passer
+      // par ce loader, qui réécrit ses url(...?{...}) (« queries have exactly one entry »).
+      "globals.css": {
         loaders: ["@tailwindcss/turbopack"],
         as: "*.css",
-        // Ne pas toucher au CSS généré par next/font : le loader réécrit ses url(...?{...})
-        // et casse la résolution des fichiers de police (« queries have exactly one entry »).
-        condition: { not: { path: /internal[\\/]font[\\/]/ } },
       },
     },
   },

@@ -1,5 +1,5 @@
 import { progress, users } from "@/lib/server/db";
-import { fail, hashPassword, json, publicUser, readJson, requireAdmin, validateAccount } from "@/lib/server/auth-routes";
+import { fail, hashPassword, json, publicUser, readJson, requireAdmin, roleFor, validateAccount } from "@/lib/server/auth-routes";
 
 /** Back-office : tous les utilisateurs avec leur résumé de progression. */
 export async function GET() {
@@ -16,11 +16,11 @@ export async function GET() {
   });
 }
 
-/** Back-office : créer un utilisateur. */
+/** Back-office : créer un utilisateur (toujours simple utilisateur, il n'y a qu'un admin). */
 export async function POST(req: Request) {
   const admin = await requireAdmin();
   if (admin instanceof Response) return admin;
-  const body = await readJson<{ name?: string; email?: string; password?: string; role?: string }>(req);
+  const body = await readJson<{ name?: string; email?: string; password?: string }>(req);
   const v = validateAccount(body);
   if ("error" in v) return fail(v.error!);
   const col = await users();
@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     email: v.email,
     name: v.name,
     passwordHash: await hashPassword(v.password),
-    role: body.role === "admin" ? ("admin" as const) : ("user" as const),
+    role: roleFor(v.email),
     createdAt: new Date(),
   };
   const { insertedId } = await col.insertOne(doc as never);

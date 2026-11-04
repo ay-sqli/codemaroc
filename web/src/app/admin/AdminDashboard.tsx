@@ -104,7 +104,7 @@ function Modal({ title, onClose, children }: { title: string; onClose: () => voi
 const input = "h-12 w-full rounded-[12px] border-2 border-line bg-white px-3 text-[15px] outline-none focus:border-[#2980b9]";
 
 function AddUser({ onClose, onDone }: { onClose: () => void; onDone: () => void }) {
-  const [f, setF] = useState({ name: "", email: "", password: "", role: "user" });
+  const [f, setF] = useState({ name: "", email: "", password: "" });
   const [err, setErr] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   return (
@@ -129,10 +129,7 @@ function AddUser({ onClose, onDone }: { onClose: () => void; onDone: () => void 
         <input className={input} placeholder="Nom" value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} required />
         <input className={input} placeholder="E-mail" type="email" dir="ltr" value={f.email} onChange={(e) => setF({ ...f, email: e.target.value })} required />
         <input className={input} placeholder="Mot de passe provisoire (8 caractères min.)" type="text" dir="ltr" value={f.password} onChange={(e) => setF({ ...f, password: e.target.value })} required />
-        <select className={input} value={f.role} onChange={(e) => setF({ ...f, role: e.target.value })}>
-          <option value="user">Utilisateur</option>
-          <option value="admin">Administrateur</option>
-        </select>
+        <p className="text-[12px] text-muted">Le compte est créé en tant qu&apos;utilisateur : l&apos;application n&apos;a qu&apos;un seul administrateur.</p>
         {err && <p className="rounded-[12px] bg-[#fdedec] px-3 py-2 text-[14px] font-[700] text-[#c0392b]">{err}</p>}
         <button className="duo-btn duo-btn-green w-full" disabled={busy}>
           {busy && <Loader2 className="size-4 animate-spin" />} Créer le compte
@@ -252,9 +249,6 @@ function UserDetail({ id, me, onClose, onChanged }: { id: string; me: string; on
             </div>
           )}
           <div className="grid gap-2 border-t-2 border-line pt-4 sm:grid-cols-2">
-            <button className="duo-btn duo-btn-ghost !min-h-11 !text-[13px]" onClick={() => void act("Rôle modifié.", { role: u.role === "admin" ? "user" : "admin" })}>
-              <ShieldCheck className="size-4" /> {u.role === "admin" ? "Retirer le rôle admin" : "Nommer administrateur"}
-            </button>
             <button
               className="duo-btn duo-btn-ghost !min-h-11 !text-[13px]"
               onClick={() => {
@@ -270,7 +264,7 @@ function UserDetail({ id, me, onClose, onChanged }: { id: string; me: string; on
             >
               <RotateCcw className="size-4" /> Remettre la progression à zéro
             </button>
-            <button className="duo-btn duo-btn-red !min-h-11 !text-[13px]" disabled={u.id === me} onClick={() => void act("", "delete")}>
+            <button className="duo-btn duo-btn-red !min-h-11 !text-[13px]" disabled={u.id === me || u.role === "admin"} onClick={() => void act("", "delete")}>
               <Trash2 className="size-4" /> Supprimer le compte
             </button>
           </div>
@@ -393,7 +387,7 @@ export function AdminDashboard() {
         {err && <p className="rounded-[12px] bg-[#fdedec] px-3 py-2 text-[14px] font-[700] text-[#c0392b]">{err}</p>}
 
         <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-          <Kpi icon={Users} tone="#d92b2b" label="Utilisateurs" value={list ? String(list.length) : "…"} hint={`${list?.filter((u) => u.role === "admin").length ?? 0} administrateur(s)`} />
+          <Kpi icon={Users} tone="#d92b2b" label="Utilisateurs" value={list ? String(list.length) : "…"} hint="1 administrateur (compte unique)" />
           <Kpi icon={CalendarPlus} tone="#2980b9" label="Nouveaux (7 j)" value={String(stats.new7)} />
           <Kpi icon={Activity} tone="#198754" label="Actifs (7 j)" value={String(stats.active7)} hint={`${stats.today} aujourd'hui`} />
           <Kpi icon={Trophy} tone="#d68910" label="Examen ≥ 32/40" value={String(stats.passed)} hint={`Étapes en moyenne : ${stats.avgDone}/${total}`} />

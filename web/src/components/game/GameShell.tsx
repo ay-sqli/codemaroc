@@ -237,6 +237,40 @@ function ProgressCard() {
   );
 }
 
+function Avatar({ name, size = "size-10 text-[16px]" }: { name: string; size?: string }) {
+  return (
+    <span className={cx("grid shrink-0 place-items-center rounded-full bg-[#d92b2b] font-[900] text-white shadow-[0_3px_0_#a81c1c]", size)} style={{ fontFamily: "var(--font-display)" }}>
+      {name.slice(0, 1).toUpperCase()}
+    </span>
+  );
+}
+
+/** Accès au profil en bas de la barre latérale : avatar, nom, grade. */
+function ProfileChip({ active }: { active: boolean }) {
+  const { t } = useLang();
+  const { user } = useSession();
+  const s = useGameStats();
+  if (!user) return null;
+  return (
+    <Link
+      href="/profil/"
+      title={t("Mon profil", "ملفي")}
+      className={cx(
+        "flex items-center justify-center gap-3 rounded-[14px] border-2 p-2 lg:justify-start",
+        active ? "border-[#84d8ff] bg-[var(--duo-blue-50)]" : "border-transparent hover:bg-[var(--duo-snow)]",
+      )}
+    >
+      <Avatar name={user.name} />
+      <span className="hidden min-w-0 flex-1 lg:block">
+        <span className="block truncate text-[15px] font-[800] text-[var(--duo-ink)]">{user.name}</span>
+        <span className="block truncate text-[12px] font-[700] text-[var(--duo-muted)]">
+          {t("Mon profil", "ملفي")} · {s.done}/{s.total || "…"}
+        </span>
+      </span>
+    </Link>
+  );
+}
+
 export function GameShell({ children }: { children: React.ReactNode }) {
   const { t } = useLang();
   const session = useSession();
@@ -289,21 +323,28 @@ export function GameShell({ children }: { children: React.ReactNode }) {
             </Link>
           ))}
         </nav>
-        <div className="hidden px-3 lg:block">
-          <LangSwitch className="px-0" />
+        <div className="mt-3 border-t-2 border-[var(--duo-grey)] pt-3">
+          <ProfileChip active={active("/profil/")} />
+          <div className="hidden px-3 pt-1 lg:block">
+            <LangSwitch className="px-0" />
+          </div>
         </div>
       </aside>
 
       <div className="md:ps-[88px] lg:ps-64">
         {/* Barre du haut (mobile) */}
-        <header className="sticky top-0 z-30 flex h-14 items-center gap-4 border-b-2 border-[var(--duo-grey)] bg-white px-4 md:hidden">
-          <StatsRow className="flex-1" />
-          <LangSwitch className="!h-9 shrink-0 px-0" />
+        <header className="sticky top-0 z-30 flex h-14 items-center gap-3 border-b-2 border-[var(--duo-grey)] bg-white px-4 md:hidden">
+          <StatsRow className="min-w-0 flex-1" />
+          {/* Petits écrans : le globe seul, pour laisser la place à l'avatar. */}
+          <LangSwitch className="!h-9 shrink-0 px-0 max-[480px]:[&>span]:hidden" />
+          <Link href="/profil/" aria-label={t("Mon profil", "ملفي")} className="shrink-0">
+            <Avatar name={session.user?.name ?? "?"} size="size-9 text-[15px]" />
+          </Link>
         </header>
         {home ? (
           <div className="mx-auto flex max-w-[1060px] justify-center gap-12 px-4 pb-28 pt-6 sm:px-6 md:pb-12">
             <main className="w-full max-w-[600px] min-w-0">{children}</main>
-            <aside className="sticky top-6 hidden w-[340px] shrink-0 space-y-6 self-start xl:block">
+            <aside className="duo-side-scroll sticky top-0 hidden max-h-dvh w-[352px] shrink-0 space-y-6 self-start overflow-y-auto overscroll-contain px-1.5 pb-8 pt-6 xl:-mt-6 xl:block">
               <StatsRow className="px-2" />
               <ProgressCard />
               <QuestsCard />

@@ -28,6 +28,14 @@ async function connect(uri: string) {
 
 export type Role = "user" | "admin";
 
+/**
+ * Un seul administrateur, désigné par son e-mail (variable ADMIN_EMAIL, sinon ayoub@gmail.com).
+ * Le rôle est toujours recalculé depuis l'e-mail : aucun autre compte ne peut devenir admin.
+ */
+export const ADMIN_EMAIL = (process.env.ADMIN_EMAIL || "ayoub@gmail.com").trim().toLowerCase();
+export const roleFor = (email: string): Role => (email.trim().toLowerCase() === ADMIN_EMAIL ? "admin" : "user");
+export const isAdmin = (u: { email: string }) => roleFor(u.email) === "admin";
+
 export interface UserDoc {
   _id: ObjectId;
   email: string;
@@ -67,7 +75,13 @@ export async function getDb(): Promise<Db> {
     g._mongo.catch(() => (g._mongo = undefined));
   }
   const db = (await g._mongo).db(process.env.MONGODB_DB || "codemaroc");
-  g._indexes ??= Promise.all([db.collection("users").createIndex({ email: 1 }, { unique: true }), db.collection("users").createIndex({ role: 1 })]);
+  g._indexes ??= Promise.all([
+    db.collection("users").createIndex({ email: 1 }, { unique: true }),
+    db.collection("users").createIndex({ role: 1 }),
+    // Remet les rôles en ordre : seul ADMIN_EMAIL est admin.
+    db.collection("users").updateMany({ role: "admin", email: { $ne: ADMIN_EMAIL } }, { $set: { role: "user" } }),
+    db.collection("users").updateOne({ email: ADMIN_EMAIL, role: { $ne: "admin" } }, { $set: { role: "admin" } }),
+  ]);
   await g._indexes;
   return db;
 }
@@ -82,7 +96,7 @@ export async function progress(): Promise<Collection<ProgressDoc>> {
 
 /** Données publiques d'un utilisateur (jamais le hash du mot de passe). */
 export function publicUser(u: UserDoc) {
-  return { id: u._id.toHexString(), email: u.email, name: u.name, role: u.role, createdAt: u.createdAt.getTime(), lastLoginAt: u.lastLoginAt?.getTime() ?? null };
+  return { id: u._id.toHexString(), email: u.email, name: u.name, role: roleFor(u.email), createdAt: u.createdAt.getTime(), lastLoginAt: u.lastLoginAt?.getTime() ?? null };
 }
 export type PublicUser = ReturnType<typeof publicUser>;
 

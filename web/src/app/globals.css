@@ -1027,3 +1027,16 @@ html[lang="ar"] .duo-btn {
   font-weight: 900;
   font-size: 0.85em;
 }
+
+/* Colonne de droite du parcours : défile seule, barre fine et discrète. */
+.duo-side-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--duo-grey, #e5e5e5) transparent;
+}
+.duo-side-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+.duo-side-scroll::-webkit-scrollbar-thumb {
+  background: var(--duo-grey, #e5e5e5);
+  border-radius: 8px;
+}

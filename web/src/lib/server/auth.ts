@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import { ObjectId } from "mongodb";
 import bcrypt from "bcryptjs";
 import { SignJWT, jwtVerify } from "jose";
-import { users, type UserDoc } from "./db";
+import { isAdmin, users, type UserDoc } from "./db";
 
 /**
  * Authentification : mots de passe hachés (bcrypt), session = jeton signé (HS256, AUTH_SECRET)
@@ -61,7 +61,7 @@ export async function requireUser(): Promise<UserDoc | Response> {
 export async function requireAdmin(): Promise<UserDoc | Response> {
   const u = await currentUser();
   if (!u) return fail("Connexion requise", 401);
-  if (u.role !== "admin") return fail("Accès réservé aux administrateurs", 403);
+  if (!isAdmin(u)) return fail("Accès réservé aux administrateurs", 403);
   return u;
 }
 

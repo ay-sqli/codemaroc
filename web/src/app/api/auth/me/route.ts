@@ -1,5 +1,5 @@
 import { progress, users } from "@/lib/server/db";
-import { checkPassword, currentUser, endSession, fail, hashPassword, json, publicUser, readJson, requireUser } from "@/lib/server/auth-routes";
+import { checkPassword, currentUser, endSession, fail, hashPassword, isAdmin, json, publicUser, readJson, requireUser } from "@/lib/server/auth-routes";
 
 /** Utilisateur connecté (null si invité). */
 export async function GET() {
@@ -34,9 +34,7 @@ export async function DELETE(req: Request) {
   if (u instanceof Response) return u;
   const body = await readJson<{ password?: string }>(req);
   if (!(await checkPassword(String(body.password ?? ""), u.passwordHash))) return fail("Mot de passe incorrect.", 403);
-  if (u.role === "admin" && (await (await users()).countDocuments({ role: "admin" })) <= 1) {
-    return fail("Tu es le seul administrateur : nomme d'abord un autre admin.", 409);
-  }
+  if (isAdmin(u)) return fail("Le compte administrateur ne peut pas être supprimé.", 409);
   await (await progress()).deleteOne({ _id: u._id });
   await (await users()).deleteOne({ _id: u._id });
   await endSession();

@@ -4,8 +4,27 @@
     {
       "name": "web",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "web", "run", "dev"],
+      "runtimeArgs": [
+        "--prefix",
+        "web",
+        "run",
+        "dev"
+      ],
       "port": 3000
+    },
+    {
+      "name": "web-testdb",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "web",
+        "run",
+        "dev"
+      ],
+      "port": 3000,
+      "env": {
+        "MONGODB_DB": "codemaroc_test"
+      }
     },
     {
       "name": "web-existing",
@@ -14,7 +33,12 @@
     {
       "name": "pages-preview",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["web/scripts/serve-pages.mjs", "web/out", "/codemaroc", "4321"],
+      "runtimeArgs": [
+        "web/scripts/serve-pages.mjs",
+        "web/out",
+        "/codemaroc",
+        "4321"
+      ],
       "port": 4321,
       "url": "http://localhost:4321"
     }

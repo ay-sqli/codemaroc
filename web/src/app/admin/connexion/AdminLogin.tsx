@@ -59,7 +59,6 @@ export function AdminLogin() {
           <button type="submit" disabled={busy} className="duo-btn duo-btn-blue w-full">
             {busy && <Loader2 className="size-5 animate-spin" />} Se connecter
           </button>
-          <p className="text-center text-[12px] text-muted">Le tout premier compte créé dans l&apos;application est administrateur.</p>
         </form>
       </div>
     </div>
