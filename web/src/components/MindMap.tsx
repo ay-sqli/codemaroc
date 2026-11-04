@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Expand, Minimize2, RotateCcw } from "lucide-react";
+import { ChevronsDownUp, ChevronsUpDown, Expand, Minimize2, RotateCcw } from "lucide-react";
 import type { Markmap } from "markmap-view";
 import { Button } from "./ui";
 import { useLang } from "@/lib/i18n";
@@ -32,10 +32,12 @@ function smartFit(mm: Markmap) {
   // Même calcul d'échelle que Markmap.fit()
   const fitK = Math.min((w / (x2 - x1)) * mm.options.fitRatio, (h / (y2 - y1)) * mm.options.fitRatio, mm.options.maxInitialScale);
   if (fitK >= MIN_SCALE) return mm.fit();
-  // Échelle lisible ; départ des branches à 35 % de la largeur, carte centrée verticalement.
+  // Échelle lisible ; départ des branches à 35 % de la largeur. Carte plus haute que l'écran
+  // (toutes les branches ouvertes) : on la lit depuis le haut, sous la barre d'outils.
   const k = MIN_SCALE;
   const x = w * 0.35 - (root.state.rect.x + root.state.rect.width) * k;
-  const y = h / 2 - ((y1 + y2) / 2) * k;
+  const tall = (y2 - y1) * k > h - 64;
+  const y = tall ? 64 - y1 * k : h / 2 - ((y1 + y2) / 2) * k;
   const t = node.__zoom;
   const target = t.scale(k / t.k).translate((x - t.x) / k, (y - t.y) / k);
   mm.transition(mm.svg).call(mm.zoom.transform, target);
@@ -65,6 +67,12 @@ export function MindMap({ md, title }: { md: string; title: string }) {
   const wrapRef = useRef<HTMLDivElement>(null);
   const mmRef = useRef<Markmap | null>(null);
   const [full, setFull] = useState(false);
+  // Ordinateur : toutes les branches ouvertes (carte complète). Téléphone : la carte entière ne tient pas
+  // à l'écran, on part des parties et « Tout déplier » ouvre le reste.
+  const [open, setOpen] = useState(true);
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 767px)").matches) setOpen(false);
+  }, []);
 
   useEffect(() => {
     let cancelled = false;
@@ -81,7 +89,7 @@ export function MindMap({ md, title }: { md: string; title: string }) {
       const clean = md.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{20E3}\u{200D}]/gu, "").replace(/(#+|-) {2,}/g, "$1 ");
       const { root } = new Transformer().transform(clean);
       // Créée sans données : Markmap.create(…, root) lancerait son propre fit() qui écraserait le cadrage.
-      const mm = Markmap.create(svg, { duration: 300, maxWidth: 0, initialExpandLevel: 2, spacingVertical: 8 });
+      const mm = Markmap.create(svg, { duration: 300, maxWidth: 0, initialExpandLevel: open ? -1 : 2, spacingVertical: 8 });
       mmRef.current = mm;
       // Markmap mesure chaque nœud dès son insertion : une image arrivée après coup élargit le nœud
       // et le foreignObject (qui rogne son contenu) cache alors le texte. On refait la mise en page.
@@ -105,7 +113,7 @@ export function MindMap({ md, title }: { md: string; title: string }) {
       detach();
       mmRef.current?.destroy?.();
     };
-  }, [md]);
+  }, [md, open]);
 
   useEffect(() => {
     const t = setTimeout(() => mmRef.current && smartFit(mmRef.current), 250);
@@ -122,11 +130,14 @@ export function MindMap({ md, title }: { md: string; title: string }) {
           <span className="font-semibold text-ink">{title}</span> · {t("clique sur un nœud pour le plier ou le déplier", "انقر على عقدة لطيّها أو فتحها")}
         </p>
         <div className="ms-auto flex gap-2">
+          <Button variant="secondary" size="sm" icon={open ? <ChevronsDownUp className="size-4" /> : <ChevronsUpDown className="size-4" />} onClick={() => setOpen((o) => !o)}>
+            <span className="max-sm:sr-only">{open ? t("Replier", "طيّ") : t("Tout déplier", "فتح الكل")}</span>
+          </Button>
           <Button variant="secondary" size="sm" icon={<RotateCcw className="size-4" />} onClick={() => mmRef.current && smartFit(mmRef.current)}>
-            {t("Recentrer", "إعادة التوسيط")}
+            <span className="max-sm:sr-only">{t("Recentrer", "إعادة التوسيط")}</span>
           </Button>
           <Button size="sm" icon={full ? <Minimize2 className="size-4" /> : <Expand className="size-4" />} onClick={() => setFull((f) => !f)}>
-            {full ? t("Réduire", "تصغير") : t("Plein écran", "ملء الشاشة")}
+            <span className="max-sm:sr-only">{full ? t("Réduire", "تصغير") : t("Plein écran", "ملء الشاشة")}</span>
           </Button>
         </div>
       </div>
