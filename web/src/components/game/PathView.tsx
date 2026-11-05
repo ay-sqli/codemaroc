@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { ArrowDown, ArrowUp, BookOpen, Check, Lock, Star } from "lucide-react";
 import { useBank } from "@/lib/questions";
 import { SECTION_COLORS, XP, buildPath, currentIndex, type GameNode, type GamePath, type NodeStatus } from "@/lib/game";
@@ -11,6 +11,7 @@ import { asset } from "@/lib/base";
 import { nameOf } from "@/lib/courses";
 import { countLabel, useLang } from "@/lib/i18n";
 import { cx } from "@/components/ui";
+import { ROAD_BAND, layoutRoad, type RoadLayout } from "@/lib/roadLayout";
 import { Mascot, type Pose } from "./Mascot";
 import { BackupCard, BadgesCard, QuestsCard } from "./GameShell";
 
@@ -63,9 +64,7 @@ function unitPose(slug: string, section: string, n: number): Pose {
   return UNIT_POSE[slug] ?? list[n % list.length];
 }
 
-/** Hauteur d'une étape sur la route et décalage horizontal : la route serpente. */
-const ROW = 112;
-const NODE_Y = 40;
+/** Décalages du squelette de chargement (avant que la route soit composée). */
 const OFFSETS = [0, 58, 92, 58, 0, -58, -92, -58];
 
 /** Véhicule qui roule sur la route de chaque unité (varie selon la section et le chapitre). */
@@ -109,35 +108,61 @@ const SECTION_PROPS: Record<string, string[]> = {
   "05": ["panneau-sens-interdit", "grille-panneau"],
 };
 
-/** Route asphaltée (bas-côtés blancs + ligne centrale pointillée) reliant les étapes d'une unité. */
-function Road({ xs, vehicle, n }: { xs: number[]; vehicle: string; n: number }) {
-  const pts = xs.map((x, k) => [x, k * ROW + NODE_Y] as const);
-  const first = pts[0];
-  const last = pts[pts.length - 1];
-  let d = `M ${first[0]} ${first[1] - 70} L ${first[0]} ${first[1]}`;
-  for (let k = 1; k < pts.length; k++) {
-    const [x0, y0] = pts[k - 1];
-    const [x1, y1] = pts[k];
-    const my = (y0 + y1) / 2;
-    d += ` C ${x0} ${my}, ${x1} ${my}, ${x1} ${y1}`;
-  }
-  d += ` L ${last[0]} ${last[1] + 76}`;
+/** Décors posés sur les pastilles inutilisées (bout de fourche) : une barrière, pas une étape. */
+const SPARE_PROPS = ["barriere", "barriere-noire", "barriere-fleche"];
+
+/**
+ * Route d'une unité composée de pièces dessinées (lib/roadLayout) : décor réduit d'un facteur k sur
+ * petit écran. Un véhicule roule sur l'axe de la route, d'une étape à l'autre, en boucle.
+ */
+function UnitRoad({ layout, k, vehicle, n }: { layout: RoadLayout; k: number; vehicle: string; n: number }) {
   return (
-    <svg className="pointer-events-none absolute left-1/2 top-0 overflow-visible" width="1" height={xs.length * ROW} aria-hidden="true">
-      <path d={d} fill="none" stroke="#e6dccb" strokeWidth="84" strokeLinecap="round" transform="translate(0 6)" />
-      <path d={d} fill="none" stroke="#3a414c" strokeWidth="78" strokeLinecap="round" />
-      <path d={d} fill="none" stroke="#fff" strokeWidth="66" strokeLinecap="round" opacity="0.9" />
-      <path d={d} fill="none" stroke="#3a414c" strokeWidth="61" strokeLinecap="round" />
-      <path d={d} fill="none" stroke="#fff" strokeWidth="3" strokeDasharray="14 14" strokeLinecap="round" />
-      {/* Un véhicule roule sur la voie de droite, d'une étape à l'autre, en boucle */}
-      <g opacity="0.95">
-        <animateMotion dur={`${Math.max(8, xs.length * 2.6)}s`} begin={`-${(n % 5) * 1.7}s`} repeatCount="indefinite" rotate="auto" path={d} />
-        <g transform="rotate(90) translate(15 0)">
-          <image href={asset(`/vehicles/${vehicle}.webp`)} x={-11} y={-22} width={22} height={44} preserveAspectRatio="xMidYMid meet" />
+    <div className="pointer-events-none absolute left-1/2 top-0" style={{ transform: `scale(${k})`, transformOrigin: "0 0" }} aria-hidden="true">
+      {layout.pieces.map((p, i) => (
+        <img
+          key={i}
+          src={asset(`/roads/${p.id}.webp`)}
+          alt=""
+          draggable={false}
+          className="absolute left-0 top-0 max-w-none select-none"
+          style={{ width: p.w, height: p.h, transform: p.transform, transformOrigin: "0 0" }}
+        />
+      ))}
+      {layout.pieces.flatMap((p, i) =>
+        p.spare.map((q, j) => (
+          <img
+            key={`${i}-${j}`}
+            src={asset(`/props/${SPARE_PROPS[(i + j + n) % SPARE_PROPS.length]}.webp`)}
+            alt=""
+            className="absolute h-[88px] w-auto max-w-none"
+            style={{ left: q.x, top: q.y + 36, transform: "translate(-50%, -100%)" }}
+          />
+        )),
+      )}
+      <svg className="absolute left-0 top-0 overflow-visible" width="1" height="1">
+        <g opacity="0.95">
+          <animateMotion dur={`${Math.max(10, layout.nodes.length * 3.2)}s`} begin={`-${(n % 5) * 1.7}s`} repeatCount="indefinite" rotate="auto" path={layout.d} />
+          <g transform="rotate(90) translate(13 0)">
+            <image href={asset(`/vehicles/${vehicle}.webp`)} x={-12} y={-24} width={24} height={48} preserveAspectRatio="xMidYMid meet" />
+          </g>
         </g>
-      </g>
-    </svg>
+      </svg>
+    </div>
   );
+}
+
+/** Facteur de réduction du décor selon la largeur de la colonne (les boutons gardent leur taille). */
+function useRoadScale() {
+  // Ref « callback » : la colonne n'existe qu'une fois le parcours chargé.
+  const [el, ref] = useState<HTMLDivElement | null>(null);
+  const [k, setK] = useState(1);
+  useEffect(() => {
+    if (!el) return;
+    const ro = new ResizeObserver(([e]) => setK(Math.min(1, e.contentRect.width / ROAD_BAND)));
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [el]);
+  return { ref, k };
 }
 
 /** Visuel d'un nœud (public/nodes) : verrouillé, en cours, validé, à revoir, coffre du défi, sommet. */
@@ -156,7 +181,7 @@ function NodeImg({ look, dim }: { look: NodeLook; dim?: boolean }) {
   );
 }
 
-function NodePopover({ node, status, path, color }: { node: GameNode; status: NodeStatus; path: GamePath; color: { c: string; d: string } }) {
+function NodePopover({ node, status, path, color, shift = 0 }: { node: GameNode; status: NodeStatus; path: GamePath; color: { c: string; d: string }; shift?: number }) {
   const { lang, t } = useLang();
   const router = useRouter();
   const unit = path.sections.flatMap((s) => s.units).find((u) => u.chapter.slug === node.unit);
@@ -165,8 +190,8 @@ function NodePopover({ node, status, path, color }: { node: GameNode; status: No
   const xp = node.kind === "challenge" ? XP.challenge : status === "done" ? XP.replay : XP.lesson;
   return (
     <div
-      className="duo-pop-in absolute left-1/2 top-[96px] z-30 w-[min(300px,calc(100vw-32px))] -translate-x-1/2 rounded-[20px] p-4"
-      style={{ background: locked ? "#fff" : color.c, border: locked ? "2px solid var(--duo-grey)" : "none", boxShadow: locked ? "0 4px 0 var(--duo-grey-d)" : `0 5px 0 ${color.d}` }}
+      className="duo-pop-in absolute top-[96px] z-30 w-[min(300px,calc(100vw-32px))] -translate-x-1/2 rounded-[20px] p-4"
+      style={{ left: `calc(50% + ${shift}px)`, background: locked ? "#fff" : color.c, border: locked ? "2px solid var(--duo-grey)" : "none", boxShadow: locked ? "0 4px 0 var(--duo-grey-d)" : `0 5px 0 ${color.d}` }}
       onClick={(e) => e.stopPropagation()}
       role="dialog"
     >
@@ -194,12 +219,14 @@ function NodePopover({ node, status, path, color }: { node: GameNode; status: No
 }
 
 function PathNode({
-  node, status, review, offset, color, path, open, setOpen, nodeRef,
+  node, status, review, x, y, color, path, open, setOpen, nodeRef,
 }: {
   node: GameNode;
   status: NodeStatus;
   review: boolean;
-  offset: number;
+  /** position du centre de la pastille dans la colonne (px, origine = centre) */
+  x: number;
+  y: number;
   color: { c: string; d: string; soft: string };
   path: GamePath;
   open: boolean;
@@ -211,8 +238,13 @@ function PathNode({
   // Étape validée mais dont des erreurs attendent dans le carnet : panneau bleu « à revoir ».
   const look: NodeLook = chest ? "chest" : status === "locked" ? "locked" : status === "current" ? "current" : review ? "review" : "done";
   return (
-    <div ref={nodeRef} className={cx("relative flex justify-center", open && "z-30")} style={{ height: ROW }}>
-      <div className="relative" style={{ transform: `translateX(${offset}px)`, marginTop: NODE_Y - 44 }}>
+    <div
+      ref={nodeRef}
+      data-path-node=""
+      className={cx("absolute z-10", open && "z-30")}
+      style={{ left: `calc(50% + ${x}px)`, top: y, transform: "translate(-50%, -58%)" }}
+    >
+      <div className="relative">
         {status === "current" && (
           <>
             <span
@@ -223,7 +255,7 @@ function PathNode({
               <span className="absolute -bottom-[8px] left-1/2 size-3.5 -translate-x-1/2 rotate-45 border-b-2 border-e-2 border-[var(--duo-grey)] bg-white" />
             </span>
             {/* Le petit taxi attend sur l'étape en cours. */}
-            <Mascot pose="happy" size={64} className="pointer-events-none absolute top-[22px] z-10" style={offset > 0 ? { right: 84 } : { left: 84 }} />
+            <Mascot pose="happy" size={64} className="pointer-events-none absolute top-[22px] z-10" style={x > 0 ? { right: 84 } : { left: 84 }} />
           </>
         )}
         <button
@@ -241,7 +273,7 @@ function PathNode({
           )}
         </button>
       </div>
-      {open && <NodePopover node={node} status={status} path={path} color={color} />}
+      {open && <NodePopover node={node} status={status} path={path} color={color} shift={-x} />}
     </div>
   );
 }
@@ -326,12 +358,23 @@ export function PathView() {
   const [open, setOpen] = useState<string | null>(null);
   const currentRef = useRef<HTMLDivElement>(null);
   const [currentVisible, setCurrentVisible] = useState<"above" | "below" | "in">("in");
-  const path = bank ? buildPath(bank) : null;
+  const path = useMemo(() => (bank ? buildPath(bank) : null), [bank]);
+  // Route de chaque unité, composée une fois pour toutes (même tracé à chaque visite).
+  const roads = useMemo(
+    () => new Map(path ? path.sections.flatMap((s) => s.units).map((u) => [u.chapter.slug, layoutRoad(u.nodes.length, u.n)] as const) : []),
+    [path],
+  );
+  const { ref: colRef, k } = useRoadScale();
   const cur = path ? currentIndex(path, game) : 0;
   const currentId = path?.flat[cur]?.id;
 
   useEffect(() => {
-    const close = () => setOpen(null);
+    // Ferme la fiche d'étape au clic ailleurs. React et cet écouteur sont tous deux sur le document :
+    // stopPropagation ne suffit pas, on ignore donc les clics faits sur une étape (ou dans sa fiche).
+    const close = (e: MouseEvent) => {
+      if ((e.target as Element | null)?.closest?.("[data-path-node]")) return;
+      setOpen(null);
+    };
     document.addEventListener("click", close);
     return () => document.removeEventListener("click", close);
   }, []);
@@ -366,7 +409,7 @@ export function PathView() {
   const remaining = path.flat.length - 1 - path.flat.slice(0, -1).filter((n) => game.done[n.id]).length;
 
   return (
-    <div>
+    <div ref={colRef}>
       {/* Accueil du joueur */}
       {cur === 0 && (
         <div className="duo-card zellige zellige-dark mb-2 flex items-center gap-3 overflow-hidden p-4">
@@ -391,12 +434,13 @@ export function PathView() {
           <section key={sec.id} className="mb-6">
             <SectionScene id={sec.id} n={sec.n} title={lang === "ar" ? sec.ar : sec.fr} done={secDone} total={secNodes.length} />
             {sec.units.map((u) => {
-              const xs = u.nodes.map((_, k) => OFFSETS[k % OFFSETS.length] * (u.n % 2 ? 1 : -1));
+              const road = roads.get(u.chapter.slug)!;
+              const at = (i: number) => road.nodes[Math.min(i, road.nodes.length - 1)];
               const hasCurrent = u.nodes.some((n) => n.id === currentId);
               return (
                 <div key={u.chapter.slug} className="mb-12">
                   <div
-                    className="zellige sticky top-14 z-20 mb-24 flex items-center gap-3 overflow-hidden rounded-[24px] px-4 py-4 text-white md:top-4"
+                    className="zellige sticky top-14 z-20 mb-12 flex items-center gap-3 overflow-hidden rounded-[24px] px-4 py-4 text-white md:top-4"
                     style={{ background: color.c, boxShadow: `0 5px 0 ${color.d}` }}
                   >
                     <div className="min-w-0 flex-1">
@@ -415,21 +459,28 @@ export function PathView() {
                       <BookOpen className="size-5" /> <span className="max-sm:hidden">{t("Guide", "الدليل")}</span>
                     </Link>
                   </div>
-                  <div className="relative">
-                    <Road
-                      xs={xs}
-                      n={u.n}
-                      vehicle={UNIT_VEHICLE[u.chapter.slug] ?? SECTION_VEHICLES[sec.id][u.n % SECTION_VEHICLES[sec.id].length]}
-                    />
+                  <div className="relative" style={{ height: road.height * k }}>
+                    {/* Décor : bords adoucis si une rambarde ou un bas-côté dépasse de la colonne */}
+                    <div className="pointer-events-none absolute -inset-y-24 inset-x-0 overflow-hidden [mask-image:linear-gradient(to_right,transparent,#000_20px,#000_calc(100%-20px),transparent)]">
+                      <div className="absolute inset-x-0 top-24">
+                        <UnitRoad
+                          layout={road}
+                          k={k}
+                          n={u.n}
+                          vehicle={UNIT_VEHICLE[u.chapter.slug] ?? SECTION_VEHICLES[sec.id][u.n % SECTION_VEHICLES[sec.id].length]}
+                        />
+                      </div>
+                    </div>
                     {u.nodes.length > 4 && (
                       <img
                         src={asset(`/props/${UNIT_PROP[u.chapter.slug] ?? SECTION_PROPS[sec.id][u.n % SECTION_PROPS[sec.id].length]}.webp`)}
                         alt=""
-                        className="pointer-events-none absolute top-[360px] h-[64px] w-auto"
-                        style={u.n % 2 ? { right: "8%" } : { left: "8%" }}
+                        className="pointer-events-none absolute h-[64px] w-auto"
+                        // Côté opposé à l'étape voisine, pour ne pas cacher la route.
+                        style={{ top: at(3).y * k - 40, ...(at(3).x > 0 ? { left: "4%" } : { right: "4%" }) }}
                       />
                     )}
-                    {u.nodes.map((node, k) => {
+                    {u.nodes.map((node, j) => {
                       const i = flatI++;
                       return (
                         <PathNode
@@ -437,7 +488,8 @@ export function PathView() {
                           node={node}
                           status={statusAt(i)}
                           review={node.kind === "lesson" && node.qids.some((id) => srs[id] && srs[id].box < 5 && srs[id].due <= now)}
-                          offset={xs[k]}
+                          x={road.nodes[j].x * k}
+                          y={road.nodes[j].y * k}
                           color={color}
                           path={path}
                           open={open === node.id}
@@ -450,9 +502,9 @@ export function PathView() {
                       <Mascot
                         pose={u.nodes.every((n) => game.done[n.id]) ? "medal" : unitPose(u.chapter.slug, sec.id, u.n)}
                         size={110}
-                        className="pointer-events-none absolute top-[130px] max-[400px]:!h-[80px]"
-                        // La mascotte se pose du côté opposé au virage de la route.
-                        style={u.n % 2 ? { left: "2%" } : { right: "2%" }}
+                        className="pointer-events-none absolute max-[400px]:!h-[80px]"
+                        // La mascotte se pose du côté opposé à la route.
+                        style={{ top: at(1).y * k - 60, ...(at(1).x > 0 ? { left: "1%" } : { right: "1%" }) }}
                       />
                     )}
                   </div>
