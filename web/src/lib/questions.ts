@@ -1,5 +1,6 @@
 "use client";
 
+import { pickDistractors } from "./choices";
 import { useEffect, useState } from "react";
 import { asset } from "./base";
 import type { Card, ExamQuestion, Question, RuleQuestion } from "./types";
@@ -99,37 +100,19 @@ export function shuffle<T>(arr: T[], rnd: () => number = Math.random) {
   return a;
 }
 
-const STOP = new Set(["على", "من", "في", "إلى", "او", "أو", "و", "عن", "مع", "ذات", "التي", "الذي", "علامة"]);
-const words = (s: string) => new Set(s.replace(/[^؀-ۿ\s]/g, " ").split(/\s+/).filter((w) => w.length > 2 && !STOP.has(w)));
-
 /**
  * Une carte panneau → QCM « Que signifie ce panneau ? ».
- * Les 3 distracteurs sont choisis parmi les intitulés les plus PROCHES (mots communs, même section,
- * même chapitre) pour ressembler aux pièges de l'examen.
+ * Les 3 distracteurs (lib/choices) sont proches de la bonne réponse pour ressembler aux pièges de
+ * l'examen, mais jamais équivalents à elle ni entre eux (pas de « على » / « لـ », pas de
+ * « تحديد السرعة » face à « تحديد السرعة 120 »).
  */
 function cardsToQuestions(cards: Card[]): Question[] {
-  const wordsOf = new Map(cards.map((c) => [c.label, words(c.label)]));
   const out: Question[] = [];
   for (const card of cards) {
     if (card.label.length > 140) continue;
     const rnd = seeded(card.img + card.label);
-    const w = wordsOf.get(card.label)!;
-    const scored = cards
-      .filter((c) => c.module === card.module && c.label !== card.label && c.label.length <= 140)
-      .map((c) => {
-        const cw = wordsOf.get(c.label)!;
-        let common = 0;
-        cw.forEach((x) => w.has(x) && common++);
-        const score = common * 2 + (c.section && c.section === card.section ? 2 : 0) + (c.chapter === card.chapter ? 1 : 0) + rnd() * 1.5;
-        return { label: c.label, score };
-      })
-      .sort((a, b) => b.score - a.score);
-    const pool: string[] = [];
-    for (const s of scored) {
-      if (pool.length >= 3) break;
-      if (!pool.includes(s.label)) pool.push(s.label);
-    }
-    if (pool.length < 3) continue;
+    const pool = pickDistractors(card, cards, rnd);
+    if (!pool) continue;
     const options = shuffle([card.label, ...pool], rnd);
     out.push({
       id: `s:${hash(card.img + "|" + card.label)}`,
