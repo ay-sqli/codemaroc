@@ -1,10 +1,11 @@
 "use client";
 
+import { BackBar } from "@/components/BackButton";
 import { useMemo, useState } from "react";
 import { Eye, Lightbulb, RotateCcw, Shuffle } from "lucide-react";
 import { MEMO, memoGroupText, memoText, type MemoItem } from "@/lib/memo";
 import { useLang } from "@/lib/i18n";
-import { Breadcrumbs, Button, PageHeader, PillTabs, cx } from "@/components/ui";
+import { Button, PageHeader, PillTabs, cx } from "@/components/ui";
 import { enrich } from "@/lib/illustrate";
 import { asset } from "@/lib/base";
 
@@ -63,7 +64,7 @@ export function Memo() {
   return (
     <div className="space-y-8">
       <div className="space-y-4">
-        <Breadcrumbs items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("Mémo & astuces", "المذكرة والحيل") }]} />
+        <BackBar items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("Mémo & astuces", "المذكرة والحيل") }]} />
         <PageHeader
           title={t("Mémo & astuces mnémotechniques", "المذكرة وحيل الحفظ")}
           desc={t(

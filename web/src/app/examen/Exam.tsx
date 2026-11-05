@@ -1,5 +1,6 @@
 "use client";
 
+import { BackBar } from "@/components/BackButton";
 import { useCallback, useMemo, useState } from "react";
 import { Clock, Headphones, Keyboard, ListChecks } from "lucide-react";
 import { useBank } from "@/lib/questions";
@@ -8,7 +9,7 @@ import { recordExam, updateSettings, useStore } from "@/lib/store";
 import type { Question } from "@/lib/types";
 import { QuizPlayer, type QuizResult } from "@/components/QuizPlayer";
 import { Results } from "@/components/Results";
-import { Badge, Breadcrumbs, Button, Callout, EmptyState, Switch } from "@/components/ui";
+import { Badge, Button, Callout, EmptyState, Switch } from "@/components/ui";
 import { fmtDate, useLang } from "@/lib/i18n";
 
 export function Exam() {
@@ -40,11 +41,11 @@ export function Exam() {
         }}
       />
     );
-  if (qs) return <QuizPlayer questions={qs} mode="exam" title={t("Examen blanc", "امتحان تجريبي")} onFinish={finish} />;
+  if (qs) return <QuizPlayer questions={qs} mode="exam" title={t("Examen blanc", "امتحان تجريبي")} onFinish={finish} onQuit={() => setQs(null)} />;
 
   return (
     <div className="mx-auto max-w-3xl space-y-8">
-      <Breadcrumbs items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("Examen blanc", "امتحان تجريبي") }]} />
+      <BackBar items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("Examen blanc", "امتحان تجريبي") }]} />
       <header className="space-y-3">
         <Badge tone="brand">{t("Évaluation notée", "تقييم بنقطة")}</Badge>
         <h1 className="t-h1">{t("Examen blanc du permis B", "الامتحان التجريبي لرخصة السياقة صنف ب")}</h1>

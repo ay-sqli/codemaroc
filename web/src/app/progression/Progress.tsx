@@ -1,5 +1,6 @@
 "use client";
 
+import { BackBar } from "@/components/BackButton";
 import { useMemo, useRef } from "react";
 import { Download, RotateCcw, Upload } from "lucide-react";
 import { MODULES, nameOf } from "@/lib/courses";
@@ -7,7 +8,7 @@ import { downloadBackup, importState, resetState, streak, updateSettings, useSto
 import { useBank } from "@/lib/questions";
 import { useLang } from "@/lib/i18n";
 import { LangSwitch } from "@/components/AppShell";
-import { Breadcrumbs, Button, Field, Input, ModuleIcon, PageHeader, SectionHeader, Stat, cx } from "@/components/ui";
+import { Button, Field, Input, ModuleIcon, PageHeader, SectionHeader, Stat, cx } from "@/components/ui";
 
 export function Progress() {
   const { lang, t } = useLang();
@@ -60,7 +61,7 @@ export function Progress() {
   return (
     <div className="space-y-10">
       <div className="space-y-4">
-        <Breadcrumbs items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("Progression", "التقدم") }]} />
+        <BackBar items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("Progression", "التقدم") }]} />
         <PageHeader
           title={t("Ma progression", "تقدمي")}
           desc={t("Tes statistiques de révision, tes réglages et la sauvegarde de tes données.", "إحصائيات مراجعتك، إعداداتك، وحفظ بياناتك.")}

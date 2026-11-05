@@ -1,10 +1,11 @@
 "use client";
 
+import { BackBar } from "@/components/BackButton";
 import { BookMarked, Brain, Flame, Images, NotebookPen, Scale, Sparkles, type LucideIcon } from "lucide-react";
 import { MODULES, nameOf } from "@/lib/courses";
 import { countLabel, useLang } from "@/lib/i18n";
 import { BankCounts } from "@/components/BankCounts";
-import { ActionCard, Badge, Breadcrumbs, ModuleIcon, PageHeader, ProductCard, SectionHeader } from "@/components/ui";
+import { ActionCard, Badge, ModuleIcon, PageHeader, ProductCard, SectionHeader } from "@/components/ui";
 
 type ModeCard = { mode: string; icon: LucideIcon; title: [string, string]; desc: [string, string]; badge?: [string, string]; tint: string };
 
@@ -67,7 +68,7 @@ export function Training() {
   return (
     <div className="space-y-10">
       <div className="space-y-4">
-        <Breadcrumbs items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("S'entraîner", "التمرن") }]} />
+        <BackBar items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("S'entraîner", "التمرن") }]} />
         <PageHeader
           title={t("S'entraîner", "التمرن")}
           desc={t(

@@ -6,6 +6,7 @@ import { Loader2, Lock, Mail, ShieldCheck } from "lucide-react";
 import { api, refreshSession, useSession, type SessionUser } from "@/lib/session";
 import { AuthField } from "@/components/auth/AuthScreen";
 import { Wordmark } from "@/components/Chrome";
+import { BackButton } from "@/components/BackButton";
 
 /** Fenêtre de connexion du back-office : seuls les comptes administrateurs peuvent entrer. */
 export function AdminLogin() {
@@ -39,6 +40,7 @@ export function AdminLogin() {
   return (
     <div className="duo grid min-h-dvh place-items-center bg-[#0f1419] px-4 py-10">
       <div className="w-full max-w-[420px]">
+        <BackButton href="/" label="Application" className="mb-6" />
         <div className="mb-6 text-center">
           <Wordmark className="mx-auto !h-[84px] !w-auto" />
           <h1 className="mt-3 inline-flex items-center gap-2 text-[26px] font-[800] text-white" style={{ fontFamily: "var(--font-display)" }}>

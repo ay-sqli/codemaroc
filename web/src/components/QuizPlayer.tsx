@@ -1,5 +1,6 @@
 "use client";
 
+import { BackButton } from "./BackButton";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ArrowRight, BookOpen, CheckCircle2, Flag, Lightbulb, NotebookPen, Pause, Shapes, Timer, Volume2, XCircle } from "lucide-react";
@@ -148,12 +149,15 @@ export function Correction({ q, picked, compact = false }: { q: Question; picked
 }
 
 export function QuizPlayer({
-  questions, mode, title, onFinish,
+  questions, mode, title, onFinish, onQuit, exitHref = "/entrainement/",
 }: {
   questions: Question[];
   mode: "practice" | "exam";
   title: string;
   onFinish: (r: QuizResult[], seconds: number) => void;
+  /** quitter sans terminer (ex. revenir à l'accueil de l'examen) ; par défaut, retour à la page précédente */
+  onQuit?: () => void;
+  exitHref?: string;
 }) {
   const { lang, t } = useLang();
   const [i, setI] = useState(0);
@@ -266,7 +270,20 @@ export function QuizPlayer({
       {/* En-tête et progression */}
       <div className="mb-6 space-y-3">
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="min-w-0">
+          <BackButton
+            href={exitHref}
+            onClick={onQuit}
+            label={<span className="max-sm:sr-only">{t("Quitter", "خروج")}</span>}
+            confirmText={
+              results.length > 0
+                ? mode === "exam"
+                  ? t("Quitter l'examen ? Il ne sera pas compté.", "مغادرة الامتحان ؟ لن يُحتسب.")
+                  : t("Quitter la session ? Tes réponses sont déjà enregistrées.", "مغادرة الحصة ؟ أجوبتك محفوظة.")
+                : undefined
+            }
+            className="!px-3"
+          />
+          <div className="min-w-0 flex-1">
             <p className="truncate text-sm text-muted">{title}</p>
             <p className="text-lg font-semibold">
               {t("Question", "السؤال")} {i + 1} <span className="font-normal text-muted">{t("sur", "من")} {questions.length}</span>

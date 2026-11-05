@@ -1,12 +1,13 @@
 "use client";
 
+import { BackBar } from "@/components/BackButton";
 import { useEffect, useState } from "react";
 import { ArrowRight, Shapes } from "lucide-react";
 import { SCHEMAS, SCHEMA_ICONS, SchemaModal } from "@/components/schemas";
 import { getChapter, nameOf } from "@/lib/courses";
 import { schemaDesc, schemaTitle } from "@/lib/schemaMeta";
 import { useLang } from "@/lib/i18n";
-import { Breadcrumbs, PageHeader } from "@/components/ui";
+import { PageHeader } from "@/components/ui";
 
 export function SchemasGrid() {
   const { lang, t } = useLang();
@@ -23,7 +24,7 @@ export function SchemasGrid() {
   return (
     <div className="space-y-8">
       <div className="space-y-4">
-        <Breadcrumbs items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("Schémas interactifs", "الرسوم التفاعلية") }]} />
+        <BackBar items={[{ label: t("Accueil", "الرئيسية"), href: "/" }, { label: t("Schémas interactifs", "الرسوم التفاعلية") }]} />
         <PageHeader
           title={t("Schémas interactifs", "الرسوم التفاعلية")}
           desc={t(

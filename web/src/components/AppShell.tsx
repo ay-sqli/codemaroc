@@ -7,6 +7,7 @@ import { asset } from "@/lib/base";
 import { ImageZoom } from "./ImageZoom";
 import { GameShell } from "./game/GameShell";
 import { CloudSync } from "./CloudSync";
+import { NavTracker } from "./BackButton";
 import { AuthScreen } from "./auth/AuthScreen";
 
 export { Wordmark, LangSwitch, daysLabel } from "./Chrome";
@@ -40,6 +41,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <>
       <LangSync />
+      <NavTracker />
       <ImageZoom />
       <CloudSync />
       {body}

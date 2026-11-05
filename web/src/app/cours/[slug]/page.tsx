@@ -7,7 +7,8 @@ import { ChapterTabs } from "@/components/ChapterTabs";
 import { ChapterActions, ChapterScore } from "@/components/CourseStatus";
 import { SCHEMA_META, schemasForChapter } from "@/lib/schemaMeta";
 import { T } from "@/lib/i18n";
-import { Breadcrumbs, ChapterCover, ModuleIcon } from "@/components/ui";
+import { ChapterCover, ModuleIcon } from "@/components/ui";
+import { BackBar } from "@/components/BackButton";
 import { asset } from "@/lib/base";
 
 export function generateStaticParams() {
@@ -45,7 +46,8 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
     <div className="space-y-8">
       {/* En-tête de cours */}
       <section className="zellige zellige-dark -mx-4 -mt-6 bg-[linear-gradient(180deg,#fdedec_0%,transparent_100%)] px-4 pb-8 pt-6 sm:-mx-6 sm:px-6 lg:-mt-8 lg:pt-8">
-        <Breadcrumbs
+        <BackBar
+          href="/cours/"
           items={[
             { label: <T fr="Cours" ar="الدروس" />, href: "/cours/" },
             { label: <T fr={m.fr} ar={stripEmoji(m.ar)} />, href: `/cours/?axe=${m.id}` },
