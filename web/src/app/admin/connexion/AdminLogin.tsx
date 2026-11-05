@@ -40,7 +40,7 @@ export function AdminLogin() {
     <div className="duo grid min-h-dvh place-items-center bg-[#0f1419] px-4 py-10">
       <div className="w-full max-w-[420px]">
         <div className="mb-6 text-center">
-          <Wordmark className="mx-auto !w-[230px]" />
+          <Wordmark className="mx-auto !h-[84px] !w-auto" />
           <h1 className="mt-3 inline-flex items-center gap-2 text-[26px] font-[800] text-white" style={{ fontFamily: "var(--font-display)" }}>
             <ShieldCheck className="size-7 text-[#5dade2]" /> Back-office
           </h1>

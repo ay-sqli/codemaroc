@@ -300,9 +300,9 @@ export function GameShell({ children }: { children: React.ReactNode }) {
     <div className="duo min-h-dvh bg-[var(--duo-canvas)]">
       {/* Barre latérale (ordinateur / tablette) */}
       <aside className="fixed inset-y-0 start-0 z-40 hidden w-[88px] flex-col border-e-2 border-[var(--duo-grey)] bg-white px-3 py-6 md:flex lg:w-64 lg:px-4">
-        <Link href="/" className="mb-5 flex justify-center px-1 lg:px-2" aria-label={t("Parcours", "المسار")}>
-          <Wordmark compact className="lg:hidden" />
-          <Wordmark className="max-lg:hidden !w-full max-w-[220px]" />
+        <Link href="/" className="mb-4 flex justify-center px-1 lg:justify-start lg:px-3" aria-label={t("Parcours", "المسار")}>
+          <Wordmark compact className="!h-12 lg:hidden" />
+          <Wordmark className="!h-[60px] !w-auto max-lg:hidden" />
         </Link>
         <nav className="flex flex-1 flex-col gap-1.5 overflow-y-auto">
           {nav.map(({ href, label, icon: Icon, badge }) => (
@@ -335,7 +335,7 @@ export function GameShell({ children }: { children: React.ReactNode }) {
         {/* Barre du haut (mobile) */}
         <header className="sticky top-0 z-30 flex h-14 items-center gap-2.5 border-b-2 border-[var(--duo-grey)] bg-white px-3 md:hidden">
           <Link href="/" aria-label={t("Parcours", "المسار")} className="shrink-0">
-            <Wordmark compact className="!h-10" />
+            <Wordmark compact className="!h-9" />
           </Link>
           <StatsRow className="min-w-0 flex-1" />
           {/* Petits écrans : le globe seul, pour laisser la place à l'avatar. */}

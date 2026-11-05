@@ -345,7 +345,7 @@ export function AdminDashboard() {
     <div className="duo min-h-dvh bg-[var(--c-grey-50)]">
       <header className="sticky top-0 z-30 bg-[#0f1419] text-white">
         <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-3 px-4 sm:px-6">
-          <Wordmark compact className="!h-11" />
+          <Wordmark compact className="!h-10" />
           <div className="min-w-0 flex-1">
             <p className="text-[15px] font-[800] leading-tight">Back-office Code Maroc</p>
             <p className="truncate text-[12px] text-white/60">{user?.name}</p>

@@ -15,7 +15,7 @@ export { Wordmark, LangSwitch, daysLabel } from "./Chrome";
 function Splash() {
   return (
     <div className="duo grid min-h-dvh place-items-center bg-[var(--duo-canvas)]">
-      <img src={asset("/brand/emblem.webp")} alt="Code Maroc" className="h-32 w-auto animate-pulse" />
+      <img src={asset("/brand/emblem.webp")} alt="Code Maroc" className="h-24 w-auto animate-pulse" />
     </div>
   );
 }

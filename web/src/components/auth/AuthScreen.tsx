@@ -78,7 +78,7 @@ export function AuthScreen({ onDone }: { onDone?: () => void }) {
         {/* Présentation */}
         <div className="text-center lg:text-start">
           <div className="mb-3 flex items-center justify-between sm:mb-6 lg:justify-start lg:gap-8">
-            <Wordmark className="!w-[170px] sm:!w-[240px] lg:!w-[300px]" />
+            <Wordmark className="!h-[64px] !w-auto sm:!h-[88px]" />
             <LangSwitch className="lg:hidden" />
           </div>
           <img src={asset("/mascot/welcome.webp")} alt="" className="mx-auto h-24 w-auto sm:h-44 lg:mx-0 lg:h-52" />
