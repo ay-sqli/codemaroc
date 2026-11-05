@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Loader2, Lock, Mail, ShieldCheck } from "lucide-react";
 import { api, refreshSession, useSession, type SessionUser } from "@/lib/session";
 import { AuthField } from "@/components/auth/AuthScreen";
+import { Wordmark } from "@/components/Chrome";
 
 /** Fenêtre de connexion du back-office : seuls les comptes administrateurs peuvent entrer. */
 export function AdminLogin() {
@@ -39,12 +40,9 @@ export function AdminLogin() {
     <div className="duo grid min-h-dvh place-items-center bg-[#0f1419] px-4 py-10">
       <div className="w-full max-w-[420px]">
         <div className="mb-6 text-center">
-          <span className="mx-auto grid size-16 place-items-center rounded-[20px] bg-[#1b4f72] text-white shadow-[0_5px_0_#11344c]">
-            <ShieldCheck className="size-8" />
-          </span>
-          <p className="mt-4 text-[13px] font-[800] uppercase tracking-[0.2em] text-[#94a3b8]">Code Maroc</p>
-          <h1 className="mt-1 text-[26px] font-[800] text-white" style={{ fontFamily: "var(--font-display)" }}>
-            Back-office
+          <Wordmark className="mx-auto !w-[230px]" />
+          <h1 className="mt-3 inline-flex items-center gap-2 text-[26px] font-[800] text-white" style={{ fontFamily: "var(--font-display)" }}>
+            <ShieldCheck className="size-7 text-[#5dade2]" /> Back-office
           </h1>
           <p className="mt-1 text-[14px] text-[#94a3b8]">Accès réservé aux administrateurs.</p>
         </div>

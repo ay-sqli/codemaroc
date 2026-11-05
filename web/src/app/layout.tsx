@@ -11,6 +11,9 @@ const arabic = Cairo({ variable: "--font-arabic", subsets: ["arabic", "latin"], 
 const mono = JetBrains_Mono({ variable: "--font-jetbrains", subsets: ["latin"], weight: ["600", "700"] });
 
 export const metadata: Metadata = {
+  // Adresse publique (liens absolus de l'image de partage public, app/opengraph-image.png).
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://codemaroc.netlify.app"),
+  applicationName: "Code Maroc",
   title: "Code Maroc — Révision du permis B",
   description: "Cours résumés, mindmaps, examens blancs corrigés, carnet d'erreurs et schémas interactifs pour réussir l'examen théorique du permis B. — دروس ملخصة، خرائط ذهنية، امتحانات تجريبية مصححة لاجتياز امتحان رخصة السياقة.",
 };

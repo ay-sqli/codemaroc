@@ -2,15 +2,21 @@
 
 import { Globe } from "lucide-react";
 import { useLang } from "@/lib/i18n";
+import { asset } from "@/lib/base";
 import { cx } from "./ui";
 
-/** Logo textuel de l'application : « code maroc » en lettres rondes et grasses. */
+/**
+ * Logo de l'application (public/brand) : complet (emblème + « Code Maroc / كود المغرب »)
+ * ou emblème seul (`compact`) quand la place manque.
+ */
 export function Wordmark({ className, compact = false }: { className?: string; compact?: boolean }) {
   return (
-    <span dir="ltr" className={cx("inline-flex items-baseline font-[family-name:var(--font-display)] text-[28px] font-[900] leading-none tracking-[-0.04em]", className)}>
-      <span className="text-[#d92b2b]">{compact ? "c" : "code"}</span>
-      <span className="text-[#198754]">{compact ? "m" : "maroc"}</span>
-    </span>
+    <img
+      src={asset(compact ? "/brand/emblem-160.webp" : "/brand/logo.webp")}
+      alt="Code Maroc — كود المغرب"
+      draggable={false}
+      className={cx("select-none", compact ? "h-14 w-auto" : "h-auto w-[210px]", className)}
+    />
   );
 }
 

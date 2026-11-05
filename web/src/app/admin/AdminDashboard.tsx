@@ -11,6 +11,7 @@ import { useBank } from "@/lib/questions";
 import { buildPath, SECTION_COLORS } from "@/lib/game";
 import type { State } from "@/lib/store";
 import { cx } from "@/components/ui";
+import { Wordmark } from "@/components/Chrome";
 
 /** Back-office : vue d'ensemble des utilisateurs, de leur activité et de leur progression. */
 
@@ -344,9 +345,7 @@ export function AdminDashboard() {
     <div className="duo min-h-dvh bg-[var(--c-grey-50)]">
       <header className="sticky top-0 z-30 bg-[#0f1419] text-white">
         <div className="mx-auto flex h-16 max-w-[1200px] items-center gap-3 px-4 sm:px-6">
-          <span className="grid size-9 place-items-center rounded-[10px] bg-[#1b4f72]">
-            <ShieldCheck className="size-5" />
-          </span>
+          <Wordmark compact className="!h-11" />
           <div className="min-w-0 flex-1">
             <p className="text-[15px] font-[800] leading-tight">Back-office Code Maroc</p>
             <p className="truncate text-[12px] text-white/60">{user?.name}</p>
