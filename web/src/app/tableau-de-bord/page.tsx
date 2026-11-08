@@ -1,7 +1,7 @@
 import { Dashboard } from "../Dashboard";
 import { BackButton } from "@/components/BackButton";
 
-export const metadata = { title: "Tableau de bord · لوحة القيادة — Code Maroc" };
+export const metadata = { title: "Tableau de bord — Code Maroc" };
 
 export default function DashboardPage() {
   return (

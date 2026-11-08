@@ -2,7 +2,7 @@ import { AlertTriangle, Ban, CirclePlay, Lightbulb, type LucideIcon } from "luci
 import { parseMd, splitTitle, type MdNode, type MdSection } from "@/lib/md";
 import { stripEmoji } from "@/lib/courses";
 import { enrich, illustrationFor } from "@/lib/illustrate";
-import { T } from "@/lib/i18n";
+import { T, type Lang } from "@/lib/i18n";
 
 /**
  * Fiche de cours lisible : une carte par section (numéro, titre, illustration), chiffres et flèches
@@ -93,8 +93,7 @@ function Blocks({ items, tone }: { items: MdNode[]; tone: string }) {
 /** Couleur d'accent qui tourne d'une section à l'autre (charte Code Maroc). */
 const TONES = ["#d92b2b", "#198754", "#2980b9", "#f39c12", "#1b4f72"];
 
-function Special({ s }: { s: MdSection }) {
-  const t = splitTitle(s.title);
+function Special({ s, lang }: { s: MdSection; lang: Lang }) {
   const conf: { Icon: LucideIcon; Mark: LucideIcon; c: string; label: React.ReactNode; box: string; item: string } = {
     tips: { Icon: Lightbulb, Mark: Lightbulb, c: "#b9770e", label: <T fr="Astuces du moniteur" ar="نصائح المدرب" />, box: "border-[#ffe17a] bg-[#fef9e7]", item: "bg-white border-[#ffe17a]" },
     traps: { Icon: AlertTriangle, Mark: Ban, c: "#c0392b", label: <T fr="Pièges d'examen" ar="فخاخ الامتحان" />, box: "border-[#ffb2b2] bg-[#fdedec]", item: "bg-white border-[#ffb2b2]" },
@@ -107,11 +106,10 @@ function Special({ s }: { s: MdSection }) {
           <conf.Icon className="size-6" style={{ color: conf.c }} strokeWidth={2.4} />
         </span>
         <h2 className="t-h3">{conf.label}</h2>
-        <span className="only-fr ar text-sm text-muted">{stripEmoji(t.ar)}</span>
       </header>
       <ul className="grid gap-2.5 md:grid-cols-2">
         {s.items.map((n, i) => (
-          <li key={i} className={`ar flex items-start gap-2.5 rounded-[16px] border-2 p-3 text-[16.5px] leading-[1.9] sm:gap-3 sm:p-3.5 ${conf.item}`}>
+          <li key={i} className={`${lang === "ar" ? "ar leading-[1.9]" : "leading-relaxed"} flex items-start gap-2.5 rounded-[16px] border-2 p-3 text-[16.5px] sm:gap-3 sm:p-3.5 ${conf.item}`}>
             <conf.Mark className="mt-1.5 size-5 shrink-0" style={{ color: conf.c }} strokeWidth={2.4} aria-hidden="true" />
             <span className="min-w-0 flex-1" dangerouslySetInnerHTML={{ __html: html(n) }} />
           </li>
@@ -121,10 +119,9 @@ function Special({ s }: { s: MdSection }) {
   );
 }
 
-function Section({ s, n }: { s: MdSection; n: number }) {
-  if (s.kind !== "normal") return <Special s={s} />;
-  const t = splitTitle(s.title);
-  const ar = stripEmoji(t.ar);
+function Section({ s, n, lang }: { s: MdSection; n: number; lang: Lang }) {
+  if (s.kind !== "normal") return <Special s={s} lang={lang} />;
+  const title = stripEmoji(splitTitle(s.title).title);
   const tone = TONES[(n - 1) % TONES.length];
   const hasImg = s.items.some((it) => it.img);
   // Illustration de l'app quand la section n'a pas d'image du cours (mots-clés du titre, puis du texte).
@@ -142,9 +139,8 @@ function Section({ s, n }: { s: MdSection; n: number }) {
         <div className="min-w-0 flex-1">
           <p className="text-[12px] font-[800] uppercase tracking-wider" style={{ color: tone }}>
             <T fr={`Partie ${n}`} ar={`الجزء ${n}`} />
-            {t.fr && <span className="ms-2 normal-case tracking-normal text-muted">· {t.fr}</span>}
           </p>
-          <h2 className="ar mt-0.5 text-[20px] font-[800] leading-snug text-[var(--c-grey-975)] sm:text-[22px]">{ar}</h2>
+          <h2 className={`${lang === "ar" ? "ar " : ""}mt-0.5 text-[20px] font-[800] leading-snug text-[var(--c-grey-975)] sm:text-[22px]`}>{title}</h2>
         </div>
         {pic && (
           <img
@@ -155,7 +151,7 @@ function Section({ s, n }: { s: MdSection; n: number }) {
           />
         )}
       </header>
-      <div className="ar">
+      <div className={lang === "ar" ? "ar" : "leading-relaxed"}>
         <Blocks items={s.items} tone={tone} />
       </div>
     </section>
@@ -167,27 +163,25 @@ export function ficheOutline(md: string) {
   const doc = parseMd(md);
   let n = 0;
   return doc.sections.map((s) => {
-    const t = splitTitle(s.title);
     if (s.kind === "normal") n++;
     return {
       id: s.kind === "normal" ? `s-${n}` : `s-${s.kind}`,
       kind: s.kind,
       n,
       tone: TONES[(Math.max(1, n) - 1) % TONES.length],
-      ar: stripEmoji(t.ar),
-      fr: s.kind === "tips" ? "Astuces du moniteur" : s.kind === "traps" ? "Pièges d'examen" : s.kind === "video" ? "Vidéo" : t.fr || stripEmoji(t.ar),
+      title: stripEmoji(splitTitle(s.title).title),
     };
   });
 }
 
-export function Fiche({ md }: { md: string }) {
+export function Fiche({ md, lang }: { md: string; lang: Lang }) {
   const doc = parseMd(md);
   let n = 0;
   return (
     <div className="space-y-6">
       {doc.sections.map((s, i) => {
         if (s.kind === "normal") n++;
-        return <Section key={i} s={s} n={n} />;
+        return <Section key={i} s={s} n={n} lang={lang} />;
       })}
     </div>
   );

@@ -26,8 +26,8 @@ export default function Giratoire() {
     <div className="space-y-4">
       <Toggle
         options={[
-          { id: "carrefour", label: t("ملتقى طرق دوراني (avec « cédez »)", "ملتقى طرق دوراني (مع علامة « فسح المجال »)") },
-          { id: "passage", label: t("ممر دائري (sans panneau)", "ممر دائري (بدون علامة)") },
+          { id: "carrefour", label: t("Carrefour giratoire (avec « cédez le passage »)", "ملتقى طرق دوراني (مع علامة « فسح المجال »)") },
+          { id: "passage", label: t("Anneau circulaire (sans panneau)", "ممر دائري (بدون علامة)") },
         ]}
         value={type}
         onChange={setType}
@@ -66,7 +66,7 @@ export default function Giratoire() {
         </svg>
         <div className="space-y-3">
           <div className={`rounded-2xl p-4 ${prioInside ? "bg-brand/10" : "bg-accent/10"}`}>
-            <p className="ar text-lg font-black">{prioInside ? "ملتقى طرق دوراني" : "ممر دائري"}</p>
+            <p className="text-lg font-black">{prioInside ? t("Carrefour giratoire", "ملتقى طرق دوراني") : t("Anneau circulaire", "ممر دائري")}</p>
             <p className="mt-1 text-sm font-semibold leading-relaxed">
               {prioInside
                 ? t(

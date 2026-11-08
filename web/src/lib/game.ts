@@ -89,12 +89,12 @@ export function difficulty(q: Question) {
   return 4 + (q.answer.length > 1 ? 0.8 : 0) + (q.options.length === 4 ? 0.3 : 0) + (q.uncertain ? 0.2 : 0);
 }
 
-/** « 📐 1. دلالة الشكل واللون (Formes et Couleurs) » → { fr: "Formes et Couleurs", ar: "دلالة الشكل واللون" } */
-function sectionName(s?: string) {
-  if (!s) return null;
-  const clean = stripEmoji(s).replace(/^\s*\d+\.\s*/, "").trim();
-  const m = clean.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
-  return m ? { fr: m[2].trim(), ar: m[1].trim() } : { fr: clean, ar: clean };
+/** Titre de catégorie sans emoji ni numéro. */
+const sectionLabel = (s: string) => stripEmoji(s).replace(/^\s*\d+\.\s*/, "").trim();
+
+function sectionName(ar?: string, fr?: string) {
+  if (!ar) return null;
+  return { fr: sectionLabel(fr || ar), ar: sectionLabel(ar) };
 }
 
 function lessonTitle(qs: Question[]): { fr: string; ar: string } {
@@ -102,7 +102,7 @@ function lessonTitle(qs: Question[]): { fr: string; ar: string } {
   if (kinds.size === 1 && kinds.has("sign")) {
     const names: { fr: string; ar: string }[] = [];
     for (const q of qs) {
-      const n = sectionName(q.section);
+      const n = sectionName(q.section, q.sectionFr);
       if (n && !names.some((x) => x.fr === n.fr)) names.push(n);
     }
     if (!names.length) return { fr: "Panneaux", ar: "العلامات" };

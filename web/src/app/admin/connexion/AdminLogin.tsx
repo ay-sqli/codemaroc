@@ -7,9 +7,11 @@ import { api, refreshSession, useSession, type SessionUser } from "@/lib/session
 import { AuthField } from "@/components/auth/AuthScreen";
 import { Wordmark } from "@/components/Chrome";
 import { BackButton } from "@/components/BackButton";
+import { useLang } from "@/lib/i18n";
 
 /** Fenêtre de connexion du back-office : seuls les comptes administrateurs peuvent entrer. */
 export function AdminLogin() {
+  const { t } = useLang();
   const router = useRouter();
   const { status, user } = useSession();
   const [email, setEmail] = useState("");
@@ -40,24 +42,24 @@ export function AdminLogin() {
   return (
     <div className="duo grid min-h-dvh place-items-center bg-[#0f1419] px-4 py-10">
       <div className="w-full max-w-[420px]">
-        <BackButton href="/" label="Application" className="mb-6" />
+        <BackButton href="/" label={t("Application", "التطبيق")} className="mb-6" />
         <div className="mb-6 text-center">
           <Wordmark className="mx-auto !h-[84px] !w-auto" />
           <h1 className="mt-3 inline-flex items-center gap-2 text-[26px] font-[800] text-white" style={{ fontFamily: "var(--font-display)" }}>
-            <ShieldCheck className="size-7 text-[#5dade2]" /> Back-office
+            <ShieldCheck className="size-7 text-[#5dade2]" /> {t("Back-office", "لوحة الإدارة")}
           </h1>
-          <p className="mt-1 text-[14px] text-[#94a3b8]">Accès réservé aux administrateurs.</p>
+          <p className="mt-1 text-[14px] text-[#94a3b8]">{t("Accès réservé aux administrateurs.", "الدخول مخصص للمديرين.")}</p>
         </div>
         <form onSubmit={submit} className="space-y-4 rounded-[24px] bg-white p-6 shadow-[0_5px_0_#25303d]">
-          <AuthField icon={Mail} label="E-mail administrateur" type="email" value={email} onChange={setEmail} autoComplete="email" />
-          <AuthField icon={Lock} label="Mot de passe" type="password" value={password} onChange={setPassword} autoComplete="current-password" />
+          <AuthField icon={Mail} label={t("E-mail administrateur", "بريد المدير الإلكتروني")} type="email" value={email} onChange={setEmail} autoComplete="email" />
+          <AuthField icon={Lock} label={t("Mot de passe", "كلمة المرور")} type="password" value={password} onChange={setPassword} autoComplete="current-password" />
           {error && (
             <p role="alert" className="rounded-[12px] border-2 border-[#ffb2b2] bg-[#fdedec] px-3 py-2 text-[14px] font-[700] text-[#c0392b]">
               {error}
             </p>
           )}
           <button type="submit" disabled={busy} className="duo-btn duo-btn-blue w-full">
-            {busy && <Loader2 className="size-5 animate-spin" />} Se connecter
+            {busy && <Loader2 className="size-5 animate-spin" />} {t("Se connecter", "تسجيل الدخول")}
           </button>
         </form>
       </div>

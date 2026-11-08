@@ -2,6 +2,35 @@
 
 import { useSyncExternalStore } from "react";
 import { asset } from "./base";
+import { currentLang } from "./i18n";
+
+/** Messages renvoyés par le serveur (écrits en français) dans la langue de l'utilisateur. */
+const ERRORS_AR: Record<string, string> = {
+  "Connexion requise": "يجب تسجيل الدخول",
+  "Accès réservé aux administrateurs": "الدخول مخصص للمديرين",
+  "Le nom doit faire entre 2 et 40 caractères.": "يجب أن يتكون الاسم من 2 إلى 40 حرفا.",
+  "Adresse e-mail invalide.": "البريد الإلكتروني غير صالح.",
+  "Le mot de passe doit contenir au moins 8 caractères.": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل.",
+  "Le nouveau mot de passe doit contenir au moins 8 caractères.": "يجب أن تتكون كلمة المرور الجديدة من 8 أحرف على الأقل.",
+  "Progression trop volumineuse.": "حجم التقدم كبير جدا.",
+  "JSON invalide.": "بيانات غير صالحة.",
+  "État de progression invalide.": "حالة التقدم غير صالحة.",
+  "Un compte existe déjà avec cette adresse e-mail.": "يوجد حساب بهذا البريد الإلكتروني.",
+  "Mot de passe actuel incorrect.": "كلمة المرور الحالية غير صحيحة.",
+  "Rien à modifier.": "لا يوجد ما يجب تعديله.",
+  "Mot de passe incorrect.": "كلمة المرور غير صحيحة.",
+  "Le compte administrateur ne peut pas être supprimé.": "لا يمكن حذف حساب المدير.",
+  "Utilisateur introuvable.": "المستخدم غير موجود.",
+  "Il n'y a qu'un seul administrateur : le rôle ne peut pas être modifié.": "يوجد مدير واحد فقط: لا يمكن تغيير الدور.",
+  "Tu ne peux pas supprimer ton propre compte depuis le back-office.": "لا يمكنك حذف حسابك من لوحة الإدارة.",
+  "E-mail ou mot de passe incorrect.": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+  "Ce compte n'a pas accès au back-office.": "لا يملك هذا الحساب صلاحية الدخول إلى لوحة الإدارة.",
+};
+
+function localizeError(message: string | undefined, status: number) {
+  if (currentLang() !== "ar") return message || `Erreur ${status}`;
+  return (message && ERRORS_AR[message]) || `حدث خطأ (${status})`;
+}
 
 /**
  * Session côté navigateur : l'utilisateur connecté (lu via /api/auth/me) et les actions de compte.
@@ -37,7 +66,7 @@ export async function api<T = Record<string, unknown>>(path: string, init?: Requ
     credentials: "same-origin",
   });
   const data = (await res.json().catch(() => ({}))) as T & { error?: string };
-  if (!res.ok) throw new Error(data.error || `Erreur ${res.status}`);
+  if (!res.ok) throw new Error(localizeError(data.error, res.status));
   return data;
 }
 

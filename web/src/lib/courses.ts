@@ -76,12 +76,9 @@ export function chapterIndex(slug: string) {
   return m ? m.chapters.findIndex((c) => c.slug === slug) + 1 : 0;
 }
 
-/** Intitulé d'un axe ou d'un chapitre dans la langue choisie (titre principal + titre secondaire). */
+/** Intitulé d'un axe ou d'un chapitre dans la langue choisie. */
 export function nameOf(x: { fr: string; ar: string }, lang: "fr" | "ar") {
   return lang === "ar" ? stripEmoji(x.ar) : x.fr;
-}
-export function altNameOf(x: { fr: string; ar: string }, lang: "fr" | "ar") {
-  return lang === "ar" ? x.fr : stripEmoji(x.ar);
 }
 
 /** Présentation de chaque axe en français (la version arabe vient du programme : `desc`). */

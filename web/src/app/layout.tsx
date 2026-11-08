@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://codemaroc.netlify.app"),
   applicationName: "Code Maroc",
   title: "Code Maroc — Révision du permis B",
-  description: "Cours résumés, mindmaps, examens blancs corrigés, carnet d'erreurs et schémas interactifs pour réussir l'examen théorique du permis B. — دروس ملخصة، خرائط ذهنية، امتحانات تجريبية مصححة لاجتياز امتحان رخصة السياقة.",
+  description: "Cours résumés, mindmaps, examens blancs corrigés, carnet d'erreurs et schémas interactifs pour réussir l'examen théorique du permis B.",
 };
 
 export const viewport: Viewport = {

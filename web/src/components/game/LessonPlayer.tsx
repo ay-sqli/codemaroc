@@ -223,7 +223,7 @@ export function LessonIntro({
                   {signs.map((q) => (
                     <li key={q.id} className="duo-card flex flex-col items-center gap-2 p-3 text-center">
                       <img src={q.img} alt="" data-zoom className="h-20 w-full object-contain" />
-                      <span className="ar text-[14px] font-semibold leading-snug text-[var(--duo-ink)]">{q.rappel}</span>
+                      <span className={cx(lang === "ar" && "ar", "text-[14px] font-semibold leading-snug text-[var(--duo-ink)]")}>{qText(q, lang).rappel}</span>
                     </li>
                   ))}
                 </ul>
@@ -463,13 +463,13 @@ export function LessonPlay({
         {official ? (
           <>
             <h1 className="duo-h mb-4 text-[22px] leading-snug sm:text-[26px]">
-              {showPrompt && tx.prompt ? tx.prompt : t("Coche la ou les bonnes cases", "اختر الخانة أو الخانات الصحيحة")}
+              {(showPrompt || lang === "fr") && tx.prompt ? tx.prompt : t("Coche la ou les bonnes cases", "اختر الخانة أو الخانات الصحيحة")}
             </h1>
             <div className="duo-card overflow-hidden !p-0">
               <img src={q.img} alt={t("Question", "السؤال")} data-zoom data-caption="" className="w-full bg-[#1f1f1f] object-contain" />
             </div>
             <div className="mt-4 flex items-center gap-3" dir="ltr">
-              {q.audio && <AudioButton src={q.audio} auto={autoAudio} />}
+              {lang === "ar" && q.audio && <AudioButton src={q.audio} auto={autoAudio} />}
               <p className="text-[14px] font-[700] text-[var(--duo-muted)]" dir={lang === "ar" ? "rtl" : "ltr"}>
                 {t("Une ou plusieurs cases à cocher", "خانة واحدة أو أكثر")}
               </p>
@@ -499,7 +499,6 @@ export function LessonPlay({
               </span>
             </p>
             {tx.prompt && <h1 className={cx("duo-h text-[22px] leading-snug sm:text-[26px]", lang === "ar" && "leading-relaxed")}>{tx.prompt}</h1>}
-            {tx.promptAlt && <p className={cx("mt-1 font-[600] text-[var(--duo-muted)]", HAS_AR.test(tx.promptAlt) ? "ar text-[17px]" : "text-[15px]")}>{tx.promptAlt}</p>}
             {q.img && (
               <div className="duo-card mx-auto mt-5 h-44 w-full max-w-[280px] overflow-hidden p-3">
                 <img src={q.img} alt="" data-zoom className="block h-full w-full object-contain" />

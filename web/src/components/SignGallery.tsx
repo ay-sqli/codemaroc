@@ -16,8 +16,10 @@ export function SignGallery({ chapter }: { chapter?: string }) {
   const [q, setQ] = useState("");
   const cards = useMemo(() => {
     const all = bank?.cards.filter((c) => !chapter || c.chapter === chapter) ?? [];
-    return q ? all.filter((c) => c.label.includes(q) || c.section.toLowerCase().includes(q.toLowerCase())) : all;
-  }, [bank, chapter, q]);
+    if (!q) return all;
+    const needle = q.toLowerCase();
+    return all.filter((c) => (lang === "ar" ? `${c.label} ${c.section}` : `${c.labelFr} ${c.sectionFr}`).toLowerCase().includes(needle));
+  }, [bank, chapter, q, lang]);
 
   if (!bank) return <Skeleton className="h-64" />;
 
@@ -29,8 +31,8 @@ export function SignGallery({ chapter }: { chapter?: string }) {
           <input
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            placeholder={t("Rechercher un panneau (en arabe)…", "ابحث عن علامة…")}
-            className="ar w-full bg-transparent text-sm outline-none"
+            placeholder={t("Rechercher un panneau…", "ابحث عن علامة…")}
+            className="w-full bg-transparent text-sm outline-none"
           />
         </label>
         <Button
@@ -49,15 +51,16 @@ export function SignGallery({ chapter }: { chapter?: string }) {
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {cards.map((c, i) => {
           const show = !hide || revealed.has(i);
+          const label = lang === "ar" ? c.label : c.labelFr;
           return (
             <button
               key={c.img + i}
               onClick={() => setRevealed((r) => new Set(r).add(i))}
               className="flex flex-col items-center gap-2 rounded-[16px] border-2 border-line bg-white p-3 text-center transition-shadow hover:shadow-md"
             >
-              <img src={asset(c.img)} alt="" data-zoom data-caption={show ? c.label : ""} loading="lazy" className="h-24 w-full object-contain" />
-              <span className={`ar text-[13px] leading-snug text-ink-2 ${show ? "" : "select-none blur-sm"}`}>
-                {show ? c.label : "••••••••••"}
+              <img src={asset(c.img)} alt="" data-zoom data-caption={show ? label : ""} loading="lazy" className="h-24 w-full object-contain" />
+              <span className={`${lang === "ar" ? "ar " : ""}text-[13px] leading-snug text-ink-2 ${show ? "" : "select-none blur-sm"}`}>
+                {show ? label : "••••••••••"}
               </span>
             </button>
           );

@@ -51,7 +51,7 @@ export function Exam() {
         <h1 className="t-h1">{t("Examen blanc du permis B", "الامتحان التجريبي لرخصة السياقة صنف ب")}</h1>
         <p className="text-base text-ink-2">
           {t(
-            "Comme le jour J : une image, l'audio en arabe et des cases 1 à 4 avec une ou plusieurs bonnes réponses. La correction n'apparaît qu'à la fin.",
+            "Comme le jour J : une image et des cases 1 à 4 avec une ou plusieurs bonnes réponses. La correction n'apparaît qu'à la fin.",
             "كما في يوم الامتحان: صورة، وتسجيل صوتي بالعربية، وخانات من 1 إلى 4 بجواب صحيح واحد أو أكثر. لا يظهر التصحيح إلا في النهاية.",
           )}
         </p>
@@ -73,18 +73,20 @@ export function Exam() {
               <dd className="font-semibold">{t("30 secondes par question", "30 ثانية لكل سؤال")}</dd>
             </div>
           </div>
-          <div className="flex gap-3 border-t-2 border-line p-5">
-            <Headphones className="size-5 shrink-0 text-ink-2" />
-            <div>
-              <dt className="text-sm text-muted">{t("Audio", "الصوت")}</dt>
-              <dd className="font-semibold">{t("Question lue en arabe", "السؤال مقروء بالعربية")}</dd>
+          {lang === "ar" && (
+            <div className="flex gap-3 border-t-2 border-line p-5">
+              <Headphones className="size-5 shrink-0 text-ink-2" />
+              <div>
+                <dt className="text-sm text-muted">الصوت</dt>
+                <dd className="font-semibold">السؤال مقروء بالعربية</dd>
+              </div>
             </div>
-          </div>
+          )}
           <div className="flex gap-3 border-t-2 border-line p-5">
             <Keyboard className="size-5 shrink-0 text-ink-2" />
             <div>
               <dt className="text-sm text-muted">{t("Clavier", "لوحة المفاتيح")}</dt>
-              <dd className="font-semibold">{t("Touches 1 à 4, puis Entrée", "المفاتيح من 1 إلى 4، ثم Entrée")}</dd>
+              <dd className="font-semibold">{t("Touches 1 à 4, puis Entrée", "المفاتيح من 1 إلى 4، ثم مفتاح الإدخال")}</dd>
             </div>
           </div>
         </dl>
@@ -102,7 +104,7 @@ export function Exam() {
         <h2 className="t-h4 mb-1">{t("Réglages", "الإعدادات")}</h2>
         <div className="divide-y divide-line">
           <Switch checked={settings.timer} onChange={(v) => updateSettings({ timer: v })} label={t("Chronomètre de 30 secondes par question", "مؤقت 30 ثانية لكل سؤال")} />
-          <Switch checked={settings.autoAudio} onChange={(v) => updateSettings({ autoAudio: v })} label={t("Lecture automatique de l'audio", "التشغيل التلقائي للصوت")} />
+          {lang === "ar" && <Switch checked={settings.autoAudio} onChange={(v) => updateSettings({ autoAudio: v })} label="التشغيل التلقائي للصوت" />}
         </div>
       </section>
 

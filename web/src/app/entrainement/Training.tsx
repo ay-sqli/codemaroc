@@ -22,7 +22,7 @@ const MODES: ModeCard[] = [
     mode: "official",
     icon: BookMarked,
     title: ["Questions officielles", "الأسئلة الرسمية"],
-    desc: ["La banque Perminou : image + audio en arabe, corrigée.", "بنك أسئلة Perminou: صورة + صوت بالعربية، مصحح."],
+    desc: ["La banque Perminou : questions officielles corrigées et expliquées.", "بنك أسئلة Perminou: صورة + صوت بالعربية، مصحح."],
     tint: "bg-[#efeafd] text-[#5c3de8]",
   },
   {

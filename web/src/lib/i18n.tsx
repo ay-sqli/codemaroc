@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useSyncExternalStore, type ReactNode } from "react";
+import { useEffect, useSyncExternalStore, type ComponentProps, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 
 /**
  * Bilinguisme français / arabe.
@@ -43,6 +44,11 @@ function subscribe(cb: () => void) {
   };
 }
 
+/** Langue en cours, hors composant React. */
+export function currentLang(): Lang {
+  return getSnapshot();
+}
+
 export function applyLang(lang: Lang) {
   const html = document.documentElement;
   html.lang = lang;
@@ -72,17 +78,62 @@ export function T({ fr, ar }: { fr: ReactNode; ar: ReactNode }) {
   return <>{lang === "ar" ? ar : fr}</>;
 }
 
+/** Barre de navigation dont le nom lu par les lecteurs d'écran suit la langue. */
+export function TNav({ labelFr, labelAr, ...props }: { labelFr: string; labelAr: string } & Omit<ComponentProps<"nav">, "aria-label">) {
+  const { t } = useLang();
+  return <nav aria-label={t(labelFr, labelAr)} {...props} />;
+}
+
 /** Choisit la version arabe si elle existe et que la langue est l'arabe. */
 export function pick<V>(lang: Lang, fr: V, ar: V | undefined | null): V {
   return lang === "ar" && ar ? ar : fr;
 }
 
+/** Titres d'onglet en arabe (les titres français viennent des métadonnées de chaque page). */
+const AR_TITLES: [RegExp, string][] = [
+  [/^\/cours\/[^/]+/, "درس"],
+  [/^\/cours/, "الدروس"],
+  [/^\/entrainement\/session/, "حصة تمرين"],
+  [/^\/entrainement/, "التمرن"],
+  [/^\/erreurs/, "دفتر الأخطاء"],
+  [/^\/examen/, "امتحان تجريبي"],
+  [/^\/lecon/, "مرحلة من المسار"],
+  [/^\/memo/, "المذكرة"],
+  [/^\/profil/, "ملفي"],
+  [/^\/progression/, "التقدم"],
+  [/^\/schemas/, "الرسوم التفاعلية"],
+  [/^\/tableau-de-bord/, "لوحة القيادة"],
+  [/^\/admin/, "لوحة الإدارة"],
+];
+
+function arabicTitle(path: string) {
+  const hit = AR_TITLES.find(([re]) => re.test(path));
+  return `${hit ? hit[1] : "مراجعة رخصة السياقة صنف ب"} — Code Maroc`;
+}
+
 /** Synchronise <html lang dir> et le titre de l'onglet avec la langue choisie. */
 export function LangSync() {
   const { lang } = useLang();
+  const path = usePathname();
   useEffect(() => {
     applyLang(lang);
   }, [lang]);
+  useEffect(() => {
+    if (lang !== "ar") return;
+    const wanted = arabicTitle(path);
+    const original = document.title;
+    const apply = () => {
+      if (document.title !== wanted) document.title = wanted;
+    };
+    apply();
+    // Next réécrit le titre à chaque navigation : on le remet en arabe.
+    const observer = new MutationObserver(apply);
+    observer.observe(document.head, { subtree: true, childList: true, characterData: true });
+    return () => {
+      observer.disconnect();
+      document.title = original;
+    };
+  }, [lang, path]);
   return null;
 }
 

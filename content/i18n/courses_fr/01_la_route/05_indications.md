@@ -1,0 +1,115 @@
+# ℹ️ Panneaux d'indication
+## 🅿️ 1. Arrêt et stationnement
+- {img:1682079445144.png} **Parking**
+- {img:1682079445158.png} **Emplacement aménagé pour le stationnement payant**
+- {img:1682079445172.png} **Emplacement aménagé pour le stationnement gratuit à durée limitée avec contrôle par disque**
+- {img:1682079445186.png} **Parking réservé à la recharge des voitures électriques**
+- {img:1682079445201.png} **Emplacement aménagé pour la recharge des voitures électriques**
+- {img:1682079445215.png} **Parking permettant aux usagers de prendre un bus**
+- {img:1682079445232.png} **Parking permettant aux usagers de prendre le tramway**
+- {img:1682079445252.png} **Parking permettant aux usagers de prendre un train**
+- {img:1687172780520.png} **Station de taxis : arrêt et stationnement réservés aux seuls taxis**
+- {img:1682079445722.png} **Emplacement réservé au stationnement des caravanes et autocaravanes**
+- {img:1682079445945.png} **Emplacement d'arrêt d'urgence**
+## 🛣️ 2. Voies et conditions de circulation
+- {img:1682079445323.png} **Route à sens unique**
+- {img:1682079445774.png} **Vous avez la priorité sur la circulation venant en sens inverse**
+- {img:1682079445379.png} **Présignalisation d'une voie de dépassement ou d'une section à chaussées séparées**
+- {img:1682079445393.png} **Présignalisation d'une voie de dépassement ou d'une section à chaussées séparées**
+- {img:1682079445364.png} **Conditions de circulation particulières à une voie de la route suivie**
+- {img:1682079445350.png} **Conditions de circulation particulières à une voie de la route suivie**
+- {img:1682079445471.png} **Conditions particulières de circulation sur la route ou sur une bretelle**
+- {img:1682079445407.png} **Voie de dépassement sur route à trois voies**
+- {img:1682079445421.png} **Début d'une section de route à trois voies**
+- {img:1682079445337.png} **Fin de la voie de dépassement sur route à trois voies**
+- {img:1682079445787.png} **Réduction du nombre de voies sur route à chaussées séparées ou sur voie de dépassement**
+- {img:1682079445801.png} **Réduction du nombre de voies sur route à chaussées séparées ou sur voie de dépassement**
+- {img:1682079445815.png} **Réduction du nombre de voies sur route à chaussées séparées ou sur voie de dépassement**
+- {img:1682079445439.png} **Voies affectées à l'approche d'une intersection pour tourner à gauche**
+- {img:1682079445455.png} **Voies affectées à l'approche d'une intersection pour tourner à droite**
+- {img:1682079445519.png} **Voie sans issue**
+- {img:1682079445534.png} **Présignalisation d'une voie sans issue**
+- {img:1682079445554.png} **Indication de la présence d'un ralentisseur en dos-d'âne**
+## 🚶 3. Piétons, cycles et tramway
+- {img:1687172905740.png} **Passage pour piétons**
+- {img:1682079445740.png} **Zone piétonne**
+- {img:1682079445759.png} **Fin de zone piétonne**
+- {img:1682079445870.png} **Voie réservée aux piétons et aux véhicules sans moteur**
+- {img:1682079445884.png} **Fin de la voie réservée aux piétons et aux véhicules sans moteur**
+- {img:1682079445570.png} **Annonce d'une piste ou bande cyclable conseillée**
+- {img:1682079445584.png} **Annonce de la fin d'une piste ou bande cyclable conseillée**
+- {img:1682079445709.png} **Passage du tramway**
+- {img:1682079445898.png} **Arrêt de bus**
+- {img:1682079445925.png} **Arrêt de tramway**
+## 🛣️ 4. Autoroute et péage
+- {img:1689851623956.png} **Entrée d'autoroute : début d'application des règles de circulation sur autoroute**
+- {img:1689851636189.png} **Fin d'autoroute : fin d'application des règles de circulation sur autoroute**
+- {img:1682079445626.png} **Présignalisation de l'emplacement de retrait du ticket de péage**
+- {img:1682079445639.png} **Paiement auprès d'un agent de péage**
+- {img:1687173699364.png} **Paiement par carte bancaire**
+- {img:1687173211473.png} **Paiement par carte d'abonnement**
+- {img:1682079445680.png} **Télépéage par abonnement**
+- {img:1687173230285.png} **Paiement automatique en espèces**
+- {img:1682079446437.png} **Présignalisation d'une gare de péage**
+- {img:1682079446480.png} **Présignalisation d'un poste de péage**
+- {img:1682079446452.png} **Présignalisation du début d'une section de route ou d'une autoroute à péage**
+## 🚇 5. Tunnels et issues de secours
+- {img:1682079445829.png} **Entrée de tunnel : demi-tour, arrêt et stationnement interdits + feux de croisement obligatoires**
+- {img:1682079445842.png} **Sortie de tunnel**
+- {img:1689674764361.png} **Issue de secours à droite**
+- {img:1687172938810.png} **Issue de secours à gauche**
+- {img:1682079446418.png} **Issue de secours à droite**
+- {img:1682079446403.png} **Issue de secours à gauche**
+## 📡 6. Contrôle et sécurité
+- {img:1682079446538.png} **Zone où la vitesse est contrôlée par un ou plusieurs radars**
+- {img:1682079446552.png} **Contrôle de la vitesse moyenne par calcul du temps de parcours à la sortie d'autoroute**
+- {img:1682079446523.png} **Zone où la charge est contrôlée à une station de pesage fixe**
+- {img:1682079446466.png} **Rappel de la distance légale à respecter entre les véhicules**
+- {img:1682079446566.png} **Rappel de la distance légale à respecter entre les véhicules**
+- {img:1682079446494.png} **Rappel de la distance légale à respecter entre les véhicules**
+- {img:1682079446509.png} **Panneau d'informations générales sur la sécurité routière**
+- {img:1687172732415.png} **Risque d'incendie de forêt**
+## 🏨 7. Équipements et services
+- {img:1682079445268.png} **Établissement médical**
+- {img:1682079445979.png} **Poste de secours**
+- {img:1682079446036.png} **Poste d'appel de secours**
+- {img:1682079445994.png} **Poste téléphonique**
+- {img:1682079446008.png} **Atelier de premières réparations**
+- {img:1682079446022.png} **Station-service ouverte 7 j/7 et 24 h/24**
+- {img:1682079446356.png} **Station de gonflage des pneus en libre accès**
+- {img:1682079446370.png} **Matériel de lutte contre l'incendie**
+- {img:1682079445960.png} **Équipements ou services divers**
+- {img:1682079446050.png} **Restaurant**
+- {img:1682079446064.png} **Hôtel**
+- {img:1682079446092.png} **Débit de boissons ou café**
+- {img:1682079446166.png} **Gîte hôtelier**
+- {img:1682079446182.png} **Auberge de jeunesse**
+- {img:1682079446244.png} **Toilettes publiques**
+- {img:1682079446230.png} **Installations accessibles aux personnes à mobilité réduite**
+- {img:1682079446272.png} **Station de vidange des eaux usées pour caravanes**
+## 🏕️ 8. Tourisme et loisirs
+- {img:1682079446384.png} **Beau point de vue**
+- {img:1682079446078.png} **Lieu de promenade**
+- {img:1682079446106.png} **Camping**
+- {img:1682079446134.png} **Terrain aménagé pour le camping et le stationnement des véhicules de camping**
+- {img:1682079446149.png} **Terrain aménagé pour le stationnement des caravanes**
+- {img:1682079446120.png} **Point de départ d'une randonnée**
+- {img:1682079446197.png} **Point de départ d'une piste de ski**
+- {img:1682079446215.png} **Informations sur les services ou activités touristiques**
+- {img:1682079446258.png} **Station de transport aérien**
+- {img:1682079446300.png} **Point de départ d'un transport aérien**
+- {img:1682079446286.png} **Quai d'embarquement**
+- {img:1682079446328.png} **Mise à l'eau de bateaux légers**
+- {img:1682079446314.png} **Jeux d'enfants**
+- {img:1682079446342.png} **Aire de loisirs**
+- {img:1682079445856.png} **Indications diverses**
+## 💡 Astuces du moniteur
+- Carré ou rectangle bleu = indication
+- Le panneau d'indication n'interdit rien et n'oblige à rien → il donne seulement une information
+- Route à sens unique (carré bleu) ≠ direction obligatoire (rond bleu)
+- « Vous avez la priorité » (grande flèche blanche) → son contraire est « cédez le passage à la circulation venant en sens inverse » (rond rouge)
+## ⚠️ Pièges d'examen
+- Dans un tunnel : demi-tour, arrêt et stationnement interdits + feux de croisement obligatoires
+- Voie sans issue → la route est sans débouché, n'y entre que pour y accéder
+- Station de taxis → arrêt et stationnement interdits aux voitures particulières
+- « Entrée d'autoroute » → les règles de l'autoroute commencent (vitesse minimale, piétons interdits…)

@@ -71,7 +71,6 @@ export default function Marquage() {
         {LINES.map((x) => (
           <button key={x.id} onClick={() => setId(x.id)} className={`rounded-xl px-2 py-2 text-sm font-bold ring-1 ${id === x.id ? "bg-brand text-white ring-brand" : "bg-surface-2 ring-line"}`}>
             {lang === "ar" ? x.ar : x.fr}
-            <span className={`block text-xs opacity-80 ${lang === "ar" ? "" : "ar"}`}>{lang === "ar" ? x.fr : x.ar}</span>
           </button>
         ))}
       </div>

@@ -3,7 +3,7 @@
 import { useRouter, useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { SlidersHorizontal, X } from "lucide-react";
-import { CHAPTERS, MODULES, altNameOf, coverOf, ficheStats, moduleDesc, moduleOf, nameOf } from "@/lib/courses";
+import { CHAPTERS, MODULES, coverOf, ficheStats, moduleDesc, moduleOf, nameOf } from "@/lib/courses";
 import { useStore } from "@/lib/store";
 import { countLabel, useLang } from "@/lib/i18n";
 import {
@@ -184,7 +184,6 @@ export function Catalog() {
                       </>
                     }
                     title={nameOf(c, lang)}
-                    subtitle={altNameOf(c, lang)}
                     meta={
                       <span>
                         {lang === "ar"

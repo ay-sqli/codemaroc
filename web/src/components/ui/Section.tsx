@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { cx } from "./cx";
-import { T } from "@/lib/i18n";
+import { T, TNav } from "@/lib/i18n";
 import { asset } from "@/lib/base";
 
 /** Titre de section avec lien « Tout voir » optionnel. */
@@ -43,7 +43,7 @@ export function PageHeader({
 /** Fil d'Ariane. */
 export function Breadcrumbs({ items }: { items: { label: ReactNode; href?: string }[] }) {
   return (
-    <nav aria-label="Fil d'Ariane" className="flex flex-wrap items-center gap-1 text-sm text-muted">
+    <TNav labelFr="Fil d'Ariane" labelAr="مسار التصفح" className="flex flex-wrap items-center gap-1 text-sm text-muted">
       {items.map((it, i) => (
         <span key={i} className="inline-flex items-center gap-1">
           {i > 0 && <ChevronRight className="size-3.5 text-subtle" />}
@@ -56,7 +56,7 @@ export function Breadcrumbs({ items }: { items: { label: ReactNode; href?: strin
           )}
         </span>
       ))}
-    </nav>
+    </TNav>
   );
 }
 

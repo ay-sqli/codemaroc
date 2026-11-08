@@ -9,7 +9,7 @@ import { useLang } from "@/lib/i18n";
  * Fermeture par le bouton X, un clic sur le fond ou la touche Échap.
  */
 export function ImageZoom() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const [img, setImg] = useState<{ src: string; caption: string } | null>(null);
 
   useEffect(() => {
@@ -60,7 +60,7 @@ export function ImageZoom() {
         className="max-h-[75dvh] w-[min(92vw,720px)] rounded-[16px] bg-white object-contain p-3"
       />
       {img.caption && (
-        <p className="ar max-w-[720px] text-center text-base leading-relaxed text-white" onClick={(e) => e.stopPropagation()}>
+        <p className={`${lang === "ar" ? "ar " : ""}max-w-[720px] text-center text-base leading-relaxed text-white`} onClick={(e) => e.stopPropagation()}>
           {img.caption}
         </p>
       )}

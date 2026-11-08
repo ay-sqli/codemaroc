@@ -33,8 +33,6 @@ export function qText(q: Question, lang: Lang) {
   const ar = lang === "ar";
   return {
     prompt: ar && q.promptAr ? q.promptAr : q.prompt,
-    /** Énoncé dans l'autre langue, affiché en petit. */
-    promptAlt: ar ? (q.promptAr ? q.prompt : undefined) : q.promptAr,
     option: (k: number) => (ar && q.options[k]?.labelAr) || q.options[k]?.label || "",
     explanation: (ar && q.explanationAr) || q.explanation,
     rappel: (ar && q.rappelAr) || q.rappel,
@@ -88,7 +86,7 @@ export function Correction({ q, picked, compact = false }: { q: Question; picked
       {q.uncertain && (
         <Callout tone="info">
           {t(
-            "Image peu lisible : corrigé proposé avec réserve. Écoute l'audio et, si Perminou donne une autre réponse, utilise « Signaler le corrigé ».",
+            "Image peu lisible : corrigé proposé avec réserve. Si Perminou donne une autre réponse, utilise « Signaler le corrigé ».",
             "الصورة غير واضحة: التصحيح مقترح مع تحفظ. استمع إلى التسجيل الصوتي، وإذا أعطت Perminou جوابا آخر، استعمل « الإبلاغ عن التصحيح ».",
           )}
         </Callout>
@@ -308,13 +306,16 @@ export function QuizPlayer({
       <div key={q.id} ref={cardRef} className="animate-pop">
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <Badge tone={q.kind === "official" ? "brand" : "neutral"}>{lang === "ar" ? KIND_LABEL[q.kind][1] : KIND_LABEL[q.kind][0]}</Badge>
-          {q.audio && <AudioButton src={q.audio} auto={settings.autoAudio} />}
+          {/* L'enregistrement officiel n'existe qu'en arabe. */}
+          {lang === "ar" && q.audio && <AudioButton src={q.audio} auto={settings.autoAudio} />}
         </div>
 
         {official ? (
           <div className="overflow-hidden rounded-[16px] border-2 border-line">
             <img src={q.img} alt={t("Question", "السؤال")} data-zoom data-caption="" className="w-full bg-[#1f1f1f] object-contain" />
             <div className="border-t-2 border-line bg-white p-4">
+              {/* Le texte de l'image officielle est en arabe : l'énoncé est repris en français. */}
+              {lang === "fr" && tx.prompt && <p className="mb-3 text-[17px] font-semibold leading-snug text-ink">{tx.prompt}</p>}
               <p className="mb-3 text-[15px] font-semibold">
                 {t("Coche la ou les bonnes cases", "اختر الخانة أو الخانات الصحيحة")}{" "}
                 <span className="font-normal text-muted">{t("(plusieurs réponses possibles)", "(يمكن أن تكون عدة أجوبة صحيحة)")}</span>
@@ -362,7 +363,6 @@ export function QuizPlayer({
               )}
               <div className="space-y-1">
                 {tx.prompt && <h2 className={cx("text-xl font-semibold leading-snug", lang === "ar" && "leading-relaxed")}>{tx.prompt}</h2>}
-                {tx.promptAlt && <p className={cx("text-ink-2", HAS_AR.test(tx.promptAlt) ? "ar text-lg" : "text-[15px]")}>{tx.promptAlt}</p>}
                 <p className="text-sm text-muted">{q.multi ? t("Plusieurs réponses possibles", "يمكن أن تكون عدة أجوبة صحيحة") : t("Une seule réponse", "جواب واحد فقط")}</p>
               </div>
             </div>

@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, BellRing, BookOpen, ClipboardCheck, Lightbulb, NotebookPen, Shapes, Target } from "lucide-react";
-import { CHAPTERS, MODULES, altNameOf, coverOf, getChapter, moduleOf, nameOf } from "@/lib/courses";
+import { CHAPTERS, MODULES, coverOf, getChapter, moduleOf, nameOf } from "@/lib/courses";
 import { streak, today, useStore } from "@/lib/store";
 import { useBank } from "@/lib/questions";
 import { SCHEMAS, SCHEMA_ICONS } from "@/components/schemas";
@@ -123,7 +123,7 @@ export function Dashboard() {
         <HeroBanner
           title={t("Prêt pour l'examen du code ?", "هل أنت مستعد لامتحان رخصة السياقة ؟")}
           desc={t(
-            "40 questions en conditions réelles : image, audio en arabe, 30 secondes par question. Il faut 32 bonnes réponses pour réussir.",
+            "40 questions en conditions réelles : image et 30 secondes par question. Il faut 32 bonnes réponses pour réussir.",
             "40 سؤالا في ظروف حقيقية: صورة، تعليق صوتي بالعربية، و30 ثانية لكل سؤال. يلزمك 32 جوابا صحيحا للنجاح.",
           )}
           actions={
@@ -158,7 +158,7 @@ export function Dashboard() {
             )
           }
           title={next ? nameOf(next, lang) : t("Toutes les fiches sont lues", "قرأت جميع الملخصات")}
-          desc={next ? altNameOf(next, lang) : t("Passe maintenant aux examens blancs et à ton carnet d'erreurs.", "انتقل الآن إلى الامتحانات التجريبية ودفتر أخطائك.")}
+          desc={next ? t("Fiche résumée, mindmap, panneaux et quiz corrigé.", "ملخص، خريطة ذهنية، علامات واختبار مصحح.") : t("Passe maintenant aux examens blancs et à ton carnet d'erreurs.", "انتقل الآن إلى الامتحانات التجريبية ودفتر أخطائك.")}
           actions={
             next ? (
               <ButtonLink href={`/cours/${next.slug}/`} iconEnd={<ArrowRight className="size-4" />}>
@@ -417,7 +417,6 @@ export function Dashboard() {
                 media={<ChapterCover module={c.module} img={coverOf(c)} />}
                 eyebrow={<><ModuleIcon id={c.module} size="xs" /> {modName(slug)}</>}
                 title={nameOf(c, lang)}
-                subtitle={altNameOf(c, lang)}
                 meta={<Badge tone="brand">{t("Prioritaire", "ذو أولوية")}</Badge>}
               />
             );

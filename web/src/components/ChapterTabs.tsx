@@ -10,8 +10,8 @@ import { useLang } from "@/lib/i18n";
 type Tab = "fiche" | "mindmap" | "panneaux" | "quiz";
 
 export function ChapterTabs({
-  md, title, titleAr, slug, hasCards, children,
-}: { md: string; title: string; titleAr: string; slug: string; hasCards: boolean; children: React.ReactNode }) {
+  md, mdFr, title, titleAr, slug, hasCards, children,
+}: { md: string; mdFr: string; title: string; titleAr: string; slug: string; hasCards: boolean; children: React.ReactNode }) {
   const { lang, t } = useLang();
   const [tab, setTab] = useState<Tab>("fiche");
   const items = [
@@ -27,7 +27,7 @@ export function ChapterTabs({
         <Tabs items={items} value={tab} onChange={setTab} />
       </div>
       <div className={tab === "fiche" ? "" : "hidden"}>{children}</div>
-      {tab === "mindmap" && <MindMap md={md} title={name} />}
+      {tab === "mindmap" && <MindMap md={lang === "ar" ? md : mdFr} title={name} />}
       {tab === "panneaux" && <SignGallery chapter={slug} />}
       {tab === "quiz" && (
         <div className="space-y-4">
@@ -41,7 +41,7 @@ export function ChapterTabs({
           <Callout tone="info" title={t("Comment ça marche", "طريقة الاستعمال")}>
             {t(
               "Choisis ta réponse, valide avec le bouton ou la touche Entrée. Les touches 1 à 4 permettent de répondre au clavier.",
-              "اختر جوابك، ثم أكّد بالزر أو بمفتاح Entrée. تسمح المفاتيح من 1 إلى 4 بالإجابة عبر لوحة المفاتيح.",
+              "اختر جوابك، ثم أكّد بالزر أو بمفتاح الإدخال. تسمح المفاتيح من 1 إلى 4 بالإجابة عبر لوحة المفاتيح.",
             )}
           </Callout>
           <div className="flex flex-wrap gap-3">

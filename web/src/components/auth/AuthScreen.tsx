@@ -20,6 +20,7 @@ export function AuthField({
   autoComplete?: string;
   placeholder?: string;
 }) {
+  const { t } = useLang();
   const [show, setShow] = useState(false);
   const isPw = type === "password";
   return (
@@ -38,7 +39,7 @@ export function AuthField({
           className="min-w-0 flex-1 bg-transparent text-[16px] text-ink outline-none placeholder:text-subtle"
         />
         {isPw && (
-          <button type="button" onClick={() => setShow((s) => !s)} className="grid size-8 place-items-center rounded-[8px] text-muted hover:bg-panel" aria-label={show ? "Masquer" : "Afficher"}>
+          <button type="button" onClick={() => setShow((s) => !s)} className="grid size-8 place-items-center rounded-[8px] text-muted hover:bg-panel" aria-label={show ? t("Masquer", "إخفاء") : t("Afficher", "إظهار")}>
             {show ? <EyeOff className="size-5" /> : <Eye className="size-5" />}
           </button>
         )}

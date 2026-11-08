@@ -7,6 +7,7 @@ export interface Chapter {
   color: string;
   module: string;
   ready: boolean;
+  /** Fiche en arabe (la version française est dans lib/coursesFr). */
   md?: string;
   nCards?: number;
 }
@@ -24,8 +25,14 @@ export interface Module {
 /** Carte panneau/schéma extraite des cours : image + intitulé exact. */
 export interface Card {
   img: string;
+  /** Intitulé et catégorie en arabe. */
   label: string;
   section: string;
+  /** Intitulé et catégorie en français. */
+  labelFr: string;
+  sectionFr: string;
+  /** Ancien intitulé : garde stable l'identifiant de la question. */
+  k?: string;
   chapter: string;
   module: string;
 }
@@ -95,4 +102,5 @@ export interface Question {
   uncertain?: boolean;
   /** Catégorie du panneau dans le cours (questions « panneau » uniquement). */
   section?: string;
+  sectionFr?: string;
 }

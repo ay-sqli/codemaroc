@@ -27,7 +27,7 @@ const SCENARIOS: Scenario[] = [
     mine: "none",
     others: [{ pos: "right" }],
     order: ["right", "me"],
-    why: "Sans signalisation, la règle générale s'applique : priorité à droite (الأسبقية للقادم من اليمين). La voiture de droite passe d'abord.",
+    why: "Sans signalisation, la règle générale s'applique : priorité à droite. La voiture de droite passe d'abord.",
     whyAr: "في غياب التشوير، تُطبَّق القاعدة العامة: الأسبقية للقادم من اليمين. السيارة التي على اليمين تمر أولا.",
   },
   {
@@ -45,7 +45,7 @@ const SCENARIOS: Scenario[] = [
     mine: "stop",
     others: [{ pos: "left" }],
     order: ["left", "me"],
-    why: "STOP (قف) = arrêt complet obligatoire à la limite de la chaussée, puis je cède le passage à droite ET à gauche. La voiture de gauche passe d'abord.",
+    why: "STOP = arrêt complet obligatoire à la limite de la chaussée, puis je cède le passage à droite ET à gauche. La voiture de gauche passe d'abord.",
     whyAr: "علامة قف = وقوف تام إجباري عند حافة الطريق، ثم أفسح المجال لليمين ولليسار معا. السيارة التي على اليسار تمر أولا.",
   },
   {
@@ -54,7 +54,7 @@ const SCENARIOS: Scenario[] = [
     mine: "prio",
     others: [{ pos: "right", sign: "cedez" }],
     order: ["me", "right"],
-    why: "Le losange jaune (الطابع الأولوي) me donne la priorité à toutes les intersections jusqu'au panneau de fin. La voiture de droite doit me céder le passage.",
+    why: "Le losange jaune me donne la priorité à toutes les intersections jusqu'au panneau de fin. La voiture de droite doit me céder le passage.",
     whyAr: "المعين الأصفر (الطابع الأولوي) يمنحني الأسبقية في جميع ملتقيات الطرق إلى غاية علامة النهاية. السيارة التي على اليمين يجب أن تفسح لي المجال.",
   },
   {
@@ -63,7 +63,7 @@ const SCENARIOS: Scenario[] = [
     mine: "cedez",
     others: [{ pos: "left" }, { pos: "right" }],
     order: ["left", "right", "me"],
-    why: "Cédez le passage (أترك الأسبقية) : je laisse passer TOUTES les voitures de la route que je croise (gauche et droite), sans obligation de m'arrêter si c'est libre. Je passe en dernier.",
+    why: "Cédez le passage : je laisse passer TOUTES les voitures de la route que je croise (gauche et droite), sans obligation de m'arrêter si c'est libre. Je passe en dernier.",
     whyAr: "فسح المجال (أترك الأسبقية): أترك جميع السيارات التي تسير على الطريق التي أقطعها تمر (من اليسار واليمين)، دون إلزامية التوقف إذا كانت الطريق فارغة. أمر في الأخير.",
   },
   {
@@ -73,7 +73,7 @@ const SCENARIOS: Scenario[] = [
     myTurn: "left",
     others: [{ pos: "front", turn: "straight" }],
     order: ["front", "me"],
-    why: "Pour tourner à gauche, je dois céder le passage aux véhicules venant en sens inverse (المركبات القادمة من الاتجاه المعاكس). La voiture d'en face passe d'abord.",
+    why: "Pour tourner à gauche, je dois céder le passage aux véhicules venant en sens inverse. La voiture d'en face passe d'abord.",
     whyAr: "للانعطاف نحو اليسار، يجب أن أفسح المجال للمركبات القادمة من الاتجاه المعاكس. السيارة المقابلة تمر أولا.",
   },
   {

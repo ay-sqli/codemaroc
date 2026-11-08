@@ -125,7 +125,14 @@ export function tooClose(a: string, b: string): boolean {
 }
 
 /** Les 3 distracteurs d'une carte : proches de la bonne réponse (plausibles) mais jamais équivalents. */
-export function pickDistractors(card: ChoiceCard, cards: ChoiceCard[], rnd: () => number, count = 3): string[] | null {
+export function pickDistractors(
+  card: ChoiceCard,
+  cards: ChoiceCard[],
+  rnd: () => number,
+  count = 3,
+  /** Contrôle supplémentaire, par exemple sur la traduction : deux intitulés arabes distincts peuvent se traduire pareil. */
+  alsoClose?: (a: string, b: string) => boolean,
+): string[] | null {
   const w = meaningWords(card.label);
   const len = card.label.length;
   const score = (c: ChoiceCard) => {
@@ -152,6 +159,7 @@ export function pickDistractors(card: ChoiceCard, cards: ChoiceCard[], rnd: () =
     if (pool.length >= count) break;
     if (tooClose(c.label, card.label)) continue;
     if (pool.some((p) => tooClose(p, c.label))) continue;
+    if (alsoClose && (alsoClose(c.label, card.label) || pool.some((p) => alsoClose(p, c.label)))) continue;
     pool.push(c.label);
   }
   return pool.length >= count ? pool : null;
