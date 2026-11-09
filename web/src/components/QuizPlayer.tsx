@@ -11,6 +11,7 @@ import { getChapter, nameOf } from "@/lib/courses";
 import { schemaTitle } from "@/lib/schemaMeta";
 import { useLang, type Lang } from "@/lib/i18n";
 import { SchemaModal, SCHEMAS } from "./schemas";
+import { RichText } from "./RichText";
 import { Badge, Button, Callout, ChoiceOption, Input, ProgressBar, cx } from "./ui";
 
 export interface QuizResult {
@@ -25,8 +26,6 @@ const KIND_LABEL: Record<Question["kind"], [string, string]> = {
   sign: ["Panneau / schéma", "علامة / رسم"],
   rule: ["Règle du code", "قاعدة من مدونة السير"],
 };
-
-const HAS_AR = /[؀-ۿ]/;
 
 /** Textes d'une question dans la langue choisie (repli sur le français si la traduction manque). */
 export function qText(q: Question, lang: Lang) {
@@ -78,10 +77,10 @@ export function Correction({ q, picked, compact = false }: { q: Question; picked
         {!ok && (
           <p className="mb-2">
             {t("Réponse attendue :", "الجواب المنتظر:")}{" "}
-            <strong className={cx("font-semibold text-ink", lang === "fr" && HAS_AR.test(answerText) && "ar")}>{answerText}</strong>
+            <strong className="font-semibold text-ink">{answerText}</strong>
           </p>
         )}
-        <p className="text-[15px] text-ink-2">{tx.explanation}</p>
+        <p className="text-[15px] leading-relaxed text-ink-2"><RichText text={tx.explanation} /></p>
       </Callout>
       {q.uncertain && (
         <Callout tone="info">
@@ -93,7 +92,7 @@ export function Correction({ q, picked, compact = false }: { q: Question; picked
       )}
       {tx.rappel && (
         <Callout tone="tip" icon={<Lightbulb className="size-5 text-warn" />} title={t("À retenir pour ne plus te tromper", "احفظ هذا حتى لا تخطئ مرة أخرى")}>
-          <p className={cx("text-[15px] text-ink", lang === "fr" && HAS_AR.test(tx.rappel) && "ar")}>{tx.rappel}</p>
+          <p className="text-[15px] leading-relaxed text-ink"><RichText text={tx.rappel} max={2} /></p>
         </Callout>
       )}
       {!compact && (
@@ -370,11 +369,10 @@ export function QuizPlayer({
               {q.options.map((_, k) => {
                 const st = stateOf(k);
                 const label = tx.option(k);
-                const ar = lang === "fr" && HAS_AR.test(label);
                 return (
                   <div key={k} className={st === "wrong" ? "animate-shake" : ""}>
                     <ChoiceOption index={k} multi={q.multi} selected={picked.includes(k)} state={st} onClick={() => toggle(k)} disabled={checked}>
-                      <span className={ar ? "ar text-base" : ""}>{label}</span>
+                      <span>{label}</span>
                     </ChoiceOption>
                     {st === "correct" && (
                       <p className="mt-1 flex items-center gap-1 ps-4 text-sm font-semibold text-ok">

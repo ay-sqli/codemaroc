@@ -29,9 +29,9 @@
 - {img:1682406244344.png} **Interdiction de tourner à droite**
 - {img:1682406244329.png} **Interdiction de tourner à gauche**
 - {img:1682406244358.png} **Demi-tour interdit**
-- {img:1682406244386.png} **Cédez le passage à la circulation venant en sens inverse**
+- {img:1689238288796.png} **Cédez le passage à la circulation venant en sens inverse**
 - {img:1682406244372.png} **Dépassement interdit**
-- {img:1682406244372.png} **Dépassement interdit aux véhicules, véhicules articulés, trains doubles ou ensembles de véhicules de transport de marchandises dont le poids total autorisé en charge ou roulant autorisé dépasse 3,5 tonnes**
+- {img:1689254998447.png} **Dépassement interdit aux véhicules, véhicules articulés, trains doubles ou ensembles de véhicules de transport de marchandises dont le poids total autorisé en charge ou roulant autorisé dépasse 3,5 tonnes**
 ## ⏱️ 5. Limites de vitesse
 - {img:1682406244415.png} **Vitesse limitée à 20**
 - {img:1682406244429.png} **Vitesse limitée à 30**
@@ -62,11 +62,11 @@
 ## 🟢 9. Panneaux de fin d'interdiction
 - {img:1682406244815.png} **Fin de toutes les interdictions précédemment signalées imposées aux véhicules en mouvement**
 - {img:1682406244801.png} **Fin de limitation de vitesse à 20**
-- {img:1682406244828.png} **Fin de limitation de vitesse à 40**
-- {img:1682406244842.png} **Fin de limitation de vitesse à 60**
-- {img:1682406244856.png} **Fin de limitation de vitesse à 80**
-- {img:1682406244870.png} **Fin de limitation de vitesse à 100**
-- {img:1682406244884.png} **Fin d'interdiction de dépasser**
+- {img:1682406244842.png} **Fin de limitation de vitesse à 40**
+- {img:1682406244828.png} **Fin de limitation de vitesse à 60**
+- {img:1682406244870.png} **Fin de limitation de vitesse à 80**
+- {img:1682406244856.png} **Fin de limitation de vitesse à 100**
+- {img:1689237861623.png} **Fin d'interdiction de dépasser**
 - {img:1682406244884.png} **Fin d'interdiction de dépasser pour les véhicules, véhicules articulés, trains doubles ou ensembles de véhicules de transport de marchandises dont le poids total autorisé en charge ou roulant autorisé dépasse 3,5 tonnes**
 - {img:1682406244932.png} **Fin d'interdiction des signaux sonores**
 - {img:1682406244914.png} **Fin de l'interdiction dont la nature est indiquée sur le panneau**

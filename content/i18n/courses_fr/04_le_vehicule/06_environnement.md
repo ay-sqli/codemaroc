@@ -9,7 +9,7 @@
 - État mécanique : mauvais entretien → plus de consommation et plus d'accidents
 - {img:1683035185939.png} **Contrôle des fuites : nuisibles à l'environnement et au moteur**
 - Allège le véhicule : enlève les objets inutiles
-- {img:1686732716154.png} **Porte-bagages de toit : augmente la consommation de 10–15 % → retire-le après usage**
+- **Porte-bagages de toit : augmente la consommation de 10–15 % → retire-le après usage**
 ## 📈 3. Le compte-tours : 4 zones
 - {img:1683043415085.png|big} Le compte-tours
 - ⚫ Grise → moins de 1000 tr/min (minimum de fonctionnement)
@@ -42,7 +42,7 @@
 - {img:1684745977004.png} **2. Choc du conducteur contre l'avant de l'habitacle**
 - {img:1684746001054.png} **3. Choc des organes internes contre le corps**
 - Ceinture de sécurité → maintient le passager, ralentit son mouvement et empêche son éjection
-- {img:1692873999597.png} **Arrimage du chargement : son énergie reste nulle → il ne heurte pas les passagers**
+- **Arrimage du chargement : son énergie reste nulle → il ne heurte pas les passagers**
 ## 💡 Astuces du moniteur
 - Zone verte 1500–2500 = économie + sécurité
 - « Le frein moteur avant les freins »

@@ -15,7 +15,7 @@
 - Feu vert → tu passes seulement si la voie est libre de piétons
 - La nuit : laisse plus d'un mètre, et n'utilise pas d'appel de phares (tu éblouis ceux qui arrivent en face)
 ## 💥 3. Chances de survie du piéton selon la vitesse
-- {img:1687423934247.png|big} Probabilité de survie
+- Probabilité de survie
 - 30 km/h → 90 % de survie
 - 50 km/h → 50 % de survie
 - 60 km/h → 20 % de survie

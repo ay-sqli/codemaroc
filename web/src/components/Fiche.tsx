@@ -3,6 +3,8 @@ import { parseMd, splitTitle, type MdNode, type MdSection } from "@/lib/md";
 import { stripEmoji } from "@/lib/courses";
 import { enrich, illustrationFor } from "@/lib/illustrate";
 import { T, type Lang } from "@/lib/i18n";
+import { escapeHtml, withPictos } from "@/lib/pictos";
+import tablesFr from "@/data/tables_fr.json";
 
 /**
  * Fiche de cours lisible : une carte par section (numéro, titre, illustration), chiffres et flèches
@@ -11,18 +13,76 @@ import { T, type Lang } from "@/lib/i18n";
  */
 
 const html = (n: MdNode) => enrich(n.html);
+/** Ligne de texte : les mots-clés reçoivent une petite image. */
+const htmlPics = (n: MdNode, lang: Lang) => enrich(withPictos(n.html, lang));
 
-/** Une ligne de texte : puce colorée, texte aéré, sous-points en retrait. */
-function Row({ n, tone }: { n: MdNode; tone: string }) {
+interface FicheTableData {
+  cols: string[];
+  rows: string[][];
+  note?: string;
+  title?: string;
+}
+
+/** Tableau traduit : une carte par ligne, lisible sur téléphone sans défilement horizontal. */
+function FicheTable({ n, table, lang }: { n: MdNode; table: FicheTableData; lang: Lang }) {
+  return (
+    <li className="min-w-0">
+      <p className="mb-2 text-[17px] font-[800] leading-snug text-[var(--c-grey-975)]" dangerouslySetInnerHTML={{ __html: table.title ? escapeHtml(table.title) : n.html }} />
+      <ol className="space-y-2">
+        {table.rows.map((row, i) => (
+          <li key={i} className="rounded-[14px] border-2 border-line bg-white p-3">
+            <p className="text-[15.5px] font-[700] leading-snug text-ink" dangerouslySetInnerHTML={{ __html: withPictos(escapeHtml(row[0]), lang, 2) }} />
+            {row.length > 1 && (
+              <dl className="mt-2 grid grid-cols-2 gap-1.5">
+                {row.slice(1).map((v, j) => (
+                  <div key={j} className={`rounded-[10px] bg-[var(--c-grey-100)] px-2.5 py-1.5 ${v.length > 24 ? "col-span-2" : ""}`}>
+                    <dt className="text-[12px] font-[600] text-muted">{table.cols[j + 1]}</dt>
+                    <dd className="text-[14.5px] font-[700] leading-snug text-ink">{v}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+          </li>
+        ))}
+      </ol>
+      {table.note?.split("\n").map((l, i) => (
+        <p key={i} className="mt-2 text-[13px] leading-relaxed text-muted">
+          {l}
+        </p>
+      ))}
+    </li>
+  );
+}
+
+/** Une ligne de texte : puce colorée, texte aéré, sous-points en retrait (avec leur panneau). */
+function Row({ n, tone, lang }: { n: MdNode; tone: string; lang: Lang }) {
+  const table = n.table ? (tablesFr as Record<string, FicheTableData>)[n.table] : undefined;
+  if (table) return <FicheTable n={n} table={table} lang={lang} />;
+  if (n.important) {
+    return (
+      <li className="fiche-important">
+        <AlertTriangle className="mt-1 size-5 shrink-0 text-[#c0392b]" strokeWidth={2.4} aria-hidden="true" />
+        <div className="min-w-0 flex-1">
+          <p className="text-[12px] font-[800] text-[#c0392b]">
+            <T fr="Très important" ar="مهم جدا" />
+          </p>
+          <p dangerouslySetInnerHTML={{ __html: htmlPics(n, lang) }} />
+        </div>
+      </li>
+    );
+  }
   return (
     <li className="fiche-row">
       <span className="fiche-dot" style={{ background: tone }} aria-hidden="true" />
       <div className="min-w-0 flex-1">
-        <p dangerouslySetInnerHTML={{ __html: html(n) }} />
+        <p dangerouslySetInnerHTML={{ __html: htmlPics(n, lang) }} />
         {n.children.length > 0 && (
           <ul className="mt-2 space-y-1.5">
             {n.children.map((c, i) => (
-              <li key={i} className="rounded-[12px] bg-[var(--c-grey-100)] px-3 py-2 text-[16px]" dangerouslySetInnerHTML={{ __html: html(c) }} />
+              <li key={i} className="flex items-center gap-3 rounded-[12px] bg-[var(--c-grey-100)] px-3 py-2 text-[16px]">
+                {c.img && <img src={c.img} alt="" data-zoom data-caption={stripEmoji(c.text)} loading="lazy" className="size-11 shrink-0 rounded-[6px] bg-white object-contain p-0.5" />}
+                <span className="min-w-0 flex-1" dangerouslySetInnerHTML={{ __html: c.img ? html(c) : htmlPics(c, lang) }} />
+              </li>
             ))}
           </ul>
         )}
@@ -49,7 +109,7 @@ function Visual({ n }: { n: MdNode }) {
 }
 
 /** Regroupe les éléments consécutifs : suites d'images → grille de cartes ; suites de texte → liste. */
-function Blocks({ items, tone }: { items: MdNode[]; tone: string }) {
+function Blocks({ items, tone, lang }: { items: MdNode[]; tone: string; lang: Lang }) {
   const groups: { img: boolean; list: MdNode[] }[] = [];
   for (const it of items) {
     const img = !!it.img;
@@ -81,7 +141,7 @@ function Blocks({ items, tone }: { items: MdNode[]; tone: string }) {
         ) : (
           <ul key={i} className="space-y-3">
             {g.list.map((n, j) => (
-              <Row key={j} n={n} tone={tone} />
+              <Row key={j} n={n} tone={tone} lang={lang} />
             ))}
           </ul>
         ),
@@ -111,7 +171,7 @@ function Special({ s, lang }: { s: MdSection; lang: Lang }) {
         {s.items.map((n, i) => (
           <li key={i} className={`${lang === "ar" ? "ar leading-[1.9]" : "leading-relaxed"} flex items-start gap-2.5 rounded-[16px] border-2 p-3 text-[16.5px] sm:gap-3 sm:p-3.5 ${conf.item}`}>
             <conf.Mark className="mt-1.5 size-5 shrink-0" style={{ color: conf.c }} strokeWidth={2.4} aria-hidden="true" />
-            <span className="min-w-0 flex-1" dangerouslySetInnerHTML={{ __html: html(n) }} />
+            <span className="min-w-0 flex-1" dangerouslySetInnerHTML={{ __html: htmlPics(n, lang) }} />
           </li>
         ))}
       </ul>
@@ -152,7 +212,7 @@ function Section({ s, n, lang }: { s: MdSection; n: number; lang: Lang }) {
         )}
       </header>
       <div className={lang === "ar" ? "ar" : "leading-relaxed"}>
-        <Blocks items={s.items} tone={tone} />
+        <Blocks items={s.items} tone={tone} lang={lang} />
       </div>
     </section>
   );

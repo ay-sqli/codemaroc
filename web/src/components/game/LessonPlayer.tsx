@@ -20,6 +20,7 @@ import { preloadSounds, sfx } from "./sounds";
 import { GameIcon } from "./GameIcon";
 import { VOYANT_UNITS, Voyants } from "./Voyants";
 import { RoadScene } from "./RoadScene";
+import { RichText } from "@/components/RichText";
 
 const HAS_AR = /[؀-ۿ]/;
 const PRAISE: [string, string][] = [
@@ -236,7 +237,7 @@ export function LessonIntro({
                   {points.map((p, i) => (
                     <li key={i} className="duo-card flex items-start gap-3 p-3.5">
                       <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[var(--duo-yellow)] text-[13px] font-[800] text-white">{i + 1}</span>
-                      <span className={cx("text-[15px] font-[600] leading-relaxed text-[var(--duo-ink)]", lang === "fr" && HAS_AR.test(p) && "ar")}>{p}</span>
+                      <RichText text={p} max={2} className="text-[15px] font-[600] leading-relaxed text-[var(--duo-ink)]" />
                     </li>
                   ))}
                 </ol>
@@ -570,11 +571,11 @@ export function LessonPlay({
                   )}
                 </div>
               </div>
-              <p className={cx("mt-3 text-[15px] font-[500] leading-relaxed", checked.ok ? "text-[var(--duo-green-d)]" : "text-[#922b21]")}>{tx.explanation}</p>
+              <p className={cx("mt-3 text-[15px] font-[500] leading-relaxed", checked.ok ? "text-[var(--duo-green-d)]" : "text-[#922b21]")}><RichText text={tx.explanation} /></p>
               {!checked.ok && tx.rappel && tx.rappel !== tx.explanation && tx.rappel !== answerText && (
                 <p className="mt-2 flex items-start gap-2 rounded-[12px] bg-white/70 p-3 text-[15px] font-[700] text-[var(--duo-ink)]">
                   <Lightbulb className="mt-0.5 size-5 shrink-0 text-[var(--duo-yellow-d)]" />
-                  <span className={cx(lang === "fr" && HAS_AR.test(tx.rappel) && "ar")}>{tx.rappel}</span>
+                  <RichText text={tx.rappel} max={2} />
                 </p>
               )}
               {!checked.ok && requeue && (

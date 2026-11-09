@@ -54,12 +54,12 @@
 - {img:1681901900438.png} **Annonce temporaire de signaux lumineux réglant la circulation**
 - {img:1681901900424.png} **Autres dangers temporaires**
 ## 🛑 8. Panneaux d'intersection et de priorité
-- {img:1689673379906.png} **STOP**
-- {img:1681901900516.png} **Cédez le passage à l'intersection - panneau de position**
-- {img:1689673393547.png} **Cédez le passage à l'intersection - signal avancé à 150 mètres**
-- {img:1689673379906.png} **Cédez le passage à l'intersection - signal avancé d'un STOP**
-- {img:1689673417803.png} **Intersection où s'applique la priorité à droite**
-- {img:1681901900573.png} **Intersection d'une route prioritaire avec une route secondaire**
-- {img:1681901900587.png} **Carrefour à sens giratoire**
-- {img:1681901900601.png} **Indication du caractère prioritaire d'une route**
-- {img:1681901900614.png} **Fin du caractère prioritaire d'une route**
+- {img:1681901900516.png} **STOP**
+- {img:1689673393547.png} **Cédez le passage à l'intersection - panneau de position**
+- {img:1689673379906.png} **Cédez le passage à l'intersection - signal avancé à 150 mètres**
+- {img:1689673417803.png} **Cédez le passage à l'intersection - signal avancé d'un STOP**
+- {img:1681901900573.png} **Intersection où s'applique la priorité à droite**
+- {img:1681901900587.png} **Intersection d'une route prioritaire avec une route secondaire**
+- {img:1681901900601.png} **Carrefour à sens giratoire**
+- {img:1681901900614.png} **Indication du caractère prioritaire d'une route**
+- {img:1682004492266.png} **Fin du caractère prioritaire d'une route**

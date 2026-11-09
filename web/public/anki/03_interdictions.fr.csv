@@ -24,9 +24,9 @@
 "<img src=""1682406244344.png"">";Interdiction de tourner à droite
 "<img src=""1682406244329.png"">";Interdiction de tourner à gauche
 "<img src=""1682406244358.png"">";Demi-tour interdit
-"<img src=""1682406244386.png"">";Cédez le passage à la circulation venant en sens inverse
+"<img src=""1689238288796.png"">";Cédez le passage à la circulation venant en sens inverse
 "<img src=""1682406244372.png"">";Dépassement interdit
-"<img src=""1682406244372.png"">";Dépassement interdit aux véhicules, véhicules articulés, trains doubles ou ensembles de véhicules de transport de marchandises dont le poids total autorisé en charge ou roulant autorisé dépasse 3,5 tonnes
+"<img src=""1689254998447.png"">";Dépassement interdit aux véhicules, véhicules articulés, trains doubles ou ensembles de véhicules de transport de marchandises dont le poids total autorisé en charge ou roulant autorisé dépasse 3,5 tonnes
 "<img src=""1682406244415.png"">";Vitesse limitée à 20
 "<img src=""1682406244429.png"">";Vitesse limitée à 30
 "<img src=""1682406244442.png"">";Vitesse limitée à 40
@@ -52,11 +52,11 @@
 "<img src=""1682406244774.png"">";Entrée d'une zone de stationnement unilatéral alterné semi-mensuel à durée limitée avec contrôle par disque
 "<img src=""1682406244815.png"">";Fin de toutes les interdictions précédemment signalées imposées aux véhicules en mouvement
 "<img src=""1682406244801.png"">";Fin de limitation de vitesse à 20
-"<img src=""1682406244828.png"">";Fin de limitation de vitesse à 40
-"<img src=""1682406244842.png"">";Fin de limitation de vitesse à 60
-"<img src=""1682406244856.png"">";Fin de limitation de vitesse à 80
-"<img src=""1682406244870.png"">";Fin de limitation de vitesse à 100
-"<img src=""1682406244884.png"">";Fin d'interdiction de dépasser
+"<img src=""1682406244842.png"">";Fin de limitation de vitesse à 40
+"<img src=""1682406244828.png"">";Fin de limitation de vitesse à 60
+"<img src=""1682406244870.png"">";Fin de limitation de vitesse à 80
+"<img src=""1682406244856.png"">";Fin de limitation de vitesse à 100
+"<img src=""1689237861623.png"">";Fin d'interdiction de dépasser
 "<img src=""1682406244884.png"">";Fin d'interdiction de dépasser pour les véhicules, véhicules articulés, trains doubles ou ensembles de véhicules de transport de marchandises dont le poids total autorisé en charge ou roulant autorisé dépasse 3,5 tonnes
 "<img src=""1682406244932.png"">";Fin d'interdiction des signaux sonores
 "<img src=""1682406244914.png"">";Fin de l'interdiction dont la nature est indiquée sur le panneau
@@ -68,4 +68,5 @@
 "<img src=""1682406245001.png"">";Fin de la zone de stationnement unilatéral alterné semi-mensuel à durée limitée avec contrôle par disque
 "<img src=""1682406244185.png"">";Accès interdit aux véhicules à moteur, sauf cyclomoteurs
 "<img src=""1682406244226.png"">";Accès interdit aux véhicules transportant plus d'une certaine quantité de marchandises dangereuses
+"<img src=""1682406244386.png"">";Cédez le passage à la circulation venant en sens inverse
 "<img src=""1682406244513.png"">";Signaux sonores interdits

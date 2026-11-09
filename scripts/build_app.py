@@ -79,6 +79,26 @@ def clean_md_ar(md):
     return '\n'.join(clean_ar(line) for line in md.split('\n'))
 
 
+def load_important_images():
+    '''Image « هام جدا » : ce n'est pas un panneau, on la remplace par un encadré « important ».'''
+    with open(os.path.join(BASE, 'content', 'important_images.json'), encoding='utf-8') as fh:
+        return set(json.load(fh))
+
+
+def load_tables_fr():
+    '''Tableaux publiés en image (texte arabe) : leur version française, recopiée ligne par ligne.'''
+    with open(os.path.join(BASE, 'content', 'i18n', 'tables_fr.json'), encoding='utf-8') as fh:
+        return json.load(fh)
+
+
+def mark_tables(md, tables):
+    return IMG_RE.sub(lambda m: f'[table:{m.group(1)}]' if m.group(1) in tables else m.group(0), md)
+
+
+def mark_important(md, names):
+    return IMG_RE.sub(lambda m: '[!]' if m.group(1) in names else m.group(0), md)
+
+
 # ---------------------------------------------------------------- images
 def build_image_index():
     """{slug: {nom: chemin_absolu}} + index global {nom: chemin_absolu}."""
@@ -283,6 +303,10 @@ def load_exam_bank():
     return out
 
 
+with open(os.path.join(BASE, 'content', 'legacy_cards_exclude.json'), encoding='utf-8') as _fh:
+    LEGACY_EXCLUDE = set(json.load(_fh))
+
+
 def legacy_cards(slug):
     """Cartes des CSV historiques (chapitres 01–03, plus complets que leur mindmap)."""
     path = os.path.join(BASE, 'outputs', f'{slug}.csv')
@@ -296,6 +320,9 @@ def legacy_cards(slug):
                 continue
             img = os.path.normpath(os.path.join(BASE, 'outputs', m.group(1)))
             if os.path.exists(img):
+                # Certaines lignes de ces CSV ont un intitulé décalé d'une image : elles sont écartées.
+                if f'{os.path.basename(img)}|{row[1].strip()}' in LEGACY_EXCLUDE:
+                    continue
                 cards.append({'img': rel(img, BASE), 'label': row[1].strip(), 'section': '', 'legacy': True})
     return cards
 
@@ -401,6 +428,23 @@ def merge_memo():
     return memo
 
 
+def export_pictos(media, per_chapter, global_index):
+    '''Petites images glissées dans le texte : mot-clé (arabe, français) → image vérifiée.'''
+    with open(os.path.join(BASE, 'content', 'pictos.json'), encoding='utf-8') as fh:
+        entries = json.load(fh)
+    out = []
+    for e in entries:
+        url = e.get('src')
+        if not url:
+            path = resolve(e['img'], '', per_chapter, global_index)
+            if not path:
+                print(f'⚠️ picto introuvable : {e["img"]}')
+                continue
+            url = media.url(rel(path, BASE))
+        out.append({'url': url, 'ar': e['ar'], 'fr': e['fr']})
+    return out
+
+
 def export_web(modules_out, bank, per_chapter, global_index):
     if not os.path.isdir(WEB):
         return
@@ -479,6 +523,7 @@ def export_web(modules_out, bank, per_chapter, global_index):
     dump(os.path.join(src_data, 'courses.json'), courses)
     # À part : seule la page d'un cours (côté serveur) en a besoin, le reste de l'app reste léger.
     dump(os.path.join(src_data, 'courses_fr.json'), courses_fr)
+    dump(os.path.join(src_data, 'tables_fr.json'), load_tables_fr())
     dump(os.path.join(pub_data, 'cards.json'), uniq)
     dump(os.path.join(pub_data, 'exam.json'), exam)
     quiz = load_quiz(media, per_chapter, global_index)
@@ -500,6 +545,7 @@ def export_web(modules_out, bank, per_chapter, global_index):
         q['ea'], q['ra'] = clean_ar(t.get('e')), clean_ar(t.get('r'))
     dump(os.path.join(pub_data, 'quiz.json'), quiz)
     dump(os.path.join(src_data, 'memo.json'), merge_memo())
+    dump(os.path.join(src_data, 'pictos.json'), export_pictos(media, per_chapter, global_index))
     n_ar = sum(1 for q in quiz if q.get('ea'))
     n_ex = sum(1 for q in exam if q.get('ea'))
     print(f'🌍 arabe : {n_ar}/{len(quiz)} questions de règles, {n_ex}/{len(exam)} questions officielles traduites')
@@ -517,6 +563,8 @@ def main():
 
     missing, modules_out, total_cards, done = [], [], 0, 0
     cards_fr = load_cards_fr()
+    important = load_important_images()
+    tables_fr = load_tables_fr()
     for mod in MODULES:
         chapters_out = []
         for slug, pid, emoji, ar, fr, color in mod['chapters']:
@@ -525,11 +573,11 @@ def main():
                      'color': color, 'module': mod['id'], 'ready': False}
             if os.path.exists(src):
                 with open(src, encoding='utf-8') as f:
-                    md = f.read()
+                    md = mark_important(f.read(), important)
                 fr_src = os.path.join(BASE, 'content', 'i18n', 'courses_fr', mod['dir'], f'{slug}.md')
                 if os.path.exists(fr_src):
                     with open(fr_src, encoding='utf-8') as f:
-                        md_fr = f.read()
+                        md_fr = mark_important(f.read(), important)
                 else:
                     print(f'⚠️ fiche sans version française : {slug}')
                     md_fr = md
@@ -537,13 +585,15 @@ def main():
                 known = {c['img'] for c in cards}
                 cards += [c for c in legacy_cards(slug) if c['img'] not in known]
                 attach_french(cards, md_fr, slug, per_chapter, global_index, cards_fr)
+                # Un tableau n'est pas un panneau à reconnaître.
+                cards = [c for c in cards if os.path.basename(c['img']) not in tables_fr]
                 write_mindmap(render_md(md, slug, mm_dir, per_chapter, global_index, missing), fr, slug, mm_dir)
                 if cards:
                     write_anki(cards, slug, anki_dir)
                 entry.update({
                     'ready': True,
                     'md': render_md(md, slug, BASE, per_chapter, global_index, []),
-                    'md_fr': render_md(md_fr, slug, BASE, per_chapter, global_index, []),
+                    'md_fr': render_md(mark_tables(md_fr, tables_fr), slug, BASE, per_chapter, global_index, []),
                     'cards': cards,
                     'mindmap': f'outputs/mindmaps/{slug}.html',
                     'anki': f'outputs/anki/{slug}.csv' if cards else None,

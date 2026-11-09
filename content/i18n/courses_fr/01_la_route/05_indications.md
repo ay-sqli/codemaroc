@@ -14,7 +14,7 @@
 ## 🛣️ 2. Voies et conditions de circulation
 - {img:1682079445323.png} **Route à sens unique**
 - {img:1682079445774.png} **Vous avez la priorité sur la circulation venant en sens inverse**
-- {img:1682079445379.png} **Présignalisation d'une voie de dépassement ou d'une section à chaussées séparées**
+- {img:1682079445379.png} **Conditions de circulation particulières à une voie de la route suivie**
 - {img:1682079445393.png} **Présignalisation d'une voie de dépassement ou d'une section à chaussées séparées**
 - {img:1682079445364.png} **Conditions de circulation particulières à une voie de la route suivie**
 - {img:1682079445350.png} **Conditions de circulation particulières à une voie de la route suivie**
@@ -56,8 +56,8 @@
 ## 🚇 5. Tunnels et issues de secours
 - {img:1682079445829.png} **Entrée de tunnel : demi-tour, arrêt et stationnement interdits + feux de croisement obligatoires**
 - {img:1682079445842.png} **Sortie de tunnel**
-- {img:1689674764361.png} **Issue de secours à droite**
-- {img:1687172938810.png} **Issue de secours à gauche**
+- {img:1689674764361.png} **Voie de détresse à droite**
+- {img:1687172938810.png} **Voie de détresse à gauche**
 - {img:1682079446418.png} **Issue de secours à droite**
 - {img:1682079446403.png} **Issue de secours à gauche**
 ## 📡 6. Contrôle et sécurité

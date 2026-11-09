@@ -5,6 +5,7 @@ import { BellRing, ChevronDown, NotebookPen, Trash2 } from "lucide-react";
 import { useBank } from "@/lib/questions";
 import { removeFromNotebook, SRS_INTERVALS, useStore } from "@/lib/store";
 import { getChapter, nameOf } from "@/lib/courses";
+import { RichText } from "@/components/RichText";
 import { useLang } from "@/lib/i18n";
 import { Correction, qText } from "@/components/QuizPlayer";
 import {
@@ -77,7 +78,7 @@ export function Notebook() {
               const txt = qText(r.q!, lang).rappel!;
               return (
                 <li key={r.id} className="flex items-start justify-between gap-3 rounded-[12px] bg-white p-3 text-[15px] text-ink">
-                  <span className={cx(lang === "fr" && /[؀-ۿ]/.test(txt) && "ar")}>{txt}</span>
+                  <RichText text={txt} max={2} />
                   <Badge tone="error" className="shrink-0">
                     {t(`${r.stat?.ko ?? 1}× raté`, `${r.stat?.ko ?? 1}× خطأ`)}
                   </Badge>

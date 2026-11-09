@@ -4,7 +4,9 @@ import { BackBar } from "@/components/BackButton";
 import { useMemo, useState } from "react";
 import { Eye, Lightbulb, RotateCcw, Shuffle } from "lucide-react";
 import { MEMO, memoGroupText, memoText, type MemoItem } from "@/lib/memo";
-import { useLang } from "@/lib/i18n";
+import { RichText } from "@/components/RichText";
+import { useLang, type Lang } from "@/lib/i18n";
+import { withPictos } from "@/lib/pictos";
 import { Button, PageHeader, PillTabs, cx } from "@/components/ui";
 import { enrich } from "@/lib/illustrate";
 import { asset } from "@/lib/base";
@@ -12,7 +14,7 @@ import { asset } from "@/lib/base";
 const HAS_AR = /[؀-ۿ]/;
 const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 /** Texte mémo → HTML avec chiffres et flèches mis en évidence. */
-const rich = (s: string) => ({ __html: enrich(esc(s)) });
+const rich = (s: string, lang: Lang) => ({ __html: enrich(withPictos(esc(s), lang)) });
 
 function FlashCard({ item }: { item: MemoItem }) {
   const { lang, t } = useLang();
@@ -31,7 +33,7 @@ function FlashCard({ item }: { item: MemoItem }) {
       <p className="mt-1 text-base font-semibold text-ink">{it.q}</p>
       {flip ? (
         <div className="animate-pop mt-3 space-y-3">
-          <p className="text-[15px] font-[700] leading-relaxed text-ink" dangerouslySetInnerHTML={rich(it.a)} />
+          <p className="text-[15px] font-[700] leading-relaxed text-ink" dangerouslySetInnerHTML={rich(it.a, lang)} />
           <p className="rounded-[12px] bg-warn-50 px-3 py-2 text-sm text-ink-2">
             <span className="font-semibold text-warn">{t("Moyen mnémotechnique : ", "حيلة للحفظ: ")}</span>
             {it.hook}
@@ -129,13 +131,13 @@ export function Memo() {
                   </div>
                   <p
                     className={cx("mx-4 rounded-[14px] bg-[#ebf5fb] px-3.5 py-3 text-[16px] font-[600] leading-[1.85] text-ink sm:mx-5", HAS_AR.test(it.a) && "ar")}
-                    dangerouslySetInnerHTML={rich(it.a)}
+                    dangerouslySetInnerHTML={rich(it.a, lang)}
                   />
                   <div className="mt-auto flex items-start gap-2.5 px-4 pb-4 pt-3 sm:px-5 sm:pb-5">
                     <Lightbulb className="mt-1 size-5 shrink-0 text-[#d68910]" strokeWidth={2.4} aria-hidden="true" />
                     <p className="text-[15px] leading-relaxed text-ink-2">
                       <span className="font-[800] text-[#b9770e]">{t("Astuce : ", "الحيلة: ")}</span>
-                      <span className={cx(HAS_AR.test(it.hook) && "ar")}>{it.hook}</span>
+                      <RichText text={it.hook} max={2} className={cx(HAS_AR.test(it.hook) && "ar")} />
                     </p>
                   </div>
                 </li>

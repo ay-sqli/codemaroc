@@ -86,7 +86,7 @@ export function MindMap({ md, title }: { md: string; title: string }) {
       if (cancelled || !svg) return;
       svg.innerHTML = "";
       // Sans emoji (design system), en conservant l'indentation qui porte l'imbrication.
-      const clean = md.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{20E3}\u{200D}]/gu, "").replace(/(#+|-) {2,}/g, "$1 ");
+      const clean = md.replace(/\[!\]\s*|\[table:[^\]]+\]\s*/g, "").replace(/[\p{Extended_Pictographic}\u{FE0F}\u{20E3}\u{200D}]/gu, "").replace(/(#+|-) {2,}/g, "$1 ");
       const { root } = new Transformer().transform(clean);
       // Créée sans données : Markmap.create(…, root) lancerait son propre fit() qui écraserait le cadrage.
       const mm = Markmap.create(svg, { duration: 300, maxWidth: 0, initialExpandLevel: open ? -1 : 2, spacingVertical: 8 });

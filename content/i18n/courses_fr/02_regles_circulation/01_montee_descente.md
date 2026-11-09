@@ -1,8 +1,8 @@
 # 🚪 Monter dans le véhicule et en descendre
 ## 🔍 1. Avant de monter
 - Coup d'œil rapide autour du véhicule : pneus, fuite éventuelle, obstacles
-- {img:1692089986800.png|big} Inspection autour du véhicule
-- {img:1689951926797.png|big} Contrôle des pneus et des abords
+- {img:1692089986800.png|big} Contrôle des niveaux sous le capot
+- {img:1689951926797.png|big} Contrôle du niveau d'huile
 - Par temps de neige : essuie toutes les vitres et enlève la neige du toit
 ## 📄 2. Documents obligatoires
 - Permis de conduire
