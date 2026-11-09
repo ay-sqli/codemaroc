@@ -9,6 +9,8 @@ export interface Chapter {
   ready: boolean;
   /** Fiche en arabe (la version française est dans lib/coursesFr). */
   md?: string;
+  /** Image de la carte du cours, choisie à la génération. */
+  cover?: string;
   nCards?: number;
 }
 

@@ -192,7 +192,7 @@ export function Dashboard() {
                   <ListItem
                     key={slug}
                     href="/entrainement/session/?mode=notebook"
-                    thumb={<ChapterCover module={c.module} img={coverOf(c)} />}
+                    thumb={<ChapterCover compact module={c.module} img={coverOf(c)} />}
                     eyebrow={<span className="inline-flex items-center gap-1.5"><ModuleIcon id={c.module} size="xs" />{modName(slug)}</span>}
                     title={nameOf(c, lang)}
                     meta={t(`${errN(n)} à revoir`, `${errN(n)} للمراجعة`)}
@@ -210,7 +210,7 @@ export function Dashboard() {
               <ListItem
                 key={c.slug}
                 href={`/cours/${c.slug}/`}
-                thumb={<ChapterCover module={c.module} img={coverOf(c)} />}
+                thumb={<ChapterCover compact module={c.module} img={coverOf(c)} />}
                 eyebrow={<span className="inline-flex items-center gap-1.5"><ModuleIcon id={c.module} size="xs" />{modName(c.slug)}</span>}
                 title={nameOf(c, lang)}
                 meta={t(`Fiche · Mindmap${c.nCards ? ` · ${c.nCards} panneaux` : ""}`, `ملخص · خريطة ذهنية${c.nCards ? ` · ${c.nCards} علامة` : ""}`)}
@@ -228,7 +228,7 @@ export function Dashboard() {
                   <ListItem
                     key={slug}
                     href={`/entrainement/session/?mode=chapter&c=${slug}`}
-                    thumb={<ChapterCover module={c.module} img={coverOf(c)} />}
+                    thumb={<ChapterCover compact module={c.module} img={coverOf(c)} />}
                     eyebrow={<span className="inline-flex items-center gap-1.5"><ModuleIcon id={c.module} size="xs" />{modName(slug)}</span>}
                     title={nameOf(c, lang)}
                     meta={t(`${pct} % de réussite · ${qN(v.seen)}`, `${pct} % أجوبة صحيحة · ${qN(v.seen)}`)}
@@ -278,7 +278,8 @@ export function Dashboard() {
                 <ProductCard
                   key={c.slug}
                   href={`/cours/${c.slug}/`}
-                  media={<ChapterCover module={c.module} img={coverOf(c)} />}
+                  square
+                media={<ChapterCover module={c.module} img={coverOf(c)} />}
                   eyebrow={<><ModuleIcon id={c.module} size="xs" /> {t("Axe", "المحور")} {c.module}</>}
                   title={nameOf(c, lang)}
                   meta={read[c.slug] ? t("Lu · Fiche + mindmap", "مقروء · ملخص + خريطة ذهنية") : t("Fiche + mindmap", "ملخص + خريطة ذهنية")}
@@ -414,6 +415,7 @@ export function Dashboard() {
               <ProductCard
                 key={slug}
                 href={`/cours/${slug}/`}
+                square
                 media={<ChapterCover module={c.module} img={coverOf(c)} />}
                 eyebrow={<><ModuleIcon id={c.module} size="xs" /> {modName(slug)}</>}
                 title={nameOf(c, lang)}

@@ -80,7 +80,7 @@ function Row({ n, tone, lang }: { n: MdNode; tone: string; lang: Lang }) {
           <ul className="mt-2 space-y-1.5">
             {n.children.map((c, i) => (
               <li key={i} className="flex items-center gap-3 rounded-[12px] bg-[var(--c-grey-100)] px-3 py-2 text-[16px]">
-                {c.img && <img src={c.img} alt="" data-zoom data-caption={stripEmoji(c.text)} loading="lazy" className="size-11 shrink-0 rounded-[6px] bg-white object-contain p-0.5" />}
+                {c.img && <img src={c.img} alt="" data-zoom data-caption={stripEmoji(c.text)} loading="lazy" className="h-11 w-auto max-w-[5rem] shrink-0 rounded-[6px] bg-white object-cover" />}
                 <span className="min-w-0 flex-1" dangerouslySetInnerHTML={{ __html: c.img ? html(c) : htmlPics(c, lang) }} />
               </li>
             ))}
@@ -100,10 +100,8 @@ function Visual({ n }: { n: MdNode }) {
   const big = n.imgClass === "big" || n.imgClass === "xl";
   return (
     <figure className={`fiche-visual ${big ? "sm:col-span-2" : ""}`}>
-      <span className={`block w-full overflow-hidden rounded-[14px] bg-white p-2 ${big ? "h-56 sm:h-72" : "h-40 sm:h-44"}`}>
-        <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-full w-full object-contain" />
-      </span>
-      <figcaption className="min-w-0 px-1 pb-0.5" dangerouslySetInnerHTML={{ __html: html(n) }} />
+      <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-auto w-full bg-white" />
+      <figcaption className="min-w-0 px-3 pb-2.5" dangerouslySetInnerHTML={{ __html: html(n) }} />
     </figure>
   );
 }
@@ -122,18 +120,16 @@ function Blocks({ items, tone, lang }: { items: MdNode[]; tone: string; lang: La
       {groups.map((g, i) =>
         g.img && g.list.length >= 4 && g.list.every((n) => !n.imgClass) ? (
           // Galerie de panneaux : vignette au-dessus, signification dessous
-          <div key={i} className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div key={i} className="columns-2 gap-3 sm:columns-3">
             {g.list.map((n, j) => (
-              <figure key={j} className="flex flex-col items-center gap-2 rounded-[18px] border-2 border-line bg-white p-2.5 text-center shadow-[0_3px_0_var(--c-grey-200)] sm:p-3">
-                <span className="block h-28 w-full overflow-hidden sm:h-36">
-                  <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-full w-full object-contain" />
-                </span>
-                <figcaption className="text-[14px] font-[600] leading-snug text-ink" dangerouslySetInnerHTML={{ __html: html(n) }} />
+              <figure key={j} className="mb-3 break-inside-avoid overflow-hidden rounded-[18px] border-2 border-line bg-white text-center">
+                <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-auto w-full" />
+                <figcaption className="px-2.5 py-2 text-[14px] font-[600] leading-snug text-ink" dangerouslySetInnerHTML={{ __html: html(n) }} />
               </figure>
             ))}
           </div>
         ) : g.img ? (
-          <div key={i} className="grid gap-3 sm:grid-cols-2">
+          <div key={i} className="grid items-start gap-3 sm:grid-cols-2">
             {g.list.map((n, j) => (
               <Visual key={j} n={n} />
             ))}

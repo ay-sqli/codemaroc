@@ -931,6 +931,11 @@ html[lang="ar"] .duo-btn {
 }
 
 /* ─────────────────────────── Fiche de cours lisible ─────────────────────────── */
+/* Couverture des cours : dégradé de l'axe, visible en cadre autour du panneau blanc */
+.cover {
+  background: linear-gradient(135deg, var(--cover-from), var(--cover-to));
+}
+
 /* Petites images glissées dans le texte */
 .picto {
   display: inline-block;
@@ -998,7 +1003,7 @@ html[lang="ar"] .duo-btn {
   flex-direction: column;
   align-items: stretch;
   gap: 0.6rem;
-  padding: 0.6rem;
+  overflow: hidden;
   border-radius: 18px;
   border: 2px solid var(--border);
   background: var(--c-grey-50);

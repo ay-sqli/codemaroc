@@ -76,7 +76,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
             <ChapterActions slug={slug} />
           </div>
           <div className="hidden overflow-hidden rounded-[16px] border-2 border-line bg-white lg:block">
-            <div className="aspect-[16/10]">
+            <div className="aspect-square">
               <ChapterCover module={m.id} img={coverOf(c)} />
             </div>
           </div>

@@ -167,7 +167,7 @@ export function Catalog() {
           )}
 
           {list.length ? (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 xl:grid-cols-3">
               {list.map((c) => {
                 const st = ficheStats(c);
                 const err = errors.get(c.slug) ?? 0;
@@ -177,6 +177,7 @@ export function Catalog() {
                   <ProductCard
                     key={c.slug}
                     href={`/cours/${c.slug}/`}
+                    square
                     media={<ChapterCover module={c.module} img={coverOf(c)} />}
                     eyebrow={
                       <>

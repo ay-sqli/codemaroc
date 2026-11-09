@@ -1,5 +1,5 @@
 import data from "@/data/courses.json";
-import { withBase } from "./base";
+import { asset, withBase } from "./base";
 import type { Chapter, Module } from "./types";
 
 export const MODULES = (data as Module[]).map((m) => ({
@@ -57,6 +57,7 @@ export function stripEmoji(s: string) {
 
 /** Première illustration « panneau » d'un chapitre (vignette des cartes). */
 export function coverOf(c: Chapter) {
+  if (c.cover) return asset(c.cover);
   if (!c.md) return undefined;
   const small = c.md.match(/<img src="([^"]+)">/);
   if (small) return small[1];

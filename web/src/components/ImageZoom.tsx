@@ -52,12 +52,12 @@ export function ImageZoom() {
       >
         <X className="size-6" />
       </button>
-      {/* Largeur fixe + object-contain : les petits panneaux sont agrandis, les grandes photos restent dans l'écran. */}
+      {/* Largeur minimale : les petits panneaux sont agrandis ; pas de marge blanche autour de l'image. */}
       <img
         src={img.src}
         alt={img.caption}
         onClick={(e) => e.stopPropagation()}
-        className="max-h-[75dvh] w-[min(92vw,720px)] rounded-[16px] bg-white object-contain p-3"
+        className="h-auto max-h-[75dvh] w-auto min-w-[min(80vw,420px)] max-w-[92vw] rounded-[16px] bg-white"
       />
       {img.caption && (
         <p className={`${lang === "ar" ? "ar " : ""}max-w-[720px] text-center text-base leading-relaxed text-white`} onClick={(e) => e.stopPropagation()}>

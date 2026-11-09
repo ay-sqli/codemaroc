@@ -445,6 +445,35 @@ def export_pictos(media, per_chapter, global_index):
     return out
 
 
+# Couverture de repli (illustration de l'app, pleine page) quand un cours n'a aucune image carrée.
+COVER_FALLBACK = {
+    '14_dangers_exceptionnels': 'eboulement', '04_precautions_portieres': 'parking-taxis', '06_etat_sante': 'route-cotiere',
+    '02_alcool_medicaments': 'marquage-croise', '05_sous_influence': 'marquage-croise', '03_vigilance': 'sortie-ecole',
+    '02_amendes': 'barrage-police', '03_immobilisation_fourriere': 'parking', '04_delits': 'barrage-police',
+    '05_homicide_blessures': 'barrage-police', '06_suspension_retrait': 'barrage-police', '07_annexe_infractions': 'barrage-police',
+}
+
+
+def pick_cover(md, slug, tables):
+    '''Image de carte : un panneau à peu près carré, jamais un tableau ; sinon une photo ; sinon une illustration.'''
+    from PIL import Image
+    if slug in COVER_FALLBACK:
+        return f'/tiles/{COVER_FALLBACK[slug]}.webp'
+    urls = [u for u in re.findall(r'<img src="([^"]+)"', md) if os.path.basename(u) not in tables]
+    sized = []
+    for u in urls:
+        try:
+            with Image.open(os.path.join(WEB, 'public', u.lstrip('/'))) as im:
+                sized.append((u, im.width / im.height))
+        except OSError:
+            continue
+    for lo, hi in ((0.85, 1.2), (0.7, 1.9)):
+        for u, ratio in sized:
+            if lo <= ratio <= hi:
+                return u
+    return '/tiles/route-cotiere.webp'
+
+
 def export_web(modules_out, bank, per_chapter, global_index):
     if not os.path.isdir(WEB):
         return
@@ -455,12 +484,14 @@ def export_web(modules_out, bank, per_chapter, global_index):
         os.makedirs(d, exist_ok=True)
 
     courses, cards, courses_fr = [], [], {}
+    tables_cover = {safe_name(k) for k in load_tables_fr()}
     for mod in modules_out:
         chapters = []
         for ch in mod['chapters']:
             c = {k: v for k, v in ch.items() if k not in ('md', 'md_fr', 'cards', 'mindmap', 'anki')}
             if ch['ready']:
                 c['md'] = media.rewrite_md(clean_md_ar(ch['md']))
+                c['cover'] = pick_cover(c['md'], ch['slug'], tables_cover)
                 courses_fr[ch['slug']] = media.rewrite_md(ch['md_fr'])
                 c['nCards'] = len(ch['cards'])
                 for card in ch['cards']:

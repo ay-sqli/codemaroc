@@ -265,8 +265,8 @@ export function Showcase() {
             <ProductCard href="#cartes" media={<ChapterCover module="02" />} eyebrow={<><ModuleIcon id="02" size="xs" /> Règles</>} title="Règles de priorité" meta={<Badge tone="brand">Prioritaire</Badge>} />
           </div>
           <Panel title="Panneau de liste" href="#cartes">
-            <ListItem href="#cartes" thumb={<ChapterCover module="03" />} eyebrow="Le conducteur" title="Alcool et médicaments" meta="2 erreurs à revoir" />
-            <ListItem href="#cartes" thumb={<ChapterCover module="05" />} eyebrow="Infractions" title="Permis à points" meta="Fiche · Mindmap" />
+            <ListItem href="#cartes" thumb={<ChapterCover compact module="03" />} eyebrow="Le conducteur" title="Alcool et médicaments" meta="2 erreurs à revoir" />
+            <ListItem href="#cartes" thumb={<ChapterCover compact module="05" />} eyebrow="Infractions" title="Permis à points" meta="Fiche · Mindmap" />
           </Panel>
         </div>
         <div className="mt-4 grid gap-4 md:grid-cols-3">

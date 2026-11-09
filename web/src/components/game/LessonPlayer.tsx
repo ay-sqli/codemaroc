@@ -220,11 +220,11 @@ export function LessonIntro({
             {signs.length > 0 && (
               <section className="mt-8">
                 <h2 className="duo-h mb-3 text-xl">{t("Les panneaux à reconnaître", "العلامات التي يجب التعرف عليها")}</h2>
-                <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <ul className="columns-2 gap-3 sm:columns-3">
                   {signs.map((q) => (
-                    <li key={q.id} className="duo-card flex flex-col items-center gap-2 p-3 text-center">
-                      <img src={q.img} alt="" data-zoom className="h-20 w-full object-contain" />
-                      <span className={cx(lang === "ar" && "ar", "text-[14px] font-semibold leading-snug text-[var(--duo-ink)]")}>{qText(q, lang).rappel}</span>
+                    <li key={q.id} className="duo-card mb-3 break-inside-avoid overflow-hidden !p-0 text-center">
+                      <img src={q.img} alt="" data-zoom className="block h-auto w-full" />
+                      <span className={cx(lang === "ar" && "ar", "block p-2 text-[14px] font-semibold leading-snug text-[var(--duo-ink)]")}>{qText(q, lang).rappel}</span>
                     </li>
                   ))}
                 </ul>
@@ -501,8 +501,8 @@ export function LessonPlay({
             </p>
             {tx.prompt && <h1 className={cx("duo-h text-[22px] leading-snug sm:text-[26px]", lang === "ar" && "leading-relaxed")}>{tx.prompt}</h1>}
             {q.img && (
-              <div className="duo-card mx-auto mt-5 h-44 w-full max-w-[280px] overflow-hidden p-3">
-                <img src={q.img} alt="" data-zoom className="block h-full w-full object-contain" />
+              <div className="duo-card mx-auto mt-5 w-fit max-w-full overflow-hidden !p-0">
+                <img src={q.img} alt="" data-zoom className="block h-44 w-auto max-w-full object-cover" />
               </div>
             )}
             <div className="mt-6 space-y-3" role={q.multi ? "group" : "radiogroup"}>

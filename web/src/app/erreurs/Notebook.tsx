@@ -133,7 +133,7 @@ export function Notebook() {
                     <div className="flex items-center gap-3 p-3">
                       <button aria-expanded={isOpen} className="flex min-w-0 flex-1 items-center gap-3 text-start" onClick={() => setOpen(isOpen ? null : it.id)}>
                         {q.img ? (
-                          <img src={q.img} alt="" className="h-14 w-20 shrink-0 rounded-[12px] border-2 border-line bg-white object-contain" />
+                          <img src={q.img} alt="" className="h-14 w-20 shrink-0 rounded-[12px] border-2 border-line bg-white object-cover" />
                         ) : (
                           <span className="grid h-14 w-20 shrink-0 place-items-center rounded-[12px] bg-panel">{ch && <ModuleIcon id={ch.module} />}</span>
                         )}
