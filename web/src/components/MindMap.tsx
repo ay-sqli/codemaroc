@@ -141,7 +141,13 @@ export function MindMap({ md, title }: { md: string; title: string }) {
           </Button>
         </div>
       </div>
-      <svg ref={svgRef} className="markmap size-full pt-12" />
+      {/* Tracé de gauche à droite même en arabe : en RTL, l'étiquette (une boîte très large) s'aligne à
+          droite et le foreignObject la rogne entièrement. Chaque phrase garde son propre sens d'écriture. */}
+      <svg
+        ref={svgRef}
+        style={{ direction: "ltr" }}
+        className="markmap size-full pt-12 [&_foreignObject>div]:text-left [&_foreignObject>div]:[unicode-bidi:plaintext]"
+      />
     </div>
   );
 }

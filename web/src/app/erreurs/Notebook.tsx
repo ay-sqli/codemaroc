@@ -60,8 +60,8 @@ export function Notebook() {
         <PageHeader
           title={t("Carnet d'erreurs", "دفتر الأخطاء")}
           desc={t(
-            "Chaque question ratée revient selon la méthode Leitner : demain, puis après 2, 4, 8 et 16 jours. Bonne réponse : elle monte d'une boîte. Erreur : retour à la boîte 1.",
-            "كل سؤال أخطأت فيه يعود حسب طريقة لايتنر: غدا، ثم بعد 2 و4 و8 و16 يوما. جواب صحيح: يصعد إلى العلبة الموالية. خطأ: يعود إلى العلبة 1.",
+            "Chaque question ratée revient selon la méthode Leitner : demain, puis après 2, 4 et 8 jours. Bonne réponse : elle monte d'une boîte. Erreur : retour à la boîte 1.",
+            "كل سؤال أخطأت فيه يعود حسب طريقة لايتنر: غدا، ثم بعد 2 و4 و8 أيام. جواب صحيح: يصعد إلى العلبة الموالية. خطأ: يعود إلى العلبة 1.",
           )}
           actions={
             <ButtonLink href="/entrainement/session/?mode=notebook&n=30" size="lg" variant={due.length ? "primary" : "secondary"} icon={<BellRing className="size-4" />}>

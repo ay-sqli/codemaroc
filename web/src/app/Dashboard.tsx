@@ -26,7 +26,7 @@ const FAQ_FR = [
   },
   {
     q: "Comment fonctionne le carnet d'erreurs ?",
-    a: "Chaque question ratée revient selon la méthode Leitner : le lendemain, puis après 2, 4, 8 et 16 jours. Une bonne réponse la fait monter d'une boîte, une erreur la renvoie au début. Au bout de 5 bonnes réponses espacées, elle est considérée comme maîtrisée.",
+    a: "Chaque question ratée revient selon la méthode Leitner : le lendemain, puis après 2, 4 et 8 jours. Une bonne réponse la fait monter d'une boîte, une erreur la renvoie au début. Au bout de 4 bonnes réponses espacées, elle est considérée comme maîtrisée.",
   },
   {
     q: "Les corrigés des questions officielles sont-ils fiables ?",
@@ -34,7 +34,7 @@ const FAQ_FR = [
   },
   {
     q: "Ma progression est-elle sauvegardée ?",
-    a: "Oui, dans ce navigateur uniquement (aucun compte n'est nécessaire). Depuis la page Progression, tu peux exporter un fichier de sauvegarde et l'importer sur un autre appareil.",
+    a: "Oui, automatiquement dans ton compte, après chaque réponse : tu la retrouves sur tous tes appareils en te connectant. Depuis la page Progression, tu peux aussi exporter une copie de secours dans un fichier.",
   },
 ];
 
@@ -49,7 +49,7 @@ const FAQ_AR = [
   },
   {
     q: "كيف يعمل دفتر الأخطاء ؟",
-    a: "كل سؤال أخطأت فيه يعود إليك حسب طريقة لايتنر: في اليوم الموالي، ثم بعد 2 و4 و8 و16 يوما. الجواب الصحيح يرفعه درجة، والخطأ يعيده إلى البداية. بعد 5 أجوبة صحيحة متباعدة، يُعتبر السؤال متقنا.",
+    a: "كل سؤال أخطأت فيه يعود إليك حسب طريقة لايتنر: في اليوم الموالي، ثم بعد 2 و4 و8 أيام. الجواب الصحيح يرفعه درجة، والخطأ يعيده إلى البداية. بعد 4 أجوبة صحيحة متباعدة، يُعتبر السؤال متقنا.",
   },
   {
     q: "هل تصحيحات الأسئلة الرسمية موثوقة ؟",
@@ -57,7 +57,7 @@ const FAQ_AR = [
   },
   {
     q: "هل يتم حفظ تقدمي ؟",
-    a: "نعم، في هذا المتصفح فقط (لا حاجة لإنشاء حساب). من صفحة التقدم، يمكنك تصدير ملف الحفظ واستيراده على جهاز آخر.",
+    a: "نعم، تلقائيا في حسابك بعد كل جواب: تجده على كل أجهزتك عند تسجيل الدخول. ومن صفحة التقدم، يمكنك أيضا تصدير نسخة احتياطية في ملف.",
   },
 ];
 

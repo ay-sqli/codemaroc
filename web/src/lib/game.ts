@@ -5,6 +5,7 @@ import type { Bank } from "./questions";
 import { shuffle } from "./questions";
 import type { GameState, State } from "./store";
 import type { Chapter, Question } from "./types";
+import type { IconName } from "@/components/game/GameIcon";
 
 /**
  * Parcours façon jeu : toutes les questions de la banque rangées en étapes, de la plus facile à la plus
@@ -229,6 +230,15 @@ export function questionsFor(node: GameNode, bank: Bank, s: State): Question[] {
 export function heartsFor(kind: NodeKind) {
   return HEARTS[kind];
 }
+
+/** Grade du conducteur selon le nombre d'étapes validées. */
+export const RANKS: { min: number; fr: string; ar: string; icon: IconName }[] = [
+  { min: 0, fr: "Débutant", ar: "مبتدئ", icon: "first-step" },
+  { min: 10, fr: "Apprenti", ar: "متعلم", icon: "learner" },
+  { min: 50, fr: "Conducteur", ar: "سائق", icon: "wheel" },
+  { min: 130, fr: "Confirmé", ar: "متمرس", icon: "mountain" },
+  { min: 250, fr: "Champion", ar: "بطل", icon: "champion" },
+];
 
 /** Défis du jour (quêtes). */
 export function dailyQuests(g: GameState, day: string) {

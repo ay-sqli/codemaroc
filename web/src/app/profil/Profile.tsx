@@ -3,14 +3,15 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
-  ArrowRight, BookOpen, CalendarDays, ChartNoAxesColumn, ClipboardCheck, CloudCheck, CloudOff, Loader2, Lock, LogOut,
+  ArrowRight, BookOpen, CalendarDays, ChartNoAxesColumn, CircleHelp, ClipboardCheck, CloudCheck, CloudOff, Loader2, Lock, LogOut,
   RefreshCw, ShieldCheck, Target, Trash2, User, UserCog,
 } from "lucide-react";
 import { api, logout, updateSessionUser, useSession, type SessionUser } from "@/lib/session";
 import { fmtDate, useLang } from "@/lib/i18n";
 import { streak, useStore } from "@/lib/store";
 import { useBank } from "@/lib/questions";
-import { buildPath, currentIndex, SECTION_COLORS } from "@/lib/game";
+import { buildPath, currentIndex, RANKS, SECTION_COLORS } from "@/lib/game";
+import { openGuide } from "@/lib/guide";
 import { nameOf } from "@/lib/courses";
 import { flushProgress, useSyncStatus } from "@/components/CloudSync";
 import { BadgesCard } from "@/components/game/GameShell";
@@ -47,15 +48,6 @@ function Msg({ ok, text }: { ok: boolean; text: string }) {
   return <p className={cx("rounded-[12px] px-3 py-2 text-[14px] font-[700]", ok ? "bg-[#eafaf1] text-[#198754]" : "bg-[#fdedec] text-[#c0392b]")}>{text}</p>;
 }
 
-/** Grade du conducteur selon le nombre d'étapes validées. */
-const RANKS = [
-  { min: 0, fr: "Débutant", ar: "مبتدئ", icon: "first-step" as IconName },
-  { min: 10, fr: "Apprenti", ar: "متعلم", icon: "learner" as IconName },
-  { min: 50, fr: "Conducteur", ar: "سائق", icon: "wheel" as IconName },
-  { min: 130, fr: "Confirmé", ar: "متمرس", icon: "mountain" as IconName },
-  { min: 250, fr: "Champion", ar: "بطل", icon: "champion" as IconName },
-];
-
 const dayKey = (d: Date) => d.toISOString().slice(0, 10);
 
 /* ───────────── Page ───────────── */
@@ -68,6 +60,16 @@ export function Profile() {
   return (
     <div className="mx-auto max-w-[960px] space-y-4 sm:space-y-5">
       <Identity user={user} />
+      <button onClick={() => openGuide()} className="flex w-full items-center gap-3 rounded-[18px] border-2 border-line bg-white p-3 text-start shadow-[0_3px_0_var(--c-grey-300)] hover:bg-panel">
+        <span className="grid size-10 shrink-0 place-items-center rounded-[11px] bg-[var(--duo-blue-50)] text-[var(--duo-blue)]">
+          <CircleHelp className="size-6" strokeWidth={2.3} />
+        </span>
+        <span className="min-w-0 flex-1">
+          <span className="block text-[15px] font-[800] text-ink">{t("Revoir le guide de l'application", "إعادة مشاهدة دليل التطبيق")}</span>
+          <span className="block text-[13px] text-muted">{t("Chaque page, chaque bouton et chaque astuce", "كل صفحة وكل زر وكل حيلة")}</span>
+        </span>
+        <ArrowRight className="size-5 shrink-0 text-muted rtl:rotate-180" />
+      </button>
       <div role="tablist" className="grid grid-cols-2 gap-1 rounded-[16px] border-2 border-line bg-white p-1">
         {(
           [

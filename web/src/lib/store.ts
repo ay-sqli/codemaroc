@@ -3,9 +3,8 @@
 import { useSyncExternalStore } from "react";
 
 /**
- * Progression de l'utilisateur, stockée uniquement dans son navigateur (localStorage).
- * Pas de base de données : chaque personne qui ouvre l'app a sa propre progression,
- * exportable / importable en JSON depuis la page Progression.
+ * Progression de l'utilisateur : gardée dans le navigateur (localStorage) et synchronisée
+ * avec son compte par CloudSync. Exportable / importable en JSON depuis la page Progression.
  */
 
 export interface AnswerStat {
@@ -52,6 +51,8 @@ export interface GameState {
   sound: boolean;
   /** Date du dernier fichier de sauvegarde téléchargé. */
   lastBackup?: number;
+  /** Date à laquelle le guide de démarrage a été terminé ou quitté. */
+  onboarded?: number;
 }
 
 export interface State {
@@ -228,6 +229,11 @@ export function recordCombo(combo: number) {
   });
 }
 
+/** Le guide de démarrage ne se relancera plus tout seul sur ce compte. */
+export function setOnboarded() {
+  set((s) => ({ ...s, game: { ...s.game, onboarded: s.game.onboarded ?? Date.now() } }));
+}
+
 export function setGameSound(sound: boolean) {
   set((s) => ({ ...s, game: { ...s.game, sound } }));
 }
@@ -314,6 +320,7 @@ export function mergeStates(a: State, b: State): State {
       lessonDays: maxMap(a.game.lessonDays, b.game?.lessonDays),
       comboDays: maxMap(a.game.comboDays, b.game?.comboDays),
       lastBackup: Math.max(a.game.lastBackup ?? 0, b.game?.lastBackup ?? 0) || undefined,
+      onboarded: Math.max(a.game.onboarded ?? 0, b.game?.onboarded ?? 0) || undefined,
     },
   };
 }

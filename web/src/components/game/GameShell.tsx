@@ -3,8 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMemo, useRef, useState, useSyncExternalStore } from "react";
-import { BookOpen, ClipboardCheck, Gauge, LayoutDashboard, Lightbulb, Map as MapIcon, NotebookPen, PanelLeftClose, PanelLeftOpen, Shapes, ShieldCheck, Target, CircleUserRound, CloudCheck, Download, Upload } from "lucide-react";
+import { BookOpen, CircleHelp, ClipboardCheck, Ellipsis, Gauge, LayoutDashboard, Lightbulb, Map as MapIcon, NotebookPen, PanelLeftClose, PanelLeftOpen, Shapes, ShieldCheck, Target, CircleUserRound, CloudCheck, Download, Upload, X } from "lucide-react";
 import { useSession } from "@/lib/session";
+import { openGuide } from "@/lib/guide";
 import { useSyncStatus } from "@/components/CloudSync";
 import { downloadBackup, importState, streak, today, useStore } from "@/lib/store";
 import { useBank } from "@/lib/questions";
@@ -205,8 +206,8 @@ export function BadgesCard() {
 }
 
 /**
- * Sauvegarde : la progression est enregistrée automatiquement dans le navigateur à chaque réponse.
- * Le fichier de sauvegarde protège contre un nettoyage du navigateur et permet de changer d'appareil.
+ * Sauvegarde : la progression est enregistrée automatiquement dans le compte à chaque réponse.
+ * Le fichier de sauvegarde est une copie de secours facultative.
  */
 export function BackupCard() {
   const { lang, t } = useLang();
@@ -346,8 +347,12 @@ export function GameShell({ children }: { children: React.ReactNode }) {
     { href: "/profil/", label: t("Mon profil", "ملفي"), icon: CircleUserRound },
     ...(session.user?.role === "admin" ? [{ href: "/admin/", label: t("Back-office", "لوحة الإدارة"), icon: ShieldCheck }] : []),
   ];
-  const mobile = [nav[0], nav[1], nav[3], nav[4], nav[9]];
+  const mobile = [nav[0], nav[1], nav[3], nav[4]];
+  // Sur téléphone, tout ce qui n'a pas d'onglet passe par le menu « Plus ».
+  const more = nav.filter((n) => !mobile.includes(n));
+  const [moreOpen, setMoreOpen] = useState(false);
   const active = (href: string) => (href === "/" ? path === "/" : path.startsWith(href.replace(/\/$/, "")));
+  const moreActive = more.some((n) => active(n.href));
   // Le parcours a sa colonne de droite (chiffres, défis du jour) ; les autres pages prennent toute la largeur.
   const home = path === "/";
   // Pendant un quiz, la barre d'actions du quiz occupe le bas de l'écran mobile.
@@ -390,6 +395,14 @@ export function GameShell({ children }: { children: React.ReactNode }) {
               )}
             </Link>
           ))}
+          <button
+            onClick={() => openGuide()}
+            title={t("Guide de l'application", "دليل التطبيق")}
+            className="relative flex h-12 shrink-0 items-center justify-center gap-4 rounded-[12px] border-2 border-transparent px-3 text-[15px] font-[800] uppercase tracking-wide text-[var(--duo-muted)] hover:bg-[var(--duo-snow)] lg:justify-start"
+          >
+            <CircleHelp className="size-7 shrink-0" strokeWidth={2.2} />
+            <span className="hidden truncate lg:inline">{t("Guide", "الدليل")}</span>
+          </button>
         </nav>
         <div className="mt-3 border-t-2 border-[var(--duo-grey)] pt-3">
           <ProfileChip active={active("/profil/")} />
@@ -449,7 +462,46 @@ export function GameShell({ children }: { children: React.ReactNode }) {
             {!!badge && <span className="absolute end-[22%] top-1.5 grid min-w-5 place-items-center rounded-full bg-[var(--duo-red)] px-1 text-[11px] text-white">{badge}</span>}
           </Link>
         ))}
+        <button onClick={() => setMoreOpen(true)} aria-label={t("Plus", "المزيد")} aria-expanded={moreOpen} className="relative grid place-items-center py-2.5">
+          <span className={cx("grid size-11 place-items-center rounded-[12px] border-2", moreActive || moreOpen ? "border-[#84d8ff] bg-[var(--duo-blue-50)] text-[var(--duo-blue)]" : "border-transparent text-[var(--duo-muted)]")}>
+            <Ellipsis className="size-6" strokeWidth={2.6} />
+          </span>
+        </button>
       </nav>
+
+      {/* Menu « Plus » (mobile) */}
+      {moreOpen && (
+        <div className="fixed inset-0 z-50 flex items-end bg-black/50 md:hidden" onClick={() => setMoreOpen(false)}>
+          <div data-more-menu="" className="duo-sheet w-full rounded-t-[20px] bg-white px-4 pb-[calc(env(safe-area-inset-bottom)+16px)] pt-4" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={t("Plus", "المزيد")}>
+            <div className="mb-3 flex items-center justify-between">
+              <p className="duo-h text-[20px]">{t("Plus", "المزيد")}</p>
+              <button onClick={() => setMoreOpen(false)} aria-label={t("Fermer le menu", "إغلاق القائمة")} className="grid size-10 place-items-center rounded-full text-[var(--duo-muted)] hover:bg-[var(--duo-snow)]">
+                <X className="size-6" strokeWidth={2.6} />
+              </button>
+            </div>
+            <ul data-more-list="" className="grid grid-cols-2 gap-2">
+              {more.map(({ href, label, icon: Icon }) => (
+                <li key={href}>
+                  <Link href={href} onClick={() => setMoreOpen(false)} className={cx("flex h-14 items-center gap-2.5 rounded-[14px] border-2 px-3 text-[14px] font-[800]", active(href) ? "border-[#84d8ff] bg-[var(--duo-blue-50)] text-[var(--duo-blue)]" : "border-[var(--duo-grey)] text-[var(--duo-ink)]")}>
+                    <Icon className="size-6 shrink-0" strokeWidth={2.2} />
+                    <span className="min-w-0 truncate">{label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <button
+              data-more-guide=""
+              onClick={() => {
+                setMoreOpen(false);
+                openGuide();
+              }}
+              className="mt-2 flex h-14 w-full items-center gap-2.5 rounded-[14px] bg-[var(--duo-blue-50)] px-3 text-[14px] font-[800] text-[var(--duo-blue)]"
+            >
+              <CircleHelp className="size-6 shrink-0" strokeWidth={2.2} /> {t("Guide de l'application", "دليل التطبيق")}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
