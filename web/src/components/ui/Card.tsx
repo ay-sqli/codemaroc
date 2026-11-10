@@ -62,7 +62,7 @@ export function ListItem({
 
 /** Carte produit verticale : visuel 16:9, éditeur, titre, méta. */
 export function ProductCard({
-  href, media, eyebrow, title, subtitle, meta, footer, className,
+  href, media, eyebrow, title, subtitle, meta, footer, className, square,
 }: {
   href: string;
   media: ReactNode;
@@ -72,13 +72,15 @@ export function ProductCard({
   meta?: ReactNode;
   footer?: ReactNode;
   className?: string;
+  /** Visuel carré : pour les panneaux, que le format 16:9 couperait. */
+  square?: boolean;
 }) {
   return (
     <Link
       href={href}
       className={cx("group flex flex-col overflow-hidden rounded-[16px] border-2 border-line bg-white shadow-[0_4px_0_var(--c-grey-200)] transition-transform hover:-translate-y-0.5", className)}
     >
-      <div className="relative aspect-[16/9] overflow-hidden bg-panel">{media}</div>
+      <div className={cx("relative overflow-hidden bg-panel", square ? "aspect-square" : "aspect-[16/9]")}>{media}</div>
       <div className="flex flex-1 flex-col gap-1 p-4">
         {eyebrow && <div className="flex items-center gap-2 text-xs text-muted">{eyebrow}</div>}
         <h3 className="line-clamp-2 text-base font-[800] leading-snug text-ink">{title}</h3>

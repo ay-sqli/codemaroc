@@ -163,8 +163,8 @@ export function Progress() {
           <h2 className="t-h4 mb-2">{t("Sauvegarde", "الحفظ")}</h2>
           <p className="mb-4 text-sm text-ink-2">
             {t(
-              "Ta progression est enregistrée uniquement dans ce navigateur. Exporte-la pour la transférer sur un autre appareil.",
-              "يُحفظ تقدمك في هذا المتصفح فقط. قم بتصديره لنقله إلى جهاز آخر.",
+              "Ta progression est enregistrée automatiquement dans ton compte. Tu peux aussi en garder une copie dans un fichier.",
+              "يُحفظ تقدمك تلقائيا في حسابك. ويمكنك أيضا الاحتفاظ بنسخة منه في ملف.",
             )}
             {nFlags > 0 &&
               t(

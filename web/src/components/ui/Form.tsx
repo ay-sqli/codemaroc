@@ -115,6 +115,7 @@ export function ChoiceOption({
           : selected
             ? "border-info bg-[#ebf5fb] shadow-[0_4px_0_#1f618d]"
             : "border-line bg-white shadow-[0_4px_0_var(--c-grey-300)] hover:bg-panel";
+  const { t } = useLang();
   const mark = state === "correct" || (selected && !state) ? "border-info bg-info" : state === "wrong" ? "border-ko bg-ko" : "border-line-strong bg-white";
   return (
     <button
@@ -134,7 +135,7 @@ export function ChoiceOption({
       >
         {(selected || state === "correct") && (multi ? <Check className="size-3.5" strokeWidth={3} /> : <span className="size-2 rounded-full bg-white" />)}
       </span>
-      <span className="sr-only">Option {index + 1}</span>
+      <span className="sr-only">{t(`Option ${index + 1}`, `الخيار ${index + 1}`)}</span>
       <span className="min-w-0 flex-1 text-[16px] font-[700] leading-relaxed text-ink">{children}</span>
     </button>
   );

@@ -10,10 +10,11 @@ import { cx } from "./ui";
  * ou emblème seul (`compact`) quand la place manque.
  */
 export function Wordmark({ className, compact = false }: { className?: string; compact?: boolean }) {
+  const { t } = useLang();
   return (
     <img
       src={asset(compact ? "/brand/emblem-160.webp" : "/brand/logo.webp")}
-      alt="Code Maroc — كود المغرب"
+      alt={t("Code Maroc", "كود المغرب")}
       draggable={false}
       className={cx("select-none", compact ? "h-14 w-auto" : "h-auto w-[210px]", className)}
     />

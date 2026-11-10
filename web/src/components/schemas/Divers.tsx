@@ -102,14 +102,14 @@ export function Energie() {
 
 /* ------------------------------------------------------------------ Formes et couleurs */
 const SHAPES: { s: string; c: string; t: FA; m: FA; d: FA }[] = [
-  { s: "triangle", c: "#dc2626", t: ["Triangle rouge", "مثلث أحمر"], m: ["DANGER (علامة الخطر)", "علامة الخطر"], d: ["Placé à 150 m hors agglomération, 50 m en agglomération.", "يوضع على بعد 150 م خارج التجمعات العمرانية، و50 م داخلها."] },
-  { s: "circle-red", c: "#dc2626", t: ["Rond à bord rouge", "دائرة بإطار أحمر"], m: ["INTERDICTION (المنع)", "المنع"], d: ["S'applique dès le panneau, jusqu'à la prochaine intersection ou la fin.", "يُطبَّق ابتداء من العلامة إلى غاية ملتقى الطرق الموالي أو علامة النهاية."] },
-  { s: "circle-blue", c: "#2563eb", t: ["Rond bleu", "دائرة زرقاء"], m: ["OBLIGATION (الإجبار)", "الإجبار"], d: ["Ce qu'il faut faire : direction, chemin obligatoire, vitesse minimale…", "ما يجب فعله: الاتجاه، المسلك الإجباري، السرعة الدنيا…"] },
-  { s: "square", c: "#2563eb", t: ["Carré / rectangle bleu", "مربع / مستطيل أزرق"], m: ["INDICATION (الإرشاد)", "الإرشاد"], d: ["Information : parking, hôpital, sens unique, voie sans issue…", "معلومة: موقف، مستشفى، اتجاه وحيد، طريق مسدود…"] },
+  { s: "triangle", c: "#dc2626", t: ["Triangle rouge", "مثلث أحمر"], m: ["DANGER", "علامة الخطر"], d: ["Placé à 150 m hors agglomération, 50 m en agglomération.", "يوضع على بعد 150 م خارج التجمعات العمرانية، و50 م داخلها."] },
+  { s: "circle-red", c: "#dc2626", t: ["Rond à bord rouge", "دائرة بإطار أحمر"], m: ["INTERDICTION", "المنع"], d: ["S'applique dès le panneau, jusqu'à la prochaine intersection ou la fin.", "يُطبَّق ابتداء من العلامة إلى غاية ملتقى الطرق الموالي أو علامة النهاية."] },
+  { s: "circle-blue", c: "#2563eb", t: ["Rond bleu", "دائرة زرقاء"], m: ["OBLIGATION", "الإجبار"], d: ["Ce qu'il faut faire : direction, chemin obligatoire, vitesse minimale…", "ما يجب فعله: الاتجاه، المسلك الإجباري، السرعة الدنيا…"] },
+  { s: "square", c: "#2563eb", t: ["Carré / rectangle bleu", "مربع / مستطيل أزرق"], m: ["INDICATION", "الإرشاد"], d: ["Information : parking, hôpital, sens unique, voie sans issue…", "معلومة: موقف، مستشفى، اتجاه وحيد، طريق مسدود…"] },
   { s: "end-black", c: "#111827", t: ["Barre noire sur fond blanc", "شريط أسود على خلفية بيضاء"], m: ["FIN D'INTERDICTION", "نهاية المنع"], d: ["Fin d'une limitation, d'une interdiction de dépasser…", "نهاية تحديد أو منع التجاوز…"] },
   { s: "end-red", c: "#dc2626", t: ["Barre rouge sur fond bleu", "شريط أحمر على خلفية زرقاء"], m: ["FIN D'OBLIGATION", "نهاية الإجبار"], d: ["Fin de vitesse minimale, fin de piste cyclable…", "نهاية السرعة الدنيا، نهاية مسلك الدراجات…"] },
-  { s: "yellow", c: "#facc15", t: ["Fond jaune", "خلفية صفراء"], m: ["TEMPORAIRE (المؤقت)", "التشوير المؤقت"], d: ["Travaux, déviation : il prime sur la signalisation permanente.", "أشغال، تحويلة: مقدَّم على التشوير الدائم."] },
-  { s: "octagon", c: "#dc2626", t: ["Octogone rouge", "مثمن أحمر"], m: ["STOP (قف)", "قف"], d: ["Arrêt absolu puis céder le passage à droite et à gauche.", "وقوف تام، ثم فسح المجال لليمين ولليسار."] },
+  { s: "yellow", c: "#facc15", t: ["Fond jaune", "خلفية صفراء"], m: ["TEMPORAIRE", "التشوير المؤقت"], d: ["Travaux, déviation : il prime sur la signalisation permanente.", "أشغال، تحويلة: مقدَّم على التشوير الدائم."] },
+  { s: "octagon", c: "#dc2626", t: ["Octogone rouge", "مثمن أحمر"], m: ["STOP", "قف"], d: ["Arrêt absolu puis céder le passage à droite et à gauche.", "وقوف تام، ثم فسح المجال لليمين ولليسار."] },
   { s: "inv-triangle", c: "#dc2626", t: ["Triangle pointe en bas", "مثلث رأسه إلى الأسفل"], m: ["CÉDEZ LE PASSAGE", "فسح المجال"], d: ["Laisser passer sans obligation de s'arrêter si c'est libre.", "ترك الآخرين يمرون دون إلزامية التوقف إذا كانت الطريق فارغة."] },
   { s: "losange", c: "#facc15", t: ["Losange jaune", "معين أصفر"], m: ["ROUTE PRIORITAIRE", "طريق ذات أولوية"], d: ["Priorité à toutes les intersections jusqu'au losange barré.", "الأسبقية في جميع ملتقيات الطرق إلى غاية المعين المشطوب."] },
 ];
@@ -265,7 +265,7 @@ export function Stationnement() {
     <div className="space-y-4">
       <div className="grid gap-2 sm:grid-cols-2">
         <div className="rounded-2xl bg-brand/10 p-4">
-          <p className="ar text-lg font-black">{t("الوقوف = Arrêt", "الوقوف")}</p>
+          <p className="text-lg font-black">{t("Arrêt", "الوقوف")}</p>
           <p className="text-sm font-semibold">
             {t(
               "Immobilisation brève (monter/descendre, charger). Le conducteur reste dans le véhicule ou tout près.",
@@ -274,7 +274,7 @@ export function Stationnement() {
           </p>
         </div>
         <div className="rounded-2xl bg-accent/10 p-4">
-          <p className="ar text-lg font-black">{t("التوقف = Stationnement", "التوقف")}</p>
+          <p className="text-lg font-black">{t("Stationnement", "التوقف")}</p>
           <p className="text-sm font-semibold">{t("Moteur arrêté, le conducteur quitte le véhicule.", "المحرك متوقف، والسائق يغادر المركبة.")}</p>
         </div>
       </div>
@@ -376,7 +376,7 @@ export function Points() {
 const PAS_STEPS: { k: FA; t: FA; d: FA[] }[] = [
   {
     k: ["P", "1"],
-    t: ["PROTÉGER — حماية", "الحماية"],
+    t: ["PROTÉGER", "الحماية"],
     d: [
       ["Warning + gilet jaune AVANT de descendre", "أضواء الإغاثة + السترة العاكسة قبل النزول"],
       ["Triangle à distance suffisante", "المثلث على مسافة كافية"],
@@ -386,7 +386,7 @@ const PAS_STEPS: { k: FA; t: FA; d: FA[] }[] = [
   },
   {
     k: ["A", "2"],
-    t: ["ALERTER — التبليغ", "الإخبار"],
+    t: ["ALERTER", "الإخبار"],
     d: [
       ["15 ou 150 : pompiers (protection civile)", "15 أو 150: الوقاية المدنية"],
       ["19 : police · 177 : gendarmerie", "19: الشرطة · 177: الدرك الملكي"],
@@ -399,7 +399,7 @@ const PAS_STEPS: { k: FA; t: FA; d: FA[] }[] = [
   },
   {
     k: ["S", "3"],
-    t: ["SECOURIR — الإغاثة", "الإسعاف"],
+    t: ["SECOURIR", "الإسعاف"],
     d: [
       ["Libérer les voies respiratoires, couvrir, parler à la victime", "تحرير المسالك التنفسية، تغطية الضحية والتحدث إليها"],
       ["Ne pas déplacer la victime (sauf danger immédiat)", "لا تحرك الضحية (إلا في حالة خطر فوري)"],

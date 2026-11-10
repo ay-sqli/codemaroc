@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useMemo, useRef, useState } from "react";
-import { BookOpen, ClipboardCheck, Gauge, LayoutDashboard, Lightbulb, Map as MapIcon, NotebookPen, Shapes, ShieldCheck, Target, CircleUserRound, CloudCheck, Download, Upload } from "lucide-react";
+import { useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { BookOpen, CircleHelp, ClipboardCheck, Ellipsis, Gauge, LayoutDashboard, Lightbulb, Map as MapIcon, NotebookPen, PanelLeftClose, PanelLeftOpen, Shapes, ShieldCheck, Target, CircleUserRound, CloudCheck, Download, Upload, X } from "lucide-react";
 import { useSession } from "@/lib/session";
+import { openGuide } from "@/lib/guide";
 import { useSyncStatus } from "@/components/CloudSync";
 import { downloadBackup, importState, streak, today, useStore } from "@/lib/store";
 import { useBank } from "@/lib/questions";
@@ -14,6 +15,37 @@ import { fmtDate, useLang } from "@/lib/i18n";
 import { cx } from "@/components/ui";
 import { LangSwitch, Wordmark } from "@/components/Chrome";
 import { GameIcon, type IconName } from "./GameIcon";
+
+/** Menu latéral fermé ou ouvert, mémorisé dans le navigateur. */
+const MENU_KEY = "codemaroc-menu-ferme";
+const menuListeners = new Set<() => void>();
+let menuClosed: boolean | null = null;
+
+function readMenuClosed() {
+  if (menuClosed === null) {
+    try {
+      menuClosed = localStorage.getItem(MENU_KEY) === "1";
+    } catch {
+      menuClosed = false;
+    }
+  }
+  return menuClosed;
+}
+
+function setMenuClosed(v: boolean) {
+  menuClosed = v;
+  try {
+    localStorage.setItem(MENU_KEY, v ? "1" : "0");
+  } catch {}
+  menuListeners.forEach((l) => l());
+}
+
+function subscribeMenu(cb: () => void) {
+  menuListeners.add(cb);
+  return () => {
+    menuListeners.delete(cb);
+  };
+}
 
 function useDueCount() {
   const srs = useStore((s) => s.srs);
@@ -49,6 +81,32 @@ export function StatsRow({ className }: { className?: string }) {
         <span className="duo-mono text-[17px] font-[700]">
           {s.done}
           {s.total ? <span className="text-[13px] text-[var(--duo-grey-d)]">/{s.total}</span> : null}
+        </span>
+      </span>
+    </div>
+  );
+}
+
+/** Chiffres en pastilles régulières pour la barre du haut sur téléphone. */
+function StatsPills() {
+  const { t } = useLang();
+  const s = useGameStats();
+  const pill = "flex h-9 items-center gap-1 rounded-full bg-[var(--duo-snow)] ps-1 pe-2.5";
+  return (
+    <div className="flex min-w-0 items-center gap-1.5" dir="ltr">
+      <span className={pill} title={t("Jours d'affilée", "أيام متتالية")}>
+        <GameIcon name="flame" size={24} dim={!s.streak} />
+        <span className={cx("duo-mono text-[15px] font-[700]", s.streak ? "text-[var(--duo-orange)]" : "text-[var(--duo-grey-d)]")}>{s.streak}</span>
+      </span>
+      <span className={pill} title="XP">
+        <GameIcon name="xp" size={24} />
+        <span className="duo-mono text-[15px] font-[700] text-[var(--duo-yellow-d)]">{s.xp}</span>
+      </span>
+      <span className={pill} title={t("Étapes validées", "المراحل المكتملة")}>
+        <GameIcon name="crown" size={24} />
+        <span className="duo-mono text-[15px] font-[700] text-[var(--duo-yellow-d)]">
+          {s.done}
+          {s.total ? <span className="text-[12px] text-[var(--duo-grey-d)] max-[359px]:hidden">/{s.total}</span> : null}
         </span>
       </span>
     </div>
@@ -148,8 +206,8 @@ export function BadgesCard() {
 }
 
 /**
- * Sauvegarde : la progression est enregistrée automatiquement dans le navigateur à chaque réponse.
- * Le fichier de sauvegarde protège contre un nettoyage du navigateur et permet de changer d'appareil.
+ * Sauvegarde : la progression est enregistrée automatiquement dans le compte à chaque réponse.
+ * Le fichier de sauvegarde est une copie de secours facultative.
  */
 export function BackupCard() {
   const { lang, t } = useLang();
@@ -289,21 +347,36 @@ export function GameShell({ children }: { children: React.ReactNode }) {
     { href: "/profil/", label: t("Mon profil", "ملفي"), icon: CircleUserRound },
     ...(session.user?.role === "admin" ? [{ href: "/admin/", label: t("Back-office", "لوحة الإدارة"), icon: ShieldCheck }] : []),
   ];
-  const mobile = [nav[0], nav[1], nav[3], nav[4], nav[9]];
+  const mobile = [nav[0], nav[1], nav[3], nav[4]];
+  // Sur téléphone, tout ce qui n'a pas d'onglet passe par le menu « Plus ».
+  const more = nav.filter((n) => !mobile.includes(n));
+  const [moreOpen, setMoreOpen] = useState(false);
   const active = (href: string) => (href === "/" ? path === "/" : path.startsWith(href.replace(/\/$/, "")));
+  const moreActive = more.some((n) => active(n.href));
   // Le parcours a sa colonne de droite (chiffres, défis du jour) ; les autres pages prennent toute la largeur.
   const home = path === "/";
   // Pendant un quiz, la barre d'actions du quiz occupe le bas de l'écran mobile.
   const inQuiz = path.startsWith("/entrainement/session");
+  const closed = useSyncExternalStore(subscribeMenu, readMenuClosed, () => false);
 
   return (
     <div className="duo min-h-dvh bg-[var(--duo-canvas)]">
       {/* Barre latérale (ordinateur / tablette) */}
-      <aside className="fixed inset-y-0 start-0 z-40 hidden w-[88px] flex-col border-e-2 border-[var(--duo-grey)] bg-white px-3 py-6 md:flex lg:w-64 lg:px-4">
-        <Link href="/" className="mb-4 flex justify-center px-1 lg:justify-start lg:px-3" aria-label={t("Parcours", "المسار")}>
-          <Wordmark compact className="!h-12 lg:hidden" />
-          <Wordmark className="!h-[60px] !w-auto max-lg:hidden" />
-        </Link>
+      <aside className={cx("fixed inset-y-0 start-0 z-40 w-[88px] flex-col border-e-2 border-[var(--duo-grey)] bg-white px-3 py-6 lg:w-64 lg:px-4", closed ? "hidden" : "hidden md:flex")}>
+        <div className="mb-4 flex flex-col items-center gap-2 lg:flex-row lg:justify-between lg:ps-3">
+          <Link href="/" aria-label={t("Parcours", "المسار")}>
+            <Wordmark compact className="!h-12 lg:hidden" />
+            <Wordmark className="!h-[60px] !w-auto max-lg:hidden" />
+          </Link>
+          <button
+            onClick={() => setMenuClosed(true)}
+            aria-label={t("Fermer le menu", "إغلاق القائمة")}
+            title={t("Fermer le menu", "إغلاق القائمة")}
+            className="grid size-10 shrink-0 place-items-center rounded-[12px] text-[var(--duo-muted)] hover:bg-[var(--duo-snow)]"
+          >
+            <PanelLeftClose className="flip-rtl size-6" strokeWidth={2.2} />
+          </button>
+        </div>
         <nav className="flex flex-1 flex-col gap-1.5 overflow-y-auto">
           {nav.map(({ href, label, icon: Icon, badge }) => (
             <Link
@@ -322,6 +395,14 @@ export function GameShell({ children }: { children: React.ReactNode }) {
               )}
             </Link>
           ))}
+          <button
+            onClick={() => openGuide()}
+            title={t("Guide de l'application", "دليل التطبيق")}
+            className="relative flex h-12 shrink-0 items-center justify-center gap-4 rounded-[12px] border-2 border-transparent px-3 text-[15px] font-[800] uppercase tracking-wide text-[var(--duo-muted)] hover:bg-[var(--duo-snow)] lg:justify-start"
+          >
+            <CircleHelp className="size-7 shrink-0" strokeWidth={2.2} />
+            <span className="hidden truncate lg:inline">{t("Guide", "الدليل")}</span>
+          </button>
         </nav>
         <div className="mt-3 border-t-2 border-[var(--duo-grey)] pt-3">
           <ProfileChip active={active("/profil/")} />
@@ -331,18 +412,29 @@ export function GameShell({ children }: { children: React.ReactNode }) {
         </div>
       </aside>
 
-      <div className="md:ps-[88px] lg:ps-64">
-        {/* Barre du haut (mobile) */}
-        <header className="sticky top-0 z-30 flex h-14 items-center gap-2.5 border-b-2 border-[var(--duo-grey)] bg-white px-3 md:hidden">
-          <Link href="/" aria-label={t("Parcours", "المسار")} className="shrink-0">
-            <Wordmark compact className="!h-9" />
-          </Link>
-          <StatsRow className="min-w-0 flex-1" />
-          {/* Petits écrans : le globe seul, pour laisser la place à l'avatar. */}
-          <LangSwitch className="!h-9 shrink-0 px-0 max-[480px]:[&>span]:hidden" />
-          <Link href="/profil/" aria-label={t("Mon profil", "ملفي")} className="shrink-0">
-            <Avatar name={session.user?.name ?? "?"} size="size-9 text-[15px]" />
-          </Link>
+      {/* Menu fermé : un seul bouton, dans une marge réservée, pour le rouvrir. */}
+      {closed && (
+        <button
+          onClick={() => setMenuClosed(false)}
+          aria-label={t("Ouvrir le menu", "فتح القائمة")}
+          title={t("Ouvrir le menu", "فتح القائمة")}
+          className="fixed start-3 top-4 z-40 hidden size-11 place-items-center rounded-[12px] border-2 border-[var(--duo-grey)] bg-white text-[var(--duo-muted)] shadow-[0_3px_0_var(--c-grey-200)] hover:bg-[var(--duo-snow)] md:grid"
+        >
+          <PanelLeftOpen className="flip-rtl size-6" strokeWidth={2.2} />
+        </button>
+      )}
+
+      <div className={closed ? "md:ps-[72px]" : "md:ps-[88px] lg:ps-64"}>
+        {/* Barre du haut (mobile) : chiffres à gauche, langue et profil à droite. */}
+        <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-2 border-b-2 border-[var(--duo-grey)] bg-white px-3 md:hidden">
+          <StatsPills />
+          <div className="flex shrink-0 items-center gap-1.5">
+            {/* Petits écrans : le globe seul, pour laisser la place à l'avatar. */}
+            <LangSwitch className="!h-9 shrink-0 px-0 max-[480px]:[&>span]:hidden" />
+            <Link href="/profil/" aria-label={t("Mon profil", "ملفي")} className="shrink-0">
+              <Avatar name={session.user?.name ?? "?"} size="size-9 text-[15px]" />
+            </Link>
+          </div>
         </header>
         {home ? (
           <div className="mx-auto flex max-w-[1060px] justify-center gap-12 px-4 pb-28 pt-6 sm:px-6 md:pb-12">
@@ -370,7 +462,46 @@ export function GameShell({ children }: { children: React.ReactNode }) {
             {!!badge && <span className="absolute end-[22%] top-1.5 grid min-w-5 place-items-center rounded-full bg-[var(--duo-red)] px-1 text-[11px] text-white">{badge}</span>}
           </Link>
         ))}
+        <button onClick={() => setMoreOpen(true)} aria-label={t("Plus", "المزيد")} aria-expanded={moreOpen} className="relative grid place-items-center py-2.5">
+          <span className={cx("grid size-11 place-items-center rounded-[12px] border-2", moreActive || moreOpen ? "border-[#84d8ff] bg-[var(--duo-blue-50)] text-[var(--duo-blue)]" : "border-transparent text-[var(--duo-muted)]")}>
+            <Ellipsis className="size-6" strokeWidth={2.6} />
+          </span>
+        </button>
       </nav>
+
+      {/* Menu « Plus » (mobile) */}
+      {moreOpen && (
+        <div className="fixed inset-0 z-50 flex items-end bg-black/50 md:hidden" onClick={() => setMoreOpen(false)}>
+          <div data-more-menu="" className="duo-sheet w-full rounded-t-[20px] bg-white px-4 pb-[calc(env(safe-area-inset-bottom)+16px)] pt-4" onClick={(e) => e.stopPropagation()} role="dialog" aria-modal="true" aria-label={t("Plus", "المزيد")}>
+            <div className="mb-3 flex items-center justify-between">
+              <p className="duo-h text-[20px]">{t("Plus", "المزيد")}</p>
+              <button onClick={() => setMoreOpen(false)} aria-label={t("Fermer le menu", "إغلاق القائمة")} className="grid size-10 place-items-center rounded-full text-[var(--duo-muted)] hover:bg-[var(--duo-snow)]">
+                <X className="size-6" strokeWidth={2.6} />
+              </button>
+            </div>
+            <ul data-more-list="" className="grid grid-cols-2 gap-2">
+              {more.map(({ href, label, icon: Icon }) => (
+                <li key={href}>
+                  <Link href={href} onClick={() => setMoreOpen(false)} className={cx("flex h-14 items-center gap-2.5 rounded-[14px] border-2 px-3 text-[14px] font-[800]", active(href) ? "border-[#84d8ff] bg-[var(--duo-blue-50)] text-[var(--duo-blue)]" : "border-[var(--duo-grey)] text-[var(--duo-ink)]")}>
+                    <Icon className="size-6 shrink-0" strokeWidth={2.2} />
+                    <span className="min-w-0 truncate">{label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <button
+              data-more-guide=""
+              onClick={() => {
+                setMoreOpen(false);
+                openGuide();
+              }}
+              className="mt-2 flex h-14 w-full items-center gap-2.5 rounded-[14px] bg-[var(--duo-blue-50)] px-3 text-[14px] font-[800] text-[var(--duo-blue)]"
+            >
+              <CircleHelp className="size-6 shrink-0" strokeWidth={2.2} /> {t("Guide de l'application", "دليل التطبيق")}
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

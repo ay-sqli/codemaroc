@@ -67,7 +67,7 @@ export function Voyants({ only }: { only?: "all" | "lights" }) {
       <ul className="grid gap-2.5 sm:grid-cols-2">
         {list.map((v) => (
           <li key={v.id} className="duo-card flex items-center gap-3 !rounded-[18px] p-3" style={{ borderInlineStartColor: TONE[v.tone].ring, borderInlineStartWidth: 5 }}>
-            <img src={asset(`/voyants/${v.id}.webp`)} alt="" className="size-14 shrink-0 rounded-[12px] bg-[var(--duo-snow)] p-1.5" />
+            <img src={asset(`/voyants/${v.id}.webp`)} alt="" className="size-14 shrink-0 rounded-[12px] bg-[var(--duo-snow)] object-cover" />
             <span className="min-w-0">
               <span className={cx("block text-[15px] font-[800] text-[var(--duo-ink)]")}>{lang === "ar" ? v.ar : v.fr}</span>
               <span className="block text-[13px] font-[500] leading-snug text-[var(--duo-muted)]">{lang === "ar" ? v.dar : v.dfr}</span>

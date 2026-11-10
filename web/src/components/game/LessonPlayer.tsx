@@ -20,6 +20,7 @@ import { preloadSounds, sfx } from "./sounds";
 import { GameIcon } from "./GameIcon";
 import { VOYANT_UNITS, Voyants } from "./Voyants";
 import { RoadScene } from "./RoadScene";
+import { RichText } from "@/components/RichText";
 
 const HAS_AR = /[؀-ۿ]/;
 const PRAISE: [string, string][] = [
@@ -219,11 +220,11 @@ export function LessonIntro({
             {signs.length > 0 && (
               <section className="mt-8">
                 <h2 className="duo-h mb-3 text-xl">{t("Les panneaux à reconnaître", "العلامات التي يجب التعرف عليها")}</h2>
-                <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <ul className="columns-2 gap-3 sm:columns-3">
                   {signs.map((q) => (
-                    <li key={q.id} className="duo-card flex flex-col items-center gap-2 p-3 text-center">
-                      <img src={q.img} alt="" data-zoom className="h-20 w-full object-contain" />
-                      <span className="ar text-[14px] font-semibold leading-snug text-[var(--duo-ink)]">{q.rappel}</span>
+                    <li key={q.id} className="duo-card mb-3 break-inside-avoid overflow-hidden !p-0 text-center">
+                      <img src={q.img} alt="" data-zoom className="block h-auto w-full" />
+                      <span className={cx(lang === "ar" && "ar", "block p-2 text-[14px] font-semibold leading-snug text-[var(--duo-ink)]")}>{qText(q, lang).rappel}</span>
                     </li>
                   ))}
                 </ul>
@@ -236,7 +237,7 @@ export function LessonIntro({
                   {points.map((p, i) => (
                     <li key={i} className="duo-card flex items-start gap-3 p-3.5">
                       <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[var(--duo-yellow)] text-[13px] font-[800] text-white">{i + 1}</span>
-                      <span className={cx("text-[15px] font-[600] leading-relaxed text-[var(--duo-ink)]", lang === "fr" && HAS_AR.test(p) && "ar")}>{p}</span>
+                      <RichText text={p} max={2} className="text-[15px] font-[600] leading-relaxed text-[var(--duo-ink)]" />
                     </li>
                   ))}
                 </ol>
@@ -463,13 +464,13 @@ export function LessonPlay({
         {official ? (
           <>
             <h1 className="duo-h mb-4 text-[22px] leading-snug sm:text-[26px]">
-              {showPrompt && tx.prompt ? tx.prompt : t("Coche la ou les bonnes cases", "اختر الخانة أو الخانات الصحيحة")}
+              {(showPrompt || lang === "fr") && tx.prompt ? tx.prompt : t("Coche la ou les bonnes cases", "اختر الخانة أو الخانات الصحيحة")}
             </h1>
             <div className="duo-card overflow-hidden !p-0">
               <img src={q.img} alt={t("Question", "السؤال")} data-zoom data-caption="" className="w-full bg-[#1f1f1f] object-contain" />
             </div>
             <div className="mt-4 flex items-center gap-3" dir="ltr">
-              {q.audio && <AudioButton src={q.audio} auto={autoAudio} />}
+              {lang === "ar" && q.audio && <AudioButton src={q.audio} auto={autoAudio} />}
               <p className="text-[14px] font-[700] text-[var(--duo-muted)]" dir={lang === "ar" ? "rtl" : "ltr"}>
                 {t("Une ou plusieurs cases à cocher", "خانة واحدة أو أكثر")}
               </p>
@@ -499,10 +500,9 @@ export function LessonPlay({
               </span>
             </p>
             {tx.prompt && <h1 className={cx("duo-h text-[22px] leading-snug sm:text-[26px]", lang === "ar" && "leading-relaxed")}>{tx.prompt}</h1>}
-            {tx.promptAlt && <p className={cx("mt-1 font-[600] text-[var(--duo-muted)]", HAS_AR.test(tx.promptAlt) ? "ar text-[17px]" : "text-[15px]")}>{tx.promptAlt}</p>}
             {q.img && (
-              <div className="duo-card mx-auto mt-5 h-44 w-full max-w-[280px] overflow-hidden p-3">
-                <img src={q.img} alt="" data-zoom className="block h-full w-full object-contain" />
+              <div className="duo-card mx-auto mt-5 w-fit max-w-full overflow-hidden !p-0">
+                <img src={q.img} alt="" data-zoom className="block h-44 w-auto max-w-full object-cover" />
               </div>
             )}
             <div className="mt-6 space-y-3" role={q.multi ? "group" : "radiogroup"}>
@@ -571,11 +571,11 @@ export function LessonPlay({
                   )}
                 </div>
               </div>
-              <p className={cx("mt-3 text-[15px] font-[500] leading-relaxed", checked.ok ? "text-[var(--duo-green-d)]" : "text-[#922b21]")}>{tx.explanation}</p>
+              <p className={cx("mt-3 text-[15px] font-[500] leading-relaxed", checked.ok ? "text-[var(--duo-green-d)]" : "text-[#922b21]")}><RichText text={tx.explanation} /></p>
               {!checked.ok && tx.rappel && tx.rappel !== tx.explanation && tx.rappel !== answerText && (
                 <p className="mt-2 flex items-start gap-2 rounded-[12px] bg-white/70 p-3 text-[15px] font-[700] text-[var(--duo-ink)]">
                   <Lightbulb className="mt-0.5 size-5 shrink-0 text-[var(--duo-yellow-d)]" />
-                  <span className={cx(lang === "fr" && HAS_AR.test(tx.rappel) && "ar")}>{tx.rappel}</span>
+                  <RichText text={tx.rappel} max={2} />
                 </p>
               )}
               {!checked.ok && requeue && (

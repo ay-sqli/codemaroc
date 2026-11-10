@@ -1,6 +1,6 @@
 "use client";
 
-import { pickDistractors } from "./choices";
+import { pickDistractors, tooClose } from "./choices";
 import { useEffect, useState } from "react";
 import { asset } from "./base";
 import type { Card, ExamQuestion, Question, RuleQuestion } from "./types";
@@ -108,27 +108,31 @@ export function shuffle<T>(arr: T[], rnd: () => number = Math.random) {
  */
 function cardsToQuestions(cards: Card[]): Question[] {
   const out: Question[] = [];
+  const frOf = new Map<string, string>();
+  for (const c of cards) if (c.labelFr && !frOf.has(c.label)) frOf.set(c.label, c.labelFr);
   for (const card of cards) {
     if (card.label.length > 140) continue;
-    const rnd = seeded(card.img + card.label);
-    const pool = pickDistractors(card, cards, rnd);
+    const key = card.k ?? card.label;
+    const rnd = seeded(card.img + key);
+    const pool = pickDistractors(card, cards, rnd, 3, (a, b) => tooClose(frOf.get(a) ?? a, frOf.get(b) ?? b));
     if (!pool) continue;
     const options = shuffle([card.label, ...pool], rnd);
     out.push({
-      id: `s:${hash(card.img + "|" + card.label)}`,
+      id: `s:${hash(card.img + "|" + key)}`,
       kind: "sign",
       chapter: card.chapter,
       prompt: "Que signifie ce panneau / ce schéma ?",
       promptAr: "ماذا تعني هذه العلامة ؟",
       img: asset(card.img),
-      options: options.map((label) => ({ label })),
+      options: options.map((label) => ({ label: frOf.get(label) ?? label, labelAr: label })),
       answer: [options.indexOf(card.label)],
       multi: false,
-      explanation: `La bonne réponse est « ${card.label} »${card.section ? ` — catégorie : ${cleanSection(card.section)}` : ""}.`,
-      explanationAr: `الجواب الصحيح هو « ${card.label} »${card.section ? ` — الفئة: ${cleanSection(card.section).replace(/\s*\([^)]*\)\s*$/, "")}` : ""}.`,
-      rappel: card.label,
+      explanation: `La bonne réponse est « ${card.labelFr} »${card.sectionFr ? ` — catégorie : ${cleanSection(card.sectionFr)}` : ""}.`,
+      explanationAr: `الجواب الصحيح هو « ${card.label} »${card.section ? ` — الفئة: ${cleanSection(card.section)}` : ""}.`,
+      rappel: card.labelFr,
       rappelAr: card.label,
       section: card.section,
+      sectionFr: card.sectionFr,
     });
   }
   return out;

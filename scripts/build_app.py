@@ -37,6 +37,68 @@ def rel(path, start):
     return os.path.relpath(path, start).replace('\\', '/')
 
 
+# ---------------------------------------------------------------- langues
+# Chaque texte existe en deux versions complètes : l'arabe ne contient plus de français entre
+# parenthèses et le français plus d'arabe. Restent seulement ce qui est écrit tel quel sur les
+# panneaux et les sigles techniques (STOP, TAXI, ABS…).
+_AR = '؀-ۿ'
+KEEP_IN_PAREN = re.compile(r'^(ABS|ESP|AFU|GPS)$')
+PAREN_LATIN = re.compile(rf'\s*\((?![^)]*[{_AR}])(?=[^)]*[A-Za-zÀ-ÿ]{{2}})([^)]*)\)')
+PAREN_ARABIC = re.compile(rf'\s*\((?=[^)]*[{_AR}])(?![^)]*[A-Za-zÀ-ÿ]{{3}})[^)]*\)')
+AR_REPLACE = [
+    ('START & STOP', 'التشغيل والإيقاف التلقائي'), ('Start & Stop', 'التشغيل والإيقاف التلقائي'),
+    ('القاعدة الذهبية P.A.S', 'القاعدة الذهبية: حماية، تبليغ، إغاثة'),
+    ('P.A.S بالترتيب', 'حماية ثم تبليغ ثم إغاثة بالترتيب'),
+    ('Warning', 'أضواء الإغاثة'), ('PTAC', 'الوزن الإجمالي المأذون به'),
+    ('تقبله NARSA', 'تقبله الوكالة الوطنية للسلامة الطرقية'),
+    ('mg/l', 'ملغ/ل'), ('g/l', 'غ/ل'), ('(V ÷ 10)', '(السرعة ÷ 10)'), ('(X)', '(×)'),
+    ('600m', '600 م'), ('15km', '15 كلم'),
+    (' مصطلحات الملخصات: الوقوف = arrêt، التوقف = stationnement.', ''),
+    ('« وادي الكل – OUED EL KELL »', '« وادي الكل »'),
+]
+
+
+def clean_ar(text):
+    '''Texte arabe sans insertion française.'''
+    if not text:
+        return text
+    out = PAREN_LATIN.sub(lambda m: m.group(0) if KEEP_IN_PAREN.match(m.group(1).strip()) else '', text)
+    for a, b in AR_REPLACE:
+        out = out.replace(a, b)
+    out = re.sub(r'(\d{1,2})h(\d{2})?\b', lambda m: f'{m.group(1)}:{m.group(2) or "00"}', out)
+    out = re.sub(r'\bX (م|متر)\b', r'س \1', out)
+    return out if out.strip() else text
+
+
+def clean_fr(text):
+    '''Texte français sans insertion arabe.'''
+    return PAREN_ARABIC.sub('', text) if text else text
+
+
+def clean_md_ar(md):
+    return '\n'.join(clean_ar(line) for line in md.split('\n'))
+
+
+def load_important_images():
+    '''Image « هام جدا » : ce n'est pas un panneau, on la remplace par un encadré « important ».'''
+    with open(os.path.join(BASE, 'content', 'important_images.json'), encoding='utf-8') as fh:
+        return set(json.load(fh))
+
+
+def load_tables_fr():
+    '''Tableaux publiés en image (texte arabe) : leur version française, recopiée ligne par ligne.'''
+    with open(os.path.join(BASE, 'content', 'i18n', 'tables_fr.json'), encoding='utf-8') as fh:
+        return json.load(fh)
+
+
+def mark_tables(md, tables):
+    return IMG_RE.sub(lambda m: f'[table:{m.group(1)}]' if m.group(1) in tables else m.group(0), md)
+
+
+def mark_important(md, names):
+    return IMG_RE.sub(lambda m: '[!]' if m.group(1) in names else m.group(0), md)
+
+
 # ---------------------------------------------------------------- images
 def build_image_index():
     """{slug: {nom: chemin_absolu}} + index global {nom: chemin_absolu}."""
@@ -196,7 +258,27 @@ def write_anki(cards, slug, out_dir):
     with open(os.path.join(out_dir, f'{slug}.csv'), 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f, delimiter=';', quoting=csv.QUOTE_MINIMAL)
         for c in cards:
-            w.writerow([f'<img src="{rel(os.path.join(BASE, c["img"]), out_dir)}">', c['label']])
+            w.writerow([f'<img src="{rel(os.path.join(BASE, c["img"]), out_dir)}">', clean_ar(c['label'])])
+
+
+def load_cards_fr():
+    '''Traduction des cartes qui ne viennent pas des fiches (CSV historiques).'''
+    with open(os.path.join(BASE, 'content', 'i18n', 'cards_fr.json'), encoding='utf-8') as fh:
+        return json.load(fh)
+
+
+def attach_french(cards, md_fr, slug, per_chapter, global_index, table):
+    '''Ajoute labelFr / sectionFr : la fiche française a les mêmes lignes que la fiche arabe.'''
+    fr = extract_cards(md_fr, slug, per_chapter, global_index) if md_fr else []
+    from_md = [c for c in cards if not c.get('legacy')]
+    if len(fr) != len(from_md):
+        print(f'⚠️ {slug} : {len(fr)} cartes françaises pour {len(from_md)} cartes arabes')
+    for c, f in zip(from_md, fr):
+        c['labelFr'], c['sectionFr'] = f['label'], f['section']
+    for c in cards:
+        if 'labelFr' not in c:
+            c['labelFr'] = table.get(c['label'], '')
+            c['sectionFr'] = ''
 
 
 # ---------------------------------------------------------------- examen
@@ -221,6 +303,10 @@ def load_exam_bank():
     return out
 
 
+with open(os.path.join(BASE, 'content', 'legacy_cards_exclude.json'), encoding='utf-8') as _fh:
+    LEGACY_EXCLUDE = set(json.load(_fh))
+
+
 def legacy_cards(slug):
     """Cartes des CSV historiques (chapitres 01–03, plus complets que leur mindmap)."""
     path = os.path.join(BASE, 'outputs', f'{slug}.csv')
@@ -234,7 +320,10 @@ def legacy_cards(slug):
                 continue
             img = os.path.normpath(os.path.join(BASE, 'outputs', m.group(1)))
             if os.path.exists(img):
-                cards.append({'img': rel(img, BASE), 'label': row[1].strip(), 'section': ''})
+                # Certaines lignes de ces CSV ont un intitulé décalé d'une image : elles sont écartées.
+                if f'{os.path.basename(img)}|{row[1].strip()}' in LEGACY_EXCLUDE:
+                    continue
+                cards.append({'img': rel(img, BASE), 'label': row[1].strip(), 'section': '', 'legacy': True})
     return cards
 
 
@@ -312,6 +401,12 @@ def load_i18n(sub):
     return out
 
 
+def load_fr_overrides():
+    '''Textes français réécrits là où l'arabe était intégré à la phrase.'''
+    with open(os.path.join(BASE, 'content', 'i18n', 'fr_overrides.json'), encoding='utf-8') as fh:
+        return json.load(fh)
+
+
 def merge_memo():
     """memo.json + memo.ar.json → champs titleAr / introAr / qa / aa / ha."""
     with open(os.path.join(BASE, 'content', 'memo.json'), encoding='utf-8') as fh:
@@ -333,6 +428,52 @@ def merge_memo():
     return memo
 
 
+def export_pictos(media, per_chapter, global_index):
+    '''Petites images glissées dans le texte : mot-clé (arabe, français) → image vérifiée.'''
+    with open(os.path.join(BASE, 'content', 'pictos.json'), encoding='utf-8') as fh:
+        entries = json.load(fh)
+    out = []
+    for e in entries:
+        url = e.get('src')
+        if not url:
+            path = resolve(e['img'], '', per_chapter, global_index)
+            if not path:
+                print(f'⚠️ picto introuvable : {e["img"]}')
+                continue
+            url = media.url(rel(path, BASE))
+        out.append({'url': url, 'ar': e['ar'], 'fr': e['fr']})
+    return out
+
+
+# Couverture de repli (illustration de l'app, pleine page) quand un cours n'a aucune image carrée.
+COVER_FALLBACK = {
+    '14_dangers_exceptionnels': 'eboulement', '04_precautions_portieres': 'parking-taxis', '06_etat_sante': 'route-cotiere',
+    '02_alcool_medicaments': 'marquage-croise', '05_sous_influence': 'marquage-croise', '03_vigilance': 'sortie-ecole',
+    '02_amendes': 'barrage-police', '03_immobilisation_fourriere': 'parking', '04_delits': 'barrage-police',
+    '05_homicide_blessures': 'barrage-police', '06_suspension_retrait': 'barrage-police', '07_annexe_infractions': 'barrage-police',
+}
+
+
+def pick_cover(md, slug, tables):
+    '''Image de carte : un panneau à peu près carré, jamais un tableau ; sinon une photo ; sinon une illustration.'''
+    from PIL import Image
+    if slug in COVER_FALLBACK:
+        return f'/tiles/{COVER_FALLBACK[slug]}.webp'
+    urls = [u for u in re.findall(r'<img src="([^"]+)"', md) if os.path.basename(u) not in tables]
+    sized = []
+    for u in urls:
+        try:
+            with Image.open(os.path.join(WEB, 'public', u.lstrip('/'))) as im:
+                sized.append((u, im.width / im.height))
+        except OSError:
+            continue
+    for lo, hi in ((0.85, 1.2), (0.7, 1.9)):
+        for u, ratio in sized:
+            if lo <= ratio <= hi:
+                return u
+    return '/tiles/route-cotiere.webp'
+
+
 def export_web(modules_out, bank, per_chapter, global_index):
     if not os.path.isdir(WEB):
         return
@@ -342,17 +483,26 @@ def export_web(modules_out, bank, per_chapter, global_index):
     for d in (src_data, pub_data):
         os.makedirs(d, exist_ok=True)
 
-    courses, cards = [], []
+    courses, cards, courses_fr = [], [], {}
+    tables_cover = {safe_name(k) for k in load_tables_fr()}
     for mod in modules_out:
         chapters = []
         for ch in mod['chapters']:
-            c = {k: v for k, v in ch.items() if k not in ('md', 'cards', 'mindmap', 'anki')}
+            c = {k: v for k, v in ch.items() if k not in ('md', 'md_fr', 'cards', 'mindmap', 'anki')}
             if ch['ready']:
-                c['md'] = media.rewrite_md(ch['md'])
+                c['md'] = media.rewrite_md(clean_md_ar(ch['md']))
+                c['cover'] = pick_cover(c['md'], ch['slug'], tables_cover)
+                courses_fr[ch['slug']] = media.rewrite_md(ch['md_fr'])
                 c['nCards'] = len(ch['cards'])
                 for card in ch['cards']:
-                    cards.append({'img': media.url(card['img']), 'label': card['label'],
-                                  'section': card['section'], 'chapter': ch['slug'], 'module': mod['id']})
+                    label = clean_ar(card['label'])
+                    item = {'img': media.url(card['img']), 'label': label, 'labelFr': card['labelFr'],
+                            'section': clean_ar(card['section']), 'sectionFr': card['sectionFr'],
+                            'chapter': ch['slug'], 'module': mod['id']}
+                    # Identifiant de question stable : les erreurs déjà enregistrées restent valables.
+                    if label != card['label']:
+                        item['k'] = card['label']
+                    cards.append(item)
             chapters.append(c)
         courses.append({k: v for k, v in mod.items() if k != 'chapters'} | {'chapters': chapters})
 
@@ -366,11 +516,16 @@ def export_web(modules_out, bank, per_chapter, global_index):
 
     exam = []
     exam_ar = load_i18n('exam_ar')
+    fr_fix = load_fr_overrides()
     for q in bank:
         q = dict(q)
+        for k, v in fr_fix.get(f'E:{q["id"]}', {}).items():
+            q[k] = v
+        for k in ('q', 'e', 'r'):
+            q[k] = clean_fr(q.get(k))
         t = exam_ar.get(q['id'])
         if t:
-            q['qa'], q['ea'], q['ra'] = t.get('q'), t.get('e'), t.get('r')
+            q['qa'], q['ea'], q['ra'] = clean_ar(t.get('q')), clean_ar(t.get('e')), clean_ar(t.get('r'))
         q['img'] = '/' + q['img']
         q['audio'] = '/' + q['audio'] if q.get('audio') else None
         exam.append(q)
@@ -390,23 +545,38 @@ def export_web(modules_out, bank, per_chapter, global_index):
             for c in uniq:
                 if c['chapter'] == slug:
                     w.writerow([f'<img src="{c["img"].rsplit("/", 1)[-1]}">', c['label']])
+        with open(os.path.join(anki, f'{slug}.fr.csv'), 'w', encoding='utf-8', newline='') as f:
+            w = csv.writer(f, delimiter=';')
+            for c in uniq:
+                if c['chapter'] == slug:
+                    w.writerow([f'<img src="{c["img"].rsplit("/", 1)[-1]}">', c['labelFr']])
 
     dump(os.path.join(src_data, 'courses.json'), courses)
+    # À part : seule la page d'un cours (côté serveur) en a besoin, le reste de l'app reste léger.
+    dump(os.path.join(src_data, 'courses_fr.json'), courses_fr)
+    dump(os.path.join(src_data, 'tables_fr.json'), load_tables_fr())
     dump(os.path.join(pub_data, 'cards.json'), uniq)
     dump(os.path.join(pub_data, 'exam.json'), exam)
     quiz = load_quiz(media, per_chapter, global_index)
     quiz_ar = load_i18n('quiz_ar')
     for q in quiz:
+        for k, v in fr_fix.get(f'Q:{q["id"]}', {}).items():
+            q[k] = v
+        for k in ('q', 'e', 'r'):
+            q[k] = clean_fr(q.get(k))
+        q['o'] = [clean_fr(o) for o in q['o']]
+        q['qa'] = clean_ar(q.get('qa'))
         t = quiz_ar.get(q['id'])
         if not t:
             continue
         if len(t.get('o', [])) == len(q['o']):
-            q['oa'] = t['o']
+            q['oa'] = [clean_ar(o) for o in t['o']]
         else:
             print(f'⚠️ traduction {q["id"]} : nombre de propositions différent')
-        q['ea'], q['ra'] = t.get('e'), t.get('r')
+        q['ea'], q['ra'] = clean_ar(t.get('e')), clean_ar(t.get('r'))
     dump(os.path.join(pub_data, 'quiz.json'), quiz)
     dump(os.path.join(src_data, 'memo.json'), merge_memo())
+    dump(os.path.join(src_data, 'pictos.json'), export_pictos(media, per_chapter, global_index))
     n_ar = sum(1 for q in quiz if q.get('ea'))
     n_ex = sum(1 for q in exam if q.get('ea'))
     print(f'🌍 arabe : {n_ar}/{len(quiz)} questions de règles, {n_ex}/{len(exam)} questions officielles traduites')
@@ -423,6 +593,9 @@ def main():
         os.makedirs(d, exist_ok=True)
 
     missing, modules_out, total_cards, done = [], [], 0, 0
+    cards_fr = load_cards_fr()
+    important = load_important_images()
+    tables_fr = load_tables_fr()
     for mod in MODULES:
         chapters_out = []
         for slug, pid, emoji, ar, fr, color in mod['chapters']:
@@ -431,16 +604,27 @@ def main():
                      'color': color, 'module': mod['id'], 'ready': False}
             if os.path.exists(src):
                 with open(src, encoding='utf-8') as f:
-                    md = f.read()
+                    md = mark_important(f.read(), important)
+                fr_src = os.path.join(BASE, 'content', 'i18n', 'courses_fr', mod['dir'], f'{slug}.md')
+                if os.path.exists(fr_src):
+                    with open(fr_src, encoding='utf-8') as f:
+                        md_fr = mark_important(f.read(), important)
+                else:
+                    print(f'⚠️ fiche sans version française : {slug}')
+                    md_fr = md
                 cards = extract_cards(md, slug, per_chapter, global_index)
                 known = {c['img'] for c in cards}
                 cards += [c for c in legacy_cards(slug) if c['img'] not in known]
+                attach_french(cards, md_fr, slug, per_chapter, global_index, cards_fr)
+                # Un tableau n'est pas un panneau à reconnaître.
+                cards = [c for c in cards if os.path.basename(c['img']) not in tables_fr]
                 write_mindmap(render_md(md, slug, mm_dir, per_chapter, global_index, missing), fr, slug, mm_dir)
                 if cards:
                     write_anki(cards, slug, anki_dir)
                 entry.update({
                     'ready': True,
                     'md': render_md(md, slug, BASE, per_chapter, global_index, []),
+                    'md_fr': render_md(mark_tables(md_fr, tables_fr), slug, BASE, per_chapter, global_index, []),
                     'cards': cards,
                     'mindmap': f'outputs/mindmaps/{slug}.html',
                     'anki': f'outputs/anki/{slug}.csv' if cards else None,
@@ -449,6 +633,15 @@ def main():
                 done += 1
             chapters_out.append(entry)
         modules_out.append({k: mod[k] for k in ('id', 'dir', 'emoji', 'ar', 'fr', 'desc')} | {'chapters': chapters_out})
+
+    # Cartes historiques dont l'intitulé existe dans une autre fiche : même traduction.
+    known_fr = {c['label']: c['labelFr'] for m in modules_out for ch in m['chapters'] for c in ch.get('cards', []) if c['labelFr']}
+    for m in modules_out:
+        for ch in m['chapters']:
+            for c in ch.get('cards', []):
+                c['labelFr'] = c['labelFr'] or known_fr.get(c['label'], '')
+                if not c['labelFr']:
+                    print(f'⚠️ carte sans français ({ch["slug"]}) : {c["label"]}')
 
     bank = load_exam_bank()
     export_web(modules_out, bank, per_chapter, global_index)

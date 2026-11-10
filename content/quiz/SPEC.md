@@ -27,7 +27,7 @@ les quiz de chapitre et l'examen blanc.
 | `t` | oui | slug exact du chapitre (nom du fichier `.md` sans extension) |
 | `q` | oui | question en français, claire, au style examen |
 | `qa` | oui | la même question en arabe standard, avec le vocabulaire des fiches |
-| `o` | oui | 2 à 4 propositions (français ; on peut ajouter le terme arabe entre parenthèses) |
+| `o` | oui | 2 à 4 propositions (français uniquement : la version arabe est dans `content/i18n/quiz_ar/`) |
 | `a` | oui | indices **à partir de 0** des bonnes propositions (une ou plusieurs) |
 | `e` | oui | explication (1 à 3 phrases) : pourquoi c'est juste, pourquoi le piège est faux |
 | `r` | oui | règle à retenir, très courte (≤ 70 caractères) |

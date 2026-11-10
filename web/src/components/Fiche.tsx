@@ -2,7 +2,9 @@ import { AlertTriangle, Ban, CirclePlay, Lightbulb, type LucideIcon } from "luci
 import { parseMd, splitTitle, type MdNode, type MdSection } from "@/lib/md";
 import { stripEmoji } from "@/lib/courses";
 import { enrich, illustrationFor } from "@/lib/illustrate";
-import { T } from "@/lib/i18n";
+import { T, type Lang } from "@/lib/i18n";
+import { escapeHtml, withPictos } from "@/lib/pictos";
+import tablesFr from "@/data/tables_fr.json";
 
 /**
  * Fiche de cours lisible : une carte par section (numéro, titre, illustration), chiffres et flèches
@@ -11,18 +13,76 @@ import { T } from "@/lib/i18n";
  */
 
 const html = (n: MdNode) => enrich(n.html);
+/** Ligne de texte : les mots-clés reçoivent une petite image. */
+const htmlPics = (n: MdNode, lang: Lang) => enrich(withPictos(n.html, lang));
 
-/** Une ligne de texte : puce colorée, texte aéré, sous-points en retrait. */
-function Row({ n, tone }: { n: MdNode; tone: string }) {
+interface FicheTableData {
+  cols: string[];
+  rows: string[][];
+  note?: string;
+  title?: string;
+}
+
+/** Tableau traduit : une carte par ligne, lisible sur téléphone sans défilement horizontal. */
+function FicheTable({ n, table, lang }: { n: MdNode; table: FicheTableData; lang: Lang }) {
+  return (
+    <li className="min-w-0">
+      <p className="mb-2 text-[17px] font-[800] leading-snug text-[var(--c-grey-975)]" dangerouslySetInnerHTML={{ __html: table.title ? escapeHtml(table.title) : n.html }} />
+      <ol className="space-y-2">
+        {table.rows.map((row, i) => (
+          <li key={i} className="rounded-[14px] border-2 border-line bg-white p-3">
+            <p className="text-[15.5px] font-[700] leading-snug text-ink" dangerouslySetInnerHTML={{ __html: withPictos(escapeHtml(row[0]), lang, 2) }} />
+            {row.length > 1 && (
+              <dl className="mt-2 grid grid-cols-2 gap-1.5">
+                {row.slice(1).map((v, j) => (
+                  <div key={j} className={`rounded-[10px] bg-[var(--c-grey-100)] px-2.5 py-1.5 ${v.length > 24 ? "col-span-2" : ""}`}>
+                    <dt className="text-[12px] font-[600] text-muted">{table.cols[j + 1]}</dt>
+                    <dd className="text-[14.5px] font-[700] leading-snug text-ink">{v}</dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+          </li>
+        ))}
+      </ol>
+      {table.note?.split("\n").map((l, i) => (
+        <p key={i} className="mt-2 text-[13px] leading-relaxed text-muted">
+          {l}
+        </p>
+      ))}
+    </li>
+  );
+}
+
+/** Une ligne de texte : puce colorée, texte aéré, sous-points en retrait (avec leur panneau). */
+function Row({ n, tone, lang }: { n: MdNode; tone: string; lang: Lang }) {
+  const table = n.table ? (tablesFr as Record<string, FicheTableData>)[n.table] : undefined;
+  if (table) return <FicheTable n={n} table={table} lang={lang} />;
+  if (n.important) {
+    return (
+      <li className="fiche-important">
+        <AlertTriangle className="mt-1 size-5 shrink-0 text-[#c0392b]" strokeWidth={2.4} aria-hidden="true" />
+        <div className="min-w-0 flex-1">
+          <p className="text-[12px] font-[800] text-[#c0392b]">
+            <T fr="Très important" ar="مهم جدا" />
+          </p>
+          <p dangerouslySetInnerHTML={{ __html: htmlPics(n, lang) }} />
+        </div>
+      </li>
+    );
+  }
   return (
     <li className="fiche-row">
       <span className="fiche-dot" style={{ background: tone }} aria-hidden="true" />
       <div className="min-w-0 flex-1">
-        <p dangerouslySetInnerHTML={{ __html: html(n) }} />
+        <p dangerouslySetInnerHTML={{ __html: htmlPics(n, lang) }} />
         {n.children.length > 0 && (
           <ul className="mt-2 space-y-1.5">
             {n.children.map((c, i) => (
-              <li key={i} className="rounded-[12px] bg-[var(--c-grey-100)] px-3 py-2 text-[16px]" dangerouslySetInnerHTML={{ __html: html(c) }} />
+              <li key={i} className="flex items-center gap-3 rounded-[12px] bg-[var(--c-grey-100)] px-3 py-2 text-[16px]">
+                {c.img && <img src={c.img} alt="" data-zoom data-caption={stripEmoji(c.text)} loading="lazy" className="h-11 w-auto max-w-[5rem] shrink-0 rounded-[6px] bg-white object-cover" />}
+                <span className="min-w-0 flex-1" dangerouslySetInnerHTML={{ __html: c.img ? html(c) : htmlPics(c, lang) }} />
+              </li>
             ))}
           </ul>
         )}
@@ -40,16 +100,14 @@ function Visual({ n }: { n: MdNode }) {
   const big = n.imgClass === "big" || n.imgClass === "xl";
   return (
     <figure className={`fiche-visual ${big ? "sm:col-span-2" : ""}`}>
-      <span className={`block w-full overflow-hidden rounded-[14px] bg-white p-2 ${big ? "h-56 sm:h-72" : "h-40 sm:h-44"}`}>
-        <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-full w-full object-contain" />
-      </span>
-      <figcaption className="min-w-0 px-1 pb-0.5" dangerouslySetInnerHTML={{ __html: html(n) }} />
+      <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-auto w-full bg-white" />
+      <figcaption className="min-w-0 px-3 pb-2.5" dangerouslySetInnerHTML={{ __html: html(n) }} />
     </figure>
   );
 }
 
 /** Regroupe les éléments consécutifs : suites d'images → grille de cartes ; suites de texte → liste. */
-function Blocks({ items, tone }: { items: MdNode[]; tone: string }) {
+function Blocks({ items, tone, lang }: { items: MdNode[]; tone: string; lang: Lang }) {
   const groups: { img: boolean; list: MdNode[] }[] = [];
   for (const it of items) {
     const img = !!it.img;
@@ -62,18 +120,16 @@ function Blocks({ items, tone }: { items: MdNode[]; tone: string }) {
       {groups.map((g, i) =>
         g.img && g.list.length >= 4 && g.list.every((n) => !n.imgClass) ? (
           // Galerie de panneaux : vignette au-dessus, signification dessous
-          <div key={i} className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+          <div key={i} className="columns-2 gap-3 sm:columns-3">
             {g.list.map((n, j) => (
-              <figure key={j} className="flex flex-col items-center gap-2 rounded-[18px] border-2 border-line bg-white p-2.5 text-center shadow-[0_3px_0_var(--c-grey-200)] sm:p-3">
-                <span className="block h-28 w-full overflow-hidden sm:h-36">
-                  <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-full w-full object-contain" />
-                </span>
-                <figcaption className="text-[14px] font-[600] leading-snug text-ink" dangerouslySetInnerHTML={{ __html: html(n) }} />
+              <figure key={j} className="mb-3 break-inside-avoid overflow-hidden rounded-[18px] border-2 border-line bg-white text-center">
+                <img src={n.img} alt="" data-zoom data-caption={stripEmoji(n.text)} loading="lazy" className="block h-auto w-full" />
+                <figcaption className="px-2.5 py-2 text-[14px] font-[600] leading-snug text-ink" dangerouslySetInnerHTML={{ __html: html(n) }} />
               </figure>
             ))}
           </div>
         ) : g.img ? (
-          <div key={i} className="grid gap-3 sm:grid-cols-2">
+          <div key={i} className="grid items-start gap-3 sm:grid-cols-2">
             {g.list.map((n, j) => (
               <Visual key={j} n={n} />
             ))}
@@ -81,7 +137,7 @@ function Blocks({ items, tone }: { items: MdNode[]; tone: string }) {
         ) : (
           <ul key={i} className="space-y-3">
             {g.list.map((n, j) => (
-              <Row key={j} n={n} tone={tone} />
+              <Row key={j} n={n} tone={tone} lang={lang} />
             ))}
           </ul>
         ),
@@ -93,8 +149,7 @@ function Blocks({ items, tone }: { items: MdNode[]; tone: string }) {
 /** Couleur d'accent qui tourne d'une section à l'autre (charte Code Maroc). */
 const TONES = ["#d92b2b", "#198754", "#2980b9", "#f39c12", "#1b4f72"];
 
-function Special({ s }: { s: MdSection }) {
-  const t = splitTitle(s.title);
+function Special({ s, lang }: { s: MdSection; lang: Lang }) {
   const conf: { Icon: LucideIcon; Mark: LucideIcon; c: string; label: React.ReactNode; box: string; item: string } = {
     tips: { Icon: Lightbulb, Mark: Lightbulb, c: "#b9770e", label: <T fr="Astuces du moniteur" ar="نصائح المدرب" />, box: "border-[#ffe17a] bg-[#fef9e7]", item: "bg-white border-[#ffe17a]" },
     traps: { Icon: AlertTriangle, Mark: Ban, c: "#c0392b", label: <T fr="Pièges d'examen" ar="فخاخ الامتحان" />, box: "border-[#ffb2b2] bg-[#fdedec]", item: "bg-white border-[#ffb2b2]" },
@@ -107,13 +162,12 @@ function Special({ s }: { s: MdSection }) {
           <conf.Icon className="size-6" style={{ color: conf.c }} strokeWidth={2.4} />
         </span>
         <h2 className="t-h3">{conf.label}</h2>
-        <span className="only-fr ar text-sm text-muted">{stripEmoji(t.ar)}</span>
       </header>
       <ul className="grid gap-2.5 md:grid-cols-2">
         {s.items.map((n, i) => (
-          <li key={i} className={`ar flex items-start gap-2.5 rounded-[16px] border-2 p-3 text-[16.5px] leading-[1.9] sm:gap-3 sm:p-3.5 ${conf.item}`}>
+          <li key={i} className={`${lang === "ar" ? "ar leading-[1.9]" : "leading-relaxed"} flex items-start gap-2.5 rounded-[16px] border-2 p-3 text-[16.5px] sm:gap-3 sm:p-3.5 ${conf.item}`}>
             <conf.Mark className="mt-1.5 size-5 shrink-0" style={{ color: conf.c }} strokeWidth={2.4} aria-hidden="true" />
-            <span className="min-w-0 flex-1" dangerouslySetInnerHTML={{ __html: html(n) }} />
+            <span className="min-w-0 flex-1" dangerouslySetInnerHTML={{ __html: htmlPics(n, lang) }} />
           </li>
         ))}
       </ul>
@@ -121,10 +175,9 @@ function Special({ s }: { s: MdSection }) {
   );
 }
 
-function Section({ s, n }: { s: MdSection; n: number }) {
-  if (s.kind !== "normal") return <Special s={s} />;
-  const t = splitTitle(s.title);
-  const ar = stripEmoji(t.ar);
+function Section({ s, n, lang }: { s: MdSection; n: number; lang: Lang }) {
+  if (s.kind !== "normal") return <Special s={s} lang={lang} />;
+  const title = stripEmoji(splitTitle(s.title).title);
   const tone = TONES[(n - 1) % TONES.length];
   const hasImg = s.items.some((it) => it.img);
   // Illustration de l'app quand la section n'a pas d'image du cours (mots-clés du titre, puis du texte).
@@ -142,9 +195,8 @@ function Section({ s, n }: { s: MdSection; n: number }) {
         <div className="min-w-0 flex-1">
           <p className="text-[12px] font-[800] uppercase tracking-wider" style={{ color: tone }}>
             <T fr={`Partie ${n}`} ar={`الجزء ${n}`} />
-            {t.fr && <span className="ms-2 normal-case tracking-normal text-muted">· {t.fr}</span>}
           </p>
-          <h2 className="ar mt-0.5 text-[20px] font-[800] leading-snug text-[var(--c-grey-975)] sm:text-[22px]">{ar}</h2>
+          <h2 className={`${lang === "ar" ? "ar " : ""}mt-0.5 text-[20px] font-[800] leading-snug text-[var(--c-grey-975)] sm:text-[22px]`}>{title}</h2>
         </div>
         {pic && (
           <img
@@ -155,8 +207,8 @@ function Section({ s, n }: { s: MdSection; n: number }) {
           />
         )}
       </header>
-      <div className="ar">
-        <Blocks items={s.items} tone={tone} />
+      <div className={lang === "ar" ? "ar" : "leading-relaxed"}>
+        <Blocks items={s.items} tone={tone} lang={lang} />
       </div>
     </section>
   );
@@ -167,27 +219,25 @@ export function ficheOutline(md: string) {
   const doc = parseMd(md);
   let n = 0;
   return doc.sections.map((s) => {
-    const t = splitTitle(s.title);
     if (s.kind === "normal") n++;
     return {
       id: s.kind === "normal" ? `s-${n}` : `s-${s.kind}`,
       kind: s.kind,
       n,
       tone: TONES[(Math.max(1, n) - 1) % TONES.length],
-      ar: stripEmoji(t.ar),
-      fr: s.kind === "tips" ? "Astuces du moniteur" : s.kind === "traps" ? "Pièges d'examen" : s.kind === "video" ? "Vidéo" : t.fr || stripEmoji(t.ar),
+      title: stripEmoji(splitTitle(s.title).title),
     };
   });
 }
 
-export function Fiche({ md }: { md: string }) {
+export function Fiche({ md, lang }: { md: string; lang: Lang }) {
   const doc = parseMd(md);
   let n = 0;
   return (
     <div className="space-y-6">
       {doc.sections.map((s, i) => {
         if (s.kind === "normal") n++;
-        return <Section key={i} s={s} n={n} />;
+        return <Section key={i} s={s} n={n} lang={lang} />;
       })}
     </div>
   );

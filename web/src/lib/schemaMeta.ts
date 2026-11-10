@@ -17,7 +17,7 @@ export const SCHEMA_META: Record<string, SchemaMeta> = {
   },
   giratoire: {
     title: "Les ronds-points",
-    desc: "ممر دائري ou ملتقى دوراني : qui a la priorité, quelle voie, quel clignotant.",
+    desc: "Anneau circulaire ou carrefour giratoire : qui a la priorité, quelle voie, quel clignotant.",
     titleAr: "المدارات",
     descAr: "ممر دائري أو ملتقى دوراني: من له الأسبقية، أي ممر تسلك، وأي إشارة ضوئية تستعمل.",
     chapters: ["09_parties_speciales"],
@@ -87,7 +87,7 @@ export const SCHEMA_META: Record<string, SchemaMeta> = {
   },
   stationnement: {
     title: "Arrêt & stationnement",
-    desc: "الوقوف / التوقف, distances 5 m et 12 m, emplacements interdits.",
+    desc: "Différence entre arrêt et stationnement, distances 5 m et 12 m, emplacements interdits.",
     titleAr: "الوقوف والتوقف",
     descAr: "الفرق بين الوقوف والتوقف، مسافتا 5 م و12 م، والأماكن الممنوعة.",
     chapters: ["06_arret_stationnement", "08_panonceaux"],

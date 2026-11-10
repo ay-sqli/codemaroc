@@ -1,0 +1,639 @@
+[
+{
+"img": "1682003767977.png",
+"ar": [
+"منع الوقوف والتوقف",
+"ممنوع الوقوف والتوقف"
+],
+"fr": [
+"arrêt et stationnement interdits"
+]
+},
+{
+"img": "1682003767962.png",
+"ar": [
+"منع التوقف",
+"ممنوع التوقف"
+],
+"fr": [
+"stationnement interdit"
+]
+},
+{
+"img": "1681901900516.png",
+"ar": [
+"علامة قف",
+"«قف»",
+"« قف »",
+"لويحة «قف»"
+],
+"fr": [
+"STOP"
+]
+},
+{
+"img": "1689673393547.png",
+"ar": [
+"أترك الأسبقية",
+"أترك حق الأسبقية",
+"فسح المجال"
+],
+"fr": [
+"cédez le passage"
+]
+},
+{
+"img": "1681901900573.png",
+"ar": [
+"الأسبقية لليمين",
+"الأسبقية للقادم من اليمين"
+],
+"fr": [
+"priorité à droite"
+]
+},
+{
+"img": "1681901900614.png",
+"ar": [
+"الطابع الأولوي",
+"طريق ذو أولوية",
+"طريق ذات أولوية",
+"الطريق ذات الأولوية"
+],
+"fr": [
+"caractère prioritaire",
+"route prioritaire"
+]
+},
+{
+"img": "1681901900601.png",
+"ar": [
+"ملتقى طرق دوراني",
+"الملتقى الدوراني",
+"ملتقى دوراني"
+],
+"fr": [
+"carrefour giratoire",
+"carrefour à sens giratoire",
+"rond-point"
+]
+},
+{
+"img": "1682406244008.png",
+"ar": [
+"الاتجاه الممنوع",
+"اتجاه ممنوع"
+],
+"fr": [
+"sens interdit"
+]
+},
+{
+"img": "1682406244372.png",
+"ar": [
+"ممنوع التجاوز",
+"منع التجاوز"
+],
+"fr": [
+"dépassement interdit",
+"interdiction de dépasser"
+]
+},
+{
+"img": "1689851623956.png",
+"ar": [
+"الطريق السيار",
+"طريق سيار",
+"الطرق السيارة"
+],
+"fr": [
+"autoroute",
+"autoroutes"
+]
+},
+{
+"img": "1682079445829.png",
+"ar": [
+"النفق",
+"نفق"
+],
+"fr": [
+"tunnel"
+]
+},
+{
+"img": "1681901900088.png",
+"ar": [
+"ممر الراجلين",
+"ممرات الراجلين"
+],
+"fr": [
+"passage pour piétons",
+"passage piétons",
+"passages piétons",
+"passages pour piétons"
+]
+},
+{
+"img": "1681901900250.png",
+"ar": [
+"تقاطع مع سكة حديدية",
+"سكة حديدية",
+"السكة الحديدية"
+],
+"fr": [
+"passage à niveau",
+"voie ferrée"
+]
+},
+{
+"img": "1681901900291.png",
+"ar": [
+"الترامواي"
+],
+"fr": [
+"tramway"
+]
+},
+{
+"img": "1682079445144.png",
+"ar": [
+"موقف سيارات"
+],
+"fr": [
+"parking"
+]
+},
+{
+"img": "1682079445519.png",
+"ar": [
+"مسلك غير نافذ"
+],
+"fr": [
+"voie sans issue"
+]
+},
+{
+"img": "1682079445323.png",
+"ar": [
+"اتجاه واحد"
+],
+"fr": [
+"sens unique"
+]
+},
+{
+"img": "1704711353845.png",
+"ar": [
+"منطقة 30"
+],
+"fr": [
+"zone 30"
+]
+},
+{
+"img": "1685351739635.png",
+"ar": [
+"الضوء الأحمر"
+],
+"fr": [
+"feu rouge"
+]
+},
+{
+"img": "1685351660429.png",
+"ar": [
+"الأصفر الثابت",
+"الضوء الأصفر"
+],
+"fr": [
+"feu jaune",
+"jaune fixe"
+]
+},
+{
+"img": "1685351683413.png",
+"ar": [
+"الضوء الأخضر"
+],
+"fr": [
+"feu vert"
+]
+},
+{
+"img": "1691675178899.png",
+"ar": [
+"الخط المتصل",
+"خط متصل"
+],
+"fr": [
+"ligne continue"
+]
+},
+{
+"img": "1691675221504.png",
+"ar": [
+"الخط المتقطع",
+"خط متقطع"
+],
+"fr": [
+"ligne discontinue"
+]
+},
+{
+"img": "1696509212779.png",
+"ar": [
+"المخاريط",
+"مخروط"
+],
+"fr": [
+"cône",
+"cônes"
+]
+},
+{
+"img": "1682350019022.png",
+"ar": [
+"طريق وطنية",
+"الطريق الوطنية"
+],
+"fr": [
+"route nationale"
+]
+},
+{
+"img": "1682350019036.png",
+"ar": [
+"طريق جهوية",
+"الطريق الجهوية"
+],
+"fr": [
+"route régionale"
+]
+},
+{
+"img": "1682350019050.png",
+"ar": [
+"طريق غابوية",
+"الطريق الغابوية"
+],
+"fr": [
+"route forestière"
+]
+},
+{
+"img": "1681913533108.jpeg",
+"ar": [
+"عون المرور",
+"أعوان المرور",
+"شرطي المرور"
+],
+"fr": [
+"agent de la circulation",
+"agents de la circulation"
+]
+},
+{
+"img": "1682079445994.png",
+"ar": [
+"الهاتف"
+],
+"fr": [
+"téléphone"
+]
+},
+{
+"img": "1684419690984.png",
+"ar": [
+"المؤشر",
+"المؤشرات"
+],
+"fr": [
+"clignotant",
+"clignotants"
+]
+},
+{
+"img": "1681901899820.png",
+"ar": [
+"منعرج",
+"المنعرج",
+"المنعرجات"
+],
+"fr": [
+"virage",
+"virages"
+]
+},
+{
+"img": "1681901900410.png",
+"ar": [
+"الأشغال",
+"أشغال",
+"الورش",
+"الأوراش"
+],
+"fr": [
+"travaux",
+"chantier",
+"chantiers"
+]
+},
+{
+"img": "1696508881334.png",
+"ar": [
+"الجليد"
+],
+"fr": [
+"verglas"
+]
+},
+{
+"img": "1681901900236.png",
+"ar": [
+"الرياح الجانبية",
+"الرياح"
+],
+"fr": [
+"vent latéral",
+"vent fort",
+"vent"
+]
+},
+{
+"img": "1681901900073.png",
+"ar": [
+"الأطفال",
+"طفل",
+"الطفل"
+],
+"fr": [
+"enfant",
+"enfants"
+]
+},
+{
+"img": "1705880747835.png",
+"ar": [
+"الراجلون",
+"الراجلين",
+"راجلين",
+"الراجل",
+"راجل"
+],
+"fr": [
+"piéton",
+"piétons"
+]
+},
+{
+"src": "/voyants/feux-croisement.webp",
+"ar": [
+"أضواء التقابل"
+],
+"fr": [
+"feux de croisement"
+]
+},
+{
+"src": "/voyants/feux-route.webp",
+"ar": [
+"أضواء الطريق"
+],
+"fr": [
+"feux de route"
+]
+},
+{
+"src": "/voyants/feux-position.webp",
+"ar": [
+"أضواء الوضع"
+],
+"fr": [
+"feux de position"
+]
+},
+{
+"src": "/voyants/detresse.webp",
+"ar": [
+"أضواء الإغاثة",
+"أضواء الاستغاثة"
+],
+"fr": [
+"feux de détresse"
+]
+},
+{
+"src": "/voyants/ceinture.webp",
+"ar": [
+"حزام السلامة",
+"الحزام"
+],
+"fr": [
+"ceinture",
+"ceintures"
+]
+},
+{
+"src": "/voyants/abs.webp",
+"ar": [
+"ABS"
+],
+"fr": [
+"ABS"
+]
+},
+{
+"src": "/voyants/frein.webp",
+"ar": [
+"الفرامل",
+"فرامل"
+],
+"fr": [
+"freins"
+]
+},
+{
+"src": "/voyants/pneus.webp",
+"ar": [
+"الإطارات",
+"الإطار"
+],
+"fr": [
+"pneus",
+"pneu"
+]
+},
+{
+"src": "/voyants/huile.webp",
+"ar": [
+"الزيت"
+],
+"fr": [
+"huile"
+]
+},
+{
+"src": "/voyants/batterie.webp",
+"ar": [
+"البطارية"
+],
+"fr": [
+"batterie"
+]
+},
+{
+"src": "/voyants/carburant.webp",
+"ar": [
+"الوقود"
+],
+"fr": [
+"carburant"
+]
+},
+{
+"src": "/voyants/airbag.webp",
+"ar": [
+"الوسادة الهوائية",
+"وسادات هوائية"
+],
+"fr": [
+"airbag",
+"airbags"
+]
+},
+{
+"src": "/vehicles/moto.webp",
+"ar": [
+"دراجة نارية",
+"الدراجات النارية",
+"الدراجة النارية",
+"دراجات نارية"
+],
+"fr": [
+"moto",
+"motos",
+"motocyclette",
+"motocyclettes"
+]
+},
+{
+"src": "/vehicles/scooter.webp",
+"ar": [
+"دراجة بمحرك",
+"الدراجات بمحرك",
+"الدراجة بمحرك",
+"دراجات بمحرك"
+],
+"fr": [
+"cyclomoteur",
+"cyclomoteurs"
+]
+},
+{
+"src": "/vehicles/velo.webp",
+"ar": [
+"الدراجات",
+"الدراجة",
+"دراجة"
+],
+"fr": [
+"vélo",
+"vélos",
+"cycliste",
+"cyclistes"
+]
+},
+{
+"src": "/vehicles/camion.webp",
+"ar": [
+"الشاحنات",
+"الشاحنة",
+"شاحنة",
+"شاحنات"
+],
+"fr": [
+"camion",
+"camions",
+"poids lourd",
+"poids lourds"
+]
+},
+{
+"src": "/vehicles/bus.webp",
+"ar": [
+"الحافلات",
+"الحافلة",
+"حافلة"
+],
+"fr": [
+"bus",
+"autobus",
+"autocar"
+]
+},
+{
+"src": "/vehicles/petit-taxi.webp",
+"ar": [
+"سيارة الأجرة",
+"سيارات الأجرة"
+],
+"fr": [
+"taxi",
+"taxis"
+]
+},
+{
+"src": "/vehicles/ambulance.webp",
+"ar": [
+"سيارة الإسعاف",
+"سيارة إسعاف"
+],
+"fr": [
+"ambulance"
+]
+},
+{
+"src": "/vehicles/police.webp",
+"ar": [
+"سيارة الشرطة",
+"سيارة شرطة"
+],
+"fr": [
+"voiture de police"
+]
+},
+{
+"src": "/vehicles/pompiers.webp",
+"ar": [
+"رجال المطافئ",
+"الوقاية المدنية"
+],
+"fr": [
+"pompiers",
+"protection civile"
+]
+},
+{
+"src": "/vehicles/tracteur.webp",
+"ar": [
+"الجرارات",
+"الجرار",
+"جرار"
+],
+"fr": [
+"tracteur",
+"tracteurs"
+]
+},
+{
+"src": "/vehicles/charrette.webp",
+"ar": [
+"المجرورة بالدواب",
+"الدواب"
+],
+"fr": [
+"traction animale"
+]
+}
+]

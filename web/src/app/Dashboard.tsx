@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { ArrowRight, BellRing, BookOpen, ClipboardCheck, Lightbulb, NotebookPen, Shapes, Target } from "lucide-react";
-import { CHAPTERS, MODULES, altNameOf, coverOf, getChapter, moduleOf, nameOf } from "@/lib/courses";
+import { CHAPTERS, MODULES, coverOf, getChapter, moduleOf, nameOf } from "@/lib/courses";
 import { streak, today, useStore } from "@/lib/store";
 import { useBank } from "@/lib/questions";
 import { SCHEMAS, SCHEMA_ICONS } from "@/components/schemas";
@@ -26,7 +26,7 @@ const FAQ_FR = [
   },
   {
     q: "Comment fonctionne le carnet d'erreurs ?",
-    a: "Chaque question ratée revient selon la méthode Leitner : le lendemain, puis après 2, 4, 8 et 16 jours. Une bonne réponse la fait monter d'une boîte, une erreur la renvoie au début. Au bout de 5 bonnes réponses espacées, elle est considérée comme maîtrisée.",
+    a: "Chaque question ratée revient selon la méthode Leitner : le lendemain, puis après 2, 4 et 8 jours. Une bonne réponse la fait monter d'une boîte, une erreur la renvoie au début. Au bout de 4 bonnes réponses espacées, elle est considérée comme maîtrisée.",
   },
   {
     q: "Les corrigés des questions officielles sont-ils fiables ?",
@@ -34,7 +34,7 @@ const FAQ_FR = [
   },
   {
     q: "Ma progression est-elle sauvegardée ?",
-    a: "Oui, dans ce navigateur uniquement (aucun compte n'est nécessaire). Depuis la page Progression, tu peux exporter un fichier de sauvegarde et l'importer sur un autre appareil.",
+    a: "Oui, automatiquement dans ton compte, après chaque réponse : tu la retrouves sur tous tes appareils en te connectant. Depuis la page Progression, tu peux aussi exporter une copie de secours dans un fichier.",
   },
 ];
 
@@ -49,7 +49,7 @@ const FAQ_AR = [
   },
   {
     q: "كيف يعمل دفتر الأخطاء ؟",
-    a: "كل سؤال أخطأت فيه يعود إليك حسب طريقة لايتنر: في اليوم الموالي، ثم بعد 2 و4 و8 و16 يوما. الجواب الصحيح يرفعه درجة، والخطأ يعيده إلى البداية. بعد 5 أجوبة صحيحة متباعدة، يُعتبر السؤال متقنا.",
+    a: "كل سؤال أخطأت فيه يعود إليك حسب طريقة لايتنر: في اليوم الموالي، ثم بعد 2 و4 و8 أيام. الجواب الصحيح يرفعه درجة، والخطأ يعيده إلى البداية. بعد 4 أجوبة صحيحة متباعدة، يُعتبر السؤال متقنا.",
   },
   {
     q: "هل تصحيحات الأسئلة الرسمية موثوقة ؟",
@@ -57,7 +57,7 @@ const FAQ_AR = [
   },
   {
     q: "هل يتم حفظ تقدمي ؟",
-    a: "نعم، في هذا المتصفح فقط (لا حاجة لإنشاء حساب). من صفحة التقدم، يمكنك تصدير ملف الحفظ واستيراده على جهاز آخر.",
+    a: "نعم، تلقائيا في حسابك بعد كل جواب: تجده على كل أجهزتك عند تسجيل الدخول. ومن صفحة التقدم، يمكنك أيضا تصدير نسخة احتياطية في ملف.",
   },
 ];
 
@@ -123,7 +123,7 @@ export function Dashboard() {
         <HeroBanner
           title={t("Prêt pour l'examen du code ?", "هل أنت مستعد لامتحان رخصة السياقة ؟")}
           desc={t(
-            "40 questions en conditions réelles : image, audio en arabe, 30 secondes par question. Il faut 32 bonnes réponses pour réussir.",
+            "40 questions en conditions réelles : image et 30 secondes par question. Il faut 32 bonnes réponses pour réussir.",
             "40 سؤالا في ظروف حقيقية: صورة، تعليق صوتي بالعربية، و30 ثانية لكل سؤال. يلزمك 32 جوابا صحيحا للنجاح.",
           )}
           actions={
@@ -158,7 +158,7 @@ export function Dashboard() {
             )
           }
           title={next ? nameOf(next, lang) : t("Toutes les fiches sont lues", "قرأت جميع الملخصات")}
-          desc={next ? altNameOf(next, lang) : t("Passe maintenant aux examens blancs et à ton carnet d'erreurs.", "انتقل الآن إلى الامتحانات التجريبية ودفتر أخطائك.")}
+          desc={next ? t("Fiche résumée, mindmap, panneaux et quiz corrigé.", "ملخص، خريطة ذهنية، علامات واختبار مصحح.") : t("Passe maintenant aux examens blancs et à ton carnet d'erreurs.", "انتقل الآن إلى الامتحانات التجريبية ودفتر أخطائك.")}
           actions={
             next ? (
               <ButtonLink href={`/cours/${next.slug}/`} iconEnd={<ArrowRight className="size-4" />}>
@@ -192,7 +192,7 @@ export function Dashboard() {
                   <ListItem
                     key={slug}
                     href="/entrainement/session/?mode=notebook"
-                    thumb={<ChapterCover module={c.module} img={coverOf(c)} />}
+                    thumb={<ChapterCover compact module={c.module} img={coverOf(c)} />}
                     eyebrow={<span className="inline-flex items-center gap-1.5"><ModuleIcon id={c.module} size="xs" />{modName(slug)}</span>}
                     title={nameOf(c, lang)}
                     meta={t(`${errN(n)} à revoir`, `${errN(n)} للمراجعة`)}
@@ -210,7 +210,7 @@ export function Dashboard() {
               <ListItem
                 key={c.slug}
                 href={`/cours/${c.slug}/`}
-                thumb={<ChapterCover module={c.module} img={coverOf(c)} />}
+                thumb={<ChapterCover compact module={c.module} img={coverOf(c)} />}
                 eyebrow={<span className="inline-flex items-center gap-1.5"><ModuleIcon id={c.module} size="xs" />{modName(c.slug)}</span>}
                 title={nameOf(c, lang)}
                 meta={t(`Fiche · Mindmap${c.nCards ? ` · ${c.nCards} panneaux` : ""}`, `ملخص · خريطة ذهنية${c.nCards ? ` · ${c.nCards} علامة` : ""}`)}
@@ -228,7 +228,7 @@ export function Dashboard() {
                   <ListItem
                     key={slug}
                     href={`/entrainement/session/?mode=chapter&c=${slug}`}
-                    thumb={<ChapterCover module={c.module} img={coverOf(c)} />}
+                    thumb={<ChapterCover compact module={c.module} img={coverOf(c)} />}
                     eyebrow={<span className="inline-flex items-center gap-1.5"><ModuleIcon id={c.module} size="xs" />{modName(slug)}</span>}
                     title={nameOf(c, lang)}
                     meta={t(`${pct} % de réussite · ${qN(v.seen)}`, `${pct} % أجوبة صحيحة · ${qN(v.seen)}`)}
@@ -278,7 +278,8 @@ export function Dashboard() {
                 <ProductCard
                   key={c.slug}
                   href={`/cours/${c.slug}/`}
-                  media={<ChapterCover module={c.module} img={coverOf(c)} />}
+                  square
+                media={<ChapterCover module={c.module} img={coverOf(c)} />}
                   eyebrow={<><ModuleIcon id={c.module} size="xs" /> {t("Axe", "المحور")} {c.module}</>}
                   title={nameOf(c, lang)}
                   meta={read[c.slug] ? t("Lu · Fiche + mindmap", "مقروء · ملخص + خريطة ذهنية") : t("Fiche + mindmap", "ملخص + خريطة ذهنية")}
@@ -414,10 +415,10 @@ export function Dashboard() {
               <ProductCard
                 key={slug}
                 href={`/cours/${slug}/`}
+                square
                 media={<ChapterCover module={c.module} img={coverOf(c)} />}
                 eyebrow={<><ModuleIcon id={c.module} size="xs" /> {modName(slug)}</>}
                 title={nameOf(c, lang)}
-                subtitle={altNameOf(c, lang)}
                 meta={<Badge tone="brand">{t("Prioritaire", "ذو أولوية")}</Badge>}
               />
             );

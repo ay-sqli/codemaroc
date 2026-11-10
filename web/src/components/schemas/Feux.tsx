@@ -133,13 +133,7 @@ export default function Feux() {
         {(Object.keys(LIGHTS) as Light[]).map((l) => (
           <span key={l} className={`chip ring-1 ${on(l) ? "bg-ok/15 text-ok ring-ok/40" : "bg-surface-2 text-muted ring-line opacity-60"}`}>
             {on(l) ? "✓" : "✗"}{" "}
-            {lang === "ar" ? (
-              LIGHTS[l].ar
-            ) : (
-              <>
-                {LIGHTS[l].fr} <span className="ar">({LIGHTS[l].ar})</span>
-              </>
-            )}
+            {lang === "ar" ? LIGHTS[l].ar : LIGHTS[l].fr}
           </span>
         ))}
       </div>

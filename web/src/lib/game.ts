@@ -5,6 +5,7 @@ import type { Bank } from "./questions";
 import { shuffle } from "./questions";
 import type { GameState, State } from "./store";
 import type { Chapter, Question } from "./types";
+import type { IconName } from "@/components/game/GameIcon";
 
 /**
  * Parcours façon jeu : toutes les questions de la banque rangées en étapes, de la plus facile à la plus
@@ -89,12 +90,12 @@ export function difficulty(q: Question) {
   return 4 + (q.answer.length > 1 ? 0.8 : 0) + (q.options.length === 4 ? 0.3 : 0) + (q.uncertain ? 0.2 : 0);
 }
 
-/** « 📐 1. دلالة الشكل واللون (Formes et Couleurs) » → { fr: "Formes et Couleurs", ar: "دلالة الشكل واللون" } */
-function sectionName(s?: string) {
-  if (!s) return null;
-  const clean = stripEmoji(s).replace(/^\s*\d+\.\s*/, "").trim();
-  const m = clean.match(/^(.*?)\s*\(([^)]+)\)\s*$/);
-  return m ? { fr: m[2].trim(), ar: m[1].trim() } : { fr: clean, ar: clean };
+/** Titre de catégorie sans emoji ni numéro. */
+const sectionLabel = (s: string) => stripEmoji(s).replace(/^\s*\d+\.\s*/, "").trim();
+
+function sectionName(ar?: string, fr?: string) {
+  if (!ar) return null;
+  return { fr: sectionLabel(fr || ar), ar: sectionLabel(ar) };
 }
 
 function lessonTitle(qs: Question[]): { fr: string; ar: string } {
@@ -102,7 +103,7 @@ function lessonTitle(qs: Question[]): { fr: string; ar: string } {
   if (kinds.size === 1 && kinds.has("sign")) {
     const names: { fr: string; ar: string }[] = [];
     for (const q of qs) {
-      const n = sectionName(q.section);
+      const n = sectionName(q.section, q.sectionFr);
       if (n && !names.some((x) => x.fr === n.fr)) names.push(n);
     }
     if (!names.length) return { fr: "Panneaux", ar: "العلامات" };
@@ -229,6 +230,15 @@ export function questionsFor(node: GameNode, bank: Bank, s: State): Question[] {
 export function heartsFor(kind: NodeKind) {
   return HEARTS[kind];
 }
+
+/** Grade du conducteur selon le nombre d'étapes validées. */
+export const RANKS: { min: number; fr: string; ar: string; icon: IconName }[] = [
+  { min: 0, fr: "Débutant", ar: "مبتدئ", icon: "first-step" },
+  { min: 10, fr: "Apprenti", ar: "متعلم", icon: "learner" },
+  { min: 50, fr: "Conducteur", ar: "سائق", icon: "wheel" },
+  { min: 130, fr: "Confirmé", ar: "متمرس", icon: "mountain" },
+  { min: 250, fr: "Champion", ar: "بطل", icon: "champion" },
+];
 
 /** Défis du jour (quêtes). */
 export function dailyQuests(g: GameState, day: string) {

@@ -116,7 +116,7 @@ export function Results({
                   onClick={() => setOpen(open === r.q.id ? null : r.q.id)}
                 >
                   {r.q.img ? (
-                    <img src={r.q.img} alt="" className="h-14 w-20 shrink-0 rounded-[12px] border-2 border-line bg-white object-contain" />
+                    <img src={r.q.img} alt="" className="h-14 w-20 shrink-0 rounded-[12px] border-2 border-line bg-white object-cover" />
                   ) : (
                     <span className="grid h-14 w-20 shrink-0 place-items-center rounded-[12px] bg-panel text-sm text-muted">Q{i + 1}</span>
                   )}

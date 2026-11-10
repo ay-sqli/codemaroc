@@ -86,7 +86,7 @@ export function MindMap({ md, title }: { md: string; title: string }) {
       if (cancelled || !svg) return;
       svg.innerHTML = "";
       // Sans emoji (design system), en conservant l'indentation qui porte l'imbrication.
-      const clean = md.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{20E3}\u{200D}]/gu, "").replace(/(#+|-) {2,}/g, "$1 ");
+      const clean = md.replace(/\[!\]\s*|\[table:[^\]]+\]\s*/g, "").replace(/[\p{Extended_Pictographic}\u{FE0F}\u{20E3}\u{200D}]/gu, "").replace(/(#+|-) {2,}/g, "$1 ");
       const { root } = new Transformer().transform(clean);
       // Créée sans données : Markmap.create(…, root) lancerait son propre fit() qui écraserait le cadrage.
       const mm = Markmap.create(svg, { duration: 300, maxWidth: 0, initialExpandLevel: open ? -1 : 2, spacingVertical: 8 });
@@ -141,7 +141,13 @@ export function MindMap({ md, title }: { md: string; title: string }) {
           </Button>
         </div>
       </div>
-      <svg ref={svgRef} className="markmap size-full pt-12" />
+      {/* Tracé de gauche à droite même en arabe : en RTL, l'étiquette (une boîte très large) s'aligne à
+          droite et le foreignObject la rogne entièrement. Chaque phrase garde son propre sens d'écriture. */}
+      <svg
+        ref={svgRef}
+        style={{ direction: "ltr" }}
+        className="markmap size-full pt-12 [&_foreignObject>div]:text-left [&_foreignObject>div]:[unicode-bidi:plaintext]"
+      />
     </div>
   );
 }

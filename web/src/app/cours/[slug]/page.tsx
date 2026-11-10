@@ -6,7 +6,8 @@ import { Fiche, ficheOutline } from "@/components/Fiche";
 import { ChapterTabs } from "@/components/ChapterTabs";
 import { ChapterActions, ChapterScore } from "@/components/CourseStatus";
 import { SCHEMA_META, schemasForChapter } from "@/lib/schemaMeta";
-import { T } from "@/lib/i18n";
+import { T, TNav } from "@/lib/i18n";
+import { ficheFr } from "@/lib/coursesFr";
 import { ChapterCover, ModuleIcon } from "@/components/ui";
 import { BackBar } from "@/components/BackButton";
 import { asset } from "@/lib/base";
@@ -20,7 +21,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const c = getChapter(slug);
-  return { title: c ? `${c.fr} · ${stripEmoji(c.ar)} — Code Maroc` : "Cours" };
+  return { title: c ? `${c.fr} — Code Maroc` : "Cours — Code Maroc" };
 }
 
 /** Nombre accordé en arabe pour les compteurs de l'en-tête. */
@@ -38,7 +39,9 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
   const { prev, next } = neighbours(slug);
   const idx = chapterIndex(slug);
   const st = ficheStats(c);
-  const outline = ficheOutline(c.md);
+  const mdFr = ficheFr(slug) ?? c.md;
+  const outlineFr = ficheOutline(mdFr);
+  const outline = ficheOutline(c.md).map((o, i) => ({ ...o, fr: outlineFr[i]?.title ?? o.title, ar: o.title }));
   const schemas = schemasForChapter(slug).filter((id) => SCHEMA_META[id]);
   const arTitle = stripEmoji(c.ar);
 
@@ -70,14 +73,10 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
             <h1 className="t-display text-ink">
               <T fr={c.fr} ar={arTitle} />
             </h1>
-            <p className="text-xl text-ink-2">
-              <span className="only-fr ar block">{arTitle}</span>
-              <span className="only-ar">{c.fr}</span>
-            </p>
             <ChapterActions slug={slug} />
           </div>
           <div className="hidden overflow-hidden rounded-[16px] border-2 border-line bg-white lg:block">
-            <div className="aspect-[16/10]">
+            <div className="aspect-square">
               <ChapterCover module={m.id} img={coverOf(c)} />
             </div>
           </div>
@@ -121,9 +120,9 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
 
       <div className="grid gap-10 lg:grid-cols-[1fr_300px]">
         <div className="min-w-0">
-          <ChapterTabs md={c.md} title={c.fr} titleAr={arTitle} slug={slug} hasCards={!!c.nCards}>
+          <ChapterTabs md={c.md} mdFr={mdFr} title={c.fr} titleAr={arTitle} slug={slug} hasCards={!!c.nCards}>
             {/* Sommaire en puces défilantes (téléphone / tablette ; sur grand écran il est dans la colonne de droite) */}
-            <nav className="no-scrollbar -mx-4 mb-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:hidden" aria-label="Sommaire">
+            <TNav labelFr="Sommaire" labelAr="محتوى الدرس" className="no-scrollbar -mx-4 mb-4 flex gap-2 overflow-x-auto px-4 pb-1 lg:hidden">
               {outline.map((o) => (
                 <a
                   key={o.id}
@@ -141,13 +140,13 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
                   </span>
                 </a>
               ))}
-            </nav>
-            <Fiche md={c.md} />
+            </TNav>
+            <T fr={<Fiche md={mdFr} lang="fr" />} ar={<Fiche md={c.md} lang="ar" />} />
           </ChapterTabs>
         </div>
 
         <aside className="space-y-6 lg:sticky lg:top-24 lg:self-start">
-          <nav className="rounded-[24px] border-2 border-line bg-white p-4" aria-label="Sommaire">
+          <TNav labelFr="Sommaire" labelAr="محتوى الدرس" className="rounded-[24px] border-2 border-line bg-white p-4">
             <p className="mb-2 px-1 text-[15px] font-[800]">
               <T fr="Au programme" ar="محتوى الدرس" />
             </p>
@@ -169,7 +168,7 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
                 </li>
               ))}
             </ol>
-          </nav>
+          </TNav>
           {schemas.map((id) => (
             <Link key={id} href={`/schemas/#${id}`} className="block rounded-[24px] border-2 border-line bg-white p-5 shadow-[0_4px_0_var(--c-grey-300)] transition-transform hover:-translate-y-0.5">
               <p className="t-overline mb-1">
@@ -187,17 +186,26 @@ export default async function ChapterPage({ params }: { params: Promise<{ slug: 
             </Link>
           ))}
           {c.nCards ? (
-            <a href={asset(`/anki/${slug}.csv`)} download className="flex items-center gap-3 rounded-[16px] border-2 border-line p-5 text-sm transition-shadow hover:shadow-md">
-              <Download className="size-5 text-brand" />
-              <span>
-                <span className="block font-semibold text-ink">
-                  <T fr="Cartes Anki (CSV)" ar="بطاقات Anki (CSV)" />
-                </span>
-                <span className="text-muted">
-                  <T fr="Pour réviser sur ton téléphone" ar="للمراجعة على هاتفك" />
-                </span>
-              </span>
-            </a>
+            <T
+              fr={
+                <a href={asset(`/anki/${slug}.fr.csv`)} download className="flex items-center gap-3 rounded-[16px] border-2 border-line p-5 text-sm transition-shadow hover:shadow-md">
+                  <Download className="size-5 text-brand" />
+                  <span>
+                    <span className="block font-semibold text-ink">Cartes Anki (CSV)</span>
+                    <span className="text-muted">Pour réviser sur ton téléphone</span>
+                  </span>
+                </a>
+              }
+              ar={
+                <a href={asset(`/anki/${slug}.csv`)} download className="flex items-center gap-3 rounded-[16px] border-2 border-line p-5 text-sm transition-shadow hover:shadow-md">
+                  <Download className="size-5 text-brand" />
+                  <span>
+                    <span className="block font-semibold text-ink">بطاقات Anki (CSV)</span>
+                    <span className="text-muted">للمراجعة على هاتفك</span>
+                  </span>
+                </a>
+              }
+            />
           ) : null}
         </aside>
       </div>

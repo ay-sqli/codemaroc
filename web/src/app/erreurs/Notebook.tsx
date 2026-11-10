@@ -5,6 +5,7 @@ import { BellRing, ChevronDown, NotebookPen, Trash2 } from "lucide-react";
 import { useBank } from "@/lib/questions";
 import { removeFromNotebook, SRS_INTERVALS, useStore } from "@/lib/store";
 import { getChapter, nameOf } from "@/lib/courses";
+import { RichText } from "@/components/RichText";
 import { useLang } from "@/lib/i18n";
 import { Correction, qText } from "@/components/QuizPlayer";
 import {
@@ -59,8 +60,8 @@ export function Notebook() {
         <PageHeader
           title={t("Carnet d'erreurs", "دفتر الأخطاء")}
           desc={t(
-            "Chaque question ratée revient selon la méthode Leitner : demain, puis après 2, 4, 8 et 16 jours. Bonne réponse : elle monte d'une boîte. Erreur : retour à la boîte 1.",
-            "كل سؤال أخطأت فيه يعود حسب طريقة لايتنر: غدا، ثم بعد 2 و4 و8 و16 يوما. جواب صحيح: يصعد إلى العلبة الموالية. خطأ: يعود إلى العلبة 1.",
+            "Chaque question ratée revient selon la méthode Leitner : demain, puis après 2, 4 et 8 jours. Bonne réponse : elle monte d'une boîte. Erreur : retour à la boîte 1.",
+            "كل سؤال أخطأت فيه يعود حسب طريقة لايتنر: غدا، ثم بعد 2 و4 و8 أيام. جواب صحيح: يصعد إلى العلبة الموالية. خطأ: يعود إلى العلبة 1.",
           )}
           actions={
             <ButtonLink href="/entrainement/session/?mode=notebook&n=30" size="lg" variant={due.length ? "primary" : "secondary"} icon={<BellRing className="size-4" />}>
@@ -77,7 +78,7 @@ export function Notebook() {
               const txt = qText(r.q!, lang).rappel!;
               return (
                 <li key={r.id} className="flex items-start justify-between gap-3 rounded-[12px] bg-white p-3 text-[15px] text-ink">
-                  <span className={cx(lang === "fr" && /[؀-ۿ]/.test(txt) && "ar")}>{txt}</span>
+                  <RichText text={txt} max={2} />
                   <Badge tone="error" className="shrink-0">
                     {t(`${r.stat?.ko ?? 1}× raté`, `${r.stat?.ko ?? 1}× خطأ`)}
                   </Badge>
@@ -132,7 +133,7 @@ export function Notebook() {
                     <div className="flex items-center gap-3 p-3">
                       <button aria-expanded={isOpen} className="flex min-w-0 flex-1 items-center gap-3 text-start" onClick={() => setOpen(isOpen ? null : it.id)}>
                         {q.img ? (
-                          <img src={q.img} alt="" className="h-14 w-20 shrink-0 rounded-[12px] border-2 border-line bg-white object-contain" />
+                          <img src={q.img} alt="" className="h-14 w-20 shrink-0 rounded-[12px] border-2 border-line bg-white object-cover" />
                         ) : (
                           <span className="grid h-14 w-20 shrink-0 place-items-center rounded-[12px] bg-panel">{ch && <ModuleIcon id={ch.module} />}</span>
                         )}

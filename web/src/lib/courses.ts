@@ -1,5 +1,5 @@
 import data from "@/data/courses.json";
-import { withBase } from "./base";
+import { asset, withBase } from "./base";
 import type { Chapter, Module } from "./types";
 
 export const MODULES = (data as Module[]).map((m) => ({
@@ -57,6 +57,7 @@ export function stripEmoji(s: string) {
 
 /** Première illustration « panneau » d'un chapitre (vignette des cartes). */
 export function coverOf(c: Chapter) {
+  if (c.cover) return asset(c.cover);
   if (!c.md) return undefined;
   const small = c.md.match(/<img src="([^"]+)">/);
   if (small) return small[1];
@@ -76,12 +77,9 @@ export function chapterIndex(slug: string) {
   return m ? m.chapters.findIndex((c) => c.slug === slug) + 1 : 0;
 }
 
-/** Intitulé d'un axe ou d'un chapitre dans la langue choisie (titre principal + titre secondaire). */
+/** Intitulé d'un axe ou d'un chapitre dans la langue choisie. */
 export function nameOf(x: { fr: string; ar: string }, lang: "fr" | "ar") {
   return lang === "ar" ? stripEmoji(x.ar) : x.fr;
-}
-export function altNameOf(x: { fr: string; ar: string }, lang: "fr" | "ar") {
-  return lang === "ar" ? x.fr : stripEmoji(x.ar);
 }
 
 /** Présentation de chaque axe en français (la version arabe vient du programme : `desc`). */

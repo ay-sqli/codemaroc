@@ -1,0 +1,119 @@
+# 📋 Annexe : toutes les infractions
+## 🚔 1. Délits et retrait de points
+- {img:1723548889241.png|xl} Liste des délits et retrait de points
+- 14 → homicide involontaire avec circonstances aggravantes
+- 10 → blessures avec infirmité permanente avec circonstances aggravantes
+- 6 → homicide involontaire sans circonstances aggravantes
+- 6 → blessures involontaires avec circonstances aggravantes
+- 6 → délit de fuite après un accident
+- 6 → excès de vitesse de 50 km/h ou plus
+- 6 → alcool, stupéfiants ou refus du test
+- 4 → infirmité permanente sans circonstances aggravantes
+- 4 → conduite malgré une suspension du permis ou pendant sa rétention
+- 4 → non-remise d'un permis suspendu
+- 4 → contresens sur autoroute ou voie express
+- 4 → dépassement du poids autorisé au passage d'un ouvrage (pont)
+- 3 → blessures involontaires sans circonstances aggravantes
+- 3 → marche arrière ou demi-tour sur autoroute ou voie express
+- 2 → médicaments interdisant la conduite
+- 2 → refus d'obtempérer à un ordre d'arrêt ou aux agents
+- 2 → conduite professionnelle sans carte de conducteur professionnel
+## 🚦 2. Contraventions et retrait de points
+- {img:1723548918134.png|xl} Liste des contraventions et retrait de points
+- 4 → non-arrêt au STOP ou au feu rouge
+- 4 → excès de vitesse de plus de 30 et moins de 50 km/h
+- 4 → circulation en sens interdit
+- 4 → dépassement illégal (irrégulier)
+- 3 → circulation de nuit sans éclairage hors agglomération
+- 3 → sans certificat de visite technique
+- 3 → circulation sur la bande d'arrêt d'urgence ou arrêt injustifié sur autoroute
+- 3 → arrêt ou stationnement de nuit sans éclairage sur route non éclairée
+- 2 → non-respect de la priorité
+- 2 → excès de vitesse de plus de 20 et jusqu'à 30 km/h
+- 2 → motocyclette sans casque
+- 1 → non-port de la ceinture de sécurité
+- 1 → enfant de moins de 10 ans sur le siège avant
+- 1 → téléphone tenu en main en conduisant
+## 1️⃣ 3. 1re classe : principales contraventions
+- {img:1724419410919.png|xl} Liste de la 1re classe
+- STOP ou feu rouge, sens interdit, dépassement irrégulier, vitesse +30 à +50 → 4 points
+- Défaut de visite technique, circulation de nuit sans éclairage → 3 points
+- Sans retrait de points (mais amende de 1re classe)
+  - Franchissement d'une ligne continue
+  - Stationnement dangereux (virage, sommet de côte, pont, tunnel, moins de 10 m d'une intersection)
+  - Arrêt ou stationnement sur un passage à niveau
+  - Accès des piétons, cavaliers et animaux à l'autoroute
+  - Non-paiement du péage d'autoroute
+  - Transport de personnes sur le toit
+  - Arrêt pour la montée ou la descente de passagers sur autoroute
+  - Engagement sur un passage à niveau sans barrières sans s'assurer de l'absence de train
+  - Véhicule sans freins conformes, sans ceinture, ou présentant un défaut de direction, de suspension ou d'éclairage
+  - Non-conformité des plaques d'immatriculation
+  - Dépassement du PTAC de 30 % à 40 %
+  - Sculptures des pneus sous le minimum ou déchirures
+  - Ne pas dégager immédiatement la voie ferrée à l'approche d'un train
+  - Entrée ou sortie d'autoroute par un endroit non prévu
+  - Défaut de visite médicale obligatoire
+## 2️⃣ 4. 2e classe : principales contraventions
+- {img:1723549025198.png|xl} Liste de la 2e classe
+- Bande d'arrêt d'urgence sur autoroute → 3 points
+- Vitesse +20 à moins de +30, non-respect de la priorité → 2 points
+- Ceinture, téléphone en main, enfant < 10 ans à l'avant → 1 point
+- Sans retrait de points
+  - Non-respect des restrictions liées au permis
+  - Réparations importantes sur la bande d'arrêt d'urgence
+  - Véhicule incapable d'atteindre 60 km/h sur autoroute
+  - Accès au terre-plein central de l'autoroute
+  - Leçons de conduite et essais de véhicules sur autoroute
+  - Non-respect de la priorité des piétons
+  - Circulation sur les pistes cyclables
+  - Arrêt sur les trottoirs et passages piétons
+  - Ceinture du passager
+  - Non-respect de la priorité des véhicules prioritaires (avec leurs avertisseurs)
+  - Chargement gênant la visibilité ou masquant les feux ou les plaques d'immatriculation
+## 3️⃣ 5. 3e classe : principales contraventions
+- {img:1723549079786.png|xl} Liste de la 3e classe
+- Cyclomoteur sans casque → 2 points
+- Sans retrait de points
+  - Non-respect d'une interdiction de changer de direction imposée par un panneau
+  - Non-renouvellement du support papier du permis
+  - Non-respect des gestes des agents
+  - Circulation sur une voie réservée à d'autres catégories
+  - Ne pas serrer à droite / gêner la circulation
+  - Couper des colonnes militaires, des convois funéraires ou des cortèges
+  - Course de vitesse
+  - Excès de vitesse de moins de 20 km/h
+  - Changement de file ou de direction sans précaution
+  - Non-respect des règles de croisement
+  - Chaînes à neige sur route non enneigée
+  - Écran de divertissement non conforme, absence d'avertisseur sonore, fumée excessive
+  - Défaut des freins, des rétroviseurs, des essuie-glaces ou des catadioptres
+  - Usage des feux ou avertisseurs réservés aux véhicules prioritaires
+## 4️⃣ 6. 4e classe
+- {img:1723549115547.png|xl} Contraventions des piétons
+## 🔒 7. Immobilisation et fourrière
+- {img:1723549190831.png|xl} Immobilisation du véhicule
+- {img:1723549233629.png|xl} Mise en fourrière sur ordre de l'administration
+- {img:1723549279375.png|xl} Mise en fourrière sur ordre de la police judiciaire
+## ⚖️ 8. Délits et peines
+- {img:1723549338475.png|xl} Délits liés à l'autoroute
+- {img:1723549381315.png|xl} Délits liés au véhicule
+- {img:1723549433349.png|xl} Délits liés au permis de conduire
+- {img:1723549471156.png|xl} Délits liés au conducteur
+- {img:1723549512184.png|xl} Homicide involontaire et peines
+- {img:1723549556574.png|xl} Suspension du permis de conduire
+- {img:1723549592450.png|xl} Interdiction de passer l'examen du permis de conduire
+## 💡 Astuces du moniteur
+- « L'échelle de la vitesse »
+  - Moins de +20 → 3e classe / 0 point
+  - De +20 à +30 → 2e classe / 2 points
+  - De +30 à +50 → 1re classe / 4 points
+  - +50 et plus → délit / 6 points + suspension de 1–3 mois
+- « Les quatre grands » = 4 points : feu rouge/STOP, sens interdit, dépassement irrégulier, +30
+- « Le petit un » = 1 point : ceinture, enfant à l'avant, téléphone
+- « Les trois » : de nuit sans feux, sans visite technique, bande d'arrêt d'urgence
+## ⚠️ Pièges d'examen
+- Franchir une ligne continue = 1re classe mais 0 point
+- Téléphone en main = 1 point (même à l'arrêt dans un embouteillage)
+- Non-respect de la priorité = 2 points et non 4
+- Alcool = délit (6 points) et non contravention

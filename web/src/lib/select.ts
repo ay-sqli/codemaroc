@@ -17,7 +17,7 @@ export const MODE_INFO: Record<Mode, { title: string; desc: string; titleAr: str
   },
   official: {
     title: "Questions officielles",
-    desc: "La banque Perminou (image + audio), corrigée et expliquée.",
+    desc: "La banque Perminou, corrigée et expliquée.",
     titleAr: "الأسئلة الرسمية",
     descAr: "بنك أسئلة Perminou (صورة + صوت)، مصحح ومشروح.",
   },

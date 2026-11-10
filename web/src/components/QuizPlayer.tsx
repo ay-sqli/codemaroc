@@ -11,6 +11,7 @@ import { getChapter, nameOf } from "@/lib/courses";
 import { schemaTitle } from "@/lib/schemaMeta";
 import { useLang, type Lang } from "@/lib/i18n";
 import { SchemaModal, SCHEMAS } from "./schemas";
+import { RichText } from "./RichText";
 import { Badge, Button, Callout, ChoiceOption, Input, ProgressBar, cx } from "./ui";
 
 export interface QuizResult {
@@ -26,15 +27,11 @@ const KIND_LABEL: Record<Question["kind"], [string, string]> = {
   rule: ["Règle du code", "قاعدة من مدونة السير"],
 };
 
-const HAS_AR = /[؀-ۿ]/;
-
 /** Textes d'une question dans la langue choisie (repli sur le français si la traduction manque). */
 export function qText(q: Question, lang: Lang) {
   const ar = lang === "ar";
   return {
     prompt: ar && q.promptAr ? q.promptAr : q.prompt,
-    /** Énoncé dans l'autre langue, affiché en petit. */
-    promptAlt: ar ? (q.promptAr ? q.prompt : undefined) : q.promptAr,
     option: (k: number) => (ar && q.options[k]?.labelAr) || q.options[k]?.label || "",
     explanation: (ar && q.explanationAr) || q.explanation,
     rappel: (ar && q.rappelAr) || q.rappel,
@@ -80,22 +77,22 @@ export function Correction({ q, picked, compact = false }: { q: Question; picked
         {!ok && (
           <p className="mb-2">
             {t("Réponse attendue :", "الجواب المنتظر:")}{" "}
-            <strong className={cx("font-semibold text-ink", lang === "fr" && HAS_AR.test(answerText) && "ar")}>{answerText}</strong>
+            <strong className="font-semibold text-ink">{answerText}</strong>
           </p>
         )}
-        <p className="text-[15px] text-ink-2">{tx.explanation}</p>
+        <p className="text-[15px] leading-relaxed text-ink-2"><RichText text={tx.explanation} /></p>
       </Callout>
       {q.uncertain && (
         <Callout tone="info">
           {t(
-            "Image peu lisible : corrigé proposé avec réserve. Écoute l'audio et, si Perminou donne une autre réponse, utilise « Signaler le corrigé ».",
+            "Image peu lisible : corrigé proposé avec réserve. Si Perminou donne une autre réponse, utilise « Signaler le corrigé ».",
             "الصورة غير واضحة: التصحيح مقترح مع تحفظ. استمع إلى التسجيل الصوتي، وإذا أعطت Perminou جوابا آخر، استعمل « الإبلاغ عن التصحيح ».",
           )}
         </Callout>
       )}
       {tx.rappel && (
         <Callout tone="tip" icon={<Lightbulb className="size-5 text-warn" />} title={t("À retenir pour ne plus te tromper", "احفظ هذا حتى لا تخطئ مرة أخرى")}>
-          <p className={cx("text-[15px] text-ink", lang === "fr" && HAS_AR.test(tx.rappel) && "ar")}>{tx.rappel}</p>
+          <p className="text-[15px] leading-relaxed text-ink"><RichText text={tx.rappel} max={2} /></p>
         </Callout>
       )}
       {!compact && (
@@ -308,13 +305,16 @@ export function QuizPlayer({
       <div key={q.id} ref={cardRef} className="animate-pop">
         <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
           <Badge tone={q.kind === "official" ? "brand" : "neutral"}>{lang === "ar" ? KIND_LABEL[q.kind][1] : KIND_LABEL[q.kind][0]}</Badge>
-          {q.audio && <AudioButton src={q.audio} auto={settings.autoAudio} />}
+          {/* L'enregistrement officiel n'existe qu'en arabe. */}
+          {lang === "ar" && q.audio && <AudioButton src={q.audio} auto={settings.autoAudio} />}
         </div>
 
         {official ? (
           <div className="overflow-hidden rounded-[16px] border-2 border-line">
             <img src={q.img} alt={t("Question", "السؤال")} data-zoom data-caption="" className="w-full bg-[#1f1f1f] object-contain" />
             <div className="border-t-2 border-line bg-white p-4">
+              {/* Le texte de l'image officielle est en arabe : l'énoncé est repris en français. */}
+              {lang === "fr" && tx.prompt && <p className="mb-3 text-[17px] font-semibold leading-snug text-ink">{tx.prompt}</p>}
               <p className="mb-3 text-[15px] font-semibold">
                 {t("Coche la ou les bonnes cases", "اختر الخانة أو الخانات الصحيحة")}{" "}
                 <span className="font-normal text-muted">{t("(plusieurs réponses possibles)", "(يمكن أن تكون عدة أجوبة صحيحة)")}</span>
@@ -355,14 +355,13 @@ export function QuizPlayer({
           <div className="space-y-5">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               {q.img && (
-                <div className="h-40 w-full shrink-0 overflow-hidden rounded-[16px] border-2 border-line bg-white p-3 sm:h-44 sm:w-48">
-                  {/* Taille imposée + object-contain : le panneau reste toujours dans son cadre, quelle que soit sa taille réelle. */}
-                  <img src={q.img} alt="" data-zoom className="block h-full w-full object-contain" />
+                <div className="mx-auto w-fit max-w-full shrink-0 overflow-hidden rounded-[16px] border-2 border-line bg-white sm:mx-0 sm:max-w-[50%]">
+                  {/* Le cadre prend la forme de l'image : aucun vide, et le panneau reste entier. */}
+                  <img src={q.img} alt="" data-zoom className="block h-40 w-auto max-w-full object-cover sm:h-44" />
                 </div>
               )}
               <div className="space-y-1">
                 {tx.prompt && <h2 className={cx("text-xl font-semibold leading-snug", lang === "ar" && "leading-relaxed")}>{tx.prompt}</h2>}
-                {tx.promptAlt && <p className={cx("text-ink-2", HAS_AR.test(tx.promptAlt) ? "ar text-lg" : "text-[15px]")}>{tx.promptAlt}</p>}
                 <p className="text-sm text-muted">{q.multi ? t("Plusieurs réponses possibles", "يمكن أن تكون عدة أجوبة صحيحة") : t("Une seule réponse", "جواب واحد فقط")}</p>
               </div>
             </div>
@@ -370,11 +369,10 @@ export function QuizPlayer({
               {q.options.map((_, k) => {
                 const st = stateOf(k);
                 const label = tx.option(k);
-                const ar = lang === "fr" && HAS_AR.test(label);
                 return (
                   <div key={k} className={st === "wrong" ? "animate-shake" : ""}>
                     <ChoiceOption index={k} multi={q.multi} selected={picked.includes(k)} state={st} onClick={() => toggle(k)} disabled={checked}>
-                      <span className={ar ? "ar text-base" : ""}>{label}</span>
+                      <span>{label}</span>
                     </ChoiceOption>
                     {st === "correct" && (
                       <p className="mt-1 flex items-center gap-1 ps-4 text-sm font-semibold text-ok">
