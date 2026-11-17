@@ -303,8 +303,8 @@ function Avatar({ name, size = "size-10 text-[16px]" }: { name: string; size?: s
   );
 }
 
-/** Accès au profil en bas de la barre latérale : avatar, nom, grade. */
-function ProfileChip({ active }: { active: boolean }) {
+/** Accès au profil en bas de la barre latérale : avatar, nom, grade (avatar seul dans la barre d'icônes). */
+function ProfileChip({ active, wide }: { active: boolean; wide: boolean }) {
   const { t } = useLang();
   const { user } = useSession();
   const s = useGameStats();
@@ -313,13 +313,15 @@ function ProfileChip({ active }: { active: boolean }) {
     <Link
       href="/profil/"
       title={t("Mon profil", "ملفي")}
+      aria-label={t("Mon profil", "ملفي")}
       className={cx(
-        "flex items-center justify-center gap-3 rounded-[14px] border-2 p-2 lg:justify-start",
+        "flex items-center justify-center gap-3 rounded-[14px] border-2 p-2",
+        wide && "lg:justify-start",
         active ? "border-[#84d8ff] bg-[var(--duo-blue-50)]" : "border-transparent hover:bg-[var(--duo-snow)]",
       )}
     >
       <Avatar name={user.name} />
-      <span className="hidden min-w-0 flex-1 lg:block">
+      <span className={cx("hidden min-w-0 flex-1", wide && "lg:block")}>
         <span className="block truncate text-[15px] font-[800] text-[var(--duo-ink)]">{user.name}</span>
         <span className="block truncate text-[12px] font-[700] text-[var(--duo-muted)]">
           {t("Mon profil", "ملفي")} · {s.done}/{s.total || "…"}
@@ -358,73 +360,75 @@ export function GameShell({ children }: { children: React.ReactNode }) {
   // Pendant un quiz, la barre d'actions du quiz occupe le bas de l'écran mobile.
   const inQuiz = path.startsWith("/entrainement/session");
   const closed = useSyncExternalStore(subscribeMenu, readMenuClosed, () => false);
+  // Grand écran : menu complet (icônes + libellés) ou, replié, barre d'icônes avec le logo.
+  // Tablette : toujours la barre d'icônes. Les classes lg: du menu complet ne s'appliquent que s'il est ouvert.
+  const wide = (cls: string) => (closed ? "" : cls);
+  const toggleLabel = closed ? t("Ouvrir le menu", "فتح القائمة") : t("Fermer le menu", "إغلاق القائمة");
 
   return (
     <div className="duo min-h-dvh bg-[var(--duo-canvas)]">
       {/* Barre latérale (ordinateur / tablette) */}
-      <aside className={cx("fixed inset-y-0 start-0 z-40 w-[88px] flex-col border-e-2 border-[var(--duo-grey)] bg-white px-3 py-6 lg:w-64 lg:px-4", closed ? "hidden" : "hidden md:flex")}>
-        <div className="mb-4 flex flex-col items-center gap-2 lg:flex-row lg:justify-between lg:ps-3">
-          <Link href="/" aria-label={t("Parcours", "المسار")}>
-            <Wordmark compact className="!h-12 lg:hidden" />
-            <Wordmark className="!h-[60px] !w-auto max-lg:hidden" />
+      <aside className={cx("fixed inset-y-0 start-0 z-40 hidden w-[88px] flex-col border-e-2 border-[var(--duo-grey)] bg-white px-3 py-6 md:flex", wide("lg:w-64 lg:px-4"))}>
+        <div className={cx("mb-4 flex flex-col items-center gap-2", wide("lg:flex-row lg:justify-between lg:ps-3"))}>
+          <Link href="/" aria-label={t("Parcours", "المسار")} title={closed ? t("Parcours", "المسار") : undefined}>
+            <Wordmark compact className={cx("!h-12", wide("lg:hidden"))} />
+            {!closed && <Wordmark className="!h-[60px] !w-auto max-lg:hidden" />}
           </Link>
           <button
-            onClick={() => setMenuClosed(true)}
-            aria-label={t("Fermer le menu", "إغلاق القائمة")}
-            title={t("Fermer le menu", "إغلاق القائمة")}
-            className="grid size-10 shrink-0 place-items-center rounded-[12px] text-[var(--duo-muted)] hover:bg-[var(--duo-snow)]"
+            onClick={() => setMenuClosed(!closed)}
+            aria-label={toggleLabel}
+            aria-expanded={!closed}
+            title={toggleLabel}
+            className="hidden size-10 shrink-0 place-items-center rounded-[12px] text-[var(--duo-muted)] hover:bg-[var(--duo-snow)] lg:grid"
           >
-            <PanelLeftClose className="flip-rtl size-6" strokeWidth={2.2} />
+            {closed ? <PanelLeftOpen className="flip-rtl size-6" strokeWidth={2.2} /> : <PanelLeftClose className="flip-rtl size-6" strokeWidth={2.2} />}
           </button>
         </div>
-        <nav className="flex flex-1 flex-col gap-1.5 overflow-y-auto">
+        {/* Petits écrans en hauteur : la liste défile avec une barre fine ; dans la barre d'icônes, une marge des deux côtés garde les icônes centrées. */}
+        <nav className={cx("duo-side-scroll flex flex-1 flex-col gap-1.5 overflow-y-auto [scrollbar-gutter:stable_both-edges]", wide("lg:[scrollbar-gutter:auto]"))}>
           {nav.map(({ href, label, icon: Icon, badge }) => (
             <Link
               key={href}
               href={href}
               title={label}
+              aria-label={badge ? `${label} (${badge})` : label}
               className={cx(
-                "relative flex h-12 items-center justify-center gap-4 rounded-[12px] border-2 px-3 text-[15px] font-[800] uppercase tracking-wide lg:justify-start",
+                "relative flex h-12 shrink-0 items-center justify-center gap-4 rounded-[12px] border-2 px-3 text-[15px] font-[800] uppercase tracking-wide",
+                wide("lg:justify-start"),
                 active(href) ? "border-[#84d8ff] bg-[var(--duo-blue-50)] text-[var(--duo-blue)]" : "border-transparent text-[var(--duo-muted)] hover:bg-[var(--duo-snow)]",
               )}
             >
               <Icon className="size-7 shrink-0" strokeWidth={2.2} />
-              <span className="hidden truncate lg:inline">{label}</span>
+              <span className={cx("hidden truncate", wide("lg:inline"))}>{label}</span>
               {!!badge && (
-                <span className="absolute end-2 top-1.5 grid min-w-5 place-items-center rounded-full bg-[var(--duo-red)] px-1 text-[11px] text-white lg:static lg:ms-auto">{badge}</span>
+                <span className={cx("absolute end-2 top-1.5 grid min-w-5 place-items-center rounded-full bg-[var(--duo-red)] px-1 text-[11px] text-white", wide("lg:static lg:ms-auto"))}>{badge}</span>
               )}
             </Link>
           ))}
           <button
             onClick={() => openGuide()}
             title={t("Guide de l'application", "دليل التطبيق")}
-            className="relative flex h-12 shrink-0 items-center justify-center gap-4 rounded-[12px] border-2 border-transparent px-3 text-[15px] font-[800] uppercase tracking-wide text-[var(--duo-muted)] hover:bg-[var(--duo-snow)] lg:justify-start"
+            aria-label={t("Guide de l'application", "دليل التطبيق")}
+            className={cx(
+              "relative flex h-12 shrink-0 items-center justify-center gap-4 rounded-[12px] border-2 border-transparent px-3 text-[15px] font-[800] uppercase tracking-wide text-[var(--duo-muted)] hover:bg-[var(--duo-snow)]",
+              wide("lg:justify-start"),
+            )}
           >
             <CircleHelp className="size-7 shrink-0" strokeWidth={2.2} />
-            <span className="hidden truncate lg:inline">{t("Guide", "الدليل")}</span>
+            <span className={cx("hidden truncate", wide("lg:inline"))}>{t("Guide", "الدليل")}</span>
           </button>
         </nav>
         <div className="mt-3 border-t-2 border-[var(--duo-grey)] pt-3">
-          <ProfileChip active={active("/profil/")} />
-          <div className="hidden px-3 pt-1 lg:block">
+          <ProfileChip active={active("/profil/")} wide={!closed} />
+          <div className={cx("hidden px-3 pt-1", wide("lg:block"))}>
             <LangSwitch className="px-0" />
           </div>
+          {/* Barre d'icônes : la langue se change avec le globe seul. */}
+          <LangSwitch className={cx("mt-1 w-full justify-center px-0 hover:bg-[var(--duo-snow)] [&>span]:hidden", wide("lg:hidden"))} />
         </div>
       </aside>
 
-      {/* Menu fermé : un seul bouton, dans une marge réservée, pour le rouvrir. */}
-      {closed && (
-        <button
-          onClick={() => setMenuClosed(false)}
-          aria-label={t("Ouvrir le menu", "فتح القائمة")}
-          title={t("Ouvrir le menu", "فتح القائمة")}
-          className="fixed start-3 top-4 z-40 hidden size-11 place-items-center rounded-[12px] border-2 border-[var(--duo-grey)] bg-white text-[var(--duo-muted)] shadow-[0_3px_0_var(--c-grey-200)] hover:bg-[var(--duo-snow)] md:grid"
-        >
-          <PanelLeftOpen className="flip-rtl size-6" strokeWidth={2.2} />
-        </button>
-      )}
-
-      <div className={closed ? "md:ps-[72px]" : "md:ps-[88px] lg:ps-64"}>
+      <div className={cx("md:ps-[88px]", wide("lg:ps-64"))}>
         {/* Barre du haut (mobile) : chiffres à gauche, langue et profil à droite. */}
         <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-2 border-b-2 border-[var(--duo-grey)] bg-white px-3 md:hidden">
           <StatsPills />

@@ -4,7 +4,7 @@
  * ─────────────────────────────────────────────────────────────────────────────
  *  Design system « Code Maroc »
  *  Interface gamifiée ancrée dans l'identité marocaine : rouge du petit taxi et du tarbouche,
- *  vert du drapeau, or des trophées, fond sable chaud. Titres en Nunito, texte en Plus Jakarta
+ *  vert du drapeau, or des trophées, cartes blanches sur fond gris clair. Titres en Nunito, texte en Plus Jakarta
  *  Sans, arabe en Cairo, chiffres du chrono en JetBrains Mono. Boutons tactiles en relief
  *  (bordure basse pleine qui s'écrase au clic), bordures de 2 px, rayons 16 / 24 px.
  *  Documentation vivante : /design-system
@@ -42,7 +42,7 @@
   --c-blue-100: #fdedec;
   --c-blue-50: #fef6f5;
 
-  /* Surfaces et neutres : sable chaud plutôt que blanc pur */
+  /* Surfaces et neutres : fond gris clair, cartes blanches par-dessus */
   --c-grey-975: #1e2328; /* noir charbon */
   --c-grey-900: #1e2328;
   --c-grey-700: #64748b; /* gris ardoise */
@@ -51,7 +51,7 @@
   --c-grey-300: #cbd5e1; /* relief des tuiles */
   --c-grey-200: #e2e8f0; /* bordures */
   --c-grey-100: #f1efea; /* survol */
-  --c-grey-50: #faf8f5; /* fond sable */
+  --c-grey-50: #f0f2f5; /* fond gris clair : les cartes et éléments blancs ressortent */
   --c-panel: #f1efea;
 
   --c-green-700: #198754;
@@ -68,7 +68,7 @@
   --c-orange-500: #f39c12;
 
   /* Rôles sémantiques (utilisés par les classes Tailwind ci-dessous) */
-  --bg: #faf8f5;
+  --bg: var(--c-grey-50);
   --surface: #ffffff;
   --surface-2: var(--c-panel);
   --border: var(--c-grey-200);

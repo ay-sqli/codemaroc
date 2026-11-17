@@ -25,10 +25,12 @@ export function Wordmark({ className, compact = false }: { className?: string; c
 export function LangSwitch({ tone = "light", className }: { tone?: "light" | "dark"; className?: string }) {
   const { lang, setLang } = useLang();
   const next = lang === "ar" ? "fr" : "ar";
+  const label = next === "ar" ? "Afficher le site en arabe" : "عرض الموقع بالفرنسية";
   return (
     <button
       onClick={() => setLang(next)}
-      aria-label={next === "ar" ? "Afficher le site en arabe" : "عرض الموقع بالفرنسية"}
+      aria-label={label}
+      title={label}
       className={cx(
         "inline-flex items-center gap-1.5 rounded-[12px] text-sm font-[800] uppercase tracking-wide",
         tone === "dark" ? "text-white/85 hover:text-white" : "h-10 px-2 text-[#64748b] hover:text-[#d92b2b]",

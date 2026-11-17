@@ -153,7 +153,7 @@ export const CHAPTERS: Chapter[] = [
         lead: ["Mêmes pages, autre disposition.", "الصفحات نفسها بترتيب مختلف."],
         spots: [
           { id: "nav", title: ["Le menu de gauche", "القائمة الجانبية"], body: ["Toutes les pages sont listées ici, dans l'ordre où tu en as besoin.", "كل الصفحات موجودة هنا، بالترتيب الذي تحتاجها به."] },
-          { id: "close", title: ["Fermer le menu", "إغلاق القائمة"], body: ["Ce bouton replie le menu pour gagner de la place. Un petit bouton permet de le rouvrir, et ton choix est mémorisé.", "هذا الزر يطوي القائمة لربح مساحة. يتيح لك زر صغير إعادة فتحها، ويتم حفظ اختيارك."] },
+          { id: "close", title: ["Fermer le menu", "إغلاق القائمة"], body: ["Ce bouton replie le menu en une barre d'icônes pour gagner de la place. Le même bouton le rouvre, et ton choix est mémorisé.", "هذا الزر يطوي القائمة إلى شريط أيقونات لربح مساحة. الزر نفسه يعيد فتحها، ويتم حفظ اختيارك."] },
           { id: "numbers", title: ["Tes chiffres", "أرقامك"], body: ["Série, XP et étapes validées, toujours visibles sur le Parcours.", "السلسلة وXP والمراحل المكتملة، ظاهرة دائما في المسار."] },
           { id: "quests", title: ["La colonne de droite", "العمود الأيمن"], body: ["Tes défis du jour, tes badges et ta sauvegarde, à côté du Parcours.", "تحديات اليوم وشاراتك وحفظ تقدمك، بجانب المسار."] },
         ],
