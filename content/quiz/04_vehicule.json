@@ -643,7 +643,7 @@
     "id": "02_elements_mecaniques-13",
     "t": "02_elements_mecaniques",
     "q": "Appuyer sur la pédale d'embrayage permet de :",
-    "qa": "الضغط على دواسة الواصل يسمح بـ :",
+    "qa": "الضغط على دواسة القابض يسمح بـ :",
     "o": [
       "Freiner le véhicule",
       "Accélérer",
@@ -699,7 +699,7 @@
     "o": [
       "Non, la position P suffit",
       "Seulement en montée",
-      "Oui : la position P ne remplace pas complètement le frein à main"
+      "Oui, dans tous les cas"
     ],
     "a": [
       2
@@ -1250,18 +1250,18 @@
   {
     "id": "04_precautions_portieres-09",
     "t": "04_precautions_portieres",
-    "q": "Qui doit attacher sa ceinture de sécurité ?",
-    "qa": "من يجب عليه ربط حزام السلامة ؟",
+    "q": "Hors agglomération, qui doit attacher sa ceinture de sécurité ?",
+    "qa": "خارج التجمعات العمرانية، من يجب عليه ربط حزام السلامة ؟",
     "o": [
       "Uniquement le conducteur",
-      "Le conducteur et le passager avant",
+      "Seulement le conducteur et le passager avant",
       "Tous les occupants, à l'avant comme à l'arrière"
     ],
     "a": [
       2
     ],
-    "e": "Tous les passagers attachent leur ceinture, à l'avant comme à l'arrière, même pour un court trajet en ville.",
-    "r": "Ceinture : obligatoire pour tous, avant et arrière."
+    "e": "Hors agglomération, tous les occupants doivent être attachés, à l'avant comme à l'arrière. En agglomération, l'obligation légale vise le conducteur et le passager avant, mais s'attacher à l'arrière reste le bon réflexe.",
+    "r": "Hors agglomération : ceinture pour tous, avant et arrière."
   },
   {
     "id": "04_precautions_portieres-10",
@@ -1468,8 +1468,7 @@
       0
     ],
     "e": "Lors du croisement ou du dépassement par un véhicule prioritaire en mission, on serre à l'extrême droite et on lui laisse le passage.",
-    "r": "Prioritaire en mission → serrer à droite, laisser passer.",
-    "img": "1685539580038.png"
+    "r": "Prioritaire en mission → serrer à droite, laisser passer."
   },
   {
     "id": "05_vehicules_prioritaires-07",
@@ -1852,7 +1851,7 @@
     "qa": "على ماذا تتوقف الطاقة الحركية للمركبة ؟",
     "o": [
       "De sa vitesse",
-      "De la couleur de la carrosserie",
+      "De l'état des pneus",
       "De sa masse",
       "Du type de boîte de vitesses"
     ],
@@ -1860,7 +1859,7 @@
       0,
       2
     ],
-    "e": "L'énergie cinétique dépend de la vitesse (au carré) et de la masse : un camion ou un bus possède une énergie énorme même à 30 km/h.",
+    "e": "L'énergie cinétique dépend de la vitesse (au carré) et de la masse : un camion ou un bus possède une énergie énorme même à 30 km/h. L'état des pneus joue sur l'adhérence et le freinage, pas sur l'énergie.",
     "r": "Énergie cinétique : masse et vitesse au carré.",
     "s": "energie"
   },

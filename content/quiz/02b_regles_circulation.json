@@ -2,15 +2,14 @@
   {
     "id": "09_parties_speciales-01",
     "t": "09_parties_speciales",
-    "q": "Rond-point sans aucune signalisation à l'entrée : qui passe en premier ?",
-    "qa": "ممر دائري بدون أي تشوير عند المدخل : من يمر أولا ؟",
+    "q": "Rond-point sans aucune signalisation à l'entrée : lequel des véhicules 1 et 2 passe en premier ?",
+    "qa": "ممر دائري بدون أي تشوير عند المدخل : أي المركبتين 1 و2 تمر أولا ؟",
     "o": [
-      "Le véhicule rouge, qui sort",
       "Le véhicule 1, qui veut entrer",
       "Le véhicule 2, déjà engagé dans l'anneau"
     ],
     "a": [
-      1
+      0
     ],
     "e": "Sans panneau à l'entrée, c'est un ممر دائري : la priorité à droite s'applique, donc celui qui entre passe avant celui qui tourne déjà. C'est l'inverse du carrefour giratoire signalé.",
     "r": "Rond-point sans panneau = priorité à droite : l'entrant passe.",
@@ -20,11 +19,10 @@
   {
     "id": "09_parties_speciales-02",
     "t": "09_parties_speciales",
-    "q": "Carrefour giratoire avec « Cédez le passage » à chaque entrée : qui passe en premier ?",
-    "qa": "ملتقى طرق دوراني بعلامة «أترك الأسبقية» عند كل مدخل : من يمر أولا ؟",
+    "q": "Carrefour giratoire avec « Cédez le passage » à chaque entrée : lequel des véhicules 1 et 2 passe en premier ?",
+    "qa": "ملتقى طرق دوراني بعلامة «أترك الأسبقية» عند كل مدخل : أي المركبتين 1 و2 تمر أولا ؟",
     "o": [
       "Le véhicule 1, déjà dans l'anneau",
-      "Le premier qui klaxonne",
       "Le véhicule 2, qui veut entrer"
     ],
     "a": [
@@ -564,7 +562,7 @@
     "qa": "علامة تعلن عن منعرج. هذا يعني أن :",
     "o": [
       "Le virage n'est dangereux que la nuit",
-      "Le virage est dangereux : je ralentis avant pour éviter le dérapage ou la sortie de route",
+      "Le virage est dangereux : je ralentis avant d'y entrer",
       "Le panneau est purement informatif"
     ],
     "a": [
@@ -637,7 +635,7 @@
       3
     ],
     "e": "Freiner fort en courbe (dérapage), couper le virage (choc frontal) et dépasser sans visibilité sont des fautes. Ralentir avant le virage est le bon réflexe.",
-    "r": "En virage : ni freinage fort, ni virage coupé, ni dépassement."
+    "r": "Virage : ni freinage fort, ni virage coupé, ni dépassement aveugle."
   },
   {
     "id": "10_virages-16",
@@ -862,12 +860,12 @@
     "o": [
       "Les véhicules déjà sur l'autoroute",
       "Le véhicule qui s'insère",
-      "Le véhicule venant de droite"
+      "Le premier arrivé au point d'insertion"
     ],
     "a": [
       0
     ],
-    "e": "La priorité appartient toujours à ceux qui sont sur l'autoroute, pas à celui qui s'insère.",
+    "e": "La priorité appartient toujours à ceux qui circulent déjà sur l'autoroute : celui qui s'insère cède le passage, même s'il vient de droite ou arrive le premier.",
     "r": "Insertion : priorité à ceux déjà sur l'autoroute.",
     "s": "priorite"
   },
@@ -1069,14 +1067,14 @@
     "q": "À l'approche d'une gare de péage, je dois :",
     "qa": "عند الاقتراب من محطة الأداء، يجب :",
     "o": [
-      "Choisir n'importe quelle voie, même fermée",
-      "Ralentir selon la signalisation et choisir une voie ouverte adaptée à mon mode de paiement",
-      "Garder ma vitesse jusqu'à la barrière"
+      "Garder ma vitesse jusqu'à la barrière",
+      "Ralentir et prendre une voie ouverte adaptée à mon paiement",
+      "Prendre la file la plus courte, quel que soit le mode de paiement"
     ],
     "a": [
       1
     ],
-    "e": "On ralentit selon les panneaux puis on choisit une voie ouverte qui correspond à son mode de paiement (espèces, abonnement, prépaiement).",
+    "e": "On ralentit selon les panneaux puis on choisit une voie ouverte qui correspond à son mode de paiement (espèces, abonnement, prépaiement) : la file la plus courte peut être réservée à un autre mode.",
     "r": "Péage : ralentir, voie ouverte, bon mode de paiement."
   },
   {
@@ -1591,14 +1589,14 @@
     "qa": "هذه العلامة تشير إلى :",
     "o": [
       "Un endroit fréquenté par des enfants",
-      "Une rue piétonne fermée aux voitures",
+      "Accès interdit aux piétons",
       "Une zone réservée aux piétons",
       "Un passage pour piétons"
     ],
     "a": [
       0
     ],
-    "e": "Triangle de danger avec deux silhouettes qui courent : endroit fréquenté par des enfants (مكان يرتاده الأطفال). On ralentit et on s'attend à une traversée soudaine.",
+    "e": "Triangle de danger avec deux enfants qui courent : endroit fréquenté par des enfants, on ralentit. Une zone piétonne s'annonce par un panneau bleu, un passage pour piétons par un piéton sur des bandes, une interdiction par un cercle rouge.",
     "r": "Triangle aux enfants = lieu fréquenté par des enfants : ralentir.",
     "img": "1689151577726.png"
   },
@@ -1849,7 +1847,7 @@
     "qa": "الفرامل الرئيسية لا تستجيب. ما هو أول رد فعل ؟",
     "o": [
       "Passer au point mort",
-      "Rétrograder progressivement, de la vitesse la plus haute vers la plus basse",
+      "Rétrograder progressivement",
       "Couper le contact"
     ],
     "a": [
@@ -2109,8 +2107,8 @@
   {
     "id": "15_panne_accident-01",
     "t": "15_panne_accident",
-    "q": "La règle d'or P.A.S. en cas d'accident, c'est dans l'ordre :",
-    "qa": "القاعدة الذهبية P.A.S عند وقوع حادثة هي بالترتيب :",
+    "q": "En cas d'accident, la règle d'or, c'est dans l'ordre :",
+    "qa": "عند وقوع حادثة، القاعدة الذهبية هي بالترتيب :",
     "o": [
       "Protéger – Alerter – Secourir",
       "Secourir – Alerter – Protéger",
@@ -2232,8 +2230,7 @@
     ],
     "e": "Le 5050 joint les Autoroutes du Maroc. 15 = pompiers, 19 = police, 177 = gendarmerie.",
     "r": "Autoroutes du Maroc : 5050.",
-    "s": "pas",
-    "img": "1687357574135.png"
+    "s": "pas"
   },
   {
     "id": "15_panne_accident-08",
@@ -2312,19 +2309,19 @@
   {
     "id": "15_panne_accident-12",
     "t": "15_panne_accident",
-    "q": "Un secouriste formé place un blessé en position latérale de sécurité. Sur quel côté ?",
-    "qa": "مسعف مؤهل يضع مصابا في الوضعية الجانبية للسلامة. على أي جانب ؟",
+    "q": "Parmi ces gestes envers un blessé, lequel est réservé à une personne formée aux premiers secours ?",
+    "qa": "من بين هذه الحركات تجاه المصاب، أيها خاص بشخص مكوَّن في الإسعافات الأولية ؟",
     "o": [
-      "Le côté droit",
-      "Le côté gauche",
-      "Sur le dos",
-      "Sur le ventre"
+      "Le couvrir contre le froid",
+      "Le mettre en position latérale de sécurité",
+      "Lui parler pour le garder conscient",
+      "Dégager ce qui gêne sa respiration"
     ],
     "a": [
-      0
+      1
     ],
-    "e": "Selon le cours, la position latérale de sécurité se fait sur le côté droit ; elle est réservée aux personnes formées aux premiers secours.",
-    "r": "Position latérale de sécurité : côté droit.",
+    "e": "La position latérale de sécurité, comme la réanimation, est réservée aux personnes formées aux premiers secours. Couvrir le blessé, dégager sa respiration et lui parler se font dans tous les cas.",
+    "r": "Position latérale de sécurité : réservée aux personnes formées.",
     "s": "pas"
   },
   {
@@ -2452,13 +2449,13 @@
   {
     "id": "15_panne_accident-20",
     "t": "15_panne_accident",
-    "q": "Il faut remplacer un pneu dont les sculptures (النقوش) ont une profondeur de :",
-    "qa": "يجب استبدال الإطار الذي يبلغ عمق نقوشه :",
+    "q": "Quelle est la profondeur minimale des sculptures d'un pneu ?",
+    "qa": "ما هو العمق الأدنى لنقوش الإطار ؟",
     "o": [
-      "3 mm ou moins",
-      "2,5 mm ou moins",
-      "1,6 mm ou moins",
-      "1 mm ou moins"
+      "3 mm",
+      "2,5 mm",
+      "1,6 mm",
+      "1 mm"
     ],
     "a": [
       2
@@ -2501,18 +2498,18 @@
   {
     "id": "15_panne_accident-23",
     "t": "15_panne_accident",
-    "q": "Démarrer avec une batterie de secours : dans quel ordre brancher les câbles ?",
-    "qa": "التشغيل بالتوصيل ببطارية ثانية : ما هو ترتيب التوصيل ؟",
+    "q": "Démarrer avec une batterie de secours : comment brancher les câbles ?",
+    "qa": "التشغيل بالتوصيل ببطارية ثانية : كيف يتم ربط الأسلاك ؟",
     "o": [
-      "Négatif avec négatif, puis positif avec positif, puis démarrer le 2e véhicule",
+      "Positif avec positif et négatif avec négatif, puis démarrer le 2e véhicule",
       "Positif avec négatif, puis négatif avec positif",
       "Démarrer le 2e véhicule, puis brancher positif avec positif seulement"
     ],
     "a": [
       0
     ],
-    "e": "Selon le cours : négatif avec négatif, puis positif avec positif, puis on démarre le véhicule de secours. On ne touche pas les bornes pendant la charge.",
-    "r": "Câbles : − avec −, + avec +, puis démarrer le 2e véhicule."
+    "e": "On relie chaque borne à la borne de même signe (+ avec +, − avec −), puis on démarre le véhicule de secours ; jamais + avec −. On ne touche ni les bornes ni les pinces pendant la charge.",
+    "r": "Câbles : + avec +, − avec −, puis démarrer le 2e véhicule."
   },
   {
     "id": "15_panne_accident-24",

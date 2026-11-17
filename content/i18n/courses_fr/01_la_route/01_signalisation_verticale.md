@@ -50,7 +50,8 @@
   - {img:1682350019022.png} **Route nationale** (rouge)
   - {img:1682350019036.png} **Route régionale** (jaune)
   - {img:1682350019050.png} **Route forestière** (vert)
-  - {img:1682350019066.png} **Route provinciale** (bleu)
+  - {img:1682350019066.png} **Route provinciale** (blanc, chiffres noirs)
+  - Ne confonds pas : le bleu est la couleur du haut des bornes des routes provinciales, leur cartouche de numéro est blanc
 - **Panonceaux**
   - {img:1682350019108.png} **Précisent une distance** (à 600 m), {img:1682350019123.png} **une étendue** (sur 15 km) ou {img:1682350019080.png} **une catégorie de véhicules ou un gabarit**
 ## 🚧 7. Signalisation temporaire

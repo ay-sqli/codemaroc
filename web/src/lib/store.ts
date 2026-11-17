@@ -269,7 +269,31 @@ export function resetState() {
 
 /** Remplace tout l'état (synchronisation avec le compte en ligne). */
 export function replaceState(next: State) {
-  set(() => ({ ...initial, ...next, settings: { ...initial.settings, ...next.settings }, game: { ...initialGame, ...next.game } }));
+  set(() => withoutRemoved({ ...initial, ...next, settings: { ...initial.settings, ...next.settings }, game: { ...initialGame, ...next.game } }));
+}
+
+/** Identifiants des questions de la banque, connus une fois la banque chargée. */
+let knownQuestions: Set<string> | null = null;
+
+/**
+ * Carnet d'erreurs sans les questions retirées de la banque (questions corrigées ou supprimées après une
+ * revue) : elles ne peuvent plus être revues, elles ne doivent donc plus compter dans « à revoir ».
+ */
+function withoutRemoved(s: State): State {
+  if (!knownQuestions) return s;
+  const gone = Object.keys(s.srs).filter((id) => !knownQuestions!.has(id));
+  if (!gone.length) return s;
+  const srs = { ...s.srs };
+  for (const id of gone) delete srs[id];
+  return { ...s, srs };
+}
+
+/** Appelé au chargement de la banque : retire du carnet les questions qui n'existent plus. */
+export function setKnownQuestions(ids: Iterable<string>) {
+  knownQuestions = new Set(ids);
+  const s = getState();
+  const next = withoutRemoved(s);
+  if (next !== s) set(() => next);
 }
 
 /** Écoute chaque modification de la progression (sauvegarde en ligne). Renvoie la fonction de désabonnement. */

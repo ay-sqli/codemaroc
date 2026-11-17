@@ -37,6 +37,14 @@ export interface Card {
   k?: string;
   chapter: string;
   module: string;
+  /** Revue content/cards_review.json — 0 : pas posée en question « Que signifie ce panneau ? ». */
+  q?: number;
+  /** 1 : pas posée en question, mais son intitulé peut servir de mauvaise réponse. */
+  d?: number;
+  /** 1 : intitulé qui ne correspond pas à l'image, absent de la galerie. */
+  hide?: number;
+  /** Images des cartes à ne jamais proposer dans la même question. */
+  x?: string[];
 }
 
 /** Question officielle de la banque Perminou (image + audio), corrigée. */

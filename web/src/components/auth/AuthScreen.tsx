@@ -88,7 +88,7 @@ export function AuthScreen({ onDone }: { onDone?: () => void }) {
           </h1>
           <ul className="mx-auto mt-4 hidden max-w-md space-y-2 text-start text-[15px] text-ink-2 sm:block lg:mx-0">
             {[
-              [t("2 300 questions de l'examen, de la plus facile à la plus difficile", "2300 سؤال من الامتحان، من الأسهل إلى الأصعب")],
+              [t("Plus de 1 900 questions vérifiées, de la plus facile à la plus difficile", "أكثر من 1900 سؤال مُراجَع، من الأسهل إلى الأصعب")],
               [t("Cours express, schémas animés et examen final", "دروس سريعة، رسوم متحركة وامتحان نهائي")],
               [t("Ta progression sauvegardée dans ton compte, sur tous tes appareils", "تقدمك محفوظ في حسابك، على كل أجهزتك")],
             ].map(([x]) => (

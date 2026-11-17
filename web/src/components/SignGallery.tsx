@@ -15,7 +15,7 @@ export function SignGallery({ chapter }: { chapter?: string }) {
   const [revealed, setRevealed] = useState<Set<number>>(new Set());
   const [q, setQ] = useState("");
   const cards = useMemo(() => {
-    const all = bank?.cards.filter((c) => !chapter || c.chapter === chapter) ?? [];
+    const all = bank?.cards.filter((c) => !c.hide && (!chapter || c.chapter === chapter)) ?? [];
     if (!q) return all;
     const needle = q.toLowerCase();
     return all.filter((c) => (lang === "ar" ? `${c.label} ${c.section}` : `${c.labelFr} ${c.sectionFr}`).toLowerCase().includes(needle));

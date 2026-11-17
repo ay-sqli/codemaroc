@@ -6,7 +6,7 @@
 - Maintient le passager sur son siège et ralentit son mouvement lors d'un choc
 - Empêche l'éjection hors du véhicule
 - Passe sur le thorax et les os du bassin, à plat et tendue
-- Obligatoire pour tous (avant et arrière)
+- Obligatoire pour le conducteur et le passager avant partout, et pour tous les occupants (avant et arrière) hors agglomération
 - Non-port → 1 point (conducteur)
 - {img:1684745977004.png} **Sans ceinture : le corps heurte l'avant de l'habitacle**
 - Appuie-tête au niveau de la tête

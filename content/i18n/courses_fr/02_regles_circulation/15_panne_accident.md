@@ -26,7 +26,7 @@
   - Couvre les blessés contre le froid
   - Parle-leur, rassure-les et garde-les conscients
 - Avec un certificat de premiers secours
-  - Position latérale de sécurité (sur le côté droit)
+  - Position latérale de sécurité (sur le côté)
   - Arrêt cardiaque → compressions thoraciques à 100–120 par minute
   - Adulte → 2 insufflations toutes les 30 compressions
   - Enfant → d'abord 5 insufflations, puis 2 toutes les 15 compressions
@@ -57,7 +57,7 @@
 ## 🔋 8. Batterie
 - Causes de décharge : appareils allumés moteur arrêté, court-circuit, froid, accessoires, oxydation, démarrages répétés, panne d'alternateur
 - Démarrage en poussant : deuxième + relâcher brusquement l'embrayage puis accélérer
-- Branchement à une seconde batterie : négatif avec négatif, puis positif avec positif, puis démarrer le second véhicule
+- Branchement à une seconde batterie : positif avec positif (câble rouge), puis négatif de la batterie de secours sur une partie métallique du moteur en panne (câble noir), puis démarrer le second véhicule ; débrancher dans l'ordre inverse
 - Ne touche pas les bornes ni les pinces pendant la charge
 ## 💡 Astuces du moniteur
 - P.A.S dans l'ordre : protège d'abord pour éviter un second accident

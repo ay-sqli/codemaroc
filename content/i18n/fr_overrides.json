@@ -1,6 +1,5 @@
 {
 "Q:01_signalisation_verticale-02":{"e":"Bleu = obligation et indication. Le rouge correspond à l'interdiction et au danger, le jaune à la signalisation temporaire."},
-"Q:01_signalisation_verticale-03":{"e":"La fiche oppose les dangers permanents (fond blanc : virage, passage pour piétons…) aux dangers temporaires (fond jaune : travaux, gravillons, chaussée glissante). Le jaune signale toujours le temporaire."},
 "Q:01_signalisation_verticale-04":{"e":"Trait noir sur fond blanc = fin d'interdiction. La fin d'une obligation se reconnaît à un trait rouge sur un panneau bleu."},
 "Q:01_signalisation_verticale-10":{"e":"Selon la fiche : fond bleu = aménagements et règles de circulation ; fond blanc à cadre bleu = services. Un panneau d'indication n'impose rien."},
 "Q:01_signalisation_verticale-18":{"e":"La fiche : panneaux de position bleus qui imposent d'accomplir l'action (tourner à droite, vitesse minimale, chemin pour cyclistes…). Le rouge est réservé à l'interdiction."},
@@ -22,7 +21,6 @@
 "Q:05_indications-04":{"e":"Entrée de tunnel : demi-tour, arrêt et stationnement interdits + feux de croisement obligatoires. Rien n'impose le klaxon."},
 "Q:05_indications-05":{"e":"Piège de la fiche : voie sans issue → la route est sans débouché, n'y entre que pour y accéder. C'est une indication, pas une interdiction."},
 "Q:05_indications-06":{"e":"La fiche : arrêt et stationnement réservés aux seuls taxis. Les voitures particulières ne peuvent ni s'y arrêter ni y stationner."},
-"Q:05_indications-09":{"e":"La fiche : contrôle de la vitesse moyenne par calcul du temps de parcours à la sortie d'autoroute. Rouler vite puis ralentir avant la sortie ne change rien à la moyenne."},
 "Q:05_indications-11":{"e":"Les deux existent dans les fiches : ralentisseur en dos-d'âne en panneau de danger et en panneau d'indication. Un rond bleu imposerait une obligation, ce n'est pas son rôle."},
 "Q:06_directions-01":{"e":"Astuce de la fiche : fond bleu → direction d'une autoroute ou signalisation sur autoroute. Les déviations temporaires sont sur fond jaune."},
 "Q:06_directions-06":{"e":"Piège de la fiche : ni marche arrière ni demi-tour, continue jusqu'à la sortie suivante."},

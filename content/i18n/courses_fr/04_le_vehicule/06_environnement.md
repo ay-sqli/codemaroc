@@ -42,11 +42,11 @@
 - {img:1684745977004.png} **2. Choc du conducteur contre l'avant de l'habitacle**
 - {img:1684746001054.png} **3. Choc des organes internes contre le corps**
 - Ceinture de sécurité → maintient le passager, ralentit son mouvement et empêche son éjection
-- **Arrimage du chargement : son énergie reste nulle → il ne heurte pas les passagers**
+- **Arrimage du chargement : il ralentit avec le véhicule au lieu d'être projeté → il ne heurte pas les passagers**
 ## 💡 Astuces du moniteur
 - Zone verte 1500–2500 = économie + sécurité
 - « Le frein moteur avant les freins »
-- Vitesse × 2 = énergie × 4 = distance d'arrêt × 4
+- Vitesse × 2 = énergie × 4 = distance de freinage × 4
 - Porte-bagages vide = carburant gaspillé
 ## ⚠️ Pièges d'examen
 - Faire chauffer longuement le moteur avant de partir → gaspillage (pars en douceur)

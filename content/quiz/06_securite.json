@@ -283,19 +283,19 @@
   {
     "id": "01_principes_securite-17",
     "t": "01_principes_securite",
-    "q": "Le port de la ceinture de sécurité aux places arrière est :",
-    "qa": "ربط حزام السلامة في المقاعد الخلفية :",
+    "q": "Hors agglomération, le port de la ceinture de sécurité aux places arrière est :",
+    "qa": "خارج التجمعات العمرانية، ربط حزام السلامة في المقاعد الخلفية :",
     "o": [
       "Facultatif",
       "Obligatoire seulement sur autoroute",
-      "Obligatoire seulement hors agglomération",
+      "Obligatoire seulement pour les enfants",
       "Obligatoire"
     ],
     "a": [
       3
     ],
-    "e": "La ceinture est obligatoire pour tous les occupants, à l'avant comme à l'arrière. La croire facultative à l'arrière est un piège classique.",
-    "r": "Ceinture obligatoire à l'avant ET à l'arrière."
+    "e": "Hors agglomération, la ceinture est obligatoire pour le conducteur et pour tous les passagers, à l'avant comme à l'arrière (décret 2-10-420, article 7). En agglomération, la loi l'impose au conducteur et au passager avant ; à l'arrière, elle reste vivement conseillée.",
+    "r": "Hors agglomération : ceinture pour tous, avant et arrière."
   },
   {
     "id": "01_principes_securite-18",
@@ -651,7 +651,7 @@
     "a": [
       0
     ],
-    "e": "La distance de sécurité (dizaine × 6) est plus courte que la distance d'arrêt, car le véhicule qui précède freine aussi et ne s'arrête pas net. Exemple à 90 km/h : 54 m de sécurité pour 81 m d'arrêt.",
+    "e": "Au-delà de 60 km/h, la distance de sécurité (dizaine × 6) devient plus courte que la distance d'arrêt, car le véhicule qui précède freine aussi et ne s'arrête pas net. Exemple à 90 km/h : 54 m de sécurité pour 81 m d'arrêt.",
     "r": "Sécurité < arrêt, car celui de devant freine aussi.",
     "s": "distance"
   },
@@ -708,8 +708,7 @@
       3
     ],
     "e": "La force centrifuge augmente avec la vitesse et le poids, et quand le rayon du virage diminue. Virage serré + vitesse élevée + charge lourde = force centrifuge maximale.",
-    "r": "Vitesse ↑ + poids ↑ + virage serré = danger maximal.",
-    "img": "1684317709226.png"
+    "r": "Vitesse ↑ + poids ↑ + virage serré = danger maximal."
   },
   {
     "id": "03_perte_controle-03",
@@ -745,8 +744,7 @@
       3
     ],
     "e": "Quand les rainures des pneus ne peuvent plus évacuer l'eau, le pneu flotte sur l'eau. Le risque augmente avec la vitesse et l'usure des pneus.",
-    "r": "Aquaplanage = eau + vitesse + pneus usés.",
-    "img": "1684315344513.png"
+    "r": "Aquaplanage = eau + vitesse + pneus usés."
   },
   {
     "id": "03_perte_controle-05",
@@ -804,13 +802,13 @@
   {
     "id": "03_perte_controle-08",
     "t": "03_perte_controle",
-    "q": "L'arrière de votre voiture glisse vers la droite (survirage). Vous tournez le volant :",
+    "q": "L'arrière de votre voiture glisse vers la droite. Vous tournez le volant :",
     "qa": "مؤخر سيارتك ينزلق نحو اليمين. تدير المقود :",
     "o": [
       "Brusquement vers la gauche",
       "Doucement vers la droite",
       "Vers la gauche en accélérant",
-      "Vous bloquez le volant et freinez"
+      "Le moins possible, en freinant fort"
     ],
     "a": [
       1
@@ -909,7 +907,7 @@
   {
     "id": "03_perte_controle-15",
     "t": "03_perte_controle",
-    "q": "La profondeur minimale des rainures (nervures) d'un pneu est de :",
+    "q": "La profondeur minimale des sculptures (rainures) d'un pneu est de :",
     "qa": "العمق الأدنى لنقوش الإطار هو :",
     "o": [
       "0,8 mm",
@@ -1025,7 +1023,7 @@
     "a": [
       1
     ],
-    "e": "La ceinture est obligatoire pour tous, même pour les petits trajets et en ville. Un choc à 50 km/h équivaut déjà à une chute du 3e étage.",
+    "e": "Faux. La ceinture est obligatoire même pour un court trajet en ville : pour le conducteur et le passager avant en agglomération, pour tous les occupants hors agglomération. Un choc à 50 km/h équivaut déjà à une chute du 3e étage.",
     "r": "Ceinture obligatoire même en ville et sur court trajet."
   },
   {
@@ -1055,12 +1053,11 @@
     "qa": "الوسادة الهوائية (Airbag) :",
     "o": [
       "Remplace la ceinture de sécurité",
-      "Dispense les passagers avant de la ceinture",
       "Ne remplace pas la ceinture : il s'utilise avec elle",
       "Rend inutile le siège pour enfant"
     ],
     "a": [
-      2
+      1
     ],
     "e": "L'airbag ne remplace pas la ceinture : sans ceinture, le corps n'est pas retenu. Les deux équipements fonctionnent ensemble.",
     "r": "L'airbag ne remplace jamais la ceinture."
@@ -1106,12 +1103,11 @@
     "qa": "من أي جهة يجب أن ينزل الأطفال من المركبة ؟",
     "o": [
       "Côté chaussée",
-      "Par la portière du conducteur",
       "Peu importe",
       "Côté trottoir"
     ],
     "a": [
-      3
+      2
     ],
     "e": "Les passagers, et surtout les enfants, descendent toujours du côté du trottoir, jamais du côté de la circulation.",
     "r": "Enfants : descente côté trottoir."
@@ -1123,14 +1119,14 @@
     "qa": "يجب ضبط مسند الرأس :",
     "o": [
       "Au niveau du cou",
-      "Le plus bas possible",
+      "N'importe comment, car il ne sert qu'au confort",
       "Au niveau de la tête",
       "Retiré pour mieux voir derrière"
     ],
     "a": [
       2
     ],
-    "e": "L'appuie-tête se règle au niveau de la tête. Ordre avant de partir : siège, appuie-tête, volant, rétroviseurs, ceinture, moteur.",
+    "e": "L'appuie-tête se règle au niveau de la tête : il protège la nuque en cas de choc, ce n'est pas un simple accessoire de confort. Ordre avant de partir : siège, appuie-tête, volant, rétroviseurs, ceinture, moteur.",
     "r": "Appuie-tête au niveau de la tête."
   },
   {
@@ -1349,7 +1345,7 @@
     "id": "05_sous_influence-04",
     "t": "05_sous_influence",
     "q": "Sous l'emprise de l'alcool, le risque d'accident mortel est multiplié par environ :",
-    "qa": "تحت تأثير الكحول، يكون السائق أكثر عرضة لحادثة مميتة بحوالي :",
+    "qa": "تحت تأثير الكحول، يُضرب خطر الحادثة المميتة في حوالي :",
     "o": [
       "2",
       "5",
@@ -1469,8 +1465,7 @@
       3
     ],
     "e": "Le niveau 3 (rouge) interdit absolument la conduite. Conduire sous l'effet d'un tel médicament coûte 2 points.",
-    "r": "Triangle rouge (niveau 3) = ne pas conduire.",
-    "img": "1689948460228.png"
+    "r": "Triangle rouge (niveau 3) = ne pas conduire."
   },
   {
     "id": "05_sous_influence-12",
@@ -1516,7 +1511,6 @@
     "o": [
       "Les effets se cumulent : le danger est multiplié",
       "Les effets s'annulent",
-      "Le médicament neutralise l'alcool",
       "Rien de particulier"
     ],
     "a": [
@@ -1682,13 +1676,11 @@
   {
     "id": "06_etat_sante-07",
     "t": "06_etat_sante",
-    "q": "Rester 17 heures sans dormir a, sur la conduite, un effet comparable à celui :",
-    "qa": "البقاء 17 ساعة بدون نوم له على السياقة أثر يشبه أثر :",
+    "q": "Vrai ou faux : rester 17 heures sans dormir a, sur la conduite, un effet comparable à celui de l'alcool.",
+    "qa": "صحيح أم خطأ : البقاء 17 ساعة بدون نوم له على السياقة أثر يشبه أثر الكحول.",
     "o": [
-      "De l'alcool",
-      "D'une nuit de repos",
-      "D'une sieste de 20 minutes",
-      "D'un repas léger"
+      "Vrai",
+      "Faux"
     ],
     "a": [
       0

@@ -474,6 +474,36 @@ def pick_cover(md, slug, tables):
     return '/tiles/route-cotiere.webp'
 
 
+def apply_cards_review(cards):
+    """Questions « Que signifie ce panneau ? » : content/cards_review.json dit, image par image,
+    quelles cartes sont posées en question (q), lesquelles servent seulement de mauvaise réponse (d),
+    lesquelles sont masquées (hide) et quelles paires ne sont jamais proposées ensemble (x)."""
+    with open(os.path.join(BASE, 'content', 'cards_review.json'), encoding='utf-8') as fh:
+        review = json.load(fh)
+    by_key = {}
+    for c in cards:
+        by_key.setdefault(f"{c['chapter']}/{c['img'].rsplit('/', 1)[-1]}", []).append(c)
+    keys = [*review['skip'], *review['pool'], *review['hide'], *(k for pair in review['apart'] for k in pair)]
+    for k in sorted({k for k in keys if k not in by_key}):
+        print(f'⚠️ revue des cartes : image inconnue {k}')
+    for k in [*review['skip'], *review['hide']]:
+        for c in by_key.get(k, []):
+            c['q'] = 0
+    for k in review['pool']:
+        for c in by_key.get(k, []):
+            c['d'] = 1
+    for k in review['hide']:
+        for c in by_key.get(k, []):
+            c['hide'] = 1
+    for a, b in review['apart']:
+        for ca in by_key.get(a, []):
+            for cb in by_key.get(b, []):
+                ca.setdefault('x', []).append(cb['img'])
+                cb.setdefault('x', []).append(ca['img'])
+    n_q = sum(1 for c in cards if c.get('q', 1))
+    print(f'🪧 cartes panneau : {n_q} posées en question sur {len(cards)}')
+
+
 def export_web(modules_out, bank, per_chapter, global_index):
     if not os.path.isdir(WEB):
         return
@@ -513,6 +543,7 @@ def export_web(modules_out, bank, per_chapter, global_index):
         if key not in seen:
             seen.add(key)
             uniq.append(c)
+    apply_cards_review(uniq)
 
     exam = []
     exam_ar = load_i18n('exam_ar')

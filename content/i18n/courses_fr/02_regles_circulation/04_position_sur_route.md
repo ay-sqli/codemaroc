@@ -18,7 +18,7 @@
 ## 📢 3. Infractions
 - {img:1713975085199.jpeg|big} Infractions liées à la position sur la route
 - Ne pas serrer à droite ou gêner la circulation → contravention de 3e classe (300 à 600 DH)
-- Circuler sur une voie réservée (bus, vélos) → 3e classe, même si elle est vide
+- Circuler sur une voie réservée aux bus → 3e classe ; sur une piste ou bande cyclable → 2e classe, même si elle est vide
 - Franchir une ligne continue → 1re classe (700 à 1400 DH) sans retrait de points
 - Circuler en sens interdit → 1re classe + retrait de 4 points
 - Marche arrière ou demi-tour sur autoroute → délit : 4000 à 8000 DH + retrait de 3 points

@@ -57,7 +57,7 @@
 - Arrêt = bref, conducteur présent / stationnement = moteur arrêté, conducteur absent
 - Panneau à une barre (/) = stationnement interdit, à deux barres (X) = arrêt et stationnement interdits
 - 12 m et 5 m : retiens les deux chiffres
-- Panneau I = première moitié du mois (1–15), II = seconde moitié (16–fin du mois)
+- Panneau « 1-15 » = première moitié du mois, « 16-31 » = seconde moitié
 ## ⚠️ Pièges d'examen
 - La double file est interdite même « pour une minute »
 - Le côté gauche n'est autorisé que sur une route à sens unique en agglomération

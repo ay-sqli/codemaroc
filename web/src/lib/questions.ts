@@ -1,13 +1,13 @@
 "use client";
 
-import { pickDistractors, tooClose } from "./choices";
+import { buildSignChoices, cleanLabel, hash, shuffle } from "./choices";
 import { useEffect, useState } from "react";
 import { asset } from "./base";
+import { setKnownQuestions } from "./store";
 import type { Card, ExamQuestion, Question, RuleQuestion } from "./types";
 
 /** Retire emojis et numérotation d'un intitulé de catégorie. */
-export const cleanSection = (s: string) =>
-  s.replace(/[\p{Extended_Pictographic}\u{FE0F}\u{20E3}]/gu, "").replace(/^\s*\d+\.\s*/, "").replace(/\s+/g, " ").trim();
+const cleanSection = cleanLabel;
 
 /**
  * Chargement des banques de questions (fichiers JSON statiques dans /public/data)
@@ -76,66 +76,36 @@ export function ruleToQuestion(q: RuleQuestion): Question {
   };
 }
 
-function hash(s: string) {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
-  return (h >>> 0).toString(36);
-}
-
-/** Mélange déterministe (graine) pour que le même panneau garde les mêmes distracteurs. */
-function seeded(seed: string) {
-  let x = parseInt(hash(seed), 36) || 1;
-  return () => {
-    x = (x * 1103515245 + 12345) % 2147483648;
-    return x / 2147483648;
-  };
-}
-
-export function shuffle<T>(arr: T[], rnd: () => number = Math.random) {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(rnd() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+export { shuffle };
 
 /**
- * Une carte panneau → QCM « Que signifie ce panneau ? ».
- * Les 3 distracteurs (lib/choices) sont proches de la bonne réponse pour ressembler aux pièges de
- * l'examen, mais jamais équivalents à elle ni entre eux (pas de « على » / « لـ », pas de
- * « تحديد السرعة » face à « تحديد السرعة 120 »).
+ * Cartes panneau → QCM « Que signifie ce panneau ? » (choix des propositions : lib/choices).
+ * Seules les cartes retenues par la revue content/cards_review.json sont posées ; les 3 mauvaises
+ * réponses ressemblent aux pièges de l'examen sans jamais être vraies elles aussi.
+ * L'identifiant dépend de l'image et de l'intitulé d'origine : progression et carnet d'erreurs restent valables.
  */
 function cardsToQuestions(cards: Card[]): Question[] {
-  const out: Question[] = [];
-  const frOf = new Map<string, string>();
-  for (const c of cards) if (c.labelFr && !frOf.has(c.label)) frOf.set(c.label, c.labelFr);
-  for (const card of cards) {
-    if (card.label.length > 140) continue;
-    const key = card.k ?? card.label;
-    const rnd = seeded(card.img + key);
-    const pool = pickDistractors(card, cards, rnd, 3, (a, b) => tooClose(frOf.get(a) ?? a, frOf.get(b) ?? b));
-    if (!pool) continue;
-    const options = shuffle([card.label, ...pool], rnd);
-    out.push({
-      id: `s:${hash(card.img + "|" + key)}`,
+  return buildSignChoices(cards).map(({ card, options, answer }) => {
+    const labelFr = cleanLabel(card.labelFr || card.label);
+    const labelAr = cleanLabel(card.label);
+    return {
+      id: `s:${hash(card.img + "|" + (card.k ?? card.label))}`,
       kind: "sign",
       chapter: card.chapter,
       prompt: "Que signifie ce panneau / ce schéma ?",
       promptAr: "ماذا تعني هذه العلامة ؟",
       img: asset(card.img),
-      options: options.map((label) => ({ label: frOf.get(label) ?? label, labelAr: label })),
-      answer: [options.indexOf(card.label)],
+      options: options.map((o) => ({ label: o.fr, labelAr: o.ar })),
+      answer: [answer],
       multi: false,
-      explanation: `La bonne réponse est « ${card.labelFr} »${card.sectionFr ? ` — catégorie : ${cleanSection(card.sectionFr)}` : ""}.`,
-      explanationAr: `الجواب الصحيح هو « ${card.label} »${card.section ? ` — الفئة: ${cleanSection(card.section)}` : ""}.`,
-      rappel: card.labelFr,
-      rappelAr: card.label,
+      explanation: `La bonne réponse est « ${labelFr} »${card.sectionFr ? ` — catégorie : ${cleanSection(card.sectionFr)}` : ""}.`,
+      explanationAr: `الجواب الصحيح هو « ${labelAr} »${card.section ? ` — الفئة: ${cleanSection(card.section)}` : ""}.`,
+      rappel: labelFr,
+      rappelAr: labelAr,
       section: card.section,
       sectionFr: card.sectionFr,
-    });
-  }
-  return out;
+    };
+  });
 }
 
 export function loadBank(): Promise<Bank> {
@@ -150,6 +120,7 @@ export function loadBank(): Promise<Bank> {
       const signs = cardsToQuestions(cards);
       const all = new Map<string, Question>();
       [...official, ...rules, ...signs].forEach((q) => all.set(q.id, q));
+      setKnownQuestions(all.keys());
       return { official, rules, signs, cards, all };
     });
     cache.catch(() => {

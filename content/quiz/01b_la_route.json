@@ -46,12 +46,12 @@
       "Tous les conducteurs, même ceux déjà engagés dans le carrefour",
       "Les conducteurs placés devant ou derrière l'agent",
       "Personne : le carrefour est libéré",
-      "Uniquement les poids lourds"
+      "Les conducteurs arrivant sur ses côtés (à sa gauche ou à sa droite)"
     ],
     "a": [
       1
     ],
-    "e": "Bras baissé(s) (إنزال اليد أو اليدين) = « arrêt » pour les conducteurs qui se trouvent devant ou derrière l'agent. Ce geste n'impose pas l'arrêt à ceux qui sont déjà engagés dans le carrefour.",
+    "e": "Bras baissé(s) = « arrêt » pour les conducteurs qui se trouvent devant ou derrière l'agent. Ce geste n'impose pas l'arrêt à ceux qui sont déjà engagés dans le carrefour, ni à ceux qui arrivent sur ses côtés.",
     "r": "Bras baissés = arrêt devant et derrière, sauf véhicules engagés."
   },
   {
@@ -321,15 +321,13 @@
     "q": "Une ligne longitudinale continue au milieu de la chaussée interdit : (plusieurs réponses)",
     "qa": "الخط الطولي المتصل في وسط القارعة يمنع : (عدة أجوبة)",
     "o": [
-      "De la franchir",
       "De dépasser en la franchissant",
       "De faire demi-tour en la franchissant",
       "De circuler à sa droite"
     ],
     "a": [
       0,
-      1,
-      2
+      1
     ],
     "e": "La ligne continue (خط متصل) ne doit jamais être franchie : elle interdit donc le dépassement et le demi-tour qui obligeraient à la traverser. Rouler à sa droite est normal.",
     "r": "Ligne continue : ni franchir, ni dépasser, ni demi-tour.",
@@ -576,7 +574,7 @@
     "q": "Ces triangles blancs peints sur la chaussée annoncent :",
     "qa": "هذه المثلثات البيضاء المرسومة على القارعة تعلن عن :",
     "o": [
-      "Un cédez-le-passage",
+      "Une direction obligatoire à suivre",
       "Une sortie d'autoroute",
       "Une voie réservée aux taxis",
       "Un aménagement qui impose de ralentir"
@@ -584,7 +582,7 @@
     "a": [
       3
     ],
-    "e": "Les triangles blancs en forme de flèche (مثلثات بيضاء على شكل سهم) signalent un aménagement, par exemple un ralentisseur, qui exige de réduire sa vitesse.",
+    "e": "Les triangles blancs en forme de flèche signalent un aménagement, par exemple un ralentisseur, qui exige de réduire sa vitesse. Ils n'indiquent pas une direction à suivre.",
     "r": "Triangles blancs au sol = aménagement, je ralentis.",
     "img": "1695639007635.png"
   },
@@ -792,13 +790,13 @@
     "o": [
       "Le suivre de près",
       "Klaxonner pour qu'il se range",
-      "Le dépasser par la droite",
+      "Le dépasser du côté opposé à la flèche",
       "Ralentir et rejoindre la voie adjacente indiquée"
     ],
     "a": [
       3
     ],
-    "e": "Une flèche ou une plateforme lumineuse sur un véhicule d'intervention ou de travaux impose de ralentir et de suivre la flèche vers la voie voisine indiquée.",
+    "e": "Une flèche ou une plateforme lumineuse sur un véhicule d'intervention ou de travaux impose de ralentir et de suivre la flèche vers la voie voisine indiquée. Le dépasser de l'autre côté, c'est aller vers la zone que la flèche fait éviter.",
     "r": "Flèche lumineuse sur un engin = je ralentis et je la suis."
   },
   {
@@ -929,8 +927,7 @@
     "o": [
       "100 km/h",
       "80 km/h",
-      "60 km/h",
-      "La plus élevée des deux"
+      "60 km/h"
     ],
     "a": [
       2
@@ -1049,7 +1046,7 @@
   {
     "id": "12_signalisation_temporaire-09",
     "t": "12_signalisation_temporaire",
-    "q": "Le poteau (عمود) de signalisation temporaire présignale :",
+    "q": "Le portique de signalisation temporaire présignale :",
     "qa": "العمود في التشوير المؤقت يشير مسبقا إلى :",
     "o": [
       "La vitesse minimale",
@@ -1060,8 +1057,8 @@
     "a": [
       1
     ],
-    "e": "Le poteau annonce à l'avance les dimensions maximales (largeur et hauteur) qu'un véhicule peut avoir pour passer.",
-    "r": "Poteau temporaire = largeur et hauteur maximales."
+    "e": "Le portique annonce à l'avance les dimensions maximales (largeur et hauteur) qu'un véhicule peut avoir pour passer.",
+    "r": "Portique temporaire = largeur et hauteur maximales."
   },
   {
     "id": "12_signalisation_temporaire-10",
@@ -1637,7 +1634,7 @@
     "id": "14_conditions_eclairage-12",
     "t": "14_conditions_eclairage",
     "q": "La nuit, mon véhicule est arrêté au bord de la route. Puis-je laisser mes feux de route allumés ?",
-    "qa": "ليلا، مركبتي متوقفة على جانب الطريق. هل يمكنني ترك أضواء الطريق مشتعلة ؟",
+    "qa": "ليلا، أقف بمركبتي على جانب الطريق. هل يمكنني ترك أضواء الطريق مشتعلة ؟",
     "o": [
       "Oui, pour être bien vu",
       "Non, les feux de route sont interdits à l'arrêt"
@@ -1705,8 +1702,8 @@
   {
     "id": "14_conditions_eclairage-16",
     "t": "14_conditions_eclairage",
-    "q": "Ce témoin correspond aux feux de brouillard. Quelles couleurs peuvent-ils avoir ? (plusieurs réponses)",
-    "qa": "هذا المؤشر خاص بأضواء الضباب. ما هي الألوان التي يمكن أن تكون لها ؟ (عدة أجوبة)",
+    "q": "De quelles couleurs peuvent être les feux de brouillard ? (plusieurs réponses)",
+    "qa": "ما هي الألوان التي يمكن أن تكون لأضواء الضباب ؟ (عدة أجوبة)",
     "o": [
       "À l'avant : jaune ou blanc",
       "À l'arrière : blanc",
@@ -1719,8 +1716,7 @@
     ],
     "e": "Les feux de brouillard avant sont jaunes ou blancs, le feu de brouillard arrière est rouge. Le blanc à l'arrière correspond au feu de recul.",
     "r": "Antibrouillard : avant jaune ou blanc, arrière rouge.",
-    "s": "feux",
-    "img": "1684419671811.png"
+    "s": "feux"
   },
   {
     "id": "14_conditions_eclairage-17",
@@ -1784,7 +1780,7 @@
     "qa": "عاكسا الضوء الخلفيان للسيارة يكونان :",
     "o": [
       "Rouges et triangulaires",
-      "Rouges, mais pas triangulaires : le triangle est réservé aux remorques",
+      "Rouges et non triangulaires",
       "Blancs",
       "Orange"
     ],
@@ -2375,7 +2371,7 @@
     "id": "16_virages_et_pentes-14",
     "t": "16_virages_et_pentes",
     "q": "Croisement difficile sur une route de montagne : quel véhicule doit s'arrêter le premier ?",
-    "qa": "تقابل صعب في طريق جبلية : أي مركبة يجب أن تتوقف أولا ؟",
+    "qa": "تقابل صعب في طريق جبلية : أي مركبة يجب أن تقف أولا ؟",
     "o": [
       "Celui qui monte",
       "Le premier qui klaxonne",
@@ -2395,7 +2391,7 @@
     "q": "Croisement impossible dans une pente entre deux véhicules de même catégorie : qui doit reculer ?",
     "qa": "تقابل مستحيل في منحدر بين مركبتين من نفس الصنف : من يجب أن يرجع إلى الخلف ؟",
     "o": [
-      "Celui qui descend, sauf si c'est plus facile pour celui qui monte (place d'évitement proche)",
+      "En principe, celui qui descend",
       "Toujours celui qui monte",
       "Celui qui est arrivé le dernier"
     ],
@@ -2428,7 +2424,7 @@
     "id": "14_conditions_eclairage-23",
     "t": "14_conditions_eclairage",
     "q": "De jour, en agglomération, par brouillard ou forte pluie, quels feux puis-je utiliser ? (plusieurs réponses)",
-    "qa": "نهارا، داخل التجمعات العمرانية، في الضباب أو المطر، أي الأضواء يمكنني استعمالها ؟ (عدة أجوبة)",
+    "qa": "نهارا، داخل التجمعات العمرانية، في الضباب أو المطر الغزير، أي الأضواء يمكنني استعمالها ؟ (عدة أجوبة)",
     "o": [
       "Les feux de position",
       "Les feux de croisement",
@@ -2439,7 +2435,7 @@
       0,
       1
     ],
-    "e": "Perminou : de jour, les feux de position s'utilisent en agglomération uniquement par brouillard, pluie ou neige ; les feux de croisement, en et hors agglomération dans les mêmes conditions. Les feux de route éblouiraient dans le brouillard.",
+    "e": "De jour, les feux de position s'utilisent en agglomération uniquement par brouillard, pluie ou neige ; les feux de croisement, en et hors agglomération dans les mêmes conditions. Les feux de route éblouiraient dans le brouillard.",
     "r": "Jour + brouillard en ville : position ou croisement.",
     "s": "feux"
   }

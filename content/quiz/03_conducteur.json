@@ -254,7 +254,6 @@
     "r": "Pas de visite médicale = 1re classe, 0 point.",
     "s": "sanctions"
   },
-
   {
     "id": "02_alcool_medicaments-01",
     "t": "02_alcool_medicaments",
@@ -378,7 +377,7 @@
     "t": "02_alcool_medicaments",
     "q": "Un conducteur refuse de souffler dans l'appareil de dépistage de l'alcool. Combien de points perd-il ?",
     "qa": "رفض سائق الخضوع لرائز النفس للكشف عن الكحول. كم نقطة تخصم منه ؟",
-    "o": ["Aucun, le refus est un droit", "2 points", "4 points", "6 points, comme pour l'alcool"],
+    "o": ["Aucun, le refus est un droit", "2 points", "4 points", "6 points"],
     "a": [3],
     "e": "Le refus du dépistage (رائز النفس) est un délit puni comme la conduite sous alcool : 6 points, amende de 5 000 à 10 000 DH et immobilisation du véhicule.",
     "r": "Refus de souffler = même sanction que l'alcool.",
@@ -399,7 +398,7 @@
     "id": "02_alcool_medicaments-14",
     "t": "02_alcool_medicaments",
     "q": "En cas de conduite sous l'emprise de l'alcool, la suspension du permis prévue est de :",
-    "qa": "في حالة السياقة تحت تأثير الكحول، مدة سحب رخصة السياقة المقررة هي :",
+    "qa": "في حالة السياقة تحت تأثير الكحول، مدة توقيف رخصة السياقة المقررة هي :",
     "o": ["6 mois à 1 an", "1 à 3 mois", "15 jours", "Aucune suspension"],
     "a": [0],
     "e": "Le tableau des infractions prévoit une suspension (سحب) du permis de 6 mois à 1 an, en plus de l'amende, de l'emprisonnement possible et du retrait de 6 points.",
@@ -423,7 +422,7 @@
     "qa": "على علبة الدواء، يعني المثلث الأحمر (المستوى 3) :",
     "o": ["Soyez prudent : lisez la notice", "Ne conduisez pas sans l'avis d'un médecin ou d'un pharmacien", "Danger : ne conduisez pas"],
     "a": [2],
-    "e": "Niveau 3 (rouge) = conduite interdite ; pour reprendre le volant, il faut l'avis du médecin. Le jaune (niveau 1) demande de lire la notice, l'orange (niveau 2) l'avis d'un médecin ou pharmacien.",
+    "e": "Niveau 3 (rouge) = conduite formellement interdite. Le jaune (niveau 1) demande de lire la notice ; l'orange (niveau 2) interdit de conduire sans l'avis d'un médecin ou d'un pharmacien.",
     "r": "Triangle rouge (niveau 3) = pas de conduite."
   },
   {
@@ -497,7 +496,6 @@
     "e": "Le cours distingue 4 niveaux : simple (sans complications), à risque (par exemple avec la conduite), excessif (dommages physiques, psychiques ou sociaux) et dépendance (impossible de s'en passer).",
     "r": "Substance + conduite = usage à risque."
   },
-
   {
     "id": "03_vigilance-01",
     "t": "03_vigilance",
@@ -513,7 +511,7 @@
     "t": "03_vigilance",
     "q": "Un ballon roule sur la chaussée devant vous. Que faites-vous ?",
     "qa": "كرة تتدحرج على القارعة أمامك. ماذا تفعل ؟",
-    "o": ["Je continue : un ballon n'est pas dangereux", "Je donne un coup de klaxon et je passe", "Je ralentis fortement, prêt à m'arrêter : un enfant peut le suivre"],
+    "o": ["Je continue : un ballon n'est pas dangereux", "Je donne un coup de klaxon et je passe", "Je ralentis fortement, prêt à m'arrêter"],
     "a": [2],
     "e": "Un ballon près de la route annonce souvent un enfant qui va traverser brusquement pour le récupérer. Il faut anticiper cette traversée.",
     "r": "Ballon sur la route = enfant probable : ralentir."
@@ -542,7 +540,7 @@
     "id": "03_vigilance-05",
     "t": "03_vigilance",
     "q": "Les cyclomotoristes, souvent des adolescents, peuvent notamment :",
-    "qa": "سائقو الدراجات بمحرك، وغالبا ما يكونون مراهقين، قد :",
+    "qa": "سائقو الدراجات بمحرك، وغالبا ما يكونون مراهقين، يمكنهم بالخصوص :",
     "o": ["toujours rouler au centre de la chaussée", "dépasser dangereusement, surtout par la droite", "céder systématiquement le passage"],
     "a": [1],
     "e": "Comportements à risque et manque d'expérience : les cyclomotoristes peuvent dépasser de façon dangereuse, en particulier par la droite. Surveillez vos rétroviseurs.",
@@ -719,7 +717,6 @@
     "e": "Le téléphone et la musique trop forte détournent l'attention et empêchent d'entendre avertisseurs et sirènes. Contrôler ses rétroviseurs fait au contraire partie de la vigilance.",
     "r": "Téléphone, musique forte = distraction."
   },
-
   {
     "id": "04_perception_reaction-01",
     "t": "04_perception_reaction",
@@ -785,9 +782,9 @@
     "t": "04_perception_reaction",
     "q": "La vision indirecte du conducteur, c'est :",
     "qa": "الرؤية غير المباشرة للسائق هي :",
-    "o": ["ce qu'il voit du coin de l'œil", "ce que reflètent les rétroviseurs", "ce qu'il voit à travers la vitre arrière en se retournant"],
+    "o": ["ce qu'il voit à travers le pare-brise", "ce que reflètent les rétroviseurs", "ce qu'il voit à travers la vitre arrière en se retournant"],
     "a": [1],
-    "e": "La vision indirecte est l'image donnée par les rétroviseurs. Elle est moins précise que la vision directe.",
+    "e": "La vision indirecte est l'image donnée par les rétroviseurs ; elle est moins précise que la vision directe. Ce que l'on voit directement, à travers le pare-brise ou en se retournant, n'est pas de la vision indirecte.",
     "r": "Vision indirecte = rétroviseurs."
   },
   {
@@ -795,7 +792,7 @@
     "t": "04_perception_reaction",
     "q": "Par rapport à la vision directe, l'image des rétroviseurs est :",
     "qa": "مقارنة مع الرؤية المباشرة، تكون الصورة في المرايا :",
-    "o": ["moins précise : le cerveau met plus de temps à évaluer les distances", "plus précise", "identique dans tous les rétroviseurs"],
+    "o": ["moins précise", "plus précise", "identique dans tous les rétroviseurs"],
     "a": [0],
     "e": "La vision dans les rétroviseurs est moins précise : le cerveau a besoin de plus de temps pour estimer les distances, et la perception diffère entre rétroviseur intérieur et extérieur.",
     "r": "Rétroviseur = moins précis, distances plus dures à juger."
@@ -909,7 +906,7 @@
     "id": "04_perception_reaction-19",
     "t": "04_perception_reaction",
     "q": "En conduite anticipée (pied déjà placé au-dessus du frein), le temps de réaction :",
-    "qa": "في السياقة الاستباقية (القدم قبالة الفرامل)، يصبح زمن رد الفعل :",
+    "qa": "في السياقة الاستباقية (القدم قبالة الفرامل)، فإن زمن رد الفعل :",
     "o": ["passe sous 1 seconde", "reste d'au moins 2 secondes", "n'est pas modifié"],
     "a": [0],
     "e": "En anticipant, le pied prêt au-dessus de la pédale de frein, on gagne du temps : le temps de réaction descend sous la seconde.",

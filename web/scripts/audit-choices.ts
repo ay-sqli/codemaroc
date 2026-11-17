@@ -1,88 +1,98 @@
 /**
- * Audit des propositions de réponse : repère les propositions qui disent la même chose
- * (ou dont l'une englobe l'autre) dans les questions « panneau » et dans les questions de règles.
- *   node scripts/audit-choices.ts [rapport.txt]
+ * Contrôle des questions de quiz (à lancer après `python scripts/build_app.py`) :
+ *   cd web && node scripts/audit-choices.ts [--dump questions-panneaux.txt] [--report rapport.txt]
+ *
+ * Erreurs (code de sortie 1) :
+ *  - question « panneau » dont deux propositions disent la même chose (comparaison de sens de lib/choices)
+ *    ou forment une paire interdite par la revue content/cards_review.json ;
+ *  - deux questions « panneau » sur la même image ;
+ *  - question de règles : propositions identiques, traduction arabe incomplète, bonne réponse hors liste ;
+ *  - question officielle : case correcte hors des cases affichées.
+ * À relire (sans erreur) : paires de propositions de règles que la comparaison de mots juge proches.
+ * --dump écrit toutes les questions « panneau » (image, bonne réponse, propositions) pour une relecture humaine.
  */
 import { readFileSync, writeFileSync } from "node:fs";
-import { meaningWords, pickDistractors, tooClose, type ChoiceCard } from "../src/lib/choices.ts";
+import { buildSignChoices, cleanLabel, tooClose, type ChoiceCard } from "../src/lib/choices.ts";
 
-const cards = JSON.parse(readFileSync("public/data/cards.json", "utf8")) as ChoiceCard[];
-const quiz = JSON.parse(readFileSync("public/data/quiz.json", "utf8")) as { id: string; t: string; q: string; o: string[]; oa?: string[]; a: number[] }[];
+const arg = (name: string) => {
+  const i = process.argv.indexOf(name);
+  return i > 0 ? process.argv[i + 1] : undefined;
+};
+const read = <T>(p: string) => JSON.parse(readFileSync(p, "utf8")) as T;
+const cards = read<(ChoiceCard & { labelFr: string; sectionFr?: string })[]>("public/data/cards.json");
+const quiz = read<{ id: string; t: string; q: string; o: string[]; oa?: string[]; a: number[] }[]>("public/data/quiz.json");
+const exam = read<{ id: string; ans: number[]; n?: number }[]>("public/data/exam.json");
 
-function hash(s: string) {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
-  return (h >>> 0).toString(36);
-}
-function seeded(seed: string) {
-  let x = parseInt(hash(seed), 36) || 1;
-  return () => {
-    x = (x * 1103515245 + 12345) % 2147483648;
-    return x / 2147483648;
-  };
-}
+const errors: string[] = [];
+const review: string[] = [];
 
-/** Ancien tirage (avant correction) : les intitulés qui ont le plus de mots en commun. */
-function oldPick(card: ChoiceCard): string[] | null {
-  const rnd = seeded(card.img + card.label);
-  const w = meaningWords(card.label);
-  const pool: string[] = [];
-  const scored = cards
-    .filter((c) => c.module === card.module && c.label !== card.label && c.label.length <= 140)
-    .map((c) => {
-      let common = 0;
-      meaningWords(c.label).forEach((x) => w.has(x) && common++);
-      return { label: c.label, s: common * 2 + (c.section && c.section === card.section ? 2 : 0) + (c.chapter === card.chapter ? 1 : 0) + rnd() * 1.5 };
-    })
-    .sort((a, b) => b.s - a.s);
-  for (const s of scored) {
-    if (pool.length >= 3) break;
-    if (!pool.includes(s.label)) pool.push(s.label);
-  }
-  return pool.length >= 3 ? pool : null;
-}
-
-const lines: string[] = [];
-let oldBad = 0, newBad = 0, oldN = 0, newN = 0;
-const examples: string[] = [];
-for (const card of cards) {
-  if (card.label.length > 140) continue;
-  const o = oldPick(card);
-  if (o) {
-    oldN++;
-    const opts = [card.label, ...o];
-    const bad = opts.some((x, i) => opts.some((y, j) => j > i && tooClose(x, y)));
-    if (bad) {
-      oldBad++;
-      if (examples.length < 12) examples.push(`  ✓ ${card.label}\n     ✗ ${o.join("\n     ✗ ")}`);
+// ---------------------------------------------------------------- questions « panneau »
+const signs = buildSignChoices(cards);
+const apartOf = new Map<string, Set<string>>();
+const labelsOf = new Map<string, string[]>();
+for (const c of cards) labelsOf.set(c.img, [...(labelsOf.get(c.img) ?? []), cleanLabel(c.label)]);
+for (const c of cards)
+  for (const img of c.x ?? [])
+    for (const other of labelsOf.get(img) ?? []) {
+      const me = cleanLabel(c.label);
+      apartOf.set(me, (apartOf.get(me) ?? new Set()).add(other));
+      apartOf.set(other, (apartOf.get(other) ?? new Set()).add(me));
     }
-  }
-  const n = pickDistractors(card, cards, seeded(card.img + card.label));
-  if (n) {
-    newN++;
-    const opts = [card.label, ...n];
-    if (opts.some((x, i) => opts.some((y, j) => j > i && tooClose(x, y)))) newBad++;
-  }
+const byImg = new Map<string, string[]>();
+for (const s of signs) {
+  byImg.set(s.card.img, [...(byImg.get(s.card.img) ?? []), s.card.label]);
+  const o = s.options;
+  for (let i = 0; i < o.length; i++)
+    for (let j = i + 1; j < o.length; j++) {
+      const same = tooClose(o[i].ar, o[j].ar) || tooClose(o[i].fr, o[j].fr) || o[i].fr === o[j].fr || o[i].ar === o[j].ar;
+      if (same || apartOf.get(o[i].ar)?.has(o[j].ar))
+        errors.push(`panneau ${s.card.img} : « ${o[i].fr} » ≈ « ${o[j].fr} »`);
+    }
 }
-lines.push(`PANNEAUX : ancien tirage ${oldBad}/${oldN} questions avec propositions équivalentes ; nouveau ${newBad}/${newN}.`);
-lines.push("Exemples (ancien tirage) :", ...examples, "");
+for (const [img, labels] of byImg) if (labels.length > 1) errors.push(`deux questions sur la même image ${img} : ${labels.join(" / ")}`);
+const skipped = cards.filter((c) => c.q === 0).length;
 
-let ruleBad = 0;
-lines.push("QUESTIONS DE RÈGLES : paires de propositions trop proches");
+// ---------------------------------------------------------------- questions de règles
+// Les signes + − × < > comptent (« Tiers » / « Tiers + », « PTAC + PV » / « PTAC − PV »).
+const norm = (s: string) =>
+  s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^\p{L}\p{N}+−×÷<>≤≥=-]+/gu, " ").trim();
 for (const q of quiz) {
-  const flagged: string[] = [];
+  if (!q.a.length || q.a.some((a) => a < 0 || a >= q.o.length)) errors.push(`règle ${q.id} : bonne réponse hors des propositions`);
+  if (!q.oa || q.oa.length !== q.o.length) errors.push(`règle ${q.id} : propositions arabes manquantes ou en nombre différent`);
   for (const opts of [q.o, q.oa ?? []]) {
     for (let i = 0; i < opts.length; i++)
-      for (let j = i + 1; j < opts.length; j++)
-        if (tooClose(opts[i], opts[j])) flagged.push(`[${i}${q.a.includes(i) ? "✓" : "✗"}] ${opts[i]}  ⟷  [${j}${q.a.includes(j) ? "✓" : "✗"}] ${opts[j]}`);
-  }
-  if (flagged.length) {
-    ruleBad++;
-    lines.push(`- ${q.id} | ${q.q}`, ...flagged.map((f) => "    " + f));
+      for (let j = i + 1; j < opts.length; j++) {
+        if (norm(opts[i]) === norm(opts[j])) errors.push(`règle ${q.id} : propositions identiques « ${opts[i]} »`);
+        else if (tooClose(opts[i], opts[j]))
+          review.push(`${q.id} [${i}${q.a.includes(i) ? "✓" : "✗"}] ${opts[i]}  ⟷  [${j}${q.a.includes(j) ? "✓" : "✗"}] ${opts[j]}`);
+      }
   }
 }
-lines.push(`Total : ${ruleBad}/${quiz.length} questions de règles signalées.`);
-const out = process.argv[2];
-if (out) writeFileSync(out, lines.join("\n"));
-console.log(lines[0]);
-console.log(lines[lines.length - 1]);
+
+// ---------------------------------------------------------------- questions officielles
+for (const q of exam) {
+  const n = q.n ?? 4;
+  if (!q.ans.length || q.ans.some((a) => a < 1 || a > n)) errors.push(`officielle ${q.id} : case correcte hors des ${n} cases`);
+}
+
+const summary = [
+  `Panneaux : ${signs.length} questions (${skipped} cartes du cours non posées après revue).`,
+  `Règles : ${quiz.length} questions, ${review.length} paires de propositions proches à relire (contrastes voulus en général).`,
+  `Officielles : ${exam.length} questions.`,
+  errors.length ? `❌ ${errors.length} erreur(s) :` : "✅ Aucune erreur.",
+  ...errors.slice(0, 50).map((e) => "  " + e),
+];
+console.log(summary.join("\n"));
+
+const report = arg("--report");
+if (report) writeFileSync(report, [...summary, "", "À relire (règles) :", ...review].join("\n"));
+const dump = arg("--dump");
+if (dump) {
+  const lines: string[] = [];
+  for (const s of signs) {
+    lines.push(`${s.card.chapter} | ${s.card.img}`);
+    s.options.forEach((o, i) => lines.push(`  ${i === s.answer ? "✓" : "✗"} ${o.fr}  ||  ${o.ar}`));
+  }
+  writeFileSync(dump, lines.join("\n"));
+}
+process.exit(errors.length ? 1 : 0);

@@ -34,7 +34,7 @@
 ## ↔️ 5. Distance de sécurité
 - Distance de sécurité = (V ÷ 10) × 6
 - 90 km/h → 54 m / 120 km/h → 72 m / 80 km/h → 48 m
-- Plus courte que la distance d'arrêt → car le véhicule de devant freine aussi
+- À vitesse élevée (au-delà de 60 km/h), plus courte que la distance d'arrêt → car le véhicule de devant freine aussi
 ## 💡 Astuces du moniteur
 - Le chiffre des dizaines × lui-même = distance d'arrêt en mètres (100 → 10 × 10 = 100 m)
 - Sur route mouillée : double seulement la distance de freinage

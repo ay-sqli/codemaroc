@@ -932,13 +932,13 @@
     "o": [
       "30 jours à compter du lendemain de l'infraction",
       "60 jours à compter du lendemain de l'infraction",
-      "15 jours à compter du jour de l'infraction",
-      "30 jours à compter du jour de l'infraction"
+      "15 jours à compter du lendemain de l'infraction",
+      "45 jours à compter du lendemain de l'infraction"
     ],
     "a": [
       0
     ],
-    "e": "Le délai maximal est de 30 jours, comptés à partir du jour qui suit l'infraction.",
+    "e": "Le délai maximal est de 30 jours, comptés à partir du lendemain de l'infraction. Les 15 jours ne concernent que le tarif réduit (500 / 350 / 200 DH).",
     "r": "Délai max : 30 jours à partir du lendemain.",
     "s": "sanctions"
   },
@@ -1002,7 +1002,7 @@
     "id": "02_amendes-21",
     "t": "02_amendes",
     "q": "Un excès de vitesse de 40 km/h au-dessus de la limite est une contravention de :",
-    "qa": "تجاوز السرعة المحددة بـ 40 كلم/س هو مخالفة من :",
+    "qa": "تجاوز السرعة القصوى المسموح بها بـ 40 كلم/س هو مخالفة من :",
     "o": [
       "2e classe",
       "4e classe",
@@ -1020,7 +1020,7 @@
     "id": "02_amendes-22",
     "t": "02_amendes",
     "q": "Un excès de vitesse de 15 km/h au-dessus de la limite est une contravention de :",
-    "qa": "تجاوز السرعة المحددة بـ 15 كلم/س هو مخالفة من :",
+    "qa": "تجاوز السرعة القصوى المسموح بها بـ 15 كلم/س هو مخالفة من :",
     "o": [
       "1re classe",
       "3e classe",
@@ -1149,7 +1149,7 @@
   {
     "id": "02_amendes-29",
     "t": "02_amendes",
-    "q": "S'arrêter illégalement de nuit, sans feux, hors agglomération est une contravention de :",
+    "q": "Stationner illégalement de nuit, sans feux, hors agglomération est une contravention de :",
     "qa": "التوقف غير القانوني ليلا بدون أضواء خارج المدينة مخالفة من :",
     "o": [
       "4e classe",
@@ -1160,8 +1160,8 @@
     "a": [
       2
     ],
-    "e": "L'arrêt illégal de nuit sans feux hors agglomération est très dangereux : 1re classe.",
-    "r": "Arrêt de nuit sans feux hors agglo : 1re classe.",
+    "e": "Le stationnement illégal de nuit sans feux hors agglomération est très dangereux : 1re classe.",
+    "r": "Stationnement de nuit sans feux hors agglo : 1re classe.",
     "s": "sanctions"
   },
   {
@@ -1208,13 +1208,13 @@
     "o": [
       "immédiatement",
       "dans le délai de 15 jours",
-      "dans le délai de 30 jours",
+      "après 15 jours, dans le délai de 30 jours",
       "après le délai de 30 jours"
     ],
     "a": [
       1
     ],
-    "e": "2e classe : 300 DH immédiatement, 350 DH dans les 15 jours, 500 DH dans les 30 jours.",
+    "e": "2e classe : 300 DH immédiatement, 350 DH dans les 15 jours, 500 DH après 15 jours (dans le délai de 30 jours).",
     "r": "350 DH = 2e classe payée dans les 15 jours.",
     "s": "sanctions"
   },
@@ -1664,7 +1664,7 @@
       3
     ],
     "e": "Permis falsifié : 6 mois à 3 ans de prison, 1200 à 5000 DH et interdiction de 1 à 2 ans. Ce n'est pas une simple suspension.",
-    "r": "Permis falsifié : prison, 1200-5000 DH, 1-2 ans."
+    "r": "Conduire avec un faux permis : prison, 1200-5000 DH, 1-2 ans."
   },
   {
     "id": "04_delits-06",
@@ -1792,8 +1792,8 @@
   {
     "id": "04_delits-13",
     "t": "04_delits",
-    "q": "Un conducteur dépasse la limite de vitesse de 55 km/h. Quelles sanctions s'appliquent ?",
-    "qa": "سائق تجاوز السرعة المحددة بـ 55 كلم/س. ما هي العقوبات المطبقة ؟",
+    "q": "Un conducteur dépasse de 55 km/h la vitesse maximale autorisée. Quelles sanctions s'appliquent ?",
+    "qa": "سائق تجاوز السرعة القصوى المسموح بها بـ 55 كلم/س. ما هي العقوبات المطبقة ؟",
     "o": [
       "retrait de 6 points",
       "amende de 4000 à 8000 DH",
@@ -1879,7 +1879,7 @@
     "id": "04_delits-18",
     "t": "04_delits",
     "q": "Un excès de vitesse d'exactement 50 km/h au-dessus de la limite est :",
-    "qa": "تجاوز السرعة المحددة بـ 50 كلم/س بالضبط هو :",
+    "qa": "تجاوز السرعة القصوى المسموح بها بـ 50 كلم/س بالضبط هو :",
     "o": [
       "une contravention de 2e classe",
       "une contravention de 1re classe",
@@ -1980,7 +1980,7 @@
       0
     ],
     "e": "La falsification du permis est un délit : 6 mois à 3 ans de prison et 2000 à 5000 DH.",
-    "r": "Faux permis : 6 mois à 3 ans + 2000 à 5000 DH."
+    "r": "Falsifier un permis : 6 mois à 3 ans + 2000 à 5000 DH."
   },
   {
     "id": "05_homicide_blessures-01",
@@ -2091,7 +2091,7 @@
     "id": "05_homicide_blessures-07",
     "t": "05_homicide_blessures",
     "q": "Un conducteur roulant 60 km/h au-dessus de la limite blesse un piéton (ITT de 45 jours). Le permis est suspendu pendant :",
-    "qa": "سائق تجاوز السرعة المحددة بـ 60 كلم/س وتسبب في جروح لراجل (عجز مؤقت 45 يوما). تُوقف رخصته لمدة :",
+    "qa": "سائق تجاوز السرعة القصوى المسموح بها بـ 60 كلم/س وتسبب في جروح لراجل (عجز مؤقت 45 يوما). تُوقف رخصته لمدة :",
     "o": [
       "1 à 3 mois",
       "3 mois à 1 an",
@@ -2238,14 +2238,14 @@
       "non-port de la ceinture de sécurité",
       "circulation en sens interdit",
       "véhicule sans freins conformes",
-      "arrêt de nuit sans éclairage hors agglomération"
+      "stationnement de nuit sans éclairage hors agglomération"
     ],
     "a": [
       1,
       2,
       3
     ],
-    "e": "La liste cite l'arrêt de nuit sans éclairage hors agglomération, les freins non conformes et le sens interdit. La ceinture n'y figure pas.",
+    "e": "La liste cite le stationnement de nuit sans éclairage hors agglomération, les freins non conformes et le sens interdit. La ceinture n'y figure pas.",
     "r": "Aggravant : nuit sans feux, freins, sens interdit."
   },
   {
@@ -2709,7 +2709,7 @@
       1,
       3
     ],
-    "e": "Les « 4 grands » à 4 points : feu rouge/stop, sens interdit, dépassement irrégulier, excès de +30 à +50 km/h. La priorité ne coûte que 2 points.",
+    "e": "Les « 4 grands » à 4 points : feu rouge/stop, sens interdit, dépassement irrégulier, excès de plus de 30 et moins de 50 km/h. La priorité ne coûte que 2 points.",
     "r": "4 points : feu rouge/stop, sens interdit, dépassement, +30.",
     "s": "sanctions"
   },
@@ -2729,7 +2729,7 @@
       2
     ],
     "e": "125 − 80 = 45 km/h d'excès : entre +30 et +50, donc 1re classe et 4 points. Le délit commence à +50 km/h.",
-    "r": "+30 à +50 km/h : 1re classe, 4 points.",
+    "r": "Plus de +30 à moins de +50 km/h : 1re classe, 4 points.",
     "s": "sanctions"
   },
   {
@@ -2748,14 +2748,14 @@
       1
     ],
     "e": "124 − 100 = 24 km/h d'excès : entre +20 et +30, donc 2e classe et 2 points.",
-    "r": "+20 à moins de +30 km/h : 2e classe, 2 points.",
+    "r": "Plus de +20 à moins de +30 km/h : 2e classe, 2 points.",
     "s": "sanctions"
   },
   {
     "id": "07_annexe_infractions-04",
     "t": "07_annexe_infractions",
     "q": "Un excès de vitesse de 10 km/h au-dessus de la limite entraîne :",
-    "qa": "تجاوز السرعة المحددة بـ 10 كلم/س يؤدي إلى :",
+    "qa": "تجاوز السرعة القصوى المسموح بها بـ 10 كلم/س يؤدي إلى :",
     "o": [
       "une contravention de 3e classe et 1 point",
       "une contravention de 2e classe et 2 points",
@@ -2783,7 +2783,7 @@
     "a": [
       2
     ],
-    "e": "Échelle : moins de +20 = 3e classe ; +20 à +30 = 2e classe ; +30 à +50 = 1re classe ; +50 et plus = délit (6 points, suspension de 1 à 3 mois).",
+    "e": "Échelle : moins de +20 = 3e classe ; de +20 à moins de +30 = 2e classe ; de +30 à moins de +50 = 1re classe ; +50 et plus = délit (6 points, suspension de 1 à 3 mois).",
     "r": "Excès de 50 km/h ou plus = délit.",
     "s": "sanctions"
   },
@@ -3067,7 +3067,7 @@
     "q": "Quelles infractions sont des contraventions de 1re classe ?",
     "qa": "ما هي المخالفات من الدرجة الأولى ؟",
     "o": [
-      "arrêt dangereux dans un virage ou au sommet d'une côte",
+      "stationnement dangereux dans un virage ou au sommet d'une côte",
       "transport de personnes sur le toit du véhicule",
       "non-paiement du péage de l'autoroute",
       "circulation sur une piste cyclable"
@@ -3077,14 +3077,14 @@
       1,
       2
     ],
-    "e": "Arrêt dangereux, péage non payé et personnes sur le toit : 1re classe (sans retrait de points). La piste cyclable : 2e classe.",
-    "r": "1re classe : arrêt dangereux, péage, personnes sur le toit.",
+    "e": "Stationnement dangereux, péage non payé et personnes sur le toit : 1re classe (sans retrait de points). La piste cyclable : 2e classe.",
+    "r": "1re classe : stationnement dangereux, péage, personnes sur le toit.",
     "s": "sanctions"
   },
   {
     "id": "07_annexe_infractions-22",
     "t": "07_annexe_infractions",
-    "q": "S'arrêter à moins de 10 m d'une intersection est une contravention de :",
+    "q": "Stationner à moins de 10 m d'une intersection est une contravention de :",
     "qa": "التوقف على بعد أقل من 10 أمتار من ملتقى الطرق مخالفة من :",
     "o": [
       "3e classe",
@@ -3095,8 +3095,8 @@
     "a": [
       3
     ],
-    "e": "C'est un arrêt dangereux, comme en virage, au sommet d'une côte, sur un pont ou dans un tunnel : 1re classe.",
-    "r": "Arrêt à moins de 10 m d'une intersection : 1re classe.",
+    "e": "C'est un stationnement dangereux, comme en virage, au sommet d'une côte, sur un pont ou dans un tunnel : 1re classe.",
+    "r": "Stationnement à moins de 10 m d'une intersection : 1re classe.",
     "s": "sanctions"
   },
   {
@@ -3114,7 +3114,7 @@
       0
     ],
     "e": "Les infractions aux passages à niveau (arrêt, engagement sans s'assurer de l'absence de train, ne pas dégager la voie) sont en 1re classe.",
-    "r": "Arrêt sur un passage à niveau : 1re classe.",
+    "r": "Arrêt ou stationnement sur un passage à niveau : 1re classe.",
     "s": "sanctions"
   },
   {
@@ -3263,7 +3263,7 @@
     "a": [
       1
     ],
-    "e": "Piège : ce n'est pas la 4e classe. L'entrée des piétons, bêtes de somme et animaux sur l'autoroute est en 1re classe.",
+    "e": "Piège : ce n'est pas la 4e classe. L'accès des piétons, des cavaliers et des animaux à l'autoroute est en 1re classe.",
     "r": "Piéton sur l'autoroute : 1re classe.",
     "s": "sanctions"
   },

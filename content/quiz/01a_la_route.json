@@ -4,9 +4,9 @@
     "t": "01_signalisation_verticale",
     "q": "Quelles associations entre la forme d'un panneau et sa signification sont justes ?",
     "qa": "ما هي العلاقات الصحيحة بين شكل العلامة ودلالتها ؟",
-    "o": ["Triangle → danger (خطر)", "Cercle → ordre absolu : interdiction ou obligation (أمر مطلق)", "Rectangle → direction", "Flèche → indication"],
+    "o": ["Triangle → danger", "Cercle → ordre absolu : interdiction ou obligation", "Cercle → danger", "Flèche → indication"],
     "a": [0, 1],
-    "e": "Triangle = danger, cercle = ordre absolu (منع أو إجبار), rectangle = indication (إرشاد), flèche = direction (اتجاه). Les deux dernières propositions inversent rectangle et flèche.",
+    "e": "Triangle = danger, cercle = ordre absolu, rectangle = indication, flèche = direction. Un cercle ne signale jamais un danger, et une flèche est un panneau de direction, pas un panneau d'indication.",
     "r": "Triangle danger, cercle ordre, rectangle indication, flèche direction.",
     "s": "formes"
   },
@@ -28,7 +28,7 @@
     "qa": "توجد علامات الخطر بخلفية بيضاء أو بخلفية صفراء. ما الفرق بينهما ؟",
     "o": ["Fond blanc : danger permanent ; fond jaune : danger temporaire", "Fond jaune : danger permanent ; fond blanc : danger temporaire", "Fond jaune : danger valable seulement la nuit", "Aucune différence de sens"],
     "a": [0],
-    "e": "La fiche oppose les dangers permanents (خلفية بيضاء : virage, passage pour piétons…) aux dangers temporaires (خلفية صفراء : travaux, gravillons, chaussée glissante). Le jaune signale toujours le temporaire.",
+    "e": "La fiche oppose les dangers permanents (fond blanc : virage, passage pour piétons…) aux dangers temporaires (fond jaune : travaux, gravillons, chaussée glissante). Sur un panneau de danger, le fond jaune signale donc le temporaire.",
     "r": "Fond blanc = danger permanent ; fond jaune = danger temporaire.",
     "s": "formes"
   },
@@ -111,8 +111,8 @@
     "qa": "في علامات المواقع، ما هو اللون الذي يميز الطريق الغابوية ؟",
     "o": ["Rouge", "Jaune", "Vert", "Bleu"],
     "a": [2],
-    "e": "Code de la fiche : route nationale = rouge, régionale = jaune, forestière = vert, provinciale = bleu.",
-    "r": "Nationale rouge, régionale jaune, provinciale bleu, forestière vert."
+    "e": "Cartouches des numéros de route : nationale = rouge, régionale = jaune, provinciale = blanc, forestière = vert. Le bleu est la couleur du sommet des bornes des routes provinciales, pas celle d'un cartouche.",
+    "r": "Nationale rouge, régionale jaune, provinciale blanc, forestière vert."
   },
   {
     "id": "01_signalisation_verticale-12",
@@ -279,9 +279,9 @@
     "t": "02_dangers_priorites",
     "q": "J'arrive à un carrefour giratoire dont l'entrée est équipée d'un « cédez le passage ». Qui est prioritaire ?",
     "qa": "أصل إلى ملتقى طرقي دوراني مدخله مجهز بعلامة «أترك حق الأسبقية». من له الأسبقية ؟",
-    "o": ["Les véhicules qui entrent dans le giratoire", "Les véhicules déjà engagés dans l'anneau", "Le véhicule le plus gros", "Celui qui klaxonne le premier"],
+    "o": ["Les véhicules qui entrent dans le giratoire", "Les véhicules déjà engagés dans l'anneau", "Celui qui arrive le premier au giratoire"],
     "a": [1],
-    "e": "Avec un « cédez le passage » à l'entrée, la priorité appartient aux véhicules qui circulent déjà dans l'anneau. Sans panneau, c'est la priorité à droite qui s'applique.",
+    "e": "Avec un « cédez le passage » à l'entrée, la priorité appartient aux véhicules qui circulent déjà dans l'anneau, quel que soit l'ordre d'arrivée. Sans panneau, c'est la priorité à droite qui s'applique.",
     "r": "Giratoire avec « cédez » : priorité à ceux déjà dans l'anneau.",
     "s": "giratoire"
   },
@@ -396,7 +396,7 @@
     "t": "03_interdictions",
     "q": "Les panneaux d'interdiction de hauteur ou de largeur s'appliquent aux dimensions du véhicule :",
     "qa": "علامات منع الولوج حسب العلو أو العرض تطبق على أبعاد المركبة :",
-    "o": ["À vide, sans le chargement", "Chargement compris (مع الحمولة)", "Uniquement pour les remorques", "Uniquement la nuit"],
+    "o": ["À vide, sans le chargement", "Chargement compris", "Uniquement pour les remorques"],
     "a": [1],
     "e": "La fiche précise « علوها مع الحمولة » et « عرضها مع الحمولة » : c'est la dimension avec le chargement qui compte.",
     "r": "Hauteur et largeur limitées : chargement compris."
@@ -442,17 +442,6 @@
     "a": [0, 1, 2],
     "e": "La fiche cite : douane, police, gendarmerie, contrôle routier, barrière de neige et péage. Une station-service est un panneau d'indication (service), sans arrêt imposé.",
     "r": "Douane, police, gendarmerie, péage : arrêt imposé."
-  },
-  {
-    "id": "03_interdictions-10",
-    "t": "03_interdictions",
-    "q": "Le panneau d'interdiction de stationner marqué « I » (ou 1-15) interdit le stationnement :",
-    "qa": "علامة منع التوقف التي تحمل «I» (أو 1-15) تمنع التوقف :",
-    "o": ["Du 16 à la fin du mois", "Les jours impairs", "Du 1er au 15 du mois", "Le premier jour du mois seulement"],
-    "a": [2],
-    "e": "I = première moitié du mois (du 1er au 15) ; II = seconde moitié (du 16 à la fin du mois).",
-    "r": "I : du 1er au 15 ; II : du 16 à la fin du mois.",
-    "s": "stationnement"
   },
   {
     "id": "03_interdictions-11",
@@ -514,9 +503,9 @@
     "t": "03_interdictions",
     "q": "Sur un passage étroit, un panneau rond à bord rouge m'indique de « céder le passage à la circulation venant en sens inverse ». Je dois :",
     "qa": "في ممر ضيق، علامة دائرية بإطار أحمر تشير إلى «السماح بالمرور للقادم من الاتجاه المعاكس». يجب علي :",
-    "o": ["Passer en premier : j'ai la priorité", "Laisser passer d'abord les véhicules venant en face", "Klaxonner et passer", "Attendre un agent"],
+    "o": ["Passer en premier : j'ai la priorité", "Laisser passer d'abord les véhicules venant en face", "Klaxonner et passer", "M'arrêter dans tous les cas, même si personne ne vient en face"],
     "a": [1],
-    "e": "Ce panneau d'interdiction m'oblige à laisser passer les véhicules venant en sens inverse. Son opposé est le carré bleu « vous avez la priorité par rapport à la circulation venant en sens inverse ».",
+    "e": "Ce panneau d'interdiction m'oblige à laisser passer d'abord les véhicules venant en sens inverse ; si personne ne vient, je passe sans m'arrêter. Son opposé est le carré bleu « vous avez la priorité par rapport à la circulation venant en sens inverse ».",
     "r": "Rond rouge « sens inverse » : je laisse passer ceux d'en face.",
     "s": "priorite"
   },
@@ -749,7 +738,7 @@
     "qa": "حسب العلامة الخاصة بذلك، كيف يمكن مراقبة السرعة المتوسطة على الطريق السيار ؟",
     "o": ["Par un agent posté à chaque kilomètre", "Grâce aux bornes hectométriques", "Elle ne peut pas être contrôlée", "En calculant le temps de parcours à la sortie de l'autoroute"],
     "a": [3],
-    "e": "La fiche : مراقبة السرعة المتوسطة بحساب الوقت المستغرق عند الخروج من الطريق السيار. Rouler vite puis ralentir avant la sortie ne change rien à la moyenne.",
+    "e": "La fiche : contrôle de la vitesse moyenne par calcul du temps de parcours à la sortie d'autoroute. C'est la moyenne sur tout le trajet qui compte, pas la vitesse au moment de sortir.",
     "r": "Vitesse moyenne : calculée avec le temps mis jusqu'à la sortie.",
     "s": "vitesses"
   },
@@ -1096,7 +1085,7 @@
     "t": "08_panonceaux",
     "q": "Placé sous un panneau d'interdiction de stationner, ce panonceau signifie :",
     "qa": "عندما توضع هذه اللويحة تحت علامة منع التوقف فإنها تعني :",
-    "o": ["Un service de dépannage est disponible à proximité", "Le stationnement est réservé aux dépanneuses", "Un véhicule en stationnement irrégulier peut être mis en fourrière", "Un garage automobile est proche"],
+    "o": ["Un service de dépannage est disponible à proximité", "Le stationnement est réservé aux dépanneuses", "Un véhicule en stationnement irrégulier peut être mis en fourrière", "Le stationnement est autorisé aux véhicules en panne"],
     "a": [2],
     "e": "C'est le panonceau « المركبات معرضة للإيداع في المحجز » : en stationnant malgré l'interdiction, ma voiture risque d'être enlevée et mise en fourrière.",
     "r": "Panonceau dépanneuse : risque de mise en fourrière.",
@@ -1151,10 +1140,10 @@
     "id": "08_panonceaux-11",
     "t": "08_panonceaux",
     "q": "Un panonceau de catégorie peut limiter la portée d'un panneau :",
-    "qa": "يمكن للويحة الفئة أن تحصر مفعول العلامة في :",
-    "o": ["Aux motocyclettes", "Aux véhicules équipés de chaînes à neige", "Aux véhicules transportant des matières dangereuses", "Aux véhicules de couleur claire"],
+    "qa": "يمكن للويحة الفئة أن تقصر مفعول العلامة :",
+    "o": ["Aux motocyclettes", "Aux véhicules équipés de chaînes à neige", "Aux véhicules transportant des matières dangereuses", "Aux véhicules immatriculés à l'étranger"],
     "a": [0, 1, 2],
-    "e": "La fiche liste de nombreuses catégories : transport public, marchandises, motos, cyclomoteurs, piétons, véhicules à chaînes, matières dangereuses, dimensions, poids… La couleur du véhicule n'en fait pas partie.",
+    "e": "La fiche liste de nombreuses catégories : transport public, marchandises, motos, cyclomoteurs, piétons, véhicules à chaînes, matières dangereuses, dimensions, poids… Le pays d'immatriculation n'en fait pas partie.",
     "r": "Catégorie : type, gabarit, chargement ou équipement du véhicule."
   },
   {

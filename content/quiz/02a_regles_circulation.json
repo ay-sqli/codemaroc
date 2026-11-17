@@ -76,7 +76,6 @@
     "o": [
       "10h10",
       "9h15",
-      "8h20",
       "Les deux mains en bas du volant"
     ],
     "a": [
@@ -176,10 +175,10 @@
     "q": "Dans quel ordre effectuer les réglages avant de démarrer ?",
     "qa": "ما هو الترتيب الصحيح لعمليات الضبط قبل الانطلاق؟",
     "o": [
-      "Moteur → ceinture → rétroviseurs → siège",
+      "Moteur → ceinture → rétroviseurs → volant → appuie-tête → siège",
       "Siège → appuie-tête → volant → rétroviseurs → ceinture → moteur",
-      "Rétroviseurs → siège → moteur → ceinture",
-      "Ceinture → moteur → siège → rétroviseurs"
+      "Rétroviseurs → siège → moteur → volant → ceinture → appuie-tête",
+      "Ceinture → moteur → siège → appuie-tête → rétroviseurs → volant"
     ],
     "a": [
       1
@@ -210,12 +209,12 @@
     "o": [
       "que c'est normal, il s'éteindra en roulant",
       "une anomalie : il faut agir selon le voyant concerné",
-      "que la batterie est neuve"
+      "qu'il suffit de redémarrer le moteur pour l'éteindre"
     ],
     "a": [
       1
     ],
-    "e": "À la mise en marche, tous les voyants s'allument puis s'éteignent. Un voyant qui reste allumé signale une panne : on agit selon sa signification.",
+    "e": "À la mise en marche, tous les voyants s'allument puis s'éteignent. Un voyant qui reste allumé signale une panne : on agit selon sa signification. Redémarrer le moteur ne règle pas le problème.",
     "r": "Voyant qui reste allumé = anomalie : agir selon le voyant."
   },
   {
@@ -278,8 +277,7 @@
     "o": [
       "Du côté du trottoir",
       "Du côté de la chaussée",
-      "Peu importe si le moteur est arrêté",
-      "Du côté du conducteur"
+      "Peu importe si le moteur est arrêté"
     ],
     "a": [
       0
@@ -447,10 +445,10 @@
     "q": "Quelle est la « règle d'or » de l'insertion ?",
     "qa": "ما هي «القاعدة الذهبية» للاندماج؟",
     "o": [
-      "Rétroviseur → insertion → clignotant",
-      "Angle mort → insertion → clignotant",
+      "Rétroviseur → insertion → clignotant → angle mort",
+      "Angle mort → insertion → rétroviseur → clignotant",
       "Clignotant → rétroviseur → angle mort → insertion",
-      "Insertion → clignotant → rétroviseur"
+      "Insertion → clignotant → rétroviseur → angle mort"
     ],
     "a": [
       2
@@ -597,8 +595,8 @@
   {
     "id": "03_vitesse-02",
     "t": "03_vitesse",
-    "q": "Hors agglomération, sur une route ordinaire, une voiture de moins de 3,5 t peut rouler au maximum à :",
-    "qa": "خارج التجمعات العمرانية، على طريق عادية، السرعة القصوى لسيارة أقل من 3.5 طن هي :",
+    "q": "Hors agglomération, sur une route ordinaire et hors période probatoire, une voiture de 3,5 t au plus peut rouler au maximum à :",
+    "qa": "خارج التجمعات العمرانية، على طريق عادية وخارج الفترة الاختبارية، السرعة القصوى لسيارة لا يتجاوز وزنها 3.5 طن هي :",
     "o": [
       "80 km/h",
       "100 km/h",
@@ -803,8 +801,8 @@
   {
     "id": "03_vitesse-14",
     "t": "03_vitesse",
-    "q": "Cette ambulance circule sans sirène ni gyrophare. Est-elle soumise aux limitations de vitesse ?",
-    "qa": "سيارة الإسعاف هذه تسير بدون منبه ولا ضوء دوار. هل تخضع لتحديد السرعة؟",
+    "q": "Cette ambulance circule sans utiliser sa sirène ni son gyrophare. Est-elle soumise aux limitations de vitesse ?",
+    "qa": "سيارة الإسعاف هذه تسير دون تشغيل منبهها الصوتي ولا ضوئها الدوار. هل تخضع لتحديد السرعة؟",
     "o": [
       "Oui : sans ses avertisseurs spéciaux, elle respecte les limitations",
       "Non, une ambulance n'est jamais limitée",
@@ -1200,15 +1198,14 @@
     "o": [
       "Pour éviter les situations dangereuses",
       "Pour obtenir la priorité aux intersections",
-      "Pour éviter les encombrements",
-      "Pour une circulation plus fluide"
+      "Pour pouvoir rouler plus vite que les autres",
+      "Pour une circulation plus fluide, sans encombrements"
     ],
     "a": [
       0,
-      2,
       3
     ],
-    "e": "Un bon positionnement évite les situations dangereuses et les encombrements et rend la circulation plus fluide. Il ne donne aucune priorité.",
+    "e": "Un bon positionnement évite les situations dangereuses et les encombrements, et rend la circulation plus fluide. Il ne donne aucune priorité et ne sert pas à rouler plus vite que les autres.",
     "r": "Bonne position : sécurité + fluidité."
   },
   {
@@ -1470,8 +1467,8 @@
   {
     "id": "05_croisement_depassement-11",
     "t": "05_croisement_depassement",
-    "q": "Croisement impossible entre ce camion et cet autocar. Qui doit faire marche arrière ?",
-    "qa": "يستحيل التقابل بين هذه الشاحنة وهذه الحافلة. من يجب أن يرجع إلى الخلف؟",
+    "q": "Sur une route de montagne, un camion qui monte et un autocar qui descend ne peuvent pas se croiser. Qui doit faire marche arrière ?",
+    "qa": "في طريق جبلية، يستحيل التقابل بين شاحنة صاعدة وحافلة نازلة. من يجب أن يرجع إلى الخلف؟",
     "o": [
       "L'autocar, parce qu'il descend",
       "Le camion",
@@ -1481,8 +1478,7 @@
       1
     ],
     "e": "Entre un camion et un autocar, c'est le camion qui recule, même lorsque c'est lui qui monte.",
-    "r": "Camion contre autocar : le camion recule.",
-    "img": "1684853686811.png"
+    "r": "Camion contre autocar : le camion recule."
   },
   {
     "id": "05_croisement_depassement-12",
@@ -1665,9 +1661,9 @@
     "qa": "ما هو الترتيب الصحيح لخطوات التجاوز؟",
     "o": [
       "Rétroviseur → angle mort → clignotant gauche → dépassement → clignotant droit → rabattement",
-      "Clignotant gauche → dépassement → rétroviseur → rabattement",
-      "Angle mort → dépassement → clignotant droit → rétroviseur",
-      "Dépassement → clignotant gauche → rabattement"
+      "Clignotant gauche → dépassement → rétroviseur → angle mort → clignotant droit → rabattement",
+      "Angle mort → dépassement → clignotant gauche → rétroviseur → rabattement → clignotant droit",
+      "Dépassement → clignotant gauche → rétroviseur → angle mort → rabattement → clignotant droit"
     ],
     "a": [
       0
@@ -1783,10 +1779,10 @@
     "id": "06_arret_stationnement-04",
     "t": "06_arret_stationnement",
     "q": "Des véhicules garés parallèlement au trottoir, l'un derrière l'autre, sont en stationnement :",
-    "qa": "مركبات بموازاة الرصيف، واحدة خلف الأخرى. ما نوع هذا الوقوف؟",
+    "qa": "مركبات متوقفة بموازاة الرصيف، واحدة خلف الأخرى. ما نوع هذا التوقف؟",
     "o": [
       "perpendiculaire (en bataille)",
-      "longitudinal (parallèle, en créneau)",
+      "longitudinal (en créneau)",
       "en épi (en angle)"
     ],
     "a": [
@@ -1799,7 +1795,7 @@
     "id": "06_arret_stationnement-05",
     "t": "06_arret_stationnement",
     "q": "Pour un stationnement perpendiculaire (en bataille), il est conseillé :",
-    "qa": "في الوقوف العمودي، يُنصح بـ :",
+    "qa": "في التوقف العمودي، يُنصح بـ :",
     "o": [
       "d'entrer en marche avant, pour ressortir en marche arrière",
       "de laisser tourner le moteur",
@@ -1864,7 +1860,7 @@
       3
     ],
     "e": "Stationnement interdit pendant la première quinzaine du mois (du 1er au 15). Le panneau de la seconde quinzaine l'interdit du 16 à la fin du mois.",
-    "r": "1re quinzaine (I) = 1–15 ; 2e quinzaine (II) = 16–fin.",
+    "r": "Panneau 1-15 : du 1er au 15 ; 16-31 : du 16 à la fin du mois.",
     "img": "1682003767993.png"
   },
   {
@@ -2011,7 +2007,7 @@
     "id": "06_arret_stationnement-17",
     "t": "06_arret_stationnement",
     "q": "Vous vous arrêtez sur un emplacement réservé aux autobus, juste pour déposer un passager. C'est :",
-    "qa": "تقف في مكان مخصص للحافلات فقط لإنزال راكب. هذا :",
+    "qa": "تقف في مكان مخصص للحافلات لمجرد إنزال راكب. هذا :",
     "o": [
       "autorisé, car c'est un simple arrêt",
       "autorisé si aucun bus n'est en vue",
@@ -2557,7 +2553,7 @@
     "id": "07_regles_priorite-23",
     "t": "07_regles_priorite",
     "q": "Les feux d'une intersection sont en panne et un panneau « Cédez le passage » est placé sur votre route. Que devez-vous appliquer ?",
-    "qa": "الأضواء في ملتقى الطرق معطلة، وتوجد علامة «أترك حق الأسبقية» في طريقك. ماذا يجب أن تطبق؟",
+    "qa": "الأضواء في ملتقى الطرق معطلة، وتوجد علامة « فسح المجال » في طريقك. ماذا يجب أن تطبق؟",
     "o": [
       "La priorité à droite, sans tenir compte du panneau",
       "Le panneau « Cédez le passage »",
@@ -2641,8 +2637,8 @@
   {
     "id": "08_changement_direction-03",
     "t": "08_changement_direction",
-    "q": "Sur cette chaussée à sens unique, vous voulez tourner à gauche. Où vous placez-vous ?",
-    "qa": "في هذه القارعة ذات الاتجاه الواحد، تريد الانعطاف يسارا. أين تتموضع؟",
+    "q": "Sur une chaussée à sens unique, vous voulez tourner à gauche. Où vous placez-vous ?",
+    "qa": "في قارعة ذات اتجاه واحد، تريد الانعطاف يسارا. أين تتموضع؟",
     "o": [
       "Au milieu de la chaussée",
       "À droite, puis vous traversez toute la chaussée",
@@ -2652,8 +2648,7 @@
       2
     ],
     "e": "Sur une chaussée à sens unique, pour tourner à gauche, on serre complètement à gauche et on met le clignotant.",
-    "r": "Sens unique : tourner à gauche en serrant à gauche.",
-    "img": "1691662034647.png"
+    "r": "Sens unique : tourner à gauche en serrant à gauche."
   },
   {
     "id": "08_changement_direction-04",
@@ -2690,19 +2685,18 @@
   {
     "id": "08_changement_direction-06",
     "t": "08_changement_direction",
-    "q": "Le véhicule bleu tourne à gauche pour entrer dans une route à double sens. Quelle trajectoire est correcte ?",
-    "qa": "المركبة الزرقاء تنعطف يسارا للدخول إلى طريق ذات اتجاهين. ما هو المسار الصحيح؟",
+    "q": "Vous tournez à gauche pour entrer dans une route à double sens. Où devez-vous vous retrouver sur cette nouvelle route ?",
+    "qa": "تنعطف يسارا للدخول إلى طريق ذات اتجاهين. أين يجب أن تكون على هذه الطريق الجديدة؟",
     "o": [
-      "La trajectoire rouge, plus courte",
-      "La trajectoire bleue, qui arrive sur le côté droit de la nouvelle route",
-      "Les deux sont correctes"
+      "Sur sa moitié gauche, en coupant au plus court",
+      "Sur sa moitié droite",
+      "À cheval sur l'axe, le temps de vous redresser"
     ],
     "a": [
       1
     ],
-    "e": "En entrant dans une route à double sens, on prend le côté droit de la nouvelle route. La trajectoire rouge coupe le virage et aboutit du mauvais côté.",
-    "r": "Après le virage : côté droit de la nouvelle route.",
-    "img": "1686235591818.png"
+    "e": "En entrant dans une route à double sens, on prend directement le côté droit de la nouvelle route. Couper au plus court ou rouler sur l'axe vous place face aux véhicules venant en sens inverse.",
+    "r": "Après le virage : côté droit de la nouvelle route."
   },
   {
     "id": "08_changement_direction-07",
@@ -2764,9 +2758,9 @@
     "q": "Quel est l'ordre correct des actions pour changer de direction ?",
     "qa": "ما هو الترتيب الصحيح للإجراءات عند تغيير الاتجاه؟",
     "o": [
-      "Clignotant → virage → rétroviseur → ralentissement",
-      "Ralentissement → virage → clignotant",
-      "Placement → virage → rétroviseur → clignotant",
+      "Clignotant → virage → rétroviseur → placement → ralentissement",
+      "Ralentissement → virage → placement → rétroviseur → clignotant",
+      "Placement → virage → ralentissement → rétroviseur → clignotant",
       "Rétroviseur → clignotant → placement → ralentissement → virage"
     ],
     "a": [
@@ -2798,13 +2792,13 @@
     "qa": "تنعطف إلى شارع، وراجل يعبر هذا الشارع. من له الأسبقية؟",
     "o": [
       "Moi, car j'ai mis mon clignotant",
-      "Le piéton seulement s'il court",
+      "Celui qui arrive le premier au point de croisement",
       "Le piéton"
     ],
     "a": [
       2
     ],
-    "e": "Le piéton qui traverse la route dans laquelle vous vous engagez a la priorité.",
+    "e": "Le piéton qui traverse la route dans laquelle vous vous engagez a la priorité, quel que soit celui qui arrive le premier. Le clignotant ne donne aucune priorité.",
     "r": "Piéton traversant la rue où l'on entre : prioritaire."
   },
   {
@@ -2815,7 +2809,7 @@
     "o": [
       "une collision par l'arrière uniquement",
       "une collision frontale avec un véhicule venant en sens inverse",
-      "une panne mécanique"
+      "un accrochage avec les véhicules garés sur votre droite"
     ],
     "a": [
       1
